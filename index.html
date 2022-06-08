@@ -8,24 +8,25 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>LearnData-开源学习笔记</title>
-	<meta name="description" content="开源工具，前端代码的学习笔记，将新东西记录下来，并形成文档" />
-	<meta name="keywords" content="自我提升,效率,开源工具" />
-	<link rel="stylesheet" href="https://npm.elemecdn.com/docsify-themeable@0/dist/css/theme-simple.css">
+  <meta name="description" content="开源工具，前端代码的学习笔记，将新东西记录下来，并形成文档" />
+  <meta name="keywords" content="自我提升,效率,开源工具" />
+  <link rel="stylesheet" href="https://npm.elemecdn.com/docsify-themeable@0/dist/css/theme-simple.css">
   <link rel="stylesheet" href="https://npm.elemecdn.com/docsify-gifcontrol/dist/docsify-gifcontrol.css">
-	<link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/gitalk/1.7.2/gitalk.min.css">
+  <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/gitalk/1.7.2/gitalk.min.css">
   <style>
-		:root {
-			/* Reduce the font size */
-			--base-font-size: 14px;
-			/* Change the theme color hue */
-			/*--theme-color: #42b983;*/
-			--navbar-root-text-decoration-color--active: #125020;
-			--sidebar-nav-link-font-weight--active: thick;
-			--sidebar-nav-link-font-weight--hover: thick
-		}
+    :root {
+      /* Reduce the font size */
+      --base-font-size: 14px;
+      /* Change the theme color hue */
+      /*--theme-color: #42b983;*/
+      --navbar-root-text-decoration-color--active: #125020;
+      --sidebar-nav-link-font-weight--active: thick;
+      --sidebar-nav-link-font-weight--hover: thick
+    }
+
     .anchor {
       font-weight: bold;
-      text-shadow: 0 1px 3px rgba(0,0,0,.4),0 0 30px rgba(0,0,0,.075);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
     }
 
     .app-name {
@@ -35,10 +36,10 @@
     section.cover h1 {
       margin: 1.5rem 0 1.5rem;
     }
-    section.cover p {
-      text-shadow: 0 1px 3px rgba(0,0,0,.4),0 0 30px rgba(0,0,0,.075);
-    }
 
+    section.cover p {
+      text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+    }
   </style>
 </head>
 
@@ -60,19 +61,19 @@
       maxLevel: 4,
       subMaxLevel: 3,
       formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}', // 显示文档更新日期
-			search: 'auto', // 默认值
-			// 搜索完整配置参数
-			search: {
-				maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-				paths: 'auto',
-				placeholder: '搜索',
-				noData: '找不到结果，请缩短搜索词',
+      search: 'auto', // 默认值
+      // 搜索完整配置参数
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '找不到结果，请缩短搜索词',
 
-				// 搜索标题的最大层级，1 - 6
-				depth: 3,
+        // 搜索标题的最大层级，1 - 6
+        depth: 3,
 
-				hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
-			},
+        hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+      },
       pagination: {
         previousText: 'PREVIOUS',
         nextText: 'NEXT',
@@ -83,27 +84,28 @@
       }
     }
   </script>
-	<script src="https://npm.elemecdn.com/docsify-themeable@0"></script>
+  <script src="https://npm.elemecdn.com/docsify-themeable@0"></script>
   <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/docsify.min.js"></script>
   <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/plugins/search.min.js"></script>
   <script src="https://npm.elemecdn.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="https://npm.elemecdn.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script>
   <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/plugins/zoom-image.min.js"></script>
+  <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify-copy-code/2.1.1/docsify-copy-code.min.js" type="application/javascript"></script>
 
-	<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/plugins/gitalk.min.js"></script>
-	<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/gitalk/1.7.2/gitalk.min.js"></script>
-	<script>
-		/* 使用下面的 Javascript 代码生成 gitalk 插件 */
-		const gitalk = new Gitalk({
-			clientID: '2f3da234d27ed9a7c290',
-			clientSecret: 'd64c45594858477fff0c234c3ed3947a53b0a9ac',
-			repo: 'docsifytalk',        //仓库名称 (GitHub repo)
-			owner: 'rockbenben',        //仓库拥有者 (GitHub repo owner)
-			admin: ['rockbenben'],      //仓库所有者和协作者。（对此存储库具有写访问权的用户）
-			// id: location.pathname,   // Ensure uniqueness and length less than 50
-			distractionFreeMode: false  // Facebook-like distraction free mode
-		})
-	</script>
+  <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/plugins/gitalk.min.js"></script>
+  <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/gitalk/1.7.2/gitalk.min.js"></script>
+  <script>
+    /* 使用下面的 Javascript 代码生成 gitalk 插件 */
+    const gitalk = new Gitalk({
+      clientID: '2f3da234d27ed9a7c290',
+      clientSecret: 'd64c45594858477fff0c234c3ed3947a53b0a9ac',
+      repo: 'docsifytalk',        //仓库名称 (GitHub repo)
+      owner: 'rockbenben',        //仓库拥有者 (GitHub repo owner)
+      admin: ['rockbenben'],      //仓库所有者和协作者。（对此存储库具有写访问权的用户）
+      // id: location.pathname,   // Ensure uniqueness and length less than 50
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+  </script>
 
   <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/instant.page/5.1.0/instantpage.min.js"></script>
