@@ -2,7 +2,6 @@
 
 静态网页
 
-
 笔记类用 md 编辑，然后同步到 GitHub，接着用 GitHub Action 同步到 Gitee，最后形成国内静态页 Gitee page。
 
 不过这个方案会有一些问题，就是 gitee page 免费版是无法自定义域名的。
@@ -13,3 +12,4 @@
 
 aliyun-oss-website-action：https://github.com/marketplace/actions/aliyun-oss-website-action
 
+目录中需含`CNAME`，否则 SSL 链接容易 404 报错，显示「There isn't a GitHub Pages site here.」

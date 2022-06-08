@@ -1,17 +1,17 @@
 * **阅读**
-  * [创业思维](startup.md)
-  * [系统设置](Windows.md)
+  * [创业思维](startup)
+  * [系统设置](Windows)
 * **代码**
-  * [Markdown](Code/Markdown.md)
-  * [HTML](Code/HTML.md)
+  * [Markdown](Code/Markdown)
+  * [HTML](Code/HTML)
 * **工具**
   * [杂类](Tools/)
-  * [Visual Studio Code](Tools/VSCode.md)
-  * [Eagle 素材管理](Tools/Eagle.md)
-  * [Zinc 轻量级全文搜索引擎](Tools/ZincSearch.md)
+  * [Visual Studio Code](Tools/VSCode)
+  * [Eagle 素材管理](Tools/Eagle)
+  * [Zinc 轻量级全文搜索引擎](Tools/ZincSearch)
 * **页面开发**
-  * [域名 DNS 托管](Web/DNS.md)
-  * [静态托管](Web/Static.md)
-  * [gitalk 评论组件](Web/gitalk.md)
+  * [域名 DNS 托管](Web/DNS)
+  * [静态托管](Web/Static)
+  * [gitalk 评论组件](Web/gitalk)
 * **居家**
-  * [厨房](Family/kitchen.md)
+  * [厨房](Family/kitchen)
