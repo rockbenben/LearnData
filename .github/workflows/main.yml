@@ -17,7 +17,7 @@ jobs:
     - run: npm install yarn@1.22.4 -g
     - run: yarn install
     # 打包文档命令
-    - run: yarn docs:build
+    # - run: yarn docs:build
     - name: aliyun-oss-website-action
       uses: fangbinwei/aliyun-oss-website-action@v1.3.0
       with:
