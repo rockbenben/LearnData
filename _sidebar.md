@@ -1,9 +1,13 @@
 * [LearnData]()
+* **阅读**
+  * [创业思维](startup.md)
+* **代码**
+  * [Markdown](Code/Markdown.md)
 * **工具**
-  * [Visual Studio Code](tools/VisualStudioCode.md)
-  * [Eagle 素材管理](tools/Eagle.md)
-  * [Zinc 轻量级全文搜索引擎](tools/ZincSearch.md)
+  * [Visual Studio Code](Tools/VisualStudioCode.md)
+  * [Eagle 素材管理](Tools/Eagle.md)
+  * [Zinc 轻量级全文搜索引擎](Tools/ZincSearch.md)
 * **页面开发**
-  * [gitalk 评论组件](web/gitalk.md)
+  * [gitalk 评论组件](Web/gitalk.md)
 * **居家**
-  * [厨房](family/kitchen.md)
+  * [厨房](Family/kitchen.md)
