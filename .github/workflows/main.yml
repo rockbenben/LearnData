@@ -18,10 +18,10 @@ jobs:
     # 打包文档命令
     - run: yarn docs:build
     - name: aliyun-oss-website-action
-      uses: docker://fangbinwei/aliyun-oss-website-action:v1.3.0
+      uses: docker://fangbinwei/aliyun-oss-website-action:v1
       with:
           accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
           accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
           bucket: "learndata-notes"
           endpoint: "oss-cn-shanghai.aliyuncs.com" 
-          folder: "./"
+          folder: "/dist"
