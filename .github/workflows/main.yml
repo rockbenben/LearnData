@@ -14,8 +14,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '14.x'
-    - run: npm install yarn@1.22.4 -g
-    - run: yarn install
+    # - run: npm install yarn@1.22.4 -g
+    # - run: yarn install
     # 打包文档命令
     # - run: yarn docs:build
     - name: aliyun-oss-website-action
@@ -26,4 +26,5 @@ jobs:
           bucket: learndata-notes
           # use your own endpoint
           endpoint: oss-cn-shanghai.aliyuncs.com
+          # 全目录上传
           folder: .
