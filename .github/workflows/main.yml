@@ -1,19 +1,21 @@
 name: deploy notes to oss
 on:
   push:
-    branches:
-      - master
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     # load repo to /github/workspace
-    - uses: actions/checkout@v2
-    - name: Use Node.js
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
-        node-version: '14.x'
-    - run: npm install yarn@1.22.4 -g
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm install yarn@1.22.18 -g
     - run: yarn install
     # 打包文档命令
     - run: yarn docs:build
