@@ -1,0 +1,33 @@
+name: deploy notes to oss
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+      # load repo to /github/workspace
+    - uses: actions/checkout@v2
+      with:
+          repository: rockbenben/LearnData
+          fetch-depth: 0
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - run: npm install yarn@1.22.4 -g
+    - run: yarn install
+    # 打包文档命令
+    - run: yarn docs:build
+    - name: aliyun-oss-website-action
+      uses: fangbinwei/aliyun-oss-website-action@v1.3.0
+      with:
+          accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
+          accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
+          bucket: "learndata-notes"
+          endpoint: "oss-cn-shanghai.aliyuncs.com" 
+          folder: "/"

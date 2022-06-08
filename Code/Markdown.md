@@ -11,6 +11,9 @@
 # md 图片设置
 ![同时设置宽度和高度](https://files.mdnice.com/logo.png =150x150)
 ![只设置宽度，推荐使用百分比](https://files.mdnice.com/logo.png =40%x)
+
+# docsify 方法
+![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
 ```
 
 七牛云图床：使用[七牛云接口](https://developer.qiniu.com/dora/kb/1627/flow-optimization-compression-of-images)改变图片分辨率、大小、格式，具体参数看[七牛云图片高级处理](https://developer.qiniu.com/dora/8255/the-zoom)。
