@@ -26,4 +26,4 @@ jobs:
           bucket: learndata-notes
           # use your own endpoint
           endpoint: oss-cn-shanghai.aliyuncs.com
-          folder: /
+          folder: .
