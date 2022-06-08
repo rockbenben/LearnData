@@ -1,5 +1,8 @@
 # 静态部署
 
+静态网页
+
+
 笔记类用 md 编辑，然后同步到 GitHub，接着用 GitHub Action 同步到 Gitee，最后形成国内静态页 Gitee page。
 
 不过这个方案会有一些问题，就是 gitee page 免费版是无法自定义域名的。
