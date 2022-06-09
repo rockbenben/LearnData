@@ -9,10 +9,10 @@
   - [正则表达式](code/Regex.md)
   - [Electron](code/Electron.md)
 - **工具**
-  - [小工具](tools/)
   - [Visual Studio Code](tools/VSCode.md)
   - [Eagle-素材管理](tools/Eagle.md)
   - [Zinc-轻量级全文搜索引擎](tools/ZincSearch.md)
+  - [小工具](tools/)
 - **页面开发**
   - [Gitalk-评论组件](web/Gitalk.md)
 - **网站部署**
