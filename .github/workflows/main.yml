@@ -1,30 +1,16 @@
-name: deploy notes to oss
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  build:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    # load repo to /github/workspace
-    - uses: actions/checkout@v3
-    - name: Use Node.js
-      uses: actions/setup-node@v3
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        node-version: '14.x'
-    # - run: npm install yarn@1.22.4 -g
-    # - run: yarn install
-    # 打包文档命令
-    # - run: yarn docs:build
-    - name: aliyun-oss-website-action
-      uses: fangbinwei/aliyun-oss-website-action@v1.3.0
-      with:
-          accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
-          accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
-          bucket: learndata-notes
-          # use your own endpoint
-          endpoint: oss-cn-shanghai.aliyuncs.com
-          # 全目录上传
-          folder: .
+        server: 106.14.36.93
+        username: myFtpUserNameXYZ
+        password: ${{ secrets.ftp_password }}

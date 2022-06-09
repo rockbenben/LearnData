@@ -10,7 +10,46 @@
 
 ### 同步 oss
 
-aliyun-oss-website-action：<https://github.com/marketplace/actions/aliyun-oss-website-action>
+[aliyun-oss-website-action](https://github.com/marketplace/actions/aliyun-oss-website-action) 能将 github 文件 build 上传到阿里云 oss，运行静态网站。
+
+将下列命令保存为`main.yml`，放于`.github\workflows`目录下。
+
+```shell
+name: deploy md to oss
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # load repo to /github/workspace
+    - uses: actions/checkout@v3
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14.x'
+    # 打包文档命令
+    # - run: npm install yarn@1.22.4 -g
+    # - run: yarn install
+    # - run: yarn docs:build
+    - name: aliyun-oss-website-action
+      uses: fangbinwei/aliyun-oss-website-action@v1.3.0
+      with:
+          accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
+          accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
+          bucket: learndata-notes
+          # use your own endpoint
+          endpoint: oss-cn-shanghai.aliyuncs.com
+          # 全目录上传
+          folder: .
+          # 不上传的文件
+          exclude: |
+            .github/
+            .gitattributes
+```
 
 目录中需含`CNAME`，否则 SSL 链接容易 404 报错，显示「There isn't a GitHub Pages site here.」
 
