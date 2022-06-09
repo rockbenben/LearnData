@@ -1,0 +1,2 @@
+- [常用工具](https://newzone.top/)
+- [博客](https://newzone.top/blog)
