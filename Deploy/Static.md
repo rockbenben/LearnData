@@ -1,18 +1,45 @@
 # 静态部署
 
-笔记类用 md 编辑，然后同步到 GitHub，接着用 GitHub Action 同步到 Gitee，最后形成国内静态页 Gitee page。
-
-但 Gitee Page 有诸多限制，要实名验证，而且免费版是无法自定义域名的。
-
-因此，尝试用 GitHub Action 同步到服务器上，速度会更稳定。
-
 ## github 同步 VPS
+
+我的代码、文章都部署在 GitHub 上，为了让国内速度快点，所以需要同时部署在国内服务器上。
+
+常用方法是，文档同步到 GitHub 后，GitHub Action 自动同步到 Gitee，最后形成国内静态页 Gitee Pages。但 Gitee Pages 有诸多限制，要实名验证，而且免费版是无法自定义域名的。
+
+因此，我用 GitHub Action 同步到服务器（域名已备案）上，速度会更稳定。
+
+### 同步 ftp
+
+如果你有 ftp 服务器，可使用 [FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action) 将 github 代码同步到服务器上。Action 使用说明查看 [GitHub 说明](GitHub.md)。
+
+```shell
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: 106.14.36.93
+        username: myFtpUserNameXYZ
+        password: ${{ secrets.ftp_password }}
+        port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
+```
 
 ### 同步 oss
 
-[aliyun-oss-website-action](https://github.com/marketplace/actions/aliyun-oss-website-action) 能将 github 文件 build 上传到阿里云 oss，运行静态网站。
+如果你没有服务器，可以把文件部署在云运营商的 oss 上。比如阿里云，用[aliyun-oss-website-action](https://github.com/marketplace/actions/aliyun-oss-website-action) 能将 github 文件 build 上传到阿里云 oss，运行静态网站。
 
-将下列命令保存为`main.yml`，放于`.github\workflows`目录下。
+如果 SSL 链接 404 报错，显示「There isn't a GitHub Pages site here」，则目录中加入`CNAME`文件。
+
+该方法不适用于 docsify，测试中经常报错，打开页面经常出现 404。
+> CDN 默认是有缓存的，如果文件更新，访问的可能不是最新的文件。•我设置了 routerMode 为 history，使用 CDN 访问非首页，再次刷新会找不到文件。•如果开启了 relativePath: true，文件可以找到，但是侧栏上边的标题点击又有点问题。
 
 ```shell
 name: deploy md to oss
@@ -34,7 +61,7 @@ jobs:
     # 打包文档命令
     # - run: npm install yarn@1.22.4 -g
     # - run: yarn install
-    # - run: yarn docs:build
+    # - run: yarn docs:build #需要配合 yarn 的 package.json
     - name: aliyun-oss-website-action
       uses: fangbinwei/aliyun-oss-website-action@v1.3.0
       with:
@@ -51,16 +78,6 @@ jobs:
             .gitattributes
 ```
 
-目录中需含`CNAME`，否则 SSL 链接容易 404 报错，显示「There isn't a GitHub Pages site here.」
-
-docsify 静态页上传 oss，打开页面经常出现 404。
-
-> CDN 默认是有缓存的，如果文件更新，访问的可能不是最新的文件。•我设置了 routerMode 为 history，使用 CDN 访问非首页，再次刷新会找不到文件。•如果开启了 relativePath: true，文件可以找到，但是侧栏上边的标题点击又有点问题。
-
-### 同步 ftp
-
-oss 有问题的话，上传到 ftp 使用服务器是否能解决问题？
-
 ## 平台对比
 
 * 饿了么 CDN：国内唯一能用的 npm 镜像，不过饿了么并没说支持对外，不知道合适会取消。
@@ -74,7 +91,7 @@ oss 有问题的话，上传到 ftp 使用服务器是否能解决问题？
   * [Workers](https://www.notion.so/CloudFlare-Workers-a42b27820baf433b8ee45e71bd508f4a)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
 * Netlify：国内速度慢点，图片容易卡死，但还算稳定。
 * vercel：需绑定国外手机号，经常需要换 IP
-* 国内：gitee、wulihub、coding
+* 国内：Gitee、wulihub、coding
 
 * jsDelivr：速度最快，原本是最稳的，但域名暴雷后，经常打不开。2022.06.01 已经彻底不打开。
 

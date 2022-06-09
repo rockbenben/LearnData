@@ -14,3 +14,4 @@ jobs:
         server: 106.14.36.93
         username: myFtpUserNameXYZ
         password: ${{ secrets.ftp_password }}
+        port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
