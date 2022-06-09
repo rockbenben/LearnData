@@ -8,6 +8,8 @@
 
 因此，我用 GitHub Action 同步到服务器（域名已备案）上，速度会更稳定。
 
+!> 注意：文件夹不要有大写字母，否则同步时容易出错。
+
 ### 同步 ftp
 
 如果你有 ftp 服务器，可使用 [FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action) 将 github 代码同步到服务器上。Action 使用说明查看 [GitHub 说明](GitHub.md)。
@@ -35,11 +37,6 @@ jobs:
 ### 同步 oss
 
 如果你没有服务器，可以把文件部署在云运营商的 oss 上。比如阿里云，用[aliyun-oss-website-action](https://github.com/marketplace/actions/aliyun-oss-website-action) 能将 github 文件 build 上传到阿里云 oss，运行静态网站。
-
-如果 SSL 链接 404 报错，显示「There isn't a GitHub Pages site here」，则目录中加入`CNAME`文件。
-
-该方法不适用于 docsify，测试中经常报错，打开页面经常出现 404。
-> CDN 默认是有缓存的，如果文件更新，访问的可能不是最新的文件。•我设置了 routerMode 为 history，使用 CDN 访问非首页，再次刷新会找不到文件。•如果开启了 relativePath: true，文件可以找到，但是侧栏上边的标题点击又有点问题。
 
 ```shell
 name: deploy md to oss
