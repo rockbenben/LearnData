@@ -34,6 +34,10 @@ jobs:
         port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
 ```
 
+`FTPError: 530 Login authentication failed`：密钥填写错误，需将 github secrets 重新 update，并检查密码只有大小写字母和数字。
+
+`Error: Timeout`，连接超时可能是文件过大，暂时没找到解决办法。
+
 ### 同步 oss
 
 如果你没有服务器，可以把文件部署在云运营商的 oss 上。比如阿里云，用[aliyun-oss-website-action](https://github.com/marketplace/actions/aliyun-oss-website-action) 能将 github 文件 build 上传到阿里云 oss，运行静态网站。
