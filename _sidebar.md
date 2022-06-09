@@ -2,10 +2,12 @@
   - [创业思维](startup.md)
   - [系统设置](windows.md)
 - **代码**
-  - [Markdown](code/Markdown.md)
   - [HTML](code/HTML.md)
   - [Javascript](code/Javascript.md)
+  - [Markdown](code/Markdown.md)
+  - [AutoHotKey](code/AutoHotKey.md)
   - [正则表达式](code/Regex.md)
+  - [Electron](code/Electron.md)
 - **工具**
   - [小工具](tools/)
   - [Visual Studio Code](tools/VSCode.md)

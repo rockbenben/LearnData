@@ -34,9 +34,9 @@ jobs:
         port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
 ```
 
-`FTPError: 530 Login authentication failed`：密钥填写错误，需将 github secrets 重新 update，并检查密码只有大小写字母和数字。
+`FTPError: 530 Login authentication failed`：密钥填写错误，需将 github secrets 重新 update，并检查密码只有大小写字母和数字。先用 FileZilla 测试连接 ftp，然后进入`/www/server/pure-ftpd/etc/pureftpd.passwd`，检查是否有该 ftp 账户。
 
-`Error: Timeout`，连接超时可能是文件过大，暂时没找到解决办法。
+如果新建 ftp，需在云服务商的安全组和服务器上开放端口。宝塔系统加固等服务器防火墙经常会组织新建 ftp，可临时暂停。
 
 ### 同步 oss
 
