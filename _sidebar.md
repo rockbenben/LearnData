@@ -7,7 +7,7 @@
   - [Javascript](code/Javascript.md)
   - [正则表达式](code/Regex.md)
 - **工具**
-  - [杂类](tools/)
+  - [小工具](tools/)
   - [Visual Studio Code](tools/VSCode.md)
   - [Eagle-素材管理](tools/Eagle.md)
   - [Zinc-轻量级全文搜索引擎](tools/ZincSearch.md)
