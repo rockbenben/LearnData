@@ -28,7 +28,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: ${{ secrets.ftp_host }}
+        server: 106.14.xx.xx # 域名或 ip 皆可，但必须明文
         username: myFtpUserName  # 必须明文，无法加密隐藏
         password: ${{ secrets.ftp_password }}
         port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
