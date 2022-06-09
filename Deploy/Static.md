@@ -2,19 +2,25 @@
 
 笔记类用 md 编辑，然后同步到 GitHub，接着用 GitHub Action 同步到 Gitee，最后形成国内静态页 Gitee page。
 
-不过这个方案会有一些问题，就是 gitee page 免费版是无法自定义域名的。
+但 Gitee Page 有诸多限制，要实名验证，而且免费版是无法自定义域名的。
 
-那是否我能够把 GitHub Action 同步到？我的服务器上面，而不是说给 page。这样子是不是？而且反应速度也更快。
+因此，尝试用 GitHub Action 同步到服务器上，速度会更稳定。
 
-这方法确实是比较好，所以我现在要要找的是，呃，能够用。嘿。GitHub，action 同步到服务器里面的方法 OK 好。
+## github 同步 VPS
+
+### 同步 oss
 
 aliyun-oss-website-action：<https://github.com/marketplace/actions/aliyun-oss-website-action>
 
 目录中需含`CNAME`，否则 SSL 链接容易 404 报错，显示「There isn't a GitHub Pages site here.」
 
-但我常用的是 docsify，但打开页面经常出现 404。
+docsify 静态页上传 oss，打开页面经常出现 404。
 
 > CDN 默认是有缓存的，如果文件更新，访问的可能不是最新的文件。•我设置了 routerMode 为 history，使用 CDN 访问非首页，再次刷新会找不到文件。•如果开启了 relativePath: true，文件可以找到，但是侧栏上边的标题点击又有点问题。
+
+### 同步 ftp
+
+oss 有问题的话，上传到 ftp 使用服务器是否能解决问题？
 
 ## 平台对比
 
