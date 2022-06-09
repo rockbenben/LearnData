@@ -1,14 +1,14 @@
-# gitalk
+# Gitalk
 
-gitalk 是轻量化的评论组件，用户必须登录 github 才能评论，适合项目类使用。
+Gitalk 是轻量化的评论组件，用户必须登录 github 才能评论，适合项目类使用。
 
 初次设置时，需要登录 github 初始化评论区。
 
-Homepage URL 和 Authorization callback URL 需与你的 gitalk 页面一致，比如：<http://localhost:3000/#/>。否则页面会报错，提示初始化，无法登录 github。
+Homepage URL 和 Authorization callback URL 需与你的 Gitalk 页面一致，比如：<http://localhost:3000/#/>。否则页面会报错，提示初始化，无法登录 github。
 
 <https://github.com/settings/developers> 页面管理已建的应用，获取 Client ID 和 Client secrets，修改应用链接。
 
-将以下代码放入 docsify 页面中，即可启动 gitalk：
+将以下代码放入 docsify 页面中，即可启动 Gitalk：
 
 ```HTML
 <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/gitalk/1.7.2/gitalk.min.css">

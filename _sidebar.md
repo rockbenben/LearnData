@@ -9,10 +9,10 @@
 - **工具**
   - [杂类](Tools/)
   - [Visual Studio Code](Tools/VSCode.md)
-  - [Eagle 素材管理](Tools/Eagle.md)
-  - [Zinc 轻量级全文搜索引擎](Tools/ZincSearch.md)
+  - [Eagle-素材管理](Tools/Eagle.md)
+  - [Zinc-轻量级全文搜索引擎](Tools/ZincSearch.md)
 - **页面开发**
-  - [gitalk 评论组件](Web/gitalk.md)
+  - [Gitalk-评论组件](Web/Gitalk.md)
 - **网站部署**
   - [静态托管](Deploy/Static.md)
   - [GitHub](Deploy/GitHub.md)
