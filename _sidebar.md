@@ -1,17 +1,24 @@
-* **阅读**
-  * [创业思维](startup)
-  * [系统设置](Windows)
-* **代码**
-  * [Markdown](Code/Markdown)
-  * [HTML](Code/HTML)
-* **工具**
-  * [杂类](Tools/)
-  * [Visual Studio Code](Tools/VSCode)
-  * [Eagle 素材管理](Tools/Eagle)
-  * [Zinc 轻量级全文搜索引擎](Tools/ZincSearch)
-* **页面开发**
-  * [域名 DNS 托管](Web/DNS)
-  * [静态托管](Web/Static)
-  * [gitalk 评论组件](Web/gitalk)
-* **居家**
-  * [厨房](Family/kitchen)
+- **阅读**
+  - [创业思维](startup.md)
+  - [系统设置](Windows.md)
+- **代码**
+  - [Markdown](Code/Markdown.md)
+  - [HTML](Code/HTML.md)
+  - [Javascript](Code/Javascript.md)
+  - [正则表达式](Code/Regex.md)
+- **工具**
+  - [杂类](Tools/)
+  - [Visual Studio Code](Tools/VSCode.md)
+  - [Eagle 素材管理](Tools/Eagle.md)
+  - [Zinc 轻量级全文搜索引擎](Tools/ZincSearch.md)
+- **页面开发**
+  - [gitalk 评论组件](Web/gitalk.md)
+- **网站部署**
+  - [静态托管](Deploy/Static.md)
+  - [GitHub](Deploy/GitHub.md)
+  - [Cloudflare](Deploy/Cloudflare.md)
+  - [WordPress](Deploy/WordPress.md)
+  - [VPS](Deploy/VPS.md)
+  - [域名 DNS 托管](Deploy/DNS.md)
+- **居家**
+  - [厨房](Family/kitchen.md)
