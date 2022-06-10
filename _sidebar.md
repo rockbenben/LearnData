@@ -1,6 +1,6 @@
-- **阅读**
-  - [创业思维](startup.md)
-  - [系统设置](windows.md)
+- [读书技巧](Read.md)
+- [健身计划](Fitness.md)
+- [创业思维](startup.md)
 - **代码**
   - [HTML](code/HTML.md)
   - [Javascript](code/Javascript.md)
@@ -8,11 +8,6 @@
   - [AutoHotKey](code/AutoHotKey.md)
   - [正则表达式](code/Regex.md)
   - [Electron](code/Electron.md)
-- **工具**
-  - [Visual Studio Code](tools/VSCode.md)
-  - [Eagle-素材管理](tools/Eagle.md)
-  - [Zinc-轻量级全文搜索引擎](tools/ZincSearch.md)
-  - [小工具](tools/)
 - **页面开发**
   - [Gitalk-评论组件](web/Gitalk.md)
 - **网站部署**
@@ -22,5 +17,17 @@
   - [WordPress](deploy/WordPress.md)
   - [VPS](deploy/VPS.md)
   - [域名 DNS 托管](deploy/DNS.md)
-- **居家**
+- **工具**
+  - [Visual Studio Code](tools/VSCode.md)
+  - [Eagle-素材管理](tools/Eagle.md)
+  - [Zinc-轻量级全文搜索引擎](tools/ZincSearch.md)
+  - [小工具](tools/)
+- **Windows**
+  - [Windows 技巧](windows/)
+  - [QTTabBar-多标签栏](windows/QTTabBar.md)
+  - [重装系统](windows/NewSystem.md)
+  - [常见问题](windows/faq.md)
+- **生活**
+  - [生活知识](family/)
+  - [购物](family/Shopping.md)
   - [厨房](family/kitchen.md)
