@@ -1,6 +1,6 @@
 - [读书技巧](Read.md)
 - [健身计划](Fitness.md)
-- [创业思维](startup.md)
+- [商业思维](startup.md)
 - **代码**
   - [HTML](code/HTML.md)
   - [Javascript](code/Javascript.md)
@@ -24,6 +24,7 @@
   - [小工具](tools/)
 - **Windows**
   - [Windows 技巧](windows/)
+  - [Chrome](windows/Chrome.md)
   - [QTTabBar-多标签栏](windows/QTTabBar.md)
   - [重装系统](windows/NewSystem.md)
   - [常见问题](windows/faq.md)
