@@ -25,6 +25,7 @@
   - [小工具](tools/)
 - **Windows**
   - [Windows 技巧](windows/)
+  - [必备应用](windows/Apps.md)
   - [Chrome](windows/Chrome.md)
   - [QTTabBar-多标签栏](windows/QTTabBar.md)
   - [重装系统](windows/NewSystem.md)

@@ -72,9 +72,17 @@
 
 [Web Scraper](https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn)：从网页中提取数据的爬虫。
 
-自动化：UI.Vision PRA, [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
+网页自动化：UI.Vision PRA, [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
 
 ### 实用工具
+
+[Vimium C](https://chrome.google.com/webstore/detail/vimium-c-all-by-keyboard/hfjbmagddngcpeloejdejnfgbamkjaeg)：全键盘操作浏览器，建议开启`chrome://flags/#extensions-on-chrome-urls`。
+
+[SingleFile](https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle/)：完整的网页保存到单个文件中，可以对文件名、HTML 内容、样式、图片、字体等进行调整。
+
+[Tango](https://chrome.google.com/webstore/detail/tango/lggdbpblkekjjbobadliahffoaobaknh/)：快速制作带截图的流程指南。
+
+[Copy as Markdown](https://chrome.google.com/webstore/detail/copy-as-markdown/nlaionblcaejecbkcillglodmmfhjhfi/)：将网页文字转为 markdown 格式文本。
 
 [Get Favicon](https://chrome.google.com/webstore/detail/get-favicon/gpipahagclehninhhjkhbkliinfofnhe)：快速获取当前网站图标。
 
@@ -83,9 +91,3 @@
 [彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh)：双语对照网页翻译，使用更简单。
 
 [Link to Text Fragment](https://chrome.google.com/webstore/detail/link-to-text-fragment/pbcodcjpfjdpcineamnnmbkkmkdpajjg)：分享网页并将高亮你选中文本 (仅支持 chrome 浏览器)。
-
-[SingleFile](https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle/)：完整的网页保存到单个文件中，可以对文件名、HTML 内容、样式、图片、字体等进行调整。
-
-[Tango](https://chrome.google.com/webstore/detail/tango/lggdbpblkekjjbobadliahffoaobaknh/)：快速制作带截图的流程指南。
-
-[Copy as Markdown](https://chrome.google.com/webstore/detail/copy-as-markdown/nlaionblcaejecbkcillglodmmfhjhfi/)：将网页文字转为 markdown 格式文本。

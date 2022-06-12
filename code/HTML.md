@@ -18,13 +18,13 @@ HTTPS 网页中的 js、css、gif 等文件都必须要使用 https，否则无�
 一些字符在 HTML 中拥有特殊的含义，如果我们希望浏览器正确地显示这些字符，我们必须在 HTML 源码中插入字符实体。
 
 | 显示结果 | 描述   | 实体名称 | 实体编号 |
-|----------|--------|----------|----------|
-|          | 空格   | \&nbsp;   | \&#160;   |
-| <        | 小于号 | \&lt;     | \&#60;    |
-| >        | 大于号 | \&gt;     | \&#62;    |
-| &        | 和号   | \&amp;    | \&#38;    |
-| "        | 引号   | \&quot;   | \&#34;    |
-| '        | 撇号   | \&apos;   | \&#39;    |
+| -------- | ------ | -------- | -------- |
+|          | 空格   | \&nbsp;  | \&#160;  |
+| <        | 小于号 | \&lt;    | \&#60;   |
+| >        | 大于号 | \&gt;    | \&#62;   |
+| &        | 和号   | \&amp;   | \&#38;   |
+| "        | 引号   | \&quot;  | \&#34;   |
+| '        | 撇号   | \&apos;  | \&#39;   |
 
 ## CSS 样式
 
@@ -36,14 +36,19 @@ HTTPS 网页中的 js、css、gif 等文件都必须要使用 https，否则无�
 <img src="<http://tc.seoipo.com/xxx.png>" style="width:50%; height:50%;" />
 
 #bootstrap 下自动控制图片大小
-<img src="<http://tc.seoipo.com/xxx.png>" class="img-fluid"/>
+<img src="<http://tc.seoipo.com/xxx.png>" class="img-fluid" />
 ```
 
 图片链接为空时，去除图片所占区域，并防止出现空边框。
 
 ```html
 <style type="text/css">
-    img[src=""],img:not([src]){opacity:0;width:0; height:0;}
+  img[src=""],
+  img:not([src]) {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 </style>
 ```
 
@@ -73,10 +78,10 @@ width="2400px"
 
 ```html
 <script>
-   window.onload = function(){
+  window.onload = function () {
     browserRedirect();
-   };
-   function browserRedirect() {
+  };
+  function browserRedirect() {
     var sUserAgent = navigator.userAgent.toLowerCase();
     var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
     var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
@@ -86,21 +91,38 @@ width="2400px"
     var bIsAndroid = sUserAgent.match(/android/i) == "android";
     var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-     //移动端页面
-     $("#mobile").show();
-     $("#pc").hide();
+    if (
+      bIsIpad ||
+      bIsIphoneOs ||
+      bIsMidp ||
+      bIsUc7 ||
+      bIsUc ||
+      bIsAndroid ||
+      bIsCE ||
+      bIsWM
+    ) {
+      //移动端页面
+      $("#mobile").show();
+      $("#pc").hide();
     } else {
-     //pc 端页面
-     $("#mobile").hide();
-     $("#pc").show();
+      //pc 端页面
+      $("#mobile").hide();
+      $("#pc").show();
     }
-   }</script>
+  }
+</script>
 <div id="pc" style="display: none;">
-    <img src="../upload/202108/1629972325344278.png" title="" data-width="1920" data-height="1080"/>
+  <img
+    src="../upload/202108/1629972325344278.png"
+    title=""
+    data-width="1920"
+    data-height="1080"
+  />
 </div>
 <div id="mobile" style="text-align:center;display: none;">
-    <img src="http://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/upload/202108/1628149761.png"/>
+  <img
+    src="http://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/upload/202108/1628149761.png"
+  />
 </div>
 ```
 
@@ -110,8 +132,13 @@ body 铺满页面，添加纯色背景。
 
 ```html
 <style>
-    body{background-color:#222b3a;}
-    html,body{height: 100%;}
+  body {
+    background-color: #222b3a;
+  }
+  html,
+  body {
+    height: 100%;
+  }
 </style>
 ```
 
@@ -122,9 +149,9 @@ body 铺满页面，添加纯色背景。
 鼠标经过重链接，则该区域变色。
 
 ```css
-.tg td a:hover{
-    background:#f29901;
-    display:block;
+.tg td a:hover {
+  background: #f29901;
+  display: block;
 }
 ```
 
@@ -167,7 +194,7 @@ hidden_alert.textContent="标题数超过，请减少标题数或取消勾选「
 input 文本框获取焦点后，自动清空内容。
 
 ```javascript
-onfocus="this.value=''"
+onfocus = "this.value=''";
 ```
 
 ### 内部文件读取
@@ -175,10 +202,13 @@ onfocus="this.value=''"
 以下代码用于服务器读取文档，本地无法直接使用。
 
 ```javascript
-$.ajax({url:"./xx.txt",success:function(result){
-   var strs = result.split("\n");
-   addTableTR(strs, true);
-}});
+$.ajax({
+  url: "./xx.txt",
+  success: function (result) {
+    var strs = result.split("\n");
+    addTableTR(strs, true);
+  },
+});
 ```
 
 ### 选择框状态
@@ -187,9 +217,9 @@ $.ajax({url:"./xx.txt",success:function(result){
 
 ```javascript
 //取消导航项的 checked，同类名称都会取消 checked 状态
-$("input[name=daoruRadio]").prop("checked",false);
+$("input[name=daoruRadio]").prop("checked", false);
 //点击对映 id 的单选框
-$("input[id=Radio1]").prop("checked",true);
+$("input[id=Radio1]").prop("checked", true);
 ```
 
 ### 复制隐藏内容
@@ -198,18 +228,18 @@ clipboardjs 可复制隐藏区域内容
 
 ```javascript
 //新设将粘贴板设在特定按钮上，#copyresult 为按钮 id，#CopyValue 为区域 id
-var clipboard2 = new ClipboardJS('#copyresult', {
- text: function() {
+var clipboard2 = new ClipboardJS("#copyresult", {
+  text: function () {
     return $("#CopyValue").val();
-  }
+  },
 });
 
-clipboard2.on('success', function(e) {
- toastr["success"]("复制成功！");
+clipboard2.on("success", function (e) {
+  toastr["success"]("复制成功！");
 });
 
-clipboard2.on('error', function(e) {
- toastr["error"]("复制失败，请手动重新复制！");
+clipboard2.on("error", function (e) {
+  toastr["error"]("复制失败，请手动重新复制！");
 });
 ```
 
@@ -218,7 +248,7 @@ clipboard2.on('error', function(e) {
 利用 link 标签的 rel=import 引入 html 页面
 
 ```html
-<link rel="import" href="header.html"/>
+<link rel="import" href="header.html" />
 ```
 
 ### 视频全屏弹窗
@@ -226,32 +256,46 @@ clipboard2.on('error', function(e) {
 品牌首页经常需要在动加载视频，可将下方代码放入首页源码的 body 区。
 
 ```html
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/layer/3.5.1/theme/default/layer.min.css">
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.staticfile.org/layer/3.5.1/theme/default/layer.min.css"
+/>
 <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/layer/3.5.1/layer.min.js"></script>
 <script type="text/javascript">
-window.onload = function(){
+  window.onload = function () {
     //页面一打开就执行，放入 reay 是为了 Layer 所需配件（css、扩展模块）加载完毕
-    layer.ready(function(){
-        //iframe 层 - 多媒体
-        layer.open({
-          //type 值为 1 时，则可直接套用视频
-          type: 2,
-          title: false,
-          area: ['630px', '360px'],
-          shade: 0.8,
-          closeBtn: 0,
-          shadeClose: true,
-          //视频链接
-          content: 'https://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/brand-video.MP4'
-        });
+    layer.ready(function () {
+      //iframe 层 - 多媒体
+      layer.open({
+        //type 值为 1 时，则可直接套用视频
+        type: 2,
+        title: false,
+        area: ["630px", "360px"],
+        shade: 0.8,
+        closeBtn: 0,
+        shadeClose: true,
+        //视频链接
+        content:
+          "https://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/brand-video.MP4",
+      });
     });
-}
+  };
 </script>
 ```
 
 插入视频代码
 
 ```html
-<div style="line-height:0;font-size:0"><video width="100%" height="100%" controls="controls"  autoplay="autoplay" autobuffer="autobuffer" src="https://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/brand-video.MP4"></video></div>
+<div style="line-height:0;font-size:0">
+  <video
+    width="100%"
+    height="100%"
+    controls="controls"
+    autoplay="autoplay"
+    autobuffer="autobuffer"
+    src="https://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/brand-video.MP4"
+  ></video>
+</div>
 ```

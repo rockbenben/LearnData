@@ -14,6 +14,7 @@
 8. firefox-about:config 修改原值 18 的`ui.key.menuAccessKey`为 0，以屏蔽 alt 键防止热键冲突；关闭 options - Network Settings - DNS over HTTPS
 9. [设置系统强制关机](https://zhuanlan.zhihu.com/p/28990682)，防止系统关机不成功。
 10. Everything 注册右键搜索当前路径；右键清除
+
     1. win+r，regedit 打开注册表，打开路径`HKEY_CLASSES_ROOT\Directory\Background\shell`。
     2. 新建项，命名随意（即右键菜单显示的文字）-「Everything 搜索当前路径」。
     3. 右键再次新建项，命名 Command，打开修改右侧默认值为`"D:\Everything\Everything.exe" -path "."`。

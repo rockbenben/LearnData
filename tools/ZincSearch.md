@@ -10,7 +10,7 @@
 
 2. 在应用目录下打开终端，执行命令：
 
-```
+```shell
 mkdir data
 .\zinc.exe
 ```
@@ -29,4 +29,5 @@ ZINC_FIRST_ADMIN_USER and ZINC_FIRST_ADMIN_PASSWORD must be set on first start. 
 可能是没有配置好环境变量，或是没有以管理员身份运行终端（win+X，A）所导致的。
 
 参考资料：
-* [搜索引擎漫谈以及 Zinc 简介](https://blog.csdn.net/zhangxin09/article/details/125080763)
+
+- [搜索引擎漫谈以及 Zinc 简介](https://blog.csdn.net/zhangxin09/article/details/125080763)

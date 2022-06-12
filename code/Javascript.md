@@ -23,7 +23,7 @@ str = str.substring(str.indexOf("A") + 1,str.indexOf("B"))
 //取特定字符前后的字符串
 var ture_tkl01 = taokouling.value.trim().split('打')[0];
 //取第4位后的字符串(4代表开始位置,相当于从5开始截取到尾部)
-var ture_tkl = ture_tkl01.substring(4); 
+var ture_tkl = ture_tkl01.substring(4);
 
 //报错处理
 function f1(){
@@ -69,14 +69,14 @@ strResult += split_result[i].replace(/(^[\t\s]*)|([\t\s]*$)/g, "") +
 var person={firstname:"John", lastname:"Doe", id:5566};
 //对象属性有两种寻址方式
 name=person.lastname;
-name=person["lastname"]; 
+name=person["lastname"];
 
 //对象的方法定义了一个函数，并作为对象的属性存储。对象方法通过添加 () 调用 (作为一个函数)。
-<p id="对象"></p>  
+<p id="对象"></p>
 <script>
  var person ={
-  firstname:"名", 
-  lastname:"姓", 
+  firstname:"名",
+  lastname:"姓",
   fullname:function()
   {
    return this.lastname+this.firstname
@@ -98,7 +98,7 @@ js 的全部变量要用`window.`来定义。如果变量在函数内没有声�
 <script>
 myFunction();
 document.getElementById("demo").innerHTML = "我可以显示 " + carName;
-function myFunction() 
+function myFunction()
 {
     carName = "Volvo";   //如果在这添加var，声明变量，则变为局部变量，无法调用
 }
@@ -110,19 +110,25 @@ function myFunction()
 当您声明新变量时，可以使用关键词 "new" 来声明其类型：
 
 ```jsx
-var carname=new String; 字符串
-var x=      new Number; 数字
-var y=      new Boolean; 布尔
-var cars=   new Array; 数组
-var person= new Object; 对象
-var y=      new String("John"); 对象
+var carname = new String();
+字符串;
+var x = new Number();
+数字;
+var y = new Boolean();
+布尔;
+var cars = new Array();
+数组;
+var person = new Object();
+对象;
+var y = new String("John");
+对象;
 
 // 数据赋值
-var length = 16;                                  // Number 通过数字字面量赋值
-var points = x * 10;                              // Number 通过表达式字面量赋值
-var lastName = "Johnson";                        // String 通过字符串字面量赋值
-var cars = ["Saab", "Volvo", "BMW"];              // Array  通过数组字面量赋值
-var person = {firstName:"John", lastName:"Doe"};  // Object 通过对象字面量赋值 
+var length = 16; // Number 通过数字字面量赋值
+var points = x * 10; // Number 通过表达式字面量赋值
+var lastName = "Johnson"; // String 通过字符串字面量赋值
+var cars = ["Saab", "Volvo", "BMW"]; // Array  通过数组字面量赋值
+var person = { firstName: "John", lastName: "Doe" }; // Object 通过对象字面量赋值
 ```
 
 ## 运算符

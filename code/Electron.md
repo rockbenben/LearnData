@@ -13,7 +13,7 @@ npm i yarn -g #全局安装 yarn
 
 cd D:\\Tools\\electron-apps\\nuoyi-tools  #进入指定目录
 npm i -d electron@latest -g #更新最新版 Electron，不能全局安装，否则 electron-builder 找不到
-yarn global add electron-builder --dev #部署 electron-builder 
+yarn global add electron-builder --dev #部署 electron-builder
 set-ExecutionPolicy RemoteSigned #若 yarn 命令报错，则管理员运行此命令
 
 # 全局安装，去除^，手动指定 package.json 中的 electron 版本，然后运行下方打包命令
@@ -31,8 +31,8 @@ npm i request
 
 ## 使用问题
 
-* electron cdn 需要连接网络，必须用本地环境安装
-* Electron 定位的 location 为 窗口链接，而非网页链接
+- electron cdn 需要连接网络，必须用本地环境安装
+- Electron 定位的 location 为 窗口链接，而非网页链接
 
 ### nsis 配置
 
@@ -48,7 +48,7 @@ npm i request
   "createStartMenuShortcut": true,// 创建开始菜单图标
   "shortcutName": "xxxx", // 图标名称
   "include": "build/script/installer.nsh", // 包含的自定义 nsis 脚本 这个对于构建需求严格得安装过程相当有用。
-  "script" : "build/script/installer.nsh" // NSIS 脚本的路径，用于自定义安装程序。默认为 build / installer.nsi  
+  "script" : "build/script/installer.nsh" // NSIS 脚本的路径，用于自定义安装程序。默认为 build / installer.nsi
 },
 ```
 

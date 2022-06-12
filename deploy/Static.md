@@ -24,7 +24,7 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
-    
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
@@ -81,20 +81,20 @@ jobs:
 
 ## 平台对比
 
-* 饿了么 CDN：国内唯一能用的 npm 镜像，不过饿了么并没说支持对外，不知道合适会取消。
+- 饿了么 CDN：国内唯一能用的 npm 镜像，不过饿了么并没说支持对外，不知道合适会取消。
   `https://npm.elemecdn.com/react@latest/`需要时间更新，具体频率未知，可固定大版本号来获取更新`https://npm.elemecdn.com/react@^18/`。
   1. 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
   2. 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀`https://npm.elemecdn.com/`。
-* [字节 CDN](https://cdn.bytedance.com/)：js、css 等静态资源库
-  * 国内测速表现最佳，可以设置过期时间，最长一年。
-* Cloudflare
-  * Pages：部署简单，外网速度很快，但国内屏蔽了 [page.dev](http://page.dev)，可通过自定义域名解决该问题。自定义域名可以买最便宜的一年一次的临时域名。
-  * [Workers](https://www.notion.so/CloudFlare-Workers-a42b27820baf433b8ee45e71bd508f4a)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
-* Netlify：国内速度慢点，图片容易卡死，但还算稳定。
-* vercel：需绑定国外手机号，经常需要换 IP
-* 国内：Gitee、wulihub、coding
+- [字节 CDN](https://cdn.bytedance.com/)：js、css 等静态资源库
+  - 国内测速表现最佳，可以设置过期时间，最长一年。
+- Cloudflare
+  - Pages：部署简单，外网速度很快，但国内屏蔽了 [page.dev](http://page.dev)，可通过自定义域名解决该问题。自定义域名可以买最便宜的一年一次的临时域名。
+  - [Workers](https://www.notion.so/CloudFlare-Workers-a42b27820baf433b8ee45e71bd508f4a)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
+- Netlify：国内速度慢点，图片容易卡死，但还算稳定。
+- vercel：需绑定国外手机号，经常需要换 IP
+- 国内：Gitee、wulihub、coding
 
-* jsDelivr：速度最快，原本是最稳的，但域名暴雷后，经常打不开。2022.06.01 已经彻底不打开。
+- jsDelivr：速度最快，原本是最稳的，但域名暴雷后，经常打不开。2022.06.01 已经彻底不打开。
 
 ```shell
 #配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新
@@ -111,4 +111,4 @@ IPFS 无需服务器就可建立静态网站，号称永不失效，但**国内�
 上传 ipfs 到 pinata 之后，cloudflare 等其他网关不一定会完全复制文件，php 无法抓取加载，所以不建议使用 cloudflare 网关。而 cloudflare 接管 pinata ipfs 域名需通过「pinata 托管 - cloudflare DNS - cloudflare SSL」，一旦 DNS 指向 <http://gateway.pinata.cloud> 等非 cloudflare ipfs 网关域名，cloudflare SSL 证书将失效。链接改为 http，pinata 会视为无效链接，拒绝访问。对于文件较少，确认过链接有效性的域名，可访问 [Cloudflare IPFS](https://www.cloudflare.com/zh-cn/distributed-web-gateway/) 页面，按说明设置 DNS，然后 输入 IPFS 域名并提交，过 30 分钟后获取 SSL 证书。
 
 1. 添加 CNAME 记录，将你的 IPFS 域名 (xxx.example.com) 指向 cloudflare-ipfs.com
-2. _dnslink.xxx.example.com 的值为 dnslink=/ipfs/<your_ipfs_hash_here> 的域
+2. \_dnslink.xxx.example.com 的值为 dnslink=/ipfs/<your_ipfs_hash_here> 的域

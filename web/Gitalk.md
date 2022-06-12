@@ -31,4 +31,4 @@ Homepage URL 和 Authorization callback URL 需与你的 Gitalk 页面一致，�
 
 参考资料：
 
-* [超 Nice 的评论组件 —— Gitalk](https://blog.csdn.net/qq_39052513/article/details/108291272)
+- [超 Nice 的评论组件 —— Gitalk](https://blog.csdn.net/qq_39052513/article/details/108291272)
