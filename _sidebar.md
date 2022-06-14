@@ -1,5 +1,6 @@
-- [读书技巧](Read.md)
+- [每日作息](DailyRoutine.md)
 - [健身计划](Fitness.md)
+- [读书技巧](Read.md)
 - [商业思维](startup.md)
 - **代码**
   - [HTML](code/HTML.md)
@@ -8,9 +9,6 @@
   - [AutoHotKey](code/AutoHotKey.md)
   - [正则表达式](code/Regex.md)
   - [Electron](code/Electron.md)
-- **页面开发**
-  - [Gitalk-评论组件](web/Gitalk.md)
-  - [docsify-文档网站生成器](web/docsify.md)
 - **网站部署**
   - [静态托管](deploy/Static.md)
   - [GitHub](deploy/GitHub.md)
@@ -18,15 +16,17 @@
   - [WordPress](deploy/WordPress.md)
   - [VPS](deploy/VPS.md)
   - [域名 DNS 托管](deploy/DNS.md)
-- **工具**
-  - [Visual Studio Code](tools/VSCode.md)
-  - [Eagle-素材管理](tools/Eagle.md)
-  - [Zinc-轻量级全文搜索引擎](tools/ZincSearch.md)
-  - [小工具](tools/)
+- **页面开发**
+  - [Gitalk-评论组件](web/Gitalk.md)
+  - [docsify-文档网站生成器](web/docsify.md)
+- **应用**
+  - [必备应用](apps/)
+  - [Chrome](apps/Chrome.md)
+  - [Visual Studio Code](apps/VSCode.md)
+  - [Eagle-素材管理](apps/Eagle.md)
+  - [Zinc-轻量级全文搜索引擎](apps/ZincSearch.md)
 - **Windows**
   - [Windows 技巧](windows/)
-  - [必备应用](windows/Apps.md)
-  - [Chrome](windows/Chrome.md)
   - [QTTabBar-多标签栏](windows/QTTabBar.md)
   - [重装系统](windows/NewSystem.md)
   - [常见问题](windows/faq.md)

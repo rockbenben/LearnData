@@ -2,7 +2,19 @@
 
 Windows 自用软件，以开源软件为主。
 
-## 文本记录
+## TheBrain
+
+TheBrain 可以把知识无限扩充，都连接在一起。
+
+- [善用佳软张玉新老师 · TheBrain ≠ 思维导图——运用 TheBrain 的三个阶段](https://www.bilibili.com/video/BV19a411578T)
+
+## 小工具
+
+> 收集稀奇古怪的小工具
+
+- [Animated Drawings – 自动将绘画转换为动画](https://www.appinn.com/animated-drawings/)
+
+## 知识记录
 
 知识管理：Notion & flomo & Airtable & 妙笔 & Joplin & 简悦 ~~& Wiz 笔记 & OneNote~~
 
@@ -40,7 +52,7 @@ Windows 自用软件，以开源软件为主。
 
 ## 屏幕录制
 
-录屏直播：OBS & [Captura](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0) & [SplitCam](https://splitcam.com/) (摄像头多开) & [ScreenToGif](https://www.screentogif.com/) ~~& FlashBack Express~~
+录屏直播：OBS & [Captura](https://github.com/MathewSachin/Captura/releases) & [SplitCam](https://splitcam.com/) (摄像头多开) & [ScreenToGif](https://www.screentogif.com/) ~~& FlashBack Express~~
 
 换脸特效：Snap Camera（操作简单） & [Avatarify Python](https://github.com/alievk/avatarify)
 

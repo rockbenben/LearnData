@@ -66,8 +66,6 @@ run notepad ;激活打开记事本这个动作。
 return
 ```
 
-误例：请尝试设置多个热键，并且每一个热键末端不加 return，试试会有什么情况发生。
-
 ### 热字串：(被替换内容)::(替换内容)
 
 扩展或者说自动替换文本，当然也可以映射任何脚本动作。
@@ -99,8 +97,7 @@ return
 )
 ```
 
-键入热字串后，再加**空格**、或 **tab**、或**回车**，就可以触发缩写
-误例：请尝试使用多个映射脚本和自动替换的组合，每个映射脚本末端不加 return，试试会有什么情况发生。
+键入热字串后，再加**空格**、或 **tab**、或**回车**，就可以触发缩写。
 
 ## [AHK 使用样例](https://segmentfault.com/a/1190000004611125)
 
@@ -138,26 +135,26 @@ stop:=0
 
 ;F2一键运行/关闭脚本的循环
 $f2::
-stop:=!stop
-while (stop=1)
-{
- ;激活 excel 窗口「工作簿」获取数值，然后激活 chrome 窗口执行命令，完成后进入循环。
- WinActivate, 工作簿
- Sleep, 333
- Send, {Down}
- Sleep, 100
- Send, {Control Down}{c}{Control Up}
- Sleep, 100
- WinActivate, 捧场 - Google Chrome
- Sleep, 333
- Send, {Control Down}{v}{Control Up}
- Sleep, 100
- Send, {Enter}
- Sleep, 100
-}
-Return
+    stop:=!stop
+    while (stop=1)
+    {
+        ;激活 excel 窗口「工作簿」获取数值，然后激活 chrome 窗口执行命令，完成后进入循环。
+        WinActivate, 工作簿
+        Sleep, 333
+        Send, {Down}
+        Sleep, 100
+        Send, {Control Down}{c}{Control Up}
+        Sleep, 100
+        WinActivate, 捧场 - Google Chrome
+        Sleep, 333
+        Send, {Control Down}{v}{Control Up}
+        Sleep, 100
+        Send, {Enter}
+        Sleep, 100
+    }
+return
 ;如果需要暂停，可在脚本后加这段代码，按 空格键 就暂停，再按空格键继续运行。
-space::pause
+;space::pause
 ```
 
 ### 监测进程是否运行

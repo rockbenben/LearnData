@@ -6,13 +6,13 @@
 
 ### 浏览器
 
-[Bookmarks clean up](https://chrome.google.com/webstore/detail/bookmarks-clean-up/oncbjlgldmiagjophlhobkogeladjijl)：清理重复书签、空文件夹、失效的链接。
+[扩展管理器](https://chrome.google.com/webstore/detail/extension-manager/gjldcdngmdknpinoemndlidpcabkggco)：快速管理扩展，对扩展分组启用。
+
+[Bookmarks clean up](https://chrome.google.com/webstore/detail/bookmarks-clean-up/oncbjlgldmiagjophlhobkogeladjijl)：清理重复书签、空文件夹和失效链接，也能合并重复文件夹。
 
 [Chrome Better History](https://chrome.google.com/webstore/detail/view-chrome-history/oiginoblioefjckppeefcofmkkhgbdfc)：按日历日期罗列历史记录。
 
 [Cookie Editor](https://chrome.google.com/webstore/detail/cookie-editor/iphcomljdfghbkdcfndaijbokpgddeno)：管理、修改、导出 Cookie。
-
-[扩展管理器](https://chrome.google.com/webstore/detail/extension-manager/gjldcdngmdknpinoemndlidpcabkggco)：快速管理扩展，对扩展分组启用。
 
 ### 网页优化
 
@@ -76,7 +76,7 @@
 
 ### 实用工具
 
-[Vimium C](https://chrome.google.com/webstore/detail/vimium-c-all-by-keyboard/hfjbmagddngcpeloejdejnfgbamkjaeg)：全键盘操作浏览器，建议开启`chrome://flags/#extensions-on-chrome-urls`。
+[Vimium C](https://github.com/gdh1995/vimium-c/blob/master/README-zh.md)：全键盘操作浏览器，建议开启`chrome://flags/#extensions-on-chrome-urls`。
 
 [SingleFile](https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle/)：完整的网页保存到单个文件中，可以对文件名、HTML 内容、样式、图片、字体等进行调整。
 

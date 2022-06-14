@@ -1,8 +1,8 @@
 # 健身
 
-每天保持 [9000 步](https://www.solidot.org/story?sid=71166)，日常做凯格尔运动。
+每天保持 [9000 步](https://www.solidot.org/story?sid=71166)，日常做凯格尔运动。下午 3 点进行重训或 HITT，晚上做睡前瑜伽。
 
-早上按 KEEP 大重量训练，下午 3 点进行重训或 HITT，晚上做睡前瑜伽。早餐必吃，午餐吃饱，晚餐少吃且不吃主食。
+早餐必吃，午餐吃饱，晚餐少吃且不吃主食。
 
 ## [K 歌减肥](https://mp.weixin.qq.com/s/QKJ9PnmGTK7XY0yUWxsMRw)
 
