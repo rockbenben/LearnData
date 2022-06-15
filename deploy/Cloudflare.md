@@ -1,5 +1,11 @@
 # Cloudflare
 
+[Cloudflare Docs](https://developers.cloudflare.com/)
+
+Cloudflare 云端代理后，能帮加速国内访问国外网站的速度。比如，notion 的个人博客用 Cloudflare 代理，原本速度很慢，使用 Cloudflare 后加速明显。
+
+但 Cloudflare 免费计划不支持单独子域名托管，需要完整域名托管。
+
 ## Cloudflare 反向代理
 
 Cloudflare Workers 反向代理不适合 google 和 cloudflare cdn 网站，其他网站大都可以。

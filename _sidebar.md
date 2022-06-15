@@ -11,10 +11,9 @@
   - [Electron](code/Electron.md)
 - **网站部署**
   - [静态托管](deploy/Static.md)
-  - [GitHub](deploy/GitHub.md)
-  - [Cloudflare](deploy/Cloudflare.md)
-  - [WordPress](deploy/WordPress.md)
   - [VPS](deploy/VPS.md)
+  - [GitHub](deploy/GitHub.md)
+  - [WordPress](deploy/WordPress.md)
   - [域名 DNS 托管](deploy/DNS.md)
 - **页面开发**
   - [Gitalk-评论组件](web/Gitalk.md)
