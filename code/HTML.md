@@ -6,7 +6,7 @@ HTTPS 网页中的 js、css、gif 等文件都必须要使用 https，否则无�
 
 ### 相对路径
 
-```shell
+```javascript
 / 根目录（electron 不适用）
 ./ 当前目录（可省略不写）
 ../ 父级目录（返回到上一级目录）
@@ -58,7 +58,7 @@ HTTPS 网页中的 js、css、gif 等文件都必须要使用 https，否则无�
 
 自适应布局以 Bootstrap 为主，具体说明参考 [Bootstrap 文档](https://getbootstrap.com/docs/5.1/utilities/spacing/)。
 
-```shell
+```css
 # 分别为距离上下左右，
 class="mt-5 mb-5 ms-4 me-4"
 
@@ -159,7 +159,7 @@ body 铺满页面，添加纯色背景。
 
 隐藏网页元素
 
-```shell
+```bash
 # 将元素的显示设为无，元素在网页中不占任何的位置。
 style="display:none;"
 # 将元素隐藏，但是元素在网页中的位置还是被占着。

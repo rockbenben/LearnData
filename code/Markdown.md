@@ -4,7 +4,7 @@
 
 使用 html 或 md 格式调整图片尺寸。但 md 格式在不同编辑器中显示效果不同，不一定会生效。
 
-```shell
+```markdown
 # 按页面宽度的 60% 来缩小
 <img *src*="" *width*="60%">
 
@@ -18,7 +18,7 @@
 
 七牛云图床：使用[七牛云接口](https://developer.qiniu.com/dora/kb/1627/flow-optimization-compression-of-images)改变图片分辨率、大小、格式，具体参数看[七牛云图片高级处理](https://developer.qiniu.com/dora/8255/the-zoom)。
 
-```shell
+```markdown
 # 按图片尺寸的 60% 等比缩小
 ?imageMogr2/thumbnail/!60p
 

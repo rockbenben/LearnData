@@ -40,9 +40,8 @@ Web2Desk 让我们可以直接输入网页链接、应用名称和应用图标�
 
 但测试中，用 Web2Desk 转换滴答清单 Web, 无法记录登陆状态，实用性较低。
 
-## 新建网站快捷方式
+## 网址快捷方式
 
-1. 右键-新建快捷方式
-2. 插入`欲打开的浏览器`路径，然后空格并输入要打开的网址链接。如果要输入多个网址，继续添加`空格 + 链接`
+鼠标右键-新建 - 快捷方式，插入浏览器路径，然后空格并输入要打开的网址链接，比如 `"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" https://newzone.top/`。
 
-`"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" <https://newzone.top/>`
+如果需要一次打开多个网址，则在参数后继续添加「空格 链接」。

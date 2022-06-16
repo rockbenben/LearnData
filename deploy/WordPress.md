@@ -13,7 +13,7 @@ define('AUTOSAVE_INTERVAL', false);
 
 进入`外观－主题编辑器`，修改主题相关设置。
 
-```shell
+```bash
 #主题页脚－删除主题说明
 Design by <a href="https://www.xxx.cn" target="_blank"><strong>xx</strong></a>
 

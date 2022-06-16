@@ -4,7 +4,7 @@
 
 更改配置后，需要 nginx 重载配置后生效
 
-```shell
+```bash
 #隐性链接跳转
 location /xx1 {proxy_pass <https://xxx.com/;>}
 

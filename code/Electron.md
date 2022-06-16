@@ -2,7 +2,7 @@
 
 Electron 是使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序框架。Electron 兼容 Mac、Windows 和 Linux，可以构建出三个平台的应用程序。
 
-```shell
+```bash
 # Node.js 安装：<https://nodejs.org/en/download/>
 # npm 和 yarn 源改为国内淘宝源
 npm config set registry https://registry.npm.taobao.org/
@@ -66,7 +66,7 @@ Win11 可允许内建子系统，管理员身份运行 Powershell，输入 bash 
 
 更多命令参考：
 
-```shell
+```bash
 #安排装更新软件源，安装 node 和 npm 环境
 sudo apt-get update
 sudo apt-get install nodejs

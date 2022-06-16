@@ -14,7 +14,7 @@
 
 如果你有 ftp 服务器，可使用 [FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action) 将 github 代码同步到服务器上。Action 使用说明查看 [GitHub 说明](GitHub.md)。
 
-```shell
+```bash
 on: push
 name: 🚀 Deploy website on push
 jobs:
@@ -42,7 +42,7 @@ jobs:
 
 如果你没有服务器，可以把文件部署在云运营商的 oss 上。比如阿里云，用[aliyun-oss-website-action](https://github.com/marketplace/actions/aliyun-oss-website-action) 能将 github 文件 build 上传到阿里云 oss，运行静态网站。
 
-```shell
+```bash
 name: deploy md to oss
 on:
   push:
@@ -96,7 +96,7 @@ jobs:
 
 - jsDelivr：速度最快，原本是最稳的，但域名暴雷后，经常打不开。2022.06.01 已经彻底不打开。
 
-```shell
+```bash
 #配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新
 curl https://purge.jsdelivr.net/gh/aeovn/xMBpb-B6-Hg7uC2Odv/mjFh9xdAB5zUifXr1QZlkR88rp
 curl https://purge.jsdelivr.net/gh/aeovn/N6gupybTblr73P3W-ZAu-j-B/wgLA7l2UWEdY2XJmtbuQi4

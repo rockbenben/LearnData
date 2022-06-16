@@ -10,7 +10,7 @@
 
 2. 在应用目录下打开终端，执行命令：
 
-```shell
+```bash
 mkdir data
 .\zinc.exe
 ```
