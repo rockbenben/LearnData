@@ -1,4 +1,6 @@
-# 创业思维
+# 思维收集
+
+知识获取：搜索时，除了用中文，也要用不同的英文关键词去搜索。
 
 - [Allison Seboldt](https://allisonseboldt.com/)：作者每个月都会进行“回顾”，分享他的收入并反思上个月的成就。复盘笔记可以参照他来写。
 - [JustinJ ackson](https://justinjackson.ca/bootstrap)：作者在 2018 年初创办  Transistor  以来，一直在分享他的项目。他整理了在此过程中学到的许多经验教训。定期看看他的总结。

@@ -1,7 +1,8 @@
 - [每日作息](DailyRoutine.md)
+- [健康饮食](family/Diet.md)
 - [健身计划](Fitness.md)
 - [读书技巧](Read.md)
-- [商业思维](startup.md)
+- [思考收集站](startup.md)
 - **代码**
   - [HTML](code/HTML.md)
   - [Javascript](code/Javascript.md)
@@ -11,9 +12,10 @@
   - [Electron](code/Electron.md)
 - **网站部署**
   - [静态托管](deploy/Static.md)
-  - [VPS](deploy/VPS.md)
+  - [VPS/网站修改](deploy/VPS.md)
   - [GitHub](deploy/GitHub.md)
   - [WordPress](deploy/WordPress.md)
+  - [Cloudflare](deploy/Cloudflare.md)
   - [域名 DNS 托管](deploy/DNS.md)
 - **页面开发**
   - [Gitalk-评论组件](web/Gitalk.md)

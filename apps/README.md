@@ -16,7 +16,7 @@ TheBrain 可以把知识无限扩充，都连接在一起。
 
 ## 知识记录
 
-知识管理：Notion & flomo & Airtable & 妙笔 & Joplin & 简悦 ~~& Wiz 笔记 & OneNote~~
+知识管理：Notion & 飞书 & flomo & Airtable & 妙笔 & Joplin & 简悦 ~~& Wiz 笔记 & OneNote~~
 
 清单日记：Logseq & 滴答清单 & 桌面日历 & Habitify ~~& Workflowy & Trello~~
 
@@ -44,7 +44,7 @@ TheBrain 可以把知识无限扩充，都连接在一起。
 
 音频处理：[Audacity](https://github.com/audacity/audacity/releases) & iZotope rx9 ~~& Audition & 神舌变声器 & Goldwave~~
 
-视频剪辑：剪映 & LosslessCut(视频切割合并) & [ShanaEncoder](https://shana.pe.kr/shanaencoder_download/)(视频压缩) & [Quick Cut](https://github.com/HaujetZhao/QuickCut) (自动剪辑) & HandBrake(视频转换) & Premiere ~~& Shotcut & 500th Video Converter & 小丸工具箱~~
+视频剪辑：剪映 & LosslessCut(音频提取·视频切割合并) & [ShanaEncoder](https://shana.pe.kr/shanaencoder_download/)(视频压缩) & [Quick Cut](https://github.com/HaujetZhao/QuickCut) (自动剪辑) & HandBrake(视频转换) & Premiere ~~& Shotcut & 500th Video Converter & 小丸工具箱~~
 
 字幕工具：[ChineseSubtitleConversionTool](https://github.com/xiaoxinpro/ChineseSubtitleConversionTool)（繁简转换）& Arctime Pro & [VideoSrt](https://github.com/wxbool/video-srt-windows) & 人人译视界
 
@@ -96,7 +96,7 @@ TheBrain 可以把知识无限扩充，都连接在一起。
 
 输入法：小狼毫 & `Win+H`（系统语音输入）~~& QuickCut & 讯飞语记 & 微软输入法 & 影子输入法 & 搜狗输入法 & 讯飞输入法 & 百度输入法~~
 
-通讯：TIM & 微信 & Telegram & 飞书 & Slack & Discord & [防撤回补丁](https://github.com/huiyadanli/RevokeMsgPatcher) ~~& 钉耙 & 千牛 & 阿里旺旺~~
+通讯：TIM & 微信 & Telegram & Slack & Discord & [防撤回补丁](https://github.com/huiyadanli/RevokeMsgPatcher) ~~& 钉耙 & 千牛 & 阿里旺旺~~
 
 下载：[Aria2](https://zhuanlan.zhihu.com/p/37021947) & IDM & [Kinhdown](https://baidu.kinh.cc/)(百度云解析) ~~& FDM(不支持 ed2k、磁力) & 迅雷~~
 
@@ -129,6 +129,8 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 卸载清理：IObit Uninstaller & Glary Utilities(注册表清理) ~~& Geek Uninstaller~~
 
 偶尔使用：VeraCrypt(本地加密)、Recuva(文件恢复)、[12306Bypass](http://www.12306bypass.com/)、爱思助手、Bluestacks(安卓模拟器)、微 PE 工具箱、[傲梅分区](https://www.disktool.cn/)
+
+飞书妙记：倍速、跳过空白片段、字幕搜索定位视频，将视频（最长 4 小时）转为文字大纲，了解视频梗概，建立基础认知。等到自己上手实操的时候，遇到问题直接搜索文字定位到相关内容，再看文字对应的视频截图确定配置细节。如果视频过大，可以提取音频来上传。^[[视频课程学习留档](https://sspai.com/post/70960)]
 
 [DockIt](http://dogbean.ysepan.com/)：主显示屏中，非全屏状态下，快速将窗口局部化。如何默认不全屏；应用不自动吸边？
 
