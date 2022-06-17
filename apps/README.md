@@ -4,7 +4,7 @@ Windows 自用软件，以开源软件为主。
 
 ## TheBrain
 
-TheBrain 可以把知识无限扩充，都连接在一起。
+TheBrain 可以把知识无限扩充，都连接在一起。但将工作流导图放入 TheBrain 后发现并不合适，比较适合更细化的内容？
 
 - [善用佳软张玉新老师 · TheBrain ≠ 思维导图——运用 TheBrain 的三个阶段](https://www.bilibili.com/video/BV19a411578T)
 
