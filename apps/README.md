@@ -148,5 +148,4 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 流量管理：cFosSpeed
 游戏平台：VS & 4399
 客服：飞豆客服聊天助手 & [mirai(qq 机器人)](https://github.com/mamoe/mirai) & 酷 Q(已关)
-按键精灵、
-DisplayCal（屏幕）、One Quik(虚拟桌面切换)、RBTray(右键最小化到托盘)、Auslogics Disk Defrag(磁盘整理)、Reflector 3(手机投屏)、VoiceBot(声控游戏)~~
+按键精灵、DisplayCal（屏幕）、One Quik(虚拟桌面切换)、RBTray(右键最小化到托盘)、Auslogics Disk Defrag(磁盘整理)、Reflector 3(手机投屏)、VoiceBot(声控游戏)~~
