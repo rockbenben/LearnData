@@ -120,7 +120,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 翻译词典：DeepL ~~& GoldenDict & 欧陆词典 & 有道词典 & QTranslate & Lingoes~~
 
-思维导图：Xmind ~~& MindManager~~
+思维导图：Xmind & TheBrain(无限思维扩展) ~~& MindManager~~
 
 虚拟机：VMware & VirtualBox
 

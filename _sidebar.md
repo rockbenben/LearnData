@@ -35,3 +35,4 @@
   - [生活知识](family/)
   - [购物](family/Shopping.md)
   - [厨房](family/kitchen.md)
+  - [家电/维修](family/Repair.md)
