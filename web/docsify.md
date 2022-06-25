@@ -26,6 +26,6 @@ docsify serve <path> [--open false] [--port 3000]
 docsify generate <path> [--sidebar _sidebar.md]
 ```
 
-遍历指定目录及其子目录的所有 markdown 文件，并生成全路径的 \_sidebar.md。
+generate 命令会遍历指定目录及其子目录的所有 markdown 文件，并生成全路径的 \_sidebar.md。`<path>` 不能省略，需指定子文件夹路径。
 
-`<path>` 不能省略，需指定子文件夹路径。
+如果路径中存在 \_sidebar.md，则会报错。
