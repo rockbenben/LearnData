@@ -34,7 +34,7 @@ TheBrain 可以把知识无限扩充，都连接在一起。但将工作流导�
 
 图像管理：Honeyview & Eagle & PicGo 图床 ~~& imageglass(界面好，但不支持全图拖拽和压缩包预览图片) & Google 相册 & 看图王 & 呱呱看图~~
 
-图像处理：[RIOT](http://luci.criosweb.ro/riot/)(压缩) & Inpaint(去水印) & PhotoZoom(无损放大) ~~& 智图~~
+图像处理：PP 鸭（免费版单次 10 张） & [RIOT](http://luci.criosweb.ro/riot/)(压缩) & Inpaint(去水印) & PhotoZoom(无损放大) ~~& 智图~~
 
 ## 音频视频
 
