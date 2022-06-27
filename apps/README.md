@@ -110,7 +110,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 硬件驱动：360 驱动大师 & [图吧硬件工具箱](http://www.tbtool.cn/) & AIDA64 ~~& SDI Snappy & 驱动精灵 & 鲁大师~~
 
-系统优化：[PowerToys](https://github.com/microsoft/PowerToys/releases/latest)、[ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)(右键管理，遇过 bug，推荐火绒右键)、WizTree（磁盘空间分析）、优效日历、StartIsBack++、[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)、Dism++
+系统优化：[PowerToys](https://github.com/microsoft/PowerToys/releases/latest)、[RBTray](https://github.com/benbuck/rbtray)（最小化到托盘）、[ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)(右键管理，遇过 bug，推荐火绒右键)、WizTree（磁盘空间分析）、优效日历、StartIsBack++、[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)、Dism++
 
 ## 低频工具
 

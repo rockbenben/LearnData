@@ -33,6 +33,6 @@
   - [常见问题](windows/faq.md)
 - **生活**
   - [生活知识](family/)
-  - [购物](family/Shopping.md)
-  - [厨房](family/kitchen.md)
+  - [物品评价](family/Shoppinglist.md)
+  - [购物攻略](family/Coupon.md)
   - [维修/保养](family/Maintenance.md)
