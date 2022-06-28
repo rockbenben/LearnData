@@ -72,7 +72,7 @@
 
 [Web Scraper](https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn)：从网页中提取数据的爬虫。
 
-网页自动化：UI.Vision PRA, [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
+网页自动化：[UI.Vision PRA](https://chrome.google.com/webstore/detail/uivision-rpa/gcbalfbdmfieckjlnblleoemohcganoc), [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
 
 ### 实用工具
 
