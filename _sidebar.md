@@ -3,35 +3,35 @@
 - [健身计划](Fitness.md)
 - [读书技巧](Read.md)
 - [思考收集站](startup.md)
-- **代码**
+- **🚀 代码**
   - [HTML](code/HTML.md)
   - [Javascript](code/Javascript.md)
   - [Markdown](code/Markdown.md)
   - [AutoHotKey](code/AutoHotKey.md)
   - [正则表达式](code/Regex.md)
   - [Electron](code/Electron.md)
-- **网站部署**
+- **🏗️ 网站部署**
   - [静态托管](deploy/Static.md)
   - [VPS/网站修改](deploy/VPS.md)
   - [GitHub](deploy/GitHub.md)
   - [WordPress](deploy/WordPress.md)
   - [Cloudflare](deploy/Cloudflare.md)
   - [域名 DNS 托管](deploy/DNS.md)
-- **页面开发**
+- **🌐 页面开发**
   - [Gitalk-评论组件](web/Gitalk.md)
   - [docsify-文档网站生成器](web/docsify.md)
-- **应用**
+- **🧰 应用**
   - [必备应用](apps/)
   - [Chrome](apps/Chrome.md)
   - [Visual Studio Code](apps/VSCode.md)
   - [Eagle-素材管理](apps/Eagle.md)
   - [Zinc-轻量级全文搜索引擎](apps/ZincSearch.md)
-- **Windows**
+- **🪟 Windows**
   - [Windows 技巧](windows/)
   - [QTTabBar-多标签栏](windows/QTTabBar.md)
   - [重装系统](windows/NewSystem.md)
   - [常见问题](windows/faq.md)
-- **生活**
+- **🛖 生活**
   - [生活知识](family/)
   - [物品评价](family/Shoppinglist.md)
   - [购物攻略](family/Coupon.md)
