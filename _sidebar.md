@@ -1,13 +1,14 @@
 - [每日作息](DailyRoutine.md)
+- [思考收集站](startup.md)
 - [健康饮食](family/Diet.md)
 - [健身计划](Fitness.md)
 - [读书技巧](Read.md)
-- [思考收集站](startup.md)
 - **🚀 代码**
   - [HTML](code/HTML.md)
   - [Javascript](code/Javascript.md)
-  - [Markdown](code/Markdown.md)
+  - [Python](code/Python.md)
   - [AutoHotKey](code/AutoHotKey.md)
+  - [Markdown](code/Markdown.md)
   - [正则表达式](code/Regex.md)
   - [Electron](code/Electron.md)
 - **🏗️ 网站部署**
@@ -20,6 +21,7 @@
 - **🌐 页面开发**
   - [Gitalk-评论组件](web/Gitalk.md)
   - [docsify-文档网站生成器](web/docsify.md)
+  - [Live2D 看板娘](web/Live2DWidget.md)
 - **🧰 应用**
   - [必备应用](apps/)
   - [Chrome](apps/Chrome.md)

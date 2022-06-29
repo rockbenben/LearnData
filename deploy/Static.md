@@ -89,7 +89,7 @@ jobs:
   - 国内测速表现最佳，可以设置过期时间，最长一年。
 - Cloudflare
   - Pages：部署简单，外网速度很快，但国内屏蔽了 [page.dev](http://page.dev)，可通过自定义域名解决该问题。自定义域名可以买最便宜的一年一次的临时域名。
-  - [Workers](https://www.notion.so/CloudFlare-Workers-a42b27820baf433b8ee45e71bd508f4a)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
+  - [Workers](deploy/Cloudflare.md)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
 - Netlify：国内速度慢点，图片容易卡死，但还算稳定。
 - vercel：需绑定国外手机号，经常需要换 IP
 - 国内：Gitee、wulihub、coding

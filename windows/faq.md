@@ -1,9 +1,5 @@
 # 常见问题
 
-[系统重装](https://www.notion.so/1d39bfe3163d4f87a43c9fe2c80aeec0)
-
-[手机转移](https://www.notion.so/e05a1befaf974e9d931fbd5de9cfa2b9)
-
 ## 无法切换中英文
 
 按键示例、无法切换中英文，大部分原因都与输入法无关，而是硬件出了问题。

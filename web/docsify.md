@@ -20,7 +20,7 @@ emoji 插件在标题中使用容易出错，建议使用`&#58;`。例如，原�
 
 如果你想在电脑上查看 docsify 页面，可执行 serve 架构命令，在本地主机上运行服务。默认本地端口为 3000，可以指定端口。
 
-```shell
+```bash
 docsify serve <path> [--open false] [--port 3000]
 ```
 
@@ -28,7 +28,7 @@ docsify serve <path> [--open false] [--port 3000]
 
 ### 生成侧边栏
 
-```shell
+```bash
 docsify generate <path> [--sidebar _sidebar.md]
 ```
 
@@ -37,6 +37,10 @@ generate 命令会遍历指定目录及其子目录的所有 markdown 文件，�
 如果路径中存在 \_sidebar.md，则会报错。
 
 ## 常见问题
+
+### 引用路径
+
+docsify 引用内部文化，路径会自带添加域名，比如`子文件夹/文档名.md`。
 
 ### 页面未同步更新
 
