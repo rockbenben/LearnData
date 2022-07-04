@@ -1,6 +1,7 @@
 # AutoHotKey
 
 - [AutoHotKey 中文说明](https://wyagd001.github.io/zh-cn/docs/AutoHotkey.htm)
+- [按键列表](https://wyagd001.github.io/zh-cn/docs/commands/Send.htm#keynames)
 - [AHK 环境变量](https://wyagd001.github.io/zh-cn/docs/Variables.htm#OSVersion)
 - [AutoHotKey 語法產生器 (線上網站)](https://github.com/papple23g/ahkcompiler)
 - 脚本录制/功能编辑：[Pulover's Macro Creator](https://www.macrocreator.com/download/)

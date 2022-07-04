@@ -15,6 +15,8 @@ Compose 通过一个配置文件来管理多个 Docker 容器，在配置文件�
 3. 通过终端在同目录下运行`sudo docker-compose up -d`后等待部署完成。
 4. 关闭 SSH 功能。
 
+Huginn 经常卡主，重新执行部署命令。
+
 注意非 root 用户需在命令前添加`sudo`，否则会提示`Permission denied`。
 
 ```bash
