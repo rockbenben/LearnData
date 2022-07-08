@@ -23,12 +23,11 @@
   - [Gitalk-评论组件](web/Gitalk.md)
   - [docsify-文档网站生成器](web/docsify.md)
   - [Live2D 看板娘](web/Live2DWidget.md)
+  - [HuginnAgents](web/HuginnAgents.md)
 - **🧰 应用**
   - [必备应用](apps/)
-  - [Chrome](apps/Chrome.md)
-  - [Visual Studio Code](apps/VSCode.md)
-  - [Eagle-素材管理](apps/Eagle.md)
-  - [Zinc-轻量级全文搜索引擎](apps/ZincSearch.md)
+  - [Chrome 扩展](apps/Chrome.md)
+  - [应用笔记](apps/Apps.md)
 - **🪟 Windows**
   - [Windows 技巧](windows/)
   - [QTTabBar-多标签栏](windows/QTTabBar.md)

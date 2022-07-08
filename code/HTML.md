@@ -34,6 +34,7 @@ HTTPS 网页中的 js、css、gif 等文件都必须要使用 https，否则无�
 
 ```html
 <img src="<http://tc.seoipo.com/xxx.png>" style="width:50%; height:50%;" />
+<img src="<http://tc.seoipo.com/xxx.png>" width="100" height="100" />
 
 #bootstrap 下自动控制图片大小
 <img src="<http://tc.seoipo.com/xxx.png>" class="img-fluid" />

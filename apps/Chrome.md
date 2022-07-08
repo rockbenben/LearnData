@@ -1,10 +1,8 @@
-# Chrome
-
-## Chrome 扩展
+# Chrome 扩展
 
 常用 Chrome 扩展工具，链接多为 Chrome Web Store 项目页面。
 
-### 浏览器
+## 浏览器
 
 [扩展管理器](https://chrome.google.com/webstore/detail/extension-manager/gjldcdngmdknpinoemndlidpcabkggco)：快速管理扩展，对扩展分组启用。
 
@@ -14,7 +12,7 @@
 
 [Cookie Editor](https://chrome.google.com/webstore/detail/cookie-editor/iphcomljdfghbkdcfndaijbokpgddeno)：管理、修改、导出 Cookie。
 
-### 网页优化
+## 网页优化
 
 [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)：油猴脚本插件，可修改网页布局、增减内容、自动化操作，常用脚本库为 [Greasy Fork](https://greasyfork.org/zh-CN)。
 
@@ -32,7 +30,7 @@
 
 [Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)：优化 GitHub 代码，支持鼠标悬停、代码搜索、查看引用等。
 
-### 标签页
+## 标签页
 
 [Infinity](https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh)：自定义你的新标签页。
 
@@ -40,7 +38,7 @@
 
 [GoTo Tab](https://chrome.google.com/webstore/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi)：快速定位 tab 页。
 
-### 批量链接
+## 批量链接
 
 [Bulk URL Opener Extension](https://chrome.google.com/webstore/detail/bulk-url-opener-extension/hgenngnjgfkdggambccohomebieocekm)：批量打开链接，也可批量获取当前浏览器内所有页面网址链接。
 
@@ -50,7 +48,7 @@
 
 [TabCopy](https://chrome.google.com/webstore/detail/tabcopy/micdllihgoppmejpecmkilggmaagfdmb)：快速复制 tab 页链接。
 
-### 图片视频
+## 图片视频
 
 [ImageAssistant](https://chrome.google.com/webstore/detail/imageassistant-batch-imag/dbjbempljhcmhlfpfacalomonjpalpko)：用于嗅探、分析网页图片并提供批量下载。
 
@@ -64,7 +62,7 @@
 
 [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)：使用快捷方式加快，减慢，推进和回放 HTML5 视频。
 
-### 监视爬虫
+## 监视爬虫
 
 [Auto Refresh Plus | Page Monitor](https://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggm)：定时刷新页面；页面监视器，找到或丢失指定文本时，弹出提示。
 
@@ -76,7 +74,7 @@
 
 网页自动化：[UI.Vision PRA](https://chrome.google.com/webstore/detail/uivision-rpa/gcbalfbdmfieckjlnblleoemohcganoc), [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
 
-### 实用工具
+## 实用工具
 
 [Vimium C](https://github.com/gdh1995/vimium-c/blob/master/README-zh.md)：全键盘操作浏览器，建议开启`chrome://flags/#extensions-on-chrome-urls`。
 

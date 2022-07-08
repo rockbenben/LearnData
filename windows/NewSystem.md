@@ -5,7 +5,7 @@
 在 PE 系统中，右键 ISO 文件，选择挂载；在新出现的驱动器中，找到 setup.exe，直接运行；选择「现在安装」，然后就是正常的系统安装流程了。
 
 1. [必备应用](/apps/README.md) 备份；备份油猴脚本、输入法；备份 UMP 版微信聊天记录`C:\Users\Benson\AppData\Local\Packages\TencentWeChatLimited.forWindows10_sdtnhv12zgd7a\LocalCache\Roaming\Tencent\WeChatAppStore`；更新[原版镜像](https://www.microsoft.com/zh-cn/software-download/windows11)。
-2. 移除软件激活状态（Eagle & 妙笔 & MoneyWiz）
+2. 移除软件激活状态（Eagle & 妙笔 & MoneyWiz）。
 3. 使用 U 盘引导安装系统，采用 UEFI+GPT（自定义安装，清空 C 盘所有分区，一定要用 **GPT** 对系统盘分区）。
 4. 安装群晖备份，Documents、Desktop 转移到 NAS 备份文件夹； [清理导航栏](https://zhuanlan.zhihu.com/p/25942015)。
 5. 任务栏图标显示：在任务栏底部右键单击，选择「任务栏设置」-「通知区域 - 选择哪些图标显示在任务栏上」。在同页面的「多显示器设置」中，关闭`在所有显示器上显示任务栏` 。

@@ -2,18 +2,6 @@
 
 Windows 自用软件，以开源软件为主。
 
-## TheBrain
-
-TheBrain 可以把知识无限扩充，都连接在一起。但将工作流导图放入 TheBrain 后发现并不合适，比较适合更细化的内容？
-
-- [善用佳软张玉新老师 · TheBrain ≠ 思维导图——运用 TheBrain 的三个阶段](https://www.bilibili.com/video/BV19a411578T)
-
-## 小工具
-
-> 收集稀奇古怪的小工具
-
-- [Animated Drawings – 自动将绘画转换为动画](https://www.appinn.com/animated-drawings/)
-
 ## 知识记录
 
 知识管理：Notion & 飞书 & flomo & Airtable & 妙笔 & Joplin & 简悦 ~~& Wiz 笔记 & OneNote~~
