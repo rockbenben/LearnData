@@ -79,9 +79,11 @@ jobs:
             .gitattributes
 ```
 
-## 平台对比
+## 静态托管
 
 如果静态包没在国内静态库托管的话，用`npm i`命令将静态包下载到本地，然后部署到阿里云/七牛云上，避免网页受 UNPKG 和 jsDelivr 屏蔽影响而无法打开。
+
+### NPM 包
 
 - UNPKG：npm 包，支持使用`@latest`标签。
   1. 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
@@ -91,8 +93,13 @@ jobs:
 - 饿了么 CDN：国内唯一能用的 npm 镜像，2022.07.13 发现外部访问被拒绝。之前饿了么并没说支持对外，可能已经彻底取消了。
   使用饿了么 CDN 时，注意`https://npm.elemecdn.com/react@latest/`需要时间更新，具体频率未知，可固定大版本号来获取更新`https://npm.elemecdn.com/react@^18/`。
 
-- [字节 CDN](https://cdn.bytedance.com/)：js、css 等静态资源库
-  - 国内测速表现最佳，可以设置过期时间，最长一年。
+### 静态资源库
+
+- [字节 CDN](https://cdn.bytedance.com/)：国内测速表现最佳，缓存过期时间最长设置一年。
+- [Staticfile CDN](https://www.staticfile.org/)：CDN 加速由七牛云提供。
+
+### 静态页面
+
 - Cloudflare
   - Pages：部署简单，外网速度很快，但国内屏蔽了 [page.dev](http://page.dev)，可通过自定义域名解决该问题。自定义域名可以买最便宜的一年一次的临时域名。
   - [Workers](deploy/Cloudflare.md)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
@@ -100,7 +107,7 @@ jobs:
 - vercel：需绑定国外手机号，经常需要换 IP
 - 国内：Gitee、wulihub、coding
 
-## IPFS
+### IPFS
 
 IPFS 无需服务器就可建立静态网站，号称永不失效，但**国内稳定性成疑问，实用性一般**。IPFS 托管在一个网关上，并不会自动复制到所有网关。
 
