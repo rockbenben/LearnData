@@ -86,8 +86,11 @@ jobs:
 - UNPKG：npm 包，支持使用`@latest`标签。
   1. 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
   2. 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀`https://unpkg.com/`。
+- jsDelivr：速度最快，原本是最稳的，但域名暴雷后，经常断开，2022.06.01 彻底打不开。
+  配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新。刷新命令参考`curl https://purge.jsdelivr.net/gh/username/project/file`。
 - 饿了么 CDN：国内唯一能用的 npm 镜像，2022.07.13 发现外部访问被拒绝。之前饿了么并没说支持对外，可能已经彻底取消了。
   使用饿了么 CDN 时，注意`https://npm.elemecdn.com/react@latest/`需要时间更新，具体频率未知，可固定大版本号来获取更新`https://npm.elemecdn.com/react@^18/`。
+
 - [字节 CDN](https://cdn.bytedance.com/)：js、css 等静态资源库
   - 国内测速表现最佳，可以设置过期时间，最长一年。
 - Cloudflare
@@ -96,9 +99,6 @@ jobs:
 - Netlify：国内速度慢点，图片容易卡死，但还算稳定。
 - vercel：需绑定国外手机号，经常需要换 IP
 - 国内：Gitee、wulihub、coding
-
-- jsDelivr：速度最快，原本是最稳的，但域名暴雷后，经常打不开。2022.06.01 已经彻底不打开。
-  配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新。刷新命令参考`curl https://purge.jsdelivr.net/gh/username/project/file`。
 
 ## IPFS
 
