@@ -22,7 +22,23 @@
 - 非热键情况，添加`return`，脚本全部停止。
 - 脚本需考虑，你是想要在**全局**还是**局部**中激活动作。
 
+## 常用方法
+
+### 设置托盘图标
+
+自定义图标可使用 ico 或 png，不支持 svg 格式。
+
+设置命令为 `Menu, Tray, Icon , %A_WorkingDir%\dock_panel.png`。`%A_WorkingDir%`代表脚本所在目录。
+
+### 执行 Powershell
+
+`Run, PowerShell.exe -NoExit -Command &{命令}, 目录`
+
 ## 问题
+
+### 隐藏在托盘程序无法监测
+
+
 
 ### 命令中的按键未执行
 

@@ -81,10 +81,13 @@ jobs:
 
 ## 平台对比
 
-- 饿了么 CDN：国内唯一能用的 npm 镜像，不过饿了么并没说支持对外，不知道合适会取消。
-  `https://npm.elemecdn.com/react@latest/`需要时间更新，具体频率未知，可固定大版本号来获取更新`https://npm.elemecdn.com/react@^18/`。
+无国内静态库托管的 npm 包，需部署到阿里云/七牛云的 cdn 上，防止网页打开受影响。UNPKG 和 jsDelivr 经常容易被屏蔽。如何下载 npm 包？
+
+- UNPKG：npm 包，支持使用`@latest`标签。
   1. 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
-  2. 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀`https://npm.elemecdn.com/`。
+  2. 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀`https://unpkg.com/`。
+- 饿了么 CDN：国内唯一能用的 npm 镜像，2022.07.13 发现外部访问被拒绝。之前饿了么并没说支持对外，可能已经彻底取消了。
+  使用饿了么 CDN 时，注意`https://npm.elemecdn.com/react@latest/`需要时间更新，具体频率未知，可固定大版本号来获取更新`https://npm.elemecdn.com/react@^18/`。
 - [字节 CDN](https://cdn.bytedance.com/)：js、css 等静态资源库
   - 国内测速表现最佳，可以设置过期时间，最长一年。
 - Cloudflare
@@ -95,12 +98,7 @@ jobs:
 - 国内：Gitee、wulihub、coding
 
 - jsDelivr：速度最快，原本是最稳的，但域名暴雷后，经常打不开。2022.06.01 已经彻底不打开。
-
-```bash
-#配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新
-curl https://purge.jsdelivr.net/gh/aeovn/xMBpb-B6-Hg7uC2Odv/mjFh9xdAB5zUifXr1QZlkR88rp
-curl https://purge.jsdelivr.net/gh/aeovn/N6gupybTblr73P3W-ZAu-j-B/wgLA7l2UWEdY2XJmtbuQi4
-```
+  配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新。刷新命令参考`curl https://purge.jsdelivr.net/gh/username/project/file`。
 
 ## IPFS
 

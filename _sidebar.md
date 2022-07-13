@@ -28,6 +28,7 @@
   - [必备应用](apps/)
   - [Chrome 扩展](apps/Chrome.md)
   - [应用笔记](apps/Apps.md)
+  - [录屏应用](apps/Record.md)
 - **🪟 Windows**
   - [Windows 技巧](windows/)
   - [QTTabBar-多标签栏](windows/QTTabBar.md)
