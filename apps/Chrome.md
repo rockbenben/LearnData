@@ -68,7 +68,7 @@
 
 [Distill Web Monitor](https://chrome.google.com/webstore/detail/distill-web-monitor/inlikjemeeknofckkjolnjbpehgadgge)：监控网页或源以获取变更，可邮件、手机提示。
 
-[Check 酱](https://github.com/easychen/checkchan-dist)：网页内容监控工具，可以监测网页内容变化，并发送异动到微信。Check 酱可以部署在 Docker 或浏览器插件。
+[Check 酱](https://github.com/easychen/checkchan-dist)：网页内容监控工具，可以监测网页内容变化，并发送异动到微信/飞书。Check 酱可以部署在 Docker 或浏览器插件。
 
 [Web Scraper](https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn)：从网页中提取数据的爬虫。
 

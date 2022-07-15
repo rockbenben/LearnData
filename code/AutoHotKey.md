@@ -38,7 +38,25 @@
 
 ### 隐藏在托盘程序无法监测
 
+`WinExist` 只能查看签订程序，对于后台或托盘程序，可以用 Process 命令来检查是否存在指定程序的 PID。
 
+```autohotkey
+;晚上8点停止录屏，并精简视频
+if (A_Hour == 20 && Stop_Record ==0){ ;如果小时等于20点
+    Stop_Record:=1 ;设置停止录屏变量为1
+    Process, Exist, bdcam.exe ;监测隐藏程序
+    NewPID := ErrorLevel  ; 由于 ErrorLevel 会经常发生改变, 所以要立即保存这个值.
+    if NewPID { ;如果存在录屏工具，则继续
+        Send, ^+!{F8} ;晚上8点后，停止录屏
+        Sleep, 1000 ;等待5分钟
+        ;重命名文件
+        FileMove, D:\Backup\Libraries\Desktop\%A_YYYY%-%A_MM%-%A_DD% *-*-*-*.mp4, D:\Backup\Libraries\Desktop\%A_YYYY%-%A_MM%-%A_DD%.mp4
+        Sleep, 1000
+        ;桌面打开终端，执行 dvr-scan 命令
+        Run, PowerShell.exe -NoExit -Command &{dvr-scan -i %A_YYYY%-%A_MM%-%A_DD%.mp4 -o %A_YYYY%-%A_MM%-%A_DD%_Scanned.avi}, D:\Backup\Libraries\Desktop
+    }
+}
+```
 
 ### 命令中的按键未执行
 

@@ -104,7 +104,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 编程工具：FileZilla（FTP）、PuTTY（SSH）、GitHubDesktop、Postman、Fiddler(手机抓包)、Regex Match Tracer
 
-爬虫监测：[spider-flow](https://github.com/ssssssss-team/spider-flow) & OpenWebMonitor
+爬虫监测：OpenWebMonitor & [spider-flow](https://github.com/ssssssss-team/spider-flow)
 
 翻译词典：DeepL ~~& GoldenDict & 欧陆词典 & 有道词典 & QTranslate & Lingoes~~
 
@@ -126,14 +126,14 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 ---
 
-~~全局手势：Strokesplus & WGestures
-桌面管理：Fences 3 & 火萤视频桌面 & UPUPOO & 360 桌面助手 & 搜狗桌面 & Q+
-进程管理：Process Lasso（避免老电脑卡顿？会自动删除启动项，不适合主力电脑）& Security Process Explorer（屏蔽垃圾进程）
-文件夹锁定/隐藏：Anvide Lock Folder
-桌面便签：小黄条、URNotes 意唯桌面便签 (2015 停止更新，复制经常出错)
-网络电台：龙卷风
-英文写作：易改
-流量管理：cFosSpeed
-游戏平台：VS & 4399
-客服：飞豆客服聊天助手 & [mirai(qq 机器人)](https://github.com/mamoe/mirai) & 酷 Q(已关)
-按键精灵、DisplayCal（屏幕）、One Quik(虚拟桌面切换)、RBTray(右键最小化到托盘)、Auslogics Disk Defrag(磁盘整理)、Reflector 3(手机投屏)、VoiceBot(声控游戏)~~
+- <s>全局手势：Strokesplus & WGestures
+- 桌面管理：Fences 3 & 火萤视频桌面 & UPUPOO & 360 桌面助手 & 搜狗桌面 & Q+
+- 进程管理：Process Lasso（避免老电脑卡顿？会自动删除启动项，不适合主力电脑）& Security Process Explorer（屏蔽垃圾进程）
+- 文件夹锁定/隐藏：Anvide Lock Folder
+- 桌面便签：小黄条、URNotes 意唯桌面便签 (2015 停止更新，复制经常出错)
+- 网络电台：龙卷风
+- 英文写作：易改
+- 流量管理：cFosSpeed
+- 游戏平台：VS & 4399
+- 客服：飞豆客服聊天助手 & [mirai(qq 机器人)](https://github.com/mamoe/mirai) & 酷 Q(已关)
+- 其他：按键精灵、DisplayCal（屏幕）、One Quik(虚拟桌面切换)、RBTray(右键最小化到托盘)、Auslogics Disk Defrag(磁盘整理)、Reflector 3(手机投屏)、VoiceBot(声控游戏)</s>

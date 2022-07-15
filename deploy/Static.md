@@ -6,10 +6,15 @@
 
 ### NPM 包
 
-- UNPKG：有墙风险，**不算稳定**，支持使用`@latest`标签。
+- UNPKG：**有墙风险且不稳定**，支持使用`@latest`标签。
 
   1. 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
   2. 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀`https://unpkg.com/`。
+
+- 自建 unpkg 镜像，反向代理 unpkg
+
+- [NPM MIRROR](https://npmmirror.com/)：NPM 官方项目的镜像，不能做静态托管用途。
+  - `https://registry.npmmirror.com/项目名/版本号`可以看见项目的各种信息，但看不了里面的文件。
 
 - <s>jsDelivr（已墙）：速度最快，原本是最稳的，但域名暴雷后，经常断开，2022.06.01 彻底打不开。
   配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新。刷新命令参考`curl https://purge.jsdelivr.net/gh/username/project/file`。
@@ -24,10 +29,11 @@
 ### 静态页面
 
 - Cloudflare：Pages 和 Workers 两类部署方式。
-  - Pages：部署简单，外网速度很快，但国内屏蔽了 [page.dev](http://page.dev)，可通过自定义域名解决该问题。自定义域名可以买最便宜的一年一次的临时域名。
   - [Workers](deploy/Cloudflare?id=反向代理)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
+  - Pages：部署简单，外网速度很快，但国内速度不稳，而且 [page.dev](http://page.dev) 域名有时会被墙，需要购买便宜的一年临时域名来解决该问题。
 - Netlify：国内速度慢点，图片容易卡死，但还算稳定。
 - Vercel：需绑定国外手机号，经常需要换 IP。
+- AWS: 邮箱注册，不过需要信用卡认证。
 - 国内平台：Gitee、WuliHub、CODING，都需要实名认证。
 
 ### IPFS
