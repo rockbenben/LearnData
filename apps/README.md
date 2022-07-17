@@ -28,15 +28,17 @@ Windows 自用软件，以开源软件为主。
 
 音频播放：foobar2000（[MKing 皮肤](http://tieba.baidu.com/p/4434445880)）& Listen1 & [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop) & Moon FM(播客) ~~& 百度音乐 & AIMP3 & 酷我 K 歌 & Airplay~~
 
-视频播放：[Potplayer](https://zhuanlan.zhihu.com/p/35757176) & VLC ~~& 恒星播放器 & QQ 影音 & 暴风影音 & 射手~~
-
 音频处理：[Audacity](https://github.com/audacity/audacity/releases) & iZotope rx9 ~~& Audition & 神舌变声器 & Goldwave~~
+
+视频播放：[Potplayer](https://zhuanlan.zhihu.com/p/35757176) & VLC ~~& 恒星播放器 & QQ 影音 & 暴风影音 & 射手~~
 
 视频剪辑：剪映 & LosslessCut(音频提取·视频切割合并) & [ShanaEncoder](https://shana.pe.kr/shanaencoder_download/)(视频压缩) & [Quick Cut](https://github.com/HaujetZhao/QuickCut) (自动剪辑) & HandBrake(视频转换) & Premiere ~~& Shotcut & 500th Video Converter & 小丸工具箱~~
 
 字幕工具：[ChineseSubtitleConversionTool](https://github.com/xiaoxinpro/ChineseSubtitleConversionTool)（繁简转换）& Arctime Pro & [VideoSrt](https://github.com/wxbool/video-srt-windows) & 人人译视界
 
 视频下载：[youtube-dl](https://github.com/ytdl-org/youtube-dl) & [哔哩下载姬](https://github.com/leiurayer/downkyi)
+
+影视管理：tinyMediaManager（刮削），易影视（本地管理）
 
 ## 屏幕录制
 

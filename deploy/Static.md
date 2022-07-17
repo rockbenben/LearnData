@@ -6,7 +6,7 @@
 
 ### NPM 包
 
-- UNPKG：**有墙风险且不稳定**，支持使用`@latest`标签。
+- UNPKG：**有墙风险且不稳定**，默认为最新版本，无需`@latest`标签。
 
   1. 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
   2. 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀`https://unpkg.com/`。
@@ -30,7 +30,7 @@
 
 - Cloudflare：Pages 和 Workers 两类部署方式。
   - [Workers](deploy/Cloudflare?id=反向代理)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
-  - Pages：部署简单，外网速度很快，但国内速度不稳，而且 [page.dev](http://page.dev) 域名有时会被墙，需要购买便宜的一年临时域名来解决该问题。
+  - Pages：部署简单，外网速度很快，但国内速度不稳，而且 page.dev 域名有时会被墙，可购买便宜的临时域名（一年）来解决该问题。
 - Netlify：国内速度慢点，图片容易卡死，但还算稳定。
 - Vercel：需绑定国外手机号，经常需要换 IP。
 - AWS: 邮箱注册，不过需要信用卡认证。
@@ -42,10 +42,14 @@ IPFS 无需服务器就可建立静态网站，号称永不失效，但**国内�
 
 [pinata](https://pinata.cloud/) 上传网站构建的目录文件夹，上传后，即可通过 IPFS Hash 访问。网站目录中必须有 index.html，否则网页中将显示网站目录。即使有 index.html，其他人在拥有 CID 后，可以通过 IPFS Desktop 来获取网站的完整目录。为确保私密性，建议只上传单文件。使用单文件 CID 视为单一网站，不可调用原目录中的文件。^[[How to Easily Host a Website on IPFS](https://medium.com/pinata/how-to-easily-host-a-website-on-ipfs-9d842b5d6a01)]
 
-上传 ipfs 到 pinata 之后，cloudflare 等其他网关不一定会完全复制文件，php 无法抓取加载，所以不建议使用 cloudflare 网关。而 cloudflare 接管 pinata ipfs 域名需通过「pinata 托管 - cloudflare DNS - cloudflare SSL」，一旦 DNS 指向 <http://gateway.pinata.cloud> 等非 cloudflare ipfs 网关域名，cloudflare SSL 证书将失效。链接改为 http，pinata 会视为无效链接，拒绝访问。对于文件较少，确认过链接有效性的域名，可访问 [Cloudflare IPFS](https://www.cloudflare.com/zh-cn/distributed-web-gateway/) 页面，按说明设置 DNS，然后 输入 IPFS 域名并提交，过 30 分钟后获取 SSL 证书。
+上传 ipfs 到 pinata 之后，cloudflare 等其他网关不一定会完全复制文件，php 无法抓取加载，所以不建议使用 cloudflare 网关。
 
-1. 添加 CNAME 记录，将你的 IPFS 域名 (xxx.example.com) 指向 cloudflare-ipfs.com
-2. \_dnslink.xxx.example.com 的值为 dnslink=/ipfs/<your_ipfs_hash_here> 的域
+cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管 - cloudflare DNS - cloudflare SSL」。如果中途将 DNS 指向`http://gateway.pinata.cloud`等非 cloudflare ipfs 网关域名，cloudflare SSL 证书将失效。即便把链接改为非加密的 http，pinata 依然会视之为无效链接而拒绝访问。
+
+对于文件较少且链接有效的域名，可按 [Cloudflare IPFS](https://www.cloudflare.com/zh-cn/distributed-web-gateway/) 页面说明来设置 DNS，提交 IPFS 域名 30 分钟后，即可获取 SSL 证书。
+
+1. 添加 CNAME 记录，将你的 IPFS 域名 (xxx.example.com) 指向`cloudflare-ipfs.com`。
+2. `_dnslink.xxx.example.com`设置为`dnslink=/ipfs/<your_ipfs_hash_here>`。
 
 ## GitHub 同步到 VPS
 
@@ -59,7 +63,7 @@ IPFS 无需服务器就可建立静态网站，号称永不失效，但**国内�
 
 ### 同步到 ftp
 
-如果你有 ftp 服务器，可使用 [FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action) 将 github 代码同步到服务器上。Action 使用说明查看 [GitHub 说明](GitHub.md)。
+如果你有 ftp 服务器，可使用 [FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action) 将 github 代码同步到服务器上。Action 使用说明查看 [GitHub 说明](deploy/GitHub.md)。
 
 ```bash
 on: push
