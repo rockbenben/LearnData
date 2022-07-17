@@ -1,3 +1,29 @@
+# HuginnAgents
+
+Huginn Agents：https://github.com/huginn/huginn/wiki/Agent-Types-&-Descriptions
+抓取步骤：https://newzone.top/p/2018-10-07-huginn_scraping_any_website
+
+- Website Agent 解析网页、XML 文档和 json 数据，最常使用
+- Event Formatting Agent 事件信息格式化，可以对收到的信息内容进行格式化，允许添加自定义新内容
+- Phantom Js Cloud Agent 借助 Phantom 抓取动态页面源码，防止部门网站屏蔽爬虫
+- Trigger Agent 监控事件反馈信息的触发器，多用来过滤部分内容
+- De Duplicate Agent 去重
+
+- Data Output Agent 将数据以 RSS 和 Json 的形式向外部推送
+- Liquid Output Agent 自定义格式数据输出，可以用它创建 HTML 页面，json 数据等
+
+- Webhook Agent
+- Javascript Agent 允许执行自定义的 JS 代码，可以用于个性化操作
+- Digest Agent 汇总节点，收集所有收到的事件再作为一个事件发送出去
+- Post Agent 可以由其他节点触发，根据固定模板合并事件信息，并以 POST 或 GET 方式向指定的 URL 发起请求
+- Delay Agent 可以作为事件或者副本的暂存器或者缓冲区，统一触发发布
+- Scheduler Agent 定时器节点
+
+- Attribute Difference Agent  数值差异比较
+- Commander Agent 触发器代理，可以用于向其他节点发起指令控制，控制节点的执行和停止等
+
+{{created_at}} 为自带抓取时间
+
 ## TriggerAgent
 
 Trigger Agent 挑选符合条件的事件。
