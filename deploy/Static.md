@@ -2,17 +2,14 @@
 
 ## 静态托管
 
-如果静态包没在国内静态库托管的话，用`npm i`命令将静态包下载到本地，然后部署到阿里云/七牛云上，避免网页受 UNPKG 和 jsDelivr 屏蔽影响而无法打开。
+如果国内静态资源库没有你要的静态包，推荐用`npm i`命令将静态包下载到本地，并部署到阿里云/七牛云的国内服务器上，避免网页受 UNPKG 和 jsDelivr 屏蔽影响而出现偏差。
 
 ### NPM 包
 
 - UNPKG：**有墙风险且不稳定**，默认为最新版本，无需`@latest`标签。
-
-  1. 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
-  2. 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀`https://unpkg.com/`。
-
+  - 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
+  - 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀`https://unpkg.com/`。
 - 自建 unpkg 镜像，反向代理 unpkg
-
 - [NPM MIRROR](https://npmmirror.com/)：NPM 官方项目的镜像，不能做静态托管用途。
   - `https://registry.npmmirror.com/项目名/版本号`可以看见项目的各种信息，但看不了里面的文件。
 
@@ -61,9 +58,9 @@ cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管 - cloudflare
 
 !> 注意：文件夹不要有大写字母，否则同步时容易出错。
 
-### 同步到 ftp
+### 同步到 FTP
 
-如果你有 ftp 服务器，可使用 [FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action) 将 github 代码同步到服务器上。Action 使用说明查看 [GitHub 说明](deploy/GitHub.md)。
+如果你有 FTP 服务器，可使用 [FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action) 将 github 代码推送到服务器上。Action 步骤参考 [GitHub 说明](deploy/GitHub.md)。
 
 ```bash
 on: push
@@ -85,9 +82,13 @@ jobs:
         port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
 ```
 
-`FTPError: 530 Login authentication failed`：密钥填写错误，需将 github secrets 重新 update，并检查密码只有大小写字母和数字。先用 FileZilla 测试连接 ftp，然后进入`/www/server/pure-ftpd/etc/pureftpd.passwd`，检查是否有该 ftp 账户。
+新建 FTP 时，需在云服务商的安全组和服务器上开放 FTP 端口，并**暂停宝塔系统加固**等安全插件。
 
-如果新建 ftp，需在云服务商的安全组和服务器上开放端口。宝塔系统加固等服务器防火墙经常会组织新建 ftp，可临时暂停。
+如果出现 `FTPError: 530 Login authentication failed`，则说明 FTP 密码错误或账号不存在，用 FileZilla 测试 FTP 的有效性。
+
+确认 FTP 无效后，检查 FTP 密码是否填写正确，是否只有大小写字母和数字。如果密码错误，则在 github secrets 重新 update 密钥。
+
+如果密码正确，则进入`/www/server/pure-ftpd/etc/pureftpd.passwd`，检查是否有该 FTP 账户。没有账户的话，**暂停宝塔系统加固**等安全插件后，重新新建 FTP。
 
 ### 同步到 oss
 
