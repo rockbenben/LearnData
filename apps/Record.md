@@ -28,3 +28,5 @@ Capture 配置：
 Bandicam 支持定时录制计划，但录制的开始和结束都必须由该计划执行，否则录制计划将不会执行。
 
 我使用了 Bandicam 的开机录制功能，因此无法使用定时录制计划，需借助 Windows 的任务计划程序来定时录制停止，操作参考[官方文档](https://www.bandicam.cn/support/tips/timer-recording/)。
+
+Bandicam 录屏时，ManicTime 4 会一直记录为活跃状态，需要使用新版 ManicTime。

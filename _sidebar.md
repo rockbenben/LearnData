@@ -1,5 +1,4 @@
 - [每日作息](DailyRoutine.md)
-- [思考收集站](startup.md)
 - [健康饮食](family/Diet.md)
 - [健身计划](Fitness.md)
 - [读书技巧](Read.md)
@@ -23,7 +22,7 @@
   - [Gitalk-评论组件](web/Gitalk.md)
   - [docsify-文档网站生成器](web/docsify.md)
   - [Live2D 看板娘](web/Live2DWidget.md)
-  - [HuginnAgents](web/HuginnAgents.md)
+  - [Huginn](web/Huginn.md)
 - **🧰 应用**
   - [必备应用](apps/)
   - [Chrome 扩展](apps/Chrome.md)

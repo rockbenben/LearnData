@@ -1,7 +1,8 @@
-# HuginnAgents
+# Huginn
 
-Huginn Agents：https://github.com/huginn/huginn/wiki/Agent-Types-&-Descriptions
 抓取步骤：https://newzone.top/p/2018-10-07-huginn_scraping_any_website
+.env 设置：https://github.com/huginn/huginn/blob/master/.env.example
+Huginn Agents：https://github.com/huginn/huginn/wiki/Agent-Types-&-Descriptions
 
 - Website Agent 解析网页、XML 文档和 json 数据，最常使用
 - Event Formatting Agent 事件信息格式化，可以对收到的信息内容进行格式化，允许添加自定义新内容
@@ -19,10 +20,28 @@ Huginn Agents：https://github.com/huginn/huginn/wiki/Agent-Types-&-Descriptions
 - Delay Agent 可以作为事件或者副本的暂存器或者缓冲区，统一触发发布
 - Scheduler Agent 定时器节点
 
-- Attribute Difference Agent  数值差异比较
+- Attribute Difference Agent 数值差异比较
 - Commander Agent 触发器代理，可以用于向其他节点发起指令控制，控制节点的执行和停止等
 
 {{created_at}} 为自带抓取时间
+
+## Huginn 卡住
+
+任务卡住后，需要按下列步骤重启 Huginn。
+
+1. 关闭：先关闭数据库，然后关 Huginn。
+2. 开启：先开启数据库，然后开 Huginn。
+
+不要直接重启 Hungin Docker，否则数据库会异常。
+
+计划任务定期强制重启 huginn，防止卡住
+
+```bash
+cd /home/huginn/huginn
+sudo bundle exec rake production:force_stop
+sudo bundle exec rake prduction:export
+```
+
 
 ## TriggerAgent
 
@@ -75,18 +94,12 @@ For example, here is a possible Event:
 
 ```yml
 {
-  "high": {
-    "celsius": "18",
-    "fahreinheit": "64"
-  },
-  "date": {
-    "epoch": "1357959600",
-    "pretty": "10:00 PM EST on January 11, 2013"
-  },
+  "high": { "celsius": "18", "fahreinheit": "64" },
+  "date":
+    { "epoch": "1357959600", "pretty": "10:00 PM EST on January 11, 2013" },
   "conditions": "Rain showers",
-  "data": "This is some data"
+  "data": "This is some data",
 }
-
 ```
 
 You may want to send this event to another Agent, for example a Twilio Agent, which expects a `message` key. You can use an Event Formatting Agent’s `instructions` setting to do this in the following way:
