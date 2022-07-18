@@ -262,7 +262,7 @@ clipboard2.on("error", function (e) {
   type="text/css"
   href="https://cdn.staticfile.org/layer/3.5.1/theme/default/layer.min.css"
 />
-<script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/layer/3.5.1/layer.min.js"></script>
 <script type="text/javascript">
   window.onload = function () {

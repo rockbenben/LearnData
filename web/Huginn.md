@@ -23,9 +23,9 @@ Huginn Agents：https://github.com/huginn/huginn/wiki/Agent-Types-&-Descriptions
 - Attribute Difference Agent 数值差异比较
 - Commander Agent 触发器代理，可以用于向其他节点发起指令控制，控制节点的执行和停止等
 
-{{created_at}} 为自带抓取时间
+{{created_at}} 为自带抓取时间，Agent 设置中的特殊字符`+`，需要用反义符`\\`。
 
-## Huginn 卡住
+## Huginn 任务卡住
 
 任务卡住后，需要按下列步骤重启 Huginn。
 
@@ -41,7 +41,6 @@ cd /home/huginn/huginn
 sudo bundle exec rake production:force_stop
 sudo bundle exec rake prduction:export
 ```
-
 
 ## TriggerAgent
 
@@ -84,7 +83,7 @@ Event Formatting Agent 允许您格式化传入的事件，根据需要添加新
 ### 正则重构
 
 比如生成时间规则为`"created_at": "{{created_at}}"`，默认时间`2022-07-06 21:09:51 +0800`，使用正则删除规则为
-`"created_at": "{{created_at | regex_replace: ' ', ''| regex_replace: '(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?', ''| regex_replace: '-0700', ''}}"`。
+`"created_at": "{{created_at | regex_replace: ' ', ''| regex_replace: '(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?', ''| regex_replace: '\\+0800', ''}}"`。
 
 ### 加前后缀
 
