@@ -15,20 +15,23 @@
   - [VPS/网站修改](deploy/VPS.md)
   - [GitHub](deploy/GitHub.md)
   - [WordPress](deploy/WordPress.md)
-  - [Docker](deploy/Docker.md)
   - [Cloudflare](deploy/Cloudflare.md)
   - [域名 DNS 托管](deploy/DNS.md)
 - **🌐 页面开发**
   - [Gitalk-评论组件](web/Gitalk.md)
   - [docsify-文档网站生成器](web/docsify.md)
   - [Live2D 看板娘](web/Live2DWidget.md)
-  - [Huginn](web/Huginn.md)
-- **🧰 应用**
+- **🧰 软件应用**
   - [必备应用](apps/)
   - [Chrome 扩展](apps/Chrome.md)
   - [应用笔记](apps/Apps.md)
   - [录屏应用](apps/Record.md)
-- **🪟 Windows**
+- **🐋 Linux 服务**
+  - [NAS](services/NAS.md)
+  - [Huginn](services/Huginn.md)
+  - [Tiny Tiny RSS](services/TTRSS.md)
+  - [Docker](services/Docker.md)
+- **🪟 系统**
   - [Windows 技巧](windows/)
   - [QTTabBar-多标签栏](windows/QTTabBar.md)
   - [重装系统](windows/NewSystem.md)
