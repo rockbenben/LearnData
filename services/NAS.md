@@ -45,13 +45,13 @@ docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%
     - HomeAssistant：开源智能家居平台
     - Clash：代理服务器
 
-## NAS 影视整理
+## 影视整理
 
 下载文件后，用 tinyMediaManager 重命名并下载 NFO 和影视封面，最后放置于分类文件夹。
 
-[tinyMediaManager](https://www.tinymediamanager.org/download/) v4 免费版足够个人使用，v3 作偶尔补充使用，设置参考[https://post.smzdm.com/p/a0d67m2z/](https://post.smzdm.com/p/a0d67m2z/)，搜索首选语言改为「大陆简体」更精准。
+[tinyMediaManager](https://www.tinymediamanager.org/download/) v4 免费版足够个人使用，v3 作偶尔补充使用，搜索首选语言改为「大陆简体」更精准。^[[群晖 NAS 使用 Emby+tMM 打造全平台观影畅爽体验（附下载地址）](https://post.smzdm.com/p/a0d67m2z/)]
 
-```php
+```bash
 # 电视节目重命名规则
 
 季文件夹名：Season ${seasonNr}
