@@ -16,8 +16,6 @@
 
 LearnData 笔记使用 docsify 架构，文档推送到 github 后，会自动同步到国内服务器，并以 [网页形式](https://newzone.top/notes/#/) 对外展示。
 
-默认系统环境：PC 为 Windows 11，服务器为 CentOS 7，Nas 为群晖 DSM 6.2.3。
-
 ## 🧱 笔记结构
 
 - 置顶：日常习惯、健身、阅读、思考；

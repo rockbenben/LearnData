@@ -1,27 +1,9 @@
 # NAS
 
 - `控制面板－文件服务－SMB－高级设置`，将最小 SMB 协议 设为 SMB1，避免部分应用发现了 NAS 但无法打开共享文件。
+- `控制面板－任务计划 - 新增 - 计划的任务 - 用户定义的脚本`，给 NAS 建立定时任务脚本。
 - SSD 缓存对家用的 NAS 性能提升不大，没必要加。
 - 群晖系统分布在所有硬盘，拔出一个不影响使用。但应用会有影响？
-
-## 套件配置
-
-- DS/Transmission：用于 PT 下载 (禁用 DHT，半小时停止做种)
-- Synology Drive Server：电脑文件备份
-- Docker：指定本地端口否则重启会变，重启不影响 docker 配置。
-  - RSSHub：无需保存数据
-  - Huginn：定期备份抓取脚本，数据库保存在本地
-  - Tiny Tiny RSS：定期备份订阅源和设置
-    - [mercury-parser-api](https://registry.hub.docker.com/r/wangqiru/mercury-parser-api)：全文插件
-  - [qiandao](https://github.com/AragonSnow/qiandao)：自动签到开源框架，需搭配浏览器扩展 [get-cookies](https://github.com/ckx000/get-cookies) 使用，可导出配置。
-  - [n8n](https://blog.csdn.net/alex_yangchuansheng/article/details/122295193)：开源 IFTTT 工具，偏重于云服务。
-  - [Node-RED](https://github.com/node-red/node-red)：开源流处理，类似 IFTTT，偏重于本地。
-  - [AutoBangumi](https://github.com/EstrellaXD/Auto_Bangumi)：自动追番器，用以替代自我审查的 Bilibili。
-  - [nas-tools](https://github.com/jxxghp/nas-tools/wiki/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B)：号称能自动整理文件，但测试识别中很容易出错，暂不考虑。
-    - qbittorrent：Linux 版本提示出错。
-  - Emby、Plex：流媒体方案，暂不考虑。
-  - HomeAssistant：开源智能家居平台
-  - Clash：用作代理服务器
 
 ## NAS Docker
 
@@ -39,6 +21,29 @@ docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%
 - 非 root 用户需在命令前添加`sudo`，否则会提示`Permission denied`。
 - 升级镜像，不影响内部数据库。
 - 「群晖导出」会导出安装镜像和配置，但不包括使用的数据库。
+
+## 套件配置
+
+- DS/Transmission：用于 PT 下载 (禁用 DHT，半小时停止做种)
+- Synology Drive Server：电脑文件备份
+- Docker：指定本地端口否则重启会变，重启不影响 docker 配置。
+  - RSSHub：无需保存数据，自动更新。
+  - Huginn：定期备份抓取脚本，数据库保存在本地，不自动更新。
+  - Tiny Tiny RSS：定期备份订阅源和设置，自动更新。
+    - [mercury-parser-api](https://registry.hub.docker.com/r/wangqiru/mercury-parser-api)：全文插件
+  - [qiandao](https://github.com/AragonSnow/qiandao)：自动签到开源框架，需搭配浏览器扩展 [get-cookies](https://github.com/ckx000/get-cookies) 使用，可导出配置。
+  - [watchtower](https://containrrr.dev/watchtower/)：监控并更新 Docker 容器。
+    - 监控指定名称的镜像：`docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once nginx redis`。本案例只更新名为“nginx”和“redis”的容器，其他容器将被忽略。
+    - 指定容器的 compose 命令中添加 lable `com.centurylinklabs.watchtower.enable=false`，可禁止该容器的监控和更新。
+  - 待了解
+    - [n8n](https://blog.csdn.net/alex_yangchuansheng/article/details/122295193)：开源 IFTTT 工具，偏重于云服务。
+    - [Node-RED](https://github.com/node-red/node-red)：开源流处理，类似 IFTTT，偏重于本地。
+    - [AutoBangumi](https://github.com/EstrellaXD/Auto_Bangumi)：自动追番器，用以替代自我审查的 Bilibili。
+    - [nas-tools](https://github.com/jxxghp/nas-tools/wiki/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B)：号称能自动整理文件，但测试识别中很容易出错，暂不考虑。
+      - qbittorrent：Linux 版本提示出错。
+    - Emby、Plex：流媒体方案，暂不考虑。
+    - HomeAssistant：开源智能家居平台
+    - Clash：代理服务器
 
 ## NAS 影视整理
 
