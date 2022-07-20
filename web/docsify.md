@@ -2,6 +2,8 @@
 
 [docsify](https://docsify.js.org/#/zh-cn/) 是一个神奇的文档网站生成器，可以快速帮你将 md 文档生成为网站。
 
+- docsify 是否可以像飞书一样，再添加一条侧边栏？
+
 ## 配置
 
 ### [emoji](https://docsify.js.org/#/zh-cn/plugins?id=emoji)

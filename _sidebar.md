@@ -14,7 +14,6 @@
   - [静态托管](deploy/Static.md)
   - [VPS/网站修改](deploy/VPS.md)
   - [GitHub](deploy/GitHub.md)
-  - [WordPress](deploy/WordPress.md)
   - [Cloudflare](deploy/Cloudflare.md)
   - [域名 DNS 托管](deploy/DNS.md)
 - **🌐 页面开发**
