@@ -29,13 +29,23 @@ export default hopeTheme({
     green: "#3eaf7c",
     orange: "#fb9b5f",
   },
+  fullscreen: true,
+
+  //评论配置
+  comment: {
+    provider: "Giscus",
+    repo: "rockbenben/LearnData",
+    repoId: "R_kgDOHdfk6Q",
+    category: "Comments",
+    categoryId: "DIC_kwDOHdfk6c4CQYNn",
+  },
 
   // 默认为 GitHub. 同时也可以是一个完整的 URL
-  //repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "rockbenben/LearnData",
   // 自定义仓库链接文字。默认从 `repo` 中自动推断为 "GitHub" / "GitLab" / "Gitee" / "Bitbucket" 其中之一，或是 "Source"。
-  //repoLabel: "GitHub",
+  repoLabel: "GitHub",
   // 是否在导航栏内显示仓库链接，默认为 `true`
-  //repoDisplay: true,
+  repoDisplay: true,
 
   // docsDir: "demo/src",
 

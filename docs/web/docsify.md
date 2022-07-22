@@ -18,7 +18,7 @@ order: 1
 
 ### 评论插件
 
-- [giscus](https://github.com/giscus/giscus)：基于 github discussion，近似于论坛。
+- [giscus](https://github.com/giscus/giscus)：基于 github discussion，近似于论坛。查看 [配置方法](https://blog.csdn.net/duninet/article/details/125280107)。
 - [Gitalk](https://github.com/gitalk/gitalk)：基于 github commit，需配置独立库用于存储评论。
 - [Valine](https://github.com/xCss/Valine)：可匿名评论，因此不适合国内使用。
 - [Gitter](https://gitter.im/)：[boardgame](https://boardgame.io/documentation/#/)，[regauge](https://itchef.github.io/regauge/#/)
