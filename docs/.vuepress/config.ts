@@ -10,16 +10,6 @@ export default defineUserConfig({
 
   base: "/notes/",
 
-  head: [
-    [
-      "meta",
-      {
-        name: "keywords",
-        content: "自我提升,效率,开源工具",
-      },
-    ],
-  ],
-
   theme,
   plugins: [
     docsearchPlugin({

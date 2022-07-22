@@ -13,10 +13,11 @@ order: 2
 
 - [docsearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html)：将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。开源技术向博客可以申请官方支持，商业化内容需要使用自己的爬虫。
 - [Iconfont 精选图标](https://vuepress-theme-hope.github.io/v2/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87)
+- [看板娘](https://www.npmjs.com/package/vuepress-plugin-helper-live2d)
 
 ## 自定义主题
 
-- [ ] 设置 meta 统计代码。config.ts 中添加全局 [head 标签](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs/theme/src/.vuepress/config.ts)，适合放特定标签，不适合 js 统计代码。
+- [ ] 设置 meta 统计代码。config.ts 中添加全局 [head 标签](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs/theme/src/.vuepress/config.ts)，或在页面中添加 [独立 head 标签](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html#%E7%9B%B4%E6%8E%A5%E6%B7%BB%E5%8A%A0-head-%E6%A0%87%E7%AD%BE)，不过这种只能 meta 标签，不能用于 js 统计代码。
 - [x] Giscus 评论区设置
 - [x] 独立设置页面标题。未成功，所有页面都会加入默认标题。
 - [x] 侧边栏显示客服图片。icon 位置直接放链接也没用。
