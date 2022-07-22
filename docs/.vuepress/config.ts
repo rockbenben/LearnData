@@ -10,6 +10,24 @@ export default defineUserConfig({
 
   base: "/notes/",
 
+  head: [
+    [
+      "img",
+      {
+        name: "referrerpolicy",
+        content: "no-referrer-when-downgrade",
+      },
+      {
+        name: "src",
+        content: "https://piwik.seoipo.com/matomo.php?idsite=7&amp;rec=1",
+      },
+      {
+        name: "style",
+        content: "border:0",
+      },
+    ],
+  ],
+
   theme,
   plugins: [
     docsearchPlugin({
