@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "vuepress": "2.0.0-beta.49",
+    "vuepress-theme-reco": "^2.0.0-beta.23"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache"
+  },
+  "devDependencies": {
+    "@vuepress/client": "^2.0.0-beta.49",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.49",
+    "@vuepress/plugin-search": "2.0.0-beta.49",
+    "vue": "^3.2.37",
+    "vuepress": "^2.0.0-beta.49",
+    "vuepress-theme-hope": "2.0.0-beta.87"
+  }
+}

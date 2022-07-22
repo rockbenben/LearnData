@@ -1,0 +1,68 @@
+name: docs build
+
+on:
+  push:
+    branches:
+      # 确保这是你正在使用的分支名称
+      - main
+
+jobs:
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          # 如果你文档需要 Git 子模块，取消注释下一行
+          # submodules: true
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: pnpm
+
+      - name: Build Docs
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: |
+          pnpm i && pnpm up
+          pnpm add vuepress@next vuepress-theme-hope@next
+          pnpm add -D @vuepress/plugin-docsearch@next
+          pnpm docs:build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 这是文档部署到的分支名称
+          branch: gh-pages
+          folder: docs/.vuepress/dist
+
+      #复制文件到目的地，文档没变化则不会复制
+      - name: Copy file
+        uses: andstor/copycat-action@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          src_path: docs/README.md
+          dst_path: /
+          dst_owner: rockbenben
+          dst_repo_name: LearnData
+          dst_branch: main
+          src_branch: main
+          #clean: true
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          local-dir: ./docs/.vuepress/dist/
+          server: ${{ secrets.ftp_host }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
