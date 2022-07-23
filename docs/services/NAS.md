@@ -38,6 +38,7 @@ docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%
   - [watchtower](https://containrrr.dev/watchtower/)：监控并更新 Docker 容器。
     - 监控指定名称的镜像：`docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once nginx redis`。本案例只更新名为“nginx”和“redis”的容器，其他容器将被忽略。
     - 指定容器的 compose 命令中添加 lable `com.centurylinklabs.watchtower.enable=false`，可禁止该容器的监控和更新。
+  - [Check 酱](https://github.com/easychen/checkchan-dist)：监测网页内容变化，并发送异动到微信。亦支持 http status、json 和 rss 监测。配合自架云端，关电脑后也能运行。
   - 待了解
     - [n8n](https://blog.csdn.net/alex_yangchuansheng/article/details/122295193)：开源 IFTTT 工具，偏重于云服务。
     - [Node-RED](https://github.com/node-red/node-red)：开源流处理，类似 IFTTT，偏重于本地。

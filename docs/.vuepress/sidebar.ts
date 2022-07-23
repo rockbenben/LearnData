@@ -60,4 +60,12 @@ export default sidebar([
     collapsable: true,
     children: "structure",
   },
+  {
+    text: "博客文章",
+    icon: "blog",
+    prefix: "/blog/",
+    link: "",
+    collapsable: true,
+    children: "structure",
+  },
 ]);

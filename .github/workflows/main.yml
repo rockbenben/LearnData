@@ -45,6 +45,15 @@ jobs:
           branch: gh-pages
           folder: docs/.vuepress/dist
 
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          local-dir: ./docs/.vuepress/dist/
+          server: ${{ secrets.ftp_host }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
+
       #复制文件到目的地，文档没变化则不会复制
       - name: Copy file
         uses: andstor/copycat-action@v3
@@ -58,11 +67,3 @@ jobs:
           src_branch: main
           #clean: true
 
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          local-dir: ./docs/.vuepress/dist/
-          server: ${{ secrets.ftp_host }}
-          username: ${{ secrets.ftp_username }}
-          password: ${{ secrets.ftp_password }}
-          port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
