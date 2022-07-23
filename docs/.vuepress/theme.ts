@@ -55,7 +55,7 @@ export default hopeTheme({
   navbarLayout: {
 	left: ["Brand"],
 	center: ["Links"],
-	right: ["Outlook", "Search"],
+	right: ["Repo", "Outlook", "Search"],
   },
   //是否在向下滚动时自动隐藏导航栏
   //navbarAutoHide: "always",
@@ -69,7 +69,6 @@ export default hopeTheme({
   pageInfo: ["Word", "ReadingTime"],
   //https://vuepress-theme-hope.github.io/v2/zh/config/frontmatter/layout.html#pageinfo
   // pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime"],
-
 
   plugins: {
 

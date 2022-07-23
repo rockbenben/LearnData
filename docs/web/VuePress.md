@@ -1,6 +1,6 @@
 ---
 title: VuePress
-order: 2
+order: 1
 ---
 
 [VuePress](https://v2.vuepress.vuejs.org/zh/guide/getting-started.html) 是一个以 Markdown 为中心的静态网站生成器。你可以使用 Markdown 来书写内容（如文档、博客等），然后 VuePress 会帮助你生成一个静态网站来展示它们。
@@ -17,9 +17,11 @@ order: 2
 
 ## 自定义主题
 
-- [ ] 页面统计，插件只支持 Google、百度，测试用图片统计方式。备用方法：将统计代码直接放在侧边栏。
+- [x] Giscus 评论区设置，没反应？
+- [x] Algolia DocSearch 已经申请，等结果通知
+- [x] ~~导航栏添加 repo 位置~~
+- [x] ~~页面统计，插件只支持 Google、百度，后用图片方式植入统计。备用方法：将统计代码直接放在侧边栏。~~
 - [x] 定制页面标签：config.ts 中添加全局 [head 标签](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs/theme/src/.vuepress/config.ts)，或在页面中添加 [独立 head 标签](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html#%E7%9B%B4%E6%8E%A5%E6%B7%BB%E5%8A%A0-head-%E6%A0%87%E7%AD%BE)，不过这种只能 meta 标签，不能用于 js 统计代码。
-- [x] Giscus 评论区设置
 - [x] 独立设置页面标题。未成功，所有页面都会加入默认标题。
 - [x] 侧边栏显示客服图片。icon 位置直接放链接也没用。
 - [x] 指定页面子标题不被目录页识别。但页面中取消 toc 的话，网页位置会出现偏移。

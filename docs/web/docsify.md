@@ -1,6 +1,6 @@
 ---
 title: docsify
-order: 1
+order: 2
 ---
 
 [docsify](https://docsify.js.org/#/zh-cn/) 是一个神奇的文档网站生成器，可以快速帮你将 md 文档生成为网站。
@@ -8,8 +8,6 @@ order: 1
 ## 插件
 
 [docsify 插件列表](https://docsify-preview.vercel.app/#/zh-cn/awesome?id=plugins)
-
-### 待修改
 
 - [ ] [docsify-toc](https://github.com/mrpotatoes/docsify-toc)：给笔记页内部添加目录，不过会让 gitalk 位置出错。参考链接：[Tainacan Wiki](https://tainacan.github.io/tainacan-wiki/#/general-concepts)，[Sureness](https://github.com/dromara/sureness/blob/master/docs/index.html)，[lifeupapp](https://wiki.lifeupapp.fun/zh-cn/#/features/174)。
 - [ ] [docsify 笔记类参考](https://notebook.js.org/#/README)：看板娘，多级页面，页面点击效果，网站运行时间。
