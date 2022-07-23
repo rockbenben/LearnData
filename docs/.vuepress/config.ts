@@ -14,16 +14,10 @@ export default defineUserConfig({
     [
       "img",
       {
-        name: "referrerpolicy",
-        content: "no-referrer-when-downgrade",
-      },
-      {
-        name: "src",
-        content: "https://piwik.seoipo.com/matomo.php?idsite=7&amp;rec=1",
-      },
-      {
-        name: "style",
-        content: "border:0",
+        referrerpolicy: "no-referrer-when-downgrade",
+        src: "https://piwik.seoipo.com/matomo.php?idsite=7&amp;rec=1",
+        style: "border:0",
+        alt: "",
       },
     ],
   ],
