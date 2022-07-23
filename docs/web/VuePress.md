@@ -17,11 +17,11 @@ order: 1
 
 ## 自定义主题
 
-- [x] Giscus 评论区设置，没反应？
-- [x] Algolia DocSearch 已经申请，等结果通知
+- [x] Algolia DocSearch 申请中，等结果通知
+- [x] ~~Giscus 评论区设置~~
 - [x] ~~导航栏添加 repo 位置~~
-- [x] ~~页面统计，插件只支持 Google、百度，后用图片方式植入统计。备用方法：将统计代码直接放在侧边栏。~~
-- [x] 定制页面标签：config.ts 中添加全局 [head 标签](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs/theme/src/.vuepress/config.ts)，或在页面中添加 [独立 head 标签](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html#%E7%9B%B4%E6%8E%A5%E6%B7%BB%E5%8A%A0-head-%E6%A0%87%E7%AD%BE)，不过这种只能 meta 标签，不能用于 js 统计代码。
+- [x] ~~页面统计，插件只支持 Google、百度，后用图片标签方式植入统计。备用方法：将统计代码直接放在侧边栏。~~
+- [x] ~~定制页面标签：config.ts 中添加全局 [head 标签](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs/theme/src/.vuepress/config.ts)，或在页面中添加 [独立 head 标签](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html#%E7%9B%B4%E6%8E%A5%E6%B7%BB%E5%8A%A0-head-%E6%A0%87%E7%AD%BE)，支持图片统计代码。~~
 - [x] 独立设置页面标题。未成功，所有页面都会加入默认标题。
 - [x] 侧边栏显示客服图片。icon 位置直接放链接也没用。
 - [x] 指定页面子标题不被目录页识别。但页面中取消 toc 的话，网页位置会出现偏移。
@@ -35,7 +35,7 @@ order: 1
 
 ## 安装配置
 
-1. 环境配置，安装 npm、yarn、pnpm，查看 [Linux 环境部署教程](deploy/VPS#环境部署)
+1. 环境配置，安装 npm、yarn、pnpm，查看 [Linux 环境部署教程](../deploy/VPS.html#环境部署)
 2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope@next docs`。vuepress-theme-hope 主题的样例文件就会存储在该路径下。
 3. 完成第二步，VuePress 样例已经能运行了。如果遇到报错，可以执行下拉命令，升级相关依赖包。
 
