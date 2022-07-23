@@ -1,6 +1,6 @@
 ---
 title: Python
-icon: 
+icon:
 order: 3
 ---
 
@@ -46,8 +46,8 @@ print('Resize image to: %sx%s' % (w//2, h//2))
 im.save('thumbnail.jpg', 'jpeg')
 ```
 
-`if __name__ = "__main__"`是只在主程序中运行，如果是作为模块引用，则不运行。
-`sys.path.append("c:\\\\Python37\\\\test)`添加模块的搜索路径文件夹。`\\`在 Pythone 中会转义，所以要输入两个。
+`if __name__ = "__main__"` 是只在主程序中运行，如果是作为模块引用，则不运行。
+`sys.path.append("c:\\\\Python37\\\\test)` 添加模块的搜索路径文件夹。`\\` 在 Pythone 中会转义，所以要输入两个。
 
 ## 基础语法
 

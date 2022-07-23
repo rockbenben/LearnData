@@ -1,6 +1,6 @@
 ---
 title: HTML
-icon: 
+icon:
 order: 1
 ---
 

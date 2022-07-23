@@ -12,14 +12,14 @@ order: 4
 
 ## WPS 没有宏
 
-- 让 wps 支持 vba 宏，安排 [WPS VBA 模块 V7.1 版本](https://www.jyrd.com/media/6490.html)；`选项 - 信任中心 - 启用宏`后自动添加为受信任的文档，或添加主要文件夹为信任位置。
+- 让 wps 支持 vba 宏，安排 [WPS VBA 模块 V7.1 版本](https://www.jyrd.com/media/6490.html)；`选项 - 信任中心 - 启用宏` 后自动添加为受信任的文档，或添加主要文件夹为信任位置。
 - 开启聚光灯效果：视图 - 阅读模式，每个文件需要单独开启，文件保存后自动开启。
 
 ## Chrome 开发工具
 
 网页重定向时，无法在开发工具中看到重定向时打开的网页。
 
-`F12-Settings-Throttling`，增加浏览器的网络延时，来查看跳转路径。到达中转页面时，可在开发工具中将网络改为 Offiline，网页将停止加载。
+点击 `F12-Settings-Throttling`，增加浏览器的网络延时，来查看跳转路径。到达中转页面时，可在开发工具中将网络改为 Offiline，网页将停止加载。
 
 - Preserve log：不在网页刷新或重定向后，清楚加载日志
 - Disbale cache：不使用网页缓存

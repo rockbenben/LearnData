@@ -1,6 +1,6 @@
 ---
 title: Cloudflare
-icon: 
+icon:
 order: 4
 ---
 

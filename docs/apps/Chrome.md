@@ -80,7 +80,7 @@ order: 2
 
 ## 实用工具
 
-[Vimium C](https://github.com/gdh1995/vimium-c/blob/master/README-zh.md)：全键盘操作浏览器，建议开启`chrome://flags/#extensions-on-chrome-urls`。
+[Vimium C](https://github.com/gdh1995/vimium-c/blob/master/README-zh.md)：全键盘操作浏览器，建议开启 `chrome://flags/#extensions-on-chrome-urls`。
 
 [SingleFile](https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle/)：完整的网页保存到单个文件中，可以对文件名、HTML 内容、样式、图片、字体等进行调整。
 

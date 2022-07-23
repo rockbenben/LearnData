@@ -1,6 +1,6 @@
 ---
 title: VPS/网站修改
-icon: 
+icon:
 order: 2
 ---
 
@@ -22,7 +22,7 @@ order: 2
 
 ```bash
 #查看源
-npm config get registry 
+npm config get registry
 #更换国内源
 npm config set registry https://registry.npmmirror.com/
 #换回默认源
@@ -42,7 +42,7 @@ pnpm add 包 -g
 #移除全局包
 pnpm remove 包 --global
 #更新全局包
-pnpm upgrade 包 --global   
+pnpm upgrade 包 --global
 
 #升级当前目录的依赖以确保你的项目只包含单个版本的相关包
 #本方法能解决大部分的部署报错
@@ -72,12 +72,12 @@ location = / {
 
 ## 网站字体
 
-网站为了提高访问速度并保持设计的一致性，通常会选默认字体。这导致网站设计难以突出重点。针对这点，我通常会修改网站的导航栏字体，将其从默认字体改为`思源黑体-粗`。
+网站为了提高访问速度并保持设计的一致性，通常会选默认字体。这导致网站设计难以突出重点。针对这点，我通常会修改网站的导航栏字体，将其从默认字体改为 `思源黑体-粗`。
 
 1. 进入 [iconfont‑webfont](https://www.iconfont.cn/webfont)，输入导航栏内所有文字，并设置所需字体。
 2. 点击「生成字体」后，在选中字体的下方，点击「本地下载」。
 3. 将字体包上传到服务器，修改新字体的位置参数。
-4. 在导航栏的`class`属性中添加`web-font`。
+4. 在导航栏的 `class` 属性中添加 `web-font`。
 
 ## 米拓
 

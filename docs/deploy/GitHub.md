@@ -1,12 +1,8 @@
 ---
 title: GitHub
-icon: 
+icon:
 order: 3
 ---
-
-## 需求
-
-- [x] github 部分文件夹不同步
 
 ## GitHub Actions
 

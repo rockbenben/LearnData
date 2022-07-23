@@ -5,23 +5,25 @@ order: 1
 
 ## 静态托管
 
-如果国内静态资源库没有你要的静态包，推荐用`npm i`命令将静态包下载到本地，并部署到阿里云/七牛云的国内服务器上，避免网页受 UNPKG 和 jsDelivr 屏蔽影响而出现偏差。
+如果国内静态资源库没有你要的静态包，推荐用 `npm i` 命令将静态包下载到本地，并部署到阿里云/七牛云的国内服务器上，避免网页受 UNPKG 和 jsDelivr 屏蔽影响而出现偏差。
 
 ### NPM 包
 
-- UNPKG：**有墙风险且不稳定**，默认为最新版本，无需`@latest`标签。
+- UNPKG：**有墙风险且不稳定**，默认为最新版本，无需 `@latest` 标签。
   - 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
-  - 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀`https://unpkg.com/`。
+  - 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀 `https://unpkg.com/`。
 - 自建 unpkg 镜像，反向代理 unpkg
 - [NPM MIRROR](https://npmmirror.com/)：NPM 项目的国内镜像镜像，不能做静态托管用途。
-  - `https://registry.npmmirror.com/项目名/版本号`可以看见项目的各种信息，但看不了里面的文件。
+
+  - `https://registry.npmmirror.com/项目名/版本号` 可以看见项目的各种信息，但看不了里面的文件。
 
 - ~~jsDelivr（已墙）：速度最快，原本是最稳的，但域名暴雷后，经常断开，2022.06.01 彻底打不开。~~
 
-  ~~配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新。刷新命令参考`curl https://purge.jsdelivr.net/gh/username/project/file`。~~
+  ~~配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新。刷新命令参考 `curl https://purge.jsdelivr.net/gh/username/project/file`。~~
+
 - ~~饿了么 CDN（已关）：国内唯一能用的 npm 镜像，2022.07.13 发现外部访问被拒绝。之前饿了么并没说支持对外，可能已经彻底取消了。~~
 
-  ~~使用饿了么 CDN 时，注意`https://npm.elemecdn.com/react@latest/`需要时间更新，具体频率未知，可固定大版本号来获取更新`https://npm.elemecdn.com/react@^18/`。~~
+  ~~使用饿了么 CDN 时，注意 `https://npm.elemecdn.com/react@latest/` 需要时间更新，具体频率未知，可固定大版本号来获取更新 `https://npm.elemecdn.com/react@^18/`。~~
 
 ### 静态资源库
 
@@ -46,12 +48,12 @@ IPFS 无需服务器就可建立静态网站，号称永不失效，但**国内�
 
 上传 ipfs 到 pinata 之后，cloudflare 等其他网关不一定会完全复制文件，php 无法抓取加载，所以不建议使用 cloudflare 网关。
 
-cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管 - cloudflare DNS - cloudflare SSL」。如果中途将 DNS 指向`http://gateway.pinata.cloud`等非 cloudflare ipfs 网关域名，cloudflare SSL 证书将失效。即便把链接改为非加密的 http，pinata 依然会视之为无效链接而拒绝访问。
+cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管 - cloudflare DNS - cloudflare SSL」。如果中途将 DNS 指向 `http://gateway.pinata.cloud` 等非 cloudflare ipfs 网关域名，cloudflare SSL 证书将失效。即便把链接改为非加密的 http，pinata 依然会视之为无效链接而拒绝访问。
 
 对于文件较少且链接有效的域名，可按 [Cloudflare IPFS](https://www.cloudflare.com/zh-cn/distributed-web-gateway/) 页面说明来设置 DNS，提交 IPFS 域名 30 分钟后，即可获取 SSL 证书。
 
-1. 添加 CNAME 记录，将你的 IPFS 域名 (xxx.example.com) 指向`cloudflare-ipfs.com`。
-2. `_dnslink.xxx.example.com`设置为`dnslink=/ipfs/<your_ipfs_hash_here>`。
+1. 添加 CNAME 记录，将你的 IPFS 域名 (xxx.example.com) 指向 `cloudflare-ipfs.com`。
+2. `_dnslink.xxx.example.com` 设置为 `dnslink=/ipfs/<your_ipfs_hash_here>`。
 
 ## GitHub 同步到 VPS
 
@@ -93,7 +95,7 @@ jobs:
 
 确认 FTP 无效后，检查 FTP 密码是否填写正确，是否只有大小写字母和数字。如果密码错误，则在 github secrets 重新 update 密钥。
 
-如果密码正确，则进入`/www/server/pure-ftpd/etc/pureftpd.passwd`，检查是否有该 FTP 账户。没有账户的话，**暂停宝塔系统加固**等安全插件后，重新新建 FTP。
+如果密码正确，则进入 `/www/server/pure-ftpd/etc/pureftpd.passwd`，检查是否有该 FTP 账户。没有账户的话，**暂停宝塔系统加固**等安全插件后，重新新建 FTP。
 
 ### 同步到 oss
 

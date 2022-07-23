@@ -10,16 +10,16 @@ order: 6
 
 ## 实用表达式
 
-`{}` 限定符 (表示固定位数)。比如：`\\d{5}`匹配长度有 5 个的数字，`\\d{1,5}`最少匹配 1 个，最长匹配 5 个数字。
+`{}` 限定符 (表示固定位数)。比如：`\\d{5}` 匹配长度有 5 个的数字，`\\d{1,5}` 最少匹配 1 个，最长匹配 5 个数字。
 
-`.{30,}`指匹配长度 30 以上的任意字符串。
+`.{30,}` 指匹配长度 30 以上的任意字符串。
 
-`[aeiou]`匹配中括号中任意字符。
-`[^aeiou]`匹配除了 aeiou 这几个字母以外的任意字符。
+`[aeiou]` 匹配中括号中任意字符。
+`[^aeiou]` 匹配除了 aeiou 这几个字母以外的任意字符。
 
 HTTP 链接匹配：`https?://[^\s"。？,，?)#]+`，句尾不含空格、中英文逗号、中文句号、问号，仅包含 http 和 https 链接
 
-万能链接匹配：`[a-zA-Z]+://[^\s"。？,，?)#]+`匹配万能前缀，如 ftp、tencent、lark。
+万能链接匹配：`[a-zA-Z]+://[^\s"。？,，?)#]+` 匹配万能前缀，如 ftp、tencent、lark。
 
 匹配行：
 
@@ -32,7 +32,7 @@ var ZZMactch = "^((?!"+inputMatch.value+").)*$";
 ^((?!CSDN).)*$
 ```
 
-匹配不同文本组，`id=`或`contentId=`后的多个数字符号
+匹配不同文本组，`id=` 或 `contentId=` 后的多个数字符号
 
 ```javascript
 (?<=id=)\d*
@@ -41,13 +41,13 @@ var ZZMactch = "^((?!"+inputMatch.value+").)*$";
 
 `^((?!abc).)*admin((?!abc).)*$` 匹配 不包含 abc 但包含 admin 的字符串，匹配整行。^[https://blog.csdn.net/thewindkee/article/details/52785763]
 
-`((?!social.tmall.com)(?!ugc/detail.html).)*$`匹配不包含`social.tmall.com` 和 `ugc/detail.html`的字符串，匹配整行。^[https://blog.csdn.net/xiiii/article/details/89450341]
+`((?!social.tmall.com)(?!ugc/detail.html).)*$` 匹配不包含 `social.tmall.com` 和 `ugc/detail.html` 的字符串，匹配整行。^[https://blog.csdn.net/xiiii/article/details/89450341]
 
-`[₳$¢₴€₤￥＄《]([a-zA-Z0-9]{11})[₳$¢₴€₤￥＄《]`匹配淘口令，`[]` 指中内容任意匹配一项皆可。
+`[₳$¢₴€₤￥＄《]([a-zA-Z0-9]{11})[₳$¢₴€₤￥＄《]` 匹配淘口令，`[]` 指中内容任意匹配一项皆可。
 
 ### 前后匹配
 
-前后匹配，前后元素只能出现一次，否则容易覆盖过多
+前后匹配，前后元素只能出现一次，否则容易覆盖过多。
 
 ```javascript
 //匹配任意以 a 开头并以 b 结尾的字符，匹配内容不含 a、b
@@ -67,7 +67,7 @@ a(?<=a).+(?=b)b
 
 ### 正则替换
 
-正则全局替换不能带`\\`，此时用分割替换更方便。
+正则全局替换不能带 `\\`，此时用分割替换更方便。
 
 ```javascript
 var str = "dogdogdog";

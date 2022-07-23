@@ -1,6 +1,6 @@
 ---
 title: Javascript
-icon: 
+icon:
 order: 2
 ---
 
@@ -93,8 +93,10 @@ name=person["lastname"];
 
 ### 全局变量
 
-js 的全部变量要用`window.`来定义。如果变量在函数内没有声明（没有使用 var），该变量为全局变量。
+js 的全部变量要用 `window.` 来定义。如果变量在函数内没有声明（没有使用 var），该变量为全局变量。
+
 局部变量：在函数中通过 var 声明的变量。全局变量：在函数外通过 var 声明的变量。
+
 没有声明就使用的变量，默认为全局变量，不论这个变量在哪被使用。
 
 ```javascript
@@ -167,27 +169,27 @@ x!==5 false
 
 ```javascript
 //[任意随机值](https://www.runoob.com/w3cnote/js-random.html)
-Math.floor(Math.random()*(max-min+1)+min);
+Math.floor(Math.random() * (max - min + 1) + min);
 
 //
-var arr01 = textSour.value.split('\n');
+var arr01 = textSour.value.split("\n");
 //分割字符数组，主要用于淘口令网
-var arr01 = ['打','哒','达']
+var arr01 = ["打", "哒", "达"];
 //循环语句，i++会在代码被执行后增加一个值
-for (var x=0;x<arr01.length;x++) {
-   //存在循环后分割，并跳出循环
-    if (taokouling.value.indexOf(arr01[x])!=-1){
-     ture_tkl01 = taokouling.value.trim().split(arr01[x])[0];
-     break;
-    }
- }
+for (var x = 0; x < arr01.length; x++) {
+  //存在循环后分割，并跳出循环
+  if (taokouling.value.indexOf(arr01[x]) != -1) {
+    ture_tkl01 = taokouling.value.trim().split(arr01[x])[0];
+    break;
+  }
+}
 
 // https://segmentfault.com/q/1010000006819233 //不重复获取
 for (var i = 0; i < rn; ++i) {
-    var index = ~~(Math.random() * count) + i;
-    result[i] = split_result[index];
-    split_result[index] = split_result[i];
-    count--;
- strResult = strResult + result[i] + "\n";
+  var index = ~~(Math.random() * count) + i;
+  result[i] = split_result[index];
+  split_result[index] = split_result[i];
+  count--;
+  strResult = strResult + result[i] + "\n";
 }
 ```

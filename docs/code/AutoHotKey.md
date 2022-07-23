@@ -5,7 +5,7 @@ order: 4
 ---
 
 - [AutoHotKey 中文说明](https://wyagd001.github.io/zh-cn/docs/AutoHotkey.htm)
-- [按键列表](https://wyagd001.github.io/zh-cn/docs/commands/Send.htm#keynames)
+- [按键 Key 名列表](https://wyagd001.github.io/zh-cn/docs/commands/Send.htm#keynames)
 - [AHK 环境变量](https://wyagd001.github.io/zh-cn/docs/Variables.htm#OSVersion)
 - [AutoHotKey 語法產生器 (線上網站)](https://github.com/papple23g/ahkcompiler)
 - 脚本录制/功能编辑：[Pulover's Macro Creator](https://www.macrocreator.com/download/)
@@ -23,7 +23,7 @@ order: 4
 **注意事项**：
 
 - AHK 中**不区分大小写**：即 run 和 RUN 没有区别。
-- 非热键情况，添加`return`，脚本全部停止。
+- 非热键情况，添加 `return`，脚本全部停止。
 - 脚本需考虑，你是想要在**全局**还是**局部**中激活动作。
 
 ## 常用方法
@@ -32,7 +32,7 @@ order: 4
 
 自定义图标可使用 ico 或 png，不支持 svg 格式。
 
-设置命令为 `Menu, Tray, Icon , %A_WorkingDir%\dock_panel.png`。`%A_WorkingDir%`代表脚本所在目录。
+设置命令为 `Menu, Tray, Icon , %A_WorkingDir%\dock_panel.png`。`%A_WorkingDir%` 代表脚本所在目录。
 
 ### 执行 Powershell
 
@@ -72,7 +72,7 @@ if (A_Hour == 20 && Stop_Record ==0){ ;如果小时等于20点
 
 如果**管理员密码为空**，则参考 [win10 添加开机启动项管理员权限运行如何设置](http://www.ujiaoshou.com/xtjc/155215500.html)，在系统的任务计划程序添加管理员自启动。如果想避免启动报错，建议将启动触发器从「开机」改成「登录」，增加延迟 1 分钟，勾选「最高管理员权限」。设置后，脚本中的打开命令都将使用管理员权限执行。
 
-另一种启动方式，在快捷方式的`属性 - 高级`中勾选「用管理员身份运行」，只能用于手动开启，开机启动会忽略带管理器的启动项。
+另一种启动方式，在快捷方式的 `属性 - 高级` 中勾选「用管理员身份运行」，只能用于手动开启，开机启动会忽略带管理器的启动项。
 
 **管理员有设密码**，则可使用下列命令，用管理员权限打开脚本。
 

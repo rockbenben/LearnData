@@ -15,24 +15,6 @@ order: 1
 - [Iconfont 精选图标](https://vuepress-theme-hope.github.io/v2/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87)
 - [看板娘](https://www.npmjs.com/package/vuepress-plugin-helper-live2d)
 
-## 自定义主题
-
-- [x] Algolia DocSearch 申请中，等结果通知
-- [x] ~~Giscus 评论区设置~~
-- [x] ~~导航栏添加 repo 位置~~
-- [x] ~~页面统计，插件只支持 Google、百度，后用图片标签方式植入统计。备用方法：将统计代码直接放在侧边栏。~~
-- [x] ~~定制页面标签：config.ts 中添加全局 [head 标签](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs/theme/src/.vuepress/config.ts)，或在页面中添加 [独立 head 标签](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html#%E7%9B%B4%E6%8E%A5%E6%B7%BB%E5%8A%A0-head-%E6%A0%87%E7%AD%BE)，支持图片统计代码。~~
-- [x] 独立设置页面标题。未成功，所有页面都会加入默认标题。
-- [x] 侧边栏显示客服图片。icon 位置直接放链接也没用。
-- [x] 指定页面子标题不被目录页识别。但页面中取消 toc 的话，网页位置会出现偏移。
-- [x] [修改导航栏 brand 链接](https://vuepress-theme-hope.github.io/v2/zh/cookbook/advanced/replace.html#%E6%8F%92%E6%A7%BD%E5%88%A9%E7%94%A8)，需用本地文件替代 [主题默认设置](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/packages/theme/src/client/module/navbar/components/NavbarBrand.ts)。设置的 ts 未生效，暂时放弃。
-- [x] ~~将 docs 里的 README.md 转移到主目录中，保持 github 项目页的同步。~~
-- [x] ~~打开页面链接，侧边栏焦点能不能也移动过去。侧边栏标题需要能在首屏出现，才能激活焦点。~~
-- [x] ~~默认主题颜色为白天，虽然不能切换，但发稿用白色就性。~~
-- [x] ~~设置导航栏自动隐藏~~
-- [x] ~~隐藏编辑时间和贡献者~~
-- [x] ~~用 md 控制图片是，图片不能显示。这可能是因为主题默认的 lazy 加载，改用七牛云的图片属性控制尺寸。~~
-
 ## 安装配置
 
 1. 环境配置，安装 npm、yarn、pnpm，查看 [Linux 环境部署教程](../deploy/VPS.html#环境部署)
@@ -55,3 +37,22 @@ order: 1
    - sidebar.ts：侧边栏，集合所有文档的目录
    - navbar.ts：导航栏，放最常用的文档链接
    - theme.ts：对主题和插件进行设置
+
+## 自定义主题
+
+- [x] Algolia DocSearch 申请中，等结果通知
+- [x] 全局路径需要给子目录添加 README.md，没那么多内容填，暂时放弃。
+- [x] 独立设置页面标题。未成功，所有页面都会加入默认标题。
+- [x] 侧边栏显示客服图片。icon 位置直接放链接也没用。
+- [x] 指定页面子标题不被目录页识别。但页面中取消 toc 的话，网页位置会出现偏移。
+- [x] [修改导航栏 brand 链接](https://vuepress-theme-hope.github.io/v2/zh/cookbook/advanced/replace.html#%E6%8F%92%E6%A7%BD%E5%88%A9%E7%94%A8)，需用本地文件替代 [主题默认设置](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/packages/theme/src/client/module/navbar/components/NavbarBrand.ts)。设置的 ts 未生效，暂时放弃。
+- [x] ~~Giscus 评论区设置~~
+- [x] ~~导航栏添加 repo 位置~~
+- [x] ~~页面统计，插件只支持 Google、百度，后用图片标签方式植入统计。备用方法：将统计代码直接放在侧边栏。~~
+- [x] ~~定制页面标签：config.ts 中添加全局 [head 标签](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs/theme/src/.vuepress/config.ts)，或在页面中添加 [独立 head 标签](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html#%E7%9B%B4%E6%8E%A5%E6%B7%BB%E5%8A%A0-head-%E6%A0%87%E7%AD%BE)，支持图片统计代码。~~
+- [x] ~~将 docs 里的 README.md 转移到主目录中，保持 github 项目页的同步。~~
+- [x] ~~打开页面链接，侧边栏焦点能不能也移动过去。侧边栏标题需要能在首屏出现，才能激活焦点。~~
+- [x] ~~默认主题颜色为白天，虽然不能切换，但发稿用白色就性。~~
+- [x] ~~设置导航栏自动隐藏~~
+- [x] ~~隐藏编辑时间和贡献者~~
+- [x] ~~用 md 控制图片是，图片不能显示。这可能是因为主题默认的 lazy 加载，改用七牛云的图片属性控制尺寸。~~

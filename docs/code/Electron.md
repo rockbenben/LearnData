@@ -1,6 +1,6 @@
 ---
 title: Electron
-icon: 
+icon:
 order: 7
 ---
 
@@ -48,7 +48,7 @@ yarn dist
 
 执行打包命令后，提示 `cannot unpack electron zip file, will be re-downloaded`。
 
-手动下载对应版本 electron，然后将压缩包放置于`C:\Users\用户名\AppData\Local\electron\Cache`。
+手动下载对应版本 electron，然后将压缩包放置于 `C:\Users\用户名\AppData\Local\electron\Cache`。
 
 ### 跨系统打包
 

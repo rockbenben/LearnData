@@ -1,6 +1,6 @@
 ---
 title: 域名 DNS 托管
-icon: 
+icon:
 order: 5
 ---
 
@@ -10,4 +10,4 @@ order: 5
 - 如果阿里云的安全验证一直被卡住，可以换个浏览器，比如 Firefox。
 - 子域名可以使用 [NS 记录](https://help.aliyun.com/document_detail/29725.html?#h2-ns-7)，托管到其他域名服务商。但 Cloudflare 不支持单独子域名托管。
 
-阿里云修改域名 DNS 服务器 FAQ：<https://help.aliyun.com/document_detail/121648.html>
+域名 DNS 服务器修改（阿里云）：<https://help.aliyun.com/document_detail/121648.html>

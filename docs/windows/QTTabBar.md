@@ -3,7 +3,7 @@ title: QTTabBar
 order: 2
 ---
 
-QTTabBar 让你在 Windows 资源管理器中使用 Tab 多标签功能。这款应用存在两个版本，一个是日本作者 @Quizo 的[原版 QTTabBar](http://qttabbar.wikidot.com/) （闭源，更新慢），另一个是国内反编译出的[开源 QTTabBar](https://github.com/indiff/qttabbar)。
+QTTabBar 让你在 Windows 资源管理器中使用 Tab 多标签功能。这款应用存在两个版本，一个是日本作者 @Quizo 的 [原版 QTTabBar](http://qttabbar.wikidot.com/) （闭源，更新慢），另一个是国内反编译出的 [开源 QTTabBar](https://github.com/indiff/qttabbar)。
 
 目前两个版本都存在相同问题，菜单栏是灰色的选不了 QTTabBar，IE 管理加载项里是空的，第三方扩展也启用了。
 
@@ -13,7 +13,7 @@ QTTabBar 让你在 Windows 资源管理器中使用 Tab 多标签功能。这款
 
 有时选项里找不到 QTTabBar，这可能是因为你的 IE 浏览器禁止了第三方插件导致的。
 
-解决办法：打开 IE 浏览器，`设置-Internet 选项 - 高级`，拉下来勾选`启用第三方浏览器扩展`，重启后生效。如果重启之后还是没有找到 QTTabBar，则打开 `IE 浏览器 - 设置 - 管理加载项` ，点击启用再确认一次。
+解决办法：打开 IE 浏览器，`设置-Internet 选项 - 高级`，拉下来勾选 `启用第三方浏览器扩展`，重启后生效。如果重启之后还是没有找到 QTTabBar，则打开 `IE 浏览器 - 设置 - 管理加载项` ，点击启用再确认一次。
 
 启用 QTTabBar 后，IE 浏览器可能变得怪怪的，别担心，把两片白色区域 x 掉，再次启动 IE 再 x 一次然后就恢复正常了。
 
@@ -21,7 +21,7 @@ QTTabBar 让你在 Windows 资源管理器中使用 Tab 多标签功能。这款
 
 2022.05 补丁 KB5012643 KB5012159 导致 QTTabBar 失效。
 
-管理员方式运行命令提示符`dism /online /enable-feature /featurename:netfx3 /all`，执行完成重启电脑。
+管理员方式运行命令提示符 `dism /online /enable-feature /featurename:netfx3 /all`，执行完成重启电脑。
 
 ## 常用设置
 
@@ -29,7 +29,7 @@ QTTabBar 的选项非常强大，有空可以慢慢研究、打造自己趁手�
 
 ### 汉化
 
-对准多标签栏的空白处右键-`QTTabBar Options`，点击右侧带下载图标的`Download Language File`按钮。建议下载 Author 为 MCRy 的中文语言包，然后回到`QTTabBar Options`，选择刚才下载的翻译文件，保存选项。再重新打开这个界面时，就是中文的了。
+对准多标签栏的空白处右键点击 `QTTabBar Options`，点击右侧带下载图标的 `Download Language File` 按钮。建议下载 Author 为 MCRy 的中文语言包，然后回到 `QTTabBar Options`，选择刚才下载的翻译文件，保存选项。再重新打开这个界面时，就是中文的了。
 
 ### 选项卡/标签设置
 

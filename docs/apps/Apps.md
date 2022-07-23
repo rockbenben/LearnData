@@ -15,14 +15,13 @@ order: 3
 
 Logseq 是最强的日记功能，日记可以自动套用指定模板。^[[How to Set Up an Automated Daily Template in Logseq](https://thinkstack.club/how-to-set-up-an-automated-daily-template-in-logseq/)]
 
-但其他笔记需要手动启用模板，修改 .env 的设置`{:week "journals"}` 被报错。
+但其他笔记需要手动启用模板，修改 .env 的设置 `{:week "journals"}` 被报错。继续尝试设计周记、月报的模板。
 
-继续设计周记、月报的模板。
+logaeq 劣势，所有页面建立在 pages 下，但可以手动修改位置。
 
-logaeq 劣势，所有页面建立在 pages 下，但可以手动修改位置。logseq 和 obasidian 双内笔记软件有个特点，就是说是嗯，重点是。笔记文件的名称和废太位置，只要文文就是名称一致，你问位置转移到其他地方也是不会影响引用和使用的。
+logseq 和 obasidian 双内笔记软件有个特点，就是说是嗯，重点是。笔记文件的名称和废太位置，只要文文就是名称一致，你问位置转移到其他地方也是不会影响引用和使用的。
 
 主题：Dracula
-插件：
 
 ### 快速使用
 
@@ -30,14 +29,14 @@ logaeq 劣势，所有页面建立在 pages 下，但可以手动修改位置。
 - 打开右上角的「侧边栏」，使用目录管理主页面
 - 将页面中内容汇总起来，比如「心理学」标签页面显示所有心理学
 - 任务时，使用 later 或 now，切换后改变状态，会记录任务持续时间。
-  - 如果使用  **`doing`**或者  **`now`**命令，它会更显眼地出现在每天日志的下方（如红框所示），以防当天记录的东西过多，或者到了第二天生成了新的日志后被忽略。**直到你将它完成为止，它才会消失**，算是一种强提醒。
+  - 如果使用 `doing` 或者 `now` 命令，它会更显眼地出现在每天日志的下方（如红框所示），以防当天记录的东西过多，或者到了第二天生成了新的日志后被忽略。**直到你将它完成为止，它才会消失**，算是一种强提醒。
 - PDF 文档的标注管理一直是个大难题，而用 Logseq 后方便许多，能将注释与标签、笔记、截图统合在一起。
-- TOC Generator 插件生成目录：`{{renderer :tocgen}}`
-- `shift+左键`将新页面打开在**右侧边栏**中
+- TOC Generator 插件生成目录：`{{renderer :tocgen}}`。
+- `shift+左键` 将新页面打开在**右侧边栏**中。
 
 ### [query](https://www.bilibili.com/video/BV1eq4y1N7Su)
 
-query 能按条件精准地找到结果，并动态更新在页面中，公式参考[官方文档](https://docs.logseq.com/#/page/queries)。
+query 能按条件精准地找到结果，并动态更新在页面中，公式参考 [官方文档](https://docs.logseq.com/#/page/queries)。
 
 ```jsx
 文本后方添加 tag，比如
@@ -70,13 +69,13 @@ find #research
 
 - [每日笔记、日程管理、工作复盘——这是我钻研出的 Obsidian 八般武艺](https://sspai.com/post/72385)
 
-暂时放弃 Obisidian，虽然能按条件罗列页面，但没有 Logseq 方便。**如果后续要继续用，则尝试将日记分为 3 份，然后用 Dataview 整合在一起，在上面进行修改。**
+暂时放弃 Obisidian，虽然能按条件罗列页面，但没有 Logseq 方便。**如果后续要继续用，则尝试将日记分为 3 份，然后用 Dataview 整合在一起，在上面进行修改**。
 
 Obsidian 更习惯记录，日常 Task 由滴答管理，中期且不急的任务则由 Trello 管理。自带的看板功能需要建立笔记，不如 Trello 方便。
 
 Day Planer 有 sm18 的 Plan 功能。
 
-部分插件不能自动更新，需要手动下载插件文件，然后粘贴到`.obsidian/plugins`对应文件夹内。
+部分插件不能自动更新，需要手动下载插件文件，然后粘贴到 `.obsidian/plugins` 对应文件夹内。
 
 ### Dataview
 
@@ -120,7 +119,7 @@ sort: "title"
 ## flomo
 
 ```bash
-#日记 
+#日记
 #输入/播客、电影和读书
 #输出/工作、生活和好物
 #选题
@@ -158,7 +157,7 @@ TheBrain 可以把知识无限扩充，都连接在一起。但将工作流导�
 2. 打开文件管理器上传：`ctrlOrCmd+alt+e`
 3. 打开输入框输入路径上传：`ctrlOrCmd+alt+x`
 
-自定义设置使用 picgo-electron 的配置`C:\Users\Benson\AppData\Roaming\picgo\data.json`。
+自定义设置使用 picgo-electron 的配置 `C:\Users\Benson\AppData\Roaming\picgo\data.json`。
 
 ## Eagle 素材管理
 
@@ -168,13 +167,13 @@ Eagle 导入流程：搜索文件夹中的 ZIP/RAR 文件，确认全部解压�
 
 ## Zinc
 
-[Zinc](https://github.com/zinclabs/zinc) 是一个进行全文索引的搜索引擎。它是 Elasticsearch 的轻量级替代品，运行在不到 100 MB 的 RAM 中。它使用 bluge 作为底层索引库。
+[Zinc](https://github.com/zinclabs/zinc) 是一个进行全文索引的搜索引擎。它是 Elasticsearch 的轻量级替代品，运行在不到 100 MB 的 RAM 中。它使用 bluge 作为底层索引库。^[[搜索引擎漫谈以及 Zinc 简介](https://blog.csdn.net/zhangxin09/article/details/125080763)]
 
 原本想对 Windows 本地盘进行搜索，但应该只支持 json 处理过后的索引库，不能对本地硬盘进行索引。
 
 ### Zinc 初次启动
 
-1. 系统属性-高级 - 环境变量 - 用户变量，新建变量`ZINC_FIRST_ADMIN_USER`和`ZINC_FIRST_ADMIN_PASSWORD`。这是后面要用到的账户密码，可自由设置，但密码需要包含大小写字母，
+1. 系统属性-高级 - 环境变量 - 用户变量，新建变量 `ZINC_FIRST_ADMIN_USER` 和 `ZINC_FIRST_ADMIN_PASSWORD`。这是后面要用到的账户密码，可自由设置，但密码需要包含大小写字母，
 
 2. 在应用目录下打开终端，执行命令：
 
@@ -183,7 +182,7 @@ mkdir data
 .\zinc.exe
 ```
 
-成功执行后，打开 <http://localhost:4080/>，就能看到图形化界面了。
+成功执行后，打开 `http://localhost:4080/`，就能看到图形化界面了。
 
 ### 全文索引-Bluge
 
@@ -191,11 +190,4 @@ mkdir data
 
 [Bluge](https://github.com/blugelabs/bluge) 是基于 GO 的索引/搜索库，使用简单，有如基于磁盘和内存的索引功能。
 
-**常见错误**
-如果启动过程中出现错误：
-ZINC_FIRST_ADMIN_USER and ZINC_FIRST_ADMIN_PASSWORD must be set on first start. You should also change the credentials after first login.
-可能是没有配置好环境变量，或是没有以管理员身份运行终端（win+X，A）所导致的。
-
-参考资料：
-
-- [搜索引擎漫谈以及 Zinc 简介](https://blog.csdn.net/zhangxin09/article/details/125080763)
+如果启动过程中报错，`ZINC_FIRST_ADMIN_USER and ZINC_FIRST_ADMIN_PASSWORD must be set on first start. You should also change the credentials after first login.`，可能是没有配置好环境变量，或是没有以管理员身份运行终端（win+X，A）所导致的。

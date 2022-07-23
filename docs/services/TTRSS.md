@@ -7,7 +7,7 @@ Tiny Tiny RSS 推荐用 [Awesome TTRSS](http://ttrss.henry.wang/zh/) 的 Docker 
 
 注意：
 
-- 定期备份：`偏好设置 - 订阅源`导出订阅源和 tt-rss 设置。
+- 定期备份：`偏好设置 - 订阅源` 导出订阅源和 tt-rss 设置。
 - Awesome TTRSS 镜像不含插件「no_title_counters」，导致 TTRSS 网页标题会显示未读 RSS 数量。
 - [Tiny Tiny RSS – FAQ](https://tt-rss.org/wiki/FAQ)
 - 主题：[feedly-sepia.css](https://github.com/levito/tt-rss-feedly-theme)
@@ -47,4 +47,4 @@ chmod -R 777 /www/wwwroot/rss/feed-icons
 chmod -R 777 /www/wwwroot/rss/lock
 ```
 
-升级 Tiny Tiny RSS：进行 TTRSS 目录后执行升级命令`git pull origin master`。无法升级时重命名 TTRSS 路径，全新下载后没问题再删除。数据库没变化就没事，主题重新安装。
+升级 Tiny Tiny RSS：进行 TTRSS 目录后执行升级命令 `git pull origin master`。无法升级时重命名 TTRSS 路径，全新下载后没问题再删除。数据库没变化就没事，主题重新安装。

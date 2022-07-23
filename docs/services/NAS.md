@@ -14,14 +14,14 @@ NAS 上推荐用 `docker-compose.yml` 安装 Docker，镜像会自动同步到�
 
 docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%E9%80%9A%E8%BF%87-docker-compose-%E9%83%A8%E7%BD%B2)。
 
-1. 打开`控制面板`-`终端机和 SNMP`，启动 SSH 功能。
-2. putty 连接群晖 SSH，进入`docker-compose.yml`所在路径，比如 `cd /volume3/storage`。
-3. 通过终端在同目录下运行`sudo docker-compose up -d`后等待部署完成。
+1. 打开 `控制面板`-`终端机和 SNMP`，启动 SSH 功能。
+2. putty 连接群晖 SSH，进入 `docker-compose.yml` 所在路径，比如 `cd /volume3/storage`。
+3. 通过终端在同目录下运行 `sudo docker-compose up -d` 后等待部署完成。
 4. 关闭 SSH 功能。
 
 注意：
 
-- 非 root 用户需在命令前添加`sudo`，否则会提示`Permission denied`。
+- 非 root 用户需在命令前添加 `sudo`，否则会提示 `Permission denied`。
 - 升级镜像，不影响内部数据库。
 - 「群晖导出」会导出安装镜像和配置，但不包括使用的数据库。
 
@@ -56,7 +56,6 @@ docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%
 
 ```bash
 # 电视节目重命名规则
-
 季文件夹名：Season ${seasonNr}
 剧集档案名：${showTitle} - S${seasonNr2}E${episodeNr2} - ${title}
 
@@ -82,8 +81,8 @@ docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%
 
 换下的机械硬盘做冷备份，存储照片等长期数据。
 
-硬盘临期后，用大容量硬盘替换。考虑进入`存储池 - 更改 RAID 类型`，无损转换 basic 到 Raid1。不过，不同容量硬盘组 RAID，只能以最小磁盘容量计使用空间。
+硬盘临期后，用大容量硬盘替换。考虑进入 `存储池 - 更改 RAID 类型`，无损转换 basic 到 Raid1。不过，不同容量硬盘组 RAID，只能以最小磁盘容量计使用空间。
 
 更换硬盘后，注意将数据连同文件夹用 file station 复制过去 (按住 Shift 选中所有你要的文件点右键 移动到...)，关机卸载旧盘。如果该硬盘涉及套件位置，注意检查设置。^[[如何把群晖 NAS 上的套件搬到另外个硬盘上](https://www.bigzhang.com/3264.html)]
 
-共享文件迁移：进入`控制面板-共享文件夹`，把你的共享文件夹位置修改到新储存空间。^[[群晖 NAS 跨存储空间移动共享文件夹 (NAS 新增磁盘)](https://blog.csdn.net/hilaryfrank/article/details/109722319)]
+共享文件迁移：进入 `控制面板-共享文件夹`，把你的共享文件夹位置修改到新储存空间。^[[群晖 NAS 跨存储空间移动共享文件夹 (NAS 新增磁盘)](https://blog.csdn.net/hilaryfrank/article/details/109722319)]

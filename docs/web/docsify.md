@@ -18,15 +18,15 @@ order: 2
 
 ### [emoji](https://docsify.js.org/#/zh-cn/plugins?id=emoji)
 
-emoji 插件在标题中使用容易出错，建议使用`&#58;`。例如，原本是`:100:`，替换为`&#58;100:`。
+emoji 插件在标题中使用容易出错，建议使用 `&#58;`。例如，原本是 `:100:`，替换为 `&#58;100:`。
 
 实际使用中，我直接复制 emoji，都能正常显示。
 
 ## [本地命令](https://github.com/docsifyjs/docsify-cli)
 
-`<path>` 默认为当前路径，可使用子文件夹指定路径，如`./docs`或`docs`。
+`<path>` 默认为当前路径，可使用子文件夹指定路径，如 `./docs` 或 `docs`。
 
-`[]`为可省略命令区，无实际作用，输出时需要去除。
+`[]` 为可省略命令区，无实际作用，输出时需要去除。
 
 ### Serve 启动
 
@@ -54,7 +54,7 @@ generate 命令会遍历指定目录及其子目录的所有 markdown 文件，�
 
 docsify 引用内部文件时，路径会自带添加域名。
 
-例如：指向子文档时，链接是`子文件夹/文档名.md`；指向子文档的小标题时，链接是`子文件夹/文档名？id=小标题`。
+例如：指向子文档时，链接是 `子文件夹/文档名.md`；指向子文档的小标题时，链接是 `子文件夹/文档名？id=小标题`。
 
 ### 页面未同步更新
 
@@ -62,8 +62,8 @@ docsify 引用内部文件时，路径会自带添加域名。
 >
 > 我设置了 routerMode 为 history，使用 CDN 访问非首页，再次刷新会找不到文件。
 >
-> 如果开启了`relativePath: true`，文件可以找到，但是侧栏上边的标题点击又有点问题。
+> 如果开启了 `relativePath: true`，文件可以找到，但是侧栏上边的标题点击又有点问题。
 
 ### GitHub Pages 报错
 
-如果 SSL 链接 404 报错，显示「There isn't a GitHub Pages site here」，则目录中加入`CNAME`文件。
+如果 SSL 链接 404 报错，显示「There isn't a GitHub Pages site here」，则目录中加入 `CNAME` 文件。
