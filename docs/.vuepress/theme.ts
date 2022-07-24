@@ -65,7 +65,7 @@ export default hopeTheme({
   blog: {
     name: "清顺",
     avatar: "/avatar_self.webp",
-    description: "个人介绍",
+    description: "迷信新工具，热衷于研究开源软件、心理学理论，定期分享探索成果",
     intro: "/intro.html",
     roundAvatar: true,
     medias: {
