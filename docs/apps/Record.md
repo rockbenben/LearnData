@@ -1,4 +1,5 @@
 ---
+article: false
 title: 录屏应用
 order: 4
 ---

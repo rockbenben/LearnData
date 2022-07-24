@@ -1,4 +1,5 @@
 ---
+article: false
 title: 维修/保养
 order: 4
 ---

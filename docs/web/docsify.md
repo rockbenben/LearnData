@@ -1,4 +1,5 @@
 ---
+article: false
 title: docsify
 order: 2
 ---

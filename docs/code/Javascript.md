@@ -1,4 +1,5 @@
 ---
+article: false
 title: Javascript
 icon:
 order: 2

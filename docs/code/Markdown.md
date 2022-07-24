@@ -1,4 +1,5 @@
 ---
+article: false
 title: Markdown
 icon:
 order: 5

@@ -1,4 +1,5 @@
 ---
+article: false
 title: Chrome 扩展
 order: 2
 ---

@@ -1,4 +1,5 @@
 ---
+article: false
 title: VuePress
 order: 1
 ---
@@ -40,7 +41,9 @@ order: 1
 
 ## 自定义主题
 
-- [x] Algolia DocSearch 申请中，等结果通知
+- [ ] 子域名中部署 blog 和 note，分别使用不同路径
+- [ ] Algolia DocSearch 申请中，等结果通知
+- [x] VuePress 博客页面：用 order 方式让最新的文章往上排，无法按文件名倒序排列
 - [x] 全局路径需要给子目录添加 README.md，没那么多内容填，暂时放弃。
 - [x] 独立设置页面标题。未成功，所有页面都会加入默认标题。
 - [x] 侧边栏显示客服图片。icon 位置直接放链接也没用。

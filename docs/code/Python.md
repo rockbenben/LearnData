@@ -1,4 +1,5 @@
 ---
+article: false
 title: Python
 icon:
 order: 3

@@ -1,4 +1,5 @@
 ---
+article: false
 title: 生活知识
 order: 1
 ---

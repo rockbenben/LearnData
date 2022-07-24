@@ -1,4 +1,5 @@
 ---
+article: false
 title: LearnData
 icon: note
 ---

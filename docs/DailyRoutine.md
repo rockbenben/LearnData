@@ -1,4 +1,5 @@
 ---
+article: false
 title: 每日作息
 icon: check
 ---

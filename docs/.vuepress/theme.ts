@@ -1,3 +1,4 @@
+import { path } from "@vuepress/utils";
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
@@ -18,7 +19,7 @@ export default hopeTheme({
   
   //是否全局启用路径导航
   breadcrumb: false,
-  //contributors: false,
+  contributors: false,
   //lastUpdated: false,
 
   //深色模式配置
@@ -57,11 +58,34 @@ export default hopeTheme({
   // footer: "默认页脚",
 
   // displayFooter: true,
-  pageInfo: ["Word", "ReadingTime"],
+  pageInfo: ["Category", "Tag", "Word", "ReadingTime"],
   //https://vuepress-theme-hope.github.io/v2/zh/config/frontmatter/layout.html#pageinfo
   // pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime"],
 
+  blog: {
+    name: "清顺",
+    avatar: "/avatar_self.webp",
+    description: "个人介绍",
+    intro: "/intro.html",
+    roundAvatar: true,
+    medias: {
+      GitHub: "https://github.com/rockbenben",
+      Zhihu: "https://www.zhihu.com/people/qingwhat",
+      Weibo: "https://weibo.com/u/1992817087",
+      Wechat: "qingwhat",
+      RSS: "https://example.com",
+      少数派: [
+        "https://sspai.com/u/zqj05i4v/posts",
+        path.resolve(__dirname, "icons/sspai.svg"),
+      ],
+    },
+  },
+
   plugins: {
+    blog: {
+      // 自动摘要
+      autoExcerpt: true,
+    },
 
     //评论配置
     comment: {

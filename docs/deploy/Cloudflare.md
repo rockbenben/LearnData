@@ -1,4 +1,5 @@
 ---
+article: false
 title: Cloudflare
 icon:
 order: 4

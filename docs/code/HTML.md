@@ -1,4 +1,5 @@
 ---
+article: false
 title: HTML
 icon:
 order: 1

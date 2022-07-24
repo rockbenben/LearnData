@@ -1,4 +1,5 @@
 ---
+article: false
 title: NAS
 order: 1
 ---

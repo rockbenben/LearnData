@@ -1,4 +1,5 @@
 ---
+article: false
 title: 静态部署
 order: 1
 ---

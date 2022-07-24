@@ -1,4 +1,5 @@
 ---
+article: false
 title: AutoHotKey
 icon: 
 order: 4

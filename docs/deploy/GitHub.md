@@ -1,4 +1,5 @@
 ---
+article: false
 title: GitHub
 icon:
 order: 3

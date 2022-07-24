@@ -1,4 +1,5 @@
 ---
+article: false
 title: QTTabBar
 order: 2
 ---

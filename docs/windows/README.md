@@ -1,4 +1,5 @@
 ---
+article: false
 title: Windows 技巧
 order: 1
 ---

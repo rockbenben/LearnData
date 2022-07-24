@@ -8,13 +8,13 @@ export default navbar([
   { text: "NAS", icon: "any", link: "/services/NAS" },
   { text: "生活", icon: "emmet", link: "/family/" },
   {
-    text: "常用工具",
-    icon: "tool",
-    link: "https://newzone.top/",
-  },
-  {
     text: "博客记录",
     icon: "blog",
-    link: "https://newzone.top/blog",
+    link: "/blog",
+  },
+  {
+    text: "常用工具",
+    icon: "tool",
+    link: "https://nav.newzone.top/",
   },
 ]);

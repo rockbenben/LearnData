@@ -1,4 +1,5 @@
 ---
+article: false
 title: Tiny Tiny RSS
 order: 3
 ---

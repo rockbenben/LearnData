@@ -1,4 +1,5 @@
 ---
+article: false
 title: 健康饮食
 order: 5
 ---

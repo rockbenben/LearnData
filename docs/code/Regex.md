@@ -1,4 +1,5 @@
 ---
+article: false
 title: 正则表达式
 icon:
 order: 6

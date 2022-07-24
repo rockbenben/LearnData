@@ -1,4 +1,5 @@
 ---
+article: false
 title: 购物攻略
 order: 3
 ---

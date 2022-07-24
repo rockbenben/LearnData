@@ -1,4 +1,5 @@
 ---
+article: false
 title: 物品评价
 order: 2
 ---

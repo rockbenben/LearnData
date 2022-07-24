@@ -1,4 +1,5 @@
 ---
+article: false
 title: Huginn
 order: 2
 ---

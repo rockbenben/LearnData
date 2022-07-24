@@ -1,4 +1,5 @@
 ---
+article: false
 title: 系统重装
 order: 3
 ---

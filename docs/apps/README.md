@@ -1,4 +1,5 @@
 ---
+article: false
 title: 必备应用
 order: 1
 ---

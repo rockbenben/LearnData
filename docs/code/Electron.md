@@ -1,4 +1,5 @@
 ---
+article: false
 title: Electron
 icon:
 order: 7

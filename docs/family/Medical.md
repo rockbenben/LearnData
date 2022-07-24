@@ -1,4 +1,5 @@
 ---
+article: false
 title: 医疗药品
 order: 6
 ---
