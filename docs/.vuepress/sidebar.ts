@@ -63,7 +63,7 @@ export default sidebar([
   {
     text: "博客文章",
     icon: "blog",
-    prefix: "/p/",
+    prefix: "/_posts/",
     link: "/blog",
     collapsable: true,
     children: "structure",

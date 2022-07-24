@@ -16,7 +16,7 @@ icon: note
 
 ## ⚛️ 介绍
 
-LearnData 笔记采用 VuePress 架构，文档推送到 github 生成静态页面，然后同步到国内服务器，并以 [网页形式](https://newzone.top/notes/) 对外展示。
+LearnData 笔记采用 VuePress 架构，文档推送到 github 生成静态页面，然后同步到国内服务器，并以 [网页形式](https://newzone.top/) 对外展示。
 
 原生搜索不支持全文，因此申请了 algolia 的开源支持。目前还在申请中，在此之前，页面搜索框是假的，不用尝试。
 

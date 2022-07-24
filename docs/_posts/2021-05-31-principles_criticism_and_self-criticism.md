@@ -99,9 +99,9 @@ order: -37
 
 **公开记录**：
 
-- [学习笔记](https://newzone.top/notes/#/)：将对工具、工作方式和生活的思考记录发布在公开页面，欢迎大家的点评。
+- [学习笔记](https://newzone.top/)：将对工具、工作方式和生活的思考记录发布在公开页面，欢迎大家的点评。
 
-- 工作视频：[自我监控视频](https://newzone.top/p/2022-05-22-surveillance_video_for_myself)，记录私密工作状态，方便当日回顾。
+- 工作视频：[自我监控视频](https://newzone.top/_posts/2022-05-22-surveillance_video_for_myself.html)，记录私密工作状态，方便当日回顾。
 
 - 微习惯视频：监督运动习惯。拍摄视频时，使用关键句「切掉/保留」，配合 Quickcut 快速剪辑视频。
 

@@ -45,7 +45,7 @@ Notion、Logseq、Obsidian、Roam Research、flomo、飞书、语雀、为知、
 
 突破迷思后，我把大部分知识转为 markdown 文件中，然后用 docsify 将知识聚合到同一网页中，方便搜索和管理。目前，我切换到新模式一个月了，明显感到学习和知识使用效率提高，开始摆脱「知识软件奴隶」的身份。
 
-我的[开源笔记页面](https://newzone.top/notes/#/)：
+我的 [开源笔记页面](https://newzone.top/)：
 
 - 置顶：日常习惯、健身、阅读、思考；
 - 代码区：常用代码学习笔记；
@@ -67,7 +67,7 @@ Notion 确实方便，不用自建图床，样式也很丰富。但是，这类�
 
 ### 修改后自动同步到服务器
 
-我的代码、文章都部署在 GitHub 上，同步后使用 FTP-Deploy-Action 将更新内容推送到服务器上，步骤参考 [开源笔记](https://newzone.top/notes/#/deploy/Static?id=github-%e5%90%8c%e6%ad%a5%e5%88%b0-vps)。
+我的代码、文章都部署在 GitHub 上，同步后使用 FTP-Deploy-Action 将更新内容推送到服务器上，步骤参考 [开源笔记](../deploy/Static.html#github-同步到-vps)。
 
 ### 没有服务器也能用 docsify
 
