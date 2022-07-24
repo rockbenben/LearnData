@@ -38,12 +38,12 @@ jobs:
           pnpm add -D @vuepress/plugin-docsearch@next
           pnpm docs:build
 
-#      - name: Deploy
-#        uses: JamesIves/github-pages-deploy-action@v4
-#        with:
-#          # 这是文档部署到的分支名称
-#          branch: gh-pages
-#          folder: docs/.vuepress/dist
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 这是文档部署到的分支名称
+          branch: gh-pages
+          folder: docs/.vuepress/dist
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
