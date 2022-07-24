@@ -1,11 +1,13 @@
 ---
+#正式发布后，删除 article: false
+article: false
 title: 自我提升 - 费曼学习法的要求
 date: 2022-04-19
 category:
   - 头脑驿站
 tag:
   - 费曼学习法
-order: -
+order: -1
 ---
 
 ![](http://tc.seoipo.com/202204192027831.png)

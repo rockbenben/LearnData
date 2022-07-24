@@ -1,11 +1,13 @@
 ---
+#正式发布后，删除 article: false
+article: false
 title: 物品的归属
 date: 2022-04-15
 category:
   - 头脑驿站
 tag:
   - 目的论
-order: -
+order: -1
 ---
 
 平常的认知

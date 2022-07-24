@@ -1,11 +1,13 @@
 ---
+#正式发布后，删除 article: false
+article: false
 title: 博客迁移 VuePress
 date: 2022-07-24
 category:
   - 博客
 tag:
   - VuePress
-order: -
+order: -1
 ---
 
 迁移

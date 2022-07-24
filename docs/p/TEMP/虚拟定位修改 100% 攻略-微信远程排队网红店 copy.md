@@ -1,11 +1,13 @@
 ---
+#正式发布后，删除 article: false
+article: false
 title: 虚拟定位修改攻略 - 无需 ROOT，在家也能排队网红店
 date: 2022-05-15
 category:
   - 工具
 tag:
   - 虚拟定位
-order: -
+order: -1
 ---
 
 家旁边的网红餐饮店，每次排队都需要 3 小时，而且排队必须在店门口扫码。作为
