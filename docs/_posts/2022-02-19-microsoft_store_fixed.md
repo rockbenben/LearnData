@@ -34,4 +34,4 @@ Microsoft store 页面无法打开，提示需要联网或刷新。大多数更�
 
 完整操作流程：
 
-![win11-ie 高级设置.gif](https://tc.seoipo.com/IE_SSL_Setting_win11.webp)
+![win11-ie 高级设置.gif](http://tc.seoipo.com/IE_SSL_Setting_win11.webp)

@@ -3,7 +3,7 @@
 home: true
 layout: Blog
 icon: home
-bgImage: https://tc.seoipo.com/home-bg-1.jpg
+bgImage: http://tc.seoipo.com/home-bg-1.jpg
 title: 互联网小白
 #heroImage: /logo.svg
 heroText: 互联网小白

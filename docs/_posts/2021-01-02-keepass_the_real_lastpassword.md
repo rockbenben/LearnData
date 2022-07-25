@@ -129,7 +129,7 @@ KeePass 懒人包为绿色版，集成了常用插件，建立数据库即可使
 2. 屏幕右下角托盘处，打开 KeePass。
 3. 依次点击 `菜单栏 - 文件 - 新建`，建立属于你的密码数据库。
 
-   ![KeePass 懒人包设置](https://tc.seoipo.com/KeePass_new_kdbx.gif)
+   ![KeePass 懒人包设置](http://tc.seoipo.com/KeePass_new_kdbx.gif)
 
 懒人包集成插件：AutoTypeSearch，Entry Templates，KeePassHttp，KeePassNatMsg，KeePassRpc，KeeTrayTOTP，KPEnhancedEntryView，SourceForgeUpdateChecker，WebAutoType。
 
