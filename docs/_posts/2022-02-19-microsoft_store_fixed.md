@@ -17,12 +17,15 @@ Microsoft store 页面无法打开，提示需要联网或刷新。大多数更�
 ## 解决方法
 
 1. 开始菜单 - 搜索栏，搜索「Internet 选项」。
+
    ![](http://tc.seoipo.com/2022-05-05-17-01-23.png)
 
 2. 进入 Internet 高级设置。
+
    ![](http://tc.seoipo.com/2022-05-05-17-01-48.png)
 
 3. 勾选「使用 TLS 1.2」和「使用 TLS 1.3」。
+
    ![](http://tc.seoipo.com/2022-05-05-17-02-01.png)
 
 网银用户会重复出现该问题，重新勾选 TLS 即可解决。
@@ -30,4 +33,5 @@ Microsoft store 页面无法打开，提示需要联网或刷新。大多数更�
 如果你依然无法访问，可尝试重置网络连接、DNS、缓存、应用商店设置，操作参考[Microsoft Store 打不开，代码：0x80131500](https://answers.microsoft.com/zh-hans/windows/forum/all/microsoft/43acd62e-a11e-449c-9fa4-50931ad38565)。
 
 完整操作流程：
+
 ![win11-ie 高级设置.gif](https://tc.seoipo.com/IE_SSL_Setting_win11.webp)

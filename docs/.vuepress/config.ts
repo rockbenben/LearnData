@@ -1,6 +1,4 @@
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
-//import { sitemapPlugin } from "vuepress-plugin-sitemap2";
-import { path } from "@vuepress/utils";
 import { defineUserConfig } from "vuepress";
 import theme from "./theme";
 
@@ -28,10 +26,5 @@ export default defineUserConfig({
     docsearchPlugin({
       // 你的选项
     }),
-    /* 
-    sitemapPlugin({
-      hostname: "https://newzone.top",
-      sitemapFilename: "sitemap_vuepress.xml",
-    }), */
   ],
 });

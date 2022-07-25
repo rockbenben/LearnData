@@ -10,6 +10,7 @@ export default sidebar([
     icon: "",
     prefix: "/code/",
     link: "",
+    collapsable: true,
     children: "structure",
   },
   {

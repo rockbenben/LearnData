@@ -20,6 +20,7 @@ order: -47
 到了 2021 年，**随着文章和发布渠道的增多，文章的修改和管理变得愈加困难**。慢慢地，我开始习惯本地 Markdown 只做初稿排版，更新则只在外部平台上进行。​
 
 我的文章都是工具教程类，要随着工具的更新而修改，有时甚至要对几年前发布的文章进行更新。因此，针对少量平台更新的策略，带来了文章版本混乱，让博客偏离了知识记录的初衷。为了保证文章版本统一，我把博客从 Jekyll 迁移到 WordPress，准备以 WordPress 作为统一版。
+
 ![Jekyll 博客](http://tc.seoipo.com/20210128124408.png?imageMogr2/thumbnail/!40p)
 
 然而，WordPress 方案很快就被放弃了。原因除了 WordPress 糟糕的编辑体验，更重要的是，我遇到了 Notion。其界面美观，编辑方便，支持对外展示，能导出为 Markdown、HTML 文件。​
@@ -60,6 +61,7 @@ order: -47
 - 草稿箱：`_post` 路径内新建 `TEMP` 文件夹，用于存放文章草稿。WordPress 推送程序会忽略 `_post` 子文件夹的内容，换言之，`TEMP` 文件夹不会发布到 WordPress 网站。
 
 - 文章聚合页：主目录新增 `.nojekyll`，`index.html`，`_sidebar.md` 文件，引入文档生成工具 docsify，将博客文章聚合在一个页面，方便快速定位和位置管理。示例：[https://rockbenben.github.io/Blog_WP/](https://rockbenben.github.io/Blog_WP/)。
+
   ![](http://tc.seoipo.com/2022-05-26-20-12-56.png)
 
 ### 使用流程
@@ -136,6 +138,7 @@ Markdown 转 WordPRess 文章时，默认规则无法识别缩进级别。多层
 飞书文档功能与 Notion、Airtable 类似，可将文字、链接、图片聚合在同一页面，操作便捷。
 
 打开飞书多维表格，填入本地 Markdown 文章的标题、本地位置、链接、标签和封面，即可聚合本地文章的关键信息。将表格视图切换为「画册视图」，文档管理界面更达到 90% 的 Notion 视觉效果。
+
 ![飞书表格视图](http://tc.seoipo.com/2022-05-06-12-43-36.png)
 
 ![飞书画册视图](http://tc.seoipo.com/2022-05-06-12-28-41.png)

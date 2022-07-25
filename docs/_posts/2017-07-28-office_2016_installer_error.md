@@ -17,11 +17,13 @@ order: -3
 1. 打开 regedit.exe，在注册表中找到路径 `计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Delivery\SourceEngine\Downloads\{90160000-00BA-0804-1000-0000000FF1CE}-C\Sources\PROPLUS16(RG)-6186D162`。
 
 2. 修改 Path 数据，改为安装包位置，比如 `F:\5.软件资源\系统重装\SW_DVD5_Office_Professional_Plus_2016_64Bit_ChnSimp_MLF_X20-42426\groove.zh-cn`。
+
    ![](https://pic3.zhimg.com/v2-650ede86dd191a8f0a1cd6e9b815377a_r.jpg)
 
-3. 在 C 盘建立安装组件
-   a. 把安装包路径 `\groove.zh-cn\` 下的文件复制到 `C:\MSOCache\All Users\{90160000-00BA-0804-1000-0000000FF1CE}-C` 目录下 (如果没有这个目录就自己建立)。
-   b. 把安装包路径 `\proplus.ww\` 下的文件复制到 `C:\MSOCache\All Users\{90160000-0011-0000-1000-0000000FF1CE}-C`。
+3. 在 C 盘建立安装组件：
+
+   - 把安装包路径 `\groove.zh-cn\` 下的文件复制到 `C:\MSOCache\All Users\{90160000-00BA-0804-1000-0000000FF1CE}-C` 目录下 (如果没有这个目录就自己建立)。
+   - 把安装包路径 `\proplus.ww\` 下的文件复制到 `C:\MSOCache\All Users\{90160000-0011-0000-1000-0000000FF1CE}-C`。
 
 4. 将需要的程序文件放入 MSOCache 路径
    MSOCache 其它的目录下内容同样根据注册表的内容把它指示的光盘中的安装文件复制到相应的目录下。如果没有那个目录就要自己建立，类似的目录一共有 12 个。

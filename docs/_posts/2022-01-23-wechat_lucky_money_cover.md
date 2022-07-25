@@ -28,13 +28,13 @@ order: -39
 
 微信红包团队的生意算盘太响了。这活动，不但给红包封面带来大量新用户，后期也能让不少人续费红包时间。
 
-<img src="http://tc.seoipo.com/2022-05-05-16-09-18.png" width="30%">
+![](http://tc.seoipo.com/2022-05-05-16-09-18.png?imageMogr2/thumbnail/!30p)
 
 没用获取红包封面额度也没关系，可以自行购买。封面费用是 1 元/个，购买 n 个则 n 个用户可以使用此款红包封面，有效期半年。微信用户领取后，可在 3 个月内无限次使用该封面。
 
 ## 封面平台注册
 
-领取定制红包额度后，提示登录到[微信红包封面开放平台](https://cover.weixin.qq.com/)。
+领取定制红包额度后，提示登录到 [微信红包封面开放平台](https://cover.weixin.qq.com/)。
 
 首次使用封面平台，需要注册并认证。如果你是用个人身份认证，注册中无付费环节。
 
@@ -50,7 +50,7 @@ order: -39
 
 注册成功后，即可定制红包封面。
 
-微信提供了 psd 和 sketch 的红包封面模板，流程参考[微信红包封面官方文档](https://cover.weixin.qq.com/cgi-bin/mmcover-bin/readtemplate?t=page/index#/doc?page=design&index=-1)。
+微信提供了 psd 和 sketch 的红包封面模板，流程参考 [微信红包封面官方文档](https://cover.weixin.qq.com/cgi-bin/mmcover-bin/readtemplate?t=page/index#/doc?page=design&index=-1)。
 
 **不懂设计模板能不能用？**
 
@@ -60,7 +60,7 @@ order: -39
 
 不管工具如何，你上传图片，即可完成红包设计。
 
-<img src="http://tc.seoipo.com/2022-05-05-16-10-07.png" alt="示例基础图片 (推荐手写字体：杨任东竹石体)" width="40%">
+![示例基础图片 (推荐手写字体：杨任东竹石体)](http://tc.seoipo.com/?imageMogr2/thumbnail/!40p)
 
 图片不要使用网络创作，涉及版权容易被驳回。
 
@@ -69,4 +69,5 @@ order: -39
 - 红包封面会展示公众号名称和头像。**名称一年可修改两次，头像一个月可申请修改 5 次**。我提交的是无关名字，也通过了。
 - 红包审核需要 3 个工作日，距离春节也已经很近了。如果你想在春节使用定制红包，尽快申请审核三个红包封面，避免最后关头未通过。
 - 如果微信红包封面中出现肖像，需要授权。不过，我提交的全家福拜年红包通过了。
+
   ![](http://tc.seoipo.com/2022-05-05-16-10-58.png)

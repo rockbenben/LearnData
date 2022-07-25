@@ -22,13 +22,16 @@ order: -7
 ## 光猫超级密码破解步骤
 
 1. 地址栏输入 `192.168.1.1`，用户名：光猫背面，密码：光猫背面，登陆管理界面。
+
    ![](https://pic1.zhimg.com/v2-9e43bc86b9095f3f6c2cfa4bd58dcd68_r.jpg)
 
 2. 浏览器地址栏输入 `192.168.1.1/backupsettings.txt`，将 `backupsettings.txt` 文件导出并备份在电脑上。
    如果打不开上面的地址，改为输入 `192.168.1.1/backupsettings.conf`，并做好备份。
 
 3. 打开下载好的文档 `backupsettings.txt` 或 `backupsettings.conf`，搜索 `TeleComAccount`，两个 password 间就是超级密码。超级账号是 telecomadmin。
+
    ![](https://pic3.zhimg.com/v2-ee441dd18cc8e5f6303fdaef82b6d476_r.jpg)
 
 4. 地址栏输入 `192.168.1.1`，用刚获取的超级密码登陆，然后开始端口映射和设备桥接了。
+
    ![](https://pic1.zhimg.com/v2-31d6bb6b90be541c186a360fe2dd323c_r.jpg)

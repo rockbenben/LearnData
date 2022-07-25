@@ -88,7 +88,9 @@ order: -36
 直播前调整 OBS 设置，优化直播效果。
 
 - 直播推流：`设置－通用－推流` 中的服务调整为「自定义」，服务器和串流密钥则按平台要求输入。
+
   ![](http://tc.seoipo.com/2022-06-30-14-33-34.png)
+
 - 直播清晰度：直播并非越清晰越好，对网络稳定性要求较高，建议将 `设置－输出－串流－视频比特率` 设为 4000-6000 Kbps。
 - 直播分辨率：分辨率一般 1080p 或 720p，帧率为 30。注意 `设置－视频` 中的输出分辨率要与基础分辨率一致，游戏直播中将 `常用 FPS 值 (帧率)` 从 30 调整到 60。
 - 直播延迟：`设置 - 高级 - 串流延迟` 开启 20s 的延迟时间，避免网络卡顿。
@@ -107,7 +109,9 @@ order: -36
 OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的工具。
 
 - 色度键：绿幕抠图必用，能将指定颜色变为透明，比如抠掉绿色，将绿幕换成其他场景。
+
   ![色度键滤镜一键抠图](http://tc.seoipo.com/20210328235013.gif)
+
 - 色彩校正：修改伽玛度、对比度、亮度、饱和度，对来源的显示效果进行调整。
 - 裁剪/填充：对来源进行裁剪，剪去多余的部分。
 - 增益：当麦克风声音过大或过小时，可以通过增益滤镜调整音量，但是不宜设置数值过大，容易造成声音失真。
@@ -236,7 +240,9 @@ MorphVOX Pro、神舌等软件变声器对使用者的语气要求较高。
 
 1. [淘宝直播官网](https://market.m.taobao.com/app/mtb/live-portal/download/index.html) 下载客户端。
 2. 打开淘宝直播客户端，点击「我要开播」，进入直播间界面。
+
    ![](http://tc.seoipo.com/2022-06-29-22-23-26.png)
+
 3. 左侧依次点击 `添加元素 - 摄像头`，选择「OBS-Camera」，即可同步 OBS 直播画面。淘宝直播客户端也是基于 OBS，但不支持推流直播，只能通过虚拟摄像头同步画面。
 
 除客户端外，我们也能通过 [直播中控台](https://liveplatform.taobao.com/restful/index/home/) 来设置淘宝直播间。
@@ -245,6 +251,7 @@ MorphVOX Pro、神舌等软件变声器对使用者的语气要求较高。
 
 1. 电脑端下载 [直播伴侣](https://www.douyin.com/falcon/webcast_openpc/pages/streamingtool_download/index.html)，适配西瓜视频、抖音、抖音火山版的直播。
 2. 左侧依次点击 `添加元素-采集`，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道，推流延迟 20s。
+
    ![](http://tc.seoipo.com/2022-06-29-23-59-02.png)
 
 以上为新手的直播步骤，如果抖音粉丝在一万以上，可直接使用 [OBS 模式推流](http://streamingtool.douyin.com/docs/guide/96319/)。
@@ -281,7 +288,7 @@ MorphVOX Pro、神舌等软件变声器对使用者的语气要求较高。
 
 ### 小红书直播
 
-小红书[电脑直播助手](http://www.xiaohongshu.com/zhibo/robs)，开播步骤查看[官方文档](https://fe-video-qc.xhscdn.com/fe-platform/f03ae58e50e6d53580fa16a58e9dffbbbabbb5f0.pdf)。
+小红书 [电脑直播助手](http://www.xiaohongshu.com/zhibo/robs)，开播步骤查看 [官方文档](https://fe-video-qc.xhscdn.com/fe-platform/f03ae58e50e6d53580fa16a58e9dffbbbabbb5f0.pdf)。
 
 登录直播助手时，提示「暂无直播权限，请联系运营及客服开通」。但我手机可以直接直播，说明提示中的直播权限专指电脑端直播。
 

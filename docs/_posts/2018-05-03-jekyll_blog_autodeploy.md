@@ -58,7 +58,7 @@ after_success:
 
 ![](http://tc.seoipo.com/20180504154229.png)
 
-Travis CI 提供了存放加密文件的方式，参考[官方文档](https://docs.travis-ci.com/user/encrypting-files/)。
+Travis CI 提供了存放加密文件的方式，参考 [官方文档](https://docs.travis-ci.com/user/encrypting-files/)。
 
 ## Dockerfiles 设置
 
@@ -229,6 +229,7 @@ Commit all changes to your .travis.yml.
 - **将新生成的 `id_rsa.enc` 文件上传到 Github 源文件 repository 中**
 
 - 将 `.travis.yml` 中的 `openssl aes-256-cbc -K $encrypted_5c280379e96c_key -iv $encrypted_5c280379e96c_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d` 放入最终的 `.travis.yml` 文件中。
+
   ![](http://tc.seoipo.com/20180504184508.png)
 
 ## travis.yml 配置

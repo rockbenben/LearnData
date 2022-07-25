@@ -25,22 +25,30 @@ order: -38
 
 1. NAS 管理后台－套件中心－搜索并安装「Docker」，然后在 Docker 容器中安装所需服务。
 2. Docker－注册表，搜索对应镜像，选中最高星的项目，点击下载。
+
    ![](http://tc.seoipo.com/2022-05-05-14-40-43.png)
 
 3. 镜像下载完成后，进入「映像」，选中刚下载好的镜像，点击启动。
+
    ![](http://tc.seoipo.com/2022-05-05-14-41-01.png)
 
 4. 高级设置－端口设置，将本地端口从自动改为一个固定的端口，方便后期做端口映射。避免 NAS 重启后，本地端口发生变化。
+
    ![](http://tc.seoipo.com/2022-05-05-14-41-15.png)
 
 ## 域名绑定
 
 1. **关闭光猫路由**：电话联系宽带运营商，要求关闭光猫的路由功能。少数运营商默认不提供公网 IP，也可以在这环节，让运营商给你分配公网 IP。碰到死板的客服，会找你开通理由，不要正面回答。
+
 2. 家用宽带多为动态 ip，且无对外 80 接口。使用动态 DNS 插件，可让域名时刻绑定家用宽带 ip，达到固定链接打开 NAS 服务。
+
 3. **动态 DNS(DDNS) 设置**，以下以 openwrt+cloudflare 为例。
+
    - cloudflare 动态 DNS 配置 ([教程](https://p3terx.com/archives/openwrt-cloudflare-ddns.html))：系统－软件包，搜索「cloudflare」，安装 ddns-scripts_cloudflare.com-v4，然后重启路由器。
    - 服务－动态 DNS，cloudflare 登录密码为 [cloudflare API](https://dash.cloudflare.com/profile/api-tokens) 中的 Glodbal API Key。阿里云用户可在 RAM 访问控制中创建专门的 AccessKey。
+
      ![](http://tc.seoipo.com/2022-05-05-14-41-31.png)
+
 4. 如果没有宽带为内网，不能提供公网 ip，可借助花生壳等内网穿透工具达到类似效果。
 
 ## RSS 转码

@@ -14,7 +14,7 @@ order: -1
 
 ## 微信 For Windows 安装
 
-打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装 微信 For Windows
+打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装 `微信 For Windows`。
 
 ![](http://tc.seoipo.com/2022-05-06-04-21-30.png)
 
@@ -27,6 +27,7 @@ order: -1
 找到系统启动文件夹，文件夹路径为：`%AppData%\Microsoft\Windows\Start Menu\Programs\Startup`。或者打开「运行」对话框，输入命令「shell:startup」，回车即可打开「启动文件夹」。
 
 将微信 for windows 10 的快捷方式放到「启动」文件夹里。
+
 ![](http://tc.seoipo.com/2022-05-06-04-23-49.png)
 
 三开的话，可以在 Microsoft Store 上安装 微信 (UWP) 。

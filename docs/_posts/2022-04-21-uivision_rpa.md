@@ -36,6 +36,7 @@ UI.Vision RPA 的主体是浏览器插件，只需去应用商店即可完成安
 ## UI.Vision RPA 界面
 
 UI.Vision RPA 的运行脚本叫做「宏」。界面很简单，左侧是宏的范例库和本地文件，右侧是宏的运行和反馈区。
+
 ![UI.Vision 应用界面](http://tc.seoipo.com/2022-04-21-16-52-29.png)
 
 ## 零门槛入门
@@ -43,6 +44,7 @@ UI.Vision RPA 的运行脚本叫做「宏」。界面很简单，左侧是宏的
 UI.Vision RPA 没有使用门槛。只需打开 UI.Vision 插件，点击右上角的按钮「Record」，即可自动录制宏。UI.Vision 会自动将你的操作录制为宏。
 
 执行时，选中左侧保存的宏，然后点击右上角的按钮「Play Macro」，即可回放指定宏。点击「Play Loop」，则可让宏循环运行。
+
 ![自动化运行 GIF](http://tc.seoipo.com/2022-04-21-20-25-31.gif)
 
 ## 进阶使用
@@ -54,6 +56,7 @@ UI.Vision RPA 没有使用门槛。只需打开 UI.Vision 插件，点击右上�
 2. 第 4 步使用「open」命令，打开指定网址。
 
 3. 第 5-8 步使用「click」命令，依次点击指定按钮。
+
    ![UI.Vision 点击命令](http://tc.seoipo.com/2022-04-21-17-15-59.png)
 
 4. 第 9 步使用「pause」命令，延时 500 毫秒。

@@ -15,9 +15,11 @@ DPC_WATCHDOG_VIOLATION 多为硬件驱动出现问题。当驱动大规模报错
 1. 安装 [WinDbg Preview](https://www.microsoft.com/zh-cn/p/windbg/9pgjgd53tn86?rtc=1&activetab=pivot:overviewtab)，这是微软官方推出的 Debug 工具。
 2. 启动 WinDbg Preview，软件会自动检测到最新 dmp 日志，点击 Yes 即可载入。如果想分析其他文件，打开文件夹 `C:\Windows\Minidump`，导出日志 `xxx.dmp`。
 3. 载入日志过程中，WinDbg Preview 会自动下载所需文件，不需要管。载入完成后，点击 `!analyze -v`，分析具体日志。
+
    ![](http://tc.seoipo.com/20201025223307.png)
 
 4. 分析日志：日志上方的都是套话，可以忽略。直接看日志最下方几行，找出引发蓝屏的进程，并删除该程序。如果冲突进程为驱动，无法强删，可以把驱动还原为上一版驱动或系统自带驱动。
+
    ![](http://tc.seoipo.com/20201025224308.png)
 
 有些蓝屏较复杂，由多方原因造成，新手很难直接分析。建议将蓝屏日志完整上传到微软社区分析，小白方案中有具体步骤。

@@ -45,6 +45,7 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 2. 把懒人包解压到常用的存放目录，我放在 `D:\Aria2`。
 
 3. 官网下载 [Aria2 程序](https://github.com/aria2/aria2/releases), Win10 系统选择 [aria2-1.35.0-win-64bit-build1.zip](https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0-win-64bit-build1.zip)，然后解压到懒人包目录中，替代懒人包的 `aria2c.exe` 程序。
+
    ![](http://tc.seoipo.com/20191210232831.png)
 
 4. 点击 `aria2.exe` , 启动 aria2，该程序会在任务栏中植入图标。

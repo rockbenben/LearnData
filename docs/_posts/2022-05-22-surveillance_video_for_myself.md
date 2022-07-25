@@ -66,12 +66,15 @@ Bandicam、Mirillis Action！录制时，电脑无法进入睡眠，ManicTime �
 **录制过程：**
 
 1. 打开 VLC 的 Media -> Open Capture Device，将 `Video device name` 和 `Audio device name` 选为摄像头，然后点击底部 `Play` 按钮旁边的下拉菜单，选中 `Convert`。
+
    ![](http://tc.seoipo.com/2022-05-21-22-09-08.png)
 
 2. Settings -> Profile 中选择视频输出方案，推荐选择 `Video - H.264 + MP3 (MP4)`，接着点击旁边的扳手按钮，修改输出方案。
+
    ![](http://tc.seoipo.com/2022-05-21-22-11-09.png)
 
 3. Profile edition -> Video codec -> Encoding parameters，依次调整视频的编码、比特率、画面质量、帧率，编码建议使用 H-264，码率推荐 10 fps。
+
    ![](http://tc.seoipo.com/2022-05-21-22-12-32.png)
 
 4. Destination file 设置输出路径和视频名称。
