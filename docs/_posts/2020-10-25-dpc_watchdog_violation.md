@@ -5,6 +5,7 @@ category:
   - 系统
 tag:
   - 蓝屏
+star: true
 order: -30
 ---
 
@@ -29,23 +30,25 @@ DPC_WATCHDOG_VIOLATION 多为硬件驱动出现问题。当驱动大规模报错
 不想分析日志，也简单。
 
 1. 打开文件夹 `C:\Windows\Minidump`，导出日志 `xxx.dmp`。
-2. 将 dmp 日志上传至[微软社区](https://answers.microsoft.com/zh-hans/newthread?threadtype=Questions&cancelurl=/zh-hans/windows/forum&forum=windows&filter=)，会有技术人员帮你分析蓝屏原因。微软社区无法上传附件，需先将 dmp 日志上传至百度云或微云，再将分享链接放在问题里。
+2. 将 dmp 日志上传至 [微软社区](https://answers.microsoft.com/zh-hans/newthread?threadtype=Questions&cancelurl=/zh-hans/windows/forum&forum=windows&filter=)，会有技术人员帮你分析蓝屏原因。微软社区无法上传附件，需先将 dmp 日志上传至百度云或微云，再将分享链接放在问题里。
 
 ## 常见问题
 
-### 无法安装 WinDbg Preview 应用
+### 装不了 WinDbg
 
-少数情况安装应用报错，本地无法分析日志，导出日志上传到微软社区。
+少数情况安装应用报错，本地无法分析日志。此时，我们可以导出蓝屏日志，上传到 [微软社区](https://answers.microsoft.com/zh-hans/newthread?threadtype=Questions&cancelurl=/zh-hans/windows/forum&forum=windows&filter=)，会有人帮助分析原因。
 
-### 打开蓝屏日志被拒绝
+### 分析日志时报错
 
-WinDbg Preview 对 minidump 蓝屏日志的访问被拒绝，这是由于系统盘读取权限未开放。
+分析蓝屏时报错，或 WinDbg 对 minidump 蓝屏日志的访问被拒绝，这都是由于系统盘读取权限未开放所导致的。
 
-将 minidump 文件复制到 D 盘，然后手动导入分析即可正常解析日志。
+解决办法是，将 minidump 文件复制到 D 盘，然后手动导入到 WinDbg 进行分析。
 
 ### 找不到 minidump 文件
 
-尝试打开 `%SystemRoot%\Minidump`，失败后按下列步骤修改：
+蓝屏日志默认保存在 `C:\Windows\Minidump`。
+
+如果该文件夹为空，说明蓝屏日志未生成，等下次蓝屏再查看。如果多次蓝屏，该文件夹下还是没有日志，则尝试在资源管理器中打开 `%SystemRoot%\Minidump`，失败后按下列步骤设置：
 
 1. 打开控制面板>>系统>>高级系统设置>>高级>>启动和故障恢复>>设置；
 2. 写入调试信息>>选择「小内存转储（256KB）」，路径选择 `%SystemRoot%\Minidump`，确定并重启您的计算机；
@@ -53,7 +56,7 @@ WinDbg Preview 对 minidump 蓝屏日志的访问被拒绝，这是由于系统�
 
 ### 蓝屏原因分析汇总
 
-评论区很多重复问蓝屏原因的，这里会定期更新出现比较多的蓝屏原因
+评论区大部分很多重复问蓝屏原因的，这里汇总了常见的蓝屏原因分析。
 
 - 系统性模块报错：ntkrnlmp.exe、xxx.symbols.exe。日志尾部仅有系统模块报错，实际是由应用进程与系统冲突引起的蓝屏，需深入分析日志。
 - 驱动冲突：nvlddmkm、amdkmdag。N 卡、A 卡或硬件进程报错，建议先回退到旧驱动。这样不会对电脑产生很大影响。如果驱动不对，可重新安装。驱动无法回退，则去官网下载旧驱动，或尝试最新驱动，或卸载为系统默认驱动。驱动若不行，则尝试更新主板 BIOS，关闭超频。
@@ -61,8 +64,8 @@ WinDbg Preview 对 minidump 蓝屏日志的访问被拒绝，这是由于系统�
 
 ## 蓝屏解决集锦
 
-如果无蓝屏日志，不能确定蓝屏原因，尝试下列方法，可以解决 80% 的蓝屏。
+如果不想分析日志，甚至找不到找不到蓝屏日志，可以尝试下列方法，测试解决了 80% 的蓝屏。
 
 - 驱动类：更新显卡驱动；更新网卡驱动；重置声卡驱动；重置 SATA AHCI 驱动；
 - 主板类：擦拭内存条；重置 BIOS；增加 CPU 电压；关闭超线程；
-- 终极方法：重装系统，测试期间尽量使用默认系统驱动。
+- 终极方法：重装系统，测试期间**尽量使用默认系统驱动**。重装又蓝屏的话，说明你新装的驱动有问题，卸掉有问题的驱动。

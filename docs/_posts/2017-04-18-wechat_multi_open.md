@@ -40,4 +40,4 @@ order: -1
 
 但多开补丁风险未知，我只用了其中的防撤回功能，需谨慎使用多开补丁。
 
-国内搬运地址：[RevokeMsgPatcher.v1.3.zip](https://wwz.lanzouf.com/i7poa035996d)
+国内搬运地址：[RevokeMsgPatcher.v1.5.zip](https://wwz.lanzouf.com/ij0oz05ns3di)

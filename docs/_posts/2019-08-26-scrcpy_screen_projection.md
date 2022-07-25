@@ -6,25 +6,30 @@ category:
 tag:
   - scrcpy
   - 投屏
+star: true
 order: -26
 ---
 
-**scrcpy** 是免费开源的投屏软件，支持将安卓手机屏幕投放在 Windows、macOS、GNU/Linux 上，并可直接借助鼠标在投屏窗口中进行交互和录制。
+[scrcpy](https://github.com/Genymobile/scrcpy) 是免费开源的投屏软件，支持将安卓手机屏幕投放在 Windows、macOS、GNU/Linux 上，并可直接借助鼠标在投屏窗口中进行交互和录制。
 
-项目地址：<https://github.com/Genymobile/scrcpy>
+市面上主流的多屏协同软件都是基于 scrcpy 开发，套层皮，bug 几乎没改，推荐直接使用官方的 scrcpy。
 
-Windows 下载：[`scrcpy-win64-v1.24.zip`](https://github.com/Genymobile/scrcpy/releases/download/v1.24/scrcpy-win64-v1.24.zip)
+本文以 Window 投屏为例，兼容 Win10 和 Win11。scrcpy 官方下载 [scrcpy-win64-v1.24.zip](https://github.com/Genymobile/scrcpy/releases/download/v1.24/scrcpy-win64-v1.24.zip)，或使用国内搬运链接：<https://wwz.lanzouf.com/iezWX03zx4de>。
 
-2022.04.29 更新 scrcpy 1.24，国内搬运链接：<https://wwz.lanzouf.com/iezWX03>
+## 有线投屏
 
-电脑端完成配置后，我们还需要在手机端开启 `开发者选项` 及 `USB 调试`。然后使用数据线将手机和电脑连接并允许 USB 调试，即可双击解压得到的 **scrcpy.exe** 文件进行有线投屏了。
+1. 下载并解压 scrcpy。
+2. 手机端开启 `开发者选项` 及 `USB 调试`。开发者选项默认情况下处于隐藏状态，转到`设置 - 关于手机`，然后点按版本号七次，返回上一屏幕，在底部可以找到开发者选项。
+3. 用数据线将手机和电脑连接起来，此时手机上弹出授权提示，点击 `允许 USB 调试`。
+4. 双击解压得到的 **scrcpy.exe** 文件，就能进行有线投屏了。
 
-## 无线投屏 (WIN 10/11)
+## 无线投屏
 
-- 确保 PC 和手机处于同一局域网中
-- 打开 PowerShell (~ cmd)，依次操作并输入代码
+无线投屏的前提是，**电脑与手机处于同一局域网**。
 
-```bash
+有线投屏的 1-3 步同样适用于无线投屏，完成后打开 PowerShell (~ cmd)，依次操作并输入代码。
+
+```PowerShell
 # a.将代码目录定位到 scrcpy 文件夹。
 cd D:\Libraries\Desktop\scrcpy-win64-v1.24
 # WIN11 在 scrcpy 文件夹中右键「在终端中打开」，将自动定位。
@@ -50,11 +55,11 @@ cd D:\Libraries\Desktop\scrcpy-win64-v1.24
 
 ![](http://tc.seoipo.com/20190829093407.png)
 
-### 屏幕录制
+## 屏幕录制
 
-打开 PowerShell (~ cmd)，依次操作并输入代码
+如果想在投屏的同时，对手机屏幕进行录制，则输入按下方命令操作。
 
-```bash
+```PowerShell
 # 将代码目录定位到 scrcpy 文件夹
 cd D:\Libraries\Desktop\scrcpy-win64-v1.24
 ​
@@ -64,27 +69,31 @@ cd D:\Libraries\Desktop\scrcpy-win64-v1.24
 # 关闭投屏窗口后，自动停止录屏并将视频保存在相应目录
 ```
 
-### 解决投屏模糊
+## 常见问题
 
-如果屏幕设置了缩放比例，投屏界面会模糊。右键 **scrcpy.exe**，属性 - 兼容性 - 更改高 DPI 设置 - 勾选替代高 DPI 缩放行为，应用后，该问题可解决。
+### 错误检查
 
-![](http://tc.seoipo.com/20190829095640.png)
+遇到报错时，检查下方三种情况，可以解决 90% 的错误。
 
-### 常见问题
+- 更换数据线；
+- 检查手机的「本机 IP」是否正确；
+- 核对有线连接步骤，`开启 USB 调试－连接手机与电脑－启动 scrcpy`。
 
-- 报错检查：下面三步可解决 90% 的错误。
+### ERROR: Exception on thread
 
-  - 核对有线连接步骤，开启 USB 调试－连接手机与电脑－启动 scrcpy；
-  - 检查手机的「本机 IP」是否正确；
-  - 更换数据线。
+报错 `ERROR: Exception on thread Thread[main,5,main]`，多为手机不兼容 scrcpy 默认分辨率设置。解决方位为，按下方修改 scrcpy 启动代码，使用较低的分辨率。
 
-- `ERROR: Exception on thread Thread[main,5,main]` 此项错误多为手机不兼容 scrcpy 默认分辨率设置。解决方位为，按下方修改 scrcpy 启动代码，使用较低的分辨率。
-
-```bash
+```PowerShell
 # 三项设置，任选其一
 .\scrcpy -m 1920
 .\scrcpy -m 1024
 .\scrcpy -m 800
 ```
 
-更多问题报错，解决方法参考 [官方 FAQ](https://github.com/Genymobile/scrcpy/blob/master/FAQ.md)。
+### 投屏模糊
+
+如果屏幕设置了缩放比例，投屏界面会模糊。右键 **scrcpy.exe**，`属性 - 兼容性 - 更改高 DPI 设置`，然后勾选「替代高 DPI 缩放行为」，应用后投屏恢复正常。
+
+![](http://tc.seoipo.com/20190829095640.png)
+
+更多问题报错的解决方法，查看 [官方 FAQ](https://github.com/Genymobile/scrcpy/blob/master/FAQ.md)。
