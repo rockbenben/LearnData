@@ -5,7 +5,8 @@ category:
   - 自动化
 tag:
   - 浏览器插件
-  - UI.Vision RPA
+  - UI.Vision
+  - RPA
 order: -45
 ---
 
@@ -33,53 +34,63 @@ UI.Vision RPA 的主体是浏览器插件，只需去应用商店即可完成安
 - Firefox 插件：<https://addons.mozilla.org/zh-CN/firefox/addon/rpa/>
 - Edge 插件：<https://microsoftedge.microsoft.com/addons/detail/uivision-rpa-%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/goapmjinbaeomoemgdcnnhoedopjnddd>
 
-## UI.Vision RPA 界面
+## 零门槛入门
 
 UI.Vision RPA 的运行脚本叫做「宏」。界面很简单，左侧是宏的范例库和本地文件，右侧是宏的运行和反馈区。
 
 ![UI.Vision 应用界面](http://tc.seoipo.com/2022-04-21-16-52-29.png)
 
-## 零门槛入门
-
-UI.Vision RPA 没有使用门槛。只需打开 UI.Vision 插件，点击右上角的按钮「Record」，即可自动录制宏。UI.Vision 会自动将你的操作录制为宏。
+打开 UI.Vision 插件，点击右上角按钮「Record」，插件会把你的操作录制为宏脚本。
 
 执行时，选中左侧保存的宏，然后点击右上角的按钮「Play Macro」，即可回放指定宏。点击「Play Loop」，则可让宏循环运行。
 
 ![自动化运行 GIF](http://tc.seoipo.com/2022-04-21-20-25-31.gif)
 
-## 进阶使用
+## 第一次使用
 
-以范例库中的 DemoAutofill 为例，这是网页自动填充在线表格的宏，点击右上方的「Step」按钮逐步运行宏。
+以范例库中的 DemoAutofill 为例，这是网页自动填充在线表格的宏，点击右上方的「Step」按钮逐步运行宏。有进阶需求的话，把范例一个个拆解学习，了解命令的使用方式。
 
-1. 前 1-3 步使用「store」命令，对宏进行基本设置，如运行速度、超时等待、页面最长载入时间。点击命令右侧的「info for this command」可查看当前命令的官方文档。
+- 前 1-3 步使用「store」命令，对宏进行基本设置，如运行速度、超时等待、页面最长载入时间。点击命令右侧的「info for this command」可查看当前命令的官方文档。
 
-2. 第 4 步使用「open」命令，打开指定网址。
+- 第 4 步使用「open」命令，打开指定网址。
 
-3. 第 5-8 步使用「click」命令，依次点击指定按钮。
+- 第 5-8 步使用「click」命令，依次点击指定按钮。
 
-   ![UI.Vision 点击命令](http://tc.seoipo.com/2022-04-21-17-15-59.png)
+  ![UI.Vision 点击命令](http://tc.seoipo.com/2022-04-21-17-15-59.png)
 
-4. 第 9 步使用「pause」命令，延时 500 毫秒。
+- 第 9 步使用「pause」命令，延时 500 毫秒。
 
-5. 第 10 步使用「captureScreenshot」命令，对可见网页部分截图，记录运行步骤。
+- 第 10 步使用「captureScreenshot」命令，对可见网页部分截图，记录运行步骤。
 
-6. 第 11 步使用「clickAndWait」命令，单击指定按钮后等待页面加载。
+- 第 11 步使用「clickAndWait」命令，单击指定按钮后等待页面加载。
 
-7. 第 12-13 步使用「type」命令，在指定区域输出指定文字。
+- 第 12-13 步使用「type」命令，在指定区域输出指定文字。
 
-8. 第 14 步使用「captureScreenshot」命令，对可见网页部分截图，记录运行步骤。
-   第 15 步使用「pause」命令，延时 1000 毫秒。
-   第 16 步使用「clickAndWait」命令，单击指定按钮后等待页面加载。
-   第 17 步使用「captureScreenshot」命令，对可见网页部分截图，记录运行步骤。
+- 第 14 步使用「captureScreenshot」命令，对可见网页部分截图，记录运行步骤。
 
-9. 第 18 步使用「echo」命令，调用浏览器通知模块，弹出指定提示。
+  第 15 步使用「pause」命令，延时 1000 毫秒。
 
-10. 第 19 步使用「comment」命令，注释当前步骤，无实际作用。
-    第 20 步使用「open」命令，打开指定网址。
+  第 16 步使用「clickAndWait」命令，单击指定按钮后等待页面加载。
 
-11. 最后一步使用「assertTitle」命令，获取网站的标题，并检查是否与指定文本相符合，判断宏是否运行成功。
+  第 17 步使用「captureScreenshot」命令，对可见网页部分截图，记录运行步骤。
 
-如果你有进阶需求，可以将范例一个个拆解学习，了解命令的使用方式。
+- 第 18 步使用「echo」命令，调用浏览器通知模块，弹出指定提示。
+
+- 第 19 步使用「comment」命令，注释当前步骤，无实际作用。
+
+  第 20 步使用「open」命令，打开指定网址。
+
+- 最后一步使用「assertTitle」命令，获取网站的标题，并检查是否与指定文本相符合，判断宏是否运行成功。
+
+## 不同变量重复运行
+
+用不同的变量文本进行重复的网页操作，需要使用 UI.Vision 的 [csvRead](https://ui.vision/rpa/docs/selenium-ide/csvread) 命令。下面以「依次打开不同链接」为例。
+
+1. 点击 UI.Vision 右下角的 `CSV - Import CSV`，用 CSV 文件导入批量处理内容。
+2. 「csvReadArray」命令，Target 输入文件名「1.csv」，Value 输入分组名「link」。
+3. 「open」命令，Target 输入变量参数 `${link[${!LOOP}-1]}`，`${!LOOP}` 是循环序号，因为数组以 0 开头，所以设为 `${!LOOP}-1`，`${link[x]}` 指 link 数组中序号为 x 的成员。
+4. 「pause」命令，Target 输入延时时间，单位为毫秒。
+5. 点击右上角「Play Macro」旁边的下拉按钮，然后点击「Play Loop」，有多少行文本需要处理，就循环多少次。
 
 ## 常见问题
 

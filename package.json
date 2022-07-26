@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@vuepress/bundler-webpack": "2.0.0-beta.49",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.49",
     "sass-loader": "^13.0.2",
     "vuepress-theme-reco": "^2.0.0-beta.26"
   },

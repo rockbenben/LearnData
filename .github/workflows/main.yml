@@ -35,15 +35,15 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |
           pnpm add vuepress@next vuepress-theme-hope@next && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader && pnpm i && pnpm up
-          pnpm add @vuepress/plugin-docsearch@next
+          pnpm add @vuepress/plugin-google-analytics@next @vuepress/plugin-docsearch@next
           pnpm docs:build
 
-#      - name: Deploy
-#        uses: JamesIves/github-pages-deploy-action@v4
-#        with:
-#          # 这是文档部署到的分支名称
-#          branch: gh-pages
-#          folder: docs/.vuepress/dist
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 这是文档部署到的分支名称
+          branch: gh-pages
+          folder: docs/.vuepress/dist
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0

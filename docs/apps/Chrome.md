@@ -49,7 +49,7 @@ order: 2
 
 [Link Grabber](https://chrome.google.com/webstore/detail/link-grabber/caodelkhipncidmoebgbbeemedohcdma)：批量提取、筛选、复制网页里各种链接。
 
-[Linkclump](https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj)：按住`Z`和鼠标左键，框选区域内的链接将批量被打开，同步显示框选链接数。
+[Linkclump](https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj)：按住 `Z` 键后，长按鼠标左键进行区域框选，区域内的链接可以进行批量打开、复制、书签，操作中会同步显示区域内的链接数。
 
 [TabCopy](https://chrome.google.com/webstore/detail/tabcopy/micdllihgoppmejpecmkilggmaagfdmb)：快速复制 tab 页链接。
 
@@ -77,7 +77,7 @@ order: 2
 
 [Web Scraper](https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn)：从网页中提取数据的爬虫。
 
-网页自动化：[UI.Vision PRA](https://chrome.google.com/webstore/detail/uivision-rpa/gcbalfbdmfieckjlnblleoemohcganoc), [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
+网页自动化：[UI.Vision PRA](https://newzone.top/_posts/2022-04-21-uivision_rpa.html), [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
 
 ## 实用工具
 

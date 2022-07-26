@@ -17,6 +17,7 @@ order: -8
    ![](https://pic2.zhimg.com/v2-658d5433201b79da169a520f4b19d495_r.jpg)
 
 2. 登陆路由器管理地址 192.168.X.X。这里已梅林 AC5300 为图例。
+
    ![](https://pic4.zhimg.com/v2-32825a6d3d75f4bfe5668f1b0d6c6683_r.jpg)
 
 3. 在路由器设置选项中找到“端口转发”，按要求设置端口。我这是 eMule TCP 和 UDP 转发，设置完成后，变成 High ID。

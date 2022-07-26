@@ -29,16 +29,18 @@ order: 1
 
 ## 打包工具
 
+- [vue.config.js 配置](https://cli.vuejs.org/config/#vue-config-js)
+
 VuePress v2 默认使用 Vite 打包。Vite 每次生成的静态文件名都不同，每次打包都要替换整个网站的静态文件，这点对服务器的自动部署太不利，每次部署需要 10 分钟。
 
-因此，我把打包工具更换为 webpack。
+因此，我把打包工具更换为 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)。更换后，虽然静态名依然每次都不同，但文件数量少了许多，更新部署时间 5 分钟。
 
 1. 修改 config.ts 的导入设置，将 `import { defineUserConfig } from "vuepress";` 替换为 `import { defineUserConfig } from '@vuepress/cli';`。
 
-2. webpack 环境依赖包安装，并运行服务。
+2. Webpack 环境依赖包安装，并运行服务。
 
    ```bash
-   #组合命令，打包使用 webpack
+   #组合命令，打包使用 Webpack
    pnpm add vuepress@next vuepress-theme-hope@next && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader && pnpm i && pnpm up
 
    #运行在本地服务器
@@ -51,9 +53,12 @@ VuePress v2 默认使用 Vite 打包。Vite 每次生成的静态文件名都不
 #确保你正在使用最新的 vuepress 和 vuepress-theme-hope 版本
 pnpm add vuepress@next vuepress-theme-hope@next
 
-#更换打包工具，webpack 需手动下载 sass-loader
+#更换打包工具，Webpack 需手动下载 sass-loader
 pnpm remove vuepress
 pnpm add -D vuepress-webpack@next sass-loader
+
+#常用插件：google-analytics，docsearch
+pnpm add @vuepress/plugin-google-analytics@next @vuepress/plugin-docsearch@next
 
 #升级当前目录的依赖以确保你的项目只包含单个版本的相关包
 pnpm i && pnpm up
@@ -62,7 +67,7 @@ pnpm i && pnpm up
 ## 自定义主题
 
 - [ ] Algolia DocSearch 申请中，等结果通知
-- [ ] ~~网页更新时，有时会打不开链接，需要使用缓存。~~
+- [x] ~~网页更新时，有时会打不开链接，需要使用缓存。~~
 - [x] ~~VuePress 博客页面：frontmatter 中添加 order 参数让最新的文章往上排，无法按文件名倒序排列~~
 - [x] 全局路径需要给子目录添加 README.md，没那么多内容填，暂时放弃。
 - [x] 独立设置页面标题。未成功，所有页面都会加入默认标题。

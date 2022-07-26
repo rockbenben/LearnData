@@ -1,10 +1,17 @@
 //import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { searchPlugin } from "@vuepress/plugin-search";
 //import { defineUserConfig } from "vuepress";
-import { defineUserConfig } from '@vuepress/cli';
+import { webpackBundler } from '@vuepress/bundler-webpack'
+import { defineUserConfig } from "@vuepress/cli";
+import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import theme from "./theme";
 
 export default defineUserConfig({
+  filenameHashing: false,
+
+  bundler: webpackBundler({
+    // ...
+  }),
 
   lang: "zh-CN",
   title: "LearnData-开源学习笔记",
@@ -31,6 +38,9 @@ export default defineUserConfig({
     //}),
     searchPlugin({
       // 你的选项
+    }),
+    googleAnalyticsPlugin({
+      id: "G-RWKZTY2P9R",
     }),
   ],
 });
