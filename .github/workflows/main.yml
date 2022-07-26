@@ -10,10 +10,11 @@ jobs:
   deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        # with:
+          # 获取所有标记和分支的所有历史记录
+          # fetch-depth: 0
           # 如果你文档需要 Git 子模块，取消注释下一行
           # submodules: true
 
@@ -37,17 +38,17 @@ jobs:
           pnpm add @vuepress/plugin-docsearch@next
           pnpm docs:build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          # 这是文档部署到的分支名称
-          branch: gh-pages
-          folder: docs/.vuepress/dist
+#      - name: Deploy
+#        uses: JamesIves/github-pages-deploy-action@v4
+#        with:
+#          # 这是文档部署到的分支名称
+#          branch: gh-pages
+#          folder: docs/.vuepress/dist
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          local-dir: ./docs/.vuepress/dist/
+          local-dir: docs/.vuepress/dist
           server: ${{ secrets.ftp_host }}
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
