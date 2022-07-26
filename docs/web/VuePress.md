@@ -45,7 +45,7 @@ VuePress v2 默认使用 Vite 打包。Vite 每次生成的静态文件名都不
    yarn docs:dev
    ```
 
-组合命令同样适用于报错解决，能升级相关依赖包。下方有相关命令的分步解释。
+组合命令也能**解决报错**，升级相关依赖包。下方有相关命令的分步解释。
 
 ```bash
 #确保你正在使用最新的 vuepress 和 vuepress-theme-hope 版本
