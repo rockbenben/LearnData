@@ -11,7 +11,7 @@ order: 3
 - 反激活已购软件，如：Eagle、MoneyWiz、妙笔。
 - 更新 [原版镜像](https://www.microsoft.com/zh-cn/software-download/windows11)。
 
-## 安装步骤
+## 安装系统
 
 系统重装/维修前，在 **exFAT** 格式的 U 盘上安装 [微 PE 工具箱](http://www.wepe.com.cn/)。Windows 10/11 镜像超过 4GB，已经不再支持 FAT32 格式的 U 盘。
 
@@ -26,7 +26,7 @@ order: 3
 - 将 Documents、Desktop 转移到 D 盘。
 - 任务栏：在任务栏底部右键单击，选择「任务栏设置」-「通知区域 - 选择哪些图标显示在任务栏上」；在同页面的「多显示器设置」中，取消「在所有显示器上显示任务栏」。
 - [清理导航栏](https://zhuanlan.zhihu.com/p/25942015)。
-- [设置系统强制关机](https://zhuanlan.zhihu.com/p/28990682)，防止系统关机不成功。
+- [设置系统强制关机](https://newzone.top/_posts/2017-09-02-forced_shutdown.html)，防止系统关机不成功。
 - Everything 注册右键搜索当前路径；右键清除。
   - win+r，regedit 打开注册表，打开路径 `HKEY_CLASSES_ROOT\Directory\Background\shell`。
   - 新建项，命名随意（即右键菜单显示的文字）-「Everything 搜索当前路径」。
@@ -45,14 +45,14 @@ order: 3
 - firefox-about:config 修改原值 18 的 `ui.key.menuAccessKey` 为 0，以屏蔽 alt 键防止热键冲突；关闭 `options - Network Settings - DNS over HTTPS`；
 - 火绒－安全设置－高级防护－导入隐私规则，增加 [腾讯屏蔽规则](https://github.com/tutugreen/Huorong-Rules/tree/main/Tencent)。
 
-## 按键修改
+## 修改按键
 
 - Powertoys：`insert` 键改为 backspace；
 - Option：计算器改为「上一个桌面」；右键菜单改为「下一个桌面」。
 
 ## 常见问题
 
-- 自动登录，无法删 PIN 码：改用本地账户登录。
+- Win11 本地账户也被提示需要登录密码，但设置密码后，无法直接开机登录。设置新密码后，进入 `设置 - 账户 - 登录选项 - 密码`，可以重新设置空密码，实现自动登录。
 - 英语键盘删不掉：添加英语语言包，然后再删除，英语键盘也会一起删除。
 - 右键更改前先备份注册表，有几率会影响系统稳定性。
-- [开机用管理员权限启动脚本](../code/AutoHotKey.html#管理员权限运行脚本)
+- 开机用 [管理员权限启动脚本](../code/AutoHotKey.html#管理员权限运行脚本)。
