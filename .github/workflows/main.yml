@@ -33,9 +33,8 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |
-          pnpm i && pnpm up
-          pnpm add vuepress@next vuepress-theme-hope@next
-          pnpm add -D @vuepress/plugin-docsearch@next
+          pnpm add vuepress@next vuepress-theme-hope@next && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader && pnpm i && pnpm up
+          pnpm add @vuepress/plugin-docsearch@next
           pnpm docs:build
 
       - name: Deploy

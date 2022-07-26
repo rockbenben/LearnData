@@ -16,39 +16,61 @@ order: 1
 - [Iconfont 精选图标](https://vuepress-theme-hope.github.io/v2/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87)
 - [看板娘](https://www.npmjs.com/package/vuepress-plugin-helper-live2d)
 
-## 安装配置
+## 初始配置
 
-1. 环境配置，安装 npm、yarn、pnpm，查看 [Linux 环境部署教程](../deploy/VPS.html#环境部署)
-2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope@next docs`。vuepress-theme-hope 主题的样例文件就会存储在该路径下。
-3. 完成第二步，VuePress 样例已经能运行了。如果遇到报错，可以执行下拉命令，升级相关依赖包。
-
-   ```bash
-   #确保你正在使用最新的 vuepress 和 vuepress-theme-hope 版本
-   pnpm add vuepress@next vuepress-theme-hope@next
-
-   #升级当前目录的依赖以确保你的项目只包含单个版本的相关包
-   pnpm i && pnpm up
-
-   #运行在本地服务器
-   yarn docs:dev
-   ```
-
-4. `docs\.vuepress` 路径下的 config.ts，navbar.ts，sidebar.ts，theme.ts 修改页面属性。设置参考 [官方案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
+1. 环境配置：安装 npm、yarn、pnpm，方法查看 [Linux 环境部署教程](../deploy/VPS.html#环境部署)。
+2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope@next docs`。vuepress-theme-hope 主题的样例文件会存储在该路径下。
+3. 执行命令 `pnpm docs:dev` 启动样例网站。
+4. `docs\.vuepress` 路径下的 config.ts，navbar.ts，sidebar.ts，theme.ts 可以修改页面属性，设置方法参考 [官方案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
    - config.ts：环境依赖包
    - sidebar.ts：侧边栏，集合所有文档的目录
    - navbar.ts：导航栏，放最常用的文档链接
    - theme.ts：对主题和插件进行设置
 
+## 打包工具
+
+VuePress v2 默认使用 Vite 打包。Vite 每次生成的静态文件名都不同，每次打包都要替换整个网站的静态文件，这点对服务器的自动部署太不利，每次部署需要 10 分钟。
+
+因此，我把打包工具更换为 webpack。
+
+1. 修改 config.ts 的导入设置，将 `import { defineUserConfig } from "vuepress";` 替换为 `import { defineUserConfig } from '@vuepress/cli';`。
+
+2. webpack 环境依赖包安装，并运行服务。
+
+   ```bash
+   #组合命令，打包使用 webpack
+   pnpm add vuepress@next vuepress-theme-hope@next && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader && pnpm i && pnpm up
+
+   #运行在本地服务器
+   yarn docs:dev
+   ```
+
+组合命令同样适用于报错解决，能升级相关依赖包。下方有相关命令的分步解释。
+
+```bash
+#确保你正在使用最新的 vuepress 和 vuepress-theme-hope 版本
+pnpm add vuepress@next vuepress-theme-hope@next
+
+#更换打包工具，webpack 需手动下载 sass-loader
+pnpm remove vuepress
+pnpm add -D vuepress-webpack@next sass-loader
+
+#升级当前目录的依赖以确保你的项目只包含单个版本的相关包
+pnpm i && pnpm up
+```
+
 ## 自定义主题
 
-- [ ] 子域名中部署 blog 和 note，分别使用不同路径
+- [ ] 删除或同步过程时，能不能打开链接？
+- [ ] VuePress 每次更新的文件都不同，会重复更新
 - [ ] Algolia DocSearch 申请中，等结果通知
-- [x] VuePress 博客页面：用 order 方式让最新的文章往上排，无法按文件名倒序排列
+- [x] ~~VuePress 博客页面：frontmatter 中添加 order 参数让最新的文章往上排，无法按文件名倒序排列~~
 - [x] 全局路径需要给子目录添加 README.md，没那么多内容填，暂时放弃。
 - [x] 独立设置页面标题。未成功，所有页面都会加入默认标题。
 - [x] 侧边栏显示客服图片。icon 位置直接放链接也没用。
 - [x] 指定页面子标题不被目录页识别。但页面中取消 toc 的话，网页位置会出现偏移。
 - [x] [修改导航栏 brand 链接](https://vuepress-theme-hope.github.io/v2/zh/cookbook/advanced/replace.html#%E6%8F%92%E6%A7%BD%E5%88%A9%E7%94%A8)，需用本地文件替代 [主题默认设置](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/packages/theme/src/client/module/navbar/components/NavbarBrand.ts)。设置的 ts 未生效，暂时放弃。
+- [x] ~~子域名中部署 blog 和 note，分别使用不同路径。这方案可以与 WordPress 共存，但未了避免后续出错，还是取消了。~~
 - [x] ~~Giscus 评论区设置~~
 - [x] ~~导航栏添加 repo 位置~~
 - [x] ~~页面统计，插件只支持 Google、百度，后用图片标签方式植入统计。备用方法：将统计代码直接放在侧边栏。~~

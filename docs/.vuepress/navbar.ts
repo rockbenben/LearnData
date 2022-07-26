@@ -25,7 +25,7 @@ export default navbar([
     link: "/blog",
   },
   {
-    text: "工具导航",
+    text: "工具收藏",
     icon: "tool",
     link: "https://nav.newzone.top/",
   },

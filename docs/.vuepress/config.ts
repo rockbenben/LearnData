@@ -1,9 +1,11 @@
 //import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { searchPlugin } from "@vuepress/plugin-search";
-import { defineUserConfig } from "vuepress";
+//import { defineUserConfig } from "vuepress";
+import { defineUserConfig } from '@vuepress/cli';
 import theme from "./theme";
 
 export default defineUserConfig({
+
   lang: "zh-CN",
   title: "LearnData-开源学习笔记",
   description: "开源工具、前端代码的学习笔记，记录一切能让自己提升的知识",
