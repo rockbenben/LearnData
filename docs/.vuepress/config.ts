@@ -4,7 +4,8 @@ import { defineUserConfig } from "@vuepress/cli";
 //import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
-//import { path } from "@vuepress/utils";
+import { seoPlugin } from "vuepress-plugin-seo2";
+import { path } from "@vuepress/utils";
 import theme from "./theme";
 
 export default defineUserConfig({
@@ -46,6 +47,10 @@ export default defineUserConfig({
 
   theme,
   shouldPrefetch: false,
+
+  //页面模板，去除架构版本号
+  templateBuild: path.resolve(__dirname, "templateBuild.html"),
+
   plugins: [
     //docsearchPlugin({
       // 你的选项
@@ -55,6 +60,12 @@ export default defineUserConfig({
     }),
     googleAnalyticsPlugin({
       id: "G-RWKZTY2P9R",
+    }),
+    seoPlugin({
+      // 你的选项
+      hostname: "https://newzone.top",
+      "og:updated_time": "2022-07-27T06:00:09.000Z",
+      "article:modified_time": "2022-07-27T06:00:09.000Z",
     }),
   ],
 });

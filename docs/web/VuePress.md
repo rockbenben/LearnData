@@ -78,7 +78,7 @@ VuePress v2 默认使用 Vite 打包，文件名会根据 hash 自动生成。�
    });
    ```
 
-4. 除 js 外，html 会植入 `og:updated_time`，`article:modified_time`，`meta-item update-time` 也会让文件发生改变。
+4. 除文件名外，[vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 给 html 文件插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`，每次同步后该参数都会变化。
 
 ## 关闭 prefetch
 
