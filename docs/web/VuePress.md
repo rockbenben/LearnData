@@ -28,46 +28,6 @@ order: 1
    - theme.ts：对主题和插件进行设置
 5. 如果遇到报错，执行命令 `pnpm add vuepress@next vuepress-theme-hope@next && pnpm i && pnpm up` 修复并升级相关依赖包。这步可以解决大部分的报错。
 
-## 减少文件变动
-
-我的笔记网站架构是 VuePress，一天要最少更新 3 次。但 VuePress 每次打包总会替换网站大部分的文件，导致自动部署特别耗时间，每次需要 10 分钟，期间打开网站就会出错。
-
-一开始，我以为是 hashname 用了时间规则所导致的文件名总不相同，但真实原因是 html 文件中的时间参数。
-
-[vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。每次打包，大部分文件都会含有这两个参数，导致文件都发生了改变。
-
-编辑 theme.ts，使用 vuepress-plugin-seo2 的 ogp 参数对 meta 重新设置，删除不想要的参数。不要在 config.ts 设置 ogp，这会导致博客的自动摘要功能失效。
-
-```ts
-import { hopeTheme } from "vuepress-theme-hope";
-import { seoPlugin } from "vuepress-plugin-seo2";
-export default hopeTheme({
-  plugins: {
-    blog: {
-      // 自动摘要
-      autoExcerpt: true,
-    },
-
-    [seoPlugin]: {
-      hostname: "https://newzone.top",
-      ogp: (ogp, page) => ({
-        ...ogp,
-        "og:updated_time": "",
-        "og:modified_time": "",
-      }),
-    },
-  },
-});
-```
-
-另外，lastUpdated 参数也会让页面发生变化，但这是页面修改时间，而非 git 上传时间，不用特意屏蔽。如果想停止向页面导入 lastUpdated 参数，在 `theme.ts` 中插入 `lastUpdated: false` 即可。
-
-```ts
-export default hopeTheme({
-  lastUpdated: false,
-});
-```
-
 ## 更换打包工具
 
 VuePress v2 默认使用 Vite 打包。我把打包工具更换为 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)，并用 chainWebpack 设置文件命名规则。
@@ -118,6 +78,45 @@ VuePress v2 默认使用 Vite 打包。我把打包工具更换为 [Webpack](htt
    ```
 
    在找到 chainWebpack 配置前，我依照 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 添加了 `filenameHashing: false`，但 VuePress 并未停止 hashname。
+
+## 减少文件变动
+
+我的笔记网站架构是 VuePress，一天要最少更新 3 次。但 VuePress 每次打包总会替换网站大部分的文件，导致自动部署特别耗时间，每次需要 10 分钟，期间打开网站就会出错。
+
+除了 VuePress 用了时间戳对文件 hashname 所导致的文件名总不相同，另一个原因是 html 文件中的时间参数。
+
+[vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。每次打包，大部分文件都会含有这两个参数，导致文件都发生了改变。
+
+编辑 theme.ts，使用 vuepress-plugin-seo2 的 ogp 参数对 meta 重新设置，删除不想要的参数。不要在 config.ts 设置 ogp，这会导致博客的自动摘要功能失效。
+
+```ts
+import { hopeTheme } from "vuepress-theme-hope";
+import { seoPlugin } from "vuepress-plugin-seo2";
+export default hopeTheme({
+  plugins: {
+    [seoPlugin]: {
+      hostname: "https://newzone.top",
+      ogp: (ogp, page) => ({
+        ...ogp,
+        "og:updated_time": "",
+        "og:modified_time": "",
+      }),
+    },
+    blog: {
+      // 自动摘要
+      autoExcerpt: true,
+    },
+  },
+});
+```
+
+另外，lastUpdated 参数也会让页面发生变化，但这是页面修改时间，而非 git 上传时间，不用特意屏蔽。如果想停止向页面导入 lastUpdated 参数，在 `theme.ts` 中插入 `lastUpdated: false` 即可。
+
+```ts
+export default hopeTheme({
+  lastUpdated: false,
+});
+```
 
 ## 关闭 prefetch
 
