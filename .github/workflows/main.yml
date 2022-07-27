@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  deploy-gh-pages:
+  vuepress-sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -34,8 +34,9 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |
-          pnpm add vuepress@next vuepress-theme-hope@next && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader && pnpm i && pnpm up
+          pnpm add vuepress@next vuepress-theme-hope@next && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader
           pnpm add @vuepress/plugin-google-analytics@next @vuepress/plugin-docsearch@next
+          pnpm i && pnpm up
           pnpm docs:build
 
       - name: Deploy

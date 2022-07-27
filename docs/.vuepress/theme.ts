@@ -6,7 +6,6 @@ import sidebar from "./sidebar";
 export default hopeTheme({
   //主题选项
   //https://vuepress-theme-hope.github.io/v2/zh/config/theme/layout.html
-
   hostname: "https://newzone.top",
 
   author: {

@@ -27,15 +27,13 @@ order: 1
    - navbar.ts：导航栏，放最常用的文档链接
    - theme.ts：对主题和插件进行设置
 
-## 打包工具
+## 固定静态文件名
 
-- [vue.config.js 配置](https://cli.vuejs.org/config/#vue-config-js)
+VuePress v2 默认使用 Vite 打包，静态文件名会根据 hash 自动生成。这导致打包总会替换网站大部分的静态文件，对服务器的自动部署。按 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 的配置添加 `filenameHashing: false`，但并未停止生成 hashname。
 
-VuePress v2 默认使用 Vite 打包。Vite 每次生成的静态文件名都不同，每次打包都要替换整个网站的静态文件，这点对服务器的自动部署太不利，每次部署需要 10 分钟。
+因此，我把打包工具更换为 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)，并用 chainWebpack 设置静态名生成规则。
 
-因此，我把打包工具更换为 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)。更换后，虽然静态名依然每次都不同，但文件数量少了许多，更新部署时间 5 分钟。
-
-1. 修改 config.ts 的导入设置，将 `import { defineUserConfig } from "vuepress";` 替换为 `import { defineUserConfig } from '@vuepress/cli';`。
+1. 修改 config.ts 的导入设置，将 `import { defineUserConfig } from "vuepress";` 替换为 `import { defineUserConfig } from "@vuepress/cli";`。
 
 2. Webpack 环境依赖包安装，并运行服务。
 
@@ -47,26 +45,52 @@ VuePress v2 默认使用 Vite 打包。Vite 每次生成的静态文件名都不
    yarn docs:dev
    ```
 
-组合命令也能**解决报错**，升级相关依赖包。下方有相关命令的分步解释。
+   组合命令也能**解决报错**，升级相关依赖包。相关命令的分步解释见下方。
 
-```bash
-#确保你正在使用最新的 vuepress 和 vuepress-theme-hope 版本
-pnpm add vuepress@next vuepress-theme-hope@next
+   ```bash
+   #确保你正在使用最新的 vuepress 和 vuepress-theme-hope 版本
+   pnpm add vuepress@next vuepress-theme-hope@next
 
-#更换打包工具，Webpack 需手动下载 sass-loader
-pnpm remove vuepress
-pnpm add -D vuepress-webpack@next sass-loader
+   #更换打包工具，Webpack 需手动下载 sass-loader
+   pnpm remove vuepress
+   pnpm add -D vuepress-webpack@next sass-loader
 
-#常用插件：google-analytics，docsearch
-pnpm add @vuepress/plugin-google-analytics@next @vuepress/plugin-docsearch@next
+   #常用插件：google-analytics，docsearch
+   pnpm add @vuepress/plugin-google-analytics@next @vuepress/plugin-docsearch@next
 
-#升级当前目录的依赖以确保你的项目只包含单个版本的相关包
-pnpm i && pnpm up
-```
+   #升级当前目录的依赖以确保你的项目只包含单个版本的相关包
+   pnpm i && pnpm up
+   ```
+
+3. 固定 js 静态文件名：打开 config.ts，使用 [webpack-chain](https://github.com/Yatoo2018/webpack-chain/tree/zh-cmn-Hans) 修改 webpack 输出文件名规则，停止对数量最多的 chunk 文件 hashname。^[[chainWebpack 长用配置方式](https://blog.csdn.net/song854601134/article/details/121340077)]
+
+   ```ts
+   export default defineUserConfig({
+     bundler: webpackBundler({
+       chainWebpack(config) {
+         // do not use chunk hash in js
+         //参照案例：https://github.com/vuepress/vuepress-plugin-named-chunks/blob/b9fb5a1d3475530b1d74b6616f92a6e3bf14a7ed/__tests__/docs/.vuepress/config.js
+         config.output.chunkFilename("assets/chunks/[name].js");
+       },
+     }),
+   });
+   ```
+
+## 关闭 prefetch
+
+preload 是一种声明式的资源获取请求方式，用于提前加载一些需要的依赖，并且不会影响页面的 onload 事件。prefetch 是一种利用浏览器的空闲时间加载页面将来可能用到的资源的一种机制；通常可以用于加载非首页的其他页面所需要的资源，以便加快后续页面的首屏速度。preload 主要用于预加载当前页面需要的资源；而 prefetch 主要用于加载将来页面可能需要的资源。
+
+VuePress [Build 配置项](https://vuepress.github.io/zh/reference/config.html#build-%E9%85%8D%E7%BD%AE%E9%A1%B9) 默认开启了 preload 和 prefetch。但是，开启了 prefetch，所有其它页面所需的文件都会被预拉取。页面较多或服务器宽带后付费的话，建议关闭 prefetch。
+
+`docs\.vuepress` 路径下的 config.ts 配置中插入 `shouldPrefetch: false,`，即可关闭 prefetch。
 
 ## 自定义主题
 
+- [ ] wolai 评论区
 - [ ] Algolia DocSearch 申请中，等结果通知
+- [x] ~~google analytics 没反应，实际已经包含在 js 中了~~
+- [x] ~~不用自动开启一堆的网站，关闭 prefetch~~
+- [x] ~~生成文件名固定化，chainWebpack~~
 - [x] ~~网页更新时，有时会打不开链接，需要使用缓存。~~
 - [x] ~~VuePress 博客页面：frontmatter 中添加 order 参数让最新的文章往上排，无法按文件名倒序排列~~
 - [x] 全局路径需要给子目录添加 README.md，没那么多内容填，暂时放弃。

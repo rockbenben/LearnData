@@ -1,16 +1,27 @@
+//import { viteBundler } from "@vuepress/bundler-vite";
+import { webpackBundler } from "@vuepress/bundler-webpack";
+import { defineUserConfig } from "@vuepress/cli";
 //import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { searchPlugin } from "@vuepress/plugin-search";
-//import { defineUserConfig } from "vuepress";
-import { webpackBundler } from '@vuepress/bundler-webpack'
-import { defineUserConfig } from "@vuepress/cli";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+//import { path } from "@vuepress/utils";
 import theme from "./theme";
 
 export default defineUserConfig({
-  filenameHashing: false,
+  //filenameHashing: false,
 
   bundler: webpackBundler({
     // ...
+    chainWebpack(config) {
+      // do not use chunk hash in js
+      //参照案例：https://github.com/vuepress/vuepress-plugin-named-chunks/blob/b9fb5a1d3475530b1d74b6616f92a6e3bf14a7ed/__tests__/docs/.vuepress/config.js
+      config
+        .output
+          //.path(path.resolve(__dirname, "../dist"))
+          //.filename(`[name].[hash:8].js`)
+          //.chunkFilename("assets/chunks/[name].[chunkhash].js")
+          .chunkFilename("assets/chunks/[name].js")
+    },
   }),
 
   lang: "zh-CN",
@@ -32,6 +43,7 @@ export default defineUserConfig({
   ],
 
   theme,
+  shouldPrefetch: false,
   plugins: [
     //docsearchPlugin({
       // 你的选项
