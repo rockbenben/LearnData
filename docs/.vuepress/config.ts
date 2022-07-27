@@ -15,10 +15,12 @@ export default defineUserConfig({
     chainWebpack(config) {
       // do not use chunk hash in js
       //参照案例：https://github.com/vuepress/vuepress-plugin-named-chunks/blob/b9fb5a1d3475530b1d74b6616f92a6e3bf14a7ed/__tests__/docs/.vuepress/config.js
+      //config.output.filename("[name].js").chunkFilename("[name].js");
       config
         .output
           //.path(path.resolve(__dirname, "../dist"))
           //.filename(`[name].[hash:8].js`)
+          .filename(`[name].js`)
           //.chunkFilename("assets/chunks/[name].[chunkhash].js")
           .chunkFilename("assets/chunks/[name].js")
     },

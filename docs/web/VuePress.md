@@ -62,7 +62,7 @@ VuePress v2 默认使用 Vite 打包，静态文件名会根据 hash 自动生�
    pnpm i && pnpm up
    ```
 
-3. 固定 js 静态文件名：打开 config.ts，使用 [webpack-chain](https://github.com/Yatoo2018/webpack-chain/tree/zh-cmn-Hans) 修改 webpack 输出文件名规则，停止对数量最多的 chunk 文件 hashname。^[[chainWebpack 长用配置方式](https://blog.csdn.net/song854601134/article/details/121340077)]
+3. 固定 js 静态文件名：打开 config.ts，使用 [webpack-chain](https://github.com/Yatoo2018/webpack-chain/tree/zh-cmn-Hans) 修改 webpack 输出文件名规则，停止对 js 文件 hashname。^[[chainWebpack 长用配置方式](https://blog.csdn.net/song854601134/article/details/121340077)] `.filename` 加路径容易报错，因此只把数量最多的 chunk 文件放入子文件夹中。
 
    ```ts
    export default defineUserConfig({
@@ -70,7 +70,9 @@ VuePress v2 默认使用 Vite 打包，静态文件名会根据 hash 自动生�
        chainWebpack(config) {
          // do not use chunk hash in js
          //参照案例：https://github.com/vuepress/vuepress-plugin-named-chunks/blob/b9fb5a1d3475530b1d74b6616f92a6e3bf14a7ed/__tests__/docs/.vuepress/config.js
-         config.output.chunkFilename("assets/chunks/[name].js");
+         config.output
+           .filename(`[name].js`)
+           .chunkFilename("assets/chunks/[name].js");
        },
      }),
    });
