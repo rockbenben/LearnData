@@ -86,7 +86,7 @@ VuePress [Build 配置项](https://vuepress.github.io/zh/reference/config.html#b
 
 ## 自定义主题
 
-- [ ] [waline](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/comment.html#waline) 评论插件
+- [ ] [waline](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/comment.html#waline) 评论插件，无需账户，更适合大众
 - [ ] Algolia DocSearch 申请中，等结果通知
 - [x] ~~google analytics 没反应，实际已经包含在 js 中了~~
 - [x] ~~不用自动开启一堆的网站，关闭 prefetch~~
