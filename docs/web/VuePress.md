@@ -36,7 +36,7 @@ order: 1
 
 [vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。每次打包，大部分文件都会含有这两个参数，导致文件都发生了改变。
 
-在 theme.ts 中使用 vuepress-plugin-seo2 的 ogp 参数，对 meta 重新设置，删除不想要的参数。不用在 config.ts 设置 ogp，会导致博客的自动摘要失效。
+编辑 theme.ts，使用 vuepress-plugin-seo2 的 ogp 参数对 meta 重新设置，删除不想要的参数。不要在 config.ts 设置 ogp，这会导致博客的自动摘要功能失效。
 
 ```ts
 import { hopeTheme } from "vuepress-theme-hope";
