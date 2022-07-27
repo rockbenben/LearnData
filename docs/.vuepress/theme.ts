@@ -18,8 +18,12 @@ export default hopeTheme({
   
   //是否全局启用路径导航
   breadcrumb: false,
+
+  //页面元数据
   contributors: false,
-  //lastUpdated: false,
+  lastUpdated: false,
+  //editLink: false,
+  //modifyTimeGetter: (timestamp) => {},
 
   //深色模式配置
   //darkmode: "disable",
