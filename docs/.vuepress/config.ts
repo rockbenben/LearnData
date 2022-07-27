@@ -4,7 +4,7 @@ import { defineUserConfig } from "@vuepress/cli";
 //import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
-//import { seoPlugin } from "vuepress-plugin-seo2";
+import { seoPlugin } from "vuepress-plugin-seo2";
 import { path } from "@vuepress/utils";
 import theme from "./theme";
 
@@ -61,11 +61,13 @@ export default defineUserConfig({
     googleAnalyticsPlugin({
       id: "G-RWKZTY2P9R",
     }),
-    //seoPlugin({
-      // 你的选项
-      //hostname: "https://newzone.top",
-      //updated_time: "2022-07-27T06:00:09.000Z",
-      //modified_time: "2022-07-27T06:00:09.000Z",
-    //}),
+    seoPlugin({
+      hostname: "https://newzone.top",
+      ogp: (ogp, page) => ({
+        ...ogp,
+        "og:updated_time": "",
+        "og:modified_time": "",
+      }),
+    }),
   ],
 });
