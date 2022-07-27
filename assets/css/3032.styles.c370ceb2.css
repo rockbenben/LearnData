@@ -1,0 +1,1 @@
+.skip-link{top:.25rem;left:.25rem;z-index:999;padding:.65rem 1.5rem;border-radius:.5rem;background-color:var(--bg-color);box-shadow:var(--card-shadow);font-weight:700;font-size:.9em;text-decoration:none}.skip-link,html[data-theme=dark] .skip-link{color:var(--theme-color)}.skip-link .skip-link:focus{clip:auto;width:auto;height:auto;-webkit-clip-path:none;clip-path:none}
