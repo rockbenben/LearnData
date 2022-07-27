@@ -85,10 +85,6 @@ export default hopeTheme({
   },
 
   plugins: {
-    blog: {
-      // 自动摘要
-      autoExcerpt: true,
-    },
 
     [seoPlugin]: {
       hostname: "https://newzone.top",
@@ -97,6 +93,11 @@ export default hopeTheme({
         "og:updated_time": "",
         "og:modified_time": "",
       }),
+    },
+
+    blog: {
+      // 自动摘要
+      autoExcerpt: true,
     },
 
     //评论配置

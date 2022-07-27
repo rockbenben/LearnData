@@ -34,7 +34,8 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |
-          pnpm add vuepress@next vuepress-theme-hope@next @vuepress/plugin-google-analytics@next
+          pnpm add vuepress@next vuepress-theme-hope@next && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader
+          pnpm add @vuepress/plugin-google-analytics@next
           pnpm i && pnpm up
           pnpm docs:build
 
