@@ -9,17 +9,14 @@ order: 3
 - [giscus](https://github.com/giscus/giscus)：基于 github discussion，近似于论坛。查看 [配置方法](https://blog.csdn.net/duninet/article/details/125280107)。
 - [Gitalk](https://github.com/gitalk/gitalk)：基于 github commit，需配置独立库用于存储评论。
 - [Valine](https://github.com/xCss/Valine)：可匿名评论，因此不适合国内使用。
-- [Gitter](https://gitter.im/)：[boardgame](https://boardgame.io/documentation/#/)，[regauge](https://itchef.github.io/regauge/#/)
+- [Waline](https://waline.js.org/guide/get-started.html)：基于 Valine 衍生的简洁、安全的评论系统。vuepress-theme-hope 主题集成了 Waline。
+- [Gitter](https://gitter.im/)：公共聊天室，样例如：[boardgame](https://boardgame.io/documentation/#/)，[regauge](https://itchef.github.io/regauge/#/)。
 
 ## Gitalk
 
 Gitalk 是轻量化的评论组件，用户必须登录 github 才能评论，适合项目类使用。
 
-初次设置时，需要登录 github 初始化评论区。
-
-Homepage URL 和 Authorization callback URL 需与你的 Gitalk 页面一致，比如：`http://localhost:3000/#/`。否则页面会报错，提示初始化，无法登录 github。
-
-`https://github.com/settings/developers` 页面管理已建的应用，获取 Client ID 和 Client secrets，修改应用链接。
+`https://github.com/settings/developers` 页面管理已建的应用，获取 Client ID 和 Client secrets，修改应用链接。^[[超 Nice 的评论组件 —— Gitalk](https://blog.csdn.net/qq_39052513/article/details/108291272)]
 
 将以下代码放入 docsify 页面中，即可启动 Gitalk：
 
@@ -42,6 +39,7 @@ Homepage URL 和 Authorization callback URL 需与你的 Gitalk 页面一致，�
 </script>
 ```
 
-参考资料：
+Gitalk 缺点：
 
-- [超 Nice 的评论组件 —— Gitalk](https://blog.csdn.net/qq_39052513/article/details/108291272)
+- 每次有新页面时，都需要登录 github 初始化评论区。
+- 域名不能改变，Homepage URL 和 Authorization callback URL 需与你的 Gitalk 页面一致，否则页面会报错，提示初始化，无法登录 github。

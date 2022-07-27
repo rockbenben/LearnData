@@ -92,12 +92,17 @@ export default hopeTheme({
 
     //评论配置
     comment: {
-      provider: "Giscus",
-      repo: "rockbenben/LearnData",
-      repoId: "R_kgDOHdfk6Q",
-      category: "Comments",
-      categoryId: "DIC_kwDOHdfk6c4CQYNn",
+      provider: "Waline",
+      serverURL: "https://waline-seven-sepia.vercel.app",
+      //Giscus 备用配置
+      //provider: "Giscus",
+      //repo: "rockbenben/LearnData",
+      //repoId: "R_kgDOHdfk6Q",
+      //category: "Comments",
+      //categoryId: "DIC_kwDOHdfk6c4CQYNn",
     },
+
+
 
     mdEnhance: {
       enableAll: false,

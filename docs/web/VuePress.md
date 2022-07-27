@@ -78,7 +78,7 @@ VuePress v2 默认使用 Vite 打包，文件名会根据 hash 自动生成。�
    });
    ```
 
-4. 除文件名外，[vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 给 html 文件插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`，每次同步后该参数都会变化。
+4. 除 hash 文件名外，给文件带来变化的是 [vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html)。它在 html 文件中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`，每次同步后该参数都会变化。因此，每次大量文件发生了改变。
 
 ## 关闭 prefetch
 
