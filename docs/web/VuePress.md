@@ -27,7 +27,38 @@ order: 1
    - navbar.ts：导航栏，放最常用的文档链接
    - theme.ts：对主题和插件进行设置
 
-## 固定文件名
+## 减少文件变动
+
+我的笔记网站架构是 VuePress，一天要最少更新 3 次。但 VuePress 每次打包总会替换网站大部分的文件，导致自动部署特别耗时间，每次都需要 10 分钟，期间打开网站经常出错。
+
+一开始，我以为 VuePress 对文件添加的 hashname 带了时间随机，但真实原因是 html 文件中的时间参数。
+
+[vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在 html 文件中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。每次打包，大部分文件都会含有这两个参数，导致文件都发生了改变。在 config.ts 中使用 vuepress-plugin-seo2 的 ogp 参数，对 meta 重新设置，删除不想要的参数。
+
+```ts
+import { seoPlugin } from "vuepress-plugin-seo2";
+export default defineUserConfig({
+  plugins: [
+    seoPlugin({
+      hostname: "https://newzone.top",
+      ogp: (ogp, page) => ({
+        ...ogp,
+        "og:updated_time": "",
+        "og:modified_time": "",
+      }),
+  ],
+});
+```
+
+另外，虽然 lastUpdated 参数也容易让页面发生变化，但不确定他是指上传文件，还是更新时间。在 `theme.ts` 中插入 `lastUpdated: false`，就可以停止向页面导入 lastUpdated 参数。
+
+```ts
+export default hopeTheme({
+  lastUpdated: false,
+});
+```
+
+## 更换打包工具
 
 VuePress v2 默认使用 Vite 打包，文件名会根据 hash 自动生成。这导致打包总会替换网站大部分的文件，自动部署到服务器上需要全部覆盖。即使按 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 的配置添加 `filenameHashing: false`，但并未停止生成 hashname。
 
@@ -62,7 +93,7 @@ VuePress v2 默认使用 Vite 打包，文件名会根据 hash 自动生成。�
    pnpm i && pnpm up
    ```
 
-3. 固定 js 静态文件名：打开 config.ts，使用 [webpack-chain](https://github.com/Yatoo2018/webpack-chain/tree/zh-cmn-Hans) 修改 webpack 输出文件名规则，停止对 js 文件 hashname。^[[chainWebpack 长用配置方式](https://blog.csdn.net/song854601134/article/details/121340077)] `.filename` 加路径容易报错，因此只把数量最多的 chunk 文件放入子文件夹中。
+3. 修改文件命名规则：打开 config.ts，使用 [webpack-chain](https://github.com/Yatoo2018/webpack-chain/tree/zh-cmn-Hans) 修改 webpack 输出文件名规则，停止对 js 文件 hashname。^[[chainWebpack 长用配置方式](https://blog.csdn.net/song854601134/article/details/121340077)] `.filename` 加路径容易报错，这里只把 chunk 文件放入子文件夹。
 
    ```ts
    export default defineUserConfig({
@@ -78,8 +109,6 @@ VuePress v2 默认使用 Vite 打包，文件名会根据 hash 自动生成。�
    });
    ```
 
-4. 除 hash 文件名外，给文件带来变化的是 [vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html)。它在 html 文件中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`，每次同步后该参数都会变化。因此，每次大量文件发生了改变。
-
 ## 关闭 prefetch
 
 preload 是一种声明式的资源获取请求方式，用于提前加载一些需要的依赖，并且不会影响页面的 onload 事件。prefetch 是一种利用浏览器的空闲时间加载页面将来可能用到的资源的一种机制；通常可以用于加载非首页的其他页面所需要的资源，以便加快后续页面的首屏速度。preload 主要用于预加载当前页面需要的资源；而 prefetch 主要用于加载将来页面可能需要的资源。
@@ -90,8 +119,9 @@ VuePress [Build 配置项](https://vuepress.github.io/zh/reference/config.html#b
 
 ## 自定义主题
 
-- [ ] [waline](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/comment.html#waline) 评论插件，无需账户，更适合大众。
 - [ ] Algolia DocSearch 申请中，等结果通知
+- [ ] 去 meta 标签，看看对方会不会回复
+- [x] ~~[waline](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/comment.html#waline) 评论插件，无需账户，更适合大众。~~
 - [x] ~~google analytics 没反应，实际已经包含在 js 中了~~
 - [x] ~~不用自动开启一堆的网站，关闭 prefetch~~
 - [x] ~~生成文件名固定化，chainWebpack~~
