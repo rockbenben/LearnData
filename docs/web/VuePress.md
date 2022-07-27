@@ -30,9 +30,9 @@ order: 1
 
 ## 减少文件变动
 
-我的笔记网站架构是 VuePress，一天要最少更新 3 次。但 VuePress 每次打包总会替换网站大部分的文件，导致自动部署特别耗时间，每次都需要 10 分钟，期间打开网站经常出错。
+我的笔记网站架构是 VuePress，一天要最少更新 3 次。但 VuePress 每次打包总会替换网站大部分的文件，导致自动部署特别耗时间，每次需要 10 分钟，期间打开网站就会出错。
 
-一开始，我以为 VuePress 对文件添加的 hashname 带了时间随机，但真实原因是 html 文件中的时间参数。
+一开始，我以为是 hashname 用了时间规则所导致的文件名总不相同，但真实原因是 html 文件中的时间参数。
 
 [vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。每次打包，大部分文件都会含有这两个参数，导致文件都发生了改变。
 
