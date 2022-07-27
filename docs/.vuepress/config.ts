@@ -48,7 +48,7 @@ export default defineUserConfig({
   theme,
   shouldPrefetch: false,
 
-  //页面模板，去除架构版本号
+  //修改页面模板，@vuepress-theme-hope/templates/index.build.html
   templateBuild: path.resolve(__dirname, "templateBuild.html"),
 
   plugins: [
@@ -64,8 +64,8 @@ export default defineUserConfig({
     seoPlugin({
       // 你的选项
       hostname: "https://newzone.top",
-      "og:updated_time": "2022-07-27T06:00:09.000Z",
-      "article:modified_time": "2022-07-27T06:00:09.000Z",
+      updated_time: "2022-07-27T06:00:09.000Z",
+      modified_time: "2022-07-27T06:00:09.000Z",
     }),
   ],
 });
