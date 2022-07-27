@@ -26,6 +26,7 @@ order: 1
    - sidebar.ts：侧边栏，集合所有文档的目录
    - navbar.ts：导航栏，放最常用的文档链接
    - theme.ts：对主题和插件进行设置
+5. 如果遇到报错，执行命令 `pnpm add vuepress@next vuepress-theme-hope@next && pnpm i && pnpm up` 修复并升级相关依赖包。这步可以解决大部分的报错。
 
 ## 减少文件变动
 
@@ -33,24 +34,33 @@ order: 1
 
 一开始，我以为 VuePress 对文件添加的 hashname 带了时间随机，但真实原因是 html 文件中的时间参数。
 
-[vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在 html 文件中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。每次打包，大部分文件都会含有这两个参数，导致文件都发生了改变。在 config.ts 中使用 vuepress-plugin-seo2 的 ogp 参数，对 meta 重新设置，删除不想要的参数。
+[vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。每次打包，大部分文件都会含有这两个参数，导致文件都发生了改变。
+
+在 theme.ts 中使用 vuepress-plugin-seo2 的 ogp 参数，对 meta 重新设置，删除不想要的参数。不用在 config.ts 设置 ogp，会导致博客的自动摘要失效。
 
 ```ts
+import { hopeTheme } from "vuepress-theme-hope";
 import { seoPlugin } from "vuepress-plugin-seo2";
-export default defineUserConfig({
-  plugins: [
-    seoPlugin({
+export default hopeTheme({
+  plugins: {
+    blog: {
+      // 自动摘要
+      autoExcerpt: true,
+    },
+
+    [seoPlugin]: {
       hostname: "https://newzone.top",
       ogp: (ogp, page) => ({
         ...ogp,
         "og:updated_time": "",
         "og:modified_time": "",
       }),
-  ],
+    },
+  },
 });
 ```
 
-另外，虽然 lastUpdated 参数也容易让页面发生变化，但不确定他是指上传文件，还是更新时间。在 `theme.ts` 中插入 `lastUpdated: false`，就可以停止向页面导入 lastUpdated 参数。
+另外，lastUpdated 参数也会让页面发生变化，但这是页面修改时间，而非 git 上传时间，不用特意屏蔽。如果想停止向页面导入 lastUpdated 参数，在 `theme.ts` 中插入 `lastUpdated: false` 即可。
 
 ```ts
 export default hopeTheme({
@@ -60,9 +70,7 @@ export default hopeTheme({
 
 ## 更换打包工具
 
-VuePress v2 默认使用 Vite 打包，文件名会根据 hash 自动生成。这导致打包总会替换网站大部分的文件，自动部署到服务器上需要全部覆盖。即使按 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 的配置添加 `filenameHashing: false`，但并未停止生成 hashname。
-
-因此，我把打包工具更换为 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)，并用 chainWebpack 设置静态名生成规则。
+VuePress v2 默认使用 Vite 打包。我把打包工具更换为 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)，并用 chainWebpack 设置文件命名规则。
 
 1. 修改 config.ts 的导入设置，将 `import { defineUserConfig } from "vuepress";` 替换为 `import { defineUserConfig } from "@vuepress/cli";`。
 
@@ -108,6 +116,8 @@ VuePress v2 默认使用 Vite 打包，文件名会根据 hash 自动生成。�
      }),
    });
    ```
+
+   在找到 chainWebpack 配置前，我依照 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 添加了 `filenameHashing: false`，但 VuePress 并未停止 hashname。
 
 ## 关闭 prefetch
 
