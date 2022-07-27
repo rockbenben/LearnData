@@ -1,5 +1,6 @@
 import { path } from "@vuepress/utils";
 import { hopeTheme } from "vuepress-theme-hope";
+import { seoPlugin } from "vuepress-plugin-seo2";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
 
@@ -21,9 +22,8 @@ export default hopeTheme({
 
   //页面元数据
   contributors: false,
-  lastUpdated: false,
-  //editLink: false,
-  //modifyTimeGetter: (timestamp) => {},
+  lastUpdated: true,
+  editLink: true,
 
   //深色模式配置
   //darkmode: "disable",
@@ -90,6 +90,15 @@ export default hopeTheme({
       autoExcerpt: true,
     },
 
+    [seoPlugin]: {
+      hostname: "https://newzone.top",
+      ogp: (ogp, page) => ({
+        ...ogp,
+        "og:updated_time": "",
+        "og:modified_time": "",
+      }),
+    },
+
     //评论配置
     comment: {
       provider: "Waline",
@@ -101,8 +110,6 @@ export default hopeTheme({
       //category: "Comments",
       //categoryId: "DIC_kwDOHdfk6c4CQYNn",
     },
-
-
 
     mdEnhance: {
       enableAll: false,
