@@ -27,9 +27,9 @@ order: 1
    - navbar.ts：导航栏，放最常用的文档链接
    - theme.ts：对主题和插件进行设置
 
-## 固定静态文件名
+## 固定文件名
 
-VuePress v2 默认使用 Vite 打包，静态文件名会根据 hash 自动生成。这导致打包总会替换网站大部分的静态文件，对服务器的自动部署。按 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 的配置添加 `filenameHashing: false`，但并未停止生成 hashname。
+VuePress v2 默认使用 Vite 打包，文件名会根据 hash 自动生成。这导致打包总会替换网站大部分的文件，自动部署到服务器上需要全部覆盖。即使按 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 的配置添加 `filenameHashing: false`，但并未停止生成 hashname。
 
 因此，我把打包工具更换为 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)，并用 chainWebpack 设置静态名生成规则。
 
@@ -77,6 +77,8 @@ VuePress v2 默认使用 Vite 打包，静态文件名会根据 hash 自动生�
      }),
    });
    ```
+
+4. 除 js 外，html 会植入 `og:updated_time`，`article:modified_time`，`meta-item update-time` 也会让文件发生改变。
 
 ## 关闭 prefetch
 
