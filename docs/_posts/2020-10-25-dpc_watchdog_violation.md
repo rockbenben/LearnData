@@ -74,4 +74,5 @@ DPC_WATCHDOG_VIOLATION 蓝屏原因，多为硬件驱动问题。可是只有驱
 - 主板类：擦拭内存条；重置 BIOS；增加 CPU 电压；关闭超线程；
 - 终极方法：重装系统，测试期间**尽量使用默认系统驱动**。重装又蓝屏的话，说明你新装的驱动有问题，卸掉有问题的驱动。
 
-<iframe src="//player.bilibili.com/player.html?aid=627539890&bvid=BV1jt4y1i7C8&cid=249655764&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+视频说明：
+<iframe height=400 width=100% src="//player.bilibili.com/player.html?aid=627539890&bvid=BV1jt4y1i7C8&cid=249655764&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
