@@ -60,10 +60,11 @@ export default hopeTheme({
   // footer: "默认页脚",
 
   // displayFooter: true,
-  pageInfo: ["Category", "Tag", "Word", "ReadingTime"],
+  pageInfo: ["PageView", "Category", "Tag", "Word", "ReadingTime"],
   //https://vuepress-theme-hope.github.io/v2/zh/config/frontmatter/layout.html#pageinfo
   // pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime"],
 
+  //https://vuepress-theme-hope.github.io/v2/zh/config/theme/feature.html
   blog: {
     name: "清顺",
     avatar: "/avatar_self.webp",
@@ -81,6 +82,7 @@ export default hopeTheme({
         path.resolve(__dirname, "icons/sspai.svg"),
       ],
     },
+    articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
   },
 
   plugins: {
@@ -94,6 +96,7 @@ export default hopeTheme({
     comment: {
       provider: "Waline",
       serverURL: "https://waline-seven-sepia.vercel.app",
+      pageview: true,
       //Giscus 备用配置
       //provider: "Giscus",
       //repo: "rockbenben/LearnData",
