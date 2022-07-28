@@ -60,12 +60,13 @@ export default hopeTheme({
   // footer: "默认页脚",
 
   // displayFooter: true,
-  pageInfo: ["PageView", "Category", "Tag", "Word", "ReadingTime"],
+  pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
   //https://vuepress-theme-hope.github.io/v2/zh/config/frontmatter/layout.html#pageinfo
   // pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime"],
 
   //https://vuepress-theme-hope.github.io/v2/zh/config/theme/feature.html
   blog: {
+    articleInfo: ["Date", "Category", "Tag", "ReadingTime", "PageView"],
     name: "清顺",
     avatar: "/avatar_self.webp",
     description: "迷信新工具，热衷于研究开源软件、心理学理论，定期分享探索成果",
@@ -82,7 +83,6 @@ export default hopeTheme({
         path.resolve(__dirname, "icons/sspai.svg"),
       ],
     },
-    articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
   },
 
   plugins: {
