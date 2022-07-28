@@ -30,9 +30,9 @@ order: 1
 
 ## Webpack 打包
 
-我的笔记网站架构是 VuePress，一天要最少更新 3 次。但 VuePress 每次打包总会替换网站大部分的文件，导致自动部署特别耗时间，每次需要 10 分钟，期间打开网站就会出错。文件没动但也会发生变化，除了因为 VuePress 用了时间戳对文件 hashname 所导致的文件名总不相同，
+VuePress v2 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命名，导致网站大部分的文件发生更改。即使你并没有更新文章，生成的静态文件也会改变。比如我的笔记网站用的 VuePress 默认配置，每次服务器部署需要 10 分钟，期间打开网站就会出错。可这是我知识记录的阵地，一天要最少更新 3 次。
 
-VuePress v2 默认使用 Vite 打包。为了停止 hashname，我把打包工具更换为 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)，并用 chainWebpack 设置文件命名规则。
+为了避免 hashname 所导致的部署时间延长，我把打包工具更换为 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)，并用 chainWebpack 设置文件命名规则。
 
 1. 修改 config.ts 的导入设置，将 `import { defineUserConfig } from "vuepress";` 替换为 `import { defineUserConfig } from "@vuepress/cli";`。
 
@@ -120,7 +120,7 @@ export default hopeTheme({
 ## 自定义主题
 
 - [ ] Algolia DocSearch 申请中，等结果通知
-- [ ] 去 meta 标签，看看对方会不会回复
+- [x] ~~去 meta 标签，测试并未成功，不再尝试~~
 - [x] ~~[waline](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/comment.html#waline) 评论插件，无需账户，更适合大众。~~
 - [x] ~~google analytics 没反应，实际已经包含在 js 中了~~
 - [x] ~~不用自动开启一堆的网站，关闭 prefetch~~
