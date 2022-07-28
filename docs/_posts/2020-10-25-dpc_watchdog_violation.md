@@ -9,11 +9,11 @@ star: true
 order: -30
 ---
 
-DPC_WATCHDOG_VIOLATION 多为硬件驱动出现问题。当驱动大规模报错时，厂家会更新并推送解决方法。所以，不要继续尝试其他人的解决方案，你的问题是独一无二的。分析 dmp 日志才是能百分百解决蓝屏的方法。
+DPC_WATCHDOG_VIOLATION 蓝屏原因，多为硬件驱动问题。可是只有驱动出现大规模报错，厂家才会更新并推送解决方法。因此，你在网上搜到的解决方案，大多是过时的，不能解决你的问题。蓝屏原因千奇百怪，分析 dmp 蓝屏日志才是能百分百解决蓝屏的办法。
 
 ## 分析 dmg 日志
 
-1. 安装 [WinDbg Preview](https://www.microsoft.com/zh-cn/p/windbg/9pgjgd53tn86?rtc=1&activetab=pivot:overviewtab)，这是微软官方推出的 Debug 工具。
+1. 安装 [WinDbg Preview](https://www.microsoft.com/zh-cn/p/windbg/9pgjgd53tn86?rtc=1&activetab=pivot:overviewtab)，这是微软官方推出的系统 Debug 工具。
 2. 启动 WinDbg Preview，软件会自动检测到最新 dmp 日志，点击 Yes 即可载入。如果想分析其他文件，打开文件夹 `C:\Windows\Minidump`，导出日志 `xxx.dmp`。
 3. 载入日志过程中，WinDbg Preview 会自动下载所需文件，不需要管。载入完成后，点击 `!analyze -v`，分析具体日志。
 
@@ -42,7 +42,11 @@ DPC_WATCHDOG_VIOLATION 多为硬件驱动出现问题。当驱动大规模报错
 
 分析蓝屏时报错，或 WinDbg 对 minidump 蓝屏日志的访问被拒绝，这都是由于系统盘读取权限未开放所导致的。
 
-解决办法是，将 minidump 文件复制到 D 盘，然后手动导入到 WinDbg 进行分析。
+解决办法有 3 种：
+
+- 将 minidump 文件复制到 D 盘，然后手动导入到 WinDbg 进行分析。
+- @天气控制仪：以管理员权限运行 WinDbg。
+- @紫石英与灯心草：右键点击 minidump 蓝屏日志，然后依次选`属性 - 权限 - 点击用户 - 点击继承 - 同意`。
 
 ### 找不到 minidump 文件
 
@@ -69,3 +73,5 @@ DPC_WATCHDOG_VIOLATION 多为硬件驱动出现问题。当驱动大规模报错
 - 驱动类：更新显卡驱动；更新网卡驱动；重置声卡驱动；重置 SATA AHCI 驱动；
 - 主板类：擦拭内存条；重置 BIOS；增加 CPU 电压；关闭超线程；
 - 终极方法：重装系统，测试期间**尽量使用默认系统驱动**。重装又蓝屏的话，说明你新装的驱动有问题，卸掉有问题的驱动。
+
+<iframe src="//player.bilibili.com/player.html?aid=627539890&bvid=BV1jt4y1i7C8&cid=249655764&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

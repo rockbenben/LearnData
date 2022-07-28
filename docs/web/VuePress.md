@@ -6,7 +6,7 @@ order: 1
 
 [VuePress](https://v2.vuepress.vuejs.org/zh/guide/getting-started.html) 是一个以 Markdown 为中心的静态网站生成器。你可以使用 Markdown 来书写内容（如文档、博客等），然后 VuePress 会帮助你生成一个静态网站来展示它们。
 
-如果你已经有了 docsify/Hexo 等 Markdown 架构网站，简单就能转为 VuePress。不过，VuePress 网站需要依赖包环境，生成的静态文件在本地运行会缺少组件，只推荐在服务器或其他云服务上运行。
+如果你已经有了 docsify/Hexo 等 Markdown 架构网站，简单就能切换到 VuePress。不过，VuePress 网站需要依赖包环境，生成的静态文件在本地运行会缺少组件，只推荐在服务器或其他云服务上运行。
 
 主题使用的是 [vuepress-theme-hope](https://vuepress-theme-hope.github.io/v2/zh/guide/)，其他主题和插件查看 [Awesome VuePress V2](https://github.com/vuepress/awesome-vuepress/blob/main/v2.md)。
 
@@ -63,7 +63,7 @@ VuePress v2 默认使用 Vite，打包时会引入时间戳和 hash 对文件重
    pnpm i && pnpm up
    ```
 
-3. 修改文件命名规则：打开 config.ts，使用 [webpack-chain](https://github.com/Yatoo2018/webpack-chain/tree/zh-cmn-Hans) 修改 webpack 输出文件名规则，停止对 js 文件 hashname。^[[chainWebpack 长用配置方式](https://blog.csdn.net/song854601134/article/details/121340077)] `.filename` 加路径容易报错，这里只把 chunk 文件放入子文件夹。
+3. 修改文件命名规则：打开 config.ts，使用 [webpack-chain](https://github.com/Yatoo2018/webpack-chain/tree/zh-cmn-Hans) 修改 webpack 输出文件名规则，停止对 js 文件 hashname。^[[chainWebpack 常用配置方式](https://blog.csdn.net/song854601134/article/details/121340077)] `.filename` 加路径容易报错，这里只把 chunk 文件放入子文件夹。
 
    ```ts
    export default defineUserConfig({
@@ -91,7 +91,7 @@ VuePress [Build 配置项](https://vuepress.github.io/zh/reference/config.html#b
 
 ## 时间参数
 
-[vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。打开 config.ts，使用 vuepress-plugin-seo2 的 ogp 参数对 meta 重新设置，删除不想要的参数。波国这会导致博客的自动摘要功能失效，而且 git 后参数并没发生变化。在 theme.ts 设置 ogp 直接为无效。
+[vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。打开 config.ts，使用 vuepress-plugin-seo2 的 ogp 参数对 meta 重新设置，删除不想要的参数。不过这会导致博客的自动摘要功能失效，而且 git 后参数并没发生变化。在 theme.ts 设置 ogp 直接为无效。
 
 ```ts
 import { seoPlugin } from "vuepress-plugin-seo2";
@@ -135,11 +135,11 @@ export default hopeTheme({
 - [x] ~~子域名中部署 blog 和 note，分别使用不同路径。这方案可以与 WordPress 共存，但未了避免后续出错，还是取消了。~~
 - [x] ~~Giscus 评论区设置~~
 - [x] ~~导航栏添加 repo 位置~~
-- [x] ~~页面统计，插件只支持 Google、百度，后用图片标签方式植入统计。备用方法：将统计代码直接放在侧边栏。~~
+- [x] ~~页面统计，插件只支持 Google、百度，然后用图片标签方式植入统计。备用方法：将统计代码直接放在侧边栏。~~
 - [x] ~~定制页面标签：config.ts 中添加全局 [head 标签](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs/theme/src/.vuepress/config.ts)，或在页面中添加 [独立 head 标签](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html#%E7%9B%B4%E6%8E%A5%E6%B7%BB%E5%8A%A0-head-%E6%A0%87%E7%AD%BE)，支持图片统计代码。~~
 - [x] ~~将 docs 里的 README.md 转移到主目录中，保持 github 项目页的同步。~~
 - [x] ~~打开页面链接，侧边栏焦点能不能也移动过去。侧边栏标题需要能在首屏出现，才能激活焦点。~~
-- [x] ~~默认主题颜色为白天，虽然不能切换，但发稿用白色就性。~~
+- [x] ~~默认主题颜色为白天，虽然不能切换，但发稿用白色就行。~~
 - [x] ~~设置导航栏自动隐藏~~
 - [x] ~~隐藏编辑时间和贡献者~~
 - [x] ~~用 md 控制图片是，图片不能显示。这可能是因为主题默认的 lazy 加载，改用七牛云的图片属性控制尺寸。~~
