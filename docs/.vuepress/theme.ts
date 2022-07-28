@@ -1,6 +1,5 @@
 import { path } from "@vuepress/utils";
 import { hopeTheme } from "vuepress-theme-hope";
-import { seoPlugin } from "vuepress-plugin-seo2";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
 
@@ -85,15 +84,6 @@ export default hopeTheme({
   },
 
   plugins: {
-
-    [seoPlugin]: {
-      hostname: "https://newzone.top",
-      ogp: (ogp, page) => ({
-        ...ogp,
-        "og:updated_time": "",
-        "og:modified_time": "",
-      }),
-    },
 
     blog: {
       // 自动摘要
