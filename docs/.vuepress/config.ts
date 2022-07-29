@@ -32,18 +32,6 @@ export default defineUserConfig({
 
   base: "/",
 
-  head: [
-    [
-      "img",
-      {
-        referrerpolicy: "no-referrer-when-downgrade",
-        src: "https://piwik.seoipo.com/matomo.php?idsite=7&amp;rec=1",
-        style: "border:0",
-        alt: "",
-      },
-    ],
-  ],
-
   theme,
   shouldPrefetch: false,
 

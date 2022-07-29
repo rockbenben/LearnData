@@ -89,6 +89,43 @@ VuePress [Build 配置项](https://vuepress.github.io/zh/reference/config.html#b
 
 `docs\.vuepress` 路径下的 config.ts 配置中插入 `shouldPrefetch: false,`，即可关闭 prefetch。
 
+## 页面模板
+
+VuePress 页面生成规则基于主题模板，如果修改全站 html 内容，最简单的方式就是修改模板。
+
+我的主题是 `@vuepress-theme-hope/templates/index.build.html`，将其下载到本地后，修改为你想要的样式，放入 .vuepress 文件夹内。最后在 config.ts 中添加代码，即可启用修改模板。
+
+```ts
+import { path } from "@vuepress/utils";
+export default defineUserConfig({
+  ...
+  templateBuild: path.resolve(__dirname, "index.build.html"),
+});
+```
+
+除修改页面模板外，也可以通过修改 config.ts 配置来添加自定义标签。插入下方代码后，网站所有页面都会在 header 前添入对应代码，其效用等同于 `<meta name="keywords" content="关键词，内容标签，相关词">` 和 `<img referrerpolicy="no-referrer-when-downgrade" src="https://tongji.newzone.top/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />`。
+
+```ts
+head: [
+  [
+    "meta",
+    {
+      name: "keywords",
+      content: "关键词，内容标签，相关词",
+    },
+  ],
+  [
+    "img",
+    {
+      referrerpolicy: "no-referrer-when-downgrade",
+      src: "https://tongji.newzone.top/matomo.php?idsite=7&amp;rec=1",
+      style: "border:0",
+      alt: "",
+    },
+  ],
+],
+```
+
 ## 时间参数
 
 [vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。打开 config.ts，使用 vuepress-plugin-seo2 的 ogp 参数对 meta 重新设置，删除不想要的参数。不过这会导致博客的自动摘要功能失效，而且 git 后参数并没发生变化。在 theme.ts 设置 ogp 直接为无效。
@@ -135,7 +172,7 @@ export default hopeTheme({
 - [x] ~~子域名中部署 blog 和 note，分别使用不同路径。这方案可以与 WordPress 共存，但未了避免后续出错，还是取消了。~~
 - [x] ~~Giscus 评论区设置~~
 - [x] ~~导航栏添加 repo 位置~~
-- [x] ~~页面统计，插件只支持 Google、百度，然后用图片标签方式植入统计。备用方法：将统计代码直接放在侧边栏。~~
+- [x] ~~页面统计，插件只支持 Google、百度，然后用图片标签方式植入统计。直接修改页面模板，放入统计链接。备用方法：将统计代码直接放在侧边栏。~~
 - [x] ~~定制页面标签：config.ts 中添加全局 [head 标签](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs/theme/src/.vuepress/config.ts)，或在页面中添加 [独立 head 标签](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html#%E7%9B%B4%E6%8E%A5%E6%B7%BB%E5%8A%A0-head-%E6%A0%87%E7%AD%BE)，支持图片统计代码。~~
 - [x] ~~将 docs 里的 README.md 转移到主目录中，保持 github 项目页的同步。~~
 - [x] ~~打开页面链接，侧边栏焦点能不能也移动过去。侧边栏标题需要能在首屏出现，才能激活焦点。~~
