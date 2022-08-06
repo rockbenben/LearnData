@@ -1,6 +1,7 @@
 ---
 article: false
 title: NAS
+icon: process
 order: 1
 ---
 

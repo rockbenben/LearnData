@@ -37,11 +37,11 @@ order: -36
 
 **NDI** 最为稳定，能自由调节拍摄参数。打开 NDI 应用，需等待 NDI 界面周边出现绿框或红框，OBS 才可以识别到摄像头。不过 NDI 是收费应用，安卓测试可使用 [NDI 调试 APK](https://wwe.lanzoup.com/iQCMh00b946b)。
 
-**IP Webcam** 推流稳定性一般，但 [免费版 IP Webcam APK](https://wwz.lanzouf.com/iT6pH01tj7yb) 足够个人使用。
+**IP Webcam** 推流稳定性一般，容易掉帧，但 [IP Webcam 免费版](https://wwz.lanzouf.com/iT6pH01tj7yb) 足够个人使用。
 
-- IP Webcam 设置网页将流质量调整至 90%，能有效减少卡顿。IP camera 耗电低，适合手机长时间直播，支持视频与浏览器等方式。
+- IP Webcam 设置网页将流质量调整至 90%，视频分辨率 720p，能有效减少卡顿。IP camera 耗电低，适合手机长时间直播，支持视频与浏览器等方式。
 - OBS `场景 - 来源 - 视频源`，「输入」项中填入 IP Webcam 视频地址，例如 `http://192.168.2.234:8080/video`。
-- OBS `场景 - 来源 - 添加浏览器`，「URL」项中填入 IP Webcam 浏览器全屏地址，例如 `http://192.168.2.234:8080/jsfs.html`。注意：浏览器退流，容易出现闪屏。
+- OBS `场景 - 来源 - 添加浏览器`，「URL」项中填入 IP Webcam 浏览器全屏地址，例如 `http://192.168.2.234:8080/jsfs.html`。注意：浏览器推流，容易出现闪屏。
 
 无他伴侣（不推荐），虽然国内大量教程介绍无他伴侣，但使用中出现非常多的问题，如：摄影角度很难控制；无法使用 FaceRig 等变脸应用；直播 10 分钟后，摄像头经常自动与 OBS 断开连接；直播 2 小时后，OBS 无法检测到无他伴侣。
 

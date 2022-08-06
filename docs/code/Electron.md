@@ -1,7 +1,7 @@
 ---
 article: false
 title: Electron
-icon:
+icon: layout
 order: 7
 ---
 

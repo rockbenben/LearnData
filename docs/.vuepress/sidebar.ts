@@ -14,9 +14,9 @@ export default sidebar([
     children: "structure",
   },
   {
-    text: "🏗️ 网站部署",
+    text: "🧰 软件应用",
     icon: "",
-    prefix: "/deploy/",
+    prefix: "/apps/",
     link: "",
     collapsable: true,
     children: "structure",
@@ -30,9 +30,9 @@ export default sidebar([
     children: "structure",
   },
   {
-    text: "🧰 软件应用",
+    text: "🏗️ 网站部署",
     icon: "",
-    prefix: "/apps/",
+    prefix: "/deploy/",
     link: "",
     collapsable: true,
     children: "structure",
@@ -46,7 +46,7 @@ export default sidebar([
     children: "structure",
   },
   {
-    text: "🪟 系统",
+    text: "🪟 系统问题",
     icon: "",
     prefix: "/windows/",
     link: "",

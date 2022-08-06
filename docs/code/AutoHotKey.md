@@ -1,7 +1,7 @@
 ---
 article: false
 title: AutoHotKey
-icon: 
+icon: linter
 order: 4
 ---
 

@@ -1,6 +1,7 @@
 ---
 article: false
 title: 应用笔记
+icon: plugin
 order: 3
 ---
 

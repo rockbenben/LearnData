@@ -1,7 +1,7 @@
 ---
 article: false
 title: GitHub
-icon:
+icon: github
 order: 3
 ---
 

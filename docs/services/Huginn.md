@@ -1,6 +1,7 @@
 ---
 article: false
 title: Huginn
+icon: customize
 order: 2
 ---
 
@@ -50,7 +51,7 @@ sudo bundle exec rake prduction:export
 
 ## Agents
 
-### TriggerAgent
+### Trigger Agent
 
 Trigger Agent 挑选符合条件的事件。
 
@@ -83,6 +84,14 @@ Trigger Agent 挑选符合条件的事件。
   "message": "Looks like your pattern matched in '{{value}}'!"
 }
 ```
+
+### Liquid Output Agent
+
+用自定义模板将数据整理，输出为 HTML，json 和 xml 格式链接。
+
+模式一般选 `Last X events`，将接收到的所有数据对外输出，默认为 1000。
+
+`Last X events` 模式下，可以设置 `Event limit` 以控制输出数据的数量和时间段。`Event limit` 可以设为 100，即输出数据为 100；也可以设为「1 day」或「5 minutes」，即仅输出最近一天的内容。
 
 ### Event Formatting Agent
 

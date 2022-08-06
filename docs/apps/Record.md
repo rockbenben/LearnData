@@ -1,6 +1,7 @@
 ---
 article: false
 title: 录屏应用
+icon: fullscreen
 order: 4
 ---
 

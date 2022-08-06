@@ -1,7 +1,7 @@
 ---
 article: false
 title: Markdown
-icon:
+icon: markdown
 order: 5
 ---
 

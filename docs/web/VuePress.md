@@ -1,6 +1,7 @@
 ---
 article: false
 title: VuePress
+icon: vue
 order: 1
 ---
 
@@ -8,13 +9,9 @@ order: 1
 
 如果你已经有了 docsify/Hexo 等 Markdown 架构网站，简单就能切换到 VuePress。不过，VuePress 网站需要依赖包环境，生成的静态文件在本地运行会缺少组件，只推荐在服务器或其他云服务上运行。
 
-主题使用的是 [vuepress-theme-hope](https://vuepress-theme-hope.github.io/v2/zh/guide/)，其他主题和插件查看 [Awesome VuePress V2](https://github.com/vuepress/awesome-vuepress/blob/main/v2.md)。
+主题使用的是 [vuepress-theme-hope](https://vuepress-theme-hope.github.io/v2/zh/guide/)，图标为 [Iconfont 精选图标](https://vuepress-theme-hope.github.io/v2/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87)，其他主题和插件查看 [Awesome VuePress V2](https://github.com/vuepress/awesome-vuepress/blob/main/v2.md)。
 
-## 插件
-
-- [docsearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html)：将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。开源技术向博客可以申请官方支持，商业化内容需要使用自己的爬虫。
-- [Iconfont 精选图标](https://vuepress-theme-hope.github.io/v2/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87)
-- [看板娘](https://www.npmjs.com/package/vuepress-plugin-helper-live2d)
+考虑是否使用插件 [看板娘](https://www.npmjs.com/package/vuepress-plugin-helper-live2d)。
 
 ## 初始配置
 
@@ -156,7 +153,8 @@ export default hopeTheme({
 
 ## 自定义主题
 
-- [ ] Algolia DocSearch 申请中，等结果通知
+- [ ] 插件[docsearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html)：将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。开源技术向博客可以申请官方支持，商业化内容需要使用自己的爬虫。目前 Algolia DocSearch 申请中，等结果通知。
+- [x] ~~README 页面如何隐藏，使用 index: false，参考[主题设置](https://vuepress-theme-hope.github.io/v2/zh/guide/layout/sidebar.html#%E9%80%9A%E8%BF%87%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90)~~
 - [x] ~~去 meta 标签，测试并未成功，不再尝试~~
 - [x] ~~[waline](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/comment.html#waline) 评论插件，无需账户，更适合大众。~~
 - [x] ~~google analytics 没反应，实际已经包含在 js 中了~~

@@ -1,7 +1,7 @@
 ---
 article: false
 title: HTML
-icon:
+icon: html
 order: 1
 ---
 

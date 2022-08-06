@@ -1,7 +1,8 @@
 ---
 article: false
-title: 生活知识
-order: 1
+title: 生活窍门
+icon: creative
+order: 6
 ---
 
 ## 个人护理

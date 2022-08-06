@@ -1,7 +1,7 @@
 ---
 article: false
 title: Python
-icon:
+icon: python
 order: 3
 ---
 

@@ -1,6 +1,7 @@
 ---
 article: false
 title: 评论插件
+icon: comment
 order: 3
 ---
 

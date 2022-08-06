@@ -1,9 +1,9 @@
 ---
 article: false
 title: Chrome 扩展
+icon: chrome
 order: 2
 ---
-
 
 常用 Chrome 扩展工具，链接多为 Chrome Web Store 项目页面。
 
@@ -13,7 +13,7 @@ order: 2
 
 [Bookmarks clean up](https://chrome.google.com/webstore/detail/bookmarks-clean-up/oncbjlgldmiagjophlhobkogeladjijl)：清理重复书签、空文件夹和失效链接，也能合并重复文件夹。
 
-[Chrome Better History](https://chrome.google.com/webstore/detail/view-chrome-history/oiginoblioefjckppeefcofmkkhgbdfc)：按日历日期罗列历史记录。
+[Better History](https://chrome.google.com/webstore/detail/better-history/egehpkpgpgooebopjihjmnpejnjafefi)：按日期、小时罗列历史记录，搜索更便捷。
 
 [Cookie Editor](https://chrome.google.com/webstore/detail/cookie-editor/iphcomljdfghbkdcfndaijbokpgddeno)：管理、修改、导出 Cookie。
 

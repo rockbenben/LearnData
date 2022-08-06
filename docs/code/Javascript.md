@@ -1,7 +1,7 @@
 ---
 article: false
 title: Javascript
-icon:
+icon: javascript
 order: 2
 ---
 

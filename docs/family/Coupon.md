@@ -1,6 +1,7 @@
 ---
 article: false
-title: 购物攻略
+title: 网购攻略
+icon: free
 order: 3
 ---
 

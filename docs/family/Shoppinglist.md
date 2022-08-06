@@ -1,6 +1,7 @@
 ---
 article: false
-title: 物品评价
+title: 购物清单
+icon: info
 order: 2
 ---
 

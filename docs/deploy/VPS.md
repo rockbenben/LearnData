@@ -1,7 +1,7 @@
 ---
 article: false
-title: VPS/网站修改
-icon:
+title: 服务器 VPS
+icon: IO
 order: 2
 ---
 
@@ -52,11 +52,43 @@ yarn && yarn upgrade
 pnpm i && pnpm up
 ```
 
-## [网站重定向](https://www.jb51.net/article/146957.htm)
+## 网站字体
 
-更改配置后，需要 nginx 重载配置后生效
+网站为了提高访问速度并保持设计的一致性，通常会选默认字体。这导致网站设计难以突出重点。针对这点，我通常会修改网站的导航栏字体，将其从默认字体改为 `思源黑体-粗`。
+
+1. 进入 [iconfont‑webfont](https://www.iconfont.cn/webfont)，输入导航栏内所有文字，并设置所需字体。
+2. 点击「生成字体」后，在选中字体的下方，点击「本地下载」。
+3. 将字体包上传到服务器，修改新字体的位置参数。
+4. 在导航栏的 `class` 属性中添加 `web-font`。
+
+## 米拓
+
+- 后台忘记密码，使用 [Metinfo 米拓重置工具](https://www.metinfo.cn/download/54.html)。
+- metinfo 新版静态页会删除 index.html，后续都改用 index.php。
+
+## 服务器 ECS
+
+### 系统修正
+
+服务器以 centos 为主
 
 ```bash
+# 系统升级，大版本更新后重启服务器
+yum update -y
+
+sudo dnf makecache #更新DNF包库
+sudo dnf check-update #检查更新
+sudo dnf update #更新所有的软件包
+
+# 新建用户，非 root 权限
+adduser xxxx
+```
+
+### [网站重定向](https://www.jb51.net/article/146957.htm)
+
+更改 nginx 配置后，nginx 重载配置后实现网站重定向。`$1` 表示第一个 `()` 内的正则匹配内容，`$2` 为第二个。
+
+```ini
 #隐性链接跳转
 location /xx1 {proxy_pass <https://xxx.com/;>}
 
@@ -76,16 +108,64 @@ location = / {
 }
 ```
 
-## 网站字体
+### 服务器初始配置
 
-网站为了提高访问速度并保持设计的一致性，通常会选默认字体。这导致网站设计难以突出重点。针对这点，我通常会修改网站的导航栏字体，将其从默认字体改为 `思源黑体-粗`。
+1. 安装[宝塔面板](https://www.bt.cn/bbs/thread-19376-1-1.html)。
+2. 删除阿里云主机监控。
 
-1. 进入 [iconfont‑webfont](https://www.iconfont.cn/webfont)，输入导航栏内所有文字，并设置所需字体。
-2. 点击「生成字体」后，在选中字体的下方，点击「本地下载」。
-3. 将字体包上传到服务器，修改新字体的位置参数。
-4. 在导航栏的 `class` 属性中添加 `web-font`。
+   ```bash
+   service aegis stop  #停止服务
+   chkconfig --del aegis  # 删除服务
+   ```
 
-## 米拓
+3. 配置 [阿里云端口开放](https://www.bt.cn/bbs/thread-2897-1-1.html)，导入安全规则。
+4. 宝塔上修改默认账号密码，并修改登录 22 的默认 SSH 端口。
+5. 网站-添加站点，将站点根目录放在 /www/wwwroot/xxx，同时新建数据库。
+6. 上传全站文件并解压，然后按照安装提示重新安装一次，最后导入备份数据库。
+7. 404.html 起效，宝塔网站配置文件中，删除 `error_page 404 /404.html;` 中的 `#`。
+8. SSL 证书设置，开启强制 HTTPS；PHP 版本；301 重定向；添加伪静态设置（metinfo 或其他网站后台有代码）。如果 301 设置失败，直接在「伪静态」配置中，放入跳转代码。
+9. [ECS 宝塔设置优化](https://www.bt.cn/bbs/forum.php?mod=viewthread&tid=3117)
 
-- 后台忘记密码，使用 [Metinfo 米拓重置工具](https://www.metinfo.cn/download/54.html)。
-- metinfo 新版静态页会删除 index.html，后续都改用 index.php。
+   - 添加计划任务，定期释放内存，建议设置每天释放一次，执行时机为半夜，如：04:00。
+   - 打开 Linux 工具箱添加 Swap。Swap 推荐与物理内存相同。
+   - 安装 PHP 缓存扩展，尽量使用更高的 PHP 版本，另外安装 opcache(脚本缓存)、redis(内容缓存)、imagemagick、fileinfo、exif。
+   - Redis 优化，在/etc/sysctl.conf 中添加 `net.core.somaxconn = 2048`，然后终端运行 `sysctl -p`。
+
+### 服务器报错
+
+#### CPU 100%
+
+当服务器 cpu 或内存突然飙升 100% 时，依次排除当前运行进程，检查是否安装更新了插件、应用或服务。
+
+如果找不到原因，可以临时设置定期任务。每隔 3 小时重启一次 nginx/apache。有时重启不正常，因此重启命令后 10 秒，再启动一次 nginx/apache。
+
+```bash
+/etc/init.d/nginx restart
+sleep 10s
+/etc/init.d/nginx start
+```
+
+#### SSL 证书
+
+如果 SSL 证书部署报错，可以按自动生成来部署。
+
+```bash
+#证书设置修改 /www/server/panel/vhost/nginx
+if ($server_port !~ 443){
+    rewrite ^(.*) <https://www.xxx.com$1> permanent;
+}
+#证书修改
+/www/server/panel/vhost/cert/
+#证书位置
+/www/server/panel/vhost/ssl
+```
+
+#### 数据库出错解决
+
+1. mysql 配置中 `mysqld` 在一行添加 `innodb_force_recovery=4`，数值可以 0-6，数值越大对数据库损害越大。正常启动 mysql 后，备份所有数据库和管理密码，并下载到本地。
+2. 在宝塔的「数据库」中删除所有数据库，卸载并重装 mysql。
+3. 重新导入数据库。
+
+### 服务器转移配置
+
+- 添加 url 规则 `^/rss.php` 到防火墙 URL 白名单，防止 rss 服务被屏蔽。

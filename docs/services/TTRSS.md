@@ -1,6 +1,7 @@
 ---
 article: false
 title: Tiny Tiny RSS
+icon: rss
 order: 3
 ---
 

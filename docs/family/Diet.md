@@ -1,7 +1,8 @@
 ---
 article: false
 title: 健康饮食
-order: 5
+icon: enum
+order: 1
 ---
 
 早餐：燕麦牛奶 + 坚果、桃李面包 + 鲜牛奶。

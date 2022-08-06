@@ -1,6 +1,7 @@
 ---
 article: false
 title: 静态部署
+icon: generic
 order: 1
 ---
 

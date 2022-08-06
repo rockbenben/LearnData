@@ -1,7 +1,8 @@
 ---
 article: false
 title: 系统重装
-order: 3
+icon: update
+order: 2
 ---
 
 ## 重装准备

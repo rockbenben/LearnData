@@ -1,6 +1,7 @@
 ---
 article: false
 title: 必备应用
+icon: list
 order: 1
 ---
 
@@ -129,6 +130,8 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 [DockIt](http://dogbean.ysepan.com/)：主显示屏中，非全屏状态下，快速将窗口局部化。如何默认不全屏；应用不自动吸边？
 
 [WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
+
+[SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 tube
 
 ---
 

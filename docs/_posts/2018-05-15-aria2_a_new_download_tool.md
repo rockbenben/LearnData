@@ -51,7 +51,7 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
 4. 点击 `aria2.exe` , 启动 aria2，该程序会在任务栏中植入图标。
 
-5. 修改 `aria2.conf`，更多设置参考 [Aria2 & YAAW 使用说明](http://aria2c.com/usage.html)。
+5. 修改 `aria2.conf`，更多设置参考 [Aria2 & YAAW 使用说明](http://aria2c.com/usage.html)。^[[Aria2 基础上手指南](https://zhuanlan.zhihu.com/p/30666881)]
 
    修改默认下载目录：
 
@@ -86,7 +86,7 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
 6. 开始下载
 
-   Aira2 没有原生软件界面，除了代码执行下载，普通用户输入网址 `aria2c.com` 就能启动下载界面。
+   Aira2 没有原生软件界面，除了代码执行下载，普通用户输入网址 `aria2c.com` 就能启动下载界面。^[[aria2 懒人安装教程](https://www.appinn.com/aria2-in-windows-setup/)]
 
    网页会自动与本地的 aira2 程序连接，实现下载管理。建议把该网址放到书签中，方便使用。
 
@@ -139,13 +139,3 @@ Aria2 启动需要分别打开下载界面和 exe 应用文件，比较麻烦。
 
 - **Aria2c 启动器**：使用 `http://aria2c.com/` 作为默认下载界面，不需要多余设置。
 - **AriaNg 启动器**：使用 AriaNg 作为下载界面，需将 AriaNg 解压到 Aria2 运行目录，如 `D:\Aria2\AriaNg`。
-
-参考资料：
-
-- [aria2 懒人安装教程](https://www.appinn.com/aria2-in-windows-setup/)
-- [Aria2+WebUI，迅雷倒下之后的代替品](http://blog.sina.com.cn/s/blog_6bf2cd8a0102x3w2.html)
-- [BT trackers 更新项目](https://github.com/ngosang/trackerslist)
-- [Aria2 基础上手指南](https://zhuanlan.zhihu.com/p/30666881)
-- [解决 Aria2 BT 下载速度慢没速度的问题](http://www.senra.me/solutions-to-aria2-bt-metalink-download-slowly/)
-- [yaaw (国人开发的 Aria2 web-ui)](https://github.com/binux/yaaw)
-- [bt-trackerlist 官方更新地址](https://github.com/ngosang/trackerslist)
