@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://newzone.top/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>LearnData-开源学习笔记</title>
+    <link>https://newzone.top/</link>
+    <description>开源工具、前端代码的学习笔记，记录一切能让自己提升的知识</description>
+    <language>zh-CN</language>
+    <pubDate>Mon, 08 Aug 2022 01:37:17 GMT</pubDate>
+    <lastBuildDate>Mon, 08 Aug 2022 01:37:17 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed2</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>系统</category>
+    <category>工具</category>
+    <category>自动化</category>
+    <category>网络</category>
+    <category>服务器</category>
+    <item>
+      <title>「硬盘布局不受 UEFI 固件支持」－华硕主板解决方案</title>
+      <link>https://newzone.top/_posts/2020-09-22-uefi_asus_board.html</link>
+      <guid>https://newzone.top/_posts/2020-09-22-uefi_asus_board.html</guid>
+      <source url="https://newzone.top/rss.xml">「硬盘布局不受 UEFI 固件支持」－华硕主板解决方案</source>
+      <category>系统</category>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>电脑用了 5 年，Win10 系统更新时突然提示「硬盘布局不受 UEFI 固件支持」。</p>
+<p><strong>解决办法</strong>：</p>
+<p>电脑重启，按 F2 或 DEL 进入 BIOS。</p>
+<p>选择高级模式，<code>启动－CSM－启动设备控制</code>，设置为「仅 Legecy OPROM」。</p>
+<p><img src="https://pic4.zhimg.com/v2-8a26bd62460f662caad3dba696c54efb_r.jpg" alt="" loading="lazy"></p>
+<p>设置完成后，Windows 系统就可以正常更新了。</p>
+<p>这是华硕主板的解决方案，其他主板的顺序或许不同，但原理是一致的，都是将启动模式修改为「Only Legecy」。</p>
+]]></content:encoded>
+      <enclosure url="https://pic4.zhimg.com/v2-8a26bd62460f662caad3dba696c54efb_r.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>电脑上实现微信双开，无需网页版或第三方软件</title>
+      <link>https://newzone.top/_posts/2017-04-18-wechat_multi_open.html</link>
+      <guid>https://newzone.top/_posts/2017-04-18-wechat_multi_open.html</guid>
+      <source url="https://newzone.top/rss.xml">电脑上实现微信双开，无需网页版或第三方软件</source>
+      <category>工具</category>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>由于工作原因，有时候我们需要在电脑上登录多个微信。但微信限制一个客户端只能登陆一个账号，PC 端 + 网页版就成了通用方案，操作效率下降许多。</p>
+<p>其实我们还有更好的办法。在微信 PC 版之余，同时安装微信 For Windows，就能实现客户端双开！</p>
+<h2 id="微信-for-windows-安装" tabindex="-1"> 微信 For Windows 安装</h2>
+<p>打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装 <code>微信 For Windows</code>。</p>
+<p><img src="http://tc.seoipo.com/2022-05-06-04-21-30.png" alt="" loading="lazy"></p>
+<p>安装好后，就能与微信 PC 版一齐启动，互不干扰。</p>
+<p><img src="http://tc.seoipo.com/2022-05-06-04-21-40.png" alt="" loading="lazy"></p>
+<h2 id="开机启动两个微信" tabindex="-1"> 开机启动两个微信</h2>
+<p>找到系统启动文件夹，文件夹路径为：<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code>。或者打开「运行」对话框，输入命令「shell:startup」，回车即可打开「启动文件夹」。</p>
+<p>将微信 for windows 10 的快捷方式放到「启动」文件夹里。</p>
+<p><img src="http://tc.seoipo.com/2022-05-06-04-23-49.png" alt="" loading="lazy"></p>
+<p>三开的话，可以在 Microsoft Store 上安装 微信 (UWP) 。</p>
+<p>如果还需要继续多开微信，可以参考 @刘舒怡 的方法：</p>
+<blockquote>
+<p>只要在 2 秒内快速连续双击打开软件，就能弹出很多登录界面，你想登多少个就登多少个</p>
+</blockquote>
+<p>另外，有人专门开发了微信/QQ 多开的补丁，需要四开以上的可以试试 <a href="https://github.com/huiyadanli/RevokeMsgPatcher" target="_blank" rel="noopener noreferrer">RevokeMsgPatcher</a>。</p>
+<p>但多开补丁风险未知，我只用了其中的防撤回功能，需谨慎使用多开补丁。</p>
+<p>国内搬运地址：<a href="https://wwz.lanzouf.com/ij0oz05ns3di" target="_blank" rel="noopener noreferrer">RevokeMsgPatcher.v1.5.zip</a></p>
+]]></content:encoded>
+      <enclosure url="http://tc.seoipo.com/2022-05-06-04-21-30.png" type="image/png"/>
+    </item>
+    <item>
+      <title>RSS 入门篇：Feed43&amp;FeedEx-为静态网页定制 RSS 源</title>
+      <link>https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html</link>
+      <guid>https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html</guid>
+      <source url="https://newzone.top/rss.xml">RSS 入门篇：Feed43&amp;FeedEx-为静态网页定制 RSS 源</source>
+      <category>自动化</category>
+      <pubDate>Sat, 22 Apr 2017 12:54:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>迷上 IFTTT 后急需 RSS 来监测网页，找到免费的 FEED43。网上有很多教程，但对新手都不够友好，就重新整理了一份。</p>
+<p><strong>► 开始烧制属于自己的 feed</strong></p>
+<h2 id="_1-进入网页" tabindex="-1"> 1. 进入网页</h2>
+<p><a href="http://www.feed43.com/" target="_blank" rel="noopener noreferrer">FEED43</a> 无需注册，点击 Create your own feed 直接使用。</p>
+<p><img src="https://pic1.zhimg.com/v2-b5da0b08f632376fad3925a779e373b4_r.jpg" alt="" loading="lazy"></p>
+<h2 id="_2-选定-rss-网页" tabindex="-1"> 2. 选定 RSS 网页</h2>
+<p>将目标网址添入 Step1. Specify source page address (URL)，将输入的源代码复制到 txt 文档中（方便之后写抓取规则）</p>
+<p><img src="https://pic1.zhimg.com/v2-1b687a5b1c325ba6d04fbdcc13b95668_r.jpg" alt="" loading="lazy"></p>
+<p>如果 Page Source 显示为乱码，Encoding 可设为 <strong>UTF-8</strong> 。</p>
+<h2 id="_3-定制-rss-抓取规则" tabindex="-1"> 3. 定制 RSS 抓取规则</h2>
+<p>Global Search Pattern 是选择你要搜索的范围。可以不填，这样会搜索整个页面，一般新手都选择整个页面，即空白。Item (repeatable) Search Pattern 这部分最重要，是我们要抓取的内容。</p>
+<p><img src="https://pic1.zhimg.com/v2-b1fa90c59739bddc0c27134cd36ba6bc_r.jpg" alt="" loading="lazy"></p>
+<p>仔细查看 Step1 中的源代码，找到区需要抓取的部分，输入到 Item (repeatable) Search Pattern。</p>
+<p>测试网址：<code>http://news.163.com/special/0001386F/rank_whole.html</code>。</p>
+<p>需要抓取的源代码：</p>
+<div><pre><code><span><span><span>&lt;</span>tr</span><span>></span></span>
+  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>red<span>"</span></span><span>></span></span>
+    <span><span><span>&lt;</span>span</span><span>></span></span>2<span><span><span>&lt;/</span>span</span>
+    <span>></span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>更时尚更运动 车展实拍解析红旗 H5<span>"</span></span>
+      <span>></span></span>更时尚更运动 车展实拍解析红旗 H5<span><span><span>&lt;/</span>a</span>
+    <span>></span></span>
+  <span><span><span>&lt;/</span>td</span><span>></span></span>
+  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>cBlue<span>"</span></span><span>></span></span>11211615<span><span><span>&lt;/</span>td</span><span>></span></span>
+<span><span><span>&lt;/</span>tr</span><span>></span></span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p><img src="https://pic2.zhimg.com/v2-cf6dbf2c09189f7517ec63abdc80c50d_r.jpg" alt="" loading="lazy"></p>
+<p><strong>抓取规则</strong>：</p>
+<div><pre><code><span><span><span>&lt;</span>tr</span><span>></span></span>
+  {*}
+  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>{*}<span>"</span></span><span>></span></span><span><span><span>&lt;</span>span</span><span>></span></span>{*}<span><span><span>&lt;/</span>span</span><span>></span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>{%}<span>"</span></span><span>></span></span>{%}<span><span><span>&lt;/</span>a</span><span>></span></span><span><span><span>&lt;/</span>td</span><span>></span></span>
+  {*}
+  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>cBlue<span>"</span></span><span>></span></span>{*}<span><span><span>&lt;/</span>td</span><span>></span></span>
+  {*}
+<span><span><span>&lt;/</span>tr</span><span>></span></span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>点击 Extract，进行抓取。</p>
+<p><img src="https://pic4.zhimg.com/v2-e9486741a6229ab258a95147f584571b_r.jpg" alt="" loading="lazy"></p>
+<h2 id="_4-整理-rss-输入格式" tabindex="-1"> 4. 整理 rss 输入格式</h2>
+<p>Define output format，一般情况下前面三个会已经写好，后三个就将前面得出的 item 里面的元素填入即可，我这里{%1}对应的是链接所以填入 Link，{%2}对于标题就填入 Title。</p>
+<p><img src="https://pic1.zhimg.com/v2-b4614f5c46090f2eb762aac87d604350_r.jpg" alt="" loading="lazy"></p>
+<p>然后点击 preview，完成制作，同时出现预览。</p>
+<p><img src="https://pic2.zhimg.com/v2-498bf1f1c0b14da172498b58f59e39b9_r.jpg" alt="" loading="lazy"></p>
+<p>如果注册了 FEED43 的账号，可以修改 rss 地址，但不能改为中文，否则会 rss 出错。</p>
+<h2 id="_5-获取-rss-地址" tabindex="-1"> 5. 获取 RSS 地址</h2>
+<p>点击 Feed URL 可得 rss 地址，我这里是 <a href="https://www.feed43.com/dianji.xml" target="_blank" rel="noopener noreferrer">https://www.feed43.com/dianji.xml</a></p>
+<p><img src="https://pic1.zhimg.com/v2-f3b00e876d8df136f7d354b4fc22f900_r.jpg" alt="" loading="lazy"></p>
+<p>在 RSS reader 中展示为</p>
+<p><img src="https://pic4.zhimg.com/v2-6d8f503ff3da16eb985ca1d3ae2de98f_r.jpg" alt="" loading="lazy"></p>
+<h2 id="_6-全文抓取" tabindex="-1"> 6. 全文抓取</h2>
+<p>feed43 导出的条目必须点击链接才能看到内容。在 rss 展示全文，需要通过 FeedEx 再转一次。注意：feed43 免费用户过多，<strong>需在浏览器中打开一次才能得到真实链接</strong> (一般为 <code>http://node2.feed43.com</code>)，FeedEx 需使用真实链接，一般 3 分钟内转换好。</p>
+<p>FeedEx：<a href="https://feedex.net/" target="_blank" rel="noopener noreferrer">https://feedex.net/</a></p>
+<p><img src="https://pic4.zhimg.com/v2-8e3701adffa1d6fb4ea10dda2704988b_r.jpg" alt="" loading="lazy"></p>
+<p>feeds43 免费版每 6 小时抓取一次，显示最新的 20 条内容。</p>
+<p>如果网页源更新较频繁的话，可使用 RSSHub 和 Huginn。</p>
+<h2 id="rss-合集" tabindex="-1"> RSS 合集</h2>
+<p>汇总的 RSS 永久订阅 feeds，均通过 RSSHub 和 Huginn 制作。如果有兴趣自制 RSS，可参考以下教程。</p>
+<ul>
+<li>
+<p><a href="https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html" target="_blank" rel="noopener noreferrer">RSS 入门篇：FEED43&amp;FeedEx-为静态网页定制 RSS 源</a></p>
+</li>
+<li>
+<p><a href="https://newzone.top/_posts/2018-10-07-huginn_scraping_any_website.html" target="_blank" rel="noopener noreferrer">RSS 进阶篇：Huginn - 真·为任意网页定制 RSS 源（PhantomJs 抓取）</a></p>
+</li>
+<li>
+<p><a href="https://newzone.top/_posts/2019-04-01-rsshub_noob.html" target="_blank" rel="noopener noreferrer">RSS 速成篇：RSSHub 捡现成的轮子</a></p>
+</li>
+<li>
+<p><a href="https://newzone.top/_posts/2020-03-25-rsshub_on_vps.html" target="_blank" rel="noopener noreferrer">RSS 速成篇 2：RSSHub 自部署</a></p>
+</li>
+<li>
+<p><a href="https://newzone.top/_posts/2021-10-23-nas_with_rsshub_and_huginn.html" target="_blank" rel="noopener noreferrer">RSS 完结篇：节省千元服务费，RSSHub、Huginn 转移 NAS</a></p>
+</li>
+<li>
+<p><a href="https://newzone.top/_posts/2022-03-17-rss_persistent_link_collection.html" target="_blank" rel="noopener noreferrer">RSS 汇总篇：RSS 永久链接合集，拒绝 RSS 失效</a></p>
+</li>
+</ul>
+<p><strong>参考资料</strong>：</p>
+<ul>
+<li>
+<p><a href="http://www.appinn.com/feed43/" target="_blank" rel="noopener noreferrer">FEED43 – 为没有 Feed 的网页生成 RSS 格式订阅源 [教程]</a></p>
+</li>
+<li>
+<p><a href="https://www.douban.com/note/199431341/" target="_blank" rel="noopener noreferrer">喜欢的网站，没有 rss 怎么办，自己做！！用 FEED43 自己烧制喜欢网页 rss 教程 -- 小佑 (其实内附双教程)</a></p>
+</li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://pic1.zhimg.com/v2-b5da0b08f632376fad3925a779e373b4_r.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>office 2016 安装程序报错解决办法</title>
+      <link>https://newzone.top/_posts/2017-07-28-office_2016_installer_error.html</link>
+      <guid>https://newzone.top/_posts/2017-07-28-office_2016_installer_error.html</guid>
+      <source url="https://newzone.top/rss.xml">office 2016 安装程序报错解决办法</source>
+      <category>系统</category>
+      <pubDate>Fri, 28 Jul 2017 11:02:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>重新安装 Office 系统或更改安装组件时，经常提示：「找不到有效的安装源」，但实际这些文件都能在安装包内找到。</p>
+<p><img src="https://pic3.zhimg.com/v2-85bd2a49a47ee6d0c8eade7b3c249516_r.jpg" alt="" loading="lazy"></p>
+<h2 id="解决方法" tabindex="-1"> 解决方法</h2>
+<ol>
+<li>
+<p>打开 regedit.exe，在注册表中找到路径 <code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Delivery\SourceEngine\Downloads\{90160000-00BA-0804-1000-0000000FF1CE}-C\Sources\PROPLUS16(RG)-6186D162</code>。</p>
+</li>
+<li>
+<p>修改 Path 数据，改为安装包位置，比如 <code>F:\5.软件资源\系统重装\SW_DVD5_Office_Professional_Plus_2016_64Bit_ChnSimp_MLF_X20-42426\groove.zh-cn</code>。</p>
+<p><img src="https://pic3.zhimg.com/v2-650ede86dd191a8f0a1cd6e9b815377a_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>在 C 盘建立安装组件：</p>
+<ul>
+<li>把安装包路径 <code>\groove.zh-cn\</code> 下的文件复制到 <code>C:\MSOCache\All Users\{90160000-00BA-0804-1000-0000000FF1CE}-C</code> 目录下 (如果没有这个目录就自己建立)。</li>
+<li>把安装包路径 <code>\proplus.ww\</code> 下的文件复制到 <code>C:\MSOCache\All Users\{90160000-0011-0000-1000-0000000FF1CE}-C</code>。</li>
+</ul>
+</li>
+<li>
+<p>将需要的程序文件放入 MSOCache 路径
+MSOCache 其它的目录下内容同样根据注册表的内容把它指示的光盘中的安装文件复制到相应的目录下。如果没有那个目录就要自己建立，类似的目录一共有 12 个。
+如果不想全装可以只选择需要的软件，下面以 Onenote 和 Access 为例。</p>
+<ul>
+<li><strong>Onenote</strong> 把安装包路径 <code>\onenote.zh-cn\</code> 下的文件复制到 <code>C:\MSOCache\All Users\{90160000-00A1-0804-1000-0000000FF1CE}-CC</code>。</li>
+<li><strong>Access</strong> 把安装包路径 <code>\access.zh-cn\</code> 下的文件复制到 <code>C:\MSOCache\All Users\{90160000-0015-0804-1000-0000000FF1CE}-C</code>。</li>
+</ul>
+</li>
+<li>
+<p>最后进入安装包运行 setup.exe 安装正常。</p>
+</li>
+</ol>
+<p>Office 组件报错大都是由于 MSOCache 目录被删，建议安装 Office 后不要删除该目录。使用优化工具时，要注意保留 MSOCache 目录及其下的文件。</p>
+]]></content:encoded>
+      <enclosure url="https://pic3.zhimg.com/v2-85bd2a49a47ee6d0c8eade7b3c249516_r.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>OneNote 2016 无法登陆问题解决</title>
+      <link>https://newzone.top/_posts/2017-07-29-onenote_2016_cannot_be_logged_in.html</link>
+      <guid>https://newzone.top/_posts/2017-07-29-onenote_2016_cannot_be_logged_in.html</guid>
+      <source url="https://newzone.top/rss.xml">OneNote 2016 无法登陆问题解决</source>
+      <category>系统</category>
+      <pubDate>Sat, 29 Jul 2017 15:19:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>office 版的 OneNote 安装后无法登陆，点击下一步没反应。问题的根源出在 IE 的设置上。</p>
+<p><img src="https://pic4.zhimg.com/v2-d5945359b896ffd09d9973e9597ec06b_r.jpg" alt="" loading="lazy"></p>
+<p><strong>问题测试：</strong> 打开 IE，访问 live.com，网页无法打开，会提示需要启动 JavaScript</p>
+<p><img src="https://pic1.zhimg.com/v2-cc00b3039f755b92f9ae511c8b7debd0_r.jpg" alt="" loading="lazy"></p>
+<p>问题找到了，接下来开始解决。</p>
+<ol>
+<li>
+<p>打开 IE 设置-Internet 选项</p>
+<p><img src="https://pic2.zhimg.com/v2-717bf3c8b62748b62a04219435b8a75d_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>启用脚本-Java 小程序脚本和活动脚本</p>
+<p><img src="https://pic4.zhimg.com/v2-25697b0c27aa8780c532b7a03a78dcbf_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>打开 OneNote2016</p>
+<p><img src="https://pic4.zhimg.com/v2-ff20ef8aa22215cba64b879775dfdf4f_r.jpg" alt="" loading="lazy"></p>
+</li>
+</ol>
+]]></content:encoded>
+      <enclosure url="https://pic4.zhimg.com/v2-d5945359b896ffd09d9973e9597ec06b_r.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>电脑关机了，第二天一看确又开着的？让系统正常关机！</title>
+      <link>https://newzone.top/_posts/2017-09-02-forced_shutdown.html</link>
+      <guid>https://newzone.top/_posts/2017-09-02-forced_shutdown.html</guid>
+      <source url="https://newzone.top/rss.xml">电脑关机了，第二天一看确又开着的？让系统正常关机！</source>
+      <category>系统</category>
+      <pubDate>Sat, 02 Sep 2017 00:38:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>电脑晚上明明按下关机键，第二天早上却发现电脑开了一晚上？</p>
+<p>这是因为后台应用程序和 GUI 应用程序在阻止或取消关机，系统未能按正常关机。按下列方法授予系统自动关机权限，就能让系统正常关机。</p>
+<p><strong>方法如下：</strong></p>
+<ol>
+<li>
+<p>左下角「开始菜单」-「运行」，打开“运行”对话框，输入 <code>Regedit</code>，进入注册表编辑器</p>
+</li>
+<li>
+<p>打开窗口后，在注册表上方菜单中输入 <code>计算机\HKEY_CURRENT_USER\Control Panel\Desktop</code>。</p>
+</li>
+<li>
+<p>在右侧窗格中找到 <code>AutoEndTasks</code> 键值，如果没有，则新建一个名为 <code>AutoEndTasks</code> 的「字符串值」，并将键值的数值设为 <code>1</code>。AutoEndTasks 表示自动结束失去响应的程序任务，0 为 false，是默认值，表示不自动结束失去响应的程序；1 为 true，则表示电脑会自动结束失去响应的程序。</p>
+<p><img src="https://pic3.zhimg.com/v2-c643b9737b35f9dd9a8382c5653e3d3e_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>查找或创建字符串值 <code>WaitToKillAppTimeout</code>，将数值设为 <code>2000</code>。2000 是毫秒，就是当有没有响应的程序时，等待 2 秒后会自动结束相应程序。</p>
+</li>
+</ol>
+<p>操作下，让电脑默认强制关机吧！</p>
+<p>——————————</p>
+<p>网上流行一种修改「gpedit.msc」来达到快速关机的方法，但试验无效，<strong>不能强制关机</strong>。</p>
+<ol>
+<li>
+<p>点击桌面左下角“windows”图标，选择“运行”选项；</p>
+</li>
+<li>
+<p>进入运行窗口，输入“gpedit.msc”命令，按下回车键确定；</p>
+</li>
+<li>
+<p>打开本地组策略编辑器界面，依次展开“计算机配置——管理模板——系统——关机选项”文件夹；鼠标右击右侧“关闭会阻止或取消关机的应用程序的自动终止功能”选项，接着选择“编辑”功能；将弹出窗口选项更改成“已启用”，然后点击“应用——确定”按钮。</p>
+<p><img src="https://pic4.zhimg.com/v2-4b736585b25509b036935a2f9c37d843_r.jpg" alt="" loading="lazy"></p>
+<p>但开启后，提示程序没有响应，无法关机。</p>
+<p><img src="https://pic4.zhimg.com/v2-46fafee0cb6e212e793fc80268ab0917_r.jpg" alt="" loading="lazy"></p>
+</li>
+</ol>
+<p>修改“gpedit.msc”可以关闭程序的关机权限，但没授予关机对程序的关闭权限，<strong>不能使用</strong>！</p>
+]]></content:encoded>
+      <enclosure url="https://pic3.zhimg.com/v2-c643b9737b35f9dd9a8382c5653e3d3e_r.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>加速 SMB 协议，让 PC 变身小型 NAS</title>
+      <link>https://newzone.top/_posts/2017-09-03-smb_lan_sharing.html</link>
+      <guid>https://newzone.top/_posts/2017-09-03-smb_lan_sharing.html</guid>
+      <source url="https://newzone.top/rss.xml">加速 SMB 协议，让 PC 变身小型 NAS</source>
+      <category>系统</category>
+      <pubDate>Sun, 03 Sep 2017 20:57:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Windows 系统开启 SMB 协议：</p>
+<ol>
+<li>
+<p>打开「控制面板」窗口，在「类别」查看方式下单击「程序」。</p>
+<p><img src="https://pic1.zhimg.com/v2-af3e5c2a16a1f245ac6584097c53be60_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>打开「程序」窗口，单击「启用或关闭 windows 功能」。</p>
+<p><img src="https://pic1.zhimg.com/v2-36207f67a5eb3aeb8ee7c1ae855b13dc_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>打开「windows 功能」窗口，勾选 SMB 直通。</p>
+<p><img src="https://pic3.zhimg.com/v2-b1feb5554e6f1da003266be9cb470dfe_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>勾选「远程差分压缩 API 支持」。</p>
+<p><img src="https://pic4.zhimg.com/v2-c5fc3e3d771b6e4bd2516372c69b340b_r.jpg" alt="" loading="lazy"></p>
+</li>
+</ol>
+<p>网上很多教程都要求关闭“远程差分压缩”复选框，这是对“远程差分压缩”的误解。</p>
+<p>官方解释：远程差分压缩 (RDC) 功能是一组应用程序编程接口 (API)，这些应用程序可用于确定某个文件集是否发生了变化，如果是，就检测哪部分文件进行了更改。RDC 检测文件中数据的插入、删除和重新排列，使应用程序能够仅复制文件的已更改部分。这对于在有限带宽网络（如广域网 (WAN) 连接）上复制文件非常有用。</p>
+]]></content:encoded>
+      <enclosure url="https://pic1.zhimg.com/v2-af3e5c2a16a1f245ac6584097c53be60_r.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>光猫改造 篇一：超级管理员密码破解（E8-C-EPON RG201O-CA_V1A2)</title>
+      <link>https://newzone.top/_posts/2017-10-18-light_cat_e8-c-epon_admin.html</link>
+      <guid>https://newzone.top/_posts/2017-10-18-light_cat_e8-c-epon_admin.html</guid>
+      <source url="https://newzone.top/rss.xml">光猫改造 篇一：超级管理员密码破解（E8-C-EPON RG201O-CA_V1A2)</source>
+      <category>网络</category>
+      <pubDate>Wed, 18 Oct 2017 18:28:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="为什么要获得光猫超级密码" tabindex="-1"> 为什么要获得光猫超级密码？</h2>
+<p>*端口映射 (eMule high ID)、桥接模式（路由器掌控拨号，不能兼容固定电话）。*网上关于光猫超级密码的获取攻略都在 2012-14 年，已经无法使用了。</p>
+<h3 id="测试环境" tabindex="-1"> 测试环境</h3>
+<p>运营商：上海电信
+设备：贝尔 E8-C-EPON
+硬件版本：RG201O-CA_V1A2
+软件版本：E201OCAA2V11S</p>
+<h2 id="光猫超级密码破解步骤" tabindex="-1"> 光猫超级密码破解步骤</h2>
+<ol>
+<li>
+<p>地址栏输入 <code>192.168.1.1</code>，用户名：光猫背面，密码：光猫背面，登陆管理界面。</p>
+<p><img src="https://pic1.zhimg.com/v2-9e43bc86b9095f3f6c2cfa4bd58dcd68_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>浏览器地址栏输入 <code>192.168.1.1/backupsettings.txt</code>，将 <code>backupsettings.txt</code> 文件导出并备份在电脑上。
+如果打不开上面的地址，改为输入 <code>192.168.1.1/backupsettings.conf</code>，并做好备份。</p>
+</li>
+<li>
+<p>打开下载好的文档 <code>backupsettings.txt</code> 或 <code>backupsettings.conf</code>，搜索 <code>TeleComAccount</code>，两个 password 间就是超级密码。超级账号是 telecomadmin。</p>
+<p><img src="https://pic3.zhimg.com/v2-ee441dd18cc8e5f6303fdaef82b6d476_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>地址栏输入 <code>192.168.1.1</code>，用刚获取的超级密码登陆，然后开始端口映射和设备桥接了。</p>
+<p><img src="https://pic1.zhimg.com/v2-31d6bb6b90be541c186a360fe2dd323c_r.jpg" alt="" loading="lazy"></p>
+</li>
+</ol>
+<p>新装光猫无法获取超级密码的话，可直接使用运营商 app 进行映射。</p>
+]]></content:encoded>
+      <enclosure url="https://pic1.zhimg.com/v2-9e43bc86b9095f3f6c2cfa4bd58dcd68_r.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>光猫改造 篇二：光猫 + 路由器，实现端口映射</title>
+      <link>https://newzone.top/_posts/2017-10-18-light_cat_port_forwarding.html</link>
+      <guid>https://newzone.top/_posts/2017-10-18-light_cat_port_forwarding.html</guid>
+      <source url="https://newzone.top/rss.xml">光猫改造 篇二：光猫 + 路由器，实现端口映射</source>
+      <category>网络</category>
+      <pubDate>Wed, 18 Oct 2017 22:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>光猫默认没有管理权限，需要先获得光猫的超管密码，参考 <a href="https://newzone.top/_posts/2017-10-18-Light_cat_E8-C-EPON_admin.html" target="_blank" rel="noopener noreferrer">光猫改造 篇一：超级管理员密码破解（E8-C-EPON RG201O-CA_V1A2）</a>。</p>
+<p><strong>光猫端口映射步骤：</strong></p>
+<ol>
+<li>
+<p>登陆光猫管理地址 192.168.1.1，应用 → 高级 NAT 设置 →DMZ 设置，启用 DMZ 主机绑定路由器地址（路由器 WAN 口 IP 地址-192.168.1.X)</p>
+<p><img src="https://pic2.zhimg.com/v2-658d5433201b79da169a520f4b19d495_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>登陆路由器管理地址 192.168.X.X。这里已梅林 AC5300 为图例。</p>
+<p><img src="https://pic4.zhimg.com/v2-32825a6d3d75f4bfe5668f1b0d6c6683_r.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>在路由器设置选项中找到“端口转发”，按要求设置端口。我这是 eMule TCP 和 UDP 转发，设置完成后，变成 High ID。</p>
+<p><img src="https://pic2.zhimg.com/v2-8f3eb2c42fd5d1a98f1345c6a5855e99_r.jpg" alt="" loading="lazy"></p>
+<p><img src="https://pic2.zhimg.com/v2-b4f5179278da52409f4a04ce7d139f99_r.jpg" alt="" loading="lazy"></p>
+</li>
+</ol>
+]]></content:encoded>
+      <enclosure url="https://pic2.zhimg.com/v2-658d5433201b79da169a520f4b19d495_r.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>小型网站管理员，快放弃 CDN！</title>
+      <link>https://newzone.top/_posts/2018-01-19-forget_the_cdn.html</link>
+      <guid>https://newzone.top/_posts/2018-01-19-forget_the_cdn.html</guid>
+      <source url="https://newzone.top/rss.xml">小型网站管理员，快放弃 CDN！</source>
+      <category>服务器</category>
+      <pubDate>Fri, 19 Jan 2018 12:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>CDN 的全称是 Content Delivery Network，即内容分发网络。其基本思路是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN 系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。其目的是使用户可就近取得所需内容，解决 Internet 网络拥挤的状况，提高用户访问网站的响应速度。</p>
+</blockquote>
+<p>国内 CDN 有阿里云、腾讯、百度、网宿、七牛云、又拍云等。</p>
+<p>这里以阿里云 CDN 为例。我之前使用阿里云全站 CDN，一直以为速度会加快。但命中率只有 7%，在更换为 ECS 后，命中率更降为 2%。</p>
+<p>更可怕的是，我提交工单后才得到的事实。<strong>CDN 运营商会根据 DNS 分配就近分配 CDN 节点，抓取网站缓存。</strong></p>
+<p>第一反应：「不错啊。如果网站在北京，访客在上海，直接访问上海的节点，速度必然要快一些。」</p>
+<p>但事实并没有这么完美。<strong>CDN 是根据本地 DNS 来分配节点。</strong></p>
+<p>你从上海放出访问申请，DNS 有可能帮你分配去广东的节点。极端情况下，有可能分配到不同运营商，<strong>导致无法打开网站。</strong></p>
+<p>我进行了三个测试，本地网络环境都是上海电信，更换了 DNS 设置。</p>
+<p>第一次测试使用 114DNS，分配了广州鹏博士网络，网站打不开。提交工单后，客服反映<strong>这个节点是局域网节点，只有鹏博士网络才能打开。</strong></p>
+<p>第二次测试使用电信默认 DNS，分配苏州电信，网站正常。</p>
+<p>第三次测试使用阿里云 DNS，分配杭州电信，网站正常</p>
+<p>后面两次虽然都能打开网站，但没有一个分配在上海电信，这种加速又能快多少呢？</p>
+<p>在网站<strong>配置足够、流量不大（日均访客 1000 以内）</strong> 时，不建议使用全站 CDN，这只会拖累访问体验。小网站只适合将图片部署在 CDN。</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
