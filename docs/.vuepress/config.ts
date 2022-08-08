@@ -4,6 +4,7 @@ import { defineUserConfig } from "@vuepress/cli";
 //import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+import { feedPlugin } from "vuepress-plugin-feed2";
 import { path } from "@vuepress/utils";
 import theme from "./theme";
 
@@ -47,6 +48,11 @@ export default defineUserConfig({
     }),
     googleAnalyticsPlugin({
       id: "G-RWKZTY2P9R",
+    }),
+    feedPlugin({
+      hostname: "https://newzone.top",
+      rss: true,
+      count: 10,
     }),
   ],
 });
