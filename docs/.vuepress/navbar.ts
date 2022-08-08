@@ -54,6 +54,5 @@ export default navbar([
       "Coupon",
     ],
   },
-  //{ text: "GitHub", icon: "github", link: "/deploy/GitHub" },
   { text: "工具收藏", icon: "tool", link: "https://nav.newzone.top/" },
 ]);
