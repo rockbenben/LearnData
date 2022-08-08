@@ -28,4 +28,28 @@ order: -41
 
 另外，推荐联系当地的联想来酷智生活店，询问是否有现货。来酷渠道属于联想官方，来源有保证。如果来酷店没现货，会在到货后电话通知，送货上门。
 
-黑卡情报更新较快，博客不会经常同步，有需要去 [知乎专栏](https://zhuanlan.zhihu.com/p/478291918) 上看当月优购码。
+## 8 月黑卡情报
+
+![](https://pic1.zhimg.com/v2-d10a6d62f7af9c94ff215a992ca978d8_b.jpg)
+
+## 7 月黑卡情报
+
+![](https://pic2.zhimg.com/v2-1f1cc252dc0961e7bc793c0d0d7a80b5_b.jpg)
+
+## 6 月黑卡情报
+
+![](https://pic1.zhimg.com/v2-b996f4204b27ee000b7e390177454b88_r.jpg)
+
+## 5 月黑卡情报
+
+![](https://pic1.zhimg.com/v2-01f7ee6a4f8dd5401dc8de6936fd8d04_b.jpg)
+
+## 4 月黑卡情报
+
+![](https://pic1.zhimg.com/v2-8b5b328f1eed01c937b841fbad094bdc_b.jpg)
+
+## 3 月黑卡情报
+
+![](https://pic3.zhimg.com/v2-7658373e9ba5b75fcce0b890fd407caa_b.jpg)
+
+![](https://pic3.zhimg.com/v2-d8184c084b411ecd6ad815e4d6601e42_b.jpg)
