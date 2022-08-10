@@ -7,6 +7,8 @@ export default hopeTheme({
   //主题选项
   //https://vuepress-theme-hope.github.io/v2/zh/config/theme/layout.html
   hostname: "https://newzone.top",
+  //侧边栏排序规则
+  sidebarSorter: ['readme', 'order', 'title'],
 
   author: {
     name: "清顺",

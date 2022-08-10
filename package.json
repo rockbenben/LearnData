@@ -1,10 +1,6 @@
 {
-  "dependencies": {
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.49",
-    "sass-loader": "^13.0.2",
-    "vuepress-theme-reco": "^2.0.0-beta.26",
-    "vuepress-webpack": "2.0.0-beta.49"
-  },
+  "name": "vuepress-theme-hope-template",
+  "version": "2.0.0",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
@@ -12,9 +8,13 @@
   },
   "devDependencies": {
     "@vuepress/client": "^2.0.0-beta.49",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.49",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.49",
     "@vuepress/plugin-search": "2.0.0-beta.49",
+    "pnpm": "^7.9.0",
+    "sass-loader": "^13.0.2",
     "vue": "^3.2.37",
-    "vuepress-theme-hope": "2.0.0-beta.87"
+    "vuepress-theme-hope": "2.0.0-beta.90",
+    "vuepress-theme-reco": "^2.0.0-beta.30",
+    "vuepress-webpack": "2.0.0-beta.49"
   }
 }

@@ -30,7 +30,7 @@ Microsoft store 页面无法打开，提示需要联网或刷新。大多数更�
 
 网银用户会重复出现该问题，重新勾选 TLS 即可解决。
 
-如果你依然无法访问，可尝试重置网络连接、DNS、缓存、应用商店设置，操作参考[Microsoft Store 打不开，代码：0x80131500](https://answers.microsoft.com/zh-hans/windows/forum/all/microsoft/43acd62e-a11e-449c-9fa4-50931ad38565)。
+如果你依然无法访问，可尝试重置网络连接、DNS、缓存、应用商店设置，操作参考 [Microsoft Store 打不开，代码：0x80131500](https://answers.microsoft.com/zh-hans/windows/forum/all/microsoft/43acd62e-a11e-449c-9fa4-50931ad38565)。
 
 完整操作流程：
 

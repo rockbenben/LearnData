@@ -2,7 +2,7 @@
 title: RSS 汇总篇：RSS 永久链接合集，拒绝 RSS 失效
 date: 2022-03-17
 category:
-  - 工具
+  - 自动化
 tag:
   - rss
 order: -42

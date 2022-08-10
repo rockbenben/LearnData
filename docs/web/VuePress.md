@@ -15,7 +15,7 @@ order: 1
 
 ## 初始配置
 
-1. 环境配置：安装 npm、yarn、pnpm，方法查看 [Linux 环境部署教程](../deploy/VPS.html#环境部署)。
+1. 环境配置：安装 pnpm，也支持 npm 和 yarn，方法查看 [Linux 环境部署教程](../deploy/VPS.html#环境部署)。
 2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope@next docs`。vuepress-theme-hope 主题的样例文件会存储在该路径下。
 3. 执行命令 `pnpm docs:dev` 启动样例网站。
 4. `docs\.vuepress` 路径下的 config.ts，navbar.ts，sidebar.ts，theme.ts 可以修改页面属性，设置方法参考 [官方案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
@@ -154,6 +154,7 @@ export default hopeTheme({
 ## 自定义主题
 
 - [ ] 插件[docsearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html)：将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。开源技术向博客可以申请官方支持，商业化内容需要使用自己的爬虫。目前 Algolia DocSearch 申请中，等结果通知。
+- [ ] 全文搜索插件：[vuepress2-plugin-full-text-search](https://github.com/ota-meshi/vuepress2-plugin-full-text-search)，处于 beta 版，暂未尝试。
 - [x] ~~README 页面如何隐藏，使用 index: false，参考[主题设置](https://vuepress-theme-hope.github.io/v2/zh/guide/layout/sidebar.html#%E9%80%9A%E8%BF%87%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90)~~
 - [x] ~~去 meta 标签，测试并未成功，不再尝试~~
 - [x] ~~[waline](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/comment.html#waline) 评论插件，无需账户，更适合大众。~~

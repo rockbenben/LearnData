@@ -51,7 +51,7 @@ Windows 自用软件，以开源软件为主。
 
 换脸特效：Snap Camera（操作简单） & [Avatarify Python](https://github.com/alievk/avatarify)
 
-按键可视化：[Carnac](https://github.com/Code52/carnac) & [ClickShow](https://github.com/cuiliang/ClickShow) & [KeyCastOW](https://github.com/brookhong/KeyCastOW)
+按键可视化：[Carnac](https://github.com/Code52/carnac) & [Keyviz](https://github.com/mulaRahul/keyviz) & [ClickShow](https://github.com/cuiliang/ClickShow) & [KeyCastOW](https://github.com/brookhong/KeyCastOW)
 
 投屏工具：[scrcpy](https://github.com/Genymobile/scrcpy) (手机投屏) & [Macast](https://gitee.com/xfangfang/Macast/releases/)（手机视频投屏到电脑）& 蓝莓投屏
 

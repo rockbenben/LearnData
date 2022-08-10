@@ -66,9 +66,9 @@ order: -47
 
 ### 使用流程
 
-1. 进入[项目页面](https://github.com/rockbenben/Blog_WP)，点击「Use this template」，复制模板文件。
+1. 进入 [项目页面](https://github.com/rockbenben/Blog_WP)，点击「Use this template」，复制模板文件。
 2. 回到你新建的 repo，删除 \_post 文件夹中的所有文件，参照主目录下 `example_article.md` 的格式编辑文章。注意：md 文件名不能包含大写字母。
-3. 按[WordPressXMLRPCTools 安装步骤](https://github.com/zhaoolee/WordPressXMLRPCTools#%E7%94%A8github-actions%E5%86%99markdown%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E5%88%B0wordpress)执行，如遇报错，查看下方使用问题。
+3. 按 [WordPressXMLRPCTools 安装步骤](https://github.com/zhaoolee/WordPressXMLRPCTools#%E7%94%A8github-actions%E5%86%99markdown%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E5%88%B0wordpress)执行，如遇报错，查看下方使用问题。
 4. 修改主目录下的 `index.html` 和 `_sidebar.md` 文件，调整 docsify 网页设置。
    - `index.html` 修改 docsify 网页标题、描述和关键词。
    - `_sidebar.md` 修改 docsify 网页侧边栏，加入博客文章的标题和位置。

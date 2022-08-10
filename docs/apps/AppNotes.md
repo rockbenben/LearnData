@@ -10,6 +10,7 @@ order: 3
 > 收集稀奇古怪的小工具
 
 - [Animated Drawings – 自动将绘画转换为动画](https://www.appinn.com/animated-drawings/)
+- [Power Automate](https://sspai.com/series/273/list)：自动流程，功能与 Quicker 类似，不过对 Microsoft 自家产品支持更强，暂不深入。
 
 ## Logseq
 
