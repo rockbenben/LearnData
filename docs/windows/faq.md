@@ -71,6 +71,12 @@ Web2Desk 让我们可以直接输入网页链接、应用名称和应用图标�
 - 监测方法：安装并启动 autohotkey.exe，然后点击 view - Key history and script info。窗口会显示最近的按键历史，当发现一个键在疯狂重复时，很有可能就是出问题的按键。
 - 修复方法：键盘上重复按下该按键，看看是否能修复。不行的话，拔下键盘 USB，单独使用软键盘，测试按键是否正常。如果软键盘正常，键盘配件又无法修复，就只能换一个了。
 
+### 使用中，禁止系统自动更新重启
+
+Win11 注册表中进入 `计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU`，新建 DWORD（32 位）值，重命名为「NoAutoRebootWithLoggedOnUsers」，键值改为 1。
+
+Win10 没找到类似注册表，直接关闭自动更新。
+
 ### WPS 没有宏
 
 - 让 wps 支持 vba 宏，安排 [WPS VBA 模块 V7.1 版本](https://www.jyrd.com/media/6490.html)；`选项 - 信任中心 - 启用宏` 后自动添加为受信任的文档，或添加主要文件夹为信任位置。

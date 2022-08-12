@@ -27,7 +27,7 @@ order: -42
   ![](http://tc.seoipo.com/2022-05-05-17-22-08.png)
 
 - **瓦斯阅读**：`http://newzone.top/rss.php?type=wasi`
-  通过瓦斯阅读，获取当天最热门的微信文章。RSS 阅读器内只显示微信文字内容，微信图片点击文章链接后，方可显示。
+  通过瓦斯阅读，获取当天最热门的微信文章。微信图片不支持第三方显示，因此 RSS 阅读器内只显示文字内容，点击文章链接后，可阅读完整公众号文章。
 
   ![](http://tc.seoipo.com/2022-05-05-17-22-32.png)
 
@@ -51,7 +51,7 @@ order: -42
 
 - **果壳网**：`http://newzone.top/rss.php?type=guokr`
 
-- **知乎每日精选**：`http://newzone.top/rss.php?type=zhihu`
+- **知乎想法热榜**：`http://newzone.top/rss.php?type=zhihu`
 
 ## 教程：自制 RSS
 

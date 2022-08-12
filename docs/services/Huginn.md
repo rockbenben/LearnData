@@ -9,6 +9,8 @@ order: 2
 
 `.env` 设置：https://github.com/huginn/huginn/blob/master/.env.example
 
+## 常用 Agent
+
 Huginn Agents：https://github.com/huginn/huginn/wiki/Agent-Types-&-Descriptions
 
 - Website Agent 解析网页、XML 文档和 json 数据，最常使用
@@ -32,16 +34,23 @@ Huginn Agents：https://github.com/huginn/huginn/wiki/Agent-Types-&-Descriptions
 
 {{created_at}} 为自带抓取时间，Agent 设置中的特殊字符`+`，需要用反义符`\\`。
 
-## Huginn 任务卡住
+## Huginn 被卡住
 
-任务卡住后，需要按下列步骤重启 Huginn。
+Huginn 任务有时会被卡住，后续任务都无法进行，需要重启 Huginn 方可恢复。
 
-1. 关闭：先关闭数据库，然后关 Huginn。
-2. 开启：先开启数据库，然后开 Huginn。
+因此，我在 NAS 的任务计划中添加了每日运行的脚本，每天 3 点一次关闭镜像 huginn2mariadb 和 huginn2022，然后再依次启动。注意不要直接重启 Hungin Docker，否则数据库会异常。
 
-不要直接重启 Hungin Docker，否则数据库会异常。
+```bash
+sudo docker stop huginn2mariadb
+sleep 10
+sudo docker stop huginn2022
+sleep 10
+sudo docker start huginn2mariadb
+sleep 10
+sudo docker start huginn2022
+```
 
-计划任务定期强制重启 huginn，防止卡住
+如果部署在服务器，则可使用下列命令重启服务。
 
 ```bash
 cd /home/huginn/huginn

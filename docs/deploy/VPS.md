@@ -86,7 +86,7 @@ adduser xxxx
 
 ### [网站重定向](https://www.jb51.net/article/146957.htm)
 
-更改 nginx 配置后，nginx 重载配置后实现网站重定向。`$1` 表示第一个 `()` 内的正则匹配内容，`$2` 为第二个。
+更改 nginx 配置后，nginx 重载配置后实现网站重定向。`$1` 表示第一个 `()` 内的正则匹配内容，`$2` 为第二个。^[[Nginx rewrite 设置](https://www.w3cschool.cn/nginxsysc/nginxsysc-rewrite.html)]
 
 ```ini
 #隐性链接跳转
@@ -172,7 +172,7 @@ Matomo/Piwik 是免费的统计服务。有时无法使用自动安装包，需�
 
 1. 下载最新版应用，并解压到服务器。
 2. 将原目录中的 config/config.ini.php 粘贴到新版中，然后就可以更新数据库进行升级了。
-3. 设置-系统-地理位置，拖到页面底部，按页面要求下载 DBIP 包，并重命名保存为 `/www/wwwroot/piwik/misc/DBIP-City.mmdb`。
+3. 进入「设置 - 系统 - 地理位置」，拖到页面底部，按页面要求下载 DBIP 包，并重命名保存为 `/www/wwwroot/piwik/misc/DBIP-City.mmdb`。
 
 ### 服务器转移配置
 
