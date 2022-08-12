@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、前端代码的学习笔记，记录一切能让自己提升的知识</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 12 Aug 2022 16:01:23 GMT</pubDate>
-    <lastBuildDate>Fri, 12 Aug 2022 16:01:23 GMT</lastBuildDate>
+    <pubDate>Fri, 12 Aug 2022 16:25:59 GMT</pubDate>
+    <lastBuildDate>Fri, 12 Aug 2022 16:25:59 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>购物</category>
@@ -185,7 +185,7 @@
       <source url="https://newzone.top/rss.xml">office 2016 安装程序报错解决办法</source>
       <category>系统</category>
       <pubDate>Fri, 28 Jul 2017 11:02:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>重新安装 Office 系统或更改安装组件时，经常提示：「找不到有效的安装源」，但实际这些文件都能在安装包内找到。</p>
+      <content:encoded><![CDATA[<p>重新安装 Office 系统或更改安装组件时，经常提示：「找不到有效的安装源」，但实际这些文件都能在安装包内找到。这是由于注册表和组件而导致的报错，<strong>「找不到有效的安装源」并不是真实原因</strong>，解决方法查看下方。</p>
 <p><img src="https://pic3.zhimg.com/v2-85bd2a49a47ee6d0c8eade7b3c249516_r.jpg" alt="" loading="lazy"></p>
 <h2 id="解决方法" tabindex="-1"> 解决方法</h2>
 <ol>
@@ -227,25 +227,15 @@ MSOCache 其它的目录下内容同样根据注册表的内容把它指示的�
       <source url="https://newzone.top/rss.xml">OneNote 2016 无法登陆问题解决</source>
       <category>系统</category>
       <pubDate>Sat, 29 Jul 2017 15:19:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>office 版的 OneNote 安装后无法登陆，点击下一步没反应。问题的根源出在 IE 的设置上。</p>
+      <content:encoded><![CDATA[<p>OneNote 安装后，提示输入账号，但点击「下一步」始终没反应，无法进行登陆。</p>
 <p><img src="https://pic4.zhimg.com/v2-d5945359b896ffd09d9973e9597ec06b_r.jpg" alt="" loading="lazy"></p>
-<p><strong>问题测试：</strong> 打开 IE，访问 live.com，网页无法打开，会提示需要启动 JavaScript</p>
+<p>打开 IE 浏览器，访问 live.com，如果网页提示「登录需要启动 JavaScript」，说明问题的根源出在 IE 的设置上。</p>
 <p><img src="https://pic1.zhimg.com/v2-cc00b3039f755b92f9ae511c8b7debd0_r.jpg" alt="" loading="lazy"></p>
-<p>问题找到了，接下来开始解决。</p>
-<ol>
-<li>
-<p>打开 IE 设置-Internet 选项</p>
+<p>依次点击「IE 设置 - Internet 选项 - 安全 - 自定义级别」，然后启用脚本选项的「Java 小程序脚本」和「活动脚本」。</p>
 <p><img src="https://pic2.zhimg.com/v2-717bf3c8b62748b62a04219435b8a75d_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>启用脚本-Java 小程序脚本和活动脚本</p>
 <p><img src="https://pic4.zhimg.com/v2-25697b0c27aa8780c532b7a03a78dcbf_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>打开 OneNote2016</p>
+<p>完成设置后，即可正常登录并打开 OneNote。</p>
 <p><img src="https://pic4.zhimg.com/v2-ff20ef8aa22215cba64b879775dfdf4f_r.jpg" alt="" loading="lazy"></p>
-</li>
-</ol>
 ]]></content:encoded>
       <enclosure url="https://pic4.zhimg.com/v2-d5945359b896ffd09d9973e9597ec06b_r.jpg" type="image/jpeg"/>
     </item>
