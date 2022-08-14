@@ -10,7 +10,32 @@ order: 3
 > 收集稀奇古怪的小工具
 
 - [Animated Drawings – 自动将绘画转换为动画](https://www.appinn.com/animated-drawings/)
-- [Power Automate](https://sspai.com/series/273/list)：自动流程，功能与 Quicker 类似，不过对 Microsoft 自家产品支持更强，暂不深入。
+
+## Power Automate
+
+[Power Automate](https://sspai.com/series/273/list) 自动化应用，分为桌面流和 [云端流](https://make.powerautomate.com/)，上手比 Quikcer 复杂，但功能更稳定。**对于免费用户来说，Power Automate 都得手动执行流，个人账户与组织账户无明显区别。**
+
+**桌面流**本身并没有触发器，因此只能手动执行。付费的组织账户可以自动执行桌面流，比如：云端流调用桌面流，[通过 URL 运行桌面流](https://docs.microsoft.com/zh-cn/power-automate/desktop-flows/run-pad-flow#run-desktop-flows-via-url)。
+
+**云端流**可以自动、即时或通过计划触发自动化。登录云端流时，一开始要求用工作账户登录，但后来我开通了 [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software)，就可以用个人账户，暂不清楚是否有因果关系。^[[注册免费 Teams 经典](https://support.microsoft.com/zh-cn/office/%E6%B3%A8%E5%86%8C%E5%85%8D%E8%B4%B9teams%E7%BB%8F%E5%85%B8-70aaf044-b872-4c32-ac47-362ab29ebbb1)]
+
+按微软官方文档，我以为组织账户比个人账户功能强大许多，但登录后，只多显示了一些按钮和试用提示，基本与个人账户没区别。简单来说，组织账户就是有付费的权利，其他一样。
+
+### 创建 Microsoft 组织账户
+
+微软的众多服务都需要组织账户，个人账号经常被拒绝登录。而创建微软组织账户最简单的方法是注册为 [微软合作伙伴](https://partner.microsoft.com/zh-cn/)。
+
+1. [加入 Microsoft 合作伙伴网络](https://partner.microsoft.com/zh-cn/membership)。
+2. 进入后会问「你希望如何与 Microsoft 合作」，安全起见我选择「合作伙伴」，进入下一页后点「创作工作账户」。
+3. 账户信息除手机和备用邮件外可以随便填，通过手机验证码后，点「继续」，然后等几分钟，就会收到注册成功通知，你也成为有组织的人了。
+
+如果你有 Azure 账户，可以直接在 Azure 中 [为组织创建新的租户](https://docs.microsoft.com/zh-cn/azure/active-directory/fundamentals/active-directory-access-create-new-tenant#create-a-new-tenant-for-your-organization)。
+
+### 管理组织用户
+
+如果你想给其他人多添加几个账号，则可以通过 [Azure](https://portal.azure.com/) 来管理。
+
+进入「管理 Azure Active Directory - 用户」，添加和管理组织用户。
 
 ## Logseq
 

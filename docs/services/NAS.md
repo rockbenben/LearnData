@@ -29,11 +29,11 @@ docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%
 
 ## 套件配置
 
-- DS/Transmission：用于 PT 下载 (禁用 DHT，半小时停止做种)
-- Synology Drive Server：电脑文件备份
+- DS/Transmission：用于 PT 下载 (禁用 DHT，半小时停止做种)。
+- Synology Drive Server：电脑文件备份。
 - Docker：指定本地端口否则重启会变，重启不影响 docker 配置。
-  - RSSHub：无需保存数据，自动更新。
-  - Huginn：定期备份抓取脚本，数据库保存在本地，不自动更新。
+  - RSSHub：无需保存数据，pubData 为 GMT 时区，普通用户无法更改，Docker Timezone 设置也不会有改变。
+  - Huginn：定期备份抓取脚本，数据库保存在本地。
   - Tiny Tiny RSS：定期备份订阅源和设置，自动更新。
     - [mercury-parser-api](https://registry.hub.docker.com/r/wangqiru/mercury-parser-api)：全文插件
   - [qiandao](https://github.com/AragonSnow/qiandao)：自动签到开源框架，需搭配浏览器扩展 [get-cookies](https://github.com/ckx000/get-cookies) 使用，可导出配置。

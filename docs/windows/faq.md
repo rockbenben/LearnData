@@ -5,6 +5,8 @@ icon: windows
 order: 1
 ---
 
+Windows 遇到不懂的问题，可以在 [Microsoft 支持社区](https://answers.microsoft.com/zh-hans/) 提问，回复比较快。
+
 ## Windows 快捷键
 
 | 快捷键             | 功能                                   |
@@ -81,6 +83,12 @@ Win10 没找到类似注册表，直接关闭自动更新。
 
 - 让 wps 支持 vba 宏，安排 [WPS VBA 模块 V7.1 版本](https://www.jyrd.com/media/6490.html)；`选项 - 信任中心 - 启用宏` 后自动添加为受信任的文档，或添加主要文件夹为信任位置。
 - 开启聚光灯效果：视图 - 阅读模式，每个文件需要单独开启，文件保存后自动开启。
+
+### Microsoft Store 应用快捷方式
+
+Microsoft Store 安装的应用没有固定位置，一更新就会换位置，无法建立快捷方式。虽然这些应用能被设为开机启动，但经常启动不成功。
+
+右键 Microsoft Store 应用，将其固定在任务栏。通过 `Win 键 + 数字键`的来启动应用。比如应用在任务栏的第 7 位，则使用热键 `Win + 7`。
 
 ### 无法安装应用
 
