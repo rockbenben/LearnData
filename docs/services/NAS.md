@@ -41,9 +41,10 @@ docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%
     - 监控指定名称的镜像：`docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once nginx redis`。本案例只更新名为“nginx”和“redis”的容器，其他容器将被忽略。
     - 指定容器的 compose 命令中添加 lable `com.centurylinklabs.watchtower.enable=false`，可禁止该容器的监控和更新。
   - [Check 酱](https://github.com/easychen/checkchan-dist)：监测网页内容变化，并发送异动到微信。亦支持 http status、json 和 rss 监测。配合自架云端，关电脑后也能运行。
+  - [Home Assistant](https://www.home-assistant.io/)：开源家庭自动化平台，可自定义集中管理各品牌的智能家居设备。米家设备需使用 hacs 下的集成 [Xiaomi Miot Auto](../family/HomeAutomation.html#home-assistant)。
+  - [Node-RED](../family/HomeAutomation.html#node-red)：开源流处理，类似本地版的 IFTTT。
   - 待了解
     - [n8n](https://blog.csdn.net/alex_yangchuansheng/article/details/122295193)：开源 IFTTT 工具，偏重于云服务。
-    - [Node-RED](https://github.com/node-red/node-red)：开源流处理，类似 IFTTT，偏重于本地。
     - [AutoBangumi](https://github.com/EstrellaXD/Auto_Bangumi)：自动追番器，用以替代自我审查的 Bilibili。
     - [nas-tools](https://github.com/jxxghp/nas-tools/wiki/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B)：号称能自动整理文件，但测试识别中很容易出错，暂不考虑。
       - qbittorrent：Linux 版本提示出错。

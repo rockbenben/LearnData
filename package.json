@@ -13,8 +13,8 @@
     "pnpm": "^7.9.0",
     "sass-loader": "^13.0.2",
     "vue": "^3.2.37",
-    "vuepress-theme-hope": "2.0.0-beta.90",
-    "vuepress-theme-reco": "^2.0.0-beta.30",
+    "vuepress-theme-hope": "2.0.0-beta.91",
+    "vuepress-theme-reco": "^2.0.0-beta.33",
     "vuepress-webpack": "2.0.0-beta.49"
   }
 }

@@ -7,8 +7,6 @@ export default hopeTheme({
   //主题选项
   //https://vuepress-theme-hope.github.io/v2/zh/config/theme/layout.html
   hostname: "https://newzone.top",
-  //侧边栏排序规则
-  sidebarSorter: ['readme', 'order', 'title'],
 
   author: {
     name: "清顺",
@@ -56,6 +54,9 @@ export default hopeTheme({
   //是否在向下滚动时自动隐藏导航栏
   //navbarAutoHide: "always",
 
+
+  //侧边栏排序规则
+  //sidebarSorter: ['readme', 'order', 'title'],
   // sidebar
   sidebar: sidebar,
 

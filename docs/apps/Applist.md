@@ -59,8 +59,8 @@ Windows 自用软件，以开源软件为主。
 
 快速启动：
 
-- Quicker：脚本、动作
-- RunAny：一键直达、文本命令
+- Quicker：脚本，全局手势
+- RunAny：指针快捷启动；一键打开网址、文件路径
 - 热键工具：Fn-PowerKey、[CapsLock+](https://capslox.com/capslock-plus/#basicFunctions)
 - 图标启动：[Lucy 快速启动](https://www.yuque.com/lucy/lucy/record) ~~、Rolan（收费）、nTrun (Win 键启动)~~
 - 启动栏：Listary ~~、uTolls、Wox~~
