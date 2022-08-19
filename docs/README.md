@@ -32,7 +32,7 @@ icon: note
 
    ![](http://tc.seoipo.com/2022-08-10-19-32-05.png)
 
-   ![](http://tc.seoipo.com/2022-08-10-19-34-13.png)
+   ![](http://tc.seoipo.com/2022-08-10-19-34-13.png?imageMogr2/thumbnail/!60p)
 
 2. 复制好后，清空 `docs/_posts` 路径下的所有文件。这是因为测试搭建时 GitHub Pages 对我旧文章里的代码报错，需要清空文章来避免部署出错。之后，GitHub 会自动搭建网站，架构时间约 3 分钟。
 3. 点击 `Setting`, 修改 `Repository name` 为 `xxx.github.io`, `xxx` 是你的 GitHub 用户名。如果该项名称已被占据，GitHub Pages 无法正常显示，查看下方解决办法。

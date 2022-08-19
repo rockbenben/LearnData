@@ -10,19 +10,18 @@ order: 5
 
 ## 图片尺寸
 
-使用 html 或 md 格式调整图片尺寸。但 md 格式在不同编辑器中显示效果不同，不一定会生效。
+md 格式调整图片尺寸，在不同编辑器中显示效果不同，不一定会生效。使用 html 格式调整图片尺寸能确保成功率。
 
 ```markdown
-
 <!-- 按页面宽度的 60% 来缩小 -->
-<img _src_="" _width_="60%">
+<img src="" width="60%">
 
-<!-- md 图片设置 -->
+<!-- md 图片设置，有时不能被识别 -->
 ![同时设置宽度和高度](https://files.mdnice.com/logo.png =150x150)
 ![只设置宽度，推荐使用百分比](https://files.mdnice.com/logo.png =40%x)
 
-<!-- docsify 方法 -->
-![logo](https://docsify.js.org/_media/icon.svg ":size=10%")
+<!-- 指针移动到图片时，显示图片说明 -->
+![name](https://docsify.js.org/_media/icon.svg "图片说明")
 ```
 
 七牛云图床：使用 [七牛云接口](https://developer.qiniu.com/dora/kb/1627/flow-optimization-compression-of-images) 改变图片分辨率、大小、格式，具体参数看 [七牛云图片高级处理](https://developer.qiniu.com/dora/8255/the-zoom)。
