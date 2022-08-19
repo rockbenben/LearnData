@@ -34,8 +34,8 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |
-          pnpm add vuepress@next vuepress-theme-hope@next && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader
-          pnpm add @vuepress/plugin-google-analytics@next
+          pnpm add vuepress@next vuepress-theme-hope@next
+          pnpm add @vuepress/plugin-google-analytics@next @vuepress/plugin-search@next
           pnpm i && pnpm up
           pnpm docs:build
 
@@ -46,6 +46,7 @@ jobs:
           branch: gh-pages
           folder: docs/.vuepress/dist
 
+      #将页面推送到服务器，可删除
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:

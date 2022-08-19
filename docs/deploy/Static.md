@@ -99,8 +99,6 @@ jobs:
 
 如果密码正确，则进入 `/www/server/pure-ftpd/etc/pureftpd.passwd`，检查是否有该 FTP 账户。没有账户的话，**暂停宝塔系统加固**等安全插件后，重新新建 FTP。
 
-使用注意：初次同步时，只会上传文件，不涉及同路径下的其他文件。但之后同步，会扫描目标目录下的文件，**不同的文件都会被删除**。
-
 ### 同步到 oss
 
 如果没有服务器，可以把文件部署在云运营商的云存储上。比如用 [aliyun-oss-website-action](https://github.com/marketplace/actions/aliyun-oss-website-action)，将 repo 文件 build 成网站文件，然后同步到阿里云 oss 并运行网站。

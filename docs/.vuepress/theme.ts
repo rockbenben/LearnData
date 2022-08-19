@@ -19,7 +19,7 @@ export default hopeTheme({
   //是否全局启用路径导航
   breadcrumb: false,
 
-  //页面元数据
+  //页面元数据：贡献者，最后修改时间，编辑链接
   contributors: false,
   lastUpdated: true,
   editLink: true,
@@ -97,6 +97,7 @@ export default hopeTheme({
 
     //评论配置
     comment: {
+      //部署 Waline：https://waline.js.org/guide/get-started.html
       provider: "Waline",
       serverURL: "https://waline-seven-sepia.vercel.app",
       pageview: true,

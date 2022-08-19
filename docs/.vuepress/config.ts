@@ -1,5 +1,5 @@
-//import { viteBundler } from "@vuepress/bundler-vite";
-import { webpackBundler } from "@vuepress/bundler-webpack";
+import { viteBundler } from "@vuepress/bundler-vite";
+//import { webpackBundler } from "@vuepress/bundler-webpack";
 import { defineUserConfig } from "@vuepress/cli";
 //import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { searchPlugin } from "@vuepress/plugin-search";
@@ -9,31 +9,18 @@ import { path } from "@vuepress/utils";
 import theme from "./theme";
 
 export default defineUserConfig({
-  //filenameHashing: false,
-
-  bundler: webpackBundler({
-    // ...
-    chainWebpack(config) {
-      // do not use chunk hash in js
-      //参照案例：https://github.com/vuepress/vuepress-plugin-named-chunks/blob/b9fb5a1d3475530b1d74b6616f92a6e3bf14a7ed/__tests__/docs/.vuepress/config.js
-      //config.output.filename("[name].js").chunkFilename("[name].js");
-      config
-        .output
-          //.path(path.resolve(__dirname, "../dist"))
-          //.filename(`[name].[hash:8].js`)
-          .filename(`[name].js`)
-          //.chunkFilename("assets/chunks/[name].[chunkhash].js")
-          .chunkFilename("assets/chunks/[name].js")
-    },
-  }),
-
+  //网站语言，默认为中文
   lang: "zh-CN",
+  //网站标题
   title: "LearnData-开源学习笔记",
+  //网站描述
   description: "开源工具、前端代码的学习笔记，记录一切能让自己提升的知识",
 
+  //网站路径，默认为 /，如果非主域名，需改为
   base: "/",
 
   theme,
+  //是否开启页面预拉取，如果服务器宽带足够，可改为 true，会提升其他页面加载速度
   shouldPrefetch: false,
 
   //修改页面模板，@vuepress-theme-hope/templates/index.build.html
@@ -46,9 +33,11 @@ export default defineUserConfig({
     searchPlugin({
       // 你的选项
     }),
+    //谷歌分析 ID
     googleAnalyticsPlugin({
       id: "G-RWKZTY2P9R",
     }),
+    //rss 订阅描述
     feedPlugin({
       hostname: "https://newzone.top",
       rss: true,

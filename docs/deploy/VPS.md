@@ -13,13 +13,13 @@ order: 2
 
 ### 包管理安装
 
-- npm：[Node.js](https://nodejs.org/en/download/) 集成了 npm 安装。
-- yarn：`npm i yarn -g`，全局安装。
-- pnpm：`npm install pnpm -g`，全局安装。
+通过集成了 npm 的 [Node.js](https://nodejs.org/en/download/) 来安装 npm，然后执行 npm i 命令安装其他。
 
-### 源管理
+全局安装 yarn 是 `npm i yarn -g`，pnpm 是 `npm i pnpm -g`。如果不想全局安装，则去除 `-g`。
 
-源管理的命令类似，把 npm 换为 yarn 或 pnpm 就能更改对应包管理工具的设置。
+### 包管理源
+
+包管理源的修改命令类似，将下方的 npm 替换 yarn 或 pnpm 即可修改包管理源。
 
 ```bash
 #查看源

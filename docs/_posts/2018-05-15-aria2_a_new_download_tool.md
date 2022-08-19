@@ -112,7 +112,7 @@ aria2.conf 配置下载：<https://wwz.lanzouf.com/iZczz08epqwb>
 
 Aira2 下载预热是 BT 下载前的必备步骤，否则速度容易很慢。
 
-找个热门 BT 种子 (千万建议是种子，而不是磁力链接)，然后下一波，挂着做种。过几个小时后退出 Aria2，或者等 Aria2 会话自动保存，你会发现 dht.dat 从空文件变成有数据了，这时下载速度就会正常很多。
+找个热门影视的 BT 种子 (千万建议是种子，而不是磁力链接)，然后下一波，挂着做种。过几个小时后退出 Aria2，或者等 Aria2 会话自动保存，你会发现 dht.dat 从空文件变成有数据了，这时下载速度就会正常很多。
 
 > 很多 BT 客户端一样，Aria2 有个 dht.dat 文件 (开启 ipv6 还有个 dht6.dat)，这玩意用于存储一种叫做 DHT Routing Table 的东西，DHT 网络由无数节点组成，你接触到一个后能通过它接触到更多的节点，Aria2 我记得是有内置的节点，但是！如果你在 Aria2 第一次运行的时候直接下载磁力链接或者冷门种子，你很可能遇到连 MetaData 都无法获取的情况，这就是因为第一次只是初始化 dht.dat 文件，你本地不存在 DHT Routing Table 的缓存，所以你无法从 DHT 网络中获取足够的数据。^[[解决 Aria2 BT 下载速度慢没速度的问题](http://www.senra.me/solutions-to-aria2-bt-metalink-download-slowly/)]
 
