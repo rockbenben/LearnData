@@ -59,11 +59,11 @@ cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管 - cloudflare
 
 ## GitHub 同步到 VPS
 
-我的代码、文章都部署在 GitHub 上，但国内访问 GitHub 的速度不稳定，需要增加国内访问节点。
+代码、文章推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定，为了确保网站能被正常访问，必须增加国内的访问节点。
 
-最多人用的方法是，GitHub Action 将新文档同步到 Gitee，生成国内静态页 Gitee Pages。但 Gitee Pages 有诸多限制，免费版无法自定义域名，而且必须实名验证。
+很多人选择 Gitee Pages 作为国内节点，GitHub Action 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。
 
-因此，我选择将文档同步到自建的国内服务器（域名已备案）。
+因此，我选择将文档同步到国内服务器（域名需备案）。
 
 !> 注意：文件夹不要有大写字母，否则同步时容易出错。
 
@@ -93,11 +93,15 @@ jobs:
 
 新建 FTP 时，需在云服务商的安全组和服务器上开放 FTP 端口，并**暂停宝塔系统加固**等安全插件。
 
-如果出现 `FTPError: 530 Login authentication failed`，则说明 FTP 密码错误或账号不存在，用 FileZilla 测试 FTP 的有效性。
+`FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
+
+如果出现错误 `FTPError: 530 Login authentication failed`，则说明 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
 
 确认 FTP 无效后，检查 FTP 密码是否填写正确，是否只有大小写字母和数字。如果密码错误，则在 github secrets 重新 update 密钥。
 
 如果密码正确，则进入 `/www/server/pure-ftpd/etc/pureftpd.passwd`，检查是否有该 FTP 账户。没有账户的话，**暂停宝塔系统加固**等安全插件后，重新新建 FTP。
+
+`Error: Timeout (control socket)` 是同步服务器超时报错。如果出现该错误，进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
 
 ### 同步到 oss
 
