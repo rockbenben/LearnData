@@ -56,16 +56,13 @@ jobs:
           password: ${{ secrets.ftp_password }}
           port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
 
-#      #复制文件到目的地，文档没变化则不会复制
-#      - name: Copy file
-#        uses: andstor/copycat-action@v3
-#        with:
-#          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-#          src_path: docs/README.md
-#          dst_path: /
-#          dst_owner: rockbenben
-#          dst_repo_name: LearnData
-#          dst_branch: main
-#          src_branch: main
-#          #clean: true
-
+      #如果同步服务器失败后，自动重试一次
+      - name: 📂 Sync files Retry
+        if: failure()
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          local-dir: docs/.vuepress/dist/
+          server: ${{ secrets.ftp_host }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          port: ${{ secrets.ftp_port }}

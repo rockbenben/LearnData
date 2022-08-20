@@ -61,7 +61,7 @@ cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管 - cloudflare
 
 代码、文章推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定，为了确保网站能被正常访问，必须增加国内的访问节点。
 
-很多人选择 Gitee Pages 作为国内节点，GitHub Action 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。
+很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。
 
 因此，我选择将文档同步到国内服务器（域名需备案）。
 
@@ -69,7 +69,7 @@ cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管 - cloudflare
 
 ### 同步到 FTP
 
-如果你有 FTP 服务器，可使用 [FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action) 将 github 代码推送到服务器上。Action 步骤参考 [GitHub 说明](../deploy/GitHub.html)。
+如果你有 FTP 服务器，可使用 [FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action) 将 github 代码推送到服务器上。Actions 步骤参考 [GitHub 说明](../deploy/GitHub.html)。
 
 ```bash
 on: push

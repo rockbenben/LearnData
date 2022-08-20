@@ -66,9 +66,9 @@ LearnData 的文本目录和配置都在 `docs` 路径中。
 
 ## 🖥️ 同步到服务器
 
-项目搭建好后，出现了红色叉叉，这是 GitHub Action 的失败提示。这是由于 LearnData 部署了同步 ftp 代码，如果你没有正确配置服务器，Github Action 就会报错。
+项目搭建好后，出现了红色叉叉，这是 GitHub Actions 的失败提示。这是由于 LearnData 部署了同步 ftp 代码，如果你没有正确配置服务器，GitHub Actions 就会报错。
 
-进入 repo 的「setting - Secrets - Action」，添加 `FTP_HOST`，`FTP_PORT`，`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。配置成功后，每次修改文件，Github 都会自动推送到服务器 FTP。
+进入 GitHub 仓库「setting - Secrets - Action」，添加 `FTP_HOST`，`FTP_PORT`，`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。配置成功后，每次修改文件，Github 都会自动推送到服务器 FTP。
 
 如果你没有服务器，可以同步到云存储上，步骤参考 [GitHub 同步到 oss](https://newzone.top/deploy/Static.html#同步到-oss)。
 
@@ -84,9 +84,9 @@ LearnData 的文本目录和配置都在 `docs` 路径中。
 
 ### 同步服务器报错
 
-`Error: Timeout (control socket)` 是同步服务器超时报错。如果出现该错误，进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
-
 `FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
+
+`Error: Timeout (control socket)` 是同步服务器超时报错。如果出现该错误，进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
 
 ### 静态文件名字总变
 
