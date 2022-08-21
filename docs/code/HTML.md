@@ -5,9 +5,7 @@ icon: html
 order: 1
 ---
 
-HTTPS 网页中的 js、css、gif 等文件都必须要使用 https，否则无法加载。加密网页中的图片可以不使用 https。
-
-- CSS 样式：[You-need-to-know-css](https://lhammer.cn/You-need-to-know-css/#/zh-cn/)
+HTTPS 网页中，js、css、gif 等文件都必须要使用 https，否则会加载报错，图片可以不使用 https。
 
 ## 基础知识
 
@@ -33,7 +31,34 @@ HTTPS 网页中的 js、css、gif 等文件都必须要使用 https，否则无�
 | "        | 引号   | \&quot;  | \&#34;   |
 | '        | 撇号   | \&apos;  | \&#39;   |
 
+## JavaScript 插件^[[开源 JavaScript 插件和库](https://www.cnblogs.com/zhnaglei/p/6697638.html)]
+
+- [font-awesome](https://fontawesome.com/)：图标字体。
+- [Layui](https://layuion.com/)：开源模块化前端 UI 组件库。
+- [toastr.js](https://github.com/CodeSeven/toastr)：通知提示。
+- [popper.js](https://popper.js.org/)：一个轻量级的库用于管理工具提示和弹窗效果。
+- [Day.js](https://dayjs.gitee.io/docs/zh-CN/get-set/get-set)：时间输入转换，支持时间戳，格式化时间、过去时间展示、解决因时区变更。
+- [list.js](https://github.com/javve/list.js)：实时搜索页面，并直接显示结果页面。为列表、表格或其他任何 HTMLL 标签增加了搜索，排序，过滤器和灵活性等元素。网页中会自动会大段空格压缩为一个空格，不用特意替换。
+- [watermark.js](https://github.com/saucxs/watermark-dom)：网页文字水印。
+- [codemirror](https://codemirror.net/)：代码编辑器，为 textarea 加行号。
+
+### 功能加强
+
+- [clipboard.js](https://clipboardjs.com/)：复制到剪贴板方式，无需 Flash。
+- [FileSaver.js](https://github.com/eligrey/FileSaver.js)：导出为本地文件，需手动指定路径。
+- [filepond](https://github.com/pqina/filepond)：一个 JavaScript 文件上传库，可以上传拖入的任何内容，具有体积小、上传快、方便的文件管理等特点。
+- [timecat.js](https://github.com/oct16/TimeCat)：一款 JS 的网页录屏工具。参考了游戏录像的原理而实现的渲染引擎，生成的录像文件只有传统视频的百分之一！还可以在录制语音的同时自动生成字幕，导出的视频文件可以跨端播放。
+
+### 小游戏代码
+
+- [emoji-minesweeper](https://github.com/muan/emoji-minesweeper)：Emoji 符号的扫雷游戏。代码很简短，游戏创意很酷。寥寥 300+ 行代码实现该游戏，简短易于初学者学习。
+- [HueJumper2k](https://github.com/KilledByAPixel/HueJumper2k)：JS 实现的 2KB 大小的 3D 赛车游戏。
+- [battle-city](https://github.com/shinima/battle-city)：基于 React 的经典坦克大战。
+- [react-tetris](https://github.com/chvin/react-tetris)：逼真的俄罗斯方块。
+
 ## CSS 样式
+
+CSS 样式：[You-need-to-know-css](https://lhammer.cn/You-need-to-know-css/#/zh-cn/)
 
 ### 图片
 
@@ -43,7 +68,7 @@ HTTPS 网页中的 js、css、gif 等文件都必须要使用 https，否则无�
 <img src="<http://tc.seoipo.com/xxx.png>" style="width:50%; height:50%;" />
 <img src="<http://tc.seoipo.com/xxx.png>" width="100" height="100" />
 
-# bootstrap 下自动控制图片大小
+<!-- bootstrap 下自动控制图片大小 -->
 <img src="<http://tc.seoipo.com/xxx.png>" class="img-fluid" />
 ```
 
@@ -61,78 +86,6 @@ HTTPS 网页中的 js、css、gif 等文件都必须要使用 https，否则无�
 ```
 
 当图床图片无法显示时，尝试屏蔽自己网站的 referrer，在源码中添加：`<meta name="referrer" content="no-referrer" />`。
-
-## 自适应布局
-
-自适应布局以 Bootstrap 为主，具体说明参考 [Bootstrap 文档](https://getbootstrap.com/docs/5.1/utilities/spacing/)。
-
-```css
-# 分别为距离上下左右，
-class="mt-5 mb-5 ms-4 me-4"
-
-# 修改间距
-style="margin-top:-15px;margin-bottom:-15px"
-
-# 图片自动拉伸宽度
-style="background-size:contain|cover;width:100%;height:auto;"
-
-# 视频将宽度设置大些，然后让其自动缩放
-width="2400px"
-```
-
-## 客户端自适应
-
-判断设备是移动还是 PC，然后显示不同样式内容。
-
-```html
-<script>
-  window.onload = function () {
-    browserRedirect();
-  };
-  function browserRedirect() {
-    var sUserAgent = navigator.userAgent.toLowerCase();
-    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-    var bIsAndroid = sUserAgent.match(/android/i) == "android";
-    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-    if (
-      bIsIpad ||
-      bIsIphoneOs ||
-      bIsMidp ||
-      bIsUc7 ||
-      bIsUc ||
-      bIsAndroid ||
-      bIsCE ||
-      bIsWM
-    ) {
-      //移动端页面
-      $("#mobile").show();
-      $("#pc").hide();
-    } else {
-      //pc 端页面
-      $("#mobile").hide();
-      $("#pc").show();
-    }
-  }
-</script>
-<div id="pc" style="display: none;">
-  <img
-    src="../upload/202108/1629972325344278.png"
-    title=""
-    data-width="1920"
-    data-height="1080"
-  />
-</div>
-<div id="mobile" style="text-align:center;display: none;">
-  <img
-    src="http://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/upload/202108/1628149761.png"
-  />
-</div>
-```
 
 ### 纯色背景
 
@@ -195,115 +148,76 @@ hidden_alert.textContent="标题数超过，请减少标题数或取消勾选「
 <a style="color: #FF0000;">xxx</a>
 ```
 
-## js 应用
+## 页面布局
 
-### 文本框清空
+### 自适应布局
 
-input 文本框获取焦点后，自动清空内容。
+自适应布局以 Bootstrap 为主，具体说明参考 [Bootstrap 文档](https://getbootstrap.com/docs/5.1/utilities/spacing/)。
 
-```javascript
-onfocus = "this.value=''";
+```css
+# 分别为距离上下左右，
+class="mt-5 mb-5 ms-4 me-4"
+
+# 修改间距
+style="margin-top:-15px;margin-bottom:-15px"
+
+# 图片自动拉伸宽度
+style="background-size:contain|cover;width:100%;height:auto;"
+
+# 视频将宽度设置大些，然后让其自动缩放
+width="2400px"
 ```
 
-### 内部文件读取
+### 客户端自适应
 
-以下代码用于服务器读取文档，本地无法直接使用。
-
-```javascript
-$.ajax({
-  url: "./xx.txt",
-  success: function (result) {
-    var strs = result.split("\n");
-    addTableTR(strs, true);
-  },
-});
-```
-
-### 选择框状态
-
-调用 attr 给选择框 radio、checkbox 添加 checked 属性和移调，并不能真实改变不能单选和选中框的真实状态，可用下方代码改变。^[[radio、checkbox 选中状态研究](https://www.cnblogs.com/jimloveq/p/10602060.html)]
-
-```javascript
-//取消导航项的 checked，同类名称都会取消 checked 状态
-$("input[name=daoruRadio]").prop("checked", false);
-//点击对映 id 的单选框
-$("input[id=Radio1]").prop("checked", true);
-```
-
-### 复制隐藏内容
-
-clipboardjs 可复制隐藏区域内容
-
-```javascript
-//新设将粘贴板设在特定按钮上，#copyresult 为按钮 id，#CopyValue 为区域 id
-var clipboard2 = new ClipboardJS("#copyresult", {
-  text: function () {
-    return $("#CopyValue").val();
-  },
-});
-
-clipboard2.on("success", function (e) {
-  toastr["success"]("复制成功！");
-});
-
-clipboard2.on("error", function (e) {
-  toastr["error"]("复制失败，请手动重新复制！");
-});
-```
-
-### 引入 html 页面
-
-利用 link 标签的 rel=import 引入 html 页面
+判断设备是移动还是 PC，然后显示不同样式内容。
 
 ```html
-<link rel="import" href="header.html" />
-```
-
-### 视频全屏弹窗
-
-品牌首页经常需要在动加载视频，可将下方代码放入首页源码的 body 区。
-
-```html
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.staticfile.org/layer/3.5.1/theme/default/layer.min.css"
-/>
-<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/layer/3.5.1/layer.min.js"></script>
-<script type="text/javascript">
+<script>
   window.onload = function () {
-    //页面一打开就执行，放入 reay 是为了 Layer 所需配件（css、扩展模块）加载完毕
-    layer.ready(function () {
-      //iframe 层 - 多媒体
-      layer.open({
-        //type 值为 1 时，则可直接套用视频
-        type: 2,
-        title: false,
-        area: ["630px", "360px"],
-        shade: 0.8,
-        closeBtn: 0,
-        shadeClose: true,
-        //视频链接
-        content:
-          "https://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/brand-video.MP4",
-      });
-    });
+    browserRedirect();
   };
+  function browserRedirect() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (
+      bIsIpad ||
+      bIsIphoneOs ||
+      bIsMidp ||
+      bIsUc7 ||
+      bIsUc ||
+      bIsAndroid ||
+      bIsCE ||
+      bIsWM
+    ) {
+      //移动端页面
+      $("#mobile").show();
+      $("#pc").hide();
+    } else {
+      //pc 端页面
+      $("#mobile").hide();
+      $("#pc").show();
+    }
+  }
 </script>
-```
-
-插入视频代码
-
-```html
-<div style="line-height:0;font-size:0">
-  <video
-    width="100%"
-    height="100%"
-    controls="controls"
-    autoplay="autoplay"
-    autobuffer="autobuffer"
-    src="https://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/brand-video.MP4"
-  ></video>
+<div id="pc" style="display: none;">
+  <img
+    src="../upload/202108/1629972325344278.png"
+    title=""
+    data-width="1920"
+    data-height="1080"
+  />
+</div>
+<div id="mobile" style="text-align:center;display: none;">
+  <img
+    src="http://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/upload/202108/1628149761.png"
+  />
 </div>
 ```

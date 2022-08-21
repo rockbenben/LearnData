@@ -166,7 +166,9 @@ x!==5 false
 || 或
 ```
 
-## 取随机值
+## JavaScript 应用
+
+### 取随机值
 
 ```javascript
 //[任意随机值](https://www.runoob.com/w3cnote/js-random.html)
@@ -193,4 +195,115 @@ for (var i = 0; i < rn; ++i) {
   count--;
   strResult = strResult + result[i] + "\n";
 }
+```
+
+### 文本框清空
+
+input 文本框获取焦点后，自动清空内容。
+
+```javascript
+onfocus = "this.value=''";
+```
+
+### 内部文件读取
+
+以下代码用于服务器读取文档，本地无法直接使用。
+
+```javascript
+$.ajax({
+  url: "./xx.txt",
+  success: function (result) {
+    var strs = result.split("\n");
+    addTableTR(strs, true);
+  },
+});
+```
+
+### 选择框状态
+
+调用 attr 给选择框 radio、checkbox 添加 checked 属性和移调，并不能真实改变不能单选和选中框的真实状态，可用下方代码改变。^[[radio、checkbox 选中状态研究](https://www.cnblogs.com/jimloveq/p/10602060.html)]
+
+```javascript
+//取消导航项的 checked，同类名称都会取消 checked 状态
+$("input[name=daoruRadio]").prop("checked", false);
+//点击对映 id 的单选框
+$("input[id=Radio1]").prop("checked", true);
+```
+
+### 复制隐藏内容
+
+clipboardjs 可复制隐藏区域内容。
+
+```javascript
+//新设将粘贴板设在特定按钮上，#copyresult 为按钮 id，#CopyValue 为区域 id
+var clipboard2 = new ClipboardJS("#copyresult", {
+  text: function () {
+    return $("#CopyValue").val();
+  },
+});
+
+clipboard2.on("success", function (e) {
+  toastr["success"]("复制成功！");
+});
+
+clipboard2.on("error", function (e) {
+  toastr["error"]("复制失败，请手动重新复制！");
+});
+```
+
+### 引入 html 页面
+
+利用 link 标签的 rel=import 引入 html 页面
+
+```html
+<link rel="import" href="header.html" />
+```
+
+### 视频全屏弹窗
+
+品牌首页经常需要在动加载视频，可将下方代码放入首页源码的 body 区。
+
+```html
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.staticfile.org/layer/3.5.1/theme/default/layer.min.css"
+/>
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/layer/3.5.1/layer.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+    //页面一打开就执行，放入 reay 是为了 Layer 所需配件（css、扩展模块）加载完毕
+    layer.ready(function () {
+      //iframe 层 - 多媒体
+      layer.open({
+        //type 值为 1 时，则可直接套用视频
+        type: 2,
+        title: false,
+        area: ["630px", "360px"],
+        shade: 0.8,
+        closeBtn: 0,
+        shadeClose: true,
+        //视频链接
+        content:
+          "https://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/brand-video.MP4",
+      });
+    });
+  };
+</script>
+```
+
+插入视频代码
+
+```html
+<div style="line-height:0;font-size:0">
+  <video
+    width="100%"
+    height="100%"
+    controls="controls"
+    autoplay="autoplay"
+    autobuffer="autobuffer"
+    src="https://iluminage-cdn.oss-cn-shanghai.aliyuncs.com/brand-video.MP4"
+  ></video>
+</div>
 ```

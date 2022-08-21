@@ -85,7 +85,7 @@ Windows 自用软件，以开源软件为主。
 
 ## 系统日常
 
-资源管理器：QTTabBar & [Q-Dir](https://www.softwareok.com/?seite=Freeware/Q-Dir) ~~& Clover（UI 不好看）~~
+资源管理器：QTTabBar & 360 文件夹（多标签） & [Q-Dir](https://www.softwareok.com/?seite=Freeware/Q-Dir) ~~& Clover（UI 不好看）~~
 
 浏览器：Chrome & Firefox(资源) & Brave(工具/书签) & Edge(移动端) ~~& Vivaldi & Tor & 猎豹 & 360 & 搜狗 & Maxthon & 百度~~
 

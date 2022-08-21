@@ -21,6 +21,8 @@
 
 因此，我基于 VuePress 和 vuepress-theme-hope 建立了 LearnData，将所有笔记和博客聚合在同一页面，方便知识点查询和对外输出分享。
 
+![](http://tc.seoipo.com/2022-08-19-14-33-00.png "笔记/博客自动化发布")
+
 ## 🧱 笔记结构
 
 - 置顶：日常习惯、健身、阅读；
@@ -41,7 +43,7 @@
 
    ![](http://tc.seoipo.com/2022-08-10-19-34-13.png?imageMogr2/thumbnail/!60p)
 
-2. 复制好后，清空 `docs/_posts` 路径下的所有文件。这是因为测试搭建时 GitHub Pages 对我旧文章里的代码报错，需要清空文章来避免部署出错。之后，GitHub 会自动搭建网站，架构时间约 3 分钟。
+2. 复制好后，删除 `docs/_posts` 路径下的 `2017-04-22-rss_feed43_feedex.md` 文件。这是因为测试中发现，首次搭建的 GitHub Pages 会对这篇旧文章里的代码报错，需要清空文章来避免部署出错。之后，GitHub 会自动搭建网站，架构时间约 3 分钟。
 3. 点击 `Setting`, 修改 `Repository name` 为 `xxx.github.io`, `xxx` 是你的 GitHub 用户名。如果该项名称已被占据，GitHub Pages 无法正常显示，查看下方解决办法。
 
    ![](http://tc.seoipo.com/20180505202201.png)
@@ -93,6 +95,14 @@ LearnData 的文本目录和配置都在 `docs` 路径中。
 VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命名，导致网站大部分的文件发生更改。即使你并没有更新文章，生成的静态文件也会改变。比如我的笔记网站用的 VuePress 默认配置，每次服务器部署需要 10 分钟，期间打开网站就会出错。
 
 如果不想每次架构都重命名文件，可以复制「[nohashname](https://github.com/rockbenben/LearnData/tree/nohashname)」branch。我把 nohashname 分支的打包工具换成了 Webpack，并用 chainWebpack 设置文件命名规则，避免文件非必要重命名。
+
+### 为什么同步到服务器
+
+LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定，为了确保网站能被正常访问，必须增加国内的访问节点。
+
+很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。
+
+因此，我选择将文档同步到国内服务器（域名需备案）。
 
 ### 本地使用 LearnData
 

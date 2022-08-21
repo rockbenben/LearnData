@@ -16,12 +16,12 @@ DPC_WATCHDOG_VIOLATION 蓝屏原因，多为硬件驱动问题。可是，只有
 ## 分析 dmg 日志
 
 1. 安装 [WinDbg Preview](https://www.microsoft.com/zh-cn/p/windbg/9pgjgd53tn86?rtc=1&activetab=pivot:overviewtab)，这是微软官方推出的系统 Debug 工具。
-2. 启动 WinDbg Preview，软件会自动检测到最新 dmp 日志，点击 Yes 即可载入。如果想分析其他文件，打开文件夹 `C:\Windows\Minidump`，导出日志 `xxx.dmp`。
+2. 启动 WinDbg Preview，软件会自动检测到最新 dmp 日志，点击 Yes 即可载入。如果想分析其他文件，打开文件夹 `C:\Windows\Minidump`，导出日志 `*.dmp`。
 3. 载入日志过程中，WinDbg Preview 会自动下载所需文件，不需要管。载入完成后，点击 `!analyze -v`，分析具体日志。
 
    ![](http://tc.seoipo.com/20201025223307.png)
 
-4. 分析日志：日志上方的都是套话，可以忽略。直接看日志最下方几行，找出引发蓝屏的进程，并删除该程序。如果冲突进程为驱动，无法强删，可以把驱动还原为上一版驱动或系统自带驱动。
+4. 分析日志：日志上方的都是套话，可以忽略。直接看日志最下方几行，找出引发蓝屏的进程，并删除该程序。如果冲突进程为驱动（`*.sys`），这类文件不要强删，进入设备管理器找到对应硬件，备份当前驱动然后将驱动还原为旧版驱动或系统自带驱动。
 
    ![](http://tc.seoipo.com/20201025224308.png)
 
@@ -31,7 +31,7 @@ DPC_WATCHDOG_VIOLATION 蓝屏原因，多为硬件驱动问题。可是，只有
 
 不想分析日志，也简单。
 
-1. 打开文件夹 `C:\Windows\Minidump`，导出日志 `xxx.dmp`。
+1. 打开文件夹 `C:\Windows\Minidump`，导出日志 `*.dmp`。
 2. 将 dmp 日志上传至 [微软社区](https://answers.microsoft.com/zh-hans/newthread?threadtype=Questions&cancelurl=/zh-hans/windows/forum&forum=windows&filter=)，会有技术人员帮你分析蓝屏原因。微软社区无法上传附件，需先将 dmp 日志上传至百度云或微云，再将分享链接放在问题里。
 
 ## 常见问题
@@ -64,9 +64,9 @@ DPC_WATCHDOG_VIOLATION 蓝屏原因，多为硬件驱动问题。可是，只有
 
 评论区大部分很多重复问蓝屏原因的，这里汇总了常见的蓝屏原因分析。
 
-- 系统性模块报错：ntkrnlmp.exe、xxx.symbols.exe。日志尾部仅有系统模块报错，实际是由应用进程与系统冲突引起的蓝屏，需深入分析日志。
+- 系统性模块报错：ntkrnlmp.exe、*.symbols.exe。日志尾部仅有系统模块报错，实际是由应用进程与系统冲突引起的蓝屏，需深入分析日志。
 - 驱动冲突：nvlddmkm、amdkmdag。N 卡、A 卡或硬件进程报错，建议先回退到旧驱动。这样不会对电脑产生很大影响。如果驱动不对，可重新安装。驱动无法回退，则去官网下载旧驱动，或尝试最新驱动，或卸载为系统默认驱动。驱动若不行，则尝试更新主板 BIOS，关闭超频。
-- 未知报错：xxx.sys。尝试多种方法，依然无法修复，则可用最后一步 - 强行删除。但删除前，必须备份好文件和位置。如果删除后进入不了系统，需使用 PE 系统还原备份文件。如不清楚如何使用 PE，不要删除任何 xxx.sys 文件。
+- 未知报错：蓝屏报错的 `*.sys` 多为硬件驱动，但有时无法确定与哪个硬件相关。尝试多种方法，依然无法修复，则可用最后一步**强行删除**。但删除前，必须备份好文件和位置。如果删除后进入不了系统，需使用 PE 系统还原备份文件。如果相关文件多余 5 个，或不清楚如何使用 PE，不要强删任何 `*.sys` 文件。
 
 ## 蓝屏解决集锦
 
@@ -78,4 +78,5 @@ DPC_WATCHDOG_VIOLATION 蓝屏原因，多为硬件驱动问题。可是，只有
 - 终极方法：重装系统，测试期间**尽量使用默认系统驱动**。重装又蓝屏的话，说明你新装的驱动有问题，卸掉有问题的驱动。
 
 视频说明：
+
 <iframe height=400 width=100% src="//player.bilibili.com/player.html?aid=627539890&bvid=BV1jt4y1i7C8&cid=249655764&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

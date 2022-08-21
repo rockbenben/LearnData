@@ -41,7 +41,7 @@ order: 2
 
 [zvTabs](https://chrome.google.com/webstore/detail/zvtabs%E4%B8%80%E9%94%AE%E5%85%B3%E9%97%AD%E5%B7%A6%E4%BE%A7%E6%A0%87%E7%AD%BE/aelfgfndnhaiicaahkbpmgbbnflnbejb)：一键关闭左侧标签。
 
-[GoTo Tab](https://chrome.google.com/webstore/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi)：快速定位 tab 页。
+[GoTo Tab](https://chrome.google.com/webstore/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi)：关键词搜索，快速定位标签页。
 
 ## 批量链接
 
@@ -51,7 +51,7 @@ order: 2
 
 [Linkclump](https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj)：按住 `Z` 键后，长按鼠标左键进行区域框选，区域内的链接可以进行批量打开、复制、书签，操作中会同步显示区域内的链接数。
 
-[TabCopy](https://chrome.google.com/webstore/detail/tabcopy/micdllihgoppmejpecmkilggmaagfdmb)：快速复制 tab 页链接。
+[TabCopy](https://chrome.google.com/webstore/detail/tabcopy/micdllihgoppmejpecmkilggmaagfdmb)：快速复制标签页链接。
 
 ## 图片视频
 
