@@ -67,7 +67,7 @@ Windows 自用软件，以开源软件为主。
 
 剪切板：Ditto ~~& CopyQ~~
 
-时间管理：ManicTime ~~& Toggl Track & RescueTime(订阅)~~
+时间管理：ManicTime & Toggl Track ~~& RescueTime(订阅)~~
 
 本地搜索：Everything([拼音扩展](https://github.com/Chaoses-Ib/IbEverythingExt)) ~~& AnyTXT Searcher & DocFetcher（全文） & Archivarius 3000~~
 

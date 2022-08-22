@@ -13,7 +13,7 @@ order: 3
 
 ## Power Automate
 
-[Power Automate](https://sspai.com/series/273/list) 自动化应用，分为桌面流和 [云端流](https://make.powerautomate.com/)，上手比 Quikcer 复杂，但功能更稳定。**对于免费用户来说，Power Automate 都得手动执行流，个人账户与组织账户无明显区别。**
+[Power Automate](https://sspai.com/series/273/list) 自动化应用，分为桌面流和 [云端流](https://make.powerautomate.com/)，上手比 Quikcer 复杂，网页自动化弱于 UI. Vision RPA，适合在 Window 不同应用间切换的自动化流。**对于免费用户来说，Power Automate 都得手动执行流，个人账户与组织账户无明显区别。**
 
 **桌面流**本身并没有触发器，因此只能手动执行。付费的组织账户可以自动执行桌面流，比如：云端流调用桌面流，[通过 URL 运行桌面流](https://docs.microsoft.com/zh-cn/power-automate/desktop-flows/run-pad-flow#run-desktop-flows-via-url)。
 

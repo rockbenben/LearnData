@@ -10,18 +10,20 @@ icon: note
 
 曾经，我把知识记录在 Notion、Obsidian、飞书等知识管理软件上，散落各处，要找能找到，但使用起来很麻烦，也难以对外分享。
 
-但**记录的笔记并不属于你，只有实际应用消化了才是你的知识**。
+但是，**笔记里的知识并不属于你，只有经过应用消化才会成为自己的知识。**
 
-因此，我基于 VuePress 和 vuepress-theme-hope 建立了 LearnData，将所有笔记和博客聚合在同一页面，方便知识点查询和对外输出分享。
+因此，我基于 VuePress 和 vuepress-theme-hope 建立了 LearnData，将所有笔记与文章聚合在同一页面形成知识库，方便自己使用和分享输出。
 
-![](http://tc.seoipo.com/2022-08-19-14-33-00.png "笔记/博客自动化发布")
+![](http://tc.seoipo.com/2022-08-22-19-28-25.png?imageMogr2/thumbnail/!80p "笔记 + 文章 = LearnData 知识库")
+
+![](http://tc.seoipo.com/2022-08-22-18-01-03.png "笔记/博客自动化发布")
 
 ## 🧱 笔记结构
 
 - 置顶：日常习惯、健身、阅读；
 - 代码：常用代码的学习使用笔记；
 - 软件应用：常用应用、Chrome 扩展及相关教程；
-- 页面开发：页面插件和架构生成工具；
+- 页面开发：页面插件和框架生成工具；
 - 网站部署：网站相关的平台、工具及知识收集；
 - Linux 服务：NAS 和服务器上的后端应用，主要以 Docker 方式部署；
 - 系统问题：Windows 系统优化和相关问题；
@@ -55,7 +57,7 @@ LearnData 的文本目录和配置都在 `docs` 路径中。
 
 `README.md` 是默认主页，`blog.md` 配置博客页面，`intro.md` 是你的个人介绍。
 
-![](http://tc.seoipo.com/2022-08-19-14-50-13.png "docs 路径结构")
+![](http://tc.seoipo.com/2022-08-22-18-04-08.png "docs 路径结构")
 
 `.vuepress` 路径下是网站的配置文件。`config.ts` 配置网站环境依赖和网站属性。`sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。`navbar.ts` 配置导航栏，推荐放你常用的文档链接。theme.ts 对主题和插件进行设置。我在配置文件上有详细注释，可按需求修改，或参考 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
 
