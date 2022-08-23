@@ -1,8 +1,9 @@
 import { viteBundler } from "@vuepress/bundler-vite";
+import { defineUserConfig } from "vuepress";
 //import { webpackBundler } from "@vuepress/bundler-webpack";
-import { defineUserConfig } from "@vuepress/cli";
-//import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+//import { defineUserConfig } from "@vuepress/cli";
 import { searchPlugin } from "@vuepress/plugin-search";
+//import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { feedPlugin } from "vuepress-plugin-feed2";
 import { path } from "@vuepress/utils";
