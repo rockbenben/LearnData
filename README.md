@@ -86,6 +86,12 @@ LearnData 的文本目录和配置都在 `docs` 路径中。
 
 检查 `docs/_posts/config.ts` 中 base 的设置，默认为 `/`。如果 GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则将 base 改为 `/yyy`。
 
+### ERR_MODULE_NOT_FOUND
+
+生成静态网页时，报错 `Error [ERR_MODULE_NOT_FOUND]: Cannot find module`，检查是否有用第三方插件。
+
+如果没有第三方插件的话，该报错则是由 pacakge.json 中的依赖版本号 bug 引起的，可以留言到 issue 或网页。默认配置已经固化依赖版本号，该报错出现几率极低。
+
 ### 同步服务器报错
 
 `FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
