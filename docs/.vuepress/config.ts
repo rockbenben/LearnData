@@ -29,11 +29,11 @@ export default defineUserConfig({
 
   plugins: [
     //algolia 全文搜索：没设置爬虫的话，需删除 docsearchPlugin 区块以使用节点搜索
-//    docsearchPlugin({
-//      indexName: 'newzone',
-//      appId: 'M4EXXEZIEG',
-//      apiKey: 'fd8891a9c4cc21e0ef4f11bf44f7a11e',
-//    }),
+    docsearchPlugin({
+      indexName: 'newzone',
+      appId: 'M4EXXEZIEG',
+      apiKey: 'fd8891a9c4cc21e0ef4f11bf44f7a11e',
+    }),
     //本地搜索：默认情况下，该插件会将页面标题和小标题作为搜索索引。
     searchPlugin({
       // 你的选项
