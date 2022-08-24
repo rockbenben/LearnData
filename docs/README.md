@@ -51,15 +51,14 @@ icon: note
 
 ## 🔣 配置 LearnData
 
-LearnData 的文本目录和配置都在 `docs` 路径中。
+LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保存路径和网站配置在 `docs` 文件夹。
 
-`.vuepress` 存放网站配置文件，`_post` 存放博客文章，`_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你也可以按范围或功能新建文件夹，存放不同方向的笔记。
-
-`README.md` 是默认主页，`blog.md` 配置博客页面，`intro.md` 是你的个人介绍。
+`docs/.vuepress` 存放网站配置文件，`docs/_post` 存放博客文章，`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你也可以按范围或功能新建文件夹，存放不同方向的笔记。`docs/README.md` 是默认主页，`docs/blog.md` 配置博客页面，`docs/intro.md` 是你的个人介绍。
 
 ![](http://tc.seoipo.com/2022-08-22-18-04-08.png "docs 路径结构")
 
-`.vuepress` 路径下是网站的配置文件。`config.ts` 配置网站环境依赖和网站属性。`sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。`navbar.ts` 配置导航栏，推荐放你常用的文档链接。theme.ts 对主题和插件进行设置。我在配置文件上有详细注释，可按需求修改，或参考 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
+`docs/.vuepress` 路径下是网站的配置文件。`config.ts` 配置网站环境依赖和网站属性。`sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。`navbar.ts` 配置导航栏，推荐放你常用的文档链接。theme.ts 对主题和插件进行设置。我在配置文件上有详细注释，可按需求修改，或参考 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
+
 
 ## 🖥️ 同步到服务器
 

@@ -23,11 +23,11 @@ Windows 自用软件，以开源软件为主。
 
 设计：Figma & Photoshop & 字由 ~~& GIMP & FastStone & illustrator & Dreamweaver & lightroom~~
 
-截图：Snipaste & ShareX & webshot(批量网页截图，路径 %m) ~~& SETUNA~~
+截图：Snipaste & ShareX ~~& webshot & SETUNA~~
 
 图像管理：Honeyview & Eagle & PicGo 图床 ~~& imageglass(界面好，但不支持全图拖拽和压缩包预览图片) & Google 相册 & 看图王 & 呱呱看图~~
 
-图像处理：PP 鸭（免费版单次 10 张） & [RIOT](http://luci.criosweb.ro/riot/)(压缩) & Inpaint(去水印) & PhotoZoom(无损放大) ~~& 智图~~
+图像处理：PP 鸭（免费版单次 10 张）& [RIOT](http://luci.criosweb.ro/riot/)(压缩) & Inpaint(去水印) & PhotoZoom(无损放大) ~~& 智图~~
 
 ## 音频视频
 
@@ -53,7 +53,7 @@ Windows 自用软件，以开源软件为主。
 
 按键可视化：[Carnac](https://github.com/Code52/carnac) & [Keyviz](https://github.com/mulaRahul/keyviz) & [ClickShow](https://github.com/cuiliang/ClickShow) & [KeyCastOW](https://github.com/brookhong/KeyCastOW)
 
-投屏工具：[scrcpy](https://github.com/Genymobile/scrcpy) (手机投屏) & [Macast](https://gitee.com/xfangfang/Macast/releases/)（手机视频投屏到电脑）& 蓝莓投屏
+投屏工具：[scrcpy](https://newzone.top/_posts/2019-08-26-scrcpy_screen_projection.html) (手机投屏) & [Macast](https://gitee.com/xfangfang/Macast/releases/)（手机视频投屏到电脑）& 蓝莓投屏
 
 ## 效率工具
 
@@ -62,7 +62,7 @@ Windows 自用软件，以开源软件为主。
 - Quicker：脚本，全局手势
 - RunAny：指针快捷启动；一键打开网址、文件路径
 - 热键工具：Fn-PowerKey、[CapsLock+](https://capslox.com/capslock-plus/#basicFunctions)
-- 图标启动：[Lucy 快速启动](https://www.yuque.com/lucy/lucy/record) ~~、Rolan（收费）、nTrun (Win 键启动)~~
+- 图标启动：[Lucy 快速启动](https://www.yuque.com/lucy/lucy/record) ~~、Rolan、nTrun (Win 键启动)~~
 - 启动栏：Listary ~~、uTolls、Wox~~
 
 剪切板：Ditto ~~& CopyQ~~
@@ -93,7 +93,7 @@ Windows 自用软件，以开源软件为主。
 
 通讯：TIM & 微信 & Telegram & Slack & Discord & [防撤回补丁](https://github.com/huiyadanli/RevokeMsgPatcher) ~~& 钉耙 & 千牛 & 阿里旺旺~~
 
-下载：[Aria2](https://zhuanlan.zhihu.com/p/37021947) & IDM & [Kinhdown](https://baidu.kinh.cc/)(百度云解析) ~~& FDM(不支持 ed2k、磁力) & 迅雷~~
+下载：[Aria2](https://one.top/_posts/2018-05-15-aria2_a_new_download_tool.html) & IDM & [Kinhdown](https://baidu.kinh.cc/)(百度云解析) ~~& FDM(不支持 ed2k、磁力) & 迅雷~~
 
 PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
@@ -115,7 +115,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 翻译词典：DeepL ~~& GoldenDict & 欧陆词典 & 有道词典 & QTranslate & Lingoes~~
 
-思维导图：Xmind & TheBrain(无限思维扩展) ~~& MindManager~~
+思维导图：TheBrain(无限思维扩展) & Xmind ~~& MindManager~~
 
 虚拟机：VMware & VirtualBox
 
