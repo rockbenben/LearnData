@@ -66,7 +66,6 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 
 `docs/.vuepress` 路径下是网站的配置文件。`config.ts` 配置网站环境依赖和网站属性。`sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。`navbar.ts` 配置导航栏，推荐放你常用的文档链接。theme.ts 对主题和插件进行设置。我在配置文件上有详细注释，可按需求修改，或参考 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
 
-
 ## 🖥️ 同步到服务器
 
 项目搭建好后，出现了红色叉叉，这是 GitHub Actions 的失败提示。这是由于 LearnData 部署了同步 ftp 代码，如果你没有正确配置服务器，GitHub Actions 就会报错。
@@ -85,17 +84,11 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 
 检查 `docs/_posts/config.ts` 中 base 的设置，默认为 `/`。如果 GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则将 base 改为 `/yyy`。
 
-### ERR_MODULE_NOT_FOUND
+### ERR_MODULE
 
-生成静态网页时，报错 `Error [ERR_MODULE_NOT_FOUND]: Cannot find module`，检查是否有用第三方插件。
+生成静态网页时，报错 `Error [ERR_MODULE_NOT_FOUND]: Cannot find module`，检查是否有第三方插件或未正确配置环境依赖。
 
-如果没有第三方插件的话，该报错则是由 pacakge.json 中的依赖版本号 bug 引起的，可以留言到 issue 或网页。默认配置已经固化依赖版本号，该报错出现几率极低。
-
-### 同步服务器报错
-
-`FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
-
-`Error: Timeout (control socket)` 是同步服务器超时报错。如果出现该错误，进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
+这是 pacakge.json 引发的环境依赖报错，默认配置已经固化依赖版本号，该报错出现几率极低，遇到的话请留言到 issue 或评论区。
 
 ### 静态文件名字总变
 
@@ -107,9 +100,13 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 
 LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定，为了确保网站能被正常访问，必须增加国内的访问节点。
 
-很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。
+很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。因此，我没选 Gitee，而是把文档同步到国内服务器（域名需备案）。
 
-因此，我选择将文档同步到国内服务器（域名需备案）。
+### 同步服务器报错
+
+`FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
+
+`Error: Timeout (control socket)` 是同步服务器超时报错。如果出现该错误，进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
 
 ### 本地使用 LearnData
 

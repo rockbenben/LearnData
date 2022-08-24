@@ -9,30 +9,22 @@ order: 1
 
 如果国内静态资源库没有你要的静态包，推荐用 `npm i` 命令将静态包下载到本地，并部署到阿里云/七牛云的国内服务器上，避免网页受 UNPKG 和 jsDelivr 屏蔽影响而出现偏差。
 
+静态资源库：
+
+- [字节 CDN](https://cdn.bytedance.com/)：国内测速表现最佳，缓存过期时间最长设置一年。
+- [Staticfile CDN](https://www.staticfile.org/)：CDN 加速由七牛云提供。
+
 ### NPM 包
 
 - UNPKG：**有墙风险且不稳定**，默认为最新版本，无需 `@latest` 标签。
   - 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
   - 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀 `https://unpkg.com/`。
-- 自建 unpkg 镜像，反向代理 unpkg
-- [NPM MIRROR](https://npmmirror.com/)：NPM 项目的国内镜像镜像，不能做静态托管用途。
+- UNPKG 镜像：有资源可以用服务器自建服务，反向代理 unpkg。
+- [NPM MIRROR](https://npmmirror.com/)：NPM 项目的国内镜像镜像，不能做静态托管用途。`https://registry.npmmirror.com/项目名/版本号` 可以看见项目的各种信息，但看不了里面的文件。
+- ~~jsDelivr（已墙）：速度最快，原本是最稳的，但域名暴雷后，经常断开，2022.06.01 彻底打不开。配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新。刷新命令参考 `curl https://purge.jsdelivr.net/gh/username/project/file`。~~
+- ~~饿了么 CDN（已关）：国内唯一能用的 npm 镜像，2022.07.13 发现外部访问被拒绝。之前饿了么并没说支持对外，可能已经彻底取消了。使用饿了么 CDN 时，注意 `https://npm.elemecdn.com/react@latest/` 需要时间更新，具体频率未知，可固定大版本号来获取更新 `https://npm.elemecdn.com/react@^18/`。~~
 
-  - `https://registry.npmmirror.com/项目名/版本号` 可以看见项目的各种信息，但看不了里面的文件。
-
-- ~~jsDelivr（已墙）：速度最快，原本是最稳的，但域名暴雷后，经常断开，2022.06.01 彻底打不开。~~
-
-  ~~配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新。刷新命令参考 `curl https://purge.jsdelivr.net/gh/username/project/file`。~~
-
-- ~~饿了么 CDN（已关）：国内唯一能用的 npm 镜像，2022.07.13 发现外部访问被拒绝。之前饿了么并没说支持对外，可能已经彻底取消了。~~
-
-  ~~使用饿了么 CDN 时，注意 `https://npm.elemecdn.com/react@latest/` 需要时间更新，具体频率未知，可固定大版本号来获取更新 `https://npm.elemecdn.com/react@^18/`。~~
-
-### 静态资源库
-
-- [字节 CDN](https://cdn.bytedance.com/)：国内测速表现最佳，缓存过期时间最长设置一年。
-- [Staticfile CDN](https://www.staticfile.org/)：CDN 加速由七牛云提供。
-
-### 静态页面
+### 部署平台
 
 - Cloudflare：Pages 和 Workers 两类部署方式。
   - [Workers](../deploy/Cloudflare.html#反向代理)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
@@ -61,9 +53,7 @@ cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管 - cloudflare
 
 代码、文章推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定，为了确保网站能被正常访问，必须增加国内的访问节点。
 
-很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。
-
-因此，我选择将文档同步到国内服务器（域名需备案）。
+很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。因此，我没选 Gitee，而是把文档同步到国内服务器（域名需备案）。
 
 !> 注意：文件夹不要有大写字母，否则同步时容易出错。
 
@@ -91,17 +81,11 @@ jobs:
         port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
 ```
 
-新建 FTP 时，需在云服务商的安全组和服务器上开放 FTP 端口，并**暂停宝塔系统加固**等安全插件。
+新建 FTP 时，需在云服务商的安全组和服务器上开放 FTP 端口，并临时暂停宝塔系统加固等安全插件（新建 FTP 容易与安全插件冲突）。
 
-`FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
+如果出现 `FTPError: 530 Login authentication failed`，则说明 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。确认 FTP 无效后，检查 FTP 密码是否填写正确，是否只有大小写字母和数字。如果密码错误，则在 github secrets 重新 update 密钥。如果密码正确，则进入 `/www/server/pure-ftpd/etc/pureftpd.passwd`，检查是否有该 FTP 账户。没有 FTP 账户的话，**暂停宝塔系统加固**等安全插件后，重新新建 FTP。
 
-如果出现错误 `FTPError: 530 Login authentication failed`，则说明 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
-
-确认 FTP 无效后，检查 FTP 密码是否填写正确，是否只有大小写字母和数字。如果密码错误，则在 github secrets 重新 update 密钥。
-
-如果密码正确，则进入 `/www/server/pure-ftpd/etc/pureftpd.passwd`，检查是否有该 FTP 账户。没有账户的话，**暂停宝塔系统加固**等安全插件后，重新新建 FTP。
-
-`Error: Timeout (control socket)` 是同步服务器超时报错。如果出现该错误，进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
+如果出现 `Error: Timeout (control socket)`，则说明同步服务器超时，可进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
 
 ### 同步到 oss
 
