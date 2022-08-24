@@ -29,7 +29,10 @@ LearnData 的主题为 [vuepress-theme-hope](https://vuepress-theme-hope.github.
 
 本地搜索插件：[search](https://v2.vuepress.vuejs.org/zh/reference/plugin/search.html) 根据你的页面，在本地生成搜索索引，然后在用户访问站点时加载搜索索引文件。默认情况下，该插件会将页面标题和小标题作为搜索索引。
 
-在线搜索插件：[Algolia DocSearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html) 使用在线爬虫抓取全站，并提供网站搜索索引，抓取周期为一周。开源技术向博客可以申请官方支持，商业化内容需要自己设置爬虫。Algolia 爬虫管理页为 [Trigger or get an overview of your crawls](https://crawler.algolia.com/admin/crawlers/bd9cfb06-0346-4a64-9a1a-8a513f0b7fce/overview)，可以手动触发爬虫。
+在线搜索插件：[algolia DocSearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html) 使用在线爬虫抓取全站，并提供网站搜索索引，抓取周期为一周。开源技术向博客可以申请官方支持，商业化内容需要自己设置爬虫。
+
+- algolia [搜索数据库](https://www.algolia.com/apps/M4EXXEZIEG/dashboard)，可查看搜索次数与数据。
+- algolia 爬虫管理页为 [Trigger or get an overview of your crawls](https://crawler.algolia.com/admin/crawlers/bd9cfb06-0346-4a64-9a1a-8a513f0b7fce/overview)，可以手动触发爬虫。
 
 ## Webpack 打包
 
