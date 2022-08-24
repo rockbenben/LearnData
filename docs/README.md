@@ -10,13 +10,13 @@ icon: note
 
 曾经，我把知识记录在 Notion、Obsidian、飞书等知识管理软件上，散落各处，使用起来很麻烦，也难以对外分享。
 
-但是，**笔记里的知识并不属于你，只有经过应用消化才会成为自己的知识。**
+但是，**笔记里的知识并不属于你，只有经过消化、应用，才会成为自己的知识。**
 
 因此，我基于 VuePress 和 vuepress-theme-hope 建立了 LearnData，将所有笔记与文章聚合在同一页面形成知识库，方便自己使用和分享输出。
 
 ![](http://tc.seoipo.com/2022-08-22-19-28-25.png?imageMogr2/thumbnail/!80p "笔记 + 文章 = LearnData 知识库")
 
-![](http://tc.seoipo.com/2022-08-22-18-01-03.png "笔记/博客自动化发布")
+![](http://tc.seoipo.com/2022-08-24-19-14-59.png "笔记/博客自动化发布")
 
 ## 🧱 笔记结构
 
@@ -38,8 +38,8 @@ icon: note
 
    ![](http://tc.seoipo.com/2022-08-10-19-34-13.png?imageMogr2/thumbnail/!60p)
 
-2. 复制好后，删除 `docs/_posts` 路径下的 `2017-04-22-rss_feed43_feedex.md` 文件。这是因为测试中发现，首次搭建的 GitHub Pages 会对这篇旧文章里的代码报错，需要清空文章来避免部署出错。之后，GitHub 会自动搭建网站，架构时间约 3 分钟。
-3. 点击 `Setting`, 修改 `Repository name` 为 `xxx.github.io`, `xxx` 是你的 GitHub 用户名。如果该项名称已被占据，GitHub Pages 无法正常显示，查看下方解决办法。
+2. 复制好后，GitHub 会自动搭建网站，架构时间约 3 分钟。
+3. 点击 `Setting`, 修改 `Repository name` 为 `xxx.github.io`, `xxx` 是你的 GitHub 用户名。如果该项名称已被占据，GitHub Pages 无法正常显示，则查看页面底部的常见问题。
 
    ![](http://tc.seoipo.com/20180505202201.png)
 
@@ -48,6 +48,8 @@ icon: note
    ![](http://tc.seoipo.com/2022-08-10-19-39-15.png)
 
 5. 设置成功后，页面会提示访问链接 `https://xxx.github.io/`，知识库搭建完毕。
+
+   如果未出现访问链接提示，则删除 `docs/_posts` 路径下的 `2017-04-22-rss_feed43_feedex.md` 文件，GitHub Pages 有时会对这篇旧文章里的代码报错。
 
 ## 🔣 配置 LearnData
 
@@ -59,15 +61,56 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 
 `docs/.vuepress` 路径下是网站的配置文件。`config.ts` 配置网站环境依赖和网站属性。`sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。`navbar.ts` 配置导航栏，推荐放你常用的文档链接。theme.ts 对主题和插件进行设置。我在配置文件上有详细注释，可按需求修改，或参考 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
 
-## 🖥️ 同步到服务器
+## 🖥️ 网站部署
 
-项目搭建好后，出现了红色叉叉，这是 GitHub Actions 的失败提示。这是由于 LearnData 部署了同步 ftp 代码，如果你没有正确配置服务器，GitHub Actions 就会报错。
+LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定，为了确保网站能被正常访问，必须增加国内的访问节点。
 
-进入 GitHub 仓库「setting - Secrets - Action」，添加 `FTP_HOST`，`FTP_PORT`，`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。配置成功后，每次修改文件，Github 都会自动推送到服务器 FTP。
+很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。因此，我没选 Gitee，而是把文档同步到国内服务器（域名需备案）或 Vercel。
 
-如果你没有服务器，可以同步到云存储上，步骤参考 [GitHub 同步到 oss](https://newzone.top/deploy/Static.html#同步到-oss)。
+### 同步到服务器
 
-如果你不需要页面同步推送功能，就删除 `.github/workflows/main.yml` 中 Sync files 区块的代码。
+项目搭建好后，出现了红色叉叉，这是 GitHub Actions 的失败提示。这是由于 LearnData 部署了同步 ftp 代码，当正确配置服务器时，GitHub Actions 就会报错。当然，这不会影响 GitHub Pages 和 Vercel 部署。
+
+服务器设置：进入 GitHub 仓库「setting - Secrets - Action」，添加 `FTP_HOST`，`FTP_PORT`，`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。配置成功后，每次修改文件，Github 都会自动推送到服务器 FTP。如果你没有服务器，也可以同步到云存储上，步骤参考 [GitHub 同步到 oss](https://newzone.top/deploy/Static.html#同步到-oss)。
+
+不需要服务器同步的话，可以删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，避免每次都出红色叉叉报错。
+
+### 部署到 vercel
+
+Vercel 的速度比 GitHub Pages 来得稳定，部署步骤如下：
+
+1. 点击 [![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frockbenben%2FLearnData%2Ftree%2Fgh-pages) 或将 `https://vercel.com/new/clone?repository-url=https://github.com/rockbenben/LearnData/tree/gh-pages` 中的 `rockbenben/LearnData` 改为 `你的用户名/仓库名`，然后会跳转至 Vercel 进行网页部署。如果你未登录的话，Vercel 会让你注册或登录，请使用 GitHub 账户进行快捷登录。
+
+2. 输入一个你喜欢的 Vercel 项目名称，默认 private 即可，然后点击 `Create`。
+
+   ![](http://tc.seoipo.com/2022-08-24-17-24-16.png "创建 Vercel 项目")
+
+3. 此时 Vercel 会基于 LearnData 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。几十秒后，满屏的烟花会庆祝你部署成功。此时点击 `Go to Dashboard` 可以跳转到应用的控制台。
+
+   ![](http://tc.seoipo.com/2022-08-24-17-21-58.png " Vercel 部署成功提示")
+
+4. 完成前三步后网站部署好了，但它不能自动同步部署，需配置 `PERSONAL_TOKEN` 和 GitHub Actions。
+
+   - 按 [Creating a personal access token](https://newzone.top/deploy/GitHub.html#github-actions) 建立 PERSONAL_TOKEN 个人访问令牌。
+   - 将下方代码编辑到 `.github/workflows/main.yml` 文件底部，注意修改 `dst_owner` 和 `dst_repo_name`。
+
+   ```yml
+         #将页面更新到 Vercel
+         - name: Copy file to Vercel
+         if: always()
+         uses: andstor/copycat-action@v3
+         with:
+            personal_token: ${{ secrets.PERSONAL_TOKEN }}
+            src_path: /.
+            dst_path: /
+            # 你的用户名
+            dst_owner: rockbenben
+            # 与 Vercel 链接的仓库名，也就是 Vercel 部署时新建的仓库
+            dst_repo_name: LearnData-Vercel
+            dst_branch: main
+            src_branch: gh-pages
+            clean: true
+   ```
 
 ## 🤔 常见问题
 
@@ -83,23 +126,17 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 
 这是 pacakge.json 引发的环境依赖报错，默认配置已经固化依赖版本号，该报错出现几率极低，遇到的话请留言到 issue 或评论区。
 
-### 静态文件名字总变
-
-VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命名，导致网站大部分的文件发生更改。即使你并没有更新文章，生成的静态文件也会改变。比如我的笔记网站用的 VuePress 默认配置，每次服务器部署需要 10 分钟，期间打开网站就会出错。
-
-如果不想每次架构都重命名文件，可以复制「[nohashname](https://github.com/rockbenben/LearnData/tree/nohashname)」branch。我把 nohashname 分支的打包工具换成了 Webpack，并用 chainWebpack 设置文件命名规则，避免文件非必要重命名。
-
-### 为什么同步到服务器
-
-LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定，为了确保网站能被正常访问，必须增加国内的访问节点。
-
-很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。因此，我没选 Gitee，而是把文档同步到国内服务器（域名需备案）。
-
 ### 同步服务器报错
 
 `FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
 
 `Error: Timeout (control socket)` 是同步服务器超时报错。如果出现该错误，进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
+
+### 静态文件名字总变
+
+VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命名，导致网站大部分的文件发生更改。即使你并没有更新文章，生成的静态文件也会改变。比如我的笔记网站用的 VuePress 默认配置，每次服务器部署需要 10 分钟，期间打开网站就会出错。
+
+如果不想每次架构都重命名文件，可以复制「[nohashname](https://github.com/rockbenben/LearnData/tree/nohashname)」branch。我把 nohashname 分支的打包工具换成了 Webpack，并用 chainWebpack 设置文件命名规则，避免文件非必要重命名。
 
 ### 本地使用 LearnData
 

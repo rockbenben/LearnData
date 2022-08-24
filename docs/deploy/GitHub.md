@@ -16,7 +16,7 @@ GitHub Actions 是一个持续集成和持续交付 (CI/CD) 平台，可用于�
 
 ### 不同仓库间复制
 
-复制文件到目的地，文档没变化则不会执行。案例为将当前仓库 main 分支下 docs 的 README.md 文件复制到另一个仓库 rockbenben/LearnData/ 路径下，如果目标路径存在相同文件，则将覆盖。如果让 `clean: true` 生效，Actions 会将目标路径情况，然后执行复制。
+复制文件到目的地，文档没变化则不会执行。案例为将当前仓库 main 分支下 docs 的 README.md 文件复制到另一个仓库 rockbenben/LearnData/ 路径下，如果目标路径存在相同文件，则将覆盖。如果让 `clean: true` 生效，Actions 会将目标路径情况，然后执行复制。此动作需按 [Creating a personal access token](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-token) 建立 [个人访问令牌](https://github.com/settings/tokens)，
 
 ```yml
 - name: Copy file

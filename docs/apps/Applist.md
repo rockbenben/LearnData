@@ -137,7 +137,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 ## 已弃
 
-- 全局手势：Strokesplus & WGestures
+- 全局手势：[StrokesPlus.net](https://meta.appinn.net/t/topic/29815) & WGestures
 - 桌面管理：Fences 3 & 火萤视频桌面 & UPUPOO & 360 桌面助手 & 搜狗桌面 & Q+
 - 进程管理：Process Lasso（避免老电脑卡顿？会自动删除启动项，不适合主力电脑）& Security Process Explorer（屏蔽垃圾进程）
 - 文件夹锁定/隐藏：Anvide Lock Folder
