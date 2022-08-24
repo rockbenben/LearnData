@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  vuepress-sync:
+  LearnData-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -54,7 +54,7 @@ jobs:
           password: ${{ secrets.ftp_password }}
           port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
 
-      #如果同步服务器失败后，自动重试一次
+      #同步服务器失败后，自动重试一次；同步成功，则自动忽略此步骤
       - name: 📂 Sync files Retry
         if: failure()
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
