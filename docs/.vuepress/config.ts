@@ -3,7 +3,7 @@ import { defineUserConfig } from "vuepress";
 //import { webpackBundler } from "@vuepress/bundler-webpack";
 //import { defineUserConfig } from "@vuepress/cli";
 import { searchPlugin } from "@vuepress/plugin-search";
-//import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { feedPlugin } from "vuepress-plugin-feed2";
 import { path } from "@vuepress/utils";
@@ -28,9 +28,13 @@ export default defineUserConfig({
   templateBuild: path.resolve(__dirname, "templateBuild.html"),
 
   plugins: [
-    //docsearchPlugin({
-      // 你的选项
-    //}),
+    //algolia 全文搜索：没设置爬虫的话，需删除 docsearchPlugin 区块以使用节点搜索
+    docsearchPlugin({
+      indexName: 'newzone',
+      appId: 'M4EXXEZIEG',
+      apiKey: 'fd8891a9c4cc21e0ef4f11bf44f7a11e',
+    }),
+    //本地搜索：默认情况下，该插件会将页面标题和小标题作为搜索索引。
     searchPlugin({
       // 你的选项
     }),

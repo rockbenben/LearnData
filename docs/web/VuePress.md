@@ -21,9 +21,15 @@ LearnData 的主题为 [vuepress-theme-hope](https://vuepress-theme-hope.github.
    - theme.ts：对主题和插件进行设置。
 5. 如果遇到报错，执行命令 `pnpm add vuepress@next vuepress-theme-hope@next && pnpm i && pnpm up` 修复并升级相关依赖包。这步可以解决大部分的报错。
 
-每个插件和主题版本只支持一个 VuePress 版本，因此要稳定的话，需用固定版本号的环境依赖才可以，比如 `pnpm add vuepress@2.0.0-beta.49 vuepress-theme-hope@2.0.0-beta.91 @vuepress/plugin-google-analytics@2.0.0-beta.49 @vuepress/plugin-search@2.0.0-beta.49`。
+每个插件和主题版本只支持一个 VuePress 版本，因此要稳定的话，需用固定版本号的环境依赖才可以，比如 `pnpm add vuepress@2.0.0-beta.49 vuepress-theme-hope@2.0.0-beta.91 @vuepress/plugin-google-analytics@2.0.0-beta.49 @vuepress/plugin-search@2.0.0-beta.49 @vuepress/plugin-docsearch@2.0.0-beta.49`。
 
-如果要测试最新的环境配置，可使用 `pnpm add vuepress@next vuepress-theme-hope@next @vuepress/plugin-google-analytics@next @vuepress/plugin-search@next && pnpm i && pnpm up`。
+如果要测试最新的环境配置，可使用 `pnpm add vuepress@next vuepress-theme-hope@next @vuepress/plugin-google-analytics@next @vuepress/plugin-search@next @vuepress/plugin-docsearch@next && pnpm i && pnpm up`。
+
+## 搜索插件
+
+本地搜索插件：[search](https://v2.vuepress.vuejs.org/zh/reference/plugin/search.html) 根据你的页面，在本地生成搜索索引，然后在用户访问站点时加载搜索索引文件。默认情况下，该插件会将页面标题和小标题作为搜索索引。
+
+在线搜索插件：[Algolia DocSearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html) 使用在线爬虫抓取全站，并提供网站搜索索引，抓取周期为一周。开源技术向博客可以申请官方支持，商业化内容需要自己设置爬虫。Algolia 爬虫管理页为 [Trigger or get an overview of your crawls](https://crawler.algolia.com/admin/crawlers/bd9cfb06-0346-4a64-9a1a-8a513f0b7fce/overview)，可以手动触发爬虫。
 
 ## Webpack 打包
 

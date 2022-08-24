@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@vuepress/client": "2.0.0-beta.49",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.49",
     "@vuepress/plugin-google-analytics": "2.0.0-beta.49",
     "@vuepress/plugin-search": "2.0.0-beta.49",
     "pnpm": "^7.9.4",

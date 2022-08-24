@@ -49,17 +49,21 @@ icon: note
 
 5. 设置成功后，页面会提示访问链接 `https://xxx.github.io/`，知识库搭建完毕。
 
-   如果未出现访问链接提示，则删除 `docs/_posts` 路径下的 `2017-04-22-rss_feed43_feedex.md` 文件，GitHub Pages 有时会对这篇旧文章里的代码报错。
+   如果未出现访问链接提示或不能打开 GitHub Pages，则删除 `docs/_posts` 路径下的 `2017-04-22-rss_feed43_feedex.md` 文件，GitHub Pages 有时会对这篇旧文章里的代码报错。
 
 ## 🔣 配置 LearnData
 
 LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保存路径和网站配置在 `docs` 文件夹。
 
-`docs/.vuepress` 存放网站配置文件，`docs/_post` 存放博客文章，`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你也可以按范围或功能新建文件夹，存放不同方向的笔记。`docs/README.md` 是默认主页，`docs/blog.md` 配置博客页面，`docs/intro.md` 是你的个人介绍。
+`docs/.vuepress` 存放网站配置文件。`docs/_post` 存放博客文章。`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你可以按范围或功能来新建文件夹存放笔记。
+
+`docs/README.md` 是默认主页，`docs/blog.md` 配置博客页面，`docs/intro.md` 是你的个人介绍。
 
 ![](http://tc.seoipo.com/2022-08-22-18-04-08.png "docs 路径结构")
 
-`docs/.vuepress` 路径下是网站的配置文件。`config.ts` 配置网站环境依赖和网站属性。`sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。`navbar.ts` 配置导航栏，推荐放你常用的文档链接。theme.ts 对主题和插件进行设置。我在配置文件上有详细注释，可按需求修改，或参考 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
+`docs/.vuepress` 路径下是网站的配置文件。`config.ts` 配置网站环境依赖和网站属性。`sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。`navbar.ts` 配置导航栏，推荐放你常用的文档链接。`theme.ts` 对主题和插件进行设置。`templateBuild.html` 是网页模板，调整网站关键词和第三方统计代码。配置文件上我添加了详细注释，可以自由调整，或参考 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
+
+注意：LearnData 默认使用了 algolia 全文搜索，如果你没设置 Docsearch 爬虫的话，需删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块。删除后，站点将使用节点搜索。
 
 ## 🖥️ 网站部署
 
@@ -87,9 +91,9 @@ Vercel 的速度比 GitHub Pages 来得稳定，部署步骤如下：
 
 3. 此时 Vercel 会基于 LearnData 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。几十秒后，满屏的烟花会庆祝你部署成功。此时点击 `Go to Dashboard` 可以跳转到应用的控制台。
 
-   ![](http://tc.seoipo.com/2022-08-24-17-21-58.png " Vercel 部署成功提示")
+   ![](http://tc.seoipo.com/2022-08-24-17-21-58.png "Vercel 部署成功提示")
 
-4. 完成前三步后网站部署好了，但它不能自动同步部署，需配置 `PERSONAL_TOKEN` 和 GitHub Actions。
+4. 完成前三步后网站部署好了，但此时 Vercel 页面不能对 GitHub Pages 自动同步更新。自动部署前，你需要配置 `PERSONAL_TOKEN` 和 GitHub Actions。
 
    - 按 [Creating a personal access token](https://newzone.top/deploy/GitHub.html#github-actions) 建立 PERSONAL_TOKEN 个人访问令牌。
    - 将下方代码编辑到 `.github/workflows/main.yml` 文件底部，注意修改 `dst_owner` 和 `dst_repo_name`。
@@ -114,9 +118,9 @@ Vercel 的速度比 GitHub Pages 来得稳定，部署步骤如下：
 
 ## 🤔 常见问题
 
-### 搭建后页面异常
+### 网页显示异常
 
-搭建后，页面能打开，不过只显示文字。这是由于网站路径设置设错，静态文件路径不正确而导致的页面样式错误。
+网站只显示文字且不能正常显示网页，这是网站路径不正确而导致的页面样式错误。
 
 检查 `docs/_posts/config.ts` 中 base 的设置，默认为 `/`。如果 GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则将 base 改为 `/yyy`。
 
