@@ -5,8 +5,9 @@ icon: markdown
 order: 5
 ---
 
-- [Markdown 基本撰写和格式语法](https://docs.github.com/cn/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)
-- [Markdown 转 HTML 语法介绍](https://vuepress-theme-hope.github.io/v2/zh/cookbook/markdown/)
+Markdown 是一种轻量级标记语言，易读易写，并对于图片、图表、数学式都有支持，目前许多网站与应用都支持了 Markdown。
+
+Markdown 入门：[Markdown 基本撰写和格式语法](https://docs.github.com/cn/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text)，[Markdown 转 HTML 语法介绍](https://vuepress-theme-hope.github.io/v2/zh/cookbook/markdown/)
 
 ## 图片尺寸
 

@@ -7,7 +7,7 @@ order: 7
 
 [Electron](https://www.electronjs.org/) 是使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序框架。Electron 兼容 Mac、Windows 和 Linux，可以构建出三个平台的应用程序。
 
-按 [Linux 环境部署教程](../deploy/VPS.html#环境部署)，部署 npm 和 yarn，然后部署 electron 环境。
+按 [环境部署教程](../deploy/VPS.html#环境部署)，部署 npm 和 yarn，然后部署 electron 环境。
 
 ```bash
 # 部署 electron，electron-builder

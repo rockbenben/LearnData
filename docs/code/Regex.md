@@ -5,9 +5,9 @@ icon: regexp
 order: 6
 ---
 
-- [正则 30 分钟入门](https://deerchao.cn/tutorials/regex/regex.htm)
+正则表达式，又称规则表达式，是使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串，通常被用来检索、替换那些符合某个模式（规则）的文本。
 
-- [LEARN REGEX 中文版](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
+正则入门：[正则 30 分钟入门](https://deerchao.cn/tutorials/regex/regex.htm)，[LEARN REGEX 中文版](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
 
 ## 实用表达式
 
@@ -40,9 +40,9 @@ var ZZMactch = "^((?!"+inputMatch.value+").)*$";
 (?<=[?&](id|contentId)=)\d+
 ```
 
-`^((?!abc).)*admin((?!abc).)*$` 匹配 不包含 abc 但包含 admin 的字符串，匹配整行。^[https://blog.csdn.net/thewindkee/article/details/52785763]
+`^((?!abc).)*admin((?!abc).)*$` 匹配 不包含 abc 但包含 admin 的字符串，匹配整行。^[[正则表达式匹配：包含且不包含](https://blog.csdn.net/thewindkee/article/details/52785763)]
 
-`((?!social.tmall.com)(?!ugc/detail.html).)*$` 匹配不包含 `social.tmall.com` 和 `ugc/detail.html` 的字符串，匹配整行。^[https://blog.csdn.net/xiiii/article/details/89450341]
+`((?!social.tmall.com)(?!ugc/detail.html).)*$` 匹配不包含 `social.tmall.com` 和 `ugc/detail.html` 的字符串，匹配整行。^[[正则表达式匹配不包含某些字符串的技巧](https://blog.csdn.net/xiiii/article/details/89450341)]
 
 `[₳$¢₴€₤￥＄《]([a-zA-Z0-9]{11})[₳$¢₴€₤￥＄《]` 匹配淘口令，`[]` 指中内容任意匹配一项皆可。
 

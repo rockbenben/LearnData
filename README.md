@@ -80,11 +80,9 @@ LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内�
 
 ### 同步到服务器
 
-项目搭建好后，出现了红色叉叉，这是 GitHub Actions 的失败提示。这是由于 LearnData 部署了同步 ftp 代码，当正确配置服务器时，GitHub Actions 就会报错。当然，这不会影响 GitHub Pages 和 Vercel 部署。
+项目搭建好后，出现了红色叉叉，这是 GitHub Actions 的失败提示。由于 LearnData 部署了同步 ftp 的代码，如果你没正确配置服务器，GitHub Actions 就会报错。不需要服务器同步的话，可以删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，避免每次都出红色叉叉报错。
 
 服务器设置：进入 GitHub 仓库「setting - Secrets - Action」，添加 `FTP_HOST`，`FTP_PORT`，`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。配置成功后，每次修改文件，Github 都会自动推送到服务器 FTP。如果你没有服务器，也可以同步到云存储上，步骤参考 [GitHub 同步到 oss](https://newzone.top/deploy/Static.html#同步到-oss)。
-
-不需要服务器同步的话，可以删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，避免每次都出红色叉叉报错。
 
 ### 部署到 vercel
 
@@ -151,7 +149,7 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 
 ### 本地使用 LearnData
 
-1. 安装环境 npm 和 pnpm，方法查看 [Linux 环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
+1. 安装环境 npm 和 pnpm，方法查看 [环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
 2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm add vuepress@next vuepress-theme-hope@next @vuepress/plugin-search@next && pnpm i && pnpm up`。
 3. 完成前两步后，终端中输入 `pnpm docs:dev`，成功即可提示访问链接，默认为 `http://localhost:8080/`。
 

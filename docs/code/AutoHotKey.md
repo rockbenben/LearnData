@@ -5,11 +5,10 @@ icon: linter
 order: 4
 ---
 
-- [AutoHotKey 中文说明](https://wyagd001.github.io/zh-cn/docs/AutoHotkey.htm)
-- [按键 Key 名列表](https://wyagd001.github.io/zh-cn/docs/commands/Send.htm#keynames)
-- [AHK 环境变量](https://wyagd001.github.io/zh-cn/docs/Variables.htm#OSVersion)
-- [AutoHotKey 語法產生器 (線上網站)](https://github.com/papple23g/ahkcompiler)
-- 脚本录制/功能编辑：[Pulover's Macro Creator](https://www.macrocreator.com/download/)
+AutoHotKey 是 Windows 平台下开源的热键脚本语言。AHK 学习门槛不高，初期可以通过脚本录制来完成，我通过 AHK 热键启动、定时判断、改键盘等多种自动化操作，推荐学习制作你的专属自动化脚本。
+
+- [AutoHotKey 中文说明](https://wyagd001.github.io/zh-cn/docs/AutoHotkey.htm)：[按键 Key 名列表](https://wyagd001.github.io/zh-cn/docs/commands/Send.htm#keynames)，[AHK 环境变量](https://wyagd001.github.io/zh-cn/docs/Variables.htm#OSVersion)
+- 脚本录制/功能编辑：[Pulover's Macro Creator](https://www.macrocreator.com/download/)，[AutoHotKey 語法產生器 (線上網站)](https://github.com/papple23g/ahkcompiler)
 
 | 符号 | 作用                                                                                |
 | ---- | ----------------------------------------------------------------------------------- |
@@ -23,7 +22,7 @@ order: 4
 
 **注意事项**：
 
-- AHK 中**不区分大小写**：即 run 和 RUN 没有区别。
+- AHK 中**不区分大小写**，即 run 和 RUN 没有区别。
 - 非热键情况，添加 `return`，脚本全部停止。
 - 脚本需考虑，你是想要在**全局**还是**局部**中激活动作。
 

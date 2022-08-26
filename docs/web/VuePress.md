@@ -29,7 +29,7 @@ LearnData 的主题为 [vuepress-theme-hope](https://vuepress-theme-hope.github.
 
 本地搜索插件：[search](https://v2.vuepress.vuejs.org/zh/reference/plugin/search.html) 根据你的页面，在本地生成搜索索引，然后在用户访问站点时加载搜索索引文件。默认情况下，该插件会将页面标题和小标题作为搜索索引。
 
-在线搜索插件：[algolia DocSearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html) 使用在线爬虫抓取全站，并提供网站搜索索引，抓取周期为一周。开源技术向博客可以申请官方支持，商业化内容需要自己设置爬虫。
+在线搜索插件：[algolia DocSearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html) 使用在线爬虫抓取全站，并提供网站搜索索引，抓取周期为一周。开源文档可以申请官方爬虫支持，商业化内容需要自己设置爬虫。
 
 在 [algolia 爬虫管理页](https://crawler.algolia.com/admin/crawlers/bd9cfb06-0346-4a64-9a1a-8a513f0b7fce/overview) 修改爬虫抓取规则，然后手动触发爬虫进行全站搜索。之后，[algolia 搜索数据库](https://www.algolia.com/apps/M4EXXEZIEG/dashboard) 可以查看搜索次数与数据。
 
@@ -161,8 +161,7 @@ export default hopeTheme({
 
 ## 自定义主题
 
-- [ ] 插件[docsearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html)：将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。开源技术向博客可以申请官方支持，商业化内容需要使用自己的爬虫。目前 Algolia DocSearch 申请中，等结果通知。
-- [ ] 全文搜索插件：[vuepress2-plugin-full-text-search](https://github.com/ota-meshi/vuepress2-plugin-full-text-search)，处于 beta 版，暂未尝试。
+- [x] ~~插件[docsearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html)：将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。~~
 - [x] ~~README 页面如何隐藏，使用 index: false，参考[主题设置](https://vuepress-theme-hope.github.io/v2/zh/guide/layout/sidebar.html#%E9%80%9A%E8%BF%87%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90)~~
 - [x] ~~去 meta 标签，测试并未成功，不再尝试~~
 - [x] ~~[waline](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/comment.html#waline) 评论插件，无需账户，更适合大众。~~

@@ -1,9 +1,11 @@
 ---
 article: false
-title: Javascript
+title: JavaScript
 icon: javascript
 order: 2
 ---
+
+JavaScript 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发 Web 页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，并长年居于最受欢迎编程语言排行榜榜首。
 
 ## 常用函数
 
