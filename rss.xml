@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 24 Aug 2022 17:05:05 GMT</pubDate>
-    <lastBuildDate>Wed, 24 Aug 2022 17:05:05 GMT</lastBuildDate>
+    <pubDate>Fri, 26 Aug 2022 16:32:44 GMT</pubDate>
+    <lastBuildDate>Fri, 26 Aug 2022 16:32:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>博客</category>
@@ -18,10 +18,10 @@
     <category>自动化</category>
     <category>网络</category>
     <item>
-      <title>抛弃知识管理软件的尝试：把博客变为知识库</title>
+      <title>抛弃 Notion 知识管理软件的尝试：把博客变为知识库</title>
       <link>https://newzone.top/_posts/2022-08-22-learndata_blog_to_knowledge_management.html</link>
       <guid>https://newzone.top/_posts/2022-08-22-learndata_blog_to_knowledge_management.html</guid>
-      <source url="https://newzone.top/rss.xml">抛弃知识管理软件的尝试：把博客变为知识库</source>
+      <source url="https://newzone.top/rss.xml">抛弃 Notion 知识管理软件的尝试：把博客变为知识库</source>
       <category>博客</category>
       <category>头脑驿站</category>
       <pubDate>Mon, 22 Aug 2022 00:00:00 GMT</pubDate>
@@ -71,7 +71,7 @@
 <h2 id="如果你也想试试" tabindex="-1"> 如果你也想试试……</h2>
 <p>如何搭建把博客转为知识库，建立属于你的 LearnData 知识管理网站呢？</p>
 <p>首先，确定你有 GitHub 账户，懂 Markdown 和基础 HTML 知识。然后，按 <a href="https://newzone.top/#%E6%90%AD%E5%BB%BA-LearnData" target="_blank" rel="noopener noreferrer">LearnData 部署教程</a> 即可完成搭建和配置。如果你的笔记已经 Markdown 化，把文档放在 docs 目录下就可以建立你自己的知识库。</p>
-<p>笔记结构可以参考我的分类。这没有绝对的界限，只要看到自己觉得有价值的知识点，都可以往 LearnData 里丢。等下次应用到这个知识点时，我们再考虑整理事宜，否则，长时间用不到的知识，又有什么整理的必要呢。</p>
+<p>笔记结构可以参考我的分类。这没有绝对的界限，只要看到自己觉得有价值的知识点，都可以往 LearnData 里丢。但是，不要全文本地化收藏，简单提取用链接引用即可，除少量精品外，网络时代的文章隔几年就会失效，没必要收藏为一篇篇的笔记。当下次应用到这个知识点时，我们再考虑整理事宜，否则，长时间用不到的知识，又有什么整理的价值呢。</p>
 <ul>
 <li>置顶：日常习惯、健身、阅读；</li>
 <li>代码：常用代码的学习使用笔记；</li>
