@@ -15,6 +15,12 @@ LearnData 使用的是 Waline 评论插件，部署简单，有后端管理。�
 - [Gitalk](https://github.com/gitalk/gitalk)：基于 github commit，需配置独立库用于存储评论。
 - [Gitter](https://gitter.im/)：公共聊天室，样例如：[boardgame](https://boardgame.io/documentation/#/)，[regauge](https://itchef.github.io/regauge/#/)。
 
+## Waline
+
+Waline 的垃圾屏蔽和免注册留言很方便，不过为了安全起见，建议开通评论通知，避免极端情况。博主通知支持多种方式，包括 QQ、微信、邮件等，回复评论作者仅支持邮件通知。进入 Vercel 项目的「Overview - Settings - Environment Variables」，然后按 [Waline 评论通知](https://waline.js.org/guide/server/notification.html) 配置所需环境变量。如果需要 Webhook 等更多通知方式，则查看 [Waline 服务端配置](https://waline.js.org/reference/server.html)
+
+2022.08.26 出现问题「无法加载评论」，*.vercel.app 域名已经被 DNS 污染，国内使用建议绑定自定义域名。
+
 ## Gitalk
 
 Gitalk 是轻量化的评论组件，用户必须登录 github 才能评论，适合项目类使用。

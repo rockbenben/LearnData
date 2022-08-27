@@ -7,9 +7,7 @@ order: 2
 
 ## 环境部署
 
-部署应用前，必须要为服务器配置好包管理工具，以便节省部署时间。
-
-主流的前端包管理工具有 npm、yarn、pnpm、以及国内的镜像 cnpm、tyarn 等，这些包管理器都是基于 nodejs。
+部署应用前，为服务器配置好包管理工具，以便节省部署时间。主流的前端包管理工具有 npm、yarn、pnpm、以及国内的镜像 cnpm、tyarn 等，这些包管理器都是基于 nodejs。
 
 ### 包管理安装
 
@@ -108,9 +106,9 @@ location = / {
 }
 ```
 
-### 服务器初始配置
+### 全新安装服务器
 
-1. 安装[宝塔面板](https://www.bt.cn/bbs/thread-19376-1-1.html)。
+1. 安装 [宝塔面板](https://www.bt.cn/bbs/thread-19376-1-1.html)。
 2. 删除阿里云主机监控。
 
    ```bash
@@ -131,7 +129,11 @@ location = / {
    - 安装 PHP 缓存扩展，尽量使用更高的 PHP 版本，另外安装 opcache(脚本缓存)、redis(内容缓存)、imagemagick、fileinfo、exif。
    - Redis 优化，在/etc/sysctl.conf 中添加 `net.core.somaxconn = 2048`，然后终端运行 `sysctl -p`。
 
-### 服务器报错
+10. 防火墙白名单（自定义）
+
+    - 添加 url 规则 `^/rss.php` 到防火墙 URL 白名单，防止 rss 服务被屏蔽。
+
+### 常见问题
 
 #### CPU 100%
 
@@ -173,7 +175,3 @@ Matomo/Piwik 是免费的统计服务。有时无法使用自动安装包，需�
 1. 下载最新版应用，并解压到服务器。
 2. 将原目录中的 config/config.ini.php 粘贴到新版中，然后就可以更新数据库进行升级了。
 3. 进入「设置 - 系统 - 地理位置」，拖到页面底部，按页面要求下载 DBIP 包，并重命名保存为 `/www/wwwroot/piwik/misc/DBIP-City.mmdb`。
-
-### 服务器转移配置
-
-- 添加 url 规则 `^/rss.php` 到防火墙 URL 白名单，防止 rss 服务被屏蔽。

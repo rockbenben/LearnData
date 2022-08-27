@@ -77,9 +77,11 @@ LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内�
 
 服务器设置：进入 GitHub 仓库「setting - Secrets - Action」，添加 `FTP_HOST`，`FTP_PORT`，`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。配置成功后，每次修改文件，Github 都会自动推送到服务器 FTP。如果你没有服务器，也可以同步到云存储上，步骤参考 [GitHub 同步到 oss](https://newzone.top/deploy/Static.html#同步到-oss)。
 
-### 部署到 vercel
+### 部署到 Vercel
 
-Vercel 的速度比 GitHub Pages 稳定些，部署步骤如下：
+Vercel 的速度比 GitHub Pages 稳定些，不过 *.vercel.app 域名已经被 DNS 污染，国内使用建议绑定自定义域名。
+
+Vercel 部署步骤如下：
 
 1. 点击 [![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frockbenben%2FLearnData%2Ftree%2Fgh-pages) 或将 `https://vercel.com/new/clone?repository-url=https://github.com/rockbenben/LearnData/tree/gh-pages` 中的 `rockbenben/LearnData` 改为 `你的用户名/仓库名`，然后会跳转至 Vercel 进行网页部署。如果你未登录的话，Vercel 会让你注册或登录，请使用 GitHub 账户进行快捷登录。
 
