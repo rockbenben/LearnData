@@ -90,7 +90,7 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 
 ## 🖥️ 网站部署
 
-LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定，为了确保网站能被正常访问，必须增加国内的访问节点。
+LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定，为了确保网站能被正常访问，建议增加国内的访问节点。
 
 很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。因此，我没选 Gitee，而是把文档同步到国内服务器（域名需备案）或 Vercel（国外服务永远不知什么时候会断）。
 
@@ -104,7 +104,7 @@ LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内�
 
 ### 部署到 Vercel
 
-Vercel 的速度比 GitHub Pages 稳定些，不过 *.vercel.app 域名已经被 DNS 污染，国内使用建议绑定自定义域名。
+Vercel 的速度比 GitHub Pages 稳定些，不过「\*.vercel.app」域名已经被 DNS 污染，国内使用建议绑定自定义域名。
 
 Vercel 部署步骤如下：
 
@@ -169,10 +169,10 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 
 如果不想每次架构都重命名文件，可以复制「[nohashname](https://github.com/rockbenben/LearnData/tree/nohashname)」branch。我把 nohashname 分支的打包工具换成了 Webpack，并用 chainWebpack 设置文件命名规则，避免文件非必要重命名。
 
-### 本地使用 LearnData
+### 本地运行 LearnData
 
 1. 安装环境 npm 和 pnpm，方法查看 [环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
-2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm add vuepress@next vuepress-theme-hope@next @vuepress/plugin-search@next && pnpm i && pnpm up`。
+2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm add vuepress@2.0.0-beta.49 @vuepress/client@2.0.0-beta.49 vuepress-theme-hope@2.0.0-beta.91 @vuepress/plugin-google-analytics@2.0.0-beta.49 @vuepress/plugin-search@2.0.0-beta.49 @vuepress/plugin-docsearch@2.0.0-beta.49`。
 3. 完成前两步后，终端中输入 `pnpm docs:dev`，成功即可提示访问链接，默认为 `http://localhost:8080/`。
 
 运行本地服务器后，修改文件时预览页面也会同步发生改变。如果想停止本地服务器，在终端中按键 `Ctrl + C`。

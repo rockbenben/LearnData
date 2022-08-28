@@ -30,7 +30,7 @@ order: 1
   - [Workers](../deploy/Cloudflare.html#反向代理)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
   - Pages：部署简单，外网速度很快，但国内速度不稳，而且 page.dev 域名有时会被墙，可购买便宜的临时域名（一年）来解决该问题。
 - Netlify：国内速度慢点，图片容易卡死，但还算稳定。
-- Vercel：推荐使用 GitHub 账户登录，有可能需要绑定国外手机号（不支持 Voice）。2022.08.26，*.vercel.app 域名被 DNS 污染，需要绑定自定义域名。
+- Vercel：推荐使用 GitHub 账户登录，有可能需要绑定国外手机号（不支持 Voice）。2022.08.26，「\*.vercel.app」域名被 DNS 污染，需要绑定自定义域名。
 - AWS: 邮箱注册，不过需要信用卡认证。
 - 国内平台：Gitee、WuliHub、CODING，都需要实名认证。
 
