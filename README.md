@@ -60,6 +60,8 @@
 
 ## 🔣 配置 LearnData
 
+### 配置路径
+
 LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保存路径和网站配置在 `docs` 文件夹。
 
 `docs/.vuepress` 存放网站配置文件。`docs/_post` 存放博客文章。`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你可以按范围或功能来新建文件夹存放笔记。
@@ -68,9 +70,23 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 
 ![](http://tc.seoipo.com/2022-08-22-18-04-08.png "docs 路径结构")
 
-`docs/.vuepress` 路径下是网站的配置文件。`config.ts` 配置网站环境依赖和网站属性。`sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。`navbar.ts` 配置导航栏，推荐放你常用的文档链接。`theme.ts` 对主题和插件进行设置。`templateBuild.html` 是网页模板，调整网站关键词和第三方统计代码。配置文件上我添加了详细注释，可以自由调整，或参考 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
+### 配置文件
+
+`docs/.vuepress` 路径下是网站的配置文件，我在上面添加了详细的注释。你可以参照注释自由调整配置，或参考 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
+
+- `config.ts` 配置网站环境依赖和网站属性。
+- `sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。
+- `navbar.ts` 配置导航栏，推荐放你常用的文档链接。
+- `theme.ts` 对主题和插件进行设置。
+- `templateBuild.html` 是网页模板，调整网站关键词和第三方统计代码。
 
 注意：LearnData 默认使用了 algolia 全文搜索，如果你没设置 Docsearch 爬虫的话，需删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块。删除后，站点会将页面标题和小标题作为搜索索引。
+
+### 本地图片引用
+
+本地图片必须保存在 `docs/.vuepress/public` 目录中，否则生成静态页面时会报错 `Rollup failed to resolve import`。
+
+假设图片名为 1.png，将其保存在 `docs/.vuepress/public/imgs` 中，则该图片的引用链接为 `/imgs/1.png`，或使用 Markdown 图片链接 `![](/imgs/1.png)`。
 
 ## 🖥️ 网站部署
 
@@ -80,9 +96,11 @@ LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内�
 
 ### 同步到服务器
 
-项目搭建好后，出现了红色叉叉，这是 GitHub Actions 的失败提示。由于 LearnData 部署了同步 ftp 的代码，如果你没正确配置服务器，GitHub Actions 就会报错。不需要服务器同步的话，可以删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，避免每次都出红色叉叉报错。
+项目搭建好后，出现了红色叉叉，这是 GitHub Actions 同步服务器的失败提示，需按下方操作配置。
 
-服务器设置：进入 GitHub 仓库「setting - Secrets - Action」，添加 `FTP_HOST`，`FTP_PORT`，`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。配置成功后，每次修改文件，Github 都会自动推送到服务器 FTP。如果你没有服务器，也可以同步到云存储上，步骤参考 [GitHub 同步到 oss](https://newzone.top/deploy/Static.html#同步到-oss)。
+服务器设置：进入 GitHub 仓库「setting - Secrets - Action」，添加 `FTP_HOST`，`FTP_PORT`，`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。配置成功后，每次修改文件，Github 都会自动推送到服务器 FTP。
+
+如果你不需要同步到服务器 FTP，建议按常见问题中的操作删除对应代码，或者按照 [GitHub 同步到 oss](https://newzone.top/deploy/Static.html#同步到-oss) 步骤将网页部署到云存储上。
 
 ### 部署到 Vercel
 
@@ -138,6 +156,8 @@ Vercel 部署步骤如下：
 这是 pacakge.json 引发的环境依赖报错，默认配置已经固化依赖版本号，该报错出现几率极低，遇到的话请留言到 issue 或评论区。
 
 ### 同步服务器报错
+
+`Error: Input required and not supplied: server` 是配置服务器错误的提示，需按上方网站部署步骤配置。如果不需要同步到服务器，建议删除 `.github/workflows/main.yml` 中 Sync files 和 Sync files Retry 区块的代码，避免报错。
 
 `FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
 

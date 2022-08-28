@@ -44,7 +44,8 @@ jobs:
           branch: gh-pages
           folder: docs/.vuepress/dist
 
-      #将页面推送到服务器，可删除
+      ### 没有服务器的话，请删除本区块代码，防止报错 ###
+      # 将页面推送到服务器
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
@@ -54,7 +55,7 @@ jobs:
           password: ${{ secrets.ftp_password }}
           port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
 
-      #同步服务器失败后，自动重试一次；同步成功，则自动忽略此步骤
+      # 同步服务器失败后，自动重试一次；同步成功，则自动忽略此步骤
       - name: 📂 Sync files Retry
         if: failure()
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -64,3 +65,4 @@ jobs:
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
           port: ${{ secrets.ftp_port }}
+      ### 没有服务器的话，请删除本区块代码，防止报错 ###
