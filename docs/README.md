@@ -169,3 +169,7 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 3. 完成前两步后，终端中输入 `pnpm docs:dev`，成功即可提示访问链接，默认为 `http://localhost:8080/`。
 
 运行本地服务器后，修改文件时预览页面也会同步发生改变。如果想停止本地服务器，在终端中按键 `Ctrl + C`。
+
+::: tip
+友情提示：评论区仅作项目交流和展示，如有问题咨询请去 [Github Discussion](https://github.com/rockbenben/LearnData/discussions) 中提问。
+:::
