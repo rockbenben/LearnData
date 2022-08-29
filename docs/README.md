@@ -150,7 +150,7 @@ Vercel 部署步骤如下：
 
 ### 同步服务器报错
 
-`Error: Input required and not supplied: server` 是配置服务器错误的提示，需按上方网站部署步骤配置。如果不需要同步到服务器，建议删除 `.github/workflows/main.yml` 中 Sync files 和 Sync files Retry 区块的代码，避免报错。
+`Error: Input required and not supplied: server` 是配置服务器错误的提示，需按上方网站部署步骤配置。如果不需要同步到服务器，建议删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，避免报错。
 
 `FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
 
