@@ -101,6 +101,18 @@ export default hopeTheme({
       provider: "Waline",
       serverURL: "https://waline.newzone.top",
       pageview: true,
+      //Waline 等级标签
+      walineLocales: {
+        '/': {
+          admin: '盛年不重来，一日难再晨',
+          level0: '锻体',
+          level1: '炼气',
+          level2: '筑基',
+          level3: '金丹',
+          level4: '元婴',
+          level5: '化神',
+        },
+      },
       //Giscus 备用配置
       //provider: "Giscus",
       //repo: "rockbenben/LearnData",
