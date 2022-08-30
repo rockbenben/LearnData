@@ -62,6 +62,12 @@ jobs:
         if: failure()
 ```
 
+### uses 版本号
+
+`uses: SamKirkland/FTP-Deploy-Action@4.3.1`：uses 会指定此步骤运行 SamKirkland/FTP-Deploy-Action 存储库中的 4.3.1 版本。
+
+但有时 Actions 的版本不会这么快更新，又必须使用最新版，可以将版本号改为 branch name，比如 `uses: SamKirkland/FTP-Deploy-Action@master`。
+
 ## 常见问题
 
 ### GitHub 忽略指定文件
