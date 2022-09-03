@@ -25,6 +25,8 @@ Windows 遇到不懂的问题，可以在 [Microsoft 支持社区](https://answe
 | Ctrl+W             | 关闭标签页                             |
 | Alt+F4             | 关闭当前程序窗口                       |
 
+`%AppData%` 为 C:\Users\用户名\AppData\Roaming 的变量路径。
+
 ## 网址快捷方式
 
 鼠标右键-新建 - 快捷方式，插入浏览器路径，然后空格并输入要打开的网址链接，比如 `"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" https://newzone.top/`。

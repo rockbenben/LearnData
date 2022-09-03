@@ -29,7 +29,7 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 3. 通过终端在同目录下运行 `sudo docker-compose up -d` 后等待部署完成。
 4. 关闭 SSH 功能。
 
-注意：非 root 用户需在命令前添加 `sudo`，否则会提示 `Permission denied`。
+注意：root 用户需在命令前添加 `sudo`，否则会提示 `Permission denied`。
 
 ### Docker 容器
 

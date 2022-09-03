@@ -120,25 +120,26 @@ Vercel 部署步骤如下：
 
 4. 完成前三步后网站部署好了，但此时 Vercel 页面不能对 GitHub Pages 自动同步更新。自动部署前，你需要配置 `PERSONAL_TOKEN` 和 GitHub Actions。
 
-   - 按 [Creating a personal access token](https://newzone.top/deploy/GitHub.html#github-actions) 建立 PERSONAL_TOKEN 个人访问令牌。
+   - 新建 [个人访问令牌](https://github.com/settings/tokens)，勾选权限「repo Full control of private repositories」，生成后复制 token 值。
+   - 进入项目仓库的「setting - Secrets - Action」，新建密钥 PERSONAL_TOKEN，并填入刚复制的 token 值。
    - 将下方代码编辑到 `.github/workflows/main.yml` 文件底部，注意修改 `dst_owner` 和 `dst_repo_name`。
 
    ```yml
-         #将页面更新到 Vercel
-         - name: Copy file to Vercel
-         if: always()
-         uses: andstor/copycat-action@v3
-         with:
-            personal_token: ${{ secrets.PERSONAL_TOKEN }}
-            src_path: /.
-            dst_path: /
-            # 你的用户名
-            dst_owner: rockbenben
-            # 与 Vercel 链接的仓库名，也就是 Vercel 部署时新建的仓库
-            dst_repo_name: LearnData-Vercel
-            dst_branch: main
-            src_branch: gh-pages
-            clean: true
+      #将页面更新到 Vercel
+      - name: Copy file to Vercel
+        if: always()
+        uses: andstor/copycat-action@v3
+        with:
+           personal_token: ${{ secrets.PERSONAL_TOKEN }}
+           src_path: /.
+           dst_path: /
+           # 你的用户名
+           dst_owner: rockbenben
+           # 与 Vercel 链接的仓库名，也就是 Vercel 部署时新建的仓库
+           dst_repo_name: LearnData-Vercel
+           dst_branch: main
+           src_branch: gh-pages
+           clean: true
    ```
 
 ## 🤔 常见问题
@@ -157,11 +158,11 @@ Vercel 部署步骤如下：
 
 ### 同步服务器报错
 
-`Error: Input required and not supplied: server` 是配置服务器错误的提示，需按上方网站部署步骤配置。如果不需要同步到服务器，建议删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，避免报错。
+- `Error: Input required and not supplied: server` 是配置服务器错误的提示，需按上方网站部署步骤配置。如果不需要同步到服务器，建议删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，避免报错。
 
-`FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
+- `FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需用 FileZilla 测试 FTP 的有效性。
 
-`Error: Timeout (control socket)` 是同步服务器超时报错。如果出现该错误，进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
+- `Error: Timeout (control socket)` 是同步服务器超时报错。如果出现该错误，进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
 
 ### 静态文件名字总变
 
