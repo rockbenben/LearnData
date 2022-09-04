@@ -45,9 +45,9 @@ jobs:
           folder: docs/.vuepress/dist
 
       ### 没有服务器的话，请删除本区块代码，防止报错 ###
-      # 将页面推送到服务器，timeout 时间从默认的 1 分钟调整到 10 分钟。4.3.1 脚本不支持 timeout，临时使用 @master
+      # 将页面推送到服务器，timeout 时间从默认的 1 分钟调整到 10 分钟。
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@master
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
           local-dir: docs/.vuepress/dist/
           server: ${{ secrets.ftp_host }}

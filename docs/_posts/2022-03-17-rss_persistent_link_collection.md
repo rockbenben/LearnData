@@ -53,6 +53,10 @@ order: -42
 
 - **知乎想法热榜**：`http://newzone.top/rss.php?type=zhihu`
 
+::: tip
+最近有人疯狂获取 RSS 链接近乎于 DDOS 攻击（内容不会更新这么快，不清楚为什么这么干……），已在后台屏蔽此类 IP，建议将 RSS 更新间隔设为 1 小时。如有错误识别，可以联系我解封。
+:::
+
 ## 教程：自制 RSS
 
 以上 RSS 链接均通过 RSSHub 和 Huginn 制作，下方为 RSS 制作教程。

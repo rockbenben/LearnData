@@ -113,7 +113,7 @@ Vercel 部署步骤如下：
 
 4. 完成前三步后网站部署好了，但此时 Vercel 页面不能对 GitHub Pages 自动同步更新。自动部署前，你需要配置 `PERSONAL_TOKEN` 和 GitHub Actions。
 
-   - 新建 [个人访问令牌](https://github.com/settings/tokens)，勾选权限「repo Full control of private repositories」，生成后复制 token 值。
+   - 新建 [Personal access tokens](https://github.com/settings/tokens)，勾选权限「repo (Full control of private repositories)」，生成后复制 token 值。
    - 进入项目仓库的「setting - Secrets - Action」，新建密钥 PERSONAL_TOKEN，并填入刚复制的 token 值。
    - 将下方代码编辑到 `.github/workflows/main.yml` 文件底部，注意修改 `dst_owner` 和 `dst_repo_name`。
 
