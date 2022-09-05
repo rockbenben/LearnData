@@ -88,9 +88,10 @@ UI.Vision RPA 的运行脚本叫做「宏」。界面很简单，左侧是宏的
 
 1. 点击 UI.Vision 右下角的 `CSV - Import CSV`，用 CSV 文件导入批量处理内容。
 2. 「csvReadArray」命令，Target 输入文件名「1.csv」，Value 输入分组名「link」。
-3. 「open」命令，Target 输入变量参数 `${link[${!LOOP}-1]}`，`${!LOOP}` 是循环序号，因为数组以 0 开头，所以设为 `${!LOOP}-1`，`${link[x]}` 指 link 数组中序号为 x 的成员。
-4. 「pause」命令，Target 输入延时时间，单位为毫秒。
-5. 点击右上角「Play Macro」旁边的下拉按钮，然后点击「Play Loop」，有多少行文本需要处理，就循环多少次。
+3. 「executeScript」命令，Target 输入计算脚本 `return ${!LOOP} - 1;`，Value 输入自定义变量名 `num`。数组序号以 0 开始而循环序号 `${!LOOP}` 以 1 起始，所以数组序号为 `${!LOOP}-1`。
+4. 「open」命令，Target 输入变量参数 `${link[${num}]}`，`${link[x]}` 指 link 数组中序号为 x 的成员。
+5. 「pause」命令，Target 输入延时时间，单位为毫秒。
+6. 点击右上角「Play Macro」旁边的下拉按钮，然后点击「Play Loop」，有多少行文本需要处理，就循环多少次。
 
 ## 常见问题
 
