@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 05 Sep 2022 14:00:39 GMT</pubDate>
-    <lastBuildDate>Mon, 05 Sep 2022 14:00:39 GMT</lastBuildDate>
+    <pubDate>Mon, 05 Sep 2022 22:54:47 GMT</pubDate>
+    <lastBuildDate>Mon, 05 Sep 2022 22:54:47 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -56,10 +56,10 @@
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><h2 id="启动-stable-diffusion" tabindex="-1"> 启动 Stable Diffusion</h2>
 <p>配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux 路径。​</p>
 <p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。​</p>
-<p>准备好 Linux 路径后，打开 WSL Ubuntu 执行命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压路径。随后，执行首次容器构建命令 <code>docker compose build</code>，第一次构建容器需要 10 分钟左右。​</p>
+<p>准备好 Linux 路径后，先启动 Docker Desktop，再打开 WSL Ubuntu 执行命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压路径。随后，执行首次容器构建命令 <code>docker compose build</code>，第一次构建容器需要 10 分钟左右。​</p>
 <p>然后，执行容器再次构建命令 <code>docker compose up --build</code>，把采样模型与 Stable Diffusion 打包进同一容器。构建完成后，命令行提示 <code>Running on local URL: http://localhost:7860/</code>。浏览器打开 <code>http://localhost:7860/</code>，你就可以在本地 AI 生成图片了。</p>
 <p><img src="http://tc.seoipo.com/2022-09-04-18-32-31.png" alt="" loading="lazy"></p>
-<p>之后，你只需打开 Docker Desktop 就会启动 Stable Diffusion。如果要更新 Stable Diffusion，使用新版 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a>，按上方步骤重新构建容器即可。</p>
+<p>下一次使用时，你只需打开 Docker Desktop 就会启动 Stable Diffusion。如果要更新 Stable Diffusion，使用新版 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a>，按上方步骤重新构建容器即可。</p>
 <h2 id="界面说明" tabindex="-1"> 界面说明</h2>
 <h3 id="text-to-image" tabindex="-1"> Text-to-Image</h3>
 <p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。</p>
@@ -98,7 +98,9 @@
 wsl -l -v
 wsl --unregister docker-desktop
 wsl -l -v
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h3 id="端口访问被拒" tabindex="-1"> 端口访问被拒</h3>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h3 id="docker-命令失败" tabindex="-1"> docker 命令失败</h3>
+<p><code>The command 'docker' could not be found</code> 说明当前命令行确实 Docker 环境缺失，检查 Docker Desktop 是否启动。</p>
+<h3 id="端口访问被拒" tabindex="-1"> 端口访问被拒</h3>
 <p>Docker 容器原本运行正常，端口访问突然被拒绝了，显示 <code>Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:7860 -&gt; 0.0.0.0:0: listen tcp 0.0.0.0:7860: bind: An attempt was made to access a socket in a way forbidden by its access permissions</code>。</p>
 <p>在 Powershell 中输入 <code>netsh int ipv4 show excludedportrange protocol=tcp</code> 检查是否处于被排除端口范围，然后输入 <code>reg add HKLM\SYSTEM\CurrentControlSet\Services\hns\State /v EnableExcludedPortRange /d 0 /f</code> 开启端口。操作完成后，重启电脑即可解封端口。<sup></sup></p>
 <h3 id="filenotfounderror" tabindex="-1"> FileNotFoundError</h3>
