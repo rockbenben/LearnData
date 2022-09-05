@@ -65,13 +65,13 @@ models/
 
 Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。​
 
-准备好 Linux 路径后，打开 WSL Ubuntu 执行命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`，进入 Stable Diffusion WebUI Docker 解压路径。随后，执行首次容器构建命令 `docker compose build`，第一次构建容器需要 10 分钟左右。​
+准备好 Linux 路径后，先启动 Docker Desktop，再打开 WSL Ubuntu 执行命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`，进入 Stable Diffusion WebUI Docker 解压路径。随后，执行首次容器构建命令 `docker compose build`，第一次构建容器需要 10 分钟左右。​
 
 然后，执行容器再次构建命令 `docker compose up --build`，把采样模型与 Stable Diffusion 打包进同一容器。构建完成后，命令行提示 `Running on local URL: http://localhost:7860/`。浏览器打开 `http://localhost:7860/`，你就可以在本地 AI 生成图片了。
 
 ![](http://tc.seoipo.com/2022-09-04-18-32-31.png)
 
-之后，你只需打开 Docker Desktop 就会启动 Stable Diffusion。如果要更新 Stable Diffusion，使用新版 [配置文件](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)，按上方步骤重新构建容器即可。
+下一次使用时，你只需打开 Docker Desktop 就会启动 Stable Diffusion。如果要更新 Stable Diffusion，使用新版 [配置文件](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)，按上方步骤重新构建容器即可。
 
 ## 界面说明
 
@@ -140,6 +140,10 @@ wsl -l -v
 wsl --unregister docker-desktop
 wsl -l -v
 ```
+
+### docker 命令失败
+
+`The command 'docker' could not be found` 说明当前命令行确实 Docker 环境缺失，检查 Docker Desktop 是否启动。
 
 ### 端口访问被拒
 
