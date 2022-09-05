@@ -6,17 +6,127 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 04 Sep 2022 16:22:35 GMT</pubDate>
-    <lastBuildDate>Sun, 04 Sep 2022 16:22:35 GMT</lastBuildDate>
+    <pubDate>Mon, 05 Sep 2022 14:00:39 GMT</pubDate>
+    <lastBuildDate>Mon, 05 Sep 2022 14:00:39 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>工具</category>
     <category>博客</category>
     <category>头脑驿站</category>
     <category>购物</category>
     <category>系统</category>
-    <category>工具</category>
     <category>自动化</category>
-    <category>网络</category>
+    <item>
+      <title>零基础入门 Stable Diffusion - 无需天价显卡就能用的 AI 绘画工具</title>
+      <link>https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html</link>
+      <guid>https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html</guid>
+      <source url="https://newzone.top/rss.xml">零基础入门 Stable Diffusion - 无需天价显卡就能用的 AI 绘画工具</source>
+      <category>工具</category>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。</p>
+<p><img src="http://tc.seoipo.com/2022-09-04-11-53-20.png" alt="" title="丁老头进化旅程" loading="lazy"></p>
+<p>Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能部署在家用电脑上的 AI 绘图工具，<strong>可以在 RTX 2060 显卡等 6GB 显存显卡下运行</strong>，并在几秒钟内生成图像，无需预处理和后处理。当然，如果只是想体验 Stable Diffusion，也可以使用在线工具 <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" target="_blank" rel="noopener noreferrer">Hugging Face</a> 和 <a href="https://beta.dreamstudio.ai/" target="_blank" rel="noopener noreferrer">DreamStudio</a>。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能用于测试体验。</p>
+<p>如果想大批量使用，可以像我一样，使用 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署在 Windows 系统，从而利用电脑显卡免费实现 AI 文字绘画，不再被在线工具所限制。Mac 同样适用于该方法，并可省略下方的环境配置步骤。</p>
+<p><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" title="Stable Diffusion 部署流程" loading="lazy"></p>
+<p>本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。</p>
+<h2 id="docker-环境配置" tabindex="-1"> Docker 环境配置</h2>
+<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup></sup> 因此，Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，配置 WSL 或启用 Hyper-V。下面会介绍各自的启用方式，二选一即可，我主要用 WSL。</p>
+<h3 id="安装-wsl" tabindex="-1"> 安装 WSL</h3>
+<p>在管理员 PowerShell 输入命令 <code>wsl --install</code>，之后终端会默认安装 Ubuntu。系统下载时间较长，注意别关机。<sup></sup> 安装 Ubuntu 完成后，按提示设置 Ubuntu 账户和密码。</p>
+<h3 id="启用-hyper-v" tabindex="-1"> 启用 Hyper-V</h3>
+<p>以管理员身份打开 PowerShell 控制台，输入命令 <code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All</code>。<sup></sup> 重启电脑后，将开启 Hyper-V。</p>
+<h2 id="配置-stable-diffusion" tabindex="-1"> 配置 Stable Diffusion</h2>
+<p>按系统选择 <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener noreferrer">Docker Desktop</a> 版本，安装后点击左侧的 Add Extensions，推荐使用 Disk usage 扩展，便于管理 Docker 存储空间。</p>
+<p><img src="http://tc.seoipo.com/2022-09-04-17-06-27.png" alt="" title="Docker Desktop 界面" loading="lazy"></p>
+<p>然后，将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 下载并解压到本地硬盘。接着，选择采样模型并下载依赖文件，将其放于 Stable Diffusion WebUI Docker 解压目录中的 model 文件夹。<sup></sup> 或者，使用阿里云盘下载 <a href="https://www.aliyundrive.com/s/EKmK7MGrHdn" target="_blank" rel="noopener noreferrer">聚合版</a>。</p>
+<ul>
+<li><a href="https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media" target="_blank" rel="noopener noreferrer">Stable Diffusion v1.4 (4GB)</a>, 将压缩包文件重命名为 <code>model.ckpt</code>。</li>
+<li>(可选) <a href="https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth" target="_blank" rel="noopener noreferrer">GFPGANv1.3.pth (333MB)</a>。</li>
+<li>(可选) <a href="https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth" target="_blank" rel="noopener noreferrer">RealESRGAN_x4plus.pth (64MB)</a> 和 <a href="https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth" target="_blank" rel="noopener noreferrer">RealESRGAN_x4plus_anime_6B.pth (18MB)</a>。</li>
+<li>(可选) <a href="https://heibox.uni-heidelberg.de/f/578df07c8fc04ffbadf3/?dl=1" target="_blank" rel="noopener noreferrer">LDSR (2GB)</a> 和 <a href="https://heibox.uni-heidelberg.de/f/31a76b13ea27482981b4/?dl=1" target="_blank" rel="noopener noreferrer">LDSR 配置</a>，分别重命名为 <code>LDSR.ckpt</code> 和 <code>LDSR.yaml</code>。</li>
+</ul>
+<p>将采样模型整理好后，结构如下：</p>
+<div><pre><code>models/
+├── model.ckpt
+├── GFPGANv1.3.pth
+├── RealESRGAN_x4plus.pth
+├── RealESRGAN_x4plus_anime_6B.pth
+├── LDSR.ckpt
+└── LDSR.yaml
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><h2 id="启动-stable-diffusion" tabindex="-1"> 启动 Stable Diffusion</h2>
+<p>配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux 路径。​</p>
+<p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。​</p>
+<p>准备好 Linux 路径后，打开 WSL Ubuntu 执行命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压路径。随后，执行首次容器构建命令 <code>docker compose build</code>，第一次构建容器需要 10 分钟左右。​</p>
+<p>然后，执行容器再次构建命令 <code>docker compose up --build</code>，把采样模型与 Stable Diffusion 打包进同一容器。构建完成后，命令行提示 <code>Running on local URL: http://localhost:7860/</code>。浏览器打开 <code>http://localhost:7860/</code>，你就可以在本地 AI 生成图片了。</p>
+<p><img src="http://tc.seoipo.com/2022-09-04-18-32-31.png" alt="" loading="lazy"></p>
+<p>之后，你只需打开 Docker Desktop 就会启动 Stable Diffusion。如果要更新 Stable Diffusion，使用新版 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a>，按上方步骤重新构建容器即可。</p>
+<h2 id="界面说明" tabindex="-1"> 界面说明</h2>
+<h3 id="text-to-image" tabindex="-1"> Text-to-Image</h3>
+<p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。</p>
+<p><img src="http://tc.seoipo.com/2022-09-05-08-28-23.png" alt="" title="Text-to-Image 界面" loading="lazy"></p>
+<p>默认使用 Simple 简单模式，点击右侧按钮 Advanced，可查看进阶选项，使用进阶的场景矩阵、面孔修复和分辨率放大等多种功能。</p>
+<h3 id="image-to-image" tabindex="-1"> Image-to-Image</h3>
+<p>Image-to-Image 依据文字描述和输入源图，生成相关的图像。该模式若以素描、结构画为来源图，可充分填充图像细节；若以细节充分的照片为来源图，则会输出差异较大的结果。</p>
+<p><img src="http://tc.seoipo.com/2022-09-04-15-39-00.png" alt="" title="Image-to-Image 界面" loading="lazy"></p>
+<p>Denoising Strength 指与原图的差异度，建议在 0.75-0.9，魔改图片可以设为 0.5 以下。下图中的 Denoising Strength 只有 0.44，整体图片结构与要素没变，但结果如何你看到了。</p>
+<p><img src="http://tc.seoipo.com/2022-09-04-15-40-26.png" alt="" title="超级魔改图片" loading="lazy"></p>
+<h3 id="image-lab" tabindex="-1"> Image Lab</h3>
+<p>Image Lab 能批量修正面孔和放大图片分辨率。</p>
+<p>Fix Faces 是通过 GFPGAN 模型来改善图片中的面孔，Effect strength 滑块可以控制效果的强度。但实际效果别报太高期许，下图右侧开启了 Fix Faces，只能说勉强有了五官。</p>
+<p><img src="http://tc.seoipo.com/2022-09-04-15-47-14.png" alt="" title="A woman flying in the air laughing" loading="lazy"></p>
+<p>Upscale 放大分辨率功能有 RealESRGAN，GoBIG，Latent Diffusion Super Resolution 和 GoLatent 四种模型，其中的 RealESRGAN 有普通与卡通两种模式，可按需选择。Upscale 图片主要消耗 CPU 与内存资源。</p>
+<h2 id="使用说明" tabindex="-1"> 使用说明</h2>
+<h3 id="文字描述图像" tabindex="-1"> 文字描述图像</h3>
+<p>Stable Diffusion 的核心功能是以文字内容描绘一个场景或事物，从而决定你的画面中将出现什么。因此，文字描绘是决定图像生成质量的关键因素。接下来，我会以官方文档案例为例，解构描述文字的要素和标准。<sup></sup></p>
+<p>样例：<code>A beautiful painting (画作种类) of a singular lighthouse, shining its light across a tumultuous sea of blood (画面描述) by greg rutkowski and thomas kinkade (画家/画风), Trending on artstation (参考平台), yellow color scheme (配色)</code>。</p>
+<ul>
+<li>画作种类：ink painting（水墨画），oil painting（油画），comic（漫画），illustration（插画），realistic painting（写实风）等等。</li>
+<li>参考平台：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。</li>
+<li>画家/画风：成图更接近哪位画家的风格，此处可以输入不止一位画家。比如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈。</li>
+<li>配色：yellow color scheme 指整个画面的主色调为黄色。</li>
+</ul>
+<p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。</p>
+<h3 id="prompt-matrix" tabindex="-1"> Prompt matrix</h3>
+<p>Prompt matrix 是按不同条件组合生成多张相关但不同的画面，可以用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
+<iframe height=400 width=100% src="//player.bilibili.com/player.html?bvid=BV1YP411V7vV&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p>Prompt matrix 官方样例为 <code>a busy city street in a modern city|illustration|cinematic lighting</code>，<code>|</code> 符合后的场景条件将进行排列组合，样例有 2 个场景条件生成 4 张图。</p>
+<p>另外，我们可以指定场景条件位置，比如 <code>@(moba|rpg|rts) character (2d|3d) model</code> 表示 <code>(moba|rpg|rts 三选一) character (2d|3d 二选一) model</code>，也就是会生成 3*2 张图片。开头的 <code>@</code> 是触发指定场景条件位置的符号，不能省略。</p>
+<h2 id="常见问题" tabindex="-1"> 常见问题</h2>
+<h3 id="docker-desktop-failed" tabindex="-1"> Docker Desktop failed</h3>
+<p>未正常关闭 Docker 容器时，下次启动可能会报错 <code>Docker Desktop failed to stop</code> 。在 PowerShell 中输入关闭 WSL 和 docker-desktop 命令，可以修复该问题。</p>
+<div><pre><code>wsl --shutdown
+wsl -l -v
+wsl --unregister docker-desktop
+wsl -l -v
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h3 id="端口访问被拒" tabindex="-1"> 端口访问被拒</h3>
+<p>Docker 容器原本运行正常，端口访问突然被拒绝了，显示 <code>Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:7860 -&gt; 0.0.0.0:0: listen tcp 0.0.0.0:7860: bind: An attempt was made to access a socket in a way forbidden by its access permissions</code>。</p>
+<p>在 Powershell 中输入 <code>netsh int ipv4 show excludedportrange protocol=tcp</code> 检查是否处于被排除端口范围，然后输入 <code>reg add HKLM\SYSTEM\CurrentControlSet\Services\hns\State /v EnableExcludedPortRange /d 0 /f</code> 开启端口。操作完成后，重启电脑即可解封端口。<sup></sup></p>
+<h3 id="filenotfounderror" tabindex="-1"> FileNotFoundError</h3>
+<p>再次架构容器时报错 <code>FileNotFoundError: [Errno 2] No such file or directory: '/models/model.ckpt'</code>，这是架构位置错误导致的。此时，我们需要检查是否通过 WSL 输入的架构命令，并且 Stable Diffusion WebUI Docker 解压路径是否配置正确。</p>
+<h2 id="最后" tabindex="-1"> 最后</h2>
+<p>Stable Diffusion 还不能作为生产力工具，但它让设计变得简单，也让更多普通人打开了 AI 绘画的可能性。推荐大家实际部署玩下，让自己拥有更多的可能。</p>
+<p>本文于「<a href="https://sspai.com/post/75544" target="_blank" rel="noopener noreferrer">少数派首发</a>」。</p>
+<hr>
+<section>
+<ol>
+<li id="footnote1"><p><a href="https://www.runoob.com/docker/windows-docker-install.html" target="_blank" rel="noopener noreferrer">Windows Docker 安装</a> </p>
+</li>
+<li id="footnote2"><p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install#install-wsl-command" target="_blank" rel="noopener noreferrer">使用 WSL 在 Windows 上安装 Linux</a> </p>
+</li>
+<li id="footnote3"><p><a href="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-hyper-v-using-powershell" target="_blank" rel="noopener noreferrer">在 Windows 10 上安装 Hyper-V</a> </p>
+</li>
+<li id="footnote4"><p><a href="https://github.com/AbdBarho/stable-diffusion-webui-docker#setup" target="_blank" rel="noopener noreferrer">Setup Stable Diffusion WebUI Docker</a> </p>
+</li>
+<li id="footnote5"><p><a href="https://www.ifanr.com/app/1484403" target="_blank" rel="noopener noreferrer">外网爆火的 4 款「你说我画」自动作画工具，我们测了下，有 1 款的确超强</a> </p>
+</li>
+<li id="footnote6"><p><a href="https://github.com/hlky/stable-diffusion#prompt-matrix" target="_blank" rel="noopener noreferrer">stable-diffusion Prompt matrix</a> </p>
+</li>
+<li id="footnote7"><p><a href="https://github.com/docker/for-win/issues/3171#issuecomment-572571882" target="_blank" rel="noopener noreferrer">Windows 端口访问被拒</a> </p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
     <item>
       <title>抛弃 Notion 知识管理软件的尝试：把博客变为知识库</title>
       <link>https://newzone.top/_posts/2022-08-22-learndata_blog_to_knowledge_management.html</link>
@@ -389,43 +499,6 @@ MSOCache 其它的目录下内容同样根据注册表的内容把它指示的�
 <p>官方解释：远程差分压缩 (RDC) 功能是一组应用程序编程接口 (API)，这些应用程序可用于确定某个文件集是否发生了变化，如果是，就检测哪部分文件进行了更改。RDC 检测文件中数据的插入、删除和重新排列，使应用程序能够仅复制文件的已更改部分。这对于在有限带宽网络（如广域网 (WAN) 连接）上复制文件非常有用。</p>
 ]]></content:encoded>
       <enclosure url="https://pic1.zhimg.com/v2-af3e5c2a16a1f245ac6584097c53be60_r.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>光猫改造 篇一：超级管理员密码破解（E8-C-EPON RG201O-CA_V1A2)</title>
-      <link>https://newzone.top/_posts/2017-10-18-light_cat_e8-c-epon_admin.html</link>
-      <guid>https://newzone.top/_posts/2017-10-18-light_cat_e8-c-epon_admin.html</guid>
-      <source url="https://newzone.top/rss.xml">光猫改造 篇一：超级管理员密码破解（E8-C-EPON RG201O-CA_V1A2)</source>
-      <category>网络</category>
-      <pubDate>Wed, 18 Oct 2017 18:28:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="为什么要获得光猫超级密码" tabindex="-1"> 为什么要获得光猫超级密码？</h2>
-<p>*端口映射 (eMule high ID)、桥接模式（路由器掌控拨号，不能兼容固定电话）。*网上关于光猫超级密码的获取攻略都在 2012-14 年，已经无法使用了。</p>
-<h3 id="测试环境" tabindex="-1"> 测试环境</h3>
-<p>运营商：上海电信
-设备：贝尔 E8-C-EPON
-硬件版本：RG201O-CA_V1A2
-软件版本：E201OCAA2V11S</p>
-<h2 id="光猫超级密码破解步骤" tabindex="-1"> 光猫超级密码破解步骤</h2>
-<ol>
-<li>
-<p>地址栏输入 <code>192.168.1.1</code>，用户名：光猫背面，密码：光猫背面，登陆管理界面。</p>
-<p><img src="https://pic1.zhimg.com/v2-9e43bc86b9095f3f6c2cfa4bd58dcd68_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>浏览器地址栏输入 <code>192.168.1.1/backupsettings.txt</code>，将 <code>backupsettings.txt</code> 文件导出并备份在电脑上。
-如果打不开上面的地址，改为输入 <code>192.168.1.1/backupsettings.conf</code>，并做好备份。</p>
-</li>
-<li>
-<p>打开下载好的文档 <code>backupsettings.txt</code> 或 <code>backupsettings.conf</code>，搜索 <code>TeleComAccount</code>，两个 password 间就是超级密码。超级账号是 telecomadmin。</p>
-<p><img src="https://pic3.zhimg.com/v2-ee441dd18cc8e5f6303fdaef82b6d476_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>地址栏输入 <code>192.168.1.1</code>，用刚获取的超级密码登陆，然后开始端口映射和设备桥接了。</p>
-<p><img src="https://pic1.zhimg.com/v2-31d6bb6b90be541c186a360fe2dd323c_r.jpg" alt="" loading="lazy"></p>
-</li>
-</ol>
-<p>新装光猫无法获取超级密码的话，可直接使用运营商 app 进行映射。</p>
-]]></content:encoded>
-      <enclosure url="https://pic1.zhimg.com/v2-9e43bc86b9095f3f6c2cfa4bd58dcd68_r.jpg" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
