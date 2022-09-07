@@ -6,16 +6,46 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 07 Sep 2022 00:42:03 GMT</pubDate>
-    <lastBuildDate>Wed, 07 Sep 2022 00:42:03 GMT</lastBuildDate>
+    <pubDate>Wed, 07 Sep 2022 05:26:06 GMT</pubDate>
+    <lastBuildDate>Wed, 07 Sep 2022 05:26:06 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>观察随笔</category>
     <category>工具</category>
     <category>博客</category>
     <category>头脑驿站</category>
     <category>购物</category>
     <category>系统</category>
     <category>自动化</category>
+    <item>
+      <title>「没电也能打电话」，被绑架的华为宣传策略？</title>
+      <link>https://newzone.top/_posts/2022-09-07-extreme_branding_thinking_with_mate50.html</link>
+      <guid>https://newzone.top/_posts/2022-09-07-extreme_branding_thinking_with_mate50.html</guid>
+      <source url="https://newzone.top/rss.xml">「没电也能打电话」，被绑架的华为宣传策略？</source>
+      <category>观察随笔</category>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>华为 Mate50 时隔两年后再次发布，然后就看了一堆标题为「华为 Mate 50 没电也能打电话」的新闻，某度为您找到相关资讯 139 个。看到这标题，我直接傻眼，你们这些媒体是认真的吗？<strong>是收了哪边的公关费</strong>？</p>
+<p><img src="http://tc.seoipo.com/2022-09-07-11-29-53.png?imageMogr2/thumbnail/!60p" alt="" loading="lazy"></p>
+<h2 id="个人观察" tabindex="-1"> 个人观察</h2>
+<p>我的主力机是荣耀 20S，用了三年依旧能打，因此我对华为和鸿蒙充满好感，平常的购买也会倾向国产。但是，半路半粉的我看到这个标题，对这款手机的好感直接 <code>-1</code>。</p>
+<p>当然，华为发布会上从没说过「没电也能打电话」，官方说法是「在 1% 低电量下智能启动聚能泵，待机可达三小时或者通话 12 分钟，或亮码 10 次，或扫码 4 次。」这个应急功能实际上是不错的，能缓解充电焦虑。历过数次 2% 直接关机后，我很喜欢这种关机前再榨一把的充电技术。</p>
+<p>有种黑的说法是，「只是把电池低电量保护分级罢了，比如，低电量 15% 电池进入保护，那么，后台只需将 85% 的电量重新显示为 100%，即手机显示的 1% 绝不是真实的 1%，小技俩而已。」</p>
+<p>而我对这种想法是不信的，如果真是这样的套壳宣传，随便检测都能发现，对于华为来说完全是得不偿失。</p>
+<h2 id="华为需要极端宣传吗" tabindex="-1"> 华为需要极端宣传吗？</h2>
+<p>「走极端才能创造话题」是品牌成功和营销的第一步，但这只是第一步。</p>
+<p>在美国打压下，华为已经是民族主义的顶流了，正常宣传就能拥有一大堆的拥趸，不必每天打鸡血造话题，更不需要用震惊体来吸引流量。</p>
+<p>那为什么华为依然用「没电也能打电话」这类极端的宣传方式？</p>
+<p>我猜测是被自媒体绑架了。</p>
+<p>除打包合作外，媒体宣传费用是建立在播放、阅读、互动的基础上。即使是固定价格的打包合作，这次的流量也会决定是否有下次的合作。因此，对自媒体来说，它不在乎观众对品牌的观感是否被消耗，它在乎的是流量，是互动。即使有黑子，那也是互动啊。有了互动，平台会持续给宣传载体进行加权并推流，自媒体的议价能力也持续提高。</p>
+<p><img src="http://tc.seoipo.com/2022-09-07-13-24-33.png" alt="" title="宣传流量图" loading="lazy"></p>
+<p>华为总被嘲笑有海军，可能有它自身的原因，但这些极端化媒体的绑架也少不了。</p>
+<p>过多的极端宣传，舆论引起的反噬会远超你获得的利益。不是每个人都会仔细查看你的宣传稿，看到上百篇高级写着华为「没电也能打电话」，真有人会以为你有什么黑科技了。</p>
+<h2 id="最后" tabindex="-1"> 最后</h2>
+<p>如果你是刚起家的自媒体和品牌，尽管去用走极端的宣传方式，毕竟营销不是道德审判，活下去才是第一步。</p>
+<p>但如果你已经有一定的知名度了，请先想清楚，你真的需要「走极端」的垃圾流量吗？</p>
+]]></content:encoded>
+      <enclosure url="http://tc.seoipo.com/2022-09-07-11-29-53.png?imageMogr2/thumbnail/!60p" type="image/"/>
+    </item>
     <item>
       <title>零基础入门 Stable Diffusion - 无需天价显卡就能用的 AI 绘画工具</title>
       <link>https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html</link>
@@ -476,37 +506,6 @@ MSOCache 其它的目录下内容同样根据注册表的内容把它指示的�
 <p>修改“gpedit.msc”可以关闭程序的关机权限，但没授予关机对程序的关闭权限，<strong>不能使用</strong>！</p>
 ]]></content:encoded>
       <enclosure url="https://pic3.zhimg.com/v2-c643b9737b35f9dd9a8382c5653e3d3e_r.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>加速 SMB 协议，让 PC 变身小型 NAS</title>
-      <link>https://newzone.top/_posts/2017-09-03-smb_lan_sharing.html</link>
-      <guid>https://newzone.top/_posts/2017-09-03-smb_lan_sharing.html</guid>
-      <source url="https://newzone.top/rss.xml">加速 SMB 协议，让 PC 变身小型 NAS</source>
-      <category>系统</category>
-      <pubDate>Sun, 03 Sep 2017 20:57:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>Windows 系统开启 SMB 协议：</p>
-<ol>
-<li>
-<p>打开「控制面板」窗口，在「类别」查看方式下单击「程序」。</p>
-<p><img src="https://pic1.zhimg.com/v2-af3e5c2a16a1f245ac6584097c53be60_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>打开「程序」窗口，单击「启用或关闭 windows 功能」。</p>
-<p><img src="https://pic1.zhimg.com/v2-36207f67a5eb3aeb8ee7c1ae855b13dc_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>打开「windows 功能」窗口，勾选 SMB 直通。</p>
-<p><img src="https://pic3.zhimg.com/v2-b1feb5554e6f1da003266be9cb470dfe_r.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>勾选「远程差分压缩 API 支持」。</p>
-<p><img src="https://pic4.zhimg.com/v2-c5fc3e3d771b6e4bd2516372c69b340b_r.jpg" alt="" loading="lazy"></p>
-</li>
-</ol>
-<p>网上很多教程都要求关闭“远程差分压缩”复选框，这是对“远程差分压缩”的误解。</p>
-<p>官方解释：远程差分压缩 (RDC) 功能是一组应用程序编程接口 (API)，这些应用程序可用于确定某个文件集是否发生了变化，如果是，就检测哪部分文件进行了更改。RDC 检测文件中数据的插入、删除和重新排列，使应用程序能够仅复制文件的已更改部分。这对于在有限带宽网络（如广域网 (WAN) 连接）上复制文件非常有用。</p>
-]]></content:encoded>
-      <enclosure url="https://pic1.zhimg.com/v2-af3e5c2a16a1f245ac6584097c53be60_r.jpg" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
