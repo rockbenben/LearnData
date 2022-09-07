@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 05 Sep 2022 22:54:47 GMT</pubDate>
-    <lastBuildDate>Mon, 05 Sep 2022 22:54:47 GMT</lastBuildDate>
+    <pubDate>Wed, 07 Sep 2022 00:42:03 GMT</pubDate>
+    <lastBuildDate>Wed, 07 Sep 2022 00:42:03 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -30,7 +30,7 @@
 <p><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" title="Stable Diffusion 部署流程" loading="lazy"></p>
 <p>本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。</p>
 <h2 id="docker-环境配置" tabindex="-1"> Docker 环境配置</h2>
-<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup></sup> 因此，Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，配置 WSL 或启用 Hyper-V。下面会介绍各自的启用方式，二选一即可，我主要用 WSL。</p>
+<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup></sup> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>。下面我会介绍各自的启用方式，<strong>二选一即可</strong>，推荐使用 WSL。</p>
 <h3 id="安装-wsl" tabindex="-1"> 安装 WSL</h3>
 <p>在管理员 PowerShell 输入命令 <code>wsl --install</code>，之后终端会默认安装 Ubuntu。系统下载时间较长，注意别关机。<sup></sup> 安装 Ubuntu 完成后，按提示设置 Ubuntu 账户和密码。</p>
 <h3 id="启用-hyper-v" tabindex="-1"> 启用 Hyper-V</h3>
@@ -54,9 +54,9 @@
 ├── LDSR.ckpt
 └── LDSR.yaml
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><h2 id="启动-stable-diffusion" tabindex="-1"> 启动 Stable Diffusion</h2>
-<p>配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux 路径。​</p>
-<p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。​</p>
-<p>准备好 Linux 路径后，先启动 Docker Desktop，再打开 WSL Ubuntu 执行命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压路径。随后，执行首次容器构建命令 <code>docker compose build</code>，第一次构建容器需要 10 分钟左右。​</p>
+<p>配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
+<p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）</p>
+<p>接着，启动 Docker Desktop，打开 WSL Ubuntu 或 Mac 终端输入命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压路径。随后，执行首次容器构建命令 <code>docker compose build</code>，第一次构建容器需要 10 分钟左右。</p>
 <p>然后，执行容器再次构建命令 <code>docker compose up --build</code>，把采样模型与 Stable Diffusion 打包进同一容器。构建完成后，命令行提示 <code>Running on local URL: http://localhost:7860/</code>。浏览器打开 <code>http://localhost:7860/</code>，你就可以在本地 AI 生成图片了。</p>
 <p><img src="http://tc.seoipo.com/2022-09-04-18-32-31.png" alt="" loading="lazy"></p>
 <p>下一次使用时，你只需打开 Docker Desktop 就会启动 Stable Diffusion。如果要更新 Stable Diffusion，使用新版 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a>，按上方步骤重新构建容器即可。</p>
@@ -91,7 +91,11 @@
 <iframe height=400 width=100% src="//player.bilibili.com/player.html?bvid=BV1YP411V7vV&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <p>Prompt matrix 官方样例为 <code>a busy city street in a modern city|illustration|cinematic lighting</code>，<code>|</code> 符合后的场景条件将进行排列组合，样例有 2 个场景条件生成 4 张图。</p>
 <p>另外，我们可以指定场景条件位置，比如 <code>@(moba|rpg|rts) character (2d|3d) model</code> 表示 <code>(moba|rpg|rts 三选一) character (2d|3d 二选一) model</code>，也就是会生成 3*2 张图片。开头的 <code>@</code> 是触发指定场景条件位置的符号，不能省略。</p>
-<h2 id="常见问题" tabindex="-1"> 常见问题</h2>
+<h3 id="更换-webui-主题" tabindex="-1"> 更换 WebUI 主题</h3>
+<p>目前有默认、AUTOMATIC1111 和 lstein 三种 WebUI。如果要更换 WebUI 主题，则需在执行二次构建命令前，切换目录。比如：</p>
+<div><pre><code><span>cd</span> AUTOMATIC1111
+<span>docker</span> compose up <span>--build</span>
+</code></pre><div aria-hidden="true"><div></div><div></div></div></div><h2 id="常见问题" tabindex="-1"> 常见问题</h2>
 <h3 id="docker-desktop-failed" tabindex="-1"> Docker Desktop failed</h3>
 <p>未正常关闭 Docker 容器时，下次启动可能会报错 <code>Docker Desktop failed to stop</code> 。在 PowerShell 中输入关闭 WSL 和 docker-desktop 命令，可以修复该问题。</p>
 <div><pre><code>wsl --shutdown
@@ -105,6 +109,8 @@ wsl -l -v
 <p>在 Powershell 中输入 <code>netsh int ipv4 show excludedportrange protocol=tcp</code> 检查是否处于被排除端口范围，然后输入 <code>reg add HKLM\SYSTEM\CurrentControlSet\Services\hns\State /v EnableExcludedPortRange /d 0 /f</code> 开启端口。操作完成后，重启电脑即可解封端口。<sup></sup></p>
 <h3 id="filenotfounderror" tabindex="-1"> FileNotFoundError</h3>
 <p>再次架构容器时报错 <code>FileNotFoundError: [Errno 2] No such file or directory: '/models/model.ckpt'</code>，这是架构位置错误导致的。此时，我们需要检查是否通过 WSL 输入的架构命令，并且 Stable Diffusion WebUI Docker 解压路径是否配置正确。</p>
+<h3 id="mac-报错" tabindex="-1"> Mac 报错</h3>
+<p>没在 Mac 上测试过，如果出现报错，将主题切换到 lstein，然后参考文档 <a href="https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md#macos-instructions" target="_blank" rel="noopener noreferrer">macOS Instructions</a>。</p>
 <h2 id="最后" tabindex="-1"> 最后</h2>
 <p>Stable Diffusion 还不能作为生产力工具，但它让设计变得简单，也让更多普通人打开了 AI 绘画的可能性。推荐大家实际部署玩下，让自己拥有更多的可能。</p>
 <p>本文于「<a href="https://sspai.com/post/75544" target="_blank" rel="noopener noreferrer">少数派首发</a>」。</p>
