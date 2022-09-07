@@ -24,7 +24,7 @@ Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能�
 
 ## Docker 环境配置
 
-本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。^[[Windows Docker 安装](https://www.runoob.com/docker/windows-docker-install.html)] 因此，Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，配置 WSL 或启用 Hyper-V。下面会介绍各自的启用方式，二选一即可，我主要用 WSL。
+本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。^[[Windows Docker 安装](https://www.runoob.com/docker/windows-docker-install.html)] 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，**配置 WSL 或是启用 Hyper-V**。下面我会介绍各自的启用方式，**二选一即可**，推荐使用 WSL。
 
 ### 安装 WSL
 
@@ -61,11 +61,11 @@ models/
 
 ## 启动 Stable Diffusion
 
-配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux 路径。​
+配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。
 
-Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。​
+Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）
 
-准备好 Linux 路径后，先启动 Docker Desktop，再打开 WSL Ubuntu 执行命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`，进入 Stable Diffusion WebUI Docker 解压路径。随后，执行首次容器构建命令 `docker compose build`，第一次构建容器需要 10 分钟左右。​
+接着，启动 Docker Desktop，打开 WSL Ubuntu 或 Mac 终端输入命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`，进入 Stable Diffusion WebUI Docker 解压路径。随后，执行首次容器构建命令 `docker compose build`，第一次构建容器需要 10 分钟左右。
 
 然后，执行容器再次构建命令 `docker compose up --build`，把采样模型与 Stable Diffusion 打包进同一容器。构建完成后，命令行提示 `Running on local URL: http://localhost:7860/`。浏览器打开 `http://localhost:7860/`，你就可以在本地 AI 生成图片了。
 
@@ -128,6 +128,15 @@ Prompt matrix 官方样例为 `a busy city street in a modern city|illustration|
 
 另外，我们可以指定场景条件位置，比如 `@(moba|rpg|rts) character (2d|3d) model` 表示 `(moba|rpg|rts 三选一) character (2d|3d 二选一) model`，也就是会生成 3\*2 张图片。开头的 `@` 是触发指定场景条件位置的符号，不能省略。
 
+### 更换 WebUI 主题
+
+目前有默认、AUTOMATIC1111 和 lstein 三种 WebUI。如果要更换 WebUI 主题，则需在执行二次构建命令前，切换目录。比如：
+
+```bash
+cd AUTOMATIC1111
+docker compose up --build
+```
+
 ## 常见问题
 
 ### Docker Desktop failed
@@ -154,6 +163,10 @@ Docker 容器原本运行正常，端口访问突然被拒绝了，显示 `Error
 ### FileNotFoundError
 
 再次架构容器时报错 `FileNotFoundError: [Errno 2] No such file or directory: '/models/model.ckpt'`，这是架构位置错误导致的。此时，我们需要检查是否通过 WSL 输入的架构命令，并且 Stable Diffusion WebUI Docker 解压路径是否配置正确。
+
+### Mac 报错
+
+没在 Mac 上测试过，如果出现报错，将主题切换到 lstein，然后参考文档 [macOS Instructions](https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md#macos-instructions)。
 
 ## 最后
 
