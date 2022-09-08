@@ -37,7 +37,7 @@ order: 2
 
 ## 标签页
 
-[Infinity](https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh)：自定义你的新标签页。
+[iTab](https://chrome.google.com/webstore/detail/itab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/mhloojimgilafopcmlcikiidgbbnelip)：自定义你的新标签页。
 
 [zvTabs](https://chrome.google.com/webstore/detail/zvtabs%E4%B8%80%E9%94%AE%E5%85%B3%E9%97%AD%E5%B7%A6%E4%BE%A7%E6%A0%87%E7%AD%BE/aelfgfndnhaiicaahkbpmgbbnflnbejb)：一键关闭左侧标签。
 

@@ -24,7 +24,7 @@ Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能�
 
 ## Docker 环境配置
 
-本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。^[[Windows Docker 安装](https://www.runoob.com/docker/windows-docker-install.html)] 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，**配置 WSL 或是启用 Hyper-V**。下面我会介绍各自的启用方式，**二选一即可**，推荐使用 WSL。
+本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。^[[Windows Docker 安装](https://www.runoob.com/docker/windows-docker-install.html)] 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，**配置 WSL 或是启用 Hyper-V**。下面我会介绍各自的启用方式，**二选一即可**，推荐使用 WSL（占用系统盘 30G 的空间）。
 
 ### 安装 WSL
 
@@ -141,7 +141,9 @@ docker compose up --build
 
 ### Docker Desktop failed
 
-未正常关闭 Docker 容器时，下次启动可能会报错 `Docker Desktop failed to stop` 。在 PowerShell 中输入关闭 WSL 和 docker-desktop 命令，可以修复该问题。
+未正常安装/关闭 Docker 容器时，可能会报错 `Docker Desktop failed to start/stop` 。
+
+先删除 `%AppData%` 路径下的 Docker 文件夹，然后在 PowerShell 中输入下方命令，关闭 WSL 和 docker-desktop。最后，手动重启 Docker Desktop。
 
 ```PowerShell
 wsl --shutdown

@@ -21,7 +21,7 @@ Windows 自用软件，以开源软件为主。
 
 ## 平面设计
 
-设计：Figma & Photoshop & 字由 ~~& GIMP & FastStone & illustrator & Dreamweaver & lightroom~~
+设计：Figma & [Stable Diffusion](https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html)（AI 绘图） & Photoshop & 字由 ~~& GIMP & FastStone & illustrator & Dreamweaver & lightroom~~
 
 截图：Snipaste & ShareX ~~& webshot & SETUNA~~
 
