@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 07 Sep 2022 05:26:06 GMT</pubDate>
-    <lastBuildDate>Wed, 07 Sep 2022 05:26:06 GMT</lastBuildDate>
+    <pubDate>Thu, 08 Sep 2022 02:59:15 GMT</pubDate>
+    <lastBuildDate>Thu, 08 Sep 2022 02:59:15 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -18,10 +18,10 @@
     <category>系统</category>
     <category>自动化</category>
     <item>
-      <title>「没电也能打电话」，被绑架的华为宣传策略？</title>
+      <title>「华为没电也能打电话」「iPhone 没电也能刷公交卡」，手机品牌是被绑架还是行业底线就是低？</title>
       <link>https://newzone.top/_posts/2022-09-07-extreme_branding_thinking_with_mate50.html</link>
       <guid>https://newzone.top/_posts/2022-09-07-extreme_branding_thinking_with_mate50.html</guid>
-      <source url="https://newzone.top/rss.xml">「没电也能打电话」，被绑架的华为宣传策略？</source>
+      <source url="https://newzone.top/rss.xml">「华为没电也能打电话」「iPhone 没电也能刷公交卡」，手机品牌是被绑架还是行业底线就是低？</source>
       <category>观察随笔</category>
       <pubDate>Wed, 07 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>华为 Mate50 时隔两年后再次发布，然后就看了一堆标题为「华为 Mate 50 没电也能打电话」的新闻，某度为您找到相关资讯 139 个。看到这标题，我直接傻眼，你们这些媒体是认真的吗？<strong>是收了哪边的公关费</strong>？</p>
@@ -40,9 +40,14 @@
 <p><img src="http://tc.seoipo.com/2022-09-07-13-24-33.png" alt="" title="宣传流量图" loading="lazy"></p>
 <p>华为总被嘲笑有海军，可能有它自身的原因，但这些极端化媒体的绑架也少不了。</p>
 <p>过多的极端宣传，舆论引起的反噬会远超你获得的利益。不是每个人都会仔细查看你的宣传稿，看到上百篇高级写着华为「没电也能打电话」，真有人会以为你有什么黑科技了。</p>
+<h2 id="手机行业的底线" tabindex="-1"> 手机行业的底线</h2>
+<p>原本以为只是华为这样，但 @Dean 提供了另一个梗「iPhone 没电也能刷公交卡」，而且从 2018 开始 iPhone 每年都要吹一波…… 网上还一堆人相信，说 NFC 设备没电也支持用，说得蛮像一回事的。但是，官方文档是另一回事了，「即使您的 iPhone 需要充电，您或许也能够在设备上使用“快捷模式”卡片、凭证和钥匙。如果将 iPhone 关机，这项功能将不可用。」</p>
+<p>可能就像 @VirtualProsperity 和 @弘隐 说的，「作为前手机行业营销从业者，很负责的说，几乎任何手机品牌不会被媒体绑架。因为营销的时候媒体只是其中一个环节，但绝非重要到要为媒体去绑架的程度」，「手机行业的营销很多时候是很 LOW 的 LOW 到你不敢想象是真的」。</p>
+<p>我自身也身处广告行业，面对的多是快消品。快消品牌方对于传播都放在其次，而把防黑放在首位。</p>
+<p>但是，快消品购买频次高，手机更换需要 1-3 年，等到下次购买顾客已经遗忘了几年前的极端宣传。手机品牌可能因为这点而肆意妄为，但一次两次还行，多次之后你还会上当，还会购买？我不会，但市场可能想法真的不一样，底线有点低。</p>
 <h2 id="最后" tabindex="-1"> 最后</h2>
 <p>如果你是刚起家的自媒体和品牌，尽管去用走极端的宣传方式，毕竟营销不是道德审判，活下去才是第一步。</p>
-<p>但如果你已经有一定的知名度了，请先想清楚，你真的需要「走极端」的垃圾流量吗？</p>
+<p>但如果你已经有一定的知名度了，请先想清楚，你真的需要「走极端」的垃圾流量吗？真的要赌互联网记忆？</p>
 ]]></content:encoded>
       <enclosure url="http://tc.seoipo.com/2022-09-07-11-29-53.png?imageMogr2/thumbnail/!60p" type="image/"/>
     </item>
@@ -60,7 +65,7 @@
 <p><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" title="Stable Diffusion 部署流程" loading="lazy"></p>
 <p>本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。</p>
 <h2 id="docker-环境配置" tabindex="-1"> Docker 环境配置</h2>
-<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup></sup> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>。下面我会介绍各自的启用方式，<strong>二选一即可</strong>，推荐使用 WSL。</p>
+<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup></sup> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>。下面我会介绍各自的启用方式，<strong>二选一即可</strong>，推荐使用 WSL（占用系统盘 30G 的空间）。</p>
 <h3 id="安装-wsl" tabindex="-1"> 安装 WSL</h3>
 <p>在管理员 PowerShell 输入命令 <code>wsl --install</code>，之后终端会默认安装 Ubuntu。系统下载时间较长，注意别关机。<sup></sup> 安装 Ubuntu 完成后，按提示设置 Ubuntu 账户和密码。</p>
 <h3 id="启用-hyper-v" tabindex="-1"> 启用 Hyper-V</h3>
@@ -127,7 +132,8 @@
 <span>docker</span> compose up <span>--build</span>
 </code></pre><div aria-hidden="true"><div></div><div></div></div></div><h2 id="常见问题" tabindex="-1"> 常见问题</h2>
 <h3 id="docker-desktop-failed" tabindex="-1"> Docker Desktop failed</h3>
-<p>未正常关闭 Docker 容器时，下次启动可能会报错 <code>Docker Desktop failed to stop</code> 。在 PowerShell 中输入关闭 WSL 和 docker-desktop 命令，可以修复该问题。</p>
+<p>未正常安装/关闭 Docker 容器时，可能会报错 <code>Docker Desktop failed to start/stop</code> 。</p>
+<p>先删除 <code>%AppData%</code> 路径下的 Docker 文件夹，然后在 PowerShell 中输入下方命令，关闭 WSL 和 docker-desktop。最后，手动重启 Docker Desktop。</p>
 <div><pre><code>wsl --shutdown
 wsl -l -v
 wsl --unregister docker-desktop
