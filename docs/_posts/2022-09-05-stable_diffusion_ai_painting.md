@@ -152,7 +152,7 @@ wsl --unregister docker-desktop
 wsl -l -v
 ```
 
-## Docker Desktop cannot start
+### Docker Desktop cannot start
 
 `Hardware assisted virtualization and data execution protection must be enabled in the BIOS` 报错说明电脑没开启虚拟化。
 
