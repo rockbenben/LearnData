@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 09 Sep 2022 15:26:51 GMT</pubDate>
-    <lastBuildDate>Fri, 09 Sep 2022 15:26:51 GMT</lastBuildDate>
+    <pubDate>Fri, 09 Sep 2022 15:31:13 GMT</pubDate>
+    <lastBuildDate>Fri, 09 Sep 2022 15:31:13 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -138,7 +138,7 @@
 wsl -l -v
 wsl --unregister docker-desktop
 wsl -l -v
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h2 id="docker-desktop-cannot-start" tabindex="-1"> Docker Desktop cannot start</h2>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h3 id="docker-desktop-cannot-start" tabindex="-1"> Docker Desktop cannot start</h3>
 <p><code>Hardware assisted virtualization and data execution protection must be enabled in the BIOS</code> 报错说明电脑没开启虚拟化。</p>
 <p>在开机的时候多按几次 <code>F2</code> 或 <code>DEL</code> 进入 BIOS，然后设置中开启「Intel Virtual Technology」，AMD 则是将「SVM Support」设置为设置为「Enable」的状态；最后点击「F10」保存退出即可。</p>
 <h3 id="docker-命令失败" tabindex="-1"> docker 命令失败</h3>
