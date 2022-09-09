@@ -5,7 +5,6 @@ category:
   - 观察随笔
 tag:
   - 媒体
-  - 舆论
 order: -0.2
 ---
 

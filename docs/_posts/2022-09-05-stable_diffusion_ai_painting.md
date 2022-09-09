@@ -1,5 +1,5 @@
 ---
-title: 零基础入门 Stable Diffusion - 无需天价显卡就能用的 AI 绘画工具
+title: 零基础入门 Stable Diffusion - 把 AI 绘画引擎搬进家用电脑
 date: 2022-09-05
 category:
   - 工具
@@ -14,9 +14,9 @@ order: -49
 
 ![](http://tc.seoipo.com/2022-09-04-11-53-20.png "丁老头进化旅程")
 
-Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能部署在家用电脑上的 AI 绘图工具，**可以在 RTX 2060 显卡等 6GB 显存显卡下运行**，并在几秒钟内生成图像，无需预处理和后处理。当然，如果只是想体验 Stable Diffusion，也可以使用在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion) 和 [DreamStudio](https://beta.dreamstudio.ai/)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能用于测试体验。
+Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能部署在家用电脑上的 AI 绘图工具，**可以在 RTX 2060 显卡等 6GB 显存显卡下运行（不支持 A 卡）**，并在几秒钟内生成图像，无需预处理和后处理。当然，如果只是想体验 Stable Diffusion，也可以使用在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion) 和 [DreamStudio](https://beta.dreamstudio.ai/)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能用于测试体验。
 
-如果想大批量使用，可以像我一样，使用 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署在 Windows 系统，从而利用电脑显卡免费实现 AI 文字绘画，不再被在线工具所限制。Mac 同样适用于该方法，并可省略下方的环境配置步骤。
+如果想大批量使用，可以像我一样，使用 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署在 Windows 系统，从而利用 NVIDIA 显卡免费实现 AI 文字绘画，不再被在线工具所限制。Mac 同样适用于该方法，并可省略下方的环境配置步骤。
 
 ![](http://tc.seoipo.com/2022-09-05-16-22-45.png "Stable Diffusion 部署流程")
 
@@ -151,6 +151,12 @@ wsl -l -v
 wsl --unregister docker-desktop
 wsl -l -v
 ```
+
+## Docker Desktop cannot start
+
+`Hardware assisted virtualization and data execution protection must be enabled in the BIOS` 报错说明电脑没开启虚拟化。
+
+在开机的时候多按几次 `F2` 或 `DEL` 进入 BIOS，然后设置中开启「Intel Virtual Technology」，AMD 则是将「SVM Support」设置为设置为「Enable」的状态；最后点击「F10」保存退出即可。
 
 ### docker 命令失败
 
