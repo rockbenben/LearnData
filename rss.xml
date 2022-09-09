@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 08 Sep 2022 02:59:15 GMT</pubDate>
-    <lastBuildDate>Thu, 08 Sep 2022 02:59:15 GMT</lastBuildDate>
+    <pubDate>Fri, 09 Sep 2022 14:57:25 GMT</pubDate>
+    <lastBuildDate>Fri, 09 Sep 2022 14:57:25 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -52,16 +52,16 @@
       <enclosure url="http://tc.seoipo.com/2022-09-07-11-29-53.png?imageMogr2/thumbnail/!60p" type="image/"/>
     </item>
     <item>
-      <title>零基础入门 Stable Diffusion - 无需天价显卡就能用的 AI 绘画工具</title>
+      <title>零基础入门 Stable Diffusion - 把 AI 绘画引擎搬进家用电脑</title>
       <link>https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html</link>
       <guid>https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html</guid>
-      <source url="https://newzone.top/rss.xml">零基础入门 Stable Diffusion - 无需天价显卡就能用的 AI 绘画工具</source>
+      <source url="https://newzone.top/rss.xml">零基础入门 Stable Diffusion - 把 AI 绘画引擎搬进家用电脑</source>
       <category>工具</category>
       <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。</p>
 <p><img src="http://tc.seoipo.com/2022-09-04-11-53-20.png" alt="" title="丁老头进化旅程" loading="lazy"></p>
-<p>Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能部署在家用电脑上的 AI 绘图工具，<strong>可以在 RTX 2060 显卡等 6GB 显存显卡下运行</strong>，并在几秒钟内生成图像，无需预处理和后处理。当然，如果只是想体验 Stable Diffusion，也可以使用在线工具 <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" target="_blank" rel="noopener noreferrer">Hugging Face</a> 和 <a href="https://beta.dreamstudio.ai/" target="_blank" rel="noopener noreferrer">DreamStudio</a>。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能用于测试体验。</p>
-<p>如果想大批量使用，可以像我一样，使用 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署在 Windows 系统，从而利用电脑显卡免费实现 AI 文字绘画，不再被在线工具所限制。Mac 同样适用于该方法，并可省略下方的环境配置步骤。</p>
+<p>Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能部署在家用电脑上的 AI 绘图工具，<strong>可以在 RTX 2060 显卡等 6GB 显存显卡下运行（不支持 A 卡）</strong>，并在几秒钟内生成图像，无需预处理和后处理。当然，如果只是想体验 Stable Diffusion，也可以使用在线工具 <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" target="_blank" rel="noopener noreferrer">Hugging Face</a> 和 <a href="https://beta.dreamstudio.ai/" target="_blank" rel="noopener noreferrer">DreamStudio</a>。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能用于测试体验。</p>
+<p>如果想大批量使用，可以像我一样，使用 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署在 Windows 系统，从而利用 NVIDIA 显卡免费实现 AI 文字绘画，不再被在线工具所限制。Mac 同样适用于该方法，并可省略下方的环境配置步骤。</p>
 <p><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" title="Stable Diffusion 部署流程" loading="lazy"></p>
 <p>本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。</p>
 <h2 id="docker-环境配置" tabindex="-1"> Docker 环境配置</h2>
@@ -138,7 +138,10 @@
 wsl -l -v
 wsl --unregister docker-desktop
 wsl -l -v
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h3 id="docker-命令失败" tabindex="-1"> docker 命令失败</h3>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h2 id="docker-desktop-cannot-start" tabindex="-1"> Docker Desktop cannot start</h2>
+<p><code>Hardware assisted virtualization and data execution protection must be enabled in the BIOS</code> 报错说明电脑没开启虚拟化。</p>
+<p>在开机的时候多按几次 <code>F2</code> 或 <code>DEL</code> 进入 BIOS，然后设置中开启「Intel Virtual Technology」，AMD 则是将「SVM Support」设置为设置为「Enable」的状态；最后点击「F10」保存退出即可。</p>
+<h3 id="docker-命令失败" tabindex="-1"> docker 命令失败</h3>
 <p><code>The command 'docker' could not be found</code> 说明当前命令行确实 Docker 环境缺失，检查 Docker Desktop 是否启动。</p>
 <h3 id="端口访问被拒" tabindex="-1"> 端口访问被拒</h3>
 <p>Docker 容器原本运行正常，端口访问突然被拒绝了，显示 <code>Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:7860 -&gt; 0.0.0.0:0: listen tcp 0.0.0.0:7860: bind: An attempt was made to access a socket in a way forbidden by its access permissions</code>。</p>
