@@ -1,5 +1,5 @@
 ---
-title: 零基础入门 Stable Diffusion - 把 AI 绘画引擎搬进家用电脑
+title: 零基础入门 Stable Diffusion - 无需显卡把 AI 绘画引擎搬进家用电脑
 date: 2022-09-05
 category:
   - 工具
@@ -14,7 +14,7 @@ order: -49
 
 ![](http://tc.seoipo.com/2022-09-04-11-53-20.png "丁老头进化旅程")
 
-Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能部署在家用电脑上的 AI 绘图工具，**可以在 RTX 2060 显卡等 6GB 显存显卡下运行（不支持 A 卡）**，并在几秒钟内生成图像，无需预处理和后处理。当然，如果只是想体验 Stable Diffusion，也可以使用在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion) 和 [DreamStudio](https://beta.dreamstudio.ai/)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能用于测试体验。
+Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能部署在家用电脑上的 AI 绘图工具，**可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行**，并在几秒钟内生成图像，无需预处理和后处理。当然，如果只是想体验 Stable Diffusion，也可以使用在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion) 和 [DreamStudio](https://beta.dreamstudio.ai/)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能用于测试体验。
 
 如果想大批量使用，可以像我一样，使用 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署在 Windows 系统，从而利用 NVIDIA 显卡免费实现 AI 文字绘画，不再被在线工具所限制。Mac 同样适用于该方法，并可省略下方的环境配置步骤。
 
@@ -40,40 +40,35 @@ Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能�
 
 ![](http://tc.seoipo.com/2022-09-04-17-06-27.png "Docker Desktop 界面")
 
-然后，将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 下载并解压到本地硬盘。接着，选择采样模型并下载依赖文件，将其放于 Stable Diffusion WebUI Docker 解压目录中的 model 文件夹。^[[Setup Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker#setup)] 或者，使用阿里云盘下载 [聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)。
+然后，将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 下载并解压到本地硬盘。
 
-- [Stable Diffusion v1.4 (4GB)](https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media), 将压缩包文件重命名为 `model.ckpt`。
-- (可选) [GFPGANv1.3.pth (333MB)](https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth)。
-- (可选) [RealESRGAN_x4plus.pth (64MB)](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth) 和 [RealESRGAN_x4plus_anime_6B.pth (18MB)](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth)。
-- (可选) [LDSR (2GB)](https://heibox.uni-heidelberg.de/f/578df07c8fc04ffbadf3/?dl=1) 和 [LDSR 配置](https://heibox.uni-heidelberg.de/f/31a76b13ea27482981b4/?dl=1)，分别重命名为 `LDSR.ckpt` 和 `LDSR.yaml`。
+### 选择 WebUI 主题
 
-将采样模型整理好后，结构如下：
+目前有 hlky、auto、auto-cpu 和 lstein 四种模式。如果要更换 WebUI 主题，则更改镜像构建命令 `docker compose --profile [ui] up --build`，将 `[ui]` 替换为所需的镜像名即可。
 
-```yaml
-models/
-├── model.ckpt
-├── GFPGANv1.3.pth
-├── RealESRGAN_x4plus.pth
-├── RealESRGAN_x4plus_anime_6B.pth
-├── LDSR.ckpt
-└── LDSR.yaml
-```
+比如，你没有符合的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 `docker compose --profile auto-cpu up --build`。
 
-## 启动 Stable Diffusion
+### 准备 Linux 路径
 
 配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。
 
 Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）
 
-接着，启动 Docker Desktop，打开 WSL Ubuntu 或 Mac 终端输入命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`，进入 Stable Diffusion WebUI Docker 解压路径。随后，执行首次容器构建命令 `docker compose build`，第一次构建容器需要 10 分钟左右。
+### 启动 Stable Diffusion
 
-然后，执行容器再次构建命令 `docker compose up --build`，把采样模型与 Stable Diffusion 打包进同一容器。构建完成后，命令行提示 `Running on local URL: http://localhost:7860/`。浏览器打开 `http://localhost:7860/`，你就可以在本地 AI 生成图片了。
+准备好 Linux 路径后，启动 Docker Desktop，打开 WSL Ubuntu 或 Mac 终端输入切换路径命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`，进入 Stable Diffusion WebUI Docker 解压文件目录。
+
+随后，执行环境部署命令 `docker compose --profile download up --build`。它会自动下载采样模型和依赖包，需要 20 分钟或者更长。
+
+然后，执行镜像构建命令 `docker compose --profile hlky up --build`。构建完成后，命令行提示 `Running on local URL: http://localhost:7860/`。浏览器打开 `http://localhost:7860/`，你就可以在本地 AI 生成图片了。^[[Setup Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup)]
 
 ![](http://tc.seoipo.com/2022-09-04-18-32-31.png)
 
-下一次使用时，你只需打开 Docker Desktop 就会启动 Stable Diffusion。如果要更新 Stable Diffusion，使用新版 [配置文件](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)，按上方步骤重新构建容器即可。
+下一次使用时，你只需打开 Docker Desktop 就会启动 Stable Diffusion。下载新版 [配置文件](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 并按上方步骤重新构建容器即可更新 Stable Diffusion。
 
 ## 界面说明
+
+接下来，我会介绍最流行的 hlky 界面，其他 UI 的显示界面不同，但功能类似，更换主题步骤查看下方常见问题。
 
 ### Text-to-Image
 
@@ -128,15 +123,6 @@ Prompt matrix 官方样例为 `a busy city street in a modern city|illustration|
 
 另外，我们可以指定场景条件位置，比如 `@(moba|rpg|rts) character (2d|3d) model` 表示 `(moba|rpg|rts 三选一) character (2d|3d 二选一) model`，也就是会生成 3\*2 张图片。开头的 `@` 是触发指定场景条件位置的符号，不能省略。
 
-### 更换 WebUI 主题
-
-目前有默认、AUTOMATIC1111 和 lstein 三种 WebUI。如果要更换 WebUI 主题，则需在执行二次构建命令前，切换目录。比如：
-
-```bash
-cd AUTOMATIC1111
-docker compose up --build
-```
-
 ## 常见问题
 
 ### Docker Desktop failed
@@ -175,6 +161,27 @@ Docker 容器原本运行正常，端口访问突然被拒绝了，显示 `Error
 ### Mac 报错
 
 没在 Mac 上测试过，如果出现报错，将主题切换到 lstein，然后参考文档 [macOS Instructions](https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md#macos-instructions)。
+
+### 手动下载采样模型
+
+如果自动下载过慢，你可以按下方列表手动下载整理，将其放于 Stable Diffusion WebUI Docker 解压目录中的 `cache/models` 文件夹。（v1.0 后会自动下载并配置采样模型）
+
+- [Stable Diffusion v1.4 (4GB)](https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media), 将压缩包文件重命名为 `model.ckpt`。
+- (可选) [GFPGANv1.3.pth (333MB)](https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth)。
+- (可选) [RealESRGAN_x4plus.pth (64MB)](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth) 和 [RealESRGAN_x4plus_anime_6B.pth (18MB)](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth)。
+- (可选) [LDSR (2GB)](https://heibox.uni-heidelberg.de/f/578df07c8fc04ffbadf3/?dl=1) 和 [LDSR 配置](https://heibox.uni-heidelberg.de/f/31a76b13ea27482981b4/?dl=1)，分别重命名为 `LDSR.ckpt` 和 `LDSR.yaml`。
+
+采样模型的结构如下：
+
+```yaml
+cache/models/
+├── model.ckpt
+├── GFPGANv1.3.pth
+├── RealESRGAN_x4plus.pth
+├── RealESRGAN_x4plus_anime_6B.pth
+├── LDSR.ckpt
+└── LDSR.yaml
+```
 
 ## 最后
 
