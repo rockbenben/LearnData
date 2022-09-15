@@ -46,7 +46,7 @@ Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能�
 
 目前有 hlky、auto、auto-cpu 和 lstein 四种模式。如果要更换 WebUI 主题，则更改镜像构建命令 `docker compose --profile [ui] up --build`，将 `[ui]` 替换为所需的镜像名即可。
 
-比如，你没有符合的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 `docker compose --profile auto-cpu up --build`。
+比如，你没有符合要求的显卡或是 Mac 用户，可以使用 CPU 版本，稍后的镜像构建命令为 `docker compose --profile auto-cpu up --build`。
 
 ### 准备 Linux 路径
 
@@ -161,6 +161,8 @@ Docker 容器原本运行正常，端口访问突然被拒绝了，显示 `Error
 ### Mac 报错
 
 没在 Mac 上测试过，如果出现报错，将主题切换到 lstein，然后参考文档 [macOS Instructions](https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md#macos-instructions)。
+
+M1/M2 Mac 可使用 @玉树芝兰 推荐的 [DiffusionBee](https://sspai.com/post/75682)。
 
 ### 手动下载采样模型
 

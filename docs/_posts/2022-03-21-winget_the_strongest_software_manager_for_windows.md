@@ -33,6 +33,7 @@ order: -43
 
 ### winget upgrade --all
 
+- `winget upgrade` 列出所有支持 winget 升级的程序，然后使用 `winget upgrade ID` 升级指定程序。
 - `winget upgrade --all` 会静默升级所有支持 winget 的程序，适合更新强迫症患者。不过，该升级流程暂时没有筛选办法，无法单独剔除应用。
 - `winget upgrade --all --include-unknown` 升级包括未知版本在内的所有应用，一般用不到，适用于强迫症患者。
 
@@ -73,6 +74,8 @@ winstall 页面选好程序后，导出自动生成的批量安装命令，并�
 ### 尝试更新源时失败
 
 国内使用 winget 容易出现问题「尝试更新源时失败」，下载 [winget 官方最新包](https://github.com/microsoft/winget-cli/releases) 可解决问题。
+
+另一个可能是 Internet 选项的 TLS 版本设置过低，开启 TLS 1.2 即可恢复，具体操作查看 [Windows 应用商店 (Microsoft store) 打不开？](https://newzone.top/_posts/2022-02-19-microsoft_store_fixed.html#解决方法)。
 
 ### 其他问题
 
