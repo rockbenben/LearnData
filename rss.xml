@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 12 Sep 2022 00:54:22 GMT</pubDate>
-    <lastBuildDate>Mon, 12 Sep 2022 00:54:22 GMT</lastBuildDate>
+    <pubDate>Thu, 15 Sep 2022 14:21:23 GMT</pubDate>
+    <lastBuildDate>Thu, 15 Sep 2022 14:21:23 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -76,7 +76,7 @@
 <p>然后，将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 下载并解压到本地硬盘。</p>
 <h3 id="选择-webui-主题" tabindex="-1"> 选择 WebUI 主题</h3>
 <p>目前有 hlky、auto、auto-cpu 和 lstein 四种模式。如果要更换 WebUI 主题，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。</p>
-<p>比如，你没有符合的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。</p>
+<p>比如，你没有符合要求的显卡或是 Mac 用户，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。</p>
 <h3 id="准备-linux-路径" tabindex="-1"> 准备 Linux 路径</h3>
 <p>配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
 <p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）</p>
@@ -138,6 +138,7 @@ wsl -l -v
 <p>再次架构容器时报错 <code>FileNotFoundError: [Errno 2] No such file or directory: '/models/model.ckpt'</code>，这是架构位置错误导致的。此时，我们需要检查是否通过 WSL 输入的架构命令，并且 Stable Diffusion WebUI Docker 解压路径是否配置正确。</p>
 <h3 id="mac-报错" tabindex="-1"> Mac 报错</h3>
 <p>没在 Mac 上测试过，如果出现报错，将主题切换到 lstein，然后参考文档 <a href="https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md#macos-instructions" target="_blank" rel="noopener noreferrer">macOS Instructions</a>。</p>
+<p>M1/M2 Mac 可使用 @玉树芝兰 推荐的 <a href="https://sspai.com/post/75682" target="_blank" rel="noopener noreferrer">DiffusionBee</a>。</p>
 <h3 id="手动下载采样模型" tabindex="-1"> 手动下载采样模型</h3>
 <p>如果自动下载过慢，你可以按下方列表手动下载整理，将其放于 Stable Diffusion WebUI Docker 解压目录中的 <code>cache/models</code> 文件夹。（v1.0 后会自动下载并配置采样模型）</p>
 <ul>
