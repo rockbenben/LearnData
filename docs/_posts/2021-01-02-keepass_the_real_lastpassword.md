@@ -15,7 +15,7 @@ order: -34
 
 KeePass 的密码保存在本地的 `.kdbx` 数据库中，让你真正掌握自己的账号密码。搭配坚果云或同步盘的 KeePass，能实现密码多端同步，让手机与电脑使用同一密码库。
 
-KeePass 官网下载（Windows）：<https://keepass.info/download.html>。安卓推荐 `Keepass2Android`，iOS 推荐 `Strongbox` 或 `KeePassium`。
+KeePass 官网下载（Windows）：<https://keepass.info/download.html>。安卓推荐 `Keepass2Android`，iOS/Mac 推荐 `Strongbox` 或 `KeePassium`。
 
 以下会逐步介绍 KeePass 的配置和插件。小白可直接看文章底部，下载懒人包，开包即用。
 
@@ -119,7 +119,7 @@ KeePassRpc 搭配浏览器插件 Kee，能实现**自动填充密码并登录**�
 
 ## KeePass 懒人包
 
-懒人包下载：<https://wwz.lanzouf.com/i8m0804lxp7g>
+2022.09.17 更新懒人包：[蓝奏云](https://wwz.lanzouy.com/iJ6yA0bve7wb)，[百度云盘](https://pan.baidu.com/s/1dm0djnDGq8SOsTPy3jByZg?pwd=nrwj) 提取码：nrwj。
 
 KeePass 懒人包为绿色版，集成了常用插件，建立数据库即可使用 KeePass。
 
