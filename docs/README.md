@@ -70,7 +70,7 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 - `config.ts` 配置网站环境依赖和网站属性。
 - `sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。
 - `navbar.ts` 配置导航栏，推荐放你常用的文档链接。
-- `theme.ts` 对主题和插件进行设置。
+- `theme.ts` 对主题和插件进行设置，[评论插件](https://newzone.top/web/Comments.html) 可在该文件内修改设置。
 - `templateBuild.html` 是网页模板，调整网站关键词和第三方统计代码。
 
 注意：LearnData 默认使用了 algolia 全文搜索，如果你没设置 Docsearch 爬虫的话，需删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块。删除后，站点会将页面标题和小标题作为搜索索引。
