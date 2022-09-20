@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 17 Sep 2022 16:34:25 GMT</pubDate>
-    <lastBuildDate>Sat, 17 Sep 2022 16:34:25 GMT</lastBuildDate>
+    <pubDate>Tue, 20 Sep 2022 16:10:51 GMT</pubDate>
+    <lastBuildDate>Tue, 20 Sep 2022 16:10:51 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -74,9 +74,14 @@
 <p>按系统选择 <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener noreferrer">Docker Desktop</a> 版本，安装后点击左侧的 Add Extensions，推荐使用 Disk usage 扩展，便于管理 Docker 存储空间。</p>
 <p><img src="http://tc.seoipo.com/2022-09-04-17-06-27.png" alt="" title="Docker Desktop 界面" loading="lazy"></p>
 <p>然后，将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 下载并解压到本地硬盘。</p>
-<h3 id="选择-webui-主题" tabindex="-1"> 选择 WebUI 主题</h3>
-<p>目前有 hlky、auto、auto-cpu 和 lstein 四种模式。如果要更换 WebUI 主题，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。</p>
-<p>比如，你没有符合要求的显卡或是 Mac 用户，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。</p>
+<h3 id="选择分支" tabindex="-1"> 选择分支</h3>
+<p>目前 Stable Diffusion 有 hlky、auto、auto-cpu 和 lstein 四个分支。如果要更换分支，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。</p>
+<ul>
+<li><strong>hlky</strong>（推荐）：界面直观，最高分辨率为 1024x1024，是最受欢迎的主题，镜像构建命令为 <code>docker compose --profile hlky up --build</code>。</li>
+<li><strong>auto</strong>：设置模块最丰富，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 <code>docker compose --profile auto up --build</code>。</li>
+<li><strong>auto-cpu</strong>：唯一不依赖显卡的分支。你没有符合要求的显卡或是 Mac 用户，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。A 卡用户注意修改 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs" target="_blank" rel="noopener noreferrer">显卡设置</a>。</li>
+<li><strong>lstein</strong>：cli 端非常成熟，WebUI 较为传统，镜像构建命令为 <code>docker compose --profile lstein up --build</code>。</li>
+</ul>
 <h3 id="准备-linux-路径" tabindex="-1"> 准备 Linux 路径</h3>
 <p>配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
 <p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）</p>
@@ -107,13 +112,14 @@
 <p>Stable Diffusion 的核心功能是以文字内容描绘一个场景或事物，从而决定你的画面中将出现什么。因此，文字描绘是决定图像生成质量的关键因素。接下来，我会以官方文档案例为例，解构描述文字的要素和标准。<sup></sup></p>
 <p>样例：<code>A beautiful painting (画作种类) of a singular lighthouse, shining its light across a tumultuous sea of blood (画面描述) by greg rutkowski and thomas kinkade (画家/画风), Trending on artstation (参考平台), yellow color scheme (配色)</code>。</p>
 <ul>
-<li>画作种类：ink painting（水墨画），oil painting（油画），comic（漫画），illustration（插画），realistic painting（写实风）等等。</li>
+<li>画作种类：ink painting（水墨画），oil painting（油画），comic（漫画），digital painting（数字印刷品），illustration（插画），realistic painting（写实画），portrait photo（肖像照）等等，可叠加多个种类描述。</li>
 <li>参考平台：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。</li>
-<li>画家/画风：成图更接近哪位画家的风格，此处可以输入不止一位画家。比如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈。</li>
+<li>画家/画风：成图更接近哪位画家的风格，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 <code>very coherent symmetrical artwork</code>，将作品结构设为连贯对称的。</li>
 <li>配色：yellow color scheme 指整个画面的主色调为黄色。</li>
+<li>画面描述：除了对主题进行描述，还可以添加多个画面元素，如 <code>beautiful background, forest, octane render, night</code>；添加画面质量描述，如 <code>highly detailed, digital painting, Trending on artstation, concept art, smooth, sharp focus, illustration,8k</code>。</li>
 </ul>
-<p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。</p>
 <p><img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"></p>
+<p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以看 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如「goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k」。</p>
 <h3 id="prompt-matrix" tabindex="-1"> Prompt matrix</h3>
 <p>Prompt matrix 是按不同条件组合生成多张相关但不同的画面，可以用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
 <iframe height=400 width=100% src="//player.bilibili.com/player.html?bvid=BV1YP411V7vV&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
