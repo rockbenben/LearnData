@@ -26,6 +26,7 @@ yarn dist
 
 - electron cdn 需要连接网络，必须用本地环境安装。
 - Electron 定位的 location 为 窗口链接，而非网页链接。
+- [跨域 CORS 配置](https://imf.ms/web/2022/07/05/my-first-web-hybird-project-experience/#%E8%B7%A8%E5%9F%9F-cors-%E9%85%8D%E7%BD%AE)：有的应用需要访问的是本地 Web Server，与服务端接口在不同域
 
 ### nsis 配置
 

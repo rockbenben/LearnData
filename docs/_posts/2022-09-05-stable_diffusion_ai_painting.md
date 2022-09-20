@@ -42,11 +42,14 @@ Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款能�
 
 然后，将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 下载并解压到本地硬盘。
 
-### 选择 WebUI 主题
+### 选择分支
 
-目前有 hlky、auto、auto-cpu 和 lstein 四种模式。如果要更换 WebUI 主题，则更改镜像构建命令 `docker compose --profile [ui] up --build`，将 `[ui]` 替换为所需的镜像名即可。
+目前 Stable Diffusion 有 hlky、auto、auto-cpu 和 lstein 四个分支。如果要更换分支，则更改镜像构建命令 `docker compose --profile [ui] up --build`，将 `[ui]` 替换为所需的镜像名即可。
 
-比如，你没有符合要求的显卡或是 Mac 用户，可以使用 CPU 版本，稍后的镜像构建命令为 `docker compose --profile auto-cpu up --build`。
+- **hlky**（推荐）：界面直观，最高分辨率为 1024x1024，是最受欢迎的主题，镜像构建命令为 `docker compose --profile hlky up --build`。
+- **auto**：设置模块最丰富，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 `docker compose --profile auto up --build`。
+- **auto-cpu**：唯一不依赖显卡的分支。你没有符合要求的显卡或是 Mac 用户，可以使用 CPU 版本，稍后的镜像构建命令为 `docker compose --profile auto-cpu up --build`。A 卡用户注意修改 [显卡设置](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs)。
+- **lstein**：cli 端非常成熟，WebUI 较为传统，镜像构建命令为 `docker compose --profile lstein up --build`。
 
 ### 准备 Linux 路径
 
@@ -106,14 +109,15 @@ Stable Diffusion 的核心功能是以文字内容描绘一个场景或事物，
 
 样例：`A beautiful painting (画作种类) of a singular lighthouse, shining its light across a tumultuous sea of blood (画面描述) by greg rutkowski and thomas kinkade (画家/画风), Trending on artstation (参考平台), yellow color scheme (配色)`。
 
-- 画作种类：ink painting（水墨画），oil painting（油画），comic（漫画），illustration（插画），realistic painting（写实风）等等。
+- 画作种类：ink painting（水墨画），oil painting（油画），comic（漫画），digital painting（数字印刷品），illustration（插画），realistic painting（写实画），portrait photo（肖像照）等等，可叠加多个种类描述。
 - 参考平台：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。
-- 画家/画风：成图更接近哪位画家的风格，此处可以输入不止一位画家。比如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈。
+- 画家/画风：成图更接近哪位画家的风格，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 `very coherent symmetrical artwork`，将作品结构设为连贯对称的。
 - 配色：yellow color scheme 指整个画面的主色调为黄色。
-
-除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。
+- 画面描述：除了对主题进行描述，还可以添加多个画面元素，如 `beautiful background, forest, octane render, night`；添加画面质量描述，如 `highly detailed, digital painting, Trending on artstation, concept art, smooth, sharp focus, illustration,8k`。
 
 ![](http://tc.seoipo.com/2022-09-16-22-33-26.png "相同参数下不同参考平台生成的图片")
+
+除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以看 AI 图库 [PromptHero](https://prompthero.com/) 和 [OpenArt](https://openart.ai/) 上其他人分享的成品图和描述文案，比如「goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k」。
 
 ### Prompt matrix
 

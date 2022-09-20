@@ -17,24 +17,6 @@ order: 2
 
 [Cookie Editor](https://chrome.google.com/webstore/detail/cookie-editor/iphcomljdfghbkdcfndaijbokpgddeno)：管理、修改、导出 Cookie。
 
-## 网页优化
-
-[Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)：油猴脚本插件，可修改网页布局、增减内容、自动化操作，常用脚本库为 [Greasy Fork](https://greasyfork.org/zh-CN)。
-
-[Fix Contrast](https://chrome.google.com/webstore/detail/fix-contrast/pbbcgecjmpkglppfjjggkkbhdnlemhkg)：自动校正网页对比度，让网页内容更易阅读和分辨。
-
-[FasterChrome](https://chrome.google.com/webstore/detail/fasterchrome/nmgpnfccjfjhdenioncabecepjcmdnjg)：浏览器预加载链接，提升网络流畅度。
-
-[SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)：一键破解禁止右键、破解禁止选择、破解禁止复制、破解禁止粘贴，启用复制，启用右键，启用选择，启用粘贴。
-
-[AutoPagerize](https://chrome.google.com/webstore/detail/autopagerize/igiofjhpmpihnifddepnpngfjhkfenbp)：自动识别 next 或下一页，将网页合并为同一页。2014 年更新，很多规则已失效。
-
-[pakku](https://chrome.google.com/webstore/detail/pakku%EF%BC%9A%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%BC%B9%E5%B9%95%E8%BF%87%E6%BB%A4%E5%99%A8/jklfcpboamajpiikgkbjcnnnnooefbhh)：合并 B 站视频中绝大多数刷屏弹幕。
-
-[Enhanced GitHub](https://chrome.google.com/webstore/detail/enhanced-github/anlikcnbgdeidpacdbdljnabclhahhmd)：提升 GitHub 易用度。
-
-[Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)：优化 GitHub 代码，支持鼠标悬停、代码搜索、查看引用等。
-
 ## 标签页
 
 [iTab](https://chrome.google.com/webstore/detail/itab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/mhloojimgilafopcmlcikiidgbbnelip)：自定义你的新标签页。
@@ -43,7 +25,7 @@ order: 2
 
 [GoTo Tab](https://chrome.google.com/webstore/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi)：关键词搜索，快速定位标签页。
 
-## 批量链接
+## 链接批量
 
 [Bulk URL Opener Extension](https://chrome.google.com/webstore/detail/bulk-url-opener-extension/hgenngnjgfkdggambccohomebieocekm)：批量打开链接，也可批量获取当前浏览器内所有页面网址链接。
 
@@ -78,6 +60,24 @@ order: 2
 [Web Scraper](https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn)：从网页中提取数据的爬虫。
 
 网页自动化：[UI.Vision PRA](https://newzone.top/_posts/2022-04-21-uivision_rpa.html), [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
+
+## 网页优化
+
+[Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)：油猴脚本插件，可修改网页布局、增减内容、自动化操作，常用脚本库为 [Greasy Fork](https://greasyfork.org/zh-CN)。
+
+[Fix Contrast](https://chrome.google.com/webstore/detail/fix-contrast/pbbcgecjmpkglppfjjggkkbhdnlemhkg)：自动校正网页对比度，让网页内容更易阅读和分辨。
+
+[FasterChrome](https://chrome.google.com/webstore/detail/fasterchrome/nmgpnfccjfjhdenioncabecepjcmdnjg)：浏览器预加载链接，提升网络流畅度。
+
+[SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)：一键破解禁止右键、破解禁止选择、破解禁止复制、破解禁止粘贴，启用复制，启用右键，启用选择，启用粘贴。
+
+[AutoPagerize](https://chrome.google.com/webstore/detail/autopagerize/igiofjhpmpihnifddepnpngfjhkfenbp)：自动识别 next 或下一页，将网页合并为同一页。2014 年更新，很多规则已失效。
+
+[pakku](https://chrome.google.com/webstore/detail/pakku%EF%BC%9A%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%BC%B9%E5%B9%95%E8%BF%87%E6%BB%A4%E5%99%A8/jklfcpboamajpiikgkbjcnnnnooefbhh)：合并 B 站视频中绝大多数刷屏弹幕。
+
+[Enhanced GitHub](https://chrome.google.com/webstore/detail/enhanced-github/anlikcnbgdeidpacdbdljnabclhahhmd)：提升 GitHub 易用度。
+
+[Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)：优化 GitHub 代码，支持鼠标悬停、代码搜索、查看引用等。
 
 ## 实用工具
 
