@@ -17,7 +17,7 @@ Windows 自用软件，以开源软件为主。
 
 文本编辑：Visual Studio Code & Notepad++ & HbuilderX & WPS & office tab ~~& Slide & 方方格子 & Typora & Yu Writer & UltraEdit~~
 
-文字识别：天若 OCR ~~& ABBYY Screenshot Reader OCR~~
+文字识别：白描 & 天若 OCR ~~& ABBYY Screenshot Reader OCR~~
 
 ## 平面设计
 
@@ -109,7 +109,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 ## 低频工具
 
-编程工具：FileZilla（FTP）、PuTTY（SSH）、GitHubDesktop、Postman、Fiddler(手机抓包)、Regex Match Tracer
+编程工具：FileZilla（FTP）、PuTTY（SSH）、GitHubDesktop、DBeaver([数据库](https://kalacloud.com/blog/best-mysql-gui-tools/))、Postman、Fiddler(手机抓包)、Regex Match Tracer
 
 爬虫监测：OpenWebMonitor & [spider-flow](https://github.com/ssssssss-team/spider-flow)
 
@@ -132,6 +132,8 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 [WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
 
 [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 tube
+
+[uncle-novel](https://github.com/uncle-novel/uncle-novel)：一个全网小说下载器及阅读器，可部署在 PC 和安卓上，目录解析与书源结合，支持有声小说与文本小说，可下载mobi、epub、txt格式文本小说。
 
 ---
 

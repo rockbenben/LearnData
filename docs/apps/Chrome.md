@@ -25,6 +25,8 @@ order: 2
 
 [GoTo Tab](https://chrome.google.com/webstore/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi)：关键词搜索，快速定位标签页。
 
+[Tab Wrangler](https://chrome.google.com/webstore/detail/tab-wrangler/egnjhciaieeiiohknchakcodbpgjnchh)：自动关闭不活动的标签页，并允许您轻松还原找回它们。
+
 ## 链接批量
 
 [Bulk URL Opener Extension](https://chrome.google.com/webstore/detail/bulk-url-opener-extension/hgenngnjgfkdggambccohomebieocekm)：批量打开链接，也可批量获取当前浏览器内所有页面网址链接。
