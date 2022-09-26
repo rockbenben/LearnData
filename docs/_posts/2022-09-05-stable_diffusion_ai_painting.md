@@ -40,7 +40,7 @@ Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款开�
 
 ![](http://tc.seoipo.com/2022-09-04-17-06-27.png "Docker Desktop 界面")
 
-然后，将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 下载并解压到本地硬盘。
+然后，将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 下载并解压到本地硬盘。或者，使用阿里云盘下载定期 [聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)，该版本会定期保持更新。
 
 ### 选择分支
 

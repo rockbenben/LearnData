@@ -39,6 +39,7 @@ order: 2
 ## 安装应用
 
 - [winstall](https://newzone.top/_posts/2022-03-21-winget_the_strongest_software_manager_for_windows.html) 批量安装应用；
+- 电脑运行 Android 手机应用，[Win11 安卓子系统](https://www.iplaysoft.com/win11-wsa.html) (WSA) 安装；
 - Synology Drive：设置 NAS 本地备份；
 - Mircrosoft Store：Snipaste、微信 For Windows；
 - 绿色开机：Keepass、Ditto、RunAny、天若 OCR；WPS 安装宏；
