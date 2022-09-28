@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 26 Sep 2022 03:38:38 GMT</pubDate>
-    <lastBuildDate>Mon, 26 Sep 2022 03:38:38 GMT</lastBuildDate>
+    <pubDate>Wed, 28 Sep 2022 15:54:54 GMT</pubDate>
+    <lastBuildDate>Wed, 28 Sep 2022 15:54:54 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -60,11 +60,11 @@
       <content:encoded><![CDATA[<p>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。</p>
 <p><img src="http://tc.seoipo.com/2022-09-04-11-53-20.png" alt="" title="丁老头进化旅程" loading="lazy"></p>
 <p>Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款开源且能部署在家用电脑上的 AI 绘图工具，<strong>可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行</strong>，并在几秒钟内生成图像，无需预处理和后处理。当然，如果只是想体验 Stable Diffusion，也可以使用在线工具 <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" target="_blank" rel="noopener noreferrer">Hugging Face</a>、<a href="https://beta.dreamstudio.ai/" target="_blank" rel="noopener noreferrer">DreamStudio</a> 或 <a href="https://wenxin.baidu.com/moduleApi/ernieVilg" target="_blank" rel="noopener noreferrer">百度文心</a>。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。</p>
-<p>如果想大批量使用，可以像我一样，使用 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署在 Windows 系统，从而用电脑免费实现 AI 文字绘画，不再被在线工具所限制。Mac 同样适用于该方法，并可省略下方的环境配置步骤。</p>
+<p>如果想大批量使用，可以像我一样，使用 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署在 Windows 系统，从而用电脑免费实现 AI 文字绘画，不再被在线工具所限制。Stable Diffusion 同样适用于 Mac，M1/M2 Mac 建议使用更简便的 <a href="https://www.charl-e.com/" target="_blank" rel="noopener noreferrer">CHARL-E</a> 或 @玉树芝兰 推荐的 <a href="https://sspai.com/post/75682" target="_blank" rel="noopener noreferrer">DiffusionBee</a>。</p>
 <p><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" title="Stable Diffusion 部署流程" loading="lazy"></p>
 <p>本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。</p>
 <h2 id="docker-环境配置" tabindex="-1"> Docker 环境配置</h2>
-<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup></sup> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>。下面我会介绍各自的启用方式，<strong>二选一即可</strong>，推荐使用 WSL（占用系统盘 30G 的空间）。</p>
+<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup></sup> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>。下面我会介绍各自的启用方式，<strong>二选一即可</strong>，推荐使用子系统 WSL（占用系统盘 30G 的空间）。</p>
 <h3 id="安装-wsl" tabindex="-1"> 安装 WSL</h3>
 <p>在管理员 PowerShell 输入命令 <code>wsl --install</code>，之后终端会默认安装 Ubuntu。系统下载时间较长，注意别关机。<sup></sup> 安装 Ubuntu 完成后，按提示设置 Ubuntu 账户和密码。</p>
 <h3 id="启用-hyper-v" tabindex="-1"> 启用 Hyper-V</h3>
@@ -84,14 +84,14 @@
 <h3 id="准备-linux-路径" tabindex="-1"> 准备 Linux 路径</h3>
 <p>配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
 <p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）</p>
-<h3 id="启动-stable-diffusion" tabindex="-1"> 启动 Stable Diffusion</h3>
+<h2 id="启动-stable-diffusion" tabindex="-1"> 启动 Stable Diffusion</h2>
 <p>准备好 Linux 路径后，启动 Docker Desktop，打开 WSL Ubuntu 或 Mac 终端输入切换路径命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压文件目录。</p>
 <p>随后，执行环境部署命令 <code>docker compose --profile download up --build</code>。它会自动下载采样模型和依赖包，需要 20 分钟或者更长。</p>
 <p>然后，执行镜像构建命令 <code>docker compose --profile hlky up --build</code>。构建完成后，命令行提示 <code>Running on local URL: http://localhost:7860/</code>。浏览器打开 <code>http://localhost:7860/</code>，你就可以在本地 AI 生成图片了。<sup></sup></p>
 <p><img src="http://tc.seoipo.com/2022-09-04-18-32-31.png" alt="" loading="lazy"></p>
 <p>下一次使用时，你只需打开 Docker Desktop 就会启动 Stable Diffusion。下载新版 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a> 并按上方步骤重新构建容器即可更新 Stable Diffusion。</p>
 <h2 id="界面说明" tabindex="-1"> 界面说明</h2>
-<p>接下来，我会介绍最流行的 hlky 界面，其他 UI 的显示界面不同，但功能类似，更换主题步骤查看下方常见问题。</p>
+<p>接下来，我会介绍最流行的 hlky 界面，其他分支的主题界面略有不同，但功能并没有大的变化，如何更换分支看下方的常见问题。</p>
 <h3 id="text-to-image" tabindex="-1"> Text-to-Image</h3>
 <p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。</p>
 <p><img src="http://tc.seoipo.com/2022-09-05-08-28-23.png" alt="" title="Text-to-Image 界面" loading="lazy"></p>
@@ -118,7 +118,10 @@
 <li>画面描述：除了对主题进行描述，还可以添加多个画面元素，如 <code>beautiful background, forest, octane render, night</code>；添加画面质量描述，如 <code>highly detailed, digital painting, Trending on artstation, concept art, smooth, sharp focus, illustration,8k</code>。</li>
 </ul>
 <p><img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"></p>
-<p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以看 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如「goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k」。</p>
+<p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以看 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
+<blockquote>
+<p>goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k</p>
+</blockquote>
 <h3 id="prompt-matrix" tabindex="-1"> Prompt matrix</h3>
 <p>Prompt matrix 是按不同条件组合生成多张相关但不同的画面，可以用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
 <iframe height=400 width=100% src="//player.bilibili.com/player.html?bvid=BV1YP411V7vV&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -142,9 +145,6 @@ wsl -l -v
 <p>在 Powershell 中输入 <code>netsh int ipv4 show excludedportrange protocol=tcp</code> 检查是否处于被排除端口范围，然后输入 <code>reg add HKLM\SYSTEM\CurrentControlSet\Services\hns\State /v EnableExcludedPortRange /d 0 /f</code> 开启端口。操作完成后，重启电脑即可解封端口。<sup></sup></p>
 <h3 id="filenotfounderror" tabindex="-1"> FileNotFoundError</h3>
 <p>再次架构容器时报错 <code>FileNotFoundError: [Errno 2] No such file or directory: '/models/model.ckpt'</code>，这是架构位置错误导致的。此时，我们需要检查是否通过 WSL 输入的架构命令，并且 Stable Diffusion WebUI Docker 解压路径是否配置正确。</p>
-<h3 id="mac-报错" tabindex="-1"> Mac 报错</h3>
-<p>没在 Mac 上测试过，如果出现报错，将主题切换到 lstein，然后参考文档 <a href="https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md#macos-instructions" target="_blank" rel="noopener noreferrer">macOS Instructions</a>。</p>
-<p>M1/M2 Mac 可使用 @玉树芝兰 推荐的 <a href="https://sspai.com/post/75682" target="_blank" rel="noopener noreferrer">DiffusionBee</a>。</p>
 <h3 id="手动下载采样模型" tabindex="-1"> 手动下载采样模型</h3>
 <p>如果自动下载过慢，你可以按下方列表手动下载整理，将其放于 Stable Diffusion WebUI Docker 解压目录中的 <code>cache/models</code> 文件夹。（v1.0 后会自动下载并配置采样模型）</p>
 <ul>
