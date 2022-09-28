@@ -87,6 +87,10 @@ jobs:
 
 如果出现 `Error: Timeout (control socket)`，则说明同步服务器超时，可进入 Actions 页面点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭防火墙，测试是否 GitHub 服务器被拉黑了。
 
+### SSH 同步
+
+如果你拥有服务器所有权限，可以使用 [web-deploy](https://github.com/SamKirkland/web-deploy) 以 SSH 同步方式发布页面。但与 FTP 同步方式相比，是否安全性、速度、时间有区别，我还没测试过，仅做记录，
+
 ### 同步到 oss
 
 如果没有服务器，可以把文件部署在云运营商的云存储上。比如用 [aliyun-oss-website-action](https://github.com/marketplace/actions/aliyun-oss-website-action)，将 repo 文件 build 成网站文件，然后同步到阿里云 oss 并运行网站。

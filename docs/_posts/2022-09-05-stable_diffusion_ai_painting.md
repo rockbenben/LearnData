@@ -16,7 +16,7 @@ order: -49
 
 Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款开源且能部署在家用电脑上的 AI 绘图工具，**可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行**，并在几秒钟内生成图像，无需预处理和后处理。当然，如果只是想体验 Stable Diffusion，也可以使用在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion)、[DreamStudio](https://beta.dreamstudio.ai/) 或 [百度文心](https://wenxin.baidu.com/moduleApi/ernieVilg)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。
 
-如果想大批量使用，可以像我一样，使用 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署在 Windows 系统，从而用电脑免费实现 AI 文字绘画，不再被在线工具所限制。Mac 同样适用于该方法，并可省略下方的环境配置步骤。
+如果想大批量使用，可以像我一样，使用 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署在 Windows 系统，从而用电脑免费实现 AI 文字绘画，不再被在线工具所限制。Stable Diffusion 同样适用于 Mac，M1/M2 Mac 建议使用更简便的 [CHARL-E](https://www.charl-e.com/) 或 @玉树芝兰 推荐的 [DiffusionBee](https://sspai.com/post/75682)。
 
 ![](http://tc.seoipo.com/2022-09-05-16-22-45.png "Stable Diffusion 部署流程")
 
@@ -24,7 +24,7 @@ Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款开�
 
 ## Docker 环境配置
 
-本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。^[[Windows Docker 安装](https://www.runoob.com/docker/windows-docker-install.html)] 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，**配置 WSL 或是启用 Hyper-V**。下面我会介绍各自的启用方式，**二选一即可**，推荐使用 WSL（占用系统盘 30G 的空间）。
+本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。^[[Windows Docker 安装](https://www.runoob.com/docker/windows-docker-install.html)] 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，**配置 WSL 或是启用 Hyper-V**。下面我会介绍各自的启用方式，**二选一即可**，推荐使用子系统 WSL（占用系统盘 30G 的空间）。
 
 ### 安装 WSL
 
@@ -57,7 +57,7 @@ Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款开�
 
 Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）
 
-### 启动 Stable Diffusion
+## 启动 Stable Diffusion
 
 准备好 Linux 路径后，启动 Docker Desktop，打开 WSL Ubuntu 或 Mac 终端输入切换路径命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`，进入 Stable Diffusion WebUI Docker 解压文件目录。
 
@@ -71,7 +71,7 @@ Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux
 
 ## 界面说明
 
-接下来，我会介绍最流行的 hlky 界面，其他 UI 的显示界面不同，但功能类似，更换主题步骤查看下方常见问题。
+接下来，我会介绍最流行的 hlky 界面，其他分支的主题界面略有不同，但功能并没有大的变化，如何更换分支看下方的常见问题。
 
 ### Text-to-Image
 
@@ -117,7 +117,9 @@ Stable Diffusion 的核心功能是以文字内容 (英文) 描绘一个场景�
 
 ![](http://tc.seoipo.com/2022-09-16-22-33-26.png "相同参数下不同参考平台生成的图片")
 
-除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以看 AI 图库 [PromptHero](https://prompthero.com/) 和 [OpenArt](https://openart.ai/) 上其他人分享的成品图和描述文案，比如「goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k」。
+除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以看 AI 图库 [PromptHero](https://prompthero.com/) 和 [OpenArt](https://openart.ai/) 上其他人分享的成品图和描述文案，比如
+
+> goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k
 
 ### Prompt matrix
 
@@ -163,12 +165,6 @@ Docker 容器原本运行正常，端口访问突然被拒绝了，显示 `Error
 ### FileNotFoundError
 
 再次架构容器时报错 `FileNotFoundError: [Errno 2] No such file or directory: '/models/model.ckpt'`，这是架构位置错误导致的。此时，我们需要检查是否通过 WSL 输入的架构命令，并且 Stable Diffusion WebUI Docker 解压路径是否配置正确。
-
-### Mac 报错
-
-没在 Mac 上测试过，如果出现报错，将主题切换到 lstein，然后参考文档 [macOS Instructions](https://github.com/lstein/stable-diffusion/blob/main/README-Mac-MPS.md#macos-instructions)。
-
-M1/M2 Mac 可使用 @玉树芝兰 推荐的 [DiffusionBee](https://sspai.com/post/75682)。
 
 ### 手动下载采样模型
 
