@@ -127,13 +127,13 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 飞书妙记：倍速、跳过空白片段、字幕搜索定位视频，将视频（最长 4 小时）转为文字大纲，了解视频梗概，建立基础认知。等到自己上手实操的时候，遇到问题直接搜索文字定位到相关内容，再看文字对应的视频截图确定配置细节。如果视频过大，可以提取音频来上传。^[[视频课程学习留档](https://sspai.com/post/70960)]
 
-[DockIt](http://dogbean.ysepan.com/)：主显示屏中，非全屏状态下，快速将窗口局部化。如何默认不全屏；应用不自动吸边？
+## 开源工具
 
-[WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
-
-[SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 tube
-
-[uncle-novel](https://github.com/uncle-novel/uncle-novel)：一个全网小说下载器及阅读器，可部署在 PC 和安卓上，目录解析与书源结合，支持有声小说与文本小说，可下载mobi、epub、txt格式文本小说。
+- [style2paints](https://github.com/lllyasviel/style2paints)：一款给线稿上色的 AI 辅助工具。能够帮助用户给没有上色的图片，快速完成上色的 AI 工具，上色效果广受好评，完全免费开箱即用。
+- [uncle-novel](https://github.com/uncle-novel/uncle-novel)：一个全网小说下载器及阅读器，可部署在 PC 和安卓上，目录解析与书源结合，支持有声小说与文本小说，可下载 mobi、epub、txt 格式文本小说。
+- [DockIt](http://dogbean.ysepan.com/)：主显示屏中，非全屏状态下，快速将窗口局部化。如何默认不全屏；应用不自动吸边？
+- [WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
+- [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 tube
 
 ---
 
