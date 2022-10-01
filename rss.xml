@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 29 Sep 2022 15:39:33 GMT</pubDate>
-    <lastBuildDate>Thu, 29 Sep 2022 15:39:33 GMT</lastBuildDate>
+    <pubDate>Sat, 01 Oct 2022 12:17:14 GMT</pubDate>
+    <lastBuildDate>Sat, 01 Oct 2022 12:17:14 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -70,9 +70,9 @@
 <h3 id="启用-hyper-v" tabindex="-1"> 启用 Hyper-V</h3>
 <p>以管理员身份打开 PowerShell 控制台，输入命令 <code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All</code>。<sup></sup> 重启电脑后，将开启 Hyper-V。</p>
 <h2 id="配置-stable-diffusion" tabindex="-1"> 配置 Stable Diffusion</h2>
-<p>按系统选择 <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener noreferrer">Docker Desktop</a> 版本，安装后点击左侧的 Add Extensions，推荐使用 Disk usage 扩展，便于管理 Docker 存储空间。</p>
+<p>按平台选 <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener noreferrer">Docker Desktop</a> 版本，安装后点击左侧的 Add Extensions，推荐 Disk usage 扩展，便于管理 Docker 存储空间。</p>
 <p><img src="http://tc.seoipo.com/2022-09-04-17-06-27.png" alt="" title="Docker Desktop 界面" loading="lazy"></p>
-<p>然后，将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 下载并解压到本地硬盘。或者，使用阿里云盘下载定期 <a href="https://www.aliyundrive.com/s/EKmK7MGrHdn" target="_blank" rel="noopener noreferrer">聚合版</a>，该版本会定期保持更新。</p>
+<p>然后，将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 下载并解压到本地硬盘。或者，使用阿里云盘下载 <a href="https://www.aliyundrive.com/s/EKmK7MGrHdn" target="_blank" rel="noopener noreferrer">聚合版</a>，2022.10.01 更新。</p>
 <h3 id="选择分支" tabindex="-1"> 选择分支</h3>
 <p>目前 Stable Diffusion 有 hlky、auto、auto-cpu 和 lstein 四个分支。如果要更换分支，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。</p>
 <ul>
@@ -82,14 +82,18 @@
 <li><strong>lstein</strong>：cli 端非常成熟，WebUI 较为传统，镜像构建命令为 <code>docker compose --profile lstein up --build</code>。</li>
 </ul>
 <h3 id="准备-linux-路径" tabindex="-1"> 准备 Linux 路径</h3>
-<p>配置好 Stable Diffusion WebUI Docker，就可以进入 Linux 环境启动 Docker 容器。不过在此之前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
+<p>配置 Stable Diffusion WebUI Docker 后，进入 Linux 环境启动 Docker 容器。不过在启动 Docker 前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
 <p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）</p>
 <h2 id="启动-stable-diffusion" tabindex="-1"> 启动 Stable Diffusion</h2>
-<p>准备好 Linux 路径后，启动 Docker Desktop，打开 WSL Ubuntu 或 Mac 终端输入切换路径命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压文件目录。</p>
-<p>随后，执行环境部署命令 <code>docker compose --profile download up --build</code>。它会自动下载采样模型和依赖包，需要 20 分钟或者更长。</p>
-<p>然后，执行镜像构建命令 <code>docker compose --profile hlky up --build</code>。构建完成后，命令行提示 <code>Running on local URL: http://localhost:7860/</code>。浏览器打开 <code>http://localhost:7860/</code>，你就可以在本地 AI 生成图片了。<sup></sup></p>
+<p>准备好 Linux 路径后，启动 Docker Desktop，打开 WSL Ubuntu 或 Mac 终端输入切换路径命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压文件目录执行部署命令。</p>
+<div><pre><code><span># 自动下载采样模型和依赖包</span>
+<span>docker</span> compose <span>--profile</span> download up <span>--build</span>
+<span># 上方命令需要 20 分钟或更长，完成后执行镜像构建命令</span>
+<span>docker</span> compose <span>--profile</span> hlky up <span>--build</span>
+<span># hlky 是推荐分支，也可以选择 auto | auto-cpu</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>构建完成后，提示访问 <code>http://localhost:7860/</code>，你就可以在本地 AI 生成图片了。<sup></sup></p>
 <p><img src="http://tc.seoipo.com/2022-09-04-18-32-31.png" alt="" loading="lazy"></p>
-<p>下一次使用时，你只需打开 Docker Desktop 就会启动 Stable Diffusion。下载新版 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a> 并按上方步骤重新构建容器即可更新 Stable Diffusion。</p>
+<p>之后，打开 Docker Desktop 就会启动 Stable Diffusion。下载新版 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a> ，按上方步骤重新构建容器即可更新 Stable Diffusion。</p>
 <h2 id="界面说明" tabindex="-1"> 界面说明</h2>
 <p>接下来，我会介绍最流行的 hlky 界面，其他分支的主题界面略有不同，但功能并没有大的变化，如何更换分支看下方的常见问题。</p>
 <h3 id="text-to-image" tabindex="-1"> Text-to-Image</h3>
@@ -113,9 +117,16 @@
 <ul>
 <li>画作种类：ink painting（水墨画），oil painting（油画），comic（漫画），digital painting（数字印刷品），illustration（插画），realistic painting（写实画），portrait photo（肖像照）等等，可叠加多个种类描述。</li>
 <li>参考平台：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。</li>
-<li>画家/画风：成图更接近哪位画家的风格，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 <code>very coherent symmetrical artwork</code>，将作品结构设为连贯对称的。</li>
+<li>画家/画风：成图更接近哪位画家的风格，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
 <li>配色：yellow color scheme 指整个画面的主色调为黄色。</li>
-<li>画面描述：除了对主题进行描述，还可以添加多个画面元素，如 <code>beautiful background, forest, octane render, night</code>；添加画面质量描述，如 <code>highly detailed, digital painting, Trending on artstation, concept art, smooth, sharp focus, illustration,8k</code>。</li>
+<li>画面描述：除了描述主题，还可以描述次要元素和形容词描述画面。
+<ul>
+<li>画面元素，如 <code>beautiful background, forest, diffuse natural sun lights</code>；</li>
+<li>肖像描述，如 <code>attractive, friendly, casual, delightful, female, elegant, vibrant, hard rim lighting photography</code>；</li>
+<li>画面质量描述，如 <code>award winning, breathtaking, groundbreaking, superb, outstanding</code>；</li>
+<li>细节特点描述，如 <code>symmetry, intricate, gorgeous, highly detailed, digital painting, Trending on artstation, concept art, smooth, sharp focus, octane render, illustration, 8k</code>。</li>
+</ul>
+</li>
 </ul>
 <p><img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"></p>
 <p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以看 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
@@ -145,23 +156,15 @@ wsl -l -v
 <p>在 Powershell 中输入 <code>netsh int ipv4 show excludedportrange protocol=tcp</code> 检查是否处于被排除端口范围，然后输入 <code>reg add HKLM\SYSTEM\CurrentControlSet\Services\hns\State /v EnableExcludedPortRange /d 0 /f</code> 开启端口。操作完成后，重启电脑即可解封端口。<sup></sup></p>
 <h3 id="filenotfounderror" tabindex="-1"> FileNotFoundError</h3>
 <p>再次架构容器时报错 <code>FileNotFoundError: [Errno 2] No such file or directory: '/models/model.ckpt'</code>，这是架构位置错误导致的。此时，我们需要检查是否通过 WSL 输入的架构命令，并且 Stable Diffusion WebUI Docker 解压路径是否配置正确。</p>
-<h3 id="手动下载采样模型" tabindex="-1"> 手动下载采样模型</h3>
-<p>如果自动下载过慢，你可以按下方列表手动下载整理，将其放于 Stable Diffusion WebUI Docker 解压目录中的 <code>cache/models</code> 文件夹。（v1.0 后会自动下载并配置采样模型）</p>
+<h3 id="采样模型" tabindex="-1"> 采样模型</h3>
+<p>采样模型是 AI 绘画的核心。2022.09.10 支持自动下载采样模型，下方列表仅做参考。</p>
 <ul>
 <li><a href="https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media" target="_blank" rel="noopener noreferrer">Stable Diffusion v1.4 (4GB)</a>, 将压缩包文件重命名为 <code>model.ckpt</code>。</li>
-<li>(可选) <a href="https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth" target="_blank" rel="noopener noreferrer">GFPGANv1.3.pth (333MB)</a>。</li>
+<li>(可选) <a href="https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.4.pth" target="_blank" rel="noopener noreferrer">GFPGANv1.4.pth (340MB)</a>。</li>
 <li>(可选) <a href="https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth" target="_blank" rel="noopener noreferrer">RealESRGAN_x4plus.pth (64MB)</a> 和 <a href="https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth" target="_blank" rel="noopener noreferrer">RealESRGAN_x4plus_anime_6B.pth (18MB)</a>。</li>
 <li>(可选) <a href="https://heibox.uni-heidelberg.de/f/578df07c8fc04ffbadf3/?dl=1" target="_blank" rel="noopener noreferrer">LDSR (2GB)</a> 和 <a href="https://heibox.uni-heidelberg.de/f/31a76b13ea27482981b4/?dl=1" target="_blank" rel="noopener noreferrer">LDSR 配置</a>，分别重命名为 <code>LDSR.ckpt</code> 和 <code>LDSR.yaml</code>。</li>
 </ul>
-<p>采样模型的结构如下：</p>
-<div><pre><code>cache/models/
-├── model.ckpt
-├── GFPGANv1.3.pth
-├── RealESRGAN_x4plus.pth
-├── RealESRGAN_x4plus_anime_6B.pth
-├── LDSR.ckpt
-└── LDSR.yaml
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><h2 id="最后" tabindex="-1"> 最后</h2>
+<h2 id="最后" tabindex="-1"> 最后</h2>
 <p>Stable Diffusion 还不能作为生产力工具，但它让设计变得简单，也让更多普通人打开了 AI 绘画的可能性。推荐大家实际部署玩下，让自己拥有更多的可能。</p>
 <p>本文于「<a href="https://sspai.com/post/75544" target="_blank" rel="noopener noreferrer">少数派首发</a>」。</p>
 <hr>
