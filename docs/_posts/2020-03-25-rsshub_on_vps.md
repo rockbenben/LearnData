@@ -15,9 +15,9 @@ RSSHub 使用非常简单，但随着使用者增多，微博、知乎加大了�
 
 ## 部署步骤
 
-1. 将 RSSHub 代码下载到根目录/root/，执行命令 `git clone https://github.com/DIYgod/RSSHub.git`。
+1. 将 RSSHub 代码下载到根目录 root，执行命令 `git clone https://github.com/DIYgod/RSSHub.git`。
 2. 安装宝塔面板，查看 [官方安装教程](https://www.bt.cn/bbs/thread-19376-1-1.html)。
-3. 登陆宝塔面板，点击「软件商店」-「运行环境」，找到并安装**PM2 管理器**。
+3. 登陆宝塔面板，点击「软件商店」-「运行环境」，安装**PM2 管理器**。
 
    ![](http://tc.seoipo.com/20200325120705.png)
 

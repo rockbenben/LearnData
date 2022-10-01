@@ -15,11 +15,11 @@ order: 3
 
 [Power Automate](https://sspai.com/series/273/list) 自动化应用，分为桌面流和 [云端流](https://make.powerautomate.com/)，上手比 Quikcer 复杂，网页自动化弱于 UI. Vision RPA，适合在 Window 不同应用间切换的自动化流。**对于免费用户来说，Power Automate 都得手动执行流，个人账户与组织账户无明显区别。**
 
-**桌面流**本身并没有触发器，因此只能手动执行。付费的组织账户可以自动执行桌面流，比如：云端流调用桌面流，[通过 URL 运行桌面流](https://docs.microsoft.com/zh-cn/power-automate/desktop-flows/run-pad-flow#run-desktop-flows-via-url)。
+**桌面流**本身并没有触发器，因此只能手动执行。付费的组织账户可以自动执行桌面流，比如：云端流调用桌面流，[通过 URL 运行桌面流](https://docs.microsoft.com/zh-cn/power-automate/desktop-flows/run-pad-flow#run-desktop-flows-via-url)。Power Automate 安装建议使用 [exe 形式](https://learn.microsoft.com/en-us/power-automate/desktop-flows/install)，商店版遇到过几个 Bug。
 
 **云端流**可以自动、即时或通过计划触发自动化。登录云端流时，一开始要求用工作账户登录，但后来我开通了 [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software)，就可以用个人账户，暂不清楚是否有因果关系。^[[注册免费 Teams 经典](https://support.microsoft.com/zh-cn/office/%E6%B3%A8%E5%86%8C%E5%85%8D%E8%B4%B9teams%E7%BB%8F%E5%85%B8-70aaf044-b872-4c32-ac47-362ab29ebbb1)]
 
-按微软官方文档，我以为组织账户比个人账户功能强大许多，但登录后，只多显示了一些按钮和试用提示，基本与个人账户没区别。简单来说，组织账户就是有付费的权利，其他一样。
+我以为组织账户比个人账户功能强大许多，但登录后，发现知识多显示了一些按钮和试用提示，与个人账户相比基本没区别。简单来说，组织账户就是有付费的权利，其他一样。
 
 ### 使用技巧
 

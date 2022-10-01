@@ -87,6 +87,10 @@ WebAutoType 是很多人的推荐插件，启动密码热键后会自动匹配�
 
 该插件能自动匹配下载网站图标，但会大幅增加数据库的大小。不在意界面美观度的话，无需安装 Yet Another Favicon Downloader。
 
+### [HIBP Offline Check](https://github.com/mihaifm/HIBPOfflineCheck)
+
+使用 [have i been pwned?](https://haveibeenpwned.com/) 在线检查密码库，也能使用本地数据库离线检查。
+
 ### [KeePassRpc](https://github.com/kee-org/keepassrpc/releases/)
 
 KeePassRpc 搭配浏览器插件 Kee，能实现**自动填充密码并登录**。

@@ -6,7 +6,6 @@ category:
 tag:
   - 原则
   - 批评与自我批评
-sticky: 100
 order: -37
 ---
 

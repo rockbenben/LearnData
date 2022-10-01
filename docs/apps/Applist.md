@@ -65,7 +65,7 @@ Windows 自用软件，以开源软件为主。
 - 图标启动：[Lucy 快速启动](https://www.yuque.com/lucy/lucy/record) ~~、Rolan、nTrun (Win 键启动)~~
 - 启动栏：Listary ~~、uTolls、Wox~~
 
-剪切板：Ditto ~~& CopyQ~~
+剪切板：Ditto & PinStack ~~& CopyQ~~
 
 时间管理：ManicTime & Toggl Track ~~& RescueTime(订阅)~~
 
