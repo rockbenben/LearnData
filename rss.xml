@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 01 Oct 2022 12:17:14 GMT</pubDate>
-    <lastBuildDate>Sat, 01 Oct 2022 12:17:14 GMT</lastBuildDate>
+    <pubDate>Sun, 02 Oct 2022 01:35:31 GMT</pubDate>
+    <lastBuildDate>Sun, 02 Oct 2022 01:35:31 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -474,7 +474,7 @@ MSOCache 其它的目录下内容同样根据注册表的内容把它指示的�
       <pubDate>Sat, 29 Jul 2017 15:19:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>OneNote 安装后，提示输入账号，但点击「下一步」始终没反应，无法进行登陆。</p>
 <p><img src="https://pic4.zhimg.com/v2-d5945359b896ffd09d9973e9597ec06b_r.jpg" alt="" loading="lazy"></p>
-<p>打开 IE 浏览器，访问 live.com，如果网页提示「登录需要启动 JavaScript」，说明问题的根源出在 IE 的设置上。</p>
+<p>打开 IE 浏览器，访问 <a href="http://live.com" target="_blank" rel="noopener noreferrer">live.com</a>，如果网页提示「登录需要启动 JavaScript」，说明问题的根源出在 IE 的设置上。</p>
 <p><img src="https://pic1.zhimg.com/v2-cc00b3039f755b92f9ae511c8b7debd0_r.jpg" alt="" loading="lazy"></p>
 <p>依次点击「IE 设置 - Internet 选项 - 安全 - 自定义级别」，然后启用脚本选项的「Java 小程序脚本」和「活动脚本」。</p>
 <p><img src="https://pic2.zhimg.com/v2-717bf3c8b62748b62a04219435b8a75d_r.jpg" alt="" loading="lazy"></p>
