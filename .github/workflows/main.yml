@@ -30,12 +30,15 @@ jobs:
           node-version: 16
           cache: pnpm
 
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Build Docs
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: |
-          pnpm add vuepress@2.0.0-beta.49 vuepress-theme-hope@2.0.0-beta.91 @vuepress/plugin-google-analytics@2.0.0-beta.49 @vuepress/plugin-search@2.0.0-beta.49 @vuepress/plugin-docsearch@2.0.0-beta.49
-          pnpm docs:build
+        run: |-
+          pnpm run docs:build
+          > docs/.vuepress/dist/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

@@ -1,19 +1,22 @@
 {
   "name": "vuepress-theme-hope-template",
   "version": "2.0.0",
+  "type": "module",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache"
   },
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.49",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.49",
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.49",
-    "@vuepress/plugin-search": "2.0.0-beta.49",
-    "pnpm": "^7.9.5",
-    "vue": "^3.2.37",
-    "vuepress": "2.0.0-beta.49",
-    "vuepress-theme-hope": "2.0.0-beta.91"
+    "@vuepress/client": "2.0.0-beta.51",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.51",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.51",
+    "@vuepress/plugin-search": "2.0.0-beta.51",
+    "@vuepress/utils": "2.0.0-beta.51",
+    "pnpm": "^7.12.2",
+    "vue": "^3.2.40",
+    "vuepress": "2.0.0-beta.51",
+    "vuepress-plugin-feed2": "2.0.0-beta.106",
+    "vuepress-theme-hope": "2.0.0-beta.106"
   }
 }

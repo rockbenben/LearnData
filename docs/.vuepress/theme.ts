@@ -95,7 +95,7 @@ export default hopeTheme({
       autoExcerpt: true,
     },
 
-    //评论配置
+    //评论配置（仅做样例，记得更换）
     comment: {
       //部署 Waline：https://waline.js.org/guide/get-started.html
       provider: "Waline",
@@ -121,13 +121,21 @@ export default hopeTheme({
       //categoryId: "DIC_kwDOHdfk6c4CQYNn",
     },
 
+    // 禁用不需要的配置
     mdEnhance: {
-      enableAll: false,
       footnote: true,
       tasklist: true,
-      mark: true,
+      align: true,
+      attrs: true,
       container: true,
+      gfm: true,
+      imageSize: true,
+      include: true,
       lazyLoad: true,
+      mark: true,
+      sub: true,
+      sup: true,
+      //vpre: true,
     },
   },
 });
