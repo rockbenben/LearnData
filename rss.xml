@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 07 Oct 2022 09:41:36 GMT</pubDate>
-    <lastBuildDate>Fri, 07 Oct 2022 09:41:36 GMT</lastBuildDate>
+    <pubDate>Fri, 07 Oct 2022 10:33:04 GMT</pubDate>
+    <lastBuildDate>Fri, 07 Oct 2022 10:33:04 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -91,7 +91,7 @@
 <span>docker</span> compose <span>--profile</span> download up <span>--build</span>
 <span># 上方命令需要 20 分钟或更长，完成后执行镜像构建命令</span>
 <span>docker</span> compose <span>--profile</span> hlky up <span>--build</span>
-<span># hlky 是推荐分支，也可以选择 auto | auto-cpu</span>
+<span># hlky 是推荐分支，也可以选择 auto | auto-cpu | lstein</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>构建完成后，提示访问 <code>http://localhost:7860/</code>，你就可以在本地 AI 生成图片了。<sup></sup></p>
 <p><img src="http://tc.seoipo.com/2022-09-04-18-32-31.png" alt="" loading="lazy"></p>
 <p>之后，打开 Docker Desktop 就会启动 Stable Diffusion。下载新版 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a> ，按上方步骤重新构建容器即可更新 Stable Diffusion。</p>
@@ -136,8 +136,7 @@
 </blockquote>
 <h3 id="prompt-matrix" tabindex="-1"> Prompt matrix</h3>
 <p>Prompt matrix 是按不同条件组合生成多张相关但不同的画面，可以用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
-<iframe height=400 width=100% src="//player.bilibili.com/player.html?bvid=BV1YP411V7vV&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p>上方视频的调教词为 <code>A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting</code>。<code>|</code> 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。</p>
+<i>Content not supported</i><p>上方视频的调教词为 <code>A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting</code>。<code>|</code> 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。</p>
 <p>另外，我们可以指定场景条件位置，比如 <code>@(moba|rpg|rts) character (2d|3d) model</code> 表示 <code>(moba|rpg|rts 三选一) character (2d|3d 二选一) model</code>，也就是会生成 3*2 张图片。开头的 <code>@</code> 是触发指定场景条件位置的符号，不能省略。</p>
 <h2 id="常见问题" tabindex="-1"> 常见问题</h2>
 <h3 id="docker-desktop-failed" tabindex="-1"> Docker Desktop failed</h3>
