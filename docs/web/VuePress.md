@@ -23,7 +23,7 @@ LearnData 的主题为 [vuepress-theme-hope](https://vuepress-theme-hope.github.
 
 每个插件和主题版本只支持一个 VuePress 版本，因此要稳定的话，需用固定版本号的环境依赖才可以，比如 `pnpm add vuepress@2.0.0-beta.51 vuepress-theme-hope@2.0.0-beta.106 @vuepress/plugin-google-analytics@2.0.0-beta.51 @vuepress/plugin-search@2.0.0-beta.51 @vuepress/plugin-docsearch@2.0.0-beta.51`。
 
-如果要测试最新的环境配置，可使用 `pnpm add vuepress@next vuepress-theme-hope@next @vuepress/plugin-google-analytics@next @vuepress/plugin-search@next @vuepress/plugin-docsearch@next && pnpm i && pnpm up`。
+如果要测试最新的环境配置，可使用 `pnpm add vuepress@next vuepress-theme-hope@next @vuepress/plugin-google-analytics@next @vuepress/plugin-search@next @vuepress/plugin-docsearch@next vuepress-plugin-feed2@next vuepress-plugin-components@next && pnpm i && pnpm up`。
 
 ## 搜索插件
 
@@ -161,6 +161,7 @@ export default hopeTheme({
 
 ## 自定义主题
 
+- [x] ~~插入 Bilibili 或第三方视频，可使用专用 [组件库](https://vuepress-theme-hope.github.io/v2/components/zh/guide/)，配置参考 [组件案例 config.ts](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/demo/components/src/.vuepress/config.ts).~~
 - [x] ~~插件[docsearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html)：将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。~~
 - [x] ~~README 页面如何隐藏，使用 index: false，参考[主题设置](https://vuepress-theme-hope.github.io/v2/zh/guide/layout/sidebar.html#%E9%80%9A%E8%BF%87%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90)~~
 - [x] ~~去 meta 标签，测试并未成功，不再尝试~~

@@ -79,4 +79,4 @@ DPC_WATCHDOG_VIOLATION 蓝屏原因，多为硬件驱动问题。可是，只有
 
 视频说明：
 
-<iframe height=400 width=100% src="//player.bilibili.com/player.html?aid=627539890&bvid=BV1jt4y1i7C8&cid=249655764&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<BiliBili bvid="BV1jt4y1i7C8" />

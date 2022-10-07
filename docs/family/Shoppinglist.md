@@ -35,7 +35,7 @@ NAS UPS 考虑入手 APC BK650M2-CH 和 山特（SANTAK）TG-BOX 850。
 
 录音杂音太重，可使用软件去噪，或者单独用一台手机收音。
 
-要买的话，考虑 RODE 罗德 WIGO 无线麦克风 和 DJI MIC。DJI MIC 连接手机更简单，用起来比较方便，但底噪会稍微大些。
+要买的话，考虑 RODE 罗德 Wireless Go II 和 DJI Mic。罗德老牌且成熟，大疆新出更人性化，连接手机更简单，但底噪会稍微大些。
 
 ## 书房
 

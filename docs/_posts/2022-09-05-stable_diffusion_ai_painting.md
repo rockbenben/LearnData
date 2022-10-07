@@ -68,7 +68,7 @@ Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux
 docker compose --profile download up --build
 # 上方命令需要 20 分钟或更长，完成后执行镜像构建命令
 docker compose --profile hlky up --build
-# hlky 是推荐分支，也可以选择 auto | auto-cpu
+# hlky 是推荐分支，也可以选择 auto | auto-cpu | lstein
 ```
 
 构建完成后，提示访问 `http://localhost:7860/`，你就可以在本地 AI 生成图片了。^[[Setup Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup)]
@@ -137,7 +137,7 @@ Stable Diffusion 的核心功能是以文字内容 (英文) 描绘一个场景�
 
 Prompt matrix 是按不同条件组合生成多张相关但不同的画面，可以用于制作视频素材。^[[stable-diffusion Prompt matrix](https://github.com/hlky/stable-diffusion#prompt-matrix)] 此时，批次数量的设置会被忽略。
 
-<iframe height=400 width=100% src="//player.bilibili.com/player.html?bvid=BV1YP411V7vV&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<BiliBili bvid="BV1YP411V7vV" />
 
 上方视频的调教词为 `A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting`。`|` 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。
 
