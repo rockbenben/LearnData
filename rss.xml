@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 07 Oct 2022 10:33:04 GMT</pubDate>
-    <lastBuildDate>Fri, 07 Oct 2022 10:33:04 GMT</lastBuildDate>
+    <pubDate>Fri, 07 Oct 2022 16:06:42 GMT</pubDate>
+    <lastBuildDate>Fri, 07 Oct 2022 16:06:42 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -78,9 +78,9 @@
 <p>目前 Stable Diffusion 有 hlky、auto、auto-cpu 和 lstein 四个分支。如果要更换分支，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。</p>
 <ul>
 <li><strong>hlky</strong>（推荐）：界面直观，最高分辨率为 1024x1024，是最受欢迎的主题，镜像构建命令为 <code>docker compose --profile hlky up --build</code>。</li>
-<li><strong>auto</strong>：设置模块最丰富，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 <code>docker compose --profile auto up --build</code>。</li>
+<li><strong>auto</strong>：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 <code>docker compose --profile auto up --build</code>。</li>
 <li><strong>auto-cpu</strong>：唯一不依赖显卡的分支。你没有符合要求的显卡或是 Mac 用户，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。A 卡用户注意修改 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker" target="_blank" rel="noopener noreferrer">显卡设置</a>。</li>
-<li><strong>lstein</strong>：cli 端非常成熟，WebUI 较为传统，镜像构建命令为 <code>docker compose --profile lstein up --build</code>。</li>
+<li><strong>lstein</strong>：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手使用，镜像构建命令为 <code>docker compose --profile lstein up --build</code>。</li>
 </ul>
 <h3 id="准备-linux-路径" tabindex="-1"> 准备 Linux 路径</h3>
 <p>配置 Stable Diffusion WebUI Docker 后，进入 Linux 环境启动 Docker 容器。不过在启动 Docker 前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
@@ -98,7 +98,7 @@
 <h2 id="界面说明" tabindex="-1"> 界面说明</h2>
 <p>接下来，我会介绍最流行的 hlky 界面，其他分支的主题界面略有不同，但功能并没有大的变化，如何更换分支看下方的常见问题。</p>
 <h3 id="text-to-image" tabindex="-1"> Text-to-Image</h3>
-<p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。</p>
+<p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。生成图片的分辨率有限制，不够的话可以用 Upscale 放大图片。风景、创意画等崇尚空间结构的画作类型时，优先推荐竖图或者横图。人像类画作推荐 1:1 的方图，否则可能会出现两个或者多个人脸的叠加现象。</p>
 <p><img src="http://tc.seoipo.com/2022-09-05-08-28-23.png" alt="" title="Text-to-Image 界面" loading="lazy"></p>
 <p>默认使用 Simple 简单模式，点击右侧按钮 Advanced，可查看进阶选项，使用进阶的场景矩阵、面孔修复和分辨率放大等多种功能。</p>
 <h3 id="image-to-image" tabindex="-1"> Image-to-Image</h3>
@@ -114,7 +114,7 @@
 <h2 id="使用说明" tabindex="-1"> 使用说明</h2>
 <h3 id="文字描述图像" tabindex="-1"> 文字描述图像</h3>
 <p>Stable Diffusion 的核心功能是以文字内容 (英文) 描绘一个场景或事物，从而决定你的画面中将出现什么。因此，文字描绘是决定图像生成质量的关键因素。接下来，我会以官方文档案例为例，解构描述文字的要素和标准。<sup></sup></p>
-<p>样例：<code>A beautiful painting (画作种类) of a singular lighthouse, shining its light across a tumultuous sea of blood (画面描述) by greg rutkowski and thomas kinkade (画家/画风), Trending on artstation (参考平台), yellow color scheme (配色)</code>。</p>
+<p>样例：<code>A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}</code>。</p>
 <ul>
 <li>画作种类：ink painting（水墨画），oil painting（油画），comic（漫画），digital painting（数字印刷品），illustration（插画），realistic painting（写实画），portrait photo（肖像照）等等，可叠加多个种类描述。</li>
 <li>参考平台：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。</li>
@@ -122,12 +122,14 @@
 <li>配色：yellow color scheme 指整个画面的主色调为黄色。</li>
 <li>画面描述：除了描述主题，还可以描述次要元素和形容词描述画面。
 <ul>
-<li>画面元素，如 <code>beautiful background, forest, diffuse natural sun lights</code>；</li>
-<li>肖像描述，如 <code>attractive, friendly, casual, delightful, female, elegant, vibrant, hard rim lighting photography</code>；</li>
+<li>画面元素，如：背景 <code>beautiful background, forest</code>，光线描述 <code>diffuse natural sun lights, autumn lights, cinematic lighting, god rays</code>；</li>
+<li>肖像描述，如 <code>detailed gorgeous face, elegant, female, slight smile, cinematic lighting, hard rim lighting photography</code>，超模描述 <code>gorgeous woman, top model, fashion, vogue magazine, delicate features</code>，人物细节描述 <code>double eyelids, big eyes, high nose bridge, large DD breasts, wavy silver hair, armless, legless</code>；</li>
 <li>画面质量描述，如 <code>award winning, breathtaking, groundbreaking, superb, outstanding</code>；</li>
-<li>细节特点描述，如 <code>symmetry, intricate, gorgeous, highly detailed, digital painting, Trending on artstation, concept art, smooth, sharp focus, octane render, illustration, 8k</code>。</li>
+<li>细节特点描述，如 <code>symmetry, intricate, gorgeous, hyperrealistic, highly detailed, digital painting, artstation, concept art, smooth, sharp focus, octane render, depth of field, illustration, 8k</code>。</li>
 </ul>
 </li>
+<li>auto 分支支持 negative prompt，即画面不要出现的描述，如 <code>deformed, blurry, bad anatomy, disfigured, mutation, mutated, body out of frame, cross-eye, extra limbs, extra heads, extra legs, extra arms, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, disfigured, out of frame, long neck, poo art, bad hands, bad art</code>，避免裸体 <code>nudity, bare breasts</code>。</li>
+<li>如果你想特别强调某个描述，可以加很多括号或者惊叹号，比如 <code>desert!!, forest, holland, (((sunset)))</code> 中优先体现「desert」和「sunset」元素。</li>
 </ul>
 <p><img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"></p>
 <p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以看 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
