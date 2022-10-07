@@ -148,7 +148,7 @@ Vercel 部署步骤如下：
 
 网站只显示文字且不能正常显示网页，这是网站路径不正确而导致的页面样式错误。
 
-检查 `docs/_posts/config.ts` 中 base 的设置，默认为 `/`。如果 GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则将 base 改为 `/yyy`。
+检查 `docs/.vuepress/config.ts` 中 base 的设置，默认为 `/`。如果 GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则将 base 改为 `/yyy`。
 
 ### ERR_MODULE
 

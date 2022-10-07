@@ -16,7 +16,7 @@ order: -49
 
 Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款开源且能部署在家用电脑上的 AI 绘图工具，**可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行**，并在几秒钟内生成图像，无需预处理和后处理。
 
-想体验 Stable Diffusion 可以用在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion)、[DreamStudio](https://beta.dreamstudio.ai/) 或 [百度文心](https://wenxin.baidu.com/moduleApi/ernieVilg)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。
+体验 AI 绘图可借助在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion)、[DreamStudio](https://beta.dreamstudio.ai/) 或 [百度文心](https://wenxin.baidu.com/moduleApi/ernieVilg)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。
 
 如果想生成大量 AI 图片，可以通过 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Stable Diffusion 同样适用于 Mac，M1/M2 Mac 建议使用更简便的 [CHARL-E](https://www.charl-e.com/) 或 @玉树芝兰 推荐的 [DiffusionBee](https://sspai.com/post/75682)。
 
@@ -50,7 +50,7 @@ Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款开�
 
 - **hlky**（推荐）：界面直观，最高分辨率为 1024x1024，是最受欢迎的主题，镜像构建命令为 `docker compose --profile hlky up --build`。
 - **auto**：设置模块最丰富，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 `docker compose --profile auto up --build`。
-- **auto-cpu**：唯一不依赖显卡的分支。你没有符合要求的显卡或是 Mac 用户，可以使用 CPU 版本，稍后的镜像构建命令为 `docker compose --profile auto-cpu up --build`。A 卡用户注意修改 [显卡设置](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs)。
+- **auto-cpu**：唯一不依赖显卡的分支。你没有符合要求的显卡或是 Mac 用户，可以使用 CPU 版本，稍后的镜像构建命令为 `docker compose --profile auto-cpu up --build`。A 卡用户注意修改 [显卡设置](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker)。
 - **lstein**：cli 端非常成熟，WebUI 较为传统，镜像构建命令为 `docker compose --profile lstein up --build`。
 
 ### 准备 Linux 路径

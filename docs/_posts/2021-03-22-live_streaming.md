@@ -77,13 +77,11 @@ order: -36
 
 补光灯可放于正面 45 度成蝴蝶光 (派拉蒙光)，可显瘦显轮廓；背后可使用辅助光或一张白纸反光，防止正面灯光太亮。
 
-## 直播软件
-
-### OBS 直播
+## OBS 直播
 
 [OBS](https://obsproject.com/) 开源免费，能对直播界面进行调整和美化，是最流行的直播软件，大部分直播软件都基于 OBS。
 
-#### OBS 设置
+### OBS 设置
 
 直播前调整 OBS 设置，优化直播效果。
 
@@ -104,7 +102,7 @@ order: -36
 - 来源使用窗口采集时，窗口不能最小化，否则窗口会卡住不同步。
 - 直播电脑超过 5 年的话，可考虑使用两台主机 (PC、手机均可) 进行 NDI 双机推流，避免卡顿。
 
-#### OBS 滤镜
+### OBS 滤镜
 
 OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的工具。
 
@@ -117,7 +115,7 @@ OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的�
 - 增益：当麦克风声音过大或过小时，可以通过增益滤镜调整音量，但是不宜设置数值过大，容易造成声音失真。
 - 噪音阈值：当背景有噪音时，设置噪音阈值来控制底噪，降低噪音干扰。
 
-#### 常用插件
+### 常用插件
 
 插件多为免费使用，推荐小白安装所有常用插件。
 
@@ -130,7 +128,7 @@ OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的�
 - [VLC](https://www.videolan.org/vlc/)：非插件，安装 VLC 应用后，OBS 就能使用「VLC 视频源」(播放列表)。
 - [咩播](https://www.kuabo.cn/)、[智播](http://zbmate.com/)：第三方的直播美化插件，新手可参考使用。
 
-#### 进阶插件
+### 进阶插件
 
 进阶插件的功能更多，配置也更复杂，新手可暂时忽略。如果你没找到需要的功能，可以在 [OBS 插件库](https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/) 寻找更多插件。
 
@@ -156,6 +154,8 @@ OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的�
 - PTZ controller PTZ 摄影机云台控制器
 - [Animated captions](https://obsproject.com/forum/resources/animated-captions-with-obs-controller-and-a-preview-function.1407/)：自定义弹幕功能，无漂浮弹幕，适用较少。
 - [Background Removal](https://github.com/royshil/obs-backgroundremoval)：无绿幕移除背景，需搭配神经网络环境。
+
+## 其他直播软件
 
 ### 小葫芦弹幕助手
 
@@ -250,7 +250,7 @@ MorphVOX Pro、神舌等软件变声器对使用者的语气要求较高。
 ### 抖音直播
 
 1. 电脑端下载 [直播伴侣](https://www.douyin.com/falcon/webcast_openpc/pages/streamingtool_download/index.html)，适配西瓜视频、抖音、抖音火山版的直播。
-2. 左侧依次点击 `添加元素-采集`，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道，推流延迟 20s。
+2. 左侧依次点击 `添加元素 - 采集`，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道，推流延迟 20s。
 
    ![](http://tc.seoipo.com/2022-06-29-23-59-02.png)
 
