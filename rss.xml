@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 07 Oct 2022 16:06:42 GMT</pubDate>
-    <lastBuildDate>Fri, 07 Oct 2022 16:06:42 GMT</lastBuildDate>
+    <pubDate>Sun, 09 Oct 2022 02:49:01 GMT</pubDate>
+    <lastBuildDate>Sun, 09 Oct 2022 02:49:01 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -59,9 +59,9 @@
       <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。</p>
 <p><img src="http://tc.seoipo.com/2022-09-04-11-53-20.png" alt="" title="丁老头进化旅程" loading="lazy"></p>
-<p>Stable Diffusion 是以文本生成图像的 AI 工具，也是唯一一款开源且能部署在家用电脑上的 AI 绘图工具，<strong>可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行</strong>，并在几秒钟内生成图像，无需预处理和后处理。</p>
+<p>Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具，<strong>可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行</strong>，并在几秒内生成图像，无需预处理和后处理。</p>
 <p>体验 AI 绘图可借助在线工具 <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" target="_blank" rel="noopener noreferrer">Hugging Face</a>、<a href="https://beta.dreamstudio.ai/" target="_blank" rel="noopener noreferrer">DreamStudio</a> 或 <a href="https://wenxin.baidu.com/moduleApi/ernieVilg" target="_blank" rel="noopener noreferrer">百度文心</a>。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。</p>
-<p>如果想生成大量 AI 图片，可以通过 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Stable Diffusion 同样适用于 Mac，M1/M2 Mac 建议使用更简便的 <a href="https://www.charl-e.com/" target="_blank" rel="noopener noreferrer">CHARL-E</a> 或 @玉树芝兰 推荐的 <a href="https://sspai.com/post/75682" target="_blank" rel="noopener noreferrer">DiffusionBee</a>。</p>
+<p>如果想生成大量 AI 图片，可以通过 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Mac 用户建议选择 Stable Diffusion 的 lstein 分支，部署报错参考 <a href="https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore" target="_blank" rel="noopener noreferrer">InvokeAI 文档</a>，<strong>M1/M2 Mac</strong> 推荐使用更简便的 <a href="https://www.charl-e.com/" target="_blank" rel="noopener noreferrer">CHARL-E</a> 或 <a href="https://sspai.com/post/75682" target="_blank" rel="noopener noreferrer">DiffusionBee</a>。</p>
 <p><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" title="Stable Diffusion 部署流程" loading="lazy"></p>
 <p>本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。</p>
 <h2 id="docker-环境配置" tabindex="-1"> Docker 环境配置</h2>
@@ -79,8 +79,8 @@
 <ul>
 <li><strong>hlky</strong>（推荐）：界面直观，最高分辨率为 1024x1024，是最受欢迎的主题，镜像构建命令为 <code>docker compose --profile hlky up --build</code>。</li>
 <li><strong>auto</strong>：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 <code>docker compose --profile auto up --build</code>。</li>
-<li><strong>auto-cpu</strong>：唯一不依赖显卡的分支。你没有符合要求的显卡或是 Mac 用户，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。A 卡用户注意修改 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker" target="_blank" rel="noopener noreferrer">显卡设置</a>。</li>
-<li><strong>lstein</strong>：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手使用，镜像构建命令为 <code>docker compose --profile lstein up --build</code>。</li>
+<li><strong>auto-cpu</strong>：唯一不依赖显卡的分支。如果没有符合要求的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。A 卡用户注意修改 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker" target="_blank" rel="noopener noreferrer">显卡设置</a>。</li>
+<li><strong>lstein</strong>：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 <code>docker compose --profile lstein up --build</code>。</li>
 </ul>
 <h3 id="准备-linux-路径" tabindex="-1"> 准备 Linux 路径</h3>
 <p>配置 Stable Diffusion WebUI Docker 后，进入 Linux 环境启动 Docker 容器。不过在启动 Docker 前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
@@ -98,7 +98,7 @@
 <h2 id="界面说明" tabindex="-1"> 界面说明</h2>
 <p>接下来，我会介绍最流行的 hlky 界面，其他分支的主题界面略有不同，但功能并没有大的变化，如何更换分支看下方的常见问题。</p>
 <h3 id="text-to-image" tabindex="-1"> Text-to-Image</h3>
-<p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。生成图片的分辨率有限制，不够的话可以用 Upscale 放大图片。风景、创意画等崇尚空间结构的画作类型时，优先推荐竖图或者横图。人像类画作推荐 1:1 的方图，否则可能会出现两个或者多个人脸的叠加现象。</p>
+<p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。风景、创意画等崇尚空间结构的画作类型时，优先推荐竖图或者横图。人像类画作推荐 1:1 的方图，否则可能会出现两个或者多个人脸的叠加现象。生成图片的分辨率是有限制的，可以用 Upscale 放大结果图片。</p>
 <p><img src="http://tc.seoipo.com/2022-09-05-08-28-23.png" alt="" title="Text-to-Image 界面" loading="lazy"></p>
 <p>默认使用 Simple 简单模式，点击右侧按钮 Advanced，可查看进阶选项，使用进阶的场景矩阵、面孔修复和分辨率放大等多种功能。</p>
 <h3 id="image-to-image" tabindex="-1"> Image-to-Image</h3>
@@ -116,28 +116,27 @@
 <p>Stable Diffusion 的核心功能是以文字内容 (英文) 描绘一个场景或事物，从而决定你的画面中将出现什么。因此，文字描绘是决定图像生成质量的关键因素。接下来，我会以官方文档案例为例，解构描述文字的要素和标准。<sup></sup></p>
 <p>样例：<code>A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}</code>。</p>
 <ul>
-<li>画作种类：ink painting（水墨画），oil painting（油画），comic（漫画），digital painting（数字印刷品），illustration（插画），realistic painting（写实画），portrait photo（肖像照）等等，可叠加多个种类描述。</li>
-<li>参考平台：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。</li>
-<li>画家/画风：成图更接近哪位画家的风格，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
-<li>配色：yellow color scheme 指整个画面的主色调为黄色。</li>
-<li>画面描述：除了描述主题，还可以描述次要元素和形容词描述画面。
+<li><strong>画作种类</strong>：ink painting（水墨画），oil painting（油画），comic（漫画），digital painting（数字印刷品），illustration（插画），realistic painting（写实画），portrait photo（肖像照），sculpture (雕塑) 等等，可叠加多个种类描述。</li>
+<li><strong>参考平台</strong>：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。</li>
+<li><strong>画家/画风</strong>：成图更接近哪位画家的风格，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
+<li><strong>配色</strong>：yellow color scheme 指整个画面的主色调为黄色。</li>
+<li><strong>画面描述</strong>：除了描述主题，还可以描述次要元素和形容词描述画面。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 <code>desert!!, forest, river, (((sunset)))</code> 中会优先体现「desert」和「sunset」元素。
 <ul>
 <li>画面元素，如：背景 <code>beautiful background, forest</code>，光线描述 <code>diffuse natural sun lights, autumn lights, cinematic lighting, god rays</code>；</li>
-<li>肖像描述，如 <code>detailed gorgeous face, elegant, female, slight smile, cinematic lighting, hard rim lighting photography</code>，超模描述 <code>gorgeous woman, top model, fashion, vogue magazine, delicate features</code>，人物细节描述 <code>double eyelids, big eyes, high nose bridge, large DD breasts, wavy silver hair, armless, legless</code>；</li>
+<li>人物描述，如：肖像照 <code>detailed gorgeous face, delicate features, elegant, slight smile, hard rim lighting</code>，超模描述 <code>top model, fashion, vogue magazine</code>，人物细节 <code>olive skin, long dark hair, beautiful bone structure, double eyelids, big eyes, high nose bridge, large DD breasts, wavy silver hair, armless, legless</code>；</li>
 <li>画面质量描述，如 <code>award winning, breathtaking, groundbreaking, superb, outstanding</code>；</li>
-<li>细节特点描述，如 <code>symmetry, intricate, gorgeous, hyperrealistic, highly detailed, digital painting, artstation, concept art, smooth, sharp focus, octane render, depth of field, illustration, 8k</code>。</li>
+<li>细节特点描述，如 <code>intricate, gorgeous, hyperrealistic, highly detailed, digital painting, artstation, concept art, smooth, sharp focus, octane render, illustration, 8K</code>，或 <code>symmetry, depth of field</code>。</li>
 </ul>
 </li>
-<li>auto 分支支持 negative prompt，即画面不要出现的描述，如 <code>deformed, blurry, bad anatomy, disfigured, mutation, mutated, body out of frame, cross-eye, extra limbs, extra heads, extra legs, extra arms, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, disfigured, out of frame, long neck, poo art, bad hands, bad art</code>，避免裸体 <code>nudity, bare breasts</code>。</li>
-<li>如果你想特别强调某个描述，可以加很多括号或者惊叹号，比如 <code>desert!!, forest, holland, (((sunset)))</code> 中优先体现「desert」和「sunset」元素。</li>
+<li><strong>否定描述</strong>：negative prompt 仅被 auto 分支支持，可以避免画面出现指定元素，如 <code>deformed, blurry, bad anatomy, disfigured, mutation, mutated, body out of frame, cross-eye, extra limbs, extra heads, extra legs, extra arms, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, disfigured, out of frame, long neck, poo art, bad hands, bad art</code>，避免裸体 <code>nudity, bare breasts</code>。</li>
 </ul>
 <p><img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"></p>
-<p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以看 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
+<p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以使用 <a href="https://promptomania.com/stable-diffusion-prompt-builder/" target="_blank" rel="noopener noreferrer">promptoMANIA</a> 按提示组合描述，或参考 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
 <blockquote>
 <p>goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k</p>
 </blockquote>
 <h3 id="prompt-matrix" tabindex="-1"> Prompt matrix</h3>
-<p>Prompt matrix 是按不同条件组合生成多张相关但不同的画面，可以用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
+<p>Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
 <i>Content not supported</i><p>上方视频的调教词为 <code>A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting</code>。<code>|</code> 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。</p>
 <p>另外，我们可以指定场景条件位置，比如 <code>@(moba|rpg|rts) character (2d|3d) model</code> 表示 <code>(moba|rpg|rts 三选一) character (2d|3d 二选一) model</code>，也就是会生成 3*2 张图片。开头的 <code>@</code> 是触发指定场景条件位置的符号，不能省略。</p>
 <h2 id="常见问题" tabindex="-1"> 常见问题</h2>
