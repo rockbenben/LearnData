@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 09 Oct 2022 02:49:01 GMT</pubDate>
-    <lastBuildDate>Sun, 09 Oct 2022 02:49:01 GMT</lastBuildDate>
+    <pubDate>Sun, 09 Oct 2022 20:37:47 GMT</pubDate>
+    <lastBuildDate>Sun, 09 Oct 2022 20:37:47 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -86,7 +86,7 @@
 <p>配置 Stable Diffusion WebUI Docker 后，进入 Linux 环境启动 Docker 容器。不过在启动 Docker 前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
 <p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）</p>
 <h2 id="启动-stable-diffusion" tabindex="-1"> 启动 Stable Diffusion</h2>
-<p>准备好 Linux 路径后，启动 Docker Desktop，打开 WSL Ubuntu 或 Mac 终端输入切换路径命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压文件目录执行部署命令。</p>
+<p>准备好 Linux 路径后，启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入切换路径命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压文件目录执行部署命令。</p>
 <div><pre><code><span># 自动下载采样模型和依赖包</span>
 <span>docker</span> compose <span>--profile</span> download up <span>--build</span>
 <span># 上方命令需要 20 分钟或更长，完成后执行镜像构建命令</span>
@@ -117,7 +117,8 @@
 <p>样例：<code>A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}</code>。</p>
 <ul>
 <li><strong>画作种类</strong>：ink painting（水墨画），oil painting（油画），comic（漫画），digital painting（数字印刷品），illustration（插画），realistic painting（写实画），portrait photo（肖像照），sculpture (雕塑) 等等，可叠加多个种类描述。</li>
-<li><strong>参考平台</strong>：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。</li>
+<li><strong>参考平台</strong>：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。
+<img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"></li>
 <li><strong>画家/画风</strong>：成图更接近哪位画家的风格，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
 <li><strong>配色</strong>：yellow color scheme 指整个画面的主色调为黄色。</li>
 <li><strong>画面描述</strong>：除了描述主题，还可以描述次要元素和形容词描述画面。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 <code>desert!!, forest, river, (((sunset)))</code> 中会优先体现「desert」和「sunset」元素。
@@ -128,9 +129,8 @@
 <li>细节特点描述，如 <code>intricate, gorgeous, hyperrealistic, highly detailed, digital painting, artstation, concept art, smooth, sharp focus, octane render, illustration, 8K</code>，或 <code>symmetry, depth of field</code>。</li>
 </ul>
 </li>
-<li><strong>否定描述</strong>：negative prompt 仅被 auto 分支支持，可以避免画面出现指定元素，如 <code>deformed, blurry, bad anatomy, disfigured, mutation, mutated, body out of frame, cross-eye, extra limbs, extra heads, extra legs, extra arms, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, disfigured, out of frame, long neck, poo art, bad hands, bad art</code>，避免裸体 <code>nudity, bare breasts</code>。</li>
+<li><strong>否定描述</strong>：negative prompt 仅被 auto 分支支持，可以避免画面出现指定元素，如 <code>ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art</code>，避免裸体 <code>nudity, bare breasts</code>。</li>
 </ul>
-<p><img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"></p>
 <p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以使用 <a href="https://promptomania.com/stable-diffusion-prompt-builder/" target="_blank" rel="noopener noreferrer">promptoMANIA</a> 按提示组合描述，或参考 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
 <blockquote>
 <p>goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k</p>
