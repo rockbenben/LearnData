@@ -61,7 +61,7 @@ Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux
 
 ## 启动 Stable Diffusion
 
-准备好 Linux 路径后，启动 Docker Desktop，打开 WSL Ubuntu 或 Mac 终端输入切换路径命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`，进入 Stable Diffusion WebUI Docker 解压文件目录执行部署命令。
+准备好 Linux 路径后，启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入切换路径命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`，进入 Stable Diffusion WebUI Docker 解压文件目录执行部署命令。
 
 ```shell
 # 自动下载采样模型和依赖包
@@ -119,6 +119,7 @@ Stable Diffusion 的核心功能是以文字内容 (英文) 描绘一个场景�
 
 - **画作种类**：ink painting（水墨画），oil painting（油画），comic（漫画），digital painting（数字印刷品），illustration（插画），realistic painting（写实画），portrait photo（肖像照），sculpture (雕塑) 等等，可叠加多个种类描述。
 - **参考平台**：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。
+  ![](http://tc.seoipo.com/2022-09-16-22-33-26.png "相同参数下不同参考平台生成的图片")
 - **画家/画风**：成图更接近哪位画家的风格，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 `very coherent symmetrical artwork`，将作品结构设为「连贯且对称」。
 - **配色**：yellow color scheme 指整个画面的主色调为黄色。
 - **画面描述**：除了描述主题，还可以描述次要元素和形容词描述画面。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 `desert!!, forest, river, (((sunset)))` 中会优先体现「desert」和「sunset」元素。
@@ -126,9 +127,7 @@ Stable Diffusion 的核心功能是以文字内容 (英文) 描绘一个场景�
   - 人物描述，如：肖像照 `detailed gorgeous face, delicate features, elegant, slight smile, hard rim lighting`，超模描述 `top model, fashion, vogue magazine`，人物细节 `olive skin, long dark hair, beautiful bone structure, double eyelids, big eyes, high nose bridge, large DD breasts, wavy silver hair, armless, legless`；
   - 画面质量描述，如 `award winning, breathtaking, groundbreaking, superb, outstanding`；
   - 细节特点描述，如 `intricate, gorgeous, hyperrealistic, highly detailed, digital painting, artstation, concept art, smooth, sharp focus, octane render, illustration, 8K`，或 `symmetry, depth of field`。
-- **否定描述**：negative prompt 仅被 auto 分支支持，可以避免画面出现指定元素，如 `deformed, blurry, bad anatomy, disfigured, mutation, mutated, body out of frame, cross-eye, extra limbs, extra heads, extra legs, extra arms, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, disfigured, out of frame, long neck, poo art, bad hands, bad art`，避免裸体 `nudity, bare breasts`。
-
-![](http://tc.seoipo.com/2022-09-16-22-33-26.png "相同参数下不同参考平台生成的图片")
+- **否定描述**：negative prompt 仅被 auto 分支支持，可以避免画面出现指定元素，如 `ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art`，避免裸体 `nudity, bare breasts`。
 
 除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以使用 [promptoMANIA](https://promptomania.com/stable-diffusion-prompt-builder/) 按提示组合描述，或参考 AI 图库 [PromptHero](https://prompthero.com/) 和 [OpenArt](https://openart.ai/) 上其他人分享的成品图和描述文案，比如
 

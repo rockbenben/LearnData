@@ -120,8 +120,7 @@ OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的�
 插件多为免费使用，推荐小白安装所有常用插件。
 
 - [StreamFX](https://github.com/Xaymar/obs-StreamFX/releases)：支持更多的信号源、滤镜和转场效果，如：模糊滤镜。
-- [OBS Shaderfilter](https://obsproject.com/forum/resources/obs-shaderfilter.775/)：文字图片特效滤镜。
-- [virtualcam](https://obsproject.com/forum/resources/obs-virtualcam.949/)：能让来源单独输出虚拟摄像头，仅支持横屏场景，竖屏使用会崩溃。
+- [OBS Shaderfilter](https://obsproject.com/forum/threads/shaderfilter-went-away.155555/#post-571174)：文字图片特效滤镜，该插件已从社区删除，GitHub 可下载 [最新版](https://github.com/Oncorporation/obs-shaderfilter/releases/)。
 - [multi-rtmp](https://github.com/sorayuki/obs-multi-rtmp)：OBS 多地址推流，同时在多个平台上进行直播。
 - [Asynchronous Source Duplication](https://obsproject.com/forum/resources/asynchronous-source-duplication.1483/)：复制来源可以同时展示在多个场景，复制源会有延迟。
 - [NDI](https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/) : 局域网视频无线传输技术 NDI 插件。
@@ -152,6 +151,7 @@ OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的�
 - reply source 回放控制
 - advanced scene switcher 高级场景切换器
 - PTZ controller PTZ 摄影机云台控制器
+- [Virtual Cam Filter](https://obsproject.com/forum/resources/virtual-cam-filter.1142/)：能让来源单独输出虚拟摄像头，OBS 28 已内置该功能。
 - [Animated captions](https://obsproject.com/forum/resources/animated-captions-with-obs-controller-and-a-preview-function.1407/)：自定义弹幕功能，无漂浮弹幕，适用较少。
 - [Background Removal](https://github.com/royshil/obs-backgroundremoval)：无绿幕移除背景，需搭配神经网络环境。
 
