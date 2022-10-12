@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 09 Oct 2022 20:37:47 GMT</pubDate>
-    <lastBuildDate>Sun, 09 Oct 2022 20:37:47 GMT</lastBuildDate>
+    <pubDate>Wed, 12 Oct 2022 12:13:44 GMT</pubDate>
+    <lastBuildDate>Wed, 12 Oct 2022 12:13:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -73,7 +73,7 @@
 <h2 id="配置-stable-diffusion" tabindex="-1"> 配置 Stable Diffusion</h2>
 <p>按平台选 <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener noreferrer">Docker Desktop</a> 版本，安装后点击左侧的 Add Extensions，推荐 Disk usage 扩展，便于管理 Docker 存储空间。</p>
 <p><img src="http://tc.seoipo.com/2022-09-04-17-06-27.png" alt="" title="Docker Desktop 界面" loading="lazy"></p>
-<p>然后，将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 下载并解压到本地硬盘。或者，使用阿里云盘下载 <a href="https://www.aliyundrive.com/s/EKmK7MGrHdn" target="_blank" rel="noopener noreferrer">聚合版</a>，2022.10.01 更新。</p>
+<p>然后，将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 下载并解压到本地硬盘。或者，使用阿里云盘下载 <a href="https://www.aliyundrive.com/s/EKmK7MGrHdn" target="_blank" rel="noopener noreferrer">聚合版</a>。</p>
 <h3 id="选择分支" tabindex="-1"> 选择分支</h3>
 <p>目前 Stable Diffusion 有 hlky、auto、auto-cpu 和 lstein 四个分支。如果要更换分支，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。</p>
 <ul>
