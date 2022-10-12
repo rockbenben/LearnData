@@ -42,7 +42,7 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 ![](http://tc.seoipo.com/2022-09-04-17-06-27.png "Docker Desktop 界面")
 
-然后，将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 下载并解压到本地硬盘。或者，使用阿里云盘下载 [聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)，2022.10.01 更新。
+然后，将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 下载并解压到本地硬盘。或者，使用阿里云盘下载 [聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)。
 
 ### 选择分支
 

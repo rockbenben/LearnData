@@ -82,6 +82,15 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 
 注意：LearnData 默认使用了 algolia 全文搜索，如果你没设置 Docsearch 爬虫的话，需删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块。删除后，站点会将页面标题和小标题作为搜索索引。
 
+### 看板娘
+
+LearnData 集成了 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget) 看板娘，提升网站美观度和趣味性。
+
+如果网站部署在子页面 `https://xxx.github.io/yyy`，则需将子页面路径加入以下 2 个文件：
+
+- `docs\.vuepress\public\live2d-widget\autoload.js` 第三行的 `const live2d_path = "/live2d-widget/"` 修改为 `const live2d_path = "/yyy/live2d-widget/"`。
+- `docs\.vuepress\templateBuild.html` 中看板娘区块代码 `<script src="/live2d-widget/autoload.js">` 修改为 `<script src="/yyy/live2d-widget/autoload.js">`。
+
 ### 本地图片引用
 
 本地图片必须保存在 `docs/.vuepress/public` 目录中，否则生成静态页面时会报错 `Rollup failed to resolve import`。
@@ -149,6 +158,12 @@ Vercel 部署步骤如下：
 网站只显示文字且不能正常显示网页，这是网站路径不正确而导致的页面样式错误。
 
 检查 `docs/.vuepress/config.ts` 中 base 的设置，默认为 `/`。如果 GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则将 base 改为 `/yyy`。
+
+### 看板娘不显示图像
+
+看板娘只显示文字而不显示图片，是 live2d api 的跨域问题。打开 `docs\.vuepress\public\live2d-widget\autoload.js`，将 `apiPath: "https://newzone.top/live2d_api/"` 改为 `cdnPath: live2d_path + "live2d_api/"`，启用本地看板娘模型即可解决。不过，使用 cdnPath 的看板娘在换衣方面将不灵敏。
+
+如果想完善换衣或添加自己想要的模型，则使用「https://github.com/fghrsh/live2d_api」自建 live2d api。
 
 ### ERR_MODULE
 

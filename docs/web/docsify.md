@@ -15,7 +15,6 @@ order: 2
 
 - [ ] [docsify-toc](https://github.com/mrpotatoes/docsify-toc)：给笔记页内部添加目录，不过会让 gitalk 位置出错。参考链接：[Tainacan Wiki](https://tainacan.github.io/tainacan-wiki/#/general-concepts)，[Sureness](https://github.com/dromara/sureness/blob/master/docs/index.html)，[lifeupapp](https://wiki.lifeupapp.fun/zh-cn/#/features/174)。
 - [ ] [docsify 笔记类参考](https://notebook.js.org/#/README)：看板娘，多级页面，页面点击效果，网站运行时间。
-- [ ] [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)：在网页中添加 Live2D 看板娘。在 docsify、博客页面添加 Live2D Widget，增加趣味性。
 - [x] [docsify-count](https://github.com/827652549/docsify-count)：docsify 的字数和阅读时长插件，不过长年未更新，容易与其他插件位置冲突而无法显示。
 
 ## 配置
@@ -36,7 +35,7 @@ emoji 插件在标题中使用容易出错，建议使用 `&#58;`。例如，原
 
 如果你想在电脑上查看 docsify 页面，可执行 serve 架构命令，在本地主机上运行服务。默认本地端口为 3000，可以指定端口。
 
-```bash
+```shell
 docsify serve <path> [--open false] [--port 3000]
 ```
 
@@ -44,7 +43,7 @@ docsify serve <path> [--open false] [--port 3000]
 
 ### 生成侧边栏
 
-```bash
+```shell
 docsify generate <path> [--sidebar _sidebar.md]
 ```
 

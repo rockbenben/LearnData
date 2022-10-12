@@ -117,19 +117,18 @@ OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的�
 
 ### 常用插件
 
-插件多为免费使用，推荐小白安装所有常用插件。
+OBS 插件多为绿色版本，进入 `%ProgramFiles%\obs-studio\data\obs-plugins` 和 `%ProgramFiles%\obs-studio\obs-plugins\64bit` 按插件关键词删出相关文件即可卸载插件。
 
 - [StreamFX](https://github.com/Xaymar/obs-StreamFX/releases)：支持更多的信号源、滤镜和转场效果，如：模糊滤镜。
 - [OBS Shaderfilter](https://obsproject.com/forum/threads/shaderfilter-went-away.155555/#post-571174)：文字图片特效滤镜，该插件已从社区删除，GitHub 可下载 [最新版](https://github.com/Oncorporation/obs-shaderfilter/releases/)。
 - [multi-rtmp](https://github.com/sorayuki/obs-multi-rtmp)：OBS 多地址推流，同时在多个平台上进行直播。
 - [Asynchronous Source Duplication](https://obsproject.com/forum/resources/asynchronous-source-duplication.1483/)：复制来源可以同时展示在多个场景，复制源会有延迟。
-- [NDI](https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/) : 局域网视频无线传输技术 NDI 插件。
 - [VLC](https://www.videolan.org/vlc/)：非插件，安装 VLC 应用后，OBS 就能使用「VLC 视频源」(播放列表)。
 - [咩播](https://www.kuabo.cn/)、[智播](http://zbmate.com/)：第三方的直播美化插件，新手可参考使用。
 
 ### 进阶插件
 
-进阶插件的功能更多，配置也更复杂，新手可暂时忽略。如果你没找到需要的功能，可以在 [OBS 插件库](https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/) 寻找更多插件。
+进阶插件的功能更多，配置也更复杂，新手可暂时忽略。如果未在下方列表没找到你需要的功能，可以进入 [OBS 插件库](https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/) 搜索。
 
 - [Advanced Scene Switcher](https://obsproject.com/forum/resources/advanced-scene-switcher.395/)：使用「宏」来自动完成各种任务，按条件切换场景、来源。比如，电脑闲置 10 分钟后，让摄像头来源变为不可见。
 - [Move transition](https://obsproject.com/forum/resources/move-transition.913/)：记录来源的位置变化，生成元素移动的动画效果。比如，视频演讲时，将摄像头位置从屏幕右下移动到中央。
@@ -139,10 +138,9 @@ OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的�
 - [Scene Collection Manager](https://obsproject.com/forum/resources/scene-collection-manager.1434/)：自动备份场景，防止误操作。
 - [Audio Monitor](https://obsproject.com/forum/resources/audio-monitor.1186/)：将来源声音输出给指定设备播放，方便单独调节音量，能让主播与观众听到不同的音频效果。
 - [Downstream Keyer](https://obsproject.com/forum/resources/downstream-keyer.1254/)：切换场景时，置顶指定场景。
-- [Multi Source Effect](https://github.com/norihiro/obs-multisource-effect)：滤镜效果？
+- [Multi Source Effect](https://github.com/norihiro/obs-multisource-effect)：滤镜效果
 - [Teleport](https://github.com/fzwoch/obs-teleport)：NDI 替代品，局域网设备推流到直播。
 - [spectralizer](https://github.com/univrsal/spectralizer)：音频频谱，用滤镜「图像掩码」的「混合图层」给频谱遮罩滤镜。
-- [obs-websocket](https://obsproject.com/forum/resources/obs-websocket-remote-control-obs-studio-from-websockets.466/)：远程控制插件。
 - transition matrix 过渡矩阵
 - scrab 截图
 - lower third in html/css 文字运动特效
@@ -151,7 +149,12 @@ OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的�
 - reply source 回放控制
 - advanced scene switcher 高级场景切换器
 - PTZ controller PTZ 摄影机云台控制器
+
+以下插件仅作记录，用于 OBS 27：
+
 - [Virtual Cam Filter](https://obsproject.com/forum/resources/virtual-cam-filter.1142/)：能让来源单独输出虚拟摄像头，OBS 28 已内置该功能。
+- [obs-websocket](https://obsproject.com/forum/resources/obs-websocket-remote-control-obs-studio-from-websockets.466/)：远程控制插件，OBS 28 已内置该功能。
+- [NDI](https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/): 局域网视频无线传输技术 NDI 插件。
 - [Animated captions](https://obsproject.com/forum/resources/animated-captions-with-obs-controller-and-a-preview-function.1407/)：自定义弹幕功能，无漂浮弹幕，适用较少。
 - [Background Removal](https://github.com/royshil/obs-backgroundremoval)：无绿幕移除背景，需搭配神经网络环境。
 

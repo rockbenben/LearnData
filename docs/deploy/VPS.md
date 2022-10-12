@@ -19,7 +19,7 @@ order: 2
 
 包管理源的修改命令类似，将下方的 npm 替换 yarn 或 pnpm 即可修改包管理源。
 
-```bash
+```shell
 #查看源
 npm config get registry
 #更换国内源
@@ -32,7 +32,7 @@ npm config set registry https://registry.npmjs.org/
 
 npm、yarn 和 pnpm 的包安装及管理命令。
 
-```bash
+```shell
 #全局安装
 npm i 包 -g
 yarn global add 包
@@ -50,9 +50,20 @@ yarn && yarn upgrade
 pnpm i && pnpm up
 ```
 
+### 本地测试
+
+有些静态文件不支持直接打开，需要架构本地服务器来进行测试。
+
+```shell
+# 安装静态服务 anywhere
+npm install anywhere -g
+# 进入静态页面存放目录，执行 anywhere
+anywhere -p 8081
+```
+
 ## 网站字体
 
-网站为了提高访问速度并保持设计的一致性，通常会选默认字体。这导致网站设计难以突出重点。针对这点，我通常会修改网站的导航栏字体，将其从默认字体改为 `思源黑体-粗`。
+网站为了提高访问速度并保持设计的一致性，通常会选默认字体。这导致网站设计难以突出重点。针对这点，我通常会修改网站的导航栏字体，将其从默认字体改为 `思源黑体 - 粗`。
 
 1. 进入 [iconfont‑webfont](https://www.iconfont.cn/webfont)，输入导航栏内所有文字，并设置所需字体。
 2. 点击「生成字体」后，在选中字体的下方，点击「本地下载」。
@@ -70,7 +81,7 @@ pnpm i && pnpm up
 
 服务器以 centos 为主
 
-```bash
+```shell
 # 系统升级，大版本更新后重启服务器
 yum update -y
 
@@ -111,7 +122,7 @@ location = / {
 1. 安装 [宝塔面板](https://www.bt.cn/bbs/thread-19376-1-1.html)。
 2. 删除阿里云主机监控。
 
-   ```bash
+   ```shell
    service aegis stop  #停止服务
    chkconfig --del aegis  # 删除服务
    ```
@@ -141,7 +152,7 @@ location = / {
 
 如果找不到原因，可以临时设置定期任务。每隔 3 小时重启一次 nginx/apache。有时重启不正常，因此重启命令后 10 秒，再启动一次 nginx/apache。
 
-```bash
+```shell
 /etc/init.d/nginx restart
 sleep 10s
 /etc/init.d/nginx start
@@ -151,7 +162,7 @@ sleep 10s
 
 如果 SSL 证书部署报错，可以按自动生成来部署。
 
-```bash
+```shell
 #证书设置修改 /www/server/panel/vhost/nginx
 if ($server_port !~ 443){
     rewrite ^(.*) <https://www.xxx.com$1> permanent;
