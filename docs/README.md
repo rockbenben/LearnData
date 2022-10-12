@@ -154,7 +154,7 @@ Vercel 部署步骤如下：
 
 ### 看板娘不显示图像
 
-看板娘只显示文字而不显示图片，是 live2d api 的跨域问题。打开 `docs\.vuepress\public\live2d-widget\autoload.js`，将 `apiPath: "https://newzone.top/live2d_api/"` 改为 `cdnPath: live2d_path + "live2d_api/"`，启用本地看板娘模型即可解决。不过，使用 cdnPath 的看板娘在换衣方面将不灵敏。
+看板娘只显示文字而不显示图片，是 live2d api 的跨域问题。打开 `docs\.vuepress\public\live2d-widget\autoload.js`，将 `apiPath: "https://newzone.top/live2d-widget/live2d_api/"` 改为 `cdnPath: live2d_path + "live2d_api/"`，启用本地看板娘模型即可解决。不过，使用 cdnPath 的看板娘在换衣方面将不灵敏。
 
 如果想完善换衣或添加自己想要的模型，则使用「https://github.com/fghrsh/live2d_api」自建 live2d api。
 
