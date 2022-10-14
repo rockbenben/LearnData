@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 12 Oct 2022 12:51:45 GMT</pubDate>
-    <lastBuildDate>Wed, 12 Oct 2022 12:51:45 GMT</lastBuildDate>
+    <pubDate>Fri, 14 Oct 2022 17:01:14 GMT</pubDate>
+    <lastBuildDate>Fri, 14 Oct 2022 17:01:14 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -37,7 +37,7 @@
 <p>那为什么华为依然用「没电也能打电话」这类极端的宣传方式？</p>
 <p>我猜测是被自媒体绑架了。</p>
 <p>除打包合作外，媒体宣传费用是建立在播放、阅读、互动的基础上。即使是固定价格的打包合作，这次的流量也会决定是否有下次的合作。因此，对自媒体来说，它不在乎观众对品牌的观感是否被消耗，它在乎的是流量，是互动。即使有黑子，那也是互动啊。有了互动，平台会持续给宣传载体进行加权并推流，自媒体的议价能力也持续提高。</p>
-<p><img src="http://tc.seoipo.com/2022-09-07-13-24-33.png" alt="" title="宣传流量图" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-09-07-13-24-33.png" alt="" title="宣传流量图" loading="lazy"><figcaption>宣传流量图</figcaption></figure></p>
 <p>华为总被嘲笑有海军，可能有它自身的原因，但这些极端化媒体的绑架也少不了。</p>
 <p>过多的极端宣传，舆论引起的反噬会远超你获得的利益。不是每个人都会仔细查看你的宣传稿，看到上百篇高级写着华为「没电也能打电话」，真有人会以为你有什么黑科技了。</p>
 <h2 id="手机行业的底线" tabindex="-1"> 手机行业的底线</h2>
@@ -58,11 +58,11 @@
       <category>工具</category>
       <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。</p>
-<p><img src="http://tc.seoipo.com/2022-09-04-11-53-20.png" alt="" title="丁老头进化旅程" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-09-04-11-53-20.png" alt="" title="丁老头进化旅程" loading="lazy"><figcaption>丁老头进化旅程</figcaption></figure></p>
 <p>Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具，<strong>可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行</strong>，并在几秒内生成图像，无需预处理和后处理。</p>
 <p>体验 AI 绘图可借助在线工具 <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" target="_blank" rel="noopener noreferrer">Hugging Face</a>、<a href="https://beta.dreamstudio.ai/" target="_blank" rel="noopener noreferrer">DreamStudio</a> 或 <a href="https://wenxin.baidu.com/moduleApi/ernieVilg" target="_blank" rel="noopener noreferrer">百度文心</a>。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。</p>
 <p>如果想生成大量 AI 图片，可以通过 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Mac 用户建议选择 Stable Diffusion 的 lstein 分支，部署报错参考 <a href="https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore" target="_blank" rel="noopener noreferrer">InvokeAI 文档</a>，<strong>M1/M2 Mac</strong> 推荐使用更简便的 <a href="https://www.charl-e.com/" target="_blank" rel="noopener noreferrer">CHARL-E</a> 或 <a href="https://sspai.com/post/75682" target="_blank" rel="noopener noreferrer">DiffusionBee</a>。</p>
-<p><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" title="Stable Diffusion 部署流程" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" title="Stable Diffusion 部署流程" loading="lazy"><figcaption>Stable Diffusion 部署流程</figcaption></figure></p>
 <p>本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。</p>
 <h2 id="docker-环境配置" tabindex="-1"> Docker 环境配置</h2>
 <p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup></sup> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>。下面我会介绍各自的启用方式，<strong>二选一即可</strong>，推荐使用子系统 WSL（占用系统盘 30G 的空间）。</p>
@@ -72,7 +72,7 @@
 <p>以管理员身份打开 PowerShell 控制台，输入命令 <code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All</code>。<sup></sup> 重启电脑后，将开启 Hyper-V。</p>
 <h2 id="配置-stable-diffusion" tabindex="-1"> 配置 Stable Diffusion</h2>
 <p>按平台选 <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener noreferrer">Docker Desktop</a> 版本，安装后点击左侧的 Add Extensions，推荐 Disk usage 扩展，便于管理 Docker 存储空间。</p>
-<p><img src="http://tc.seoipo.com/2022-09-04-17-06-27.png" alt="" title="Docker Desktop 界面" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-09-04-17-06-27.png" alt="" title="Docker Desktop 界面" loading="lazy"><figcaption>Docker Desktop 界面</figcaption></figure></p>
 <p>然后，将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 下载并解压到本地硬盘。或者，使用阿里云盘下载 <a href="https://www.aliyundrive.com/s/EKmK7MGrHdn" target="_blank" rel="noopener noreferrer">聚合版</a>。</p>
 <h3 id="选择分支" tabindex="-1"> 选择分支</h3>
 <p>目前 Stable Diffusion 有 hlky、auto、auto-cpu 和 lstein 四个分支。如果要更换分支，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。</p>
@@ -99,45 +99,45 @@
 <p>接下来，我会介绍最流行的 hlky 界面，其他分支的主题界面略有不同，但功能并没有大的变化，如何更换分支看下方的常见问题。</p>
 <h3 id="text-to-image" tabindex="-1"> Text-to-Image</h3>
 <p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。风景、创意画等崇尚空间结构的画作类型时，优先推荐竖图或者横图。人像类画作推荐 1:1 的方图，否则可能会出现两个或者多个人脸的叠加现象。生成图片的分辨率是有限制的，可以用 Upscale 放大结果图片。</p>
-<p><img src="http://tc.seoipo.com/2022-09-05-08-28-23.png" alt="" title="Text-to-Image 界面" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-09-05-08-28-23.png" alt="" title="Text-to-Image 界面" loading="lazy"><figcaption>Text-to-Image 界面</figcaption></figure></p>
 <p>默认使用 Simple 简单模式，点击右侧按钮 Advanced，可查看进阶选项，使用进阶的场景矩阵、面孔修复和分辨率放大等多种功能。</p>
 <h3 id="image-to-image" tabindex="-1"> Image-to-Image</h3>
 <p>Image-to-Image 依据文字描述和输入源图，生成相关的图像。该模式若以素描、结构画为来源图，可充分填充图像细节；若以细节充分的照片为来源图，则会输出差异较大的结果。</p>
-<p><img src="http://tc.seoipo.com/2022-09-04-15-39-00.png" alt="" title="Image-to-Image 界面" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-09-04-15-39-00.png" alt="" title="Image-to-Image 界面" loading="lazy"><figcaption>Image-to-Image 界面</figcaption></figure></p>
 <p>Denoising Strength 指与原图的差异度，建议在 0.75-0.9，魔改图片可以设为 0.5 以下。下图中的 Denoising Strength 只有 0.44，整体图片结构与要素没变，但结果如何你看到了。</p>
-<p><img src="http://tc.seoipo.com/2022-09-04-15-40-26.png" alt="" title="超级魔改图片" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-09-04-15-40-26.png" alt="" title="超级魔改图片" loading="lazy"><figcaption>超级魔改图片</figcaption></figure></p>
 <h3 id="image-lab" tabindex="-1"> Image Lab</h3>
 <p>Image Lab 能批量修正面孔和放大图片分辨率。</p>
 <p>Fix Faces 是通过 GFPGAN 模型来改善图片中的面孔，Effect strength 滑块可以控制效果的强度。但实际效果别报太高期许，下图右侧开启了 Fix Faces，只能说勉强有了五官。</p>
-<p><img src="http://tc.seoipo.com/2022-09-04-15-47-14.png" alt="" title="A woman flying in the air laughing" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-09-04-15-47-14.png" alt="" title="A woman flying in the air laughing" loading="lazy"><figcaption>A woman flying in the air laughing</figcaption></figure></p>
 <p>Upscale 放大分辨率功能有 RealESRGAN，GoBIG，Latent Diffusion Super Resolution 和 GoLatent 四种模型，其中的 RealESRGAN 有普通与卡通两种模式，可按需选择。Upscale 图片主要消耗 CPU 与内存资源。</p>
 <h2 id="使用说明" tabindex="-1"> 使用说明</h2>
 <h3 id="文字描述图像" tabindex="-1"> 文字描述图像</h3>
 <p>Stable Diffusion 的核心功能是以文字内容 (英文) 描绘一个场景或事物，从而决定你的画面中将出现什么。因此，文字描绘是决定图像生成质量的关键因素。接下来，我会以官方文档案例为例，解构描述文字的要素和标准。<sup></sup></p>
 <p>样例：<code>A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}</code>。</p>
 <ul>
-<li><strong>画作种类</strong>：ink painting（水墨画），oil painting（油画），comic（漫画），digital painting（数字印刷品），illustration（插画），realistic painting（写实画），portrait photo（肖像照），sculpture (雕塑) 等等，可叠加多个种类描述。</li>
+<li><strong>画作种类</strong>：Watercolor（水彩），Oil Paint（油画），Comic（漫画），Digital Art（数码艺术），Illustration（插画），realistic painting（写实画），photorealistic（写实照片），Portrait photogram（肖像照），sculpture (雕塑) 等等，可叠加多个种类描述。</li>
 <li><strong>参考平台</strong>：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。
-<img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"></li>
-<li><strong>画家/画风</strong>：成图更接近哪位画家的风格，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
+<figure><img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"><figcaption>相同参数下不同参考平台生成的图片</figcaption></figure></li>
+<li><strong>画家/画风</strong>：成图更接近哪位画家的风格，<code>Studio Ghibli</code> 吉卜力工作室，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
 <li><strong>配色</strong>：yellow color scheme 指整个画面的主色调为黄色。</li>
-<li><strong>画面描述</strong>：除了描述主题，还可以描述次要元素和形容词描述画面。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 <code>desert!!, forest, river, (((sunset)))</code> 中会优先体现「desert」和「sunset」元素。
+<li><strong>画面描述</strong>：<strong>不要描述动作</strong>而是主体此时的状态，此外还可以添加次要元素和形容词描述画面。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 <code>desert!!, forest, river, (((sunset)))</code> 中会优先体现「desert」和「sunset」元素。
 <ul>
-<li>画面元素，如：背景 <code>beautiful background, forest</code>，光线描述 <code>diffuse natural sun lights, autumn lights, cinematic lighting, god rays</code>；</li>
-<li>人物描述，如：肖像照 <code>detailed gorgeous face, delicate features, elegant, slight smile, hard rim lighting</code>，超模描述 <code>top model, fashion, vogue magazine</code>，人物细节 <code>olive skin, long dark hair, beautiful bone structure, double eyelids, big eyes, high nose bridge, large DD breasts, wavy silver hair, armless, legless</code>；</li>
+<li>画面元素，如：背景 <code>beautiful background, forest</code>，光线描述 <code>Natural Lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight</code>；</li>
+<li>人物描述，如：<code>detailed gorgeous face, delicate features, elegant, Googly Eyes, Bone, big tits, silver hair, olive skin, Mini smile, Cinematic, Magazine, Golden Hour, F/22</code>；</li>
 <li>画面质量描述，如 <code>award winning, breathtaking, groundbreaking, superb, outstanding</code>；</li>
-<li>细节特点描述，如 <code>intricate, gorgeous, hyperrealistic, highly detailed, digital painting, artstation, concept art, smooth, sharp focus, octane render, illustration, 8K</code>，或 <code>symmetry, depth of field</code>。</li>
+<li>细节特点描述，如 <code>insanely detailed and intricate, gorgeous, hyperrealism, smooth, sharp focus, Painting, Digital Art, Concept Art, Illustration, Artstation, in a symbolic and meaningful style, 4K</code>，或镜头角度 <code>Depth of Field, Side-View</code>。</li>
 </ul>
 </li>
-<li><strong>否定描述</strong>：negative prompt 仅被 auto 分支支持，可以避免画面出现指定元素，如 <code>ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art</code>，避免裸体 <code>nudity, bare breasts</code>。</li>
+<li><strong>否定描述</strong>：auto/auto-cpu 分支支持 negative prompt，可以避免画面出现指定元素，如 <code>ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, armless, legless, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art</code>，避免裸体 <code>nudity, bare breasts</code>。</li>
 </ul>
-<p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以使用 <a href="https://promptomania.com/stable-diffusion-prompt-builder/" target="_blank" rel="noopener noreferrer">promptoMANIA</a> 按提示组合描述，或参考 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
+<p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以使用 <a href="https://promptomania.com/stable-diffusion-prompt-builder/" target="_blank" rel="noopener noreferrer">promptoMANIA</a> 、<a href="https://weirdwonderfulai.art/resources/disco-diffusion-modifiers/" target="_blank" rel="noopener noreferrer">WEIRD WONDERFUL AI ART</a>按提示组合描述，或参考 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
 <blockquote>
 <p>goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k</p>
 </blockquote>
 <h3 id="prompt-matrix" tabindex="-1"> Prompt matrix</h3>
 <p>Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
-<i>Content not supported</i><p>上方视频的调教词为 <code>A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting</code>。<code>|</code> 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。</p>
+<BiliBili bvid="BV1YP411V7vV" /><p>上方视频的调教词为 <code>A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting</code>。<code>|</code> 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。</p>
 <p>另外，我们可以指定场景条件位置，比如 <code>@(moba|rpg|rts) character (2d|3d) model</code> 表示 <code>(moba|rpg|rts 三选一) character (2d|3d 二选一) model</code>，也就是会生成 3*2 张图片。开头的 <code>@</code> 是触发指定场景条件位置的符号，不能省略。</p>
 <h2 id="常见问题" tabindex="-1"> 常见问题</h2>
 <h3 id="docker-desktop-failed" tabindex="-1"> Docker Desktop failed</h3>
@@ -200,11 +200,11 @@ wsl -l -v
       <content:encoded><![CDATA[<p>Notion、Obsidian、Logseq、Roam Research、Evernote、flomo、为知、飞书、语雀……知识管理/笔记软件越来越多，我总在不同应用间徘徊。直到有次忽然醒悟，知识管理软件不是管理知识，而是管理笔记。<strong>笔记里的知识并不属于你，只有经过消化、应用，才会成为自己的知识。</strong></p>
 <p>这么简单的事，我之前却一直没看透，总是把笔记与知识理解划上了等号。当要用到曾摘录的笔记时，就在各类知识管理软件里翻找，折腾一番才找到需要的笔记，有时甚至出现「自己不清楚放在哪里，也不清楚是否有」的情况。记笔记花了一个小时，下次寻找与重新消化又花了一个小时，原本为效率而生的知识管理软件变成了浪费时间的杀手。</p>
 <p>另一方面，我们在用知识管理软件的美观界面和强大功能的同时，也被这些软件所限制，无法完全按自己的想法输出笔记。比如，你长了一双翅膀，<strong>Markdown 文本是自由的天地，而进入 Notion 则被隔成一个个小房间</strong>，你在房间里待着很舒服，可一旦想去其他房间，就必须脱离 block，不比 Markdown 可以自由飞翔。</p>
-<p><img src="http://tc.seoipo.com/2022-08-22-18-02-07.png" alt="" title="Markdown VS Notion" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-08-22-18-02-07.png" alt="" title="Markdown VS Notion" loading="lazy"><figcaption>Markdown VS Notion</figcaption></figure></p>
 <p>突破迷思后，我基于 VuePress 和 vuepress-theme-hope 建立了 <a href="https://github.com/rockbenben/LearnData" target="_blank" rel="noopener noreferrer">LearnData</a> 项目，把知识笔记、生活记录、博客和任何觉得有价值的记录转成 Markdown 文本，然后推送到 GitHub 生成 Pages 静态页面，同步到国内云服务器形成 <a href="https://newzone.top/" target="_blank" rel="noopener noreferrer">LearnData - 开源笔记</a>。</p>
-<p><img src="http://tc.seoipo.com/2022-08-24-19-14-59.png" alt="" title="笔记/博客自动化发布" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-08-24-19-14-59.png" alt="" title="笔记/博客自动化发布" loading="lazy"><figcaption>笔记/博客自动化发布</figcaption></figure></p>
 <p>LearnData 的笔记/文章编辑均使用 Markdown，输出不再受到应用的局限。同时，LearnData 看似是由一篇篇文章组成的博客，但其笔记是独立的知识点，是所有知识的终点站，是整理后的知识库。通过 LearnData 就能完成知识的搜索与整理，不再需要来回翻找。把博客转为知识库后，我明显感到学习和知识使用的效率得到提高，开始摆脱「工具奴隶」和「效率中毒」陷阱。</p>
-<p><img src="http://tc.seoipo.com/2022-08-22-19-28-25.png" alt="" title="笔记 + 文章 = LearnData 知识库" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-08-22-19-28-25.png" alt="" title="笔记 + 文章 = LearnData 知识库" loading="lazy"><figcaption>笔记 + 文章 = LearnData 知识库</figcaption></figure></p>
 <h2 id="为什么用网页管理笔记" tabindex="-1"> 为什么用网页管理笔记</h2>
 <h3 id="公开分享想法" tabindex="-1"> 公开分享想法</h3>
 <p>知识管理/笔记软件天然带有私有性质，不对外公开。但是，我的笔记大都来自互联网，要对谁保密？</p>
@@ -220,18 +220,18 @@ wsl -l -v
 <h3 id="漂亮决定生产力" tabindex="-1"> 漂亮决定生产力</h3>
 <p>另外，网页能自由调整外观样式，更换为你喜欢的界面。这也是为什么 LearnData 舍弃了初版的 docsify 框架，改为复杂许多的 VuePress 框架。docsify 官方模板过于简单，没有界面设计模块，难以满足知识管理界面必须直观漂亮的要求，而这点直接决定了生产力，不能让步。</p>
 <p>知识管理/笔记软件将 Markdown 文件作为一个个区块，而网页可以将其视为一体。LearnData 支持多级侧边栏和目录，让阅读查找变得简单。</p>
-<p><img src="http://tc.seoipo.com/2022-08-19-22-42-03.png" alt="" title="LearnData 页面布局" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-08-19-22-42-03.png" alt="" title="LearnData 页面布局" loading="lazy"><figcaption>LearnData 页面布局</figcaption></figure></p>
 <h2 id="为什么不用-obsidian" tabindex="-1"> 为什么不用 Obsidian</h2>
 <p>@北鸮 提到「脱离 Notion 可以理解，Markdown 很自由，那为啥不用 Obsidian 呢？也有标题，也有标签，也可以有层级，开源软件还有 Logseq 替代」。</p>
 <p>Obsidian 等双链笔记想法设计很好，我们可以自由地在不同知识点间切换，节省搜索和关联的时间。但知识点的联系是靠人工打标签来建立的，而非根据关键词自动建立图谱关系。这跟 URL 链接又有什么区别？因此我认为，<strong>双链笔记并不适合知识库</strong>。（如果对双链笔记理解错误，欢迎纠正。）</p>
-<p><img src="http://tc.seoipo.com/2022-08-19-21-39-41.png?imageMogr2/thumbnail/!60p" alt="" title="我的 Obsidian 图谱，只有右下角简悦抓取的素材有相同标签而聚作一团" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-08-19-21-39-41.png?imageMogr2/thumbnail/!60p" alt="" title="我的 Obsidian 图谱，只有右下角简悦抓取的素材有相同标签而聚作一团" loading="lazy"><figcaption>我的 Obsidian 图谱，只有右下角简悦抓取的素材有相同标签而聚作一团</figcaption></figure></p>
 <p>建立知识点联系后，双链笔记能轻松处理成千上万个文档，按条件整合文本方便阅读。但是，多数人常用知识范围不会超过一百。如果你的个人笔记上千了，说明你要不是科研大佬，要不没消化甚至是根本没读过这些笔记，只是在记笔记。</p>
 <p>除去博客，我只有 37 篇笔记，而且按功能划分为 7 个区块。你觉得这点文件，用树状管理方便，还是用双链笔记打一堆标签来得好？即使有时标题里找不到某个关键词，我用全文搜索达到目的。我个人会倾向于简单方便的树状标题管理。</p>
 <h2 id="抛弃知识软件-不用" tabindex="-1"> 抛弃知识软件 ≠ 不用</h2>
 <p>选择 Markdown 就得卸载知识软件吗？</p>
 <p>抛弃知识软件并不是不用，而是将其视为知识的中转站。知识软件的趋势是 ALL IN ONE，记录全能成了标榜的主打功能。可是，<strong>光收集而不应用的知识等于零</strong>，只会增加你后续的使用成本。</p>
 <p>知识软件对我来说，是功能清晰的素材库。我会不断清空素材库，将小的知识点融入 LearnData 笔记区，成体系内容则写成博客，确保 LearnData 成为知识库的终点。</p>
-<p><img src="http://tc.seoipo.com/2022-08-21-21-38-47.png" alt="" title="知识类素材库" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-08-21-21-38-47.png" alt="" title="知识类素材库" loading="lazy"><figcaption>知识类素材库</figcaption></figure></p>
 <ul>
 <li>Logseq 对信息节点化，能按日期整合文本，因此我用它来记录笔记，并定期生成周报和月报回顾。</li>
 <li>飞书文档自带侧边目录栏，对长文档优化很好，因此我用它来记录工作心得，定期形成工作流程在公司分享。</li>
@@ -272,10 +272,10 @@ wsl -l -v
 <p><img src="https://cdn.sspai.com/2022/08/09/article/74429ae5770ce6fe9b338527105a4744?imageView2/2/w/450/q/90/interlace/1/ignore-error/1" alt="" loading="lazy"></p>
 <p>这款塑形机原理与飞鸟龙门架类似，号称可以充当家庭健身房，锻炼全身的肌肉，包括练肩后束、练背、练上胸、练胸中缝、练下胸、练三头、练二头、练核心、练臀大肌、练大腿外侧。</p>
 <p>之前我就想练飞鸟，不过龙门架实在太大，而这台机器折叠后只占 0.18 平，还能移动位置，完美匹配屋内使用的需求。虽然这是众筹产品，要等 2 个月，还是心动下单了。</p>
-<p><img src="https://cdn.sspai.com/2022/08/09/37a78274cca974e793582250954c75dc.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" title="左侧为龙门架，右侧为塑形机" loading="lazy"></p>
+<p><figure><img src="https://cdn.sspai.com/2022/08/09/37a78274cca974e793582250954c75dc.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" title="左侧为龙门架，右侧为塑形机" loading="lazy"><figcaption>左侧为龙门架，右侧为塑形机</figcaption></figure></p>
 <p>等待收货时间内，体重继续上涨，总想着健身器材到了就瘦了。但是当收到货后，我终于理解了「<strong>什么叫做众筹</strong>」。</p>
 <p>锻炼时必须用身体抵住塑形机，否则机器会跟着你的动作滑走。虽然滑动的原因在于机器较轻，只有 60 KG，但我无法理解的是，厂家连基本的防滑措施也没有做，仿佛生产前从没人真的用过机器。<strong>防滑降噪脚垫在拖动时倒蛮好用的</strong>，拖起来特别丝滑，完全没有阻抗。为了避免塑形机不断滑走，我只能买了个阻门器，装上后就能避免机器乱滑动了。</p>
-<p><img src="https://cdn.sspai.com/2022/08/09/article/6d2731baacf4174c4b7465b11ba715fd?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" title="右下方是红色的阻门器，硬拉终于不会滑了" loading="lazy"></p>
+<p><figure><img src="https://cdn.sspai.com/2022/08/09/article/6d2731baacf4174c4b7465b11ba715fd?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" title="右下方是红色的阻门器，硬拉终于不会滑了" loading="lazy"><figcaption>右下方是红色的阻门器，硬拉终于不会滑了</figcaption></figure></p>
 <p>解决滑动问题后，我打开塑形机官方视频，才发现其中 90% 的动作用不到塑形机，甚至是根本就扯不上关系。买之前，我看着详情页感觉动作特多功能特强，用过后，才发现「这就是所有的动作」。</p>
 <p><img src="https://cdn.sspai.com/2022/08/09/article/db951607296d83ce9a0ff181d724de14?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" loading="lazy"></p>
 <p>不过，机器都收货了，动作少也得跟着练。可是，按照塑形机官方教程锻炼一组后，我的肩膀和手臂都被勒伤。原因是与身体接触的部分都是特粗尼龙绳，没有任何缓冲，一用力就容易勒伤。两千的机器连块 PU 皮都要省，可能是想让大家穿着特别严实来锻炼吧。</p>
