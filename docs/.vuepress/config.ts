@@ -1,12 +1,9 @@
-import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 //import { webpackBundler } from "@vuepress/bundler-webpack";
 //import { defineUserConfig } from "@vuepress/cli";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
-import { feedPlugin } from "vuepress-plugin-feed2";
-import { componentsPlugin } from "vuepress-plugin-components";
 import { path } from "@vuepress/utils";
 import theme from "./theme";
 
@@ -42,24 +39,6 @@ export default defineUserConfig({
     //谷歌分析 ID
     googleAnalyticsPlugin({
       id: "G-RWKZTY2P9R",
-    }),
-    //组件库
-    componentsPlugin({
-      backToTop: true,
-      components: [
-        "Badge",
-        "BiliBili",
-        "FontIcon",
-        "VideoPlayer",
-        "YouTube",
-      ],
-      iconAssets: "iconfont",
-    }),
-    //rss 订阅描述
-    feedPlugin({
-      hostname: "https://newzone.top",
-      rss: true,
-      count: 10,
     }),
   ],
 });

@@ -34,17 +34,22 @@ AutoHotKey 是 Windows 平台下开源的热键脚本语言。AHK 学习门槛�
 
 设置命令为 `Menu, Tray, Icon , %A_WorkingDir%\dock_panel.png`。`%A_WorkingDir%` 代表脚本所在目录。
 
-### 执行 Powershell
+### 执行 PowerShell
 
-`Run, PowerShell.exe -NoExit -Command &{命令}, 目录`
+系统级别的操作可以通过 [PowerShell](https://learn.microsoft.com/zh-cn/powershell/scripting/learn/ps101/01-getting-started) 来实现。
+
+```PowerShell
+# Run, powershell.exe -NoExit -Command &{命令}, 目录
+Run, powershell.exe -NoExit -Command &{npm version patch}, D:\Backup
+```
 
 ## 问题
 
 ### 激发热键后按键未释放
 
-`Send, ^!w` 指代热键 `Ctrl+Alt+W`，有时辅助键 Alt 未正确释放，会导致激发热键后输入有问题。
+`Send, ^!+w` 指代热键 `Ctrl+Alt+Shift+W`，有时辅助热键未正确释放，会导致激发热键后输入有问题。
 
-函数结尾加一行 `Send, {Alt up}` 即可解决该问题。如果辅助键 Shift 出错，则替换为对应按键。
+函数结尾加一行 `Send, {Ctrl up}{Alt up}{Shift up}` 即可解决该问题。
 
 ### 隐藏在托盘程序无法监测
 

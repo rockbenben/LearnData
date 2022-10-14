@@ -15,7 +15,7 @@ export default hopeTheme({
 
   iconAssets: "iconfont",
   logo: "/logo.svg",
-  
+
   //是否全局启用路径导航
   breadcrumb: false,
 
@@ -54,22 +54,20 @@ export default hopeTheme({
   //是否在向下滚动时自动隐藏导航栏
   //navbarAutoHide: "always",
 
-
   //侧边栏排序规则
   //sidebarSorter: ['readme', 'order', 'title'],
   // sidebar
   sidebar: sidebar,
 
   // footer: "默认页脚",
-
   // displayFooter: true,
-  pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
+
   //https://vuepress-theme-hope.github.io/v2/zh/config/frontmatter/layout.html#pageinfo
-  // pageInfo: ["Author", "Original", "Date", "Category", "Tag", "Word", "ReadingTime"],
+  pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
 
   //https://vuepress-theme-hope.github.io/v2/zh/config/theme/feature.html
   blog: {
-    articleInfo: ["Date", "Category", "Tag", "ReadingTime", "PageView"],
+    articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
     name: "清顺",
     avatar: "/avatar_self.webp",
     description: "迷信新工具，热衷于研究开源软件、心理学理论，定期分享探索成果",
@@ -89,7 +87,6 @@ export default hopeTheme({
   },
 
   plugins: {
-
     blog: {
       // 自动摘要
       autoExcerpt: true,
@@ -97,10 +94,10 @@ export default hopeTheme({
 
     //评论配置（仅做样例，记得更换）
     comment: {
-      //部署 Waline：https://waline.js.org/guide/get-started.html
       provider: "Waline",
       serverURL: "https://waline.newzone.top",
-      pageview: true,
+      //部署 Waline：https://waline.js.org/guide/get-started.html
+      //pageview: true, // 浏览量统计
       //Waline 等级标签
       walineLocales: {
         '/': {
@@ -113,13 +110,24 @@ export default hopeTheme({
           level5: '化神',
         },
       },
+
       //Giscus 备用配置
-      //provider: "Giscus",
-      //repo: "rockbenben/LearnData",
-      //repoId: "R_kgDOHdfk6Q",
-      //category: "Comments",
-      //categoryId: "DIC_kwDOHdfk6c4CQYNn",
+      /*
+      provider: "Giscus",
+      repo: "rockbenben/LearnData",
+      repoId: "R_kgDOHdfk6Q",
+      category: "Comments",
+      categoryId: "DIC_kwDOHdfk6c4CQYNn",
+      */
     },
+
+    // 组件库
+    components: [
+      "Badge",
+      "BiliBili",
+      "VideoPlayer",
+      "YouTube",
+    ],
 
     // 禁用不需要的配置
     mdEnhance: {
@@ -130,12 +138,19 @@ export default hopeTheme({
       container: true,
       gfm: true,
       imageSize: true,
+      imageTitle: true,
       include: true,
       lazyLoad: true,
       mark: true,
       sub: true,
       sup: true,
       //vpre: true,
+    },
+
+    //rss 订阅描述
+    feed: {
+      rss: true,
+      count: 10,
     },
   },
 });

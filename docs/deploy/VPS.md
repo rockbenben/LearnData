@@ -144,6 +144,10 @@ location = / {
 
     - 添加 url 规则 `^/rss.php` 到防火墙 URL 白名单，防止 rss 服务被屏蔽。
 
+### NginxConfig
+
+[NginxConfig](https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN) 适合新手配置高性能、安全、稳定的 NGINX 服务器的最简单方法。
+
 ### 常见问题
 
 #### CPU 100%

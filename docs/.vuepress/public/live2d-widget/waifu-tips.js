@@ -165,7 +165,7 @@ function loadWidget(config) {
 		if (modelId === null) {
 			// 首次访问加载 指定模型 的 指定材质
 			modelId = 5; // 模型 ID，原本为 1
-			modelTexturesId = 1; // 材质 ID，原本为 53
+			modelTexturesId = 2; // 材质 ID，原本为 53
 		}
 		loadModel(modelId, modelTexturesId);
 		fetch(waifuPath)
