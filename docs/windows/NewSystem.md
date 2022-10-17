@@ -57,4 +57,5 @@ order: 2
 - Win11 本地账户也被提示需要登录密码，但设置密码后，无法直接开机登录。设置新密码后，进入 `设置 - 账户 - 登录选项 - 密码`，可以重新设置空密码，实现自动登录。
 - 英语键盘删不掉：添加英语语言包，然后再删除，英语键盘也会一起删除。
 - 右键更改前先备份注册表，有几率会影响系统稳定性。
+- 实时将音频转文字：管理员方式安装 [VB-CABLE](https://vb-audio.com/Cable/)，输入输出设备都选 VB-CABLE，详细设置查看 [How to Convert Audio to Text - FREE & No Time Limits](https://www.youtube.com/watch?v=1DsrniDGOJQ)。
 - 开机用 [管理员权限启动脚本](../code/AutoHotKey.html#管理员权限运行脚本)。

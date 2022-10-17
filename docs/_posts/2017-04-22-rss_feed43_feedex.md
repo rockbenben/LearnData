@@ -119,9 +119,3 @@ feeds43 免费版每 6 小时抓取一次，显示最新的 20 条内容。
 - [RSS 完结篇：节省千元服务费，RSSHub、Huginn 转移 NAS](https://newzone.top/_posts/2021-10-23-nas_with_rsshub_and_huginn.html)
 
 - [RSS 汇总篇：RSS 永久链接合集，拒绝 RSS 失效](https://newzone.top/_posts/2022-03-17-rss_persistent_link_collection.html)
-
-**参考资料**：
-
-- [FEED43 – 为没有 Feed 的网页生成 RSS 格式订阅源 [教程]](http://www.appinn.com/feed43/)
-
-- [喜欢的网站，没有 rss 怎么办，自己做！！用 FEED43 自己烧制喜欢网页 rss 教程 -- 小佑 (其实内附双教程)](https://www.douban.com/note/199431341/)

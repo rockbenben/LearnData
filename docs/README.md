@@ -70,19 +70,19 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 - `config.ts` 配置网站环境依赖和网站属性。
 - `sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。
 - `navbar.ts` 配置导航栏，推荐放你常用的文档链接。
-- `theme.ts` 对主题和插件进行设置，[评论插件](https://newzone.top/web/Comments.html) 可在该文件内修改设置。
+- `theme.ts` 对主题和插件进行配置，[评论插件](https://newzone.top/web/Comments.html) 亦在此文件。
 - `templateBuild.html` 是网页模板，调整网站关键词和第三方统计代码。
 
 注意：LearnData 默认使用了 algolia 全文搜索，如果你没设置 Docsearch 爬虫的话，需删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块。删除后，站点会将页面标题和小标题作为搜索索引。
 
 ### 看板娘
 
-LearnData 集成了 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget) 看板娘，提升网站美观度和趣味性。
+LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)，提升网站美观度和趣味性。看板娘跨域或不显示图像可查看页面下单的常见问题。如果不需要看板娘，则删除 `docs\.vuepress\public` 下的 live2d-widget 文件夹。
 
-如果网站部署在子页面 `https://xxx.github.io/yyy`，则需将子页面路径加入以下 2 个文件：
+如果网站部署在子页面 `https://xxx.github.io/yyy`，则需将子页面路径加入到以下的两个文件：
 
-- `docs\.vuepress\public\live2d-widget\autoload.js` 第三行的 `const live2d_path = "/live2d-widget/"` 修改为 `const live2d_path = "/yyy/live2d-widget/"`。
-- `docs\.vuepress\templateBuild.html` 中看板娘区块代码 `<script src="/live2d-widget/autoload.js">` 修改为 `<script src="/yyy/live2d-widget/autoload.js">`。
+- 将 `docs\.vuepress\public\live2d-widget\autoload.js` 文件第三行的 `const live2d_path = "/live2d-widget/"` 修改为 `const live2d_path = "/yyy/live2d-widget/"`。
+- 将 `docs\.vuepress\templateBuild.html` 文件中看板娘区块代码 `<script src="/live2d-widget/autoload.js">` 修改为 `<script src="/yyy/live2d-widget/autoload.js">`。
 
 ### 本地图片引用
 
@@ -154,9 +154,11 @@ Vercel 部署步骤如下：
 
 ### 看板娘不显示图像
 
-看板娘只显示文字而不显示图片，是 live2d api 的跨域问题。打开 `docs\.vuepress\public\live2d-widget\autoload.js`，将 `apiPath: "https://newzone.top/live2d-widget/live2d_api/"` 改为 `cdnPath: live2d_path + "live2d_api/"`，启用本地看板娘模型即可解决。不过，使用 cdnPath 的看板娘在换衣方面将不灵敏。
+看板娘只显示文字而不显示图片，是由于 live2d api 跨域所导致的。
 
-如果想完善换衣或添加自己想要的模型，则使用「https://github.com/fghrsh/live2d_api」自建 live2d api。
+打开 `docs\.vuepress\public\live2d-widget\autoload.js`，将 `apiPath: "https://newzone.top/live2d-widget/live2d_api/"` 改为 `cdnPath: live2d_path + "live2d_api/"`，启用本地看板娘模型即可解决。
+
+不过，cdnPath 看板娘在换衣性能方面会下降。如果有服务器的话，推荐用 <https://github.com/fghrsh/live2d_api> 自建 live2d api，完善换衣或添加自己想要的模型。
 
 ### ERR_MODULE
 
@@ -181,7 +183,7 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 ### 本地运行 LearnData
 
 1. 安装环境 npm 和 pnpm，方法查看 [环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
-2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm add vuepress@2.0.0-beta.51 @vuepress/client@2.0.0-beta.51 vuepress-theme-hope@2.0.0-beta.106 @vuepress/plugin-google-analytics@2.0.0-beta.51 @vuepress/plugin-search@2.0.0-beta.51 @vuepress/plugin-docsearch@2.0.0-beta.51`。
+2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm add vuepress@2.0.0-beta.51 @vuepress/client@2.0.0-beta.51 vuepress-theme-hope@2.0.0-beta.108 @vuepress/plugin-google-analytics@2.0.0-beta.51 @vuepress/plugin-search@2.0.0-beta.51 @vuepress/plugin-docsearch@2.0.0-beta.51`。
 3. 完成前两步后，终端中输入 `pnpm docs:dev`，成功即可提示访问链接，默认为 `http://localhost:8080/`。
 
 运行本地服务器后，修改文件时预览页面也会同步发生改变。如果想停止本地服务器，在终端中按键 `Ctrl + C`。
