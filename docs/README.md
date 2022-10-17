@@ -79,7 +79,7 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 
 LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)，提升网站美观度和趣味性。如果不需要看板娘，则删除 `docs\.vuepress\public` 下的 live2d-widget 文件夹。
 
-启用看板娘模型前，需打开 `docs\.vuepress\public\live2d-widget\autoload.js`，将 `apiPath: "https://newzone.top/live2d-widget/live2d_api/"` 改为 `cdnPath: live2d_path + "live2d_api/"`。如果未正确修改，看板娘会出现跨域报错，只显示文字而不显示图片。如果有服务器的话，可以用 <https://github.com/fghrsh/live2d_api> 自建 live2d api，添加自己想要的模型。
+启用看板娘模型前，需打开 `docs\.vuepress\public\live2d-widget\autoload.js`，将 `apiPath: "https://newzone.top/live2d-widget/live2d_api/"` 改为 `cdnPath: live2d_path + "live2d_api/"`。如果未正确修改，看板娘会出现跨域报错，只显示文字而不显示图片。如果有服务器的话，可以自建 [live2d api](https://github.com/fghrsh/live2d_api)，添加自己想要的模型。
 
 如果网站部署在子页面 `https://xxx.github.io/yyy`，则需将子页面路径 yyy 加入到以下两个文件：
 
