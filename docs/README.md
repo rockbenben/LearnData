@@ -77,9 +77,11 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 
 ### 看板娘
 
-LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)，提升网站美观度和趣味性。看板娘跨域或不显示图像可查看页面下单的常见问题。如果不需要看板娘，则删除 `docs\.vuepress\public` 下的 live2d-widget 文件夹。
+LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)，提升网站美观度和趣味性。如果不需要看板娘，则删除 `docs\.vuepress\public` 下的 live2d-widget 文件夹。
 
-如果网站部署在子页面 `https://xxx.github.io/yyy`，则需将子页面路径加入到以下的两个文件：
+启用看板娘模型前，需打开 `docs\.vuepress\public\live2d-widget\autoload.js`，将 `apiPath: "https://newzone.top/live2d-widget/live2d_api/"` 改为 `cdnPath: live2d_path + "live2d_api/"`。如果未正确修改，看板娘会出现跨域报错，只显示文字而不显示图片。如果有服务器的话，可以用 <https://github.com/fghrsh/live2d_api> 自建 live2d api，添加自己想要的模型。
+
+如果网站部署在子页面 `https://xxx.github.io/yyy`，则需将子页面路径 yyy 加入到以下两个文件：
 
 - 将 `docs\.vuepress\public\live2d-widget\autoload.js` 文件第三行的 `const live2d_path = "/live2d-widget/"` 修改为 `const live2d_path = "/yyy/live2d-widget/"`。
 - 将 `docs\.vuepress\templateBuild.html` 文件中看板娘区块代码 `<script src="/live2d-widget/autoload.js">` 修改为 `<script src="/yyy/live2d-widget/autoload.js">`。
@@ -151,14 +153,6 @@ Vercel 部署步骤如下：
 网站只显示文字且不能正常显示网页，这是网站路径不正确而导致的页面样式错误。
 
 检查 `docs/.vuepress/config.ts` 中 base 的设置，默认为 `/`。如果 GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则将 base 改为 `/yyy`。
-
-### 看板娘不显示图像
-
-看板娘只显示文字而不显示图片，是由于 live2d api 跨域所导致的。
-
-打开 `docs\.vuepress\public\live2d-widget\autoload.js`，将 `apiPath: "https://newzone.top/live2d-widget/live2d_api/"` 改为 `cdnPath: live2d_path + "live2d_api/"`，启用本地看板娘模型即可解决。
-
-不过，cdnPath 看板娘在换衣性能方面会下降。如果有服务器的话，推荐用 <https://github.com/fghrsh/live2d_api> 自建 live2d api，完善换衣或添加自己想要的模型。
 
 ### ERR_MODULE
 
