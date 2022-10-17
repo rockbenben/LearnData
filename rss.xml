@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 14 Oct 2022 17:01:14 GMT</pubDate>
-    <lastBuildDate>Fri, 14 Oct 2022 17:01:14 GMT</lastBuildDate>
+    <pubDate>Mon, 17 Oct 2022 00:37:36 GMT</pubDate>
+    <lastBuildDate>Mon, 17 Oct 2022 00:37:36 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -410,15 +410,6 @@ wsl -l -v
 </li>
 <li>
 <p><a href="https://newzone.top/_posts/2022-03-17-rss_persistent_link_collection.html" target="_blank" rel="noopener noreferrer">RSS 汇总篇：RSS 永久链接合集，拒绝 RSS 失效</a></p>
-</li>
-</ul>
-<p><strong>参考资料</strong>：</p>
-<ul>
-<li>
-<p><a href="http://www.appinn.com/feed43/" target="_blank" rel="noopener noreferrer">FEED43 – 为没有 Feed 的网页生成 RSS 格式订阅源 [教程]</a></p>
-</li>
-<li>
-<p><a href="https://www.douban.com/note/199431341/" target="_blank" rel="noopener noreferrer">喜欢的网站，没有 rss 怎么办，自己做！！用 FEED43 自己烧制喜欢网页 rss 教程 -- 小佑 (其实内附双教程)</a></p>
 </li>
 </ul>
 ]]></content:encoded>
