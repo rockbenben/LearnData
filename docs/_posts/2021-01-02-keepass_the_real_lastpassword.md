@@ -17,7 +17,7 @@ KeePass 的密码保存在本地的 `.kdbx` 数据库中，让你真正掌握自
 
 KeePass 官网下载（Windows）：<https://keepass.info/download.html>。安卓推荐 `Keepass2Android`，iOS/Mac 推荐 `Strongbox` 或 `KeePassium`。
 
-以下会逐步介绍 KeePass 的配置和插件。小白可直接看文章底部，下载懒人包，开包即用。
+接着我会逐步介绍 KeePass 的配置和插件，也可以直接拖到文章底部，下载懒人包，开箱即用。
 
 ## KeePass 设置
 
@@ -32,11 +32,19 @@ KeePass 官网下载（Windows）：<https://keepass.info/download.html>。安�
 
 ### 自动输入规则
 
-选中左侧的数据库，右键点击「编辑群组」-「自动输入」，替换默认规则为 `^{SPACE}{DELAY 100}{CLEARFIELD}{USERNAME}{TAB}{PASSWORD}{DELAY 100}{ENTER}^{SPACE}`。
+选中左侧的数据库，右键点击「编辑群组」-「自动输入」，替换默认规则为 `^{SPACE}{DELAY 100}{CLEARFIELD}{USERNAME}{TAB}{PASSWORD}{DELAY 100}{ENTER}^{SPACE}`。^[[Keepass 教程之二——完美的通用自动输入规则](https://blog.csdn.net/SingWarm/article/details/90669580)]
 
 `^{SPACE}` 即 `Ctrl+Space`，该热键能关闭或启用当前输入法。关闭输入法后，默认为美式键盘输入。
 
 `Ctrl+Space` 需在输入法编辑状态下才能生效，而密码区都禁用输入法编辑。因此，输入密码完成后，可能输入法并未重置，要按 `Ctrl+Space` 才能正常启用输入法。
+
+### 匹配多个网址
+
+KeePass 不能在一个条目填写多个匹配网址，但不同条目可以共享用户名、密码等字段数据，并且通过更改被引用的数据条目，所有其他条目也会同步使用更新值。^[[Field References-KeePass](https://keepass.info/help/base/fieldrefs.html)]
+
+比如 163.com 和 youdao.com 都使用网易账户，账号密码相同，根据网址建立了 2 个条目，将 163.com 条目作为主条目，设置真实账户密码。双击进入 youdao.com 条目，依次点击 Edit Entry 界面左下角的「工具-插入字段引用-在用户名/密码字段」，选中需要引用的条目。设置好后，字段旁边会有个分享符号，表明这是引用条目，会随主条目而更新。如果你想编辑引用字段，它会显示为 `{REF:P@I:8CC19B988F0F9D499459B741753BEE5F}`，更改账户密码只能在主条目上进行编辑。
+
+![](http://tc.seoipo.com/2022-10-18-11-41-15.png "引用字段设置步骤")
 
 ## 必备插件
 
@@ -57,7 +65,7 @@ KPEnhancedEntryView 增强视觉效果，为达到最佳显示效果，按以下
 
 AutoTypeSearch 提供全局框，输入热键 `Ctrl+Shift+A` 后，搜索关键词输入密码。
 
-![AutoTypeSearch 通用设置](http://tc.seoipo.com/20191013083950.png)
+![AutoTypeSearch 通用设置](http://tc.seoipo.com/20191013083950.png "AutoTypeSearch 通用设置")
 
 ### [KP Entry Templates](https://github.com/mitchcapper/KPEntryTemplates)
 
@@ -97,7 +105,7 @@ KeePassRpc 搭配浏览器插件 Kee，能实现**自动填充密码并登录**�
 
 其他插件不能自动登录，只有 Kee 能做到该功能。使用 Kee 的自动登录功能后，少数页面会出现循环登录，需暂停 Kee 扩展来停止循环错误。
 
-![Kee 设置](http://tc.seoipo.com/2022-05-05-14-29-32.png)
+![Kee 设置](http://tc.seoipo.com/2022-05-05-14-29-32.png "Kee 设置")
 
 ### [KeePassNatMsg](https://github.com/smorks/keepassnatmsg)
 
@@ -105,21 +113,19 @@ KeePassRpc 搭配浏览器插件 Kee，能实现**自动填充密码并登录**�
 
 如果遇到不兼容，可使用 KeePassNatMsg 和 KeePassXC-Browser 连接浏览器，本方案不支持搜狗浏览器。
 
-> 如果报错「proxy download error」，备份并删除文件夹 C:\Users\%Username%\AppData\Local\KeePassNatMsg，然后重新加载 Native Messaging Host
+> 如果报错「proxy download error」，备份并删除文件夹 C:\Users\%Username%\AppData\Local\KeePassNatMsg，然后重新加载 Native Messaging Host。
 
 ## 常见问题
 
-- 同一密码能不能同时匹配多个网站？
+### 多账户排序
 
-  不能，但可以在「高级 - 标记」上添加多个表格，用英文的逗号隔开。标记在全局匹配中可用于搜索。
+同一网址有多个账户密码时，无将其中一个账户密码默认置顶。通过插件 KeePassHttp 和 KeePassNatMsg，能按 username 或 title 对账户进行排序。
 
-- 同一网站有多个账户密码，如何将其中一个账户密码前置？
+### 为什么不选 KeepassXC
 
-  无法默认选择指定账户，但可通过插件 keepasshttp、keepassnatmsg，按 username 或 title 对账户进行排序。
+KeepassXC 基于 KeePass 开发，界面更美观，应用设置更简单，并开发了专属的浏览器插件。
 
-- Keepassxc 有官方浏览器插件，界面也比 KeePass 美观，为什么不推荐使用？
-
-  Keepassxc 是 KeePass 的衍生版。虽然 KeePass 配置比 Keepassxc 复杂，但操控性更强。长期使用，个人推荐 Keepass 原版。
+入门 KeepassXC 也比 KeePass 来得轻松，但 KeePass 操控和定制性更强。密码库的使用是以年为单位，比起节约一两天的时间，个人推荐使用 KeePass 原版定制你自己的密码库。
 
 ## KeePass 懒人包
 
@@ -133,11 +139,6 @@ KeePass 懒人包为绿色版，集成了常用插件，建立数据库即可使
 2. 屏幕右下角托盘处，打开 KeePass。
 3. 依次点击 `菜单栏 - 文件 - 新建`，建立属于你的密码数据库。
 
-   ![KeePass 懒人包设置](http://tc.seoipo.com/KeePass_new_kdbx.gif)
+   ![KeePass 懒人包设置](http://tc.seoipo.com/KeePass_new_kdbx.gif "KeePass 懒人包设置")
 
 懒人包集成插件：AutoTypeSearch，Entry Templates，KeePassHttp，KeePassNatMsg，KeePassRpc，KeeTrayTOTP，KPEnhancedEntryView，SourceForgeUpdateChecker，WebAutoType。
-
-**参考资料：**
-
-- [Keepass 教程之二——完美的通用自动输入规则](https://blog.csdn.net/SingWarm/article/details/90669580)
-- [使用 KeePass 管理两步验证](https://www.cnblogs.com/tielemao/p/9613839.html)
