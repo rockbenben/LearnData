@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 18 Oct 2022 04:07:12 GMT</pubDate>
-    <lastBuildDate>Tue, 18 Oct 2022 04:07:12 GMT</lastBuildDate>
+    <pubDate>Thu, 20 Oct 2022 16:32:42 GMT</pubDate>
+    <lastBuildDate>Thu, 20 Oct 2022 16:32:42 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -111,31 +111,42 @@
 <p>Fix Faces 是通过 GFPGAN 模型来改善图片中的面孔，Effect strength 滑块可以控制效果的强度。但实际效果别报太高期许，下图右侧开启了 Fix Faces，只能说勉强有了五官。</p>
 <p><figure><img src="http://tc.seoipo.com/2022-09-04-15-47-14.png" alt="" title="A woman flying in the air laughing" loading="lazy"><figcaption>A woman flying in the air laughing</figcaption></figure></p>
 <p>Upscale 放大分辨率功能有 RealESRGAN，GoBIG，Latent Diffusion Super Resolution 和 GoLatent 四种模型，其中的 RealESRGAN 有普通与卡通两种模式，可按需选择。Upscale 图片主要消耗 CPU 与内存资源。</p>
-<h2 id="使用说明" tabindex="-1"> 使用说明</h2>
-<h3 id="文字描述图像" tabindex="-1"> 文字描述图像</h3>
-<p>Stable Diffusion 的核心功能是以文字内容 (英文) 描绘一个场景或事物，从而决定你的画面中将出现什么。因此，文字描绘是决定图像生成质量的关键因素。接下来，我会以官方文档案例为例，解构描述文字的要素和标准。<sup></sup></p>
-<p>样例：<code>A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}</code>。</p>
-<ul>
-<li><strong>画作种类</strong>：Watercolor（水彩），Oil Paint（油画），Comic（漫画），Digital Art（数码艺术），Illustration（插画），realistic painting（写实画），photorealistic（写实照片），Portrait photogram（肖像照），sculpture (雕塑) 等等，可叠加多个种类描述。</li>
-<li><strong>参考平台</strong>：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。
+<h2 id="文字描述图像" tabindex="-1"> 文字描述图像</h2>
+<p>Stable Diffusion 是以文字内容 (英文) 描绘一个场景或事物，从而决定你的画面中将出现什么。文字描绘是决定图像生成质量的关键因素。</p>
+<p>样例：<code>A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}</code>。<sup></sup></p>
+<h3 id="常规描述" tabindex="-1"> 常规描述</h3>
+<ol>
+<li>输入图像的对象、主体，比如一只熊猫、一个持剑的战士，<strong>不要描述动作、情绪和事件</strong>；<sup></sup></li>
+<li><strong>画作种类</strong>：一幅画（a painting of + raw prompt）还是一张照片（a photograph of + raw prompt），或者 Watercolor（水彩）、Oil Paint（油画）、Comic（漫画）、Digital Art（数码艺术）、Illustration（插画）、realistic painting（写实画）、photorealistic（写实照片）、Portrait photogram（肖像照）、sculpture (雕塑) 等等，画作种类可以叠加。</li>
+<li><strong>画家/画风</strong>：建议混合多个画家的风格，比如 <code>Studio Ghibli, Van Gogh, Monet</code>，或描述风格种类，比如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
+<li><strong>色调</strong>：yellow color scheme 指整个画面的主色调为黄色。</li>
+<li><strong>参考平台</strong>：Trending on ArtStation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方是相同参数下不同参考平台生成的图片风格。
 <figure><img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"><figcaption>相同参数下不同参考平台生成的图片</figcaption></figure></li>
-<li><strong>画家/画风</strong>：成图更接近哪位画家的风格，<code>Studio Ghibli</code> 吉卜力工作室，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
-<li><strong>配色</strong>：yellow color scheme 指整个画面的主色调为黄色。</li>
-<li><strong>画面描述</strong>：<strong>不要描述动作</strong>而是主体此时的状态，此外还可以添加次要元素和形容词描述画面。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 <code>desert!!, forest, river, (((sunset)))</code> 中会优先体现「desert」和「sunset」元素。
+</ol>
+<h3 id="特征描述" tabindex="-1"> 特征描述</h3>
+<p>除画面主体外，可以用其他具象物体和形容词来填充画面细节。描述词要具体，讲出你要的物体和它的特征。</p>
 <ul>
-<li>画面元素，如：背景 <code>beautiful background, forest</code>，光线描述 <code>Natural Lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight</code>；</li>
-<li>人物描述，如：<code>detailed gorgeous face, delicate features, elegant, Googly Eyes, Bone, big tits, silver hair, olive skin, Mini smile, Cinematic, Magazine, Golden Hour, F/22</code>；</li>
-<li>画面质量描述，如 <code>award winning, breathtaking, groundbreaking, superb, outstanding</code>；</li>
-<li>细节特点描述，如 <code>insanely detailed and intricate, gorgeous, hyperrealism, smooth, sharp focus, Painting, Digital Art, Concept Art, Illustration, Artstation, in a symbolic and meaningful style, 4K</code>，或镜头角度 <code>Depth of Field, Side-View</code>。</li>
+<li>次要元素：物体不要太多，两到三个就好。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 <code>beautiful forest background, desert!!, (((sunset)))</code> 中会优先体现「desert」和「sunset」元素。</li>
+<li>人物特征：<code>detailed gorgeous face, delicate features, elegant, Googly Eyes, Bone, big tits, silver hair, olive skin, Mini smile</code>；</li>
+<li>特定润色：<code>insanely detailed and intricate, gorgeous, surrealism, smooth, sharp focus, Painting, Digital Art, Concept Art, Illustration, Artstation, in a symbolic and meaningful style, 8K</code>；</li>
+<li>光线描述：<code>Natural Lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight</code>，或逼真光照 <code>Unreal Engine</code>；</li>
+<li>镜头视角：<code>Cinematic, Magazine, Golden Hour, F/22, Depth of Field, Side-View</code>；</li>
+<li>画面质量：<code>award winning, breathtaking, groundbreaking, superb, outstanding</code>；</li>
+<li>其他描述：细节和纹理、物体占据画面的大小、年代、渲染 / 建模工具等。</li>
 </ul>
-</li>
-<li><strong>否定描述</strong>：auto/auto-cpu 分支支持 negative prompt，可以避免画面出现指定元素，如 <code>ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, armless, legless, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art</code>，避免裸体 <code>nudity, bare breasts</code>。</li>
+<h3 id="反向描述" tabindex="-1"> 反向描述</h3>
+<p>negative prompt（反向描述）可以在 auto/auto-cpu 分支中设置，避免画面出现指定元素。</p>
+<ul>
+<li>避免畸形：<code>ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, armless, legless, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art</code>；</li>
+<li>避免裸体：<code>nudity, bare breasts</code>。</li>
 </ul>
-<p>除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以使用 <a href="https://promptomania.com/stable-diffusion-prompt-builder/" target="_blank" rel="noopener noreferrer">promptoMANIA</a> 、<a href="https://weirdwonderfulai.art/resources/disco-diffusion-modifiers/" target="_blank" rel="noopener noreferrer">WEIRD WONDERFUL AI ART</a>按提示组合描述，或参考 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
+<h3 id="prompt-参考" tabindex="-1"> prompt 参考</h3>
+<p>除画面主体描述外，其他要素并非必须。如果你只是简单尝试，输入主体「apples」即可。</p>
+<p>如果你不知道生成什么图像，可以使用 <a href="https://promptomania.com/stable-diffusion-prompt-builder/" target="_blank" rel="noopener noreferrer">promptoMANIA</a> 、<a href="https://weirdwonderfulai.art/resources/disco-diffusion-modifiers/" target="_blank" rel="noopener noreferrer">WEIRD WONDERFUL AI ART</a> 按提示组合描述，或参考 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
 <blockquote>
 <p>goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k</p>
 </blockquote>
-<h3 id="prompt-matrix" tabindex="-1"> Prompt matrix</h3>
+<h2 id="prompt-matrix" tabindex="-1"> Prompt matrix</h2>
 <p>Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
 <BiliBili bvid="BV1YP411V7vV" /><p>上方视频的调教词为 <code>A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting</code>。<code>|</code> 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。</p>
 <p>另外，我们可以指定场景条件位置，比如 <code>@(moba|rpg|rts) character (2d|3d) model</code> 表示 <code>(moba|rpg|rts 三选一) character (2d|3d 二选一) model</code>，也就是会生成 3*2 张图片。开头的 <code>@</code> 是触发指定场景条件位置的符号，不能省略。</p>
@@ -181,9 +192,11 @@ wsl -l -v
 </li>
 <li id="footnote5"><p><a href="https://www.ifanr.com/app/1484403" target="_blank" rel="noopener noreferrer">外网爆火的 4 款「你说我画」自动作画工具，我们测了下，有 1 款的确超强</a> </p>
 </li>
-<li id="footnote6"><p><a href="https://github.com/hlky/stable-diffusion#prompt-matrix" target="_blank" rel="noopener noreferrer">stable-diffusion Prompt matrix</a> </p>
+<li id="footnote6"><p><a href="https://www.guokr.com/article/462587/" target="_blank" rel="noopener noreferrer">最时髦的 AI 画画，一文包教包会</a> </p>
 </li>
-<li id="footnote7"><p><a href="https://github.com/docker/for-win/issues/3171#issuecomment-572571882" target="_blank" rel="noopener noreferrer">Windows 端口访问被拒</a> </p>
+<li id="footnote7"><p><a href="https://github.com/hlky/stable-diffusion#prompt-matrix" target="_blank" rel="noopener noreferrer">stable-diffusion Prompt matrix</a> </p>
+</li>
+<li id="footnote8"><p><a href="https://github.com/docker/for-win/issues/3171#issuecomment-572571882" target="_blank" rel="noopener noreferrer">Windows 端口访问被拒</a> </p>
 </li>
 </ol>
 </section>
