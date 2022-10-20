@@ -15,7 +15,7 @@ order: -32
 
 之后尝试了各种输入法，百度、讯飞、手心等依旧是键盘记录器，影子输入法开源但不稳定，谷歌拼音停止更新，微软拼音词库收录慢且难以转移，只有小狼毫开源稳定又能多设备同步词库。
 
-下载小狼毫：[官方渠道](https://github.com/rime/weasel/releases/download/0.14.3/weasel-0.14.3.0-installer.exe)，[国内搬运](https://wwi.lanzoui.com/iDyF4pdzmni)。
+小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/releases/download/0.14.3/weasel-0.14.3.0-installer.exe)，[国内搬运](https://wwi.lanzoui.com/iDyF4pdzmni)。
 
 ## 基础设置
 
@@ -44,7 +44,7 @@ order: -32
 
 ## 进阶指南
 
-小狼毫进阶前，需进入小狼毫默认的用户文档位置，新建 yaml 文档来存储输入法设置修改。如果使用「朙月拼音·简化字」输入法方案，则新建 「luna_pinyin_simp.custom.yaml」。`%APPDATA%\Rime` 是小狼毫默认的用户文档位置。如果安装时修改过用户文档位置，右键点击任务栏小狼毫图标，选「用户文件夹」，即会进入用户文档。^[[小狼毫 RIME 输入法配置](https://www.dazhuanlan.com/2019/10/06/5d995d43e4432/)]
+小狼毫进阶前，需进入小狼毫默认的用户文档位置，新建 yaml 文档来存储输入法设置修改。如果使用「朙月拼音·简化字」输入法方案，则新建「luna_pinyin_simp.custom.yaml」。`%APPDATA%\Rime` 是小狼毫默认的用户文档位置。如果安装时修改过用户文档位置，右键点击任务栏小狼毫图标，选「用户文件夹」，即会进入用户文档。^[[小狼毫 RIME 输入法配置](https://www.dazhuanlan.com/2019/10/06/5d995d43e4432/)]
 
 Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如 [定制指南](https://github.com/rime/home/wiki/CustomizationGuide)、[文件配置说明](https://github.com/rime/home/wiki/RimeWithSchemata#rime-%E4%B8%AD%E7%9A%84%E6%95%B8%E6%93%9A%E6%96%87%E4%BB%B6%E5%88%86%E4%BD%88%E5%8F%8A%E4%BD%9C%E7%94%A8)、[emoji 集成](https://github.com/rime/rime-emoji) 和 [模糊音设置](https://github.com/rime/home/wiki/CustomizationGuide#%E6%A8%A1%E7%B3%8A%E9%9F%B3)。
 
@@ -93,9 +93,9 @@ Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如 [�
 punctuator:
   import_preset: default
   full_shape:
-    "/" : "、"
+    "/": "、"
   half_shape:
-    "/" : "、"
+    "/": "、"
 ```
 
 ### 指定程序中默认输入法

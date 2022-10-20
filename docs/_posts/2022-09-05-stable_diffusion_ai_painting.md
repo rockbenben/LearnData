@@ -109,31 +109,49 @@ Fix Faces 是通过 GFPGAN 模型来改善图片中的面孔，Effect strength �
 
 Upscale 放大分辨率功能有 RealESRGAN，GoBIG，Latent Diffusion Super Resolution 和 GoLatent 四种模型，其中的 RealESRGAN 有普通与卡通两种模式，可按需选择。Upscale 图片主要消耗 CPU 与内存资源。
 
-## 使用说明
+## 文字描述图像
 
-### 文字描述图像
+Stable Diffusion 是以文字内容 (英文) 描绘一个场景或事物，从而决定你的画面中将出现什么。文字描绘是决定图像生成质量的关键因素。
 
-Stable Diffusion 的核心功能是以文字内容 (英文) 描绘一个场景或事物，从而决定你的画面中将出现什么。因此，文字描绘是决定图像生成质量的关键因素。接下来，我会以官方文档案例为例，解构描述文字的要素和标准。^[[外网爆火的 4 款「你说我画」自动作画工具，我们测了下，有 1 款的确超强](https://www.ifanr.com/app/1484403)]
+样例：`A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}`。^[[外网爆火的 4 款「你说我画」自动作画工具，我们测了下，有 1 款的确超强](https://www.ifanr.com/app/1484403)]
 
-样例：`A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}`。
+### 常规描述
 
-- **画作种类**：Watercolor（水彩），Oil Paint（油画），Comic（漫画），Digital Art（数码艺术），Illustration（插画），realistic painting（写实画），photorealistic（写实照片），Portrait photogram（肖像照），sculpture (雕塑) 等等，可叠加多个种类描述。
-- **参考平台**：Trending on artstation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方提供相同参数下不同参考平台生成的图片风格。
-  ![](http://tc.seoipo.com/2022-09-16-22-33-26.png "相同参数下不同参考平台生成的图片")
-- **画家/画风**：成图更接近哪位画家的风格，`Studio Ghibli` 吉卜力工作室，此处可以输入不止一位画家，如「Van Gogh:3」and「Monet:2」，即作品三分像梵高，两分像莫奈；或直接描述风格种类，如 `very coherent symmetrical artwork`，将作品结构设为「连贯且对称」。
-- **配色**：yellow color scheme 指整个画面的主色调为黄色。
-- **画面描述**：**不要描述动作**而是主体此时的状态，此外还可以添加次要元素和形容词描述画面。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 `desert!!, forest, river, (((sunset)))` 中会优先体现「desert」和「sunset」元素。
-  - 画面元素，如：背景 `beautiful background, forest`，光线描述 `Natural Lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight`；
-  - 人物描述，如：`detailed gorgeous face, delicate features, elegant, Googly Eyes, Bone, big tits, silver hair, olive skin, Mini smile, Cinematic, Magazine, Golden Hour, F/22`；
-  - 画面质量描述，如 `award winning, breathtaking, groundbreaking, superb, outstanding`；
-  - 细节特点描述，如 `insanely detailed and intricate, gorgeous, hyperrealism, smooth, sharp focus, Painting, Digital Art, Concept Art, Illustration, Artstation, in a symbolic and meaningful style, 4K`，或镜头角度 `Depth of Field, Side-View`。
-- **否定描述**：auto/auto-cpu 分支支持 negative prompt，可以避免画面出现指定元素，如 `ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, armless, legless, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art`，避免裸体 `nudity, bare breasts`。
+1. 输入图像的对象、主体，比如一只熊猫、一个持剑的战士，**不要描述动作、情绪和事件**；^[[最时髦的 AI 画画，一文包教包会](https://www.guokr.com/article/462587/)]
+2. **画作种类**：一幅画（a painting of + raw prompt）还是一张照片（a photograph of + raw prompt），或者 Watercolor（水彩）、Oil Paint（油画）、Comic（漫画）、Digital Art（数码艺术）、Illustration（插画）、realistic painting（写实画）、photorealistic（写实照片）、Portrait photogram（肖像照）、sculpture (雕塑) 等等，画作种类可以叠加。
+3. **画家/画风**：建议混合多个画家的风格，比如 `Studio Ghibli, Van Gogh, Monet`，或描述风格种类，比如 `very coherent symmetrical artwork`，将作品结构设为「连贯且对称」。
+4. **色调**：yellow color scheme 指整个画面的主色调为黄色。
+5. **参考平台**：Trending on ArtStation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方是相同参数下不同参考平台生成的图片风格。
+   ![](http://tc.seoipo.com/2022-09-16-22-33-26.png "相同参数下不同参考平台生成的图片")
 
-除画面描述外，其他要素并非必须。如果你只是简单尝试，甚至可以只输入「apples」。如果你没有思绪，可以使用 [promptoMANIA](https://promptomania.com/stable-diffusion-prompt-builder/) 、[WEIRD WONDERFUL AI ART](https://weirdwonderfulai.art/resources/disco-diffusion-modifiers/)按提示组合描述，或参考 AI 图库 [PromptHero](https://prompthero.com/) 和 [OpenArt](https://openart.ai/) 上其他人分享的成品图和描述文案，比如
+### 特征描述
+
+除画面主体外，可以用其他具象物体和形容词来填充画面细节。描述词要具体，讲出你要的物体和它的特征。
+
+- 次要元素：物体不要太多，两到三个就好。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 `beautiful forest background, desert!!, (((sunset)))` 中会优先体现「desert」和「sunset」元素。
+- 人物特征：`detailed gorgeous face, delicate features, elegant, Googly Eyes, Bone, big tits, silver hair, olive skin, Mini smile`；
+- 特定润色：`insanely detailed and intricate, gorgeous, surrealism, smooth, sharp focus, Painting, Digital Art, Concept Art, Illustration, Artstation, in a symbolic and meaningful style, 8K`；
+- 光线描述：`Natural Lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight`，或逼真光照 `Unreal Engine`；
+- 镜头视角：`Cinematic, Magazine, Golden Hour, F/22, Depth of Field, Side-View`；
+- 画面质量：`award winning, breathtaking, groundbreaking, superb, outstanding`；
+- 其他描述：细节和纹理、物体占据画面的大小、年代、渲染 / 建模工具等。
+
+### 反向描述
+
+negative prompt（反向描述）可以在 auto/auto-cpu 分支中设置，避免画面出现指定元素。
+
+- 避免畸形：`ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, armless, legless, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art`；
+- 避免裸体：`nudity, bare breasts`。
+
+### prompt 参考
+
+除画面主体描述外，其他要素并非必须。如果你只是简单尝试，输入主体「apples」即可。
+
+如果你不知道生成什么图像，可以使用 [promptoMANIA](https://promptomania.com/stable-diffusion-prompt-builder/) 、[WEIRD WONDERFUL AI ART](https://weirdwonderfulai.art/resources/disco-diffusion-modifiers/) 按提示组合描述，或参考 AI 图库 [PromptHero](https://prompthero.com/) 和 [OpenArt](https://openart.ai/) 上其他人分享的成品图和描述文案，比如
 
 > goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k
 
-### Prompt matrix
+## Prompt matrix
 
 Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。^[[stable-diffusion Prompt matrix](https://github.com/hlky/stable-diffusion#prompt-matrix)] 此时，批次数量的设置会被忽略。
 

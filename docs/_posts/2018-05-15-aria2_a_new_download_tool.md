@@ -33,27 +33,21 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
 将懒人包解压到 `D:\Aria2`，点击 `AriaNg 启动器.exe` 即可开始下载。两个启动器任选其一，都集成了后端服务和前端 UI，无需启动其他程序。包内均为开源绿色软件，不涉及任何隐私和安装，更没病毒，360 误报拿它没办法。
 
-2022.09.29 更新 Aria2 1.36.0，AriaNG 1.2.4，并增加 bt-tracker 到 131，方便 BT 和磁力链接提速。
+2022.10.20 更新 Aria2 1.36.0，AriaNG 1.2.5，并增加 bt-tracker 到 143，方便 BT 和磁力链接提速。
 
 功能新增：任务开始、完成和错误时，推送系统通知，aria2.conf 特别功能区块设置通知的开启与关闭，建议来自 @我真的爱发明。
 
 ---
 
-如果不想用懒人包而想对 Aria2 自己重新配置的话，请往下看配置步骤。
+如果想从小白进阶，搞清 Aria2 背后设置的话，请往下看配置步骤。
 
 ## Aria2 设置
 
-1. 下载 [Aria2 快速设置包](http://aria2c.com/archiver/aria2.zip)。
+1. 下载 [Aria2 快速设置包](https://wwz.lanzouy.com/iPZki0clqe5e)，将其解压到常用的存放目录，比如 `D:\Aria2`。
 
-2. 把快速设置包解压到常用的存放目录，比如 `D:\Aria2`。
+2. 点击 `aria2.exe` , 启动 aria2，该程序会在任务栏中植入图标。
 
-3. 官网下载 [Aria2 程序](https://github.com/aria2/aria2/releases), Win10 系统选择 [aria2-1.36.0-win-64bit-build1.zip](https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0-win-64bit-build1.zip)，然后解压到快速设置包目录中，替代其中的 `aria2c.exe` 程序。
-
-   ![](http://tc.seoipo.com/20191210232831.png)
-
-4. 点击 `aria2.exe` , 启动 aria2，该程序会在任务栏中植入图标。
-
-5. 修改 `aria2.conf`，更多设置参考 [Aria2 & YAAW 使用说明](http://aria2c.com/usage.html)。^[[Aria2 基础上手指南](https://zhuanlan.zhihu.com/p/30666881)]
+3. 修改 `aria2.conf`，更多设置参考 [aria2c 官方文档](https://aria2.github.io/manual/en/html/aria2c.html)。^[[Aria2 基础上手指南](https://zhuanlan.zhihu.com/p/30666881)]
 
    修改默认下载目录：
 
@@ -81,22 +75,18 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
    ```conf
    # bt-tracker 更新，解决 Aria2 BT 下载速度慢没速度的问题
-   bt-tracker=udp://tracker.opentrackr.org:1337/announce,udp://9.rarbg.com:2810/announce,udp://tracker.openbittorrent.com:6969/announce,http://tracker.openbittorrent.com:80/announce,https://opentracker.i2p.rocks:443/announce,udp://tracker.torrent.eu.org:451/announce,udp://open.stealth.si:80/announce,udp://exodus.desync.com:6969/announce,udp://tracker.tiny-vps.com:6969/announce,udp://tracker.pomf.se:80/announce,udp://tracker.moeking.me:6969/announce,udp://tracker.lelux.fi:6969/announce,udp://tracker.dler.org:6969/announce,udp://tracker.altrosky.nl:6969/announce,udp://open.demonii.com:1337/announce,udp://explodie.org:6969/announce,udp://bt1.archive.org:6969/announce,udp://bt.oiyo.tk:6969/announce,udp://6ahddutb1ucc3cp.ru:6969/announce,https://tracker.nanoha.org:443/announce
+   bt-tracker=udp://tracker.opentrackr.org:1337/announce,udp://9.rarbg.com:2810/announce,udp://tracker.openbittorrent.com:6969/announce,udp://opentracker.i2p.rocks:6969/announce,https://opentracker.i2p.rocks:443/announce,http://tracker.openbittorrent.com:80/announce,udp://tracker.torrent.eu.org:451/announce,udp://open.stealth.si:80/announce,udp://vibe.sleepyinternetfun.xyz:1738/announce,udp://tracker2.dler.org:80/announce,udp://tracker1.bt.moack.co.kr:80/announce,udp://tracker.zemoj.com:6969/announce,udp://tracker.tiny-vps.com:6969/announce,udp://tracker.theoks.net:6969/announce,udp://tracker.publictracker.xyz:6969/announce,udp://tracker.monitorit4.me:6969/announce,udp://tracker.moeking.me:6969/announce,udp://tracker.lelux.fi:6969/announce,udp://tracker.dler.org:6969/announce,udp://tracker.army:6969/announce
    ```
 
    其他设置不大常用，有时间的话，你可以慢慢调整。
 
-6. 开始下载
+4. 开始下载
 
    Aira2 没有原生软件界面，除了代码执行下载，普通用户输入网址 `aria2c.com` 就能启动下载界面。^[[aria2 懒人安装教程](https://www.appinn.com/aria2-in-windows-setup/)]
 
-   网页会自动与本地的 aira2 程序连接，实现下载管理。建议把该网址放到书签中，方便使用。
+   该页面会与本地的 aira2c 程序关联，实现下载管理，建议把其收藏到书签，方便使用。
 
-如果出现 Aria2 RPC 服务器错误，说明 aria2.conf 配置出错，可以直接使用「真·懒人包」，或使用设置好的「aria2.conf」文件覆盖原文件。
-
-真·懒人包：<https://www.seoipo.com/software/Aria2/>
-
-aria2.conf 配置下载：<https://wwz.lanzouf.com/iZczz08epqwb>
+Aria2 RPC 服务器报错是因为 aria2.conf 配置出错，推荐直接使用 [真·懒人包](https://www.seoipo.com/software/Aria2/)。
 
 ## Aria2 进阶
 
@@ -104,11 +94,11 @@ aria2.conf 配置下载：<https://wwz.lanzouf.com/iZczz08epqwb>
 
 [AriaNg](https://github.com/mayswind/AriaNg) 和传统下载软件界面类似，使用简单。
 
-![](http://tc.seoipo.com/20180516104758.png)
+![](http://tc.seoipo.com/20180516104758.png "AriaNg 界面")
 
-使用方法：[下载 AriaNg](https://github.com/mayswind/AriaNg-DailyBuild/archive/master.zip)，解压后直接运行 index.html 就可打开 WebUI 界面，可以收藏到书签，方便使用。
+使用方法：下载并解压 [AriaNg](https://github.com/mayswind/AriaNg-DailyBuild/archive/master.zip)，运行目录下的 index.html，打开 Aria2 WebUI 界面，将页面链接收藏到书签，方便后续使用 Aria2。
 
-如果报错的话，进入 `AriaNg 设置-RPC`，检查 RPC 地址是否正确，默认为 `localhost:6800`。
+如果 AriaNg 页面出现报错，则从页面左侧进入 `AriaNg 设置 - RPC`，检查 RPC 地址，默认地址为 `localhost:6800`。
 
 ### Aira2 下载预热
 
@@ -120,13 +110,11 @@ Aira2 下载预热是 BT 下载前的必备步骤，否则速度容易很慢。
 
 ### 接管浏览器下载
 
-浏览器安装 [添加到 aria2](https://chrome.google.com/webstore/detail/nimeojfecmndgolmlmjghjmbpdkhhogl)，用 Aria2 接管浏览器的下载管理。
+如果想用 Aria2 接管浏览器的下载管理，推荐安装浏览器扩展 [添加到 aria2](https://chrome.google.com/webstore/detail/nimeojfecmndgolmlmjghjmbpdkhhogl)，国内搬运地址：<https://wwi.lanzoui.com/i4Fmeetsdaj>，懒人包已内置本浏览器插件。
 
-`添加到 aria2` 扩展的国内搬运地址：<https://wwi.lanzoui.com/i4Fmeetsdaj>
+有的浏览器无法直接安装 `.crx` 格式的扩展，需将文件解压到新文件夹「xxx」，然后在浏览器地址栏输入 `chrome://extensions/` 开启开发者模式，点击加载已解压的扩展程序，选中刚才解压的文件夹「xxx」。
 
-有的浏览器无法直接安装 `.crx` 格式的扩展，需将文件解压到新文件夹 xxx，然后在浏览器地址栏输入 `chrome://extensions/` 开启开发者模式，点击加载已解压的扩展程序，选中刚才解压的文件夹 xxx。
-
-扩展安装好后，右键扩展图标，点击`选项 - 设置`，设置如下：
+扩展安装好后，右键扩展图标，点击 `选项 - 设置`，设置如下：
 
 - 最小监视：`10` M，低于该容量将由浏览器下载。如果 Aria2 要接手所有下载，可以将最小监视设为 `0.001`。
 - JSON-RPC 链接：`http://localhost:6800/jsonrpc`。
@@ -135,11 +123,9 @@ Aira2 下载预热是 BT 下载前的必备步骤，否则速度容易很慢。
 
 ## Aria2 启动器
 
-Aria2 启动需要分别打开下载界面和 exe 应用文件，比较麻烦。我用 ahk 做了个启动器，可以检测 exe 应用运行状态并一键打开下载界面。
+每次启动 Aria2 下载，总要执行两次，打开 WebUI 链接和 aria2c 两个文件，比较麻烦。因此，我用 AutoHotKey 做了个启动器，可以检测 aria2c 运行状态并一键打开下载界面，简化 Aria 启动。
 
-启动器下载：<https://wwi.lanzoui.com/inbO5entf3e>
+下载 [Aria2 启动器](https://wwi.lanzoui.com/inbO5entf3e)，然后将其解压到 Aria2 运行目录，比如 `D:\Aria2`。Aria2 启动器包含两种方式，二选一即可。
 
-将启动器到 Aria2 运行目录，如 `D:\Aria2`。
-
-- **Aria2c 启动器**：使用 `http://aria2c.com/` 作为默认下载界面，不需要多余设置。
-- **AriaNg 启动器**：使用 AriaNg 作为下载界面，需将 AriaNg 解压到 Aria2 运行目录，如 `D:\Aria2\AriaNg`。
+- **AriaNg 启动器**（推荐）：使用 AriaNg 本地版作下载界面，把 AriaNg 文件解压到 Aria2 运行目录，比如如 `D:\Aria2\AriaNg`。
+- **Aria2c 启动器**：将 `http://aria2c.com/` 作为默认下载界面，不需要多余设置。

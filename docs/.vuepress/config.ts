@@ -15,7 +15,7 @@ export default defineUserConfig({
   //网站描述
   description: "开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。",
 
-  //网站路径，默认为 /，如果非主域名，需改为
+  // 网站路径默认为主域名。如果网站部署在子域名，比如 xxx.com/yyy，则需修改 base: "/yyy/"
   base: "/",
 
   theme,
@@ -28,9 +28,9 @@ export default defineUserConfig({
   plugins: [
     //algolia 全文搜索：没设置爬虫的话，需删除 docsearchPlugin 区块以使用节点搜索
     docsearchPlugin({
-      indexName: 'newzone',
-      appId: 'M4EXXEZIEG',
-      apiKey: 'fd8891a9c4cc21e0ef4f11bf44f7a11e',
+      indexName: "newzone",
+      appId: "M4EXXEZIEG",
+      apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
     }),
     //本地搜索：默认情况下，该插件会将页面标题和小标题作为搜索索引。
     searchPlugin({

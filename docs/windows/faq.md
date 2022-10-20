@@ -14,7 +14,7 @@ Windows 遇到不懂的问题，可以在 [Microsoft 支持社区](https://answe
 | Win 键 + 数字键    | 启动任务栏的快捷方式                   |
 | Win 键 + D         | 显示桌面，再点击一次后恢复             |
 | Win 键 + E         | 快速启动文件资源管理器                 |
-| Win 键 + Tab       | 查看当前桌面打开的窗口和所有桌面       |
+| **Win 键 + Tab**   | 查看当前桌面打开的窗口和所有桌面       |
 | Win + Ctrl + D     | 创建新的虚拟桌面，新桌面里没有打开窗口 |
 | Win + Ctrl + 左/右 | 切换虚拟桌面                           |
 | Win + I            | 系统设置                               |
@@ -29,7 +29,7 @@ Windows 遇到不懂的问题，可以在 [Microsoft 支持社区](https://answe
 
 ## 网址快捷方式
 
-鼠标右键-新建 - 快捷方式，插入浏览器路径，然后空格并输入要打开的网址链接，比如 `"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" https://newzone.top/`。
+鼠标右键 - 新建 - 快捷方式，插入浏览器路径，然后空格并输入要打开的网址链接，比如 `"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" https://newzone.top/`。
 
 如果需要一次打开多个网址，则在参数后继续添加「空格 链接」。
 
