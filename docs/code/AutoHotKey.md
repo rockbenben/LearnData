@@ -28,11 +28,13 @@ AutoHotKey 是 Windows 平台下开源的热键脚本语言。AHK 学习门槛�
 
 ## 常用方法
 
-### 设置托盘图标
+### 托盘图标
 
 自定义图标可使用 ico 或 png，不支持 svg 格式。
 
-设置命令为 `Menu, Tray, Icon , %A_WorkingDir%\dock_panel.png`。`%A_WorkingDir%` 代表脚本所在目录。
+托盘图标设置命令为 `Menu, Tray, Icon, %A_WorkingDir%\dock_panel.png`。`%A_WorkingDir%` 代表脚本所在目录。
+
+如果是设置 exe 程序图标，则使用 [Ahk2Exe](https://github.com/AutoHotkey/Ahk2Exe/releases) 工具手动转换。
 
 ### 执行 PowerShell
 

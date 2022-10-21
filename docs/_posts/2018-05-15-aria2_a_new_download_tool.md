@@ -33,7 +33,7 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
 将懒人包解压到 `D:\Aria2`，点击 `AriaNg 启动器.exe` 即可开始下载。两个启动器任选其一，都集成了后端服务和前端 UI，无需启动其他程序。包内均为开源绿色软件，不涉及任何隐私和安装，更没病毒，360 误报拿它没办法。
 
-2022.10.20 更新 Aria2 1.36.0，AriaNG 1.2.5，并增加 bt-tracker 到 143，方便 BT 和磁力链接提速。
+2022.10.21 重构启动器，更新 Aria2 1.36.0，AriaNG 1.2.5，并增加 bt-tracker 到 143，方便 BT 和磁力链接提速。
 
 功能新增：任务开始、完成和错误时，推送系统通知，aria2.conf 特别功能区块设置通知的开启与关闭，建议来自 @我真的爱发明。
 
@@ -57,7 +57,8 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
    ```conf
    # 文件的保存路径 (可使用绝对路径或相对路径), 默认：当前启动位置
-   dir=D:\Download  #D:\Download 是我的默认下载目录
+   # D:\Download 是我的默认下载目录，可以改为你自己的下载路径
+   dir=D:\Download  
    ```
 
    修改服务器默认连接数：
@@ -84,9 +85,9 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
    其他设置不大常用，有时间的话，你可以慢慢调整。
 
-5. Aira2 没有原生应用界面，输入网址 `aria2c.com` 使用第三方下载界面。该页面自动与本地的 aira2c 程序关联，实现下载管理，建议把其收藏到书签，方便使用。^[[aria2 懒人安装教程](https://www.appinn.com/aria2-in-windows-setup/)]
+5. Aira2 没有原生应用界面，输入网址 `http://aria2c.com` 使用第三方下载界面。该页面自动与本地的 aira2c 程序关联，实现下载管理，建议把其收藏到书签，方便使用。^[[aria2 懒人安装教程](https://www.appinn.com/aria2-in-windows-setup/)]
 
-如果使用时出现 RPC 服务器报错，说明 aria2.conf 配置错了，推荐下载 [真·懒人包](https://www.seoipo.com/software/Aria2/)。
+如果出现「Aria2 RPC 服务器错误」，检查 JSON-RPC Path 是否为 `http://localhost:6800/jsonrpc`。如果依然报错，则说明 aria2.conf 配置错了，推荐下载 [真·懒人包](https://www.seoipo.com/software/Aria2/)。
 
 ## Aria2 进阶
 
@@ -127,7 +128,7 @@ Aira2 下载预热是 BT 下载前的必备步骤，否则速度容易很慢。
 
 每次启动 Aria2 下载，总要执行两次，打开 WebUI 链接和 aria2c 两个文件，比较麻烦。因此，我用 AutoHotKey 做了个启动器，可以检测 aria2c 运行状态并一键打开下载界面，简化 Aria 启动。
 
-下载 [Aria2 启动器](https://wwz.lanzouf.com/iXvTE0eaph5c)，然后将其解压到 Aria2 运行目录，比如 `D:\Aria2`。Aria2 启动器包含两种方式，二选一即可。
+下载 [Aria2 启动器](https://wwz.lanzouf.com/iqud50ebl06d)，然后将其解压到 Aria2 运行目录，比如 `D:\Aria2`。Aria2 启动器包含两种方式，二选一即可。
 
 - **AriaNg 启动器**（推荐）：使用 AriaNg 本地版作下载管理界面。使用该启动器前，需将 [AriaNg](https://github.com/mayswind/AriaNg-DailyBuild/archive/master.zip) 解压到 Aria2 目录下，并将文件夹名改为 AriaNg，执行页面 index.html 位于 `Aria2\AriaNg\index.html`。
-- **Aria2c 启动器**：将 `http://aria2c.com/` 作为默认下载界面，不需要多余设置。
+- **Aria2c 启动器**：将 `http://aria2c.com` 作为默认下载界面，不需要多余设置。
