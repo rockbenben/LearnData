@@ -44,7 +44,7 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 然后，将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 下载并解压到本地硬盘。或者，使用阿里云盘下载 [聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)。
 
-### 选择分支
+### 选择工具分支
 
 目前 Stable Diffusion 有 hlky、auto、auto-cpu 和 lstein 四个分支。如果要更换分支，则更改镜像构建命令 `docker compose --profile [ui] up --build`，将 `[ui]` 替换为所需的镜像名即可。
 
@@ -121,7 +121,7 @@ Stable Diffusion 是以文字内容 (英文) 描绘一个场景或事物，从�
 2. **画作种类**：一幅画（a painting of + raw prompt）还是一张照片（a photograph of + raw prompt），或者 Watercolor（水彩）、Oil Paint（油画）、Comic（漫画）、Digital Art（数码艺术）、Illustration（插画）、realistic painting（写实画）、photorealistic（写实照片）、Portrait photogram（肖像照）、sculpture (雕塑) 等等，画作种类可以叠加。
 3. **画家/画风**：建议混合多个画家的风格，比如 `Studio Ghibli, Van Gogh, Monet`，或描述风格种类，比如 `very coherent symmetrical artwork`，将作品结构设为「连贯且对称」。
 4. **色调**：yellow color scheme 指整个画面的主色调为黄色。
-5. **参考平台**：Trending on ArtStation，也可以替换为「Facebook」「Pixiv」「Pixbay」等等。下方是相同参数下不同参考平台生成的图片风格。
+5. **参考平台**：Trending on ArtStation，也可以替换为「Facebook」「Pixiv」「Pixbay」等。
    ![](http://tc.seoipo.com/2022-09-16-22-33-26.png "相同参数下不同参考平台生成的图片")
 
 ### 特征描述
@@ -165,7 +165,7 @@ Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张
 
 ### Docker Desktop failed
 
-未正常安装/关闭 Docker 容器时，可能会报错 `Docker Desktop failed to start/stop` 。
+未正常安装/关闭 Docker 容器时，可能会报错 `Docker Desktop failed to start/stop`。
 
 先删除 `%AppData%` 路径下的 Docker 文件夹，然后在 PowerShell 中输入下方命令，关闭 WSL 和 docker-desktop。最后，手动重启 Docker Desktop。
 
