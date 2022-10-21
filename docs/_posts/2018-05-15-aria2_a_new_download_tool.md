@@ -43,11 +43,15 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
 ## Aria2 设置
 
-1. 下载 [Aria2 快速设置包](https://wwz.lanzouy.com/iPZki0clqe5e)，将其解压到常用的存放目录，比如 `D:\Aria2`。
+1. 下载 [Aria2 快速设置包](http://aria2c.com/archiver/aria2.zip)，将其解压到存放文件夹，比如 `D:\Aria2`。
 
-2. 点击 `aria2.exe` , 启动 aria2，该程序会在任务栏中植入图标。
+2. 官网下载 [Aria2 程序](https://github.com/aria2/aria2/releases)（Windows 选择 [aria2-1.36.0-win-64bit-build1.zip](https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0-win-64bit-build1.zip)），然后解压到快速设置包的存放文件夹中，替代其中的 `aria2c.exe` 程序。
 
-3. 修改 `aria2.conf`，更多设置参考 [aria2c 官方文档](https://aria2.github.io/manual/en/html/aria2c.html)。^[[Aria2 基础上手指南](https://zhuanlan.zhihu.com/p/30666881)]
+   ![](http://tc.seoipo.com/20191210232831.png "GitHub 官方仓库下载 Aria2")
+
+3. 点击 `aria2.exe` 启动 aria2，系统托盘区会同步出现应用图标。
+
+4. 参照 [懒人包配置](https://wwz.lanzouf.com/iwv6f0eadq9i) 修改 `aria2.conf`，更多设置参考 [aria2c 官方文档](https://aria2.github.io/manual/en/html/aria2c.html)。^[[Aria2 基础上手指南](https://zhuanlan.zhihu.com/p/30666881)]
 
    修改默认下载目录：
 
@@ -80,13 +84,9 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
    其他设置不大常用，有时间的话，你可以慢慢调整。
 
-4. 开始下载
+5. Aira2 没有原生应用界面，输入网址 `aria2c.com` 使用第三方下载界面。该页面自动与本地的 aira2c 程序关联，实现下载管理，建议把其收藏到书签，方便使用。^[[aria2 懒人安装教程](https://www.appinn.com/aria2-in-windows-setup/)]
 
-   Aira2 没有原生软件界面，除了代码执行下载，普通用户输入网址 `aria2c.com` 就能启动下载界面。^[[aria2 懒人安装教程](https://www.appinn.com/aria2-in-windows-setup/)]
-
-   该页面会与本地的 aira2c 程序关联，实现下载管理，建议把其收藏到书签，方便使用。
-
-Aria2 RPC 服务器报错是因为 aria2.conf 配置出错，推荐直接使用 [真·懒人包](https://www.seoipo.com/software/Aria2/)。
+如果使用时出现 RPC 服务器报错，说明 aria2.conf 配置错了，推荐下载 [真·懒人包](https://www.seoipo.com/software/Aria2/)。
 
 ## Aria2 进阶
 
@@ -110,16 +110,18 @@ Aira2 下载预热是 BT 下载前的必备步骤，否则速度容易很慢。
 
 ### 接管浏览器下载
 
-如果想用 Aria2 接管浏览器的下载管理，推荐安装浏览器扩展 [添加到 aria2](https://chrome.google.com/webstore/detail/nimeojfecmndgolmlmjghjmbpdkhhogl)，国内搬运地址：<https://wwi.lanzoui.com/i4Fmeetsdaj>，懒人包已内置本浏览器插件。
+如果想用 Aria2 接管浏览器的下载管理，需安装插件扩展。
 
-有的浏览器无法直接安装 `.crx` 格式的扩展，需将文件解压到新文件夹「xxx」，然后在浏览器地址栏输入 `chrome://extensions/` 开启开发者模式，点击加载已解压的扩展程序，选中刚才解压的文件夹「xxx」。
+- Chrome：[添加到 aria2](https://chrome.google.com/webstore/detail/nimeojfecmndgolmlmjghjmbpdkhhogl)，也可以从 [国内搬运地址](https://wwi.lanzoui.com/i4Fmeetsdaj) 下载，懒人包已内置该扩展。
+  有的 Chrome 浏览器无法直接安装 `.crx` 格式的扩展，需将文件解压到新文件夹「xxx」，然后在浏览器地址栏输入 `chrome://extensions/` 开启开发者模式，点击加载已解压的扩展程序，选中刚才解压的文件夹「xxx」。
+- Firefox：[Aria2 Download Manager Integration](https://addons.mozilla.org/en-US/firefox/addon/aria2-integration/)，配置可参考下方的 Chrome 扩展设置。
 
-扩展安装好后，右键扩展图标，点击 `选项 - 设置`，设置如下：
+扩展「添加到 aria2」安装好后，右键扩展图标，点击 `选项 - 设置`，设置如下：
 
 - 最小监视：`10` M，低于该容量将由浏览器下载。如果 Aria2 要接手所有下载，可以将最小监视设为 `0.001`。
 - JSON-RPC 链接：`http://localhost:6800/jsonrpc`。
 
-注意：`添加到 aria2` 图标显示 `en` 方为开启状态，`dis` 为关闭状态，点击图标可以切换使用状态。
+注意：「添加到 aria2」图标显示 `en` 方为开启状态，`dis` 为关闭状态，点击图标可以切换使用状态。
 
 ## Aria2 启动器
 
