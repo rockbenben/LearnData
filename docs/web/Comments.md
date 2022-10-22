@@ -21,7 +21,7 @@ Waline 支持 Akismet 反垃圾评论和免注册留言，不过匿名留言会�
 
 进入 Vercel 项目的「Overview - Settings - Environment Variables」，然后按 [Waline 评论通知](https://waline.js.org/guide/server/notification.html) 配置所需环境变量。如果需要 Webhook 等更多通知方式，则查看 [Waline 服务端配置](https://waline.js.org/reference/server.html)。配置成功后，进入项目的「Overview - Deployments」选择当前 Production 进行 Redeploy，重新部署后环境变量和评论通知方会生效。
 
-2022.08.26 出现问题「无法加载评论」，*.vercel.app 域名已经被 DNS 污染，国内使用建议绑定自定义域名。
+目前 `*.vercel.app` 域名已经被 DNS 污染，会出现「无法加载评论」，国内使用建议绑定自定义域名，域名对备案暂无硬性要求。
 
 ## Gitalk
 

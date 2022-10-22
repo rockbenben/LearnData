@@ -14,10 +14,10 @@ Compose 是用于定义和运行多容器 Docker 应用程序的工具。通过 
 Docker 使用查看 [Docker — 从入门到实践](https://yeasy.gitbook.io/docker_practice/introduction/what)。
 
 - 列出所有容器：`sudo docker ps -a`。
-
 - 停止容器运行：`sudo docker stop <CONTAINER ID/NAME>`。部分容器名有可能无法识别，最好在容器名称中添加数字。
-
 - 删除指定容器：`sudo docker rm <CONTAINER ID/NAME>`，删除前需先停止容器。
+- 清理容器（慎重）：`sudo docker system prune -a`，用于清理磁盘，删除关闭的容器、无用的数据卷和网络，以及无 tag 和没使用的镜像。
+- 清理数据卷（慎重）：`sudo docker volume prune`，关闭的容器数据卷会被删除，有可能破坏有用数据，需极度谨慎。
 
 ## Windows Docker
 

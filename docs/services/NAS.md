@@ -44,6 +44,7 @@ NAS 上常用的 Docker 容器服务：
   - 监控指定名称的镜像：`docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once nginx redis`。本案例只更新名为“nginx”和“redis”的容器，其他容器将被忽略。
   - 指定容器的 compose 命令中添加 lable `com.centurylinklabs.watchtower.enable=false`，可禁止该容器的监控和更新。
 - [Check 酱](https://github.com/easychen/checkchan-dist)：监测网页内容变化，并发送异动到微信。亦支持 http status、json 和 rss 监测。配合自架云端，关电脑后也能运行。
+- [PhotoPrism](https://docs.photoprism.app/)：基于 ai 私有化部署的个人相册。如果部署时出错，则尝试删除数据库文件夹下的内容。地点标记功能非常强大，类似本地版 Google Photos。
 - [Home Assistant](https://www.home-assistant.io/)：开源家庭自动化平台，可自定义集中管理各品牌的智能家居设备。米家设备需使用 hacs 下的集成 [Xiaomi Miot Auto](../family/HomeAutomation.html#home-assistant)。
 - [Node-RED](../family/HomeAutomation.html#node-red)：开源流处理，类似本地版的 IFTTT。
 - [qbittorrent](https://registry.hub.docker.com/r/linuxserver/qbittorrent/)：需修改所有默认端口，否则容易报错。PT 下载关闭 `BitTorrent - DHT` 和其他隐私选项，半小时停止做种，将下载文件添加 Everyone 权限，其他设置参考 [群晖使用 qbittorrent](https://blog.csdn.net/weixin_45120915/article/details/114691473)。
@@ -91,4 +92,4 @@ NAS 上常用的 Docker 容器服务：
 
 更换硬盘后，注意将数据连同文件夹用 file station 复制过去 (按住 Shift 选中所有你要的文件点右键 移动到...)，关机卸载旧盘。如果该硬盘涉及套件位置，注意检查设置。^[[如何把群晖 NAS 上的套件搬到另外个硬盘上](https://www.bigzhang.com/3264.html)]
 
-共享文件迁移：进入 `控制面板-共享文件夹`，把你的共享文件夹位置修改到新储存空间。^[[群晖 NAS 跨存储空间移动共享文件夹 (NAS 新增磁盘)](https://blog.csdn.net/hilaryfrank/article/details/109722319)]
+共享文件迁移：进入 `控制面板 - 共享文件夹`，把你的共享文件夹位置修改到新储存空间。^[[群晖 NAS 跨存储空间移动共享文件夹 (NAS 新增磁盘)](https://blog.csdn.net/hilaryfrank/article/details/109722319)]
