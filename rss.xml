@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 21 Oct 2022 15:50:59 GMT</pubDate>
-    <lastBuildDate>Fri, 21 Oct 2022 15:50:59 GMT</lastBuildDate>
+    <pubDate>Sat, 22 Oct 2022 14:01:29 GMT</pubDate>
+    <lastBuildDate>Sat, 22 Oct 2022 14:01:29 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -87,7 +87,7 @@
 <p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）</p>
 <h2 id="启动-stable-diffusion" tabindex="-1"> 启动 Stable Diffusion</h2>
 <p>准备好 Linux 路径后，启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入切换路径命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压文件目录执行部署命令。</p>
-<div><pre><code><span># 自动下载采样模型和依赖包</span>
+<div data-ext="sh"><pre><code><span># 自动下载采样模型和依赖包</span>
 <span>docker</span> compose <span>--profile</span> download up <span>--build</span>
 <span># 上方命令需要 20 分钟或更长，完成后执行镜像构建命令</span>
 <span>docker</span> compose <span>--profile</span> hlky up <span>--build</span>
@@ -154,7 +154,7 @@
 <h3 id="docker-desktop-failed" tabindex="-1"> Docker Desktop failed</h3>
 <p>未正常安装/关闭 Docker 容器时，可能会报错 <code>Docker Desktop failed to start/stop</code>。</p>
 <p>先删除 <code>%AppData%</code> 路径下的 Docker 文件夹，然后在 PowerShell 中输入下方命令，关闭 WSL 和 docker-desktop。最后，手动重启 Docker Desktop。</p>
-<div><pre><code>wsl --shutdown
+<div data-ext="PowerShell"><pre><code>wsl --shutdown
 wsl -l -v
 wsl --unregister docker-desktop
 wsl -l -v
@@ -366,7 +366,7 @@ wsl -l -v
 <p>仔细查看 Step1 中的源代码，找到区需要抓取的部分，输入到 Item (repeatable) Search Pattern。</p>
 <p>测试网址：<code>http://news.163.com/special/0001386F/rank_whole.html</code>。</p>
 <p>需要抓取的源代码：</p>
-<div><pre><code><span><span><span>&lt;</span>tr</span><span>></span></span>
+<div data-ext="html"><pre><code><span><span><span>&lt;</span>tr</span><span>></span></span>
   <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>red<span>"</span></span><span>></span></span>
     <span><span><span>&lt;</span>span</span><span>></span></span>2<span><span><span>&lt;/</span>span</span>
     <span>></span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>更时尚更运动 车展实拍解析红旗 H5<span>"</span></span>
@@ -377,7 +377,7 @@ wsl -l -v
 <span><span><span>&lt;/</span>tr</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p><img src="https://pic2.zhimg.com/v2-cf6dbf2c09189f7517ec63abdc80c50d_r.jpg" alt="" loading="lazy"></p>
 <p><strong>抓取规则</strong>：</p>
-<div><pre><code><span><span><span>&lt;</span>tr</span><span>></span></span>
+<div data-ext="html"><pre><code><span><span><span>&lt;</span>tr</span><span>></span></span>
   {*}
   <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>{*}<span>"</span></span><span>></span></span><span><span><span>&lt;</span>span</span><span>></span></span>{*}<span><span><span>&lt;/</span>span</span><span>></span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>{%}<span>"</span></span><span>></span></span>{%}<span><span><span>&lt;/</span>a</span><span>></span></span><span><span><span>&lt;/</span>td</span><span>></span></span>
   {*}
