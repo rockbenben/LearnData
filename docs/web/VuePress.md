@@ -14,7 +14,7 @@ LearnData 的主题为 [vuepress-theme-hope](https://vuepress-theme-hope.github.
 ## 初始配置
 
 1. 环境配置：安装 pnpm，也支持 npm 和 yarn，方法查看 [环境部署教程](../deploy/VPS.html#环境部署)。
-2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope@next docs`。vuepress-theme-hope 主题的样例文件会存储在该路径下。有时因版本问题，样例运行会报错，此时须用固定版本号来安装依赖环境，终端中输入 `pnpm add vuepress@2.0.0-beta.52 @vuepress/client@2.0.0-beta.52 vuepress-theme-hope@2.0.0-beta.113 && pnpm docs:dev`。
+2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope@next docs`。vuepress-theme-hope 主题的样例文件会存储在该路径下。有时因版本问题，样例运行会报错，此时须用固定版本号来安装依赖环境，终端中输入 `pnpm add vuepress@2.0.0-beta.51 @vuepress/client@2.0.0-beta.51 vuepress-theme-hope@2.0.0-beta.108 && pnpm docs:dev`。
 3. 执行命令 `pnpm docs:dev` 启动样例网站。
 4. `docs\.vuepress` 路径下的 config.ts，navbar.ts，sidebar.ts，theme.ts 可以修改页面属性，设置方法参考 [官方案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
    - config.ts：配置网站环境依赖和网站属性。
@@ -23,7 +23,7 @@ LearnData 的主题为 [vuepress-theme-hope](https://vuepress-theme-hope.github.
    - theme.ts：对主题和插件进行设置。
 5. 如果遇到报错，执行命令 `pnpm add vuepress@next vuepress-theme-hope@next && pnpm i && pnpm up` 修复并升级相关依赖包。这步可以解决大部分的报错。
 
-每个插件和主题版本只支持一个 VuePress 版本，因此要稳定的话，需用固定版本号的环境依赖才可以，比如 `pnpm add vuepress@2.0.0-beta.52 @vuepress/client@2.0.0-beta.52 vuepress-theme-hope@2.0.0-beta.113 @vuepress/plugin-google-analytics@2.0.0-beta.52 @vuepress/plugin-search@2.0.0-beta.521 @vuepress/plugin-docsearch@2.0.0-beta.52`。
+每个插件和主题版本只支持一个 VuePress 版本，因此要稳定的话，需用固定版本号的环境依赖才可以，比如 `pnpm add vuepress@2.0.0-beta.51 @vuepress/client@2.0.0-beta.51 vuepress-theme-hope@2.0.0-beta.108 @vuepress/plugin-google-analytics@2.0.0-beta.51 @vuepress/plugin-search@2.0.0-beta.51 @vuepress/plugin-docsearch@2.0.0-beta.51`。
 
 如果要测试最新的环境配置，可使用 `pnpm add vuepress@next vuepress-theme-hope@next @vuepress/plugin-google-analytics@next @vuepress/plugin-search@next @vuepress/plugin-docsearch@next && pnpm i && pnpm up`。
 

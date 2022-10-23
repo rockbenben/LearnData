@@ -184,7 +184,7 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 ### 本地运行 LearnData
 
 1. 安装环境 npm 和 pnpm，方法查看 [环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
-2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm add vuepress@2.0.0-beta.52 @vuepress/client@2.0.0-beta.52 vuepress-theme-hope@2.0.0-beta.113 @vuepress/plugin-google-analytics@2.0.0-beta.52 @vuepress/plugin-search@2.0.0-beta.521 @vuepress/plugin-docsearch@2.0.0-beta.52`。
+2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm add vuepress@2.0.0-beta.51 @vuepress/client@2.0.0-beta.51 vuepress-theme-hope@2.0.0-beta.108 @vuepress/plugin-google-analytics@2.0.0-beta.51 @vuepress/plugin-search@2.0.0-beta.51 @vuepress/plugin-docsearch@2.0.0-beta.51`。
 3. 完成前两步后，终端中输入 `pnpm docs:dev`，成功即可提示访问链接，默认为 `http://localhost:8080/`。
 
 运行本地服务器后，修改文件时预览页面也会同步发生改变。如果想停止本地服务器，在终端中按键 `Ctrl + C`。
