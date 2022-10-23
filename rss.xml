@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 22 Oct 2022 14:01:29 GMT</pubDate>
-    <lastBuildDate>Sat, 22 Oct 2022 14:01:29 GMT</lastBuildDate>
+    <pubDate>Sun, 23 Oct 2022 09:42:07 GMT</pubDate>
+    <lastBuildDate>Sun, 23 Oct 2022 09:42:07 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -229,7 +229,7 @@ wsl -l -v
 <p>建立 LearnData 只有一个月，但我从中获取的正反馈超过私有笔记一年的获得。笔记公开化是有百利而无一害。</p>
 <h3 id="输出分享" tabindex="-1"> 输出分享</h3>
 <p>其次，网页形式让笔记方便分享。除了效率工具心得，我把生活技巧、购物评价和说明书也放在 LearnData。家人或朋友需要帮助时，直接访问网页即可，不需要安装 app 或折腾账户分享，比如下图的 <a href="https://newzone.top/family/Maintenance.html#%E9%80%9A%E9%A9%AC%E6%A1%B6" target="_blank" rel="noopener noreferrer">通马桶技巧</a> 和疏通器说明书。</p>
-<p><img src="http://tc.seoipo.com/2022-08-19-22-52-29.png" alt="生活知识页面样例" loading="lazy"></p>
+<p><figure><img src="http://tc.seoipo.com/2022-08-19-22-52-29.png" alt="" title="生活知识页面样例" loading="lazy"><figcaption>生活知识页面样例</figcaption></figure></p>
 <h3 id="漂亮决定生产力" tabindex="-1"> 漂亮决定生产力</h3>
 <p>另外，网页能自由调整外观样式，更换为你喜欢的界面。这也是为什么 LearnData 舍弃了初版的 docsify 框架，改为复杂许多的 VuePress 框架。docsify 官方模板过于简单，没有界面设计模块，难以满足知识管理界面必须直观漂亮的要求，而这点直接决定了生产力，不能让步。</p>
 <p>知识管理/笔记软件将 Markdown 文件作为一个个区块，而网页可以将其视为一体。LearnData 支持多级侧边栏和目录，让阅读查找变得简单。</p>
@@ -246,13 +246,14 @@ wsl -l -v
 <p>知识软件对我来说，是功能清晰的素材库。我会不断清空素材库，将小的知识点融入 LearnData 笔记区，成体系内容则写成博客，确保 LearnData 成为知识库的终点。</p>
 <p><figure><img src="http://tc.seoipo.com/2022-08-21-21-38-47.png" alt="" title="知识类素材库" loading="lazy"><figcaption>知识类素材库</figcaption></figure></p>
 <ul>
-<li>Logseq 对信息节点化，能按日期整合文本，因此我用它来记录笔记，并定期生成周报和月报回顾。</li>
-<li>飞书文档自带侧边目录栏，对长文档优化很好，因此我用它来记录工作心得，定期形成工作流程在公司分享。</li>
+<li>Logseq 将信息节点化，能按日期整合文本，因此我用它来记录笔记，并定期生成周报和月报回顾。</li>
+<li>飞书文档自带侧边目录栏，对长文档优化很好，因此我用它记录工作心得，定期形成工作流程在公司分享。</li>
 <li>WonderPen 带多层级标题，当一点头绪方向都没有时，素材就直接丢这。</li>
 <li>Notion 貌似全能，但其可替代性也最高，知识库迁移到 LearnData 后，Notion 仅存放涉及个人信息和不方便转移的旧文档。</li>
 <li>Airtable 表格功能最强，虽然已经被其他软件赶上了，但前期存储过多，表格类继续放这。</li>
-<li>SuperMemo 与 Anki 功能类似，对记忆性的笔记定期复习。</li>
+<li>SuperMemo 与 Anki 功能类似，帮助定期复习需重复记忆的知识点。</li>
 </ul>
+<p>而对于 Obsidian，我将其视为笔记的备份站。通过 GoodSync，LearnData 笔记发生修改后，相关更新会实时同步到 Obsidian，完成笔记的备份。期待有天 Obsidian 完善双链功能，帮笔记自动打上标签，到时备份笔记就能转正，我也能无缝切换到新的知识管理应用。</p>
 <h2 id="如果你也想试试" tabindex="-1"> 如果你也想试试……</h2>
 <p>如何搭建把博客转为知识库，建立属于你的 LearnData 知识管理网站呢？</p>
 <p>首先，确定你有 GitHub 账户，懂 Markdown 和基础 HTML 知识。然后，按 <a href="https://newzone.top/#%E6%90%AD%E5%BB%BA-LearnData" target="_blank" rel="noopener noreferrer">LearnData 部署教程</a> 即可完成搭建和配置。如果你的笔记已经 Markdown 化，把文档放在 docs 目录下就可以建立你自己的知识库。</p>

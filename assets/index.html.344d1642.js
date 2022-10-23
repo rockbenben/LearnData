@@ -1,1 +1,0 @@
-import{ad as e,C as t,D as c}from"./app.5674d10f.js";import"./vendor.b1b0a289.js";const n={};function r(o,_){return t(),c("div")}const i=e(n,[["render",r],["__file","index.html.vue"]]);export{i as default};
