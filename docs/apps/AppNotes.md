@@ -27,7 +27,7 @@ order: 3
 
 ### 报错重置
 
-如果遇到程序自身的报错，打开「设置-应用 - 应用和功能」中找到 Power Automate Desktop 应用，并点击「重置」后试试看。
+如果遇到程序自身的报错，打开「设置 - 应用 - 应用和功能」中找到 Power Automate Desktop 应用，并点击「重置」后试试看。
 
 ### 创建 Microsoft 组织账户
 
@@ -189,39 +189,6 @@ TheBrain 可以把知识无限扩充，都连接在一起。但将工作流导�
 
 - [善用佳软张玉新老师 · TheBrain ≠ 思维导图——运用 TheBrain 的三个阶段](https://www.bilibili.com/video/BV19a411578T)
 
-## Visual Studio Code
-
-`Ctrl + .` 修复 markdown 语法错误。
-
-### 修改快捷键
-
-1. `文件——首选项——键盘快捷方式`，进入键盘快捷方式界面，可以修改或解绑快捷键。
-
-2. 如果你想重置回默认设置，同样也可以右键——重置键绑定，即可回到默认设置。
-
-### 排除文件夹
-
-在 VS Code 中点击快捷键 Ctrl/Command+Shift+P，输入 setting，在设置中添加排除文件夹选项，注意此处不能使用全路径，只能隐藏对应名称或类型的文件和文件夹。
-
-```json
-  "files.exclude": {
-    "**/blog": true, //隐藏指定文件夹
-    "**/[Pp]lugins": true, //使用中括号时表示不区分大小写
-    "**/*.pyc": true, //隐藏所有 pyc 文件
-    "**/*.d.ts": true, //隐藏所有 d.ts 文件
-  }
-```
-
-### picgo 图床
-
-文件-首选项 - 键盘快捷方式，修改 picgo 快捷方式。
-
-1. 剪贴板图片上传：`ctrlOrCmd+alt+q`
-2. 打开文件管理器上传：`ctrlOrCmd+alt+e`
-3. 打开输入框输入路径上传：`ctrlOrCmd+alt+x`
-
-自定义设置使用 picgo-electron 的配置 `C:\Users\Benson\AppData\Roaming\picgo\data.json`。
-
 ## Eagle 素材管理
 
 Eagle 优势之一是去重，我素材库过 T，文件几十万个，无法一个个清楚，但导入 Eagle 就可以去掉重复素材。
@@ -236,7 +203,7 @@ Eagle 导入流程：搜索文件夹中的 ZIP/RAR 文件，确认全部解压�
 
 ### Zinc 初次启动
 
-1. 系统属性-高级 - 环境变量 - 用户变量，新建变量 `ZINC_FIRST_ADMIN_USER` 和 `ZINC_FIRST_ADMIN_PASSWORD`。这是后面要用到的账户密码，可自由设置，但密码需要包含大小写字母，
+1. 系统属性 - 高级 - 环境变量 - 用户变量，新建变量 `ZINC_FIRST_ADMIN_USER` 和 `ZINC_FIRST_ADMIN_PASSWORD`。这是后面要用到的账户密码，可自由设置，但密码需要包含大小写字母，
 
 2. 在应用目录下打开终端，执行命令：
 
