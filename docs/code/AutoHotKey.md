@@ -40,7 +40,7 @@ AutoHotKey 是 Windows 平台下开源的热键脚本语言。AHK 学习门槛�
 
 系统级别的操作可以通过 [PowerShell](https://learn.microsoft.com/zh-cn/powershell/scripting/learn/ps101/01-getting-started) 来实现。
 
-```PowerShell
+```shell
 # Run, powershell.exe -NoExit -Command &{命令}, 目录
 Run, powershell.exe -NoExit -Command &{npm version patch}, D:\Backup
 ```

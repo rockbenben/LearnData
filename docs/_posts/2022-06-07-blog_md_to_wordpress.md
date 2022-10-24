@@ -47,7 +47,7 @@ order: -47
 
 ## 发布工具：WordPressXMLRPCTools
 
-[WordPressXMLRPCTools](https://github.com/zhaoolee/WordPressXMLRPCTools) 能用 Markdown 生成博客，推送更新到 Github 后，通过 Github Actions 自动将文章更新到 WordPress，并将 WordPress 网站的文章索引更新到 Github 仓库的 README.md，供搜索引擎收录，方便 Windows 用户使用。iOS 用户有更成熟的发布工具，如 @ern 推荐的 MWeb/Ulysses，同步 WordPress 更简单。
+[WordPressXMLRPCTools](https://github.com/zhaoolee/WordPressXMLRPCTools) 能用 Markdown 生成博客，推送更新到 Github 后，通过 Github Actions 自动将文章更新到 WordPress，并将 WordPress 网站的文章索引更新到 Github 仓库的 README.md，供搜索引擎收录，方便 Windows 用户使用。iOS 用户有更成熟的发布工具，无需代码即可到同步 WordPress，比如 @ern 推荐的 MWeb/Ulysses。
 
 基于 WordPressXMLRPCTools，我做了三点修改：​
 
@@ -60,15 +60,15 @@ order: -47
 
 - 草稿箱：`_post` 路径内新建 `TEMP` 文件夹，用于存放文章草稿。WordPress 推送程序会忽略 `_post` 子文件夹的内容，换言之，`TEMP` 文件夹不会发布到 WordPress 网站。
 
-- 文章聚合页：主目录新增 `.nojekyll`，`index.html`，`_sidebar.md` 文件，引入文档生成工具 docsify，将博客文章聚合在一个页面，方便快速定位和位置管理。示例：[https://rockbenben.github.io/Blog_WP/](https://rockbenben.github.io/Blog_WP/)。
+- 文章聚合页：主路径添加 `.nojekyll`、`index.html` 和 `_sidebar.md` 三个文件，引入了文档生成工具 docsify，使得博客文章能聚合在一个页面，方便快速定位和位置管理。示例：<https://rockbenben.github.io/Blog_WP/>。
 
-  ![](http://tc.seoipo.com/2022-05-26-20-12-56.png)
+  ![](http://tc.seoipo.com/2022-05-26-20-12-56.png "docsify 页面效果")
 
 ### 使用流程
 
 1. 进入 [项目页面](https://github.com/rockbenben/Blog_WP)，点击「Use this template」，复制模板文件。
 2. 回到你新建的 repo，删除 \_post 文件夹中的所有文件，参照主目录下 `example_article.md` 的格式编辑文章。注意：md 文件名不能包含大写字母。
-3. 按 [WordPressXMLRPCTools 安装步骤](https://github.com/zhaoolee/WordPressXMLRPCTools#%E7%94%A8github-actions%E5%86%99markdown%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E5%88%B0wordpress)执行，如遇报错，查看下方使用问题。
+3. 按 [WordPressXMLRPCTools 安装步骤](https://github.com/zhaoolee/WordPressXMLRPCTools#%E7%94%A8github-actions%E5%86%99markdown%E6%96%87%E7%AB%A0%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E5%88%B0wordpress) 执行，如遇报错，查看下方使用问题。注意检查 WordPress 登录授权和 Github Actions secret，这两步极易遗漏。
 4. 修改主目录下的 `index.html` 和 `_sidebar.md` 文件，调整 docsify 网页设置。
    - `index.html` 修改 docsify 网页标题、描述和关键词。
    - `_sidebar.md` 修改 docsify 网页侧边栏，加入博客文章的标题和位置。
@@ -82,12 +82,13 @@ order: -47
 检查以下两点：
 
 - 文章后缀必须为「.md」，不支持「.markdown」或其他后缀格式。
-- 进入 repo 页面中的 `Actions`，检查最近一次的 update 是否正确。
-![](http://tc.seoipo.com/2022-05-26-20-36-56.png)
+- 进入 repo 页面中的 `Actions`，检查最近一次的 update 是否正确。根据报错代码，寻找错误原因。
+
+  ![](http://tc.seoipo.com/2022-05-26-20-36-56.png)
 
 #### Error: git denied to github-actions[bot]
 
-遇到 GitHub Actions 报错：`git denied to github-actions[bot]`或`Process completed with exit code 128`。
+遇到 GitHub Actions 报错：`git denied to github-actions[bot]` 或 `Process completed with exit code 128`。
 
 依次点击该 repository 的 `Setting - Code and automation - Actions - General`，然后在 Workflow permissions 中开启「Read and write permissions」。
 
@@ -129,7 +130,8 @@ Markdown 转 WordPRess 文章时，默认规则无法识别缩进级别。多层
 - 资源管理器的视觉效果非常难看。
 - Markdown 文件名称不能展示关键信息，较难定位文档。文章越多，管理越困难。
 - 无法对文章内容进行本地检索，只能通过文件名称猜测内容。
-![难以管理的本地文档](http://tc.seoipo.com/2022-05-30-19-00-15.png)
+
+![](http://tc.seoipo.com/2022-05-30-19-00-15.png "难以管理的本地文档")
 
 为解决这些问题，我借助飞书表格、RunAny 和 docsify 重构本地文章管理方案。
 
@@ -139,9 +141,9 @@ Markdown 转 WordPRess 文章时，默认规则无法识别缩进级别。多层
 
 打开飞书多维表格，填入本地 Markdown 文章的标题、本地位置、链接、标签和封面，即可聚合本地文章的关键信息。将表格视图切换为「画册视图」，文档管理界面更达到 90% 的 Notion 视觉效果。
 
-![飞书表格视图](http://tc.seoipo.com/2022-05-06-12-43-36.png)
+![](http://tc.seoipo.com/2022-05-06-12-43-36.png "飞书表格视图")
 
-![飞书画册视图](http://tc.seoipo.com/2022-05-06-12-28-41.png)
+![](http://tc.seoipo.com/2022-05-06-12-28-41.png "飞书画册视图")
 
 ### RunAny 文档直达 ​
 
@@ -160,11 +162,11 @@ Markdown 转 WordPRess 文章时，默认规则无法识别缩进级别。多层
 
 飞书表格可以搜索关键元素，但不能对检索全文。这时，我们需要使用 [docsify](https://docsify.js.org/#/)，一款能将 markdown 文档自动生成网站的工具，相当于轻量级的 GitBook。​
 
-docsify 使用简单，如果使用了前文我修改过的[发布工具](https://github.com/rockbenben/Blog_WP)，则无需配置。在发布工具文件夹内的空白区域，右键打开终端，执行命令`docsify serve`即可生成全文检索网页，默认管理链接为 [http://localhost:3000/#/](http://localhost:3000/#/)。
+docsify 使用简单，如果使用了前文我修改过的[发布工具](https://github.com/rockbenben/Blog_WP)，则无需配置。在发布工具文件夹内的空白区域，右键打开终端，执行命令`docsify serve`即可生成全文检索网页，默认管理链接为 `http://localhost:3000/`。
 
 ![docsify 本地运行](http://tc.seoipo.com/2022-05-30-20-03-19.png)
 
-如果你设置了 Github Pages，项目会默认启动在线 docsify 网页，页面链接取决于 Github 的设置。比如我的用户名是 rockbenben，项目名是 Blog_WP，所以 docsify 管理页面就是 [https://rockbenben.github.io/Blog_WP/](https://rockbenben.github.io/Blog_WP/)。
+如果你设置了 Github Pages，项目会默认启动在线 docsify 网页，页面链接取决于 Github 的设置。比如我的用户名是 rockbenben，项目名是 Blog_WP，所以 docsify 管理页面就是 <https://rockbenben.github.io/Blog_WP/>。
 
 ## 订阅管理：WordPress
 

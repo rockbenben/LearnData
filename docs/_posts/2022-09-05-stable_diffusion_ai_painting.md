@@ -122,7 +122,7 @@ Stable Diffusion 是以文字内容 (英文) 描绘一个场景或事物，从�
 3. **画家/画风**：建议混合多个画家的风格，比如 `Studio Ghibli, Van Gogh, Monet`，或描述风格种类，比如 `very coherent symmetrical artwork`，将作品结构设为「连贯且对称」。
 4. **色调**：yellow color scheme 指整个画面的主色调为黄色。
 5. **参考平台**：Trending on ArtStation，也可以替换为「Facebook」「Pixiv」「Pixbay」等。
-   ![](http://tc.seoipo.com/2022-09-16-22-33-26.png "相同参数下不同参考平台生成的图片")
+   ![](http://tc.seoipo.com/2022-09-16-22-33-26.png "相同参数下，不同平台生成的图片")
 
 ### 特征描述
 
@@ -161,6 +161,16 @@ Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张
 
 另外，我们可以指定场景条件位置，比如 `@(moba|rpg|rts) character (2d|3d) model` 表示 `(moba|rpg|rts 三选一) character (2d|3d 二选一) model`，也就是会生成 3\*2 张图片。开头的 `@` 是触发指定场景条件位置的符号，不能省略。
 
+## Textual Inversion
+
+Textual Inversion（文本倒置）是 auto/auto-cpu 分支提供的功能，可以个人定制单词在模型中的含义。比如大众模型中医生多是白人男性，而我们可以输入 5 张亚洲女性照片并将其与 doctor 关联，经过 Textual Inversion 处理后的模型生成的医生形象将以亚洲女性为主。^[[Textual Inversion](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Textual-Inversion)]
+
+Textual Inversion 定制流程：
+
+1. Preprocess images：设置源图目录和输出目录。
+2. Create embedding（新建嵌入）：建立模型属性。
+3. 待续。
+
 ## 常见问题
 
 ### Docker Desktop failed
@@ -169,7 +179,7 @@ Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张
 
 先删除 `%AppData%` 路径下的 Docker 文件夹，然后在 PowerShell 中输入下方命令，关闭 WSL 和 docker-desktop。最后，手动重启 Docker Desktop。
 
-```PowerShell
+```shell
 wsl --shutdown
 wsl -l -v
 wsl --unregister docker-desktop

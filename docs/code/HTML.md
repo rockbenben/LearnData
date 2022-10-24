@@ -226,7 +226,7 @@ width="2400px"
 
 [html-minifier](https://github.com/kangax/html-minifier) 能在本地批量压缩 HTML、CSS 和 JavaScript 源码。
 
-```PowerShell
+```shell
 # 全局安装 html-minifier
 npm install html-minifier -g
 # 终端中执行压缩命令，默认压缩 input 下所有文件，压缩选项参照 http://kangax.github.io/html-minifier/

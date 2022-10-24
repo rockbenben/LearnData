@@ -5,17 +5,17 @@ icon: edit
 order: 2
 ---
 
-[docsify](https://docsify.js.org/#/zh-cn/) 是一个神奇的文档网站生成器，可以快速帮你将 md 文档生成为网站。docsify 入门简单且无需服务器，非常适合个人笔记的简单整理分享。
+[docsify](https://docsify.js.org/#/zh-cn/) 是一个神奇的文档网站生成器，可以快速帮你将 .md 文档生成为网站。docsify 入门简单且无需服务器，非常适合个人笔记的简单整理分享。
 
 本页集中了我使用 docsify 中遇到的问题，新手先看 [docsify 入门文档](https://docsify.js.org/#/zh-cn/)。
 
 ## 插件
 
-[docsify 插件列表](https://docsify-preview.vercel.app/#/zh-cn/awesome?id=plugins)
+[docsify 插件列表](https://docsify-preview.vercel.app/#/zh-cn/awesome?id=plugins)：
 
-- [ ] [docsify-toc](https://github.com/mrpotatoes/docsify-toc)：给笔记页内部添加目录，不过会让 gitalk 位置出错。参考链接：[Tainacan Wiki](https://tainacan.github.io/tainacan-wiki/#/general-concepts)，[Sureness](https://github.com/dromara/sureness/blob/master/docs/index.html)，[lifeupapp](https://wiki.lifeupapp.fun/zh-cn/#/features/174)。
-- [ ] [docsify 笔记类参考](https://notebook.js.org/#/README)：看板娘，多级页面，页面点击效果，网站运行时间。
-- [x] [docsify-count](https://github.com/827652549/docsify-count)：docsify 的字数和阅读时长插件，不过长年未更新，容易与其他插件位置冲突而无法显示。
+- [x] [docsify 笔记类参考](https://notebook.js.org/#/README)：看板娘，多级页面，页面点击效果，网站运行时间。
+- [x] [docsify-count](https://github.com/827652549/docsify-count)：docsify 的字数和阅读时长插件，不过长年未更新，容易与其他插件位置冲突而无法显示。我选择使用聚合 docsify-count 的  [docsify-waline](https://github.com/cxcn/docsify-waline/blob/main/README.zh-CN.md)，如此能同时解决 docsify 评论问题。
+- [x] [docsify-toc](https://github.com/mrpotatoes/docsify-toc)：给笔记页内部添加目录，不过会让 gitalk 位置出错。参考链接：[Tainacan Wiki](https://tainacan.github.io/tainacan-wiki/#/general-concepts)，[Sureness](https://github.com/dromara/sureness/blob/master/docs/index.html)，[lifeupapp](https://wiki.lifeupapp.fun/zh-cn/#/features/174)。
 
 ## 配置
 

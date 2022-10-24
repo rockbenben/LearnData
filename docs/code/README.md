@@ -28,7 +28,7 @@ icon: code
 
 本地代码编辑器使用 Visual Studio Code，其插件生态成熟，能实现大部分的需求。
 
-使用 GitHub Copilot，Tabnine，aiXcoder 插件可以辅助编程，起到代码补全甚至一键生成代码的作用。Tabnine 和 aiXcoder 提供免费版，可以预测一到两行的代码。
+GitHub Copilot，Tabnine，aiXcoder 插件均可以辅助补全代码。Tabnine 和 aiXcoder 有免费版，可以预测一到两行的代码。
 
 ### 修改快捷键
 
@@ -47,12 +47,12 @@ icon: code
 在 VS Code 中点击快捷键 Ctrl/Command+Shift+P，输入「setting」，在设置中添加排除文件夹选项。注意：排除文件夹不能使用全路径，只能使用规则排除。
 
 ```json
-  "files.exclude": {
-    "**/blog": true, //隐藏指定文件夹
-    "**/[Pp]lugins": true, //使用中括号时表示不区分大小写
-    "**/*.pyc": true, //隐藏所有 pyc 文件
-    "**/*.d.ts": true, //隐藏所有 d.ts 文件
-  }
+"files.exclude": {
+  "**/blog": true, //隐藏指定文件夹
+  "**/[Pp]lugins": true, //使用中括号时表示不区分大小写
+  "**/*.pyc": true, //隐藏所有 pyc 文件
+  "**/*.d.ts": true, //隐藏所有 d.ts 文件
+}
 ```
 
 ## 在线 IDE

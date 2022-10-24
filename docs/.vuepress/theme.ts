@@ -4,8 +4,7 @@ import navbar from "./navbar";
 import sidebar from "./sidebar";
 
 export default hopeTheme({
-  //主题选项
-  //https://vuepress-theme-hope.github.io/v2/zh/config/theme/layout.html
+  // 主题选项：https://vuepress-theme-hope.github.io/v2/zh/config/theme/layout.html
   hostname: "https://newzone.top",
 
   author: {
@@ -16,16 +15,16 @@ export default hopeTheme({
   iconAssets: "iconfont",
   logo: "/logo.svg",
 
-  //是否全局启用路径导航
+  // 是否全局启用路径导航
   breadcrumb: false,
 
-  //页面元数据：贡献者，最后修改时间，编辑链接
+  // 页面元数据：贡献者，最后修改时间，编辑链接
   contributors: false,
   lastUpdated: true,
   editLink: true,
 
-  //深色模式配置
-  //darkmode: "disable",
+  // 深色模式配置
+  // darkmode: "disable",
   themeColor: {
     blue: "#2196f3",
     red: "#f26d6d",
@@ -45,27 +44,27 @@ export default hopeTheme({
 
   // navbar
   navbar: navbar,
-  //导航栏布局
+  // 导航栏布局
   navbarLayout: {
-	left: ["Brand"],
-	center: ["Links"],
-	right: ["Repo", "Outlook", "Search"],
+    left: ["Brand"],
+    center: ["Links"],
+    right: ["Repo", "Outlook", "Search"],
   },
-  //是否在向下滚动时自动隐藏导航栏
-  //navbarAutoHide: "always",
+  // 是否在向下滚动时自动隐藏导航栏
+  // navbarAutoHide: "always",
 
-  //侧边栏排序规则
-  //sidebarSorter: ['readme', 'order', 'title'],
   // sidebar
   sidebar: sidebar,
+  // 侧边栏排序规则
+  // sidebarSorter: ['readme', 'order', 'title'],
 
   // footer: "默认页脚",
   // displayFooter: true,
 
-  //https://vuepress-theme-hope.github.io/v2/zh/config/frontmatter/layout.html#pageinfo
+  // 页面布局 Frontmatter 配置：https://vuepress-theme-hope.github.io/v2/zh/config/frontmatter/layout.html#pageinfo
   pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
 
-  //https://vuepress-theme-hope.github.io/v2/zh/config/theme/feature.html
+  // 主题功能选项：https://vuepress-theme-hope.github.io/v2/zh/config/theme/feature.html
   blog: {
     articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
     name: "清顺",
@@ -92,26 +91,26 @@ export default hopeTheme({
       autoExcerpt: true,
     },
 
-    //评论配置（仅做样例，记得更换）
+    // 评论配置（仅做样例，记得更换）
     comment: {
       provider: "Waline",
       serverURL: "https://waline.newzone.top",
-      //部署 Waline：https://waline.js.org/guide/get-started.html
-      //pageview: true, // 浏览量统计
-      //Waline 等级标签
+      // 部署 Waline：https://waline.js.org/guide/get-started.html
+      // pageview: true, // 浏览量统计
+      // Waline 等级标签
       walineLocales: {
-        '/': {
-          admin: '盛年不重来，一日难再晨',
-          level0: '锻体',
-          level1: '炼气',
-          level2: '筑基',
-          level3: '金丹',
-          level4: '元婴',
-          level5: '化神',
+        "/": {
+          admin: "盛年不重来，一日难再晨",
+          level0: "锻体",
+          level1: "炼气",
+          level2: "筑基",
+          level3: "金丹",
+          level4: "元婴",
+          level5: "化神",
         },
       },
 
-      //Giscus 备用配置
+      // Giscus 备用配置
       /*
       provider: "Giscus",
       repo: "rockbenben/LearnData",
@@ -122,12 +121,7 @@ export default hopeTheme({
     },
 
     // 组件库
-    components: [
-      "Badge",
-      "BiliBili",
-      "VideoPlayer",
-      "YouTube",
-    ],
+    components: ["Badge", "BiliBili", "VideoPlayer", "YouTube"],
 
     // 禁用不需要的配置
     mdEnhance: {
@@ -144,10 +138,9 @@ export default hopeTheme({
       mark: true,
       sub: true,
       sup: true,
-      //vpre: true,
     },
 
-    //rss 订阅描述
+    // rss 属性
     feed: {
       rss: true,
       count: 10,
