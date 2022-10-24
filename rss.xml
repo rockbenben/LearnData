@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 23 Oct 2022 18:23:50 GMT</pubDate>
-    <lastBuildDate>Sun, 23 Oct 2022 18:23:50 GMT</lastBuildDate>
+    <pubDate>Mon, 24 Oct 2022 13:33:13 GMT</pubDate>
+    <lastBuildDate>Mon, 24 Oct 2022 13:33:13 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -121,7 +121,7 @@
 <li><strong>画家/画风</strong>：建议混合多个画家的风格，比如 <code>Studio Ghibli, Van Gogh, Monet</code>，或描述风格种类，比如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
 <li><strong>色调</strong>：yellow color scheme 指整个画面的主色调为黄色。</li>
 <li><strong>参考平台</strong>：Trending on ArtStation，也可以替换为「Facebook」「Pixiv」「Pixbay」等。
-<figure><img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下不同参考平台生成的图片" loading="lazy"><figcaption>相同参数下不同参考平台生成的图片</figcaption></figure></li>
+<figure><img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下，不同平台生成的图片" loading="lazy"><figcaption>相同参数下，不同平台生成的图片</figcaption></figure></li>
 </ol>
 <h3 id="特征描述" tabindex="-1"> 特征描述</h3>
 <p>除画面主体外，可以用其他具象物体和形容词来填充画面细节。描述词要具体，讲出你要的物体和它的特征。</p>
@@ -150,14 +150,22 @@
 <p>Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
 <BiliBili bvid="BV1YP411V7vV" /><p>上方视频的调教词为 <code>A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting</code>。<code>|</code> 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。</p>
 <p>另外，我们可以指定场景条件位置，比如 <code>@(moba|rpg|rts) character (2d|3d) model</code> 表示 <code>(moba|rpg|rts 三选一) character (2d|3d 二选一) model</code>，也就是会生成 3*2 张图片。开头的 <code>@</code> 是触发指定场景条件位置的符号，不能省略。</p>
+<h2 id="textual-inversion" tabindex="-1"> Textual Inversion</h2>
+<p>Textual Inversion（文本倒置）是 auto/auto-cpu 分支提供的功能，可以个人定制单词在模型中的含义。比如大众模型中医生多是白人男性，而我们可以输入 5 张亚洲女性照片并将其与 doctor 关联，经过 Textual Inversion 处理后的模型生成的医生形象将以亚洲女性为主。<sup></sup></p>
+<p>Textual Inversion 定制流程：</p>
+<ol>
+<li>Preprocess images：设置源图目录和输出目录。</li>
+<li>Create embedding（新建嵌入）：建立模型属性。</li>
+<li>待续。</li>
+</ol>
 <h2 id="常见问题" tabindex="-1"> 常见问题</h2>
 <h3 id="docker-desktop-failed" tabindex="-1"> Docker Desktop failed</h3>
 <p>未正常安装/关闭 Docker 容器时，可能会报错 <code>Docker Desktop failed to start/stop</code>。</p>
 <p>先删除 <code>%AppData%</code> 路径下的 Docker 文件夹，然后在 PowerShell 中输入下方命令，关闭 WSL 和 docker-desktop。最后，手动重启 Docker Desktop。</p>
-<div><pre><code>wsl --shutdown
-wsl -l -v
-wsl --unregister docker-desktop
-wsl -l -v
+<div><pre><code>wsl <span>--shutdown</span>
+wsl <span>-l</span> <span>-v</span>
+wsl <span>--unregister</span> docker-desktop
+wsl <span>-l</span> <span>-v</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h3 id="docker-desktop-cannot-start" tabindex="-1"> Docker Desktop cannot start</h3>
 <p><code>Hardware assisted virtualization and data execution protection must be enabled in the BIOS</code> 报错说明电脑没开启虚拟化。</p>
 <p>在开机的时候多按几次 <code>F2</code> 或 <code>DEL</code> 进入 BIOS，然后设置中开启「Intel Virtual Technology」，AMD 则是将「SVM Support」设置为设置为「Enable」的状态；最后点击「F10」保存退出即可。</p>
@@ -196,7 +204,9 @@ wsl -l -v
 </li>
 <li id="footnote7"><p><a href="https://github.com/hlky/stable-diffusion#prompt-matrix" target="_blank" rel="noopener noreferrer">stable-diffusion Prompt matrix</a> </p>
 </li>
-<li id="footnote8"><p><a href="https://github.com/docker/for-win/issues/3171#issuecomment-572571882" target="_blank" rel="noopener noreferrer">Windows 端口访问被拒</a> </p>
+<li id="footnote8"><p><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Textual-Inversion" target="_blank" rel="noopener noreferrer">Textual Inversion</a> </p>
+</li>
+<li id="footnote9"><p><a href="https://github.com/docker/for-win/issues/3171#issuecomment-572571882" target="_blank" rel="noopener noreferrer">Windows 端口访问被拒</a> </p>
 </li>
 </ol>
 </section>
@@ -283,7 +293,7 @@ wsl -l -v
       <category>购物</category>
       <pubDate>Wed, 10 Aug 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>家里关得太久，体重又涨了 10 斤，再次陷入健身器材焦虑之中。虽然划船机、跑步机、动感单车的结局都是闲鱼出，但我对健身器材的追逐始终没变。这时发现有品众筹的新玩具，两千的综合塑形机。</p>
-<p><img src="https://cdn.sspai.com/2022/08/09/article/74429ae5770ce6fe9b338527105a4744?imageView2/2/w/450/q/90/interlace/1/ignore-error/1" alt="" loading="lazy"></p>
+<p><figure><img src="https://cdn.sspai.com/2022/08/09/article/74429ae5770ce6fe9b338527105a4744?imageView2/2/w/450/q/90/interlace/1/ignore-error/1" alt="" title="已闲置于墙角" loading="lazy"><figcaption>已闲置于墙角</figcaption></figure></p>
 <p>这款塑形机原理与飞鸟龙门架类似，号称可以充当家庭健身房，锻炼全身的肌肉，包括练肩后束、练背、练上胸、练胸中缝、练下胸、练三头、练二头、练核心、练臀大肌、练大腿外侧。</p>
 <p>之前我就想练飞鸟，不过龙门架实在太大，而这台机器折叠后只占 0.18 平，还能移动位置，完美匹配屋内使用的需求。虽然这是众筹产品，要等 2 个月，还是心动下单了。</p>
 <p><figure><img src="https://cdn.sspai.com/2022/08/09/37a78274cca974e793582250954c75dc.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" title="左侧为龙门架，右侧为塑形机" loading="lazy"><figcaption>左侧为龙门架，右侧为塑形机</figcaption></figure></p>
@@ -291,13 +301,12 @@ wsl -l -v
 <p>锻炼时必须用身体抵住塑形机，否则机器会跟着你的动作滑走。虽然滑动的原因在于机器较轻，只有 60 KG，但我无法理解的是，厂家连基本的防滑措施也没有做，仿佛生产前从没人真的用过机器。<strong>防滑降噪脚垫在拖动时倒蛮好用的</strong>，拖起来特别丝滑，完全没有阻抗。为了避免塑形机不断滑走，我只能买了个阻门器，装上后就能避免机器乱滑动了。</p>
 <p><figure><img src="https://cdn.sspai.com/2022/08/09/article/6d2731baacf4174c4b7465b11ba715fd?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" title="右下方是红色的阻门器，硬拉终于不会滑了" loading="lazy"><figcaption>右下方是红色的阻门器，硬拉终于不会滑了</figcaption></figure></p>
 <p>解决滑动问题后，我打开塑形机官方视频，才发现其中 90% 的动作用不到塑形机，甚至是根本就扯不上关系。买之前，我看着详情页感觉动作特多功能特强，用过后，才发现「这就是所有的动作」。</p>
-<p><img src="https://cdn.sspai.com/2022/08/09/article/db951607296d83ce9a0ff181d724de14?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" loading="lazy"></p>
+<p><figure><img src="https://cdn.sspai.com/2022/08/09/article/db951607296d83ce9a0ff181d724de14?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" title="官方示例动作图" loading="lazy"><figcaption>官方示例动作图</figcaption></figure></p>
 <p>不过，机器都收货了，动作少也得跟着练。可是，按照塑形机官方教程锻炼一组后，我的肩膀和手臂都被勒伤。原因是与身体接触的部分都是特粗尼龙绳，没有任何缓冲，一用力就容易勒伤。两千的机器连块 PU 皮都要省，可能是想让大家穿着特别严实来锻炼吧。</p>
 <p>钢板间隙过大，凳子要蛮力打开，锻炼视频无法暂停，APP 没有语音提示，视频教程无法切换动作，几乎机器到处都有问题，只能将原因归于众筹了，第一款模具真的是无语。</p>
 <p>当然，这款塑形机也是有好处的。传统龙门架使用铁块配重，重量最少也得上百公斤，而且占地大无法移动。塑形机采用磁力配重，重量只有 60KG，机器折叠后 0.18 平方，配上<strong>防滑降噪脚垫非常方便移动。</strong></p>
 <p>塑形机确实能帮我练到平常少运动的肌肉，目前主要用它练背，等有了新玩具再出闲鱼。</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.sspai.com/2022/08/09/article/74429ae5770ce6fe9b338527105a4744?imageView2/2/w/450/q/90/interlace/1/ignore-error/1" type="image/"/>
     </item>
     <item>
       <title>「硬盘布局不受 UEFI 固件支持」－华硕主板解决方案</title>
