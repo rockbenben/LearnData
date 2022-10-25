@@ -13,7 +13,7 @@ LearnData 使用的是 Waline 评论插件，部署简单，有后端管理。�
 - [Valine](https://github.com/xCss/Valine)：快速、简洁且高效的无后端评论系统，可匿名互动。
 - [giscus](https://github.com/giscus/giscus)：基于 github discussion，近似于论坛。查看 [配置方法](https://blog.csdn.net/duninet/article/details/125280107)。
 - [Gitalk](https://github.com/gitalk/gitalk)：基于 github commit，需配置独立库用于存储评论。
-- [Gitter](https://gitter.im/)：公共聊天室，样例如：[boardgame](https://boardgame.io/documentation/#/)，[regauge](https://itchef.github.io/regauge/#/)。
+- [Gitter](https://gitter.im/)：要登录的公共聊天室。样例如：[boardgame](https://boardgame.io/documentation/#/)，[regauge](https://itchef.github.io/regauge/#/)。
 
 ## Waline
 

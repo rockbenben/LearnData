@@ -14,8 +14,9 @@ order: 2
 [docsify 插件列表](https://docsify-preview.vercel.app/#/zh-cn/awesome?id=plugins)：
 
 - [x] [docsify 笔记类参考](https://notebook.js.org/#/README)：看板娘，多级页面，页面点击效果，网站运行时间。
-- [x] [docsify-count](https://github.com/827652549/docsify-count)：docsify 的字数和阅读时长插件，不过长年未更新，容易与其他插件位置冲突而无法显示。我选择使用聚合 docsify-count 的  [docsify-waline](https://github.com/cxcn/docsify-waline/blob/main/README.zh-CN.md)，如此能同时解决 docsify 评论问题。
-- [x] [docsify-toc](https://github.com/mrpotatoes/docsify-toc)：给笔记页内部添加目录，不过会让 gitalk 位置出错。参考链接：[Tainacan Wiki](https://tainacan.github.io/tainacan-wiki/#/general-concepts)，[Sureness](https://github.com/dromara/sureness/blob/master/docs/index.html)，[lifeupapp](https://wiki.lifeupapp.fun/zh-cn/#/features/174)。
+- [x] [docsify-count](https://github.com/827652549/docsify-count)：docsify 的字数和阅读时长插件。
+- [x] [docsify-waline](https://github.com/cxcn/docsify-waline/blob/main/README.zh-CN.md)：提供评论功能的同时，借用 docsify-count 接口展示阅读量。暂时停止 1300 宽度的 waline 显示，避免页面显示异常。
+- [x] [docsify-toc](https://github.com/mrpotatoes/docsify-toc)：给笔记页内部添加目录。不过本插件与 gitalk、waline 冲突，页面宽于 1300px 时出现 toc 目录，评论区位置也跟着挤到页面顶部，需手动修改。参考链接：[Tainacan Wiki](https://tainacan.github.io/tainacan-wiki/#/general-concepts)，[Sureness](https://github.com/dromara/sureness/blob/master/docs/index.html)，[lifeupapp](https://wiki.lifeupapp.fun/zh-cn/#/features/174)。
 
 ## 配置
 

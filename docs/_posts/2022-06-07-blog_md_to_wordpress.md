@@ -45,7 +45,9 @@ order: -47
 
 4. 订阅：用户能通过 RSS、邮件或微信来订阅博客更新。
 
-## 发布工具：WordPressXMLRPCTools
+## WP 发布工具
+
+### 工具说明
 
 [WordPressXMLRPCTools](https://github.com/zhaoolee/WordPressXMLRPCTools) 能用 Markdown 生成博客，推送更新到 Github 后，通过 Github Actions 自动将文章更新到 WordPress，并将 WordPress 网站的文章索引更新到 Github 仓库的 README.md，供搜索引擎收录，方便 Windows 用户使用。iOS 用户有更成熟的发布工具，无需代码即可到同步 WordPress，比如 @ern 推荐的 MWeb/Ulysses。
 
@@ -73,9 +75,9 @@ order: -47
    - `index.html` 修改 docsify 网页标题、描述和关键词。
    - `_sidebar.md` 修改 docsify 网页侧边栏，加入博客文章的标题和位置。
 
-### 使用问题
+## WP 发布常见问题
 
-#### 文章发布不成功
+### 文章发布不成功
 
 `_post` 文件夹添加了文档，但同步后，`README.md` 和 WordPress 并没有添加文章。
 
@@ -86,40 +88,40 @@ order: -47
 
   ![](http://tc.seoipo.com/2022-05-26-20-36-56.png)
 
-#### Error: git denied to github-actions[bot]
+### Error: git denied to github-actions[bot]
 
 遇到 GitHub Actions 报错：`git denied to github-actions[bot]` 或 `Process completed with exit code 128`。
 
 依次点击该 repository 的 `Setting - Code and automation - Actions - General`，然后在 Workflow permissions 中开启「Read and write permissions」。
 
-#### Error: Process completed with exit code 1
+### Error: Process completed with exit code 1
 
 遇到 GitHub Actions 报错：`Error: Process completed with exit code 1`，可能是文章内容触发了服务器的安全规则，拒绝了文章的同步。
 
 如果出现该项报错，暂时关闭服务器防火墙，可解决问题。同步完成后，记得重新开启防火墙。
 
-#### 无法覆盖更新原文章 ​
+### 无法覆盖更新原文章 ​
 
 修改旧文章并同步后，WordPress 站的文章没同步修改，而是新增了一篇相同的文章。
 
 - 检查 md 文件名有没有出现大写字母，有没有更改文件名。
 - 进入 WordPress 后台，设置 - 固定链接，选中自定义结构，并将文章链接设为 `/p/%postname%`。
 
-如果修改版在检查后依然出现此问题，建议手动将新文章内容覆盖旧文章，然后删除新文章。​ 这个 bug 可以当作是强提醒。当 WordPress 新增了旧文章，你就被提醒要在其他平台修改该文章，让文章版本保持统一。​
+如果修改版在检查后依然出现此问题，建议手动将新文章内容覆盖旧文章，然后删除新文章。​ 这个 bug 可以当作是强提醒。当 WordPress 新增了旧文章，你就被提醒要在其他平台修改该文章，让文章版本保持统一。
 
-#### WordPress 发布时间与实际不符 ​
+### WordPress 发布时间与实际不符 ​
 
 同步文章后，WordPress 显示的文章发布时间是 GitHub push 时间，而非文章真实的发布时间。​
 
 如果你将旧文章转移到 WordPress，文章的发布时间需在 WordPress 后台手动修改，无法在 Markdown 文件中指定 WordPress 显示的发布时间。
 
-#### 有序列表编号有误
+### 有序列表编号有误
 
 文章中设定的编号是 `3`，但同步到 WordPress 后，变成了 `1`。
 
 有序列表中穿插了图片、段落，编号就会重置到 `1`。去除图片与旧序列的空行，就能识别正确编号。
 
-#### 无序列表只有一个层级
+### 无序列表只有一个层级
 
 Markdown 转 WordPRess 文章时，默认规则无法识别缩进级别。多层级列表只会显示一个层级，其他层级的列表都被提到第一层级。
 
