@@ -39,8 +39,8 @@ export default hopeTheme({
   repoLabel: "GitHub",
   // 是否在导航栏内显示仓库链接，默认为 `true`
   repoDisplay: true,
-
-  // docsDir: "demo/src",
+  // 文档存放路径
+  docsDir: "docs",
 
   // navbar
   navbar: navbar,
