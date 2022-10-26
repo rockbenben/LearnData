@@ -125,19 +125,29 @@ export default hopeTheme({
 
     // 禁用不需要的配置
     mdEnhance: {
-      footnote: true,
-      tasklist: true,
       align: true,
-      attrs: true,
+      attrs: true, // 使用特殊标记为 Markdown 元素添加属性
+      // chart: true,
+      // codetabs: true, // 代码块分组
       container: true,
+      // demo: true, //代码演示
+      // echarts: true,
+      // flowchart: true,
       gfm: true,
       imageSize: true,
       imageTitle: true,
-      include: true,
+      include: true, //导入文件
+      // katex: true,
       lazyLoad: true,
       mark: true,
-      sub: true,
+      // mermaid: true,
+      footnote: true,
+      tasklist: true,
+      sub: true, // 上下角标
       sup: true,
+      // tabs: true, // 选项卡
+      // vpre: true,
+      // vuePlayground: true, // Vue 交互演示
     },
 
     // rss 属性

@@ -1,6 +1,7 @@
 {
-  "name": "vuepress-theme-hope-template",
-  "version": "2.0.0",
+  "name": "learn-data",
+  "version": "1.0.0",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "docs:dev": "vuepress dev docs",
@@ -8,14 +9,14 @@
     "docs:clean-dev": "vuepress dev docs --clean-cache"
   },
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.51",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.51",
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.51",
-    "@vuepress/plugin-search": "2.0.0-beta.51",
-    "@vuepress/utils": "2.0.0-beta.51",
+    "@vuepress/client": "2.0.0-beta.53",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.53",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.53",
+    "@vuepress/plugin-search": "2.0.0-beta.53",
+    "@vuepress/utils": "2.0.0-beta.53",
     "pnpm": "^7.14.0",
     "vue": "^3.2.41",
-    "vuepress": "2.0.0-beta.51",
-    "vuepress-theme-hope": "2.0.0-beta.110"
+    "vuepress": "2.0.0-beta.53",
+    "vuepress-theme-hope": "2.0.0-beta.115"
   }
 }
