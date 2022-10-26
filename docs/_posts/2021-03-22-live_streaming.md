@@ -87,7 +87,7 @@ order: -36
 
 - 直播推流：`设置－通用－推流` 中的服务调整为「自定义」，服务器和串流密钥则按平台要求输入。
 
-  ![](http://tc.seoipo.com/2022-06-30-14-33-34.png)
+  ![](http://tc.seoipo.com/2022-06-30-14-33-34.png "推流服务器设置")
 
 - 直播清晰度：直播并非越清晰越好，对网络稳定性要求较高，建议将 `设置－输出－串流－视频比特率` 设为 4000-6000 Kbps。
 - 直播分辨率：分辨率一般 1080p 或 720p，帧率为 30。注意 `设置－视频` 中的输出分辨率要与基础分辨率一致，游戏直播中将 `常用 FPS 值 (帧率)` 从 30 调整到 60。
@@ -108,12 +108,13 @@ OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的�
 
 - 色度键：绿幕抠图必用，能将指定颜色变为透明，比如抠掉绿色，将绿幕换成其他场景。
 
-  ![色度键滤镜一键抠图](http://tc.seoipo.com/20210328235013.gif)
+  ![色度键滤镜一键抠图](http://tc.seoipo.com/20210328235013.gif "色度键滤镜一键抠图")
 
-- 色彩校正：修改伽玛度、对比度、亮度、饱和度，对来源的显示效果进行调整。
+- 应用 LUT：使用 LUT 对画面进行色彩调整，相当于平常手机修图用的风格滤镜，对画面效果提升巨大。将 OBS 滤镜插件目录下的 original.png 复制到 Photoshop，然后进入右侧的调整界面，选择第二行的最右侧「创建新的颜色查找调节图层」，尝试载入自带的 3DLUT 文件，最后导出 png 文件，这也就是直播能用的 LUT 文件。如果自带 LUT 不能满足需求，则使用 Premiere 调节定制 LUT cube 文件。
 - 裁剪/填充：对来源进行裁剪，剪去多余的部分。
 - 增益：当麦克风声音过大或过小时，可以通过增益滤镜调整音量，但是不宜设置数值过大，容易造成声音失真。
 - 噪音阈值：当背景有噪音时，设置噪音阈值来控制底噪，降低噪音干扰。
+- 色彩校正：修改伽玛度、对比度、亮度、饱和度，对来源的显示效果进行调整。
 
 ### 常用插件
 
@@ -211,13 +212,13 @@ MorphVOX Pro、神舌等软件变声器对使用者的语气要求较高。
 
 [Snap Camera](https://snapcamera.snapchat.com/) 是 SnapChat 的免费增强现实应用。在电脑直播/录屏时，它可以帮你实现挡脸头套、美化滤镜等特效。熟悉 3D 建模的话，使用 Lens Studio 就可以定制属于你自己的变脸特效。需要注意的是，当你喝水，低头及脸部被遮挡时，脸部特效会失效。
 
-![Snap Camera 效果图](http://tc.seoipo.com/SnapCamera.gif)
+![Snap Camera 效果图](http://tc.seoipo.com/SnapCamera.gif "Snap Camera 效果图")
 
 如果你用不了 Snap Camera，可以试试 FaceRig 和 PrprLive。
 
 [FaceRig](https://store.steampowered.com/app/274920/FaceRig/)（steam 已停售）通过对五官的动作捕捉，让卡通脸的表情进行同步变化，不能对头部以下的部分进行捕捉和同步。直播时，FaceRig 需打开「切换广播」，否则 obs 中的窗口会显示黑屏。
 
-![FaceRig 演示图](http://tc.seoipo.com/20210329092154.gif)
+![FaceRig 演示图](http://tc.seoipo.com/20210329092154.gif "FaceRig 演示图")
 
 注意：**FaceRig 在百度的首个搜索结果是虚假官网**，价格高且无保障，不要在上面进行购买。
 
@@ -229,7 +230,7 @@ MorphVOX Pro、神舌等软件变声器对使用者的语气要求较高。
 
 如果直播场景单调，可以使用带绿幕的视频画面，给直播添加动态画面。
 
-![直播间的猫咪](http://tc.seoipo.com/2022-06-30-08-29-40.png)
+![直播间的猫咪](http://tc.seoipo.com/2022-06-30-08-29-40.png "直播间的猫咪")
 
 除了动态视频，还可以借助类虚拟主播技术，达到交互效果。比如 [Bongo Cat Mver](https://d.appinn.com/bongo-cat-mver/)，它能实时同步键盘与鼠标状态，增加直播趣味性。如果使用 Bongo Cat 全键盘同步模型，建议打乱映射规则，防止隐私泄露。
 
@@ -244,7 +245,7 @@ MorphVOX Pro、神舌等软件变声器对使用者的语气要求较高。
 1. [淘宝直播官网](https://market.m.taobao.com/app/mtb/live-portal/download/index.html) 下载客户端。
 2. 打开淘宝直播客户端，点击「我要开播」，进入直播间界面。
 
-   ![](http://tc.seoipo.com/2022-06-29-22-23-26.png)
+   ![](http://tc.seoipo.com/2022-06-29-22-23-26.png "淘宝直播设置")
 
 3. 左侧依次点击 `添加元素 - 摄像头`，选择「OBS-Camera」，即可同步 OBS 直播画面。淘宝直播客户端也是基于 OBS，但不支持推流直播，只能通过虚拟摄像头同步画面。
 
@@ -255,7 +256,7 @@ MorphVOX Pro、神舌等软件变声器对使用者的语气要求较高。
 1. 电脑端下载 [直播伴侣](https://www.douyin.com/falcon/webcast_openpc/pages/streamingtool_download/index.html)，适配西瓜视频、抖音、抖音火山版的直播。
 2. 左侧依次点击 `添加元素 - 采集`，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道，推流延迟 20s。
 
-   ![](http://tc.seoipo.com/2022-06-29-23-59-02.png)
+   ![](http://tc.seoipo.com/2022-06-29-23-59-02.png "抖音直播设置")
 
 以上为新手的直播步骤，如果抖音粉丝在一万以上，可直接使用 [OBS 模式推流](http://streamingtool.douyin.com/docs/guide/96319/)。
 

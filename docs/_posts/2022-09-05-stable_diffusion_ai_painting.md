@@ -91,11 +91,11 @@ Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。风景、
 
 ### Image-to-Image
 
-Image-to-Image 依据文字描述和输入源图，生成相关的图像。该模式若以素描、结构画为来源图，可充分填充图像细节；若以细节充分的照片为来源图，则会输出差异较大的结果。
+Image-to-Image 依据文字描述和输入源图，生成相关的图像。该模式若以素描、结构画为来源图，可充分填充图像细节；若以细节充分的照片为来源图，则会输出差异较大的结果。更妙的是，你可以限定区域来生成图像，非常适合图像修改。
 
 ![](http://tc.seoipo.com/2022-09-04-15-39-00.png "Image-to-Image 界面")
 
-Denoising Strength 指与原图的差异度，建议在 0.75-0.9，魔改图片可以设为 0.5 以下。下图中的 Denoising Strength 只有 0.44，整体图片结构与要素没变，但结果如何你看到了。
+CLIP interrogator 会根据图像来生成文字描述。Denoising Strength 指与原图的差异度，建议在 0.75-0.9，魔改图片可以设为 0.5 以下。下图中的 Denoising Strength 只有 0.44，整体图片结构与要素没变，但结果如何你看到了。
 
 ![](http://tc.seoipo.com/2022-09-04-15-40-26.png "超级魔改图片")
 
