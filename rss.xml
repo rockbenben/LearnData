@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 26 Oct 2022 07:54:24 GMT</pubDate>
-    <lastBuildDate>Wed, 26 Oct 2022 07:54:24 GMT</lastBuildDate>
+    <pubDate>Wed, 26 Oct 2022 23:46:13 GMT</pubDate>
+    <lastBuildDate>Wed, 26 Oct 2022 23:46:13 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -102,9 +102,9 @@
 <p><figure><img src="http://tc.seoipo.com/2022-09-05-08-28-23.png" alt="" title="Text-to-Image 界面" loading="lazy"><figcaption>Text-to-Image 界面</figcaption></figure></p>
 <p>默认使用 Simple 简单模式，点击右侧按钮 Advanced，可查看进阶选项，使用进阶的场景矩阵、面孔修复和分辨率放大等多种功能。</p>
 <h3 id="image-to-image" tabindex="-1"> Image-to-Image</h3>
-<p>Image-to-Image 依据文字描述和输入源图，生成相关的图像。该模式若以素描、结构画为来源图，可充分填充图像细节；若以细节充分的照片为来源图，则会输出差异较大的结果。</p>
+<p>Image-to-Image 依据文字描述和输入源图，生成相关的图像。该模式若以素描、结构画为来源图，可充分填充图像细节；若以细节充分的照片为来源图，则会输出差异较大的结果。更妙的是，你可以限定区域来生成图像，非常适合图像修改。</p>
 <p><figure><img src="http://tc.seoipo.com/2022-09-04-15-39-00.png" alt="" title="Image-to-Image 界面" loading="lazy"><figcaption>Image-to-Image 界面</figcaption></figure></p>
-<p>Denoising Strength 指与原图的差异度，建议在 0.75-0.9，魔改图片可以设为 0.5 以下。下图中的 Denoising Strength 只有 0.44，整体图片结构与要素没变，但结果如何你看到了。</p>
+<p>CLIP interrogator 会根据图像来生成文字描述。Denoising Strength 指与原图的差异度，建议在 0.75-0.9，魔改图片可以设为 0.5 以下。下图中的 Denoising Strength 只有 0.44，整体图片结构与要素没变，但结果如何你看到了。</p>
 <p><figure><img src="http://tc.seoipo.com/2022-09-04-15-40-26.png" alt="" title="超级魔改图片" loading="lazy"><figcaption>超级魔改图片</figcaption></figure></p>
 <h3 id="image-lab" tabindex="-1"> Image Lab</h3>
 <p>Image Lab 能批量修正面孔和放大图片分辨率。</p>
