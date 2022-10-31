@@ -25,7 +25,7 @@ Windows 遇到不懂的问题，可以在 [Microsoft 支持社区](https://answe
 | Ctrl+W             | 关闭标签页                             |
 | Alt+F4             | 关闭当前程序窗口                       |
 
-`%AppData%` 为 C:\Users\用户名\AppData\Roaming 的变量路径。
+`%AppData%` 为 C:\Users\用户名\AppData\Roaming 的变量路径。^[[Windows 变量路径](https://blog.csdn.net/lijianbiao0/article/details/85118775)]
 
 ## 网址快捷方式
 
@@ -72,8 +72,8 @@ Web2Desk 让我们可以直接输入网页链接、应用名称和应用图标�
 
 按键示例、无法切换中英文，大部分原因都与输入法无关，而是硬件出了问题。
 
-- 检查方法：安装并启动 AutoHotKey，然后点击 view - Key history and script info。窗口会显示最近的按键历史，当发现一个键在疯狂重复时，很有可能就是出问题的按键。
-- 修复方法：键盘上重复按下该按键，看看是否能修复。不行的话，拔下键盘 USB，单独使用软键盘，测试按键是否正常。如果软键盘正常，键盘配件又无法修复，可以通过 Powertoys 或 AutoHotKey 禁用这个按键。
+- 检查方法：安装并启动 AutoHotkey，然后点击 view - Key history and script info。窗口会显示最近的按键历史，当发现一个键在疯狂重复时，很有可能就是出问题的按键。
+- 修复方法：键盘上重复按下该按键，看看是否能修复。不行的话，拔下键盘 USB，单独使用软键盘，测试按键是否正常。如果软键盘正常，键盘配件又无法修复，可以通过 Powertoys 或 AutoHotkey 禁用这个按键。
 
 ### 使用中，禁止系统自动更新重启
 

@@ -61,21 +61,21 @@ order: 3
 
 ## Logseq
 
-比起 Obsidian，Logseq 罗列内容更方便，而且也可以制作模板。Logseq 将所有行都视为节点，因此非常轻松可以把所需的子节点整合在一个页面，实现关键信息聚合。
+与 Obsidian 相比，Logseq 罗列内容更方便。Logseq 将所有行都视为节点，因此非常轻松将所需的子节点整合在一个页面，实现关键信息聚合。
 
-Logseq 是最强的日记功能，日记可以自动套用指定模板。^[[How to Set Up an Automated Daily Template in Logseq](https://thinkstack.club/how-to-set-up-an-automated-daily-template-in-logseq/)]
+Logseq 的日记非常强大，也可以自动套用指定模板。^[[How to Set Up an Automated Daily Template in Logseq](https://thinkstack.club/how-to-set-up-an-automated-daily-template-in-logseq/)] 但其他笔记需要手动启用模板，修改 .env 的设置 `{:week "journals"}` 被报错。继续尝试设计周记、月报的模板。
 
-但其他笔记需要手动启用模板，修改 .env 的设置 `{:week "journals"}` 被报错。继续尝试设计周记、月报的模板。
+Logseq 劣势，所有页面建立在 pages 下，但可以手动修改位置。双链笔记有个特点，只要名称不变，文档位置更改也不会影响引用。
 
-Logseq 劣势，所有页面建立在 pages 下，但可以手动修改位置。
+Logseq 更改页面标题，会同步更改所有标签名。
 
-Logseq 和 Obisidian 双内笔记软件有个特点，就是说是嗯，重点是。笔记文件的名称和废太位置，只要文文就是名称一致，你问位置转移到其他地方也是不会影响引用和使用的。
+我会把远期不安排的任务，往 later 清单中放，随时可以查看提醒，但又不需要每天重复调整时间。
 
 主题：Dracula
 
 ### 快速使用
 
-- `[[]]` 可快速新建页面，`All pages`中可删除空页面
+- `[[]]` 可快速新建页面，`All pages` 中可删除空页面
 - 打开右上角的「侧边栏」，使用目录管理主页面
 - 将页面中内容汇总起来，比如「心理学」标签页面显示所有心理学
 - 任务时，使用 later 或 now，切换后改变状态，会记录任务持续时间。
@@ -88,20 +88,24 @@ Logseq 和 Obisidian 双内笔记软件有个特点，就是说是嗯，重点�
 
 query 能按条件精准地找到结果，并动态更新在页面中，公式参考 [官方文档](https://docs.logseq.com/#/page/queries)。
 
+首先，在文本后方添加 tag，比如
+
 ```jsx
-文本后方添加 tag，比如
 idea 1 #idea
 find #research
+```
 
-使用 query 命令寻找对应结果
-* and
+接着，使用 query 命令寻找对应结果
+
+```jsx
+* and 命令
 {{query (and [[research]] [[idea]])}}
 {{query (and (task now later done) [[page]])}}
 
-* or
+* or 命令
 {{query (or [[page 1]] [[page 2]])}}
 
-* not
+* not 命令
 {{query (not [[page 1]] [[page 2]])}}
 
 * 罗列为 Later 的 task
@@ -110,8 +114,6 @@ find #research
 * 一周内的日记，且包含关键词或标签
 {{query(and (between -6d today)  "#幸福")}}
 ```
-
-远期不会安排的任务，往 later 清单中放，随时可以查看提醒，但又不需要每天重复调整时间。
 
 ## Obisidian
 

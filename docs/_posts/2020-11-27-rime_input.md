@@ -15,7 +15,7 @@ order: -32
 
 之后尝试了各种输入法，百度、讯飞、手心等依旧是键盘记录器，影子输入法开源但不稳定，谷歌拼音停止更新，微软拼音词库收录慢且难以转移，只有小狼毫开源稳定又能多设备同步词库。
 
-小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/releases/download/0.14.3/weasel-0.14.3.0-installer.exe)，[国内搬运](https://wwi.lanzoui.com/iDyF4pdzmni)。
+Rime 小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/releases/download/0.14.3/weasel-0.14.3.0-installer.exe)，[国内搬运](https://wwi.lanzoui.com/iDyF4pdzmni)。
 
 ## 基础设置
 
@@ -33,12 +33,11 @@ order: -32
 
 ## 双拼方案
 
-为提高效率，[小狼毫官方配置库](https://github.com/rime/rime-double-pinyin) 收录了自然码双拼、智能 ABC 双拼、小鹤双拼、MSPY 双拼、拼音加加双拼，我使用的是小鹤双拼，配置流程如下：
+为提高效率，[小狼毫官方配置库](https://github.com/rime/rime-double-pinyin) 收录了自然码双拼、智能 ABC 双拼、小鹤双拼、MSPY 双拼、拼音加加双拼，我使用的是小鹤双拼。
 
-1. 将官方配置库中的 [double_pinyin_flypy.schema.yaml](https://github.com/rime/rime-double-pinyin/blob/master/double_pinyin_flypy.schema.yaml) 下载到用户文件夹。
-2. 设置好后，右键点击任务栏小狼毫图标，选「输入法设定」，只勾选一个「小鹤双拼」。
-3. 默认方案为繁体，可使用按键 F5 (部分版本是 F4)，将配置默认为简体。
-4. 双拼只不会显示当前输出字母，可按下方配置修改 [使用双拼时如何同时显示按下的键以及双拼对应的拼音](https://github.com/rime/rime-double-pinyin/issues/6#issuecomment-754367706)。
+配置时，将官方配置库中的 [double_pinyin_flypy.schema.yaml](https://github.com/rime/rime-double-pinyin/blob/master/double_pinyin_flypy.schema.yaml) 下载到小狼毫的用户文件夹。然后，右键点击任务栏小狼毫图标，选「输入法设定」，只勾选一个「小鹤双拼」。默认方案为繁体，可使用按键 F5 (部分版本是 F4)，将配置默认为简体。
+
+双拼不会显示当前输出字母，可按下方配置修改 [使用双拼时如何同时显示按下的键以及双拼对应的拼音](https://github.com/rime/rime-double-pinyin/issues/6#issuecomment-754367706)。
 
 如果想在双拼中实现自定义短语，可参考 [小狼毫自定义短语-Rime-双拼](https://blog.csdn.net/neninee/article/details/83692270)。如果设定后，无法使用简体输入，将 `double_pinyin_flypy.schema.yaml` 中的 filters 模块转移到 translators 模块上方。
 
@@ -48,14 +47,11 @@ order: -32
 
 Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如 [定制指南](https://github.com/rime/home/wiki/CustomizationGuide)、[文件配置说明](https://github.com/rime/home/wiki/RimeWithSchemata#rime-%E4%B8%AD%E7%9A%84%E6%95%B8%E6%93%9A%E6%96%87%E4%BB%B6%E5%88%86%E4%BD%88%E5%8F%8A%E4%BD%9C%E7%94%A8)、[emoji 集成](https://github.com/rime/rime-emoji) 和 [模糊音设置](https://github.com/rime/home/wiki/CustomizationGuide#%E6%A8%A1%E7%B3%8A%E9%9F%B3)。
 
-如果要多设备 [同步用户资料](https://github.com/rime/home/wiki/UserGuide#%E5%90%8C%E6%AD%A5%E7%94%A8%E6%88%B6%E8%B3%87%E6%96%99)，则打开用户文件夹中的 `installation.yaml`，将其中的设备名称 `installation_id` 从长字符串修改为方便识别的名称，并在 `installation.yaml` 文本最下方添加用户资料同步位置 `sync_dir: 'D:\Sync\RIME'`。
+如果要多设备 [同步用户资料](https://github.com/rime/home/wiki/UserGuide#%E5%90%8C%E6%AD%A5%E7%94%A8%E6%88%B6%E8%B3%87%E6%96%99)，则打开用户文件夹中的 `installation.yaml`，将其中的设备名称 `installation_id` 从长字符串修改为方便识别的名称，并在 `installation.yaml` 文本最下方添加用户资料同步位置 `sync_dir: 'D:\Sync\RIME'`，路径中不能出现中文。
 
-小狼毫主版本长年未更新，下载 rime 输入法的核心库 [librime](https://github.com/rime/librime/releases) 替换小狼毫目录中的 rime.dll 即可完成输入法更新。
+打字习惯会保存在 `<词典名>.userdb.txt` 或 `<词典名>.userdb.kct.snapshot`。还原时，依次点击「用户词典管理 - 导入文本码表」来恢复词频记录。
 
-注意：
-
-- 同步文件夹路径中不能出现中文。
-- 打字习惯会保存在 `<词典名>.userdb.txt`、 `<词典名>.userdb.kct.snapshot`，还原时手工导入词典。
+小狼毫主版本长年未更新，使用 rime 输入法的核心库 [librime](https://github.com/rime/librime/releases) 替换小狼毫程序文件夹中的 rime.dll 可更新输入法。如果输入法中使用了 `Rime.lua` 的动态输出功能，与核心库可能会冲突，建议不采用 rime.dll 升级。
 
 ## 常见问题
 
@@ -118,9 +114,9 @@ patch:
 
 ### 不能输出 emoji
 
-即使按按教程设置了 emoji，但还是无法显示，暂时没解决办法。
+按照官方文档教程设置了 emoji，但无法输出符号。
 
-官方文档、三种集成词库我都试过了，同样无法显示。特殊字符可使用 SuperRime 词库的 symbol 输出。
+测试了几种方案，目前输出特殊字符最稳定的是 [Squirrel 鼠须管配置](https://github.com/ssnhd/rime)，Windows 用户可参考它调整自己的输入法。
 
 ### 无法触发词库的特殊符号
 

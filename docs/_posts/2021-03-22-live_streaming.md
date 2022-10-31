@@ -120,7 +120,7 @@ OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的�
 
 OBS 插件多为绿色版本，进入 `%ProgramFiles%\obs-studio\data\obs-plugins` 和 `%ProgramFiles%\obs-studio\obs-plugins\64bit` 按插件关键词删出相关文件即可卸载插件。
 
-- [StreamFX](https://github.com/Xaymar/obs-StreamFX/releases)：支持更多的信号源、滤镜和转场效果，如：模糊滤镜。OBS28 新版安装暂只支持绿色模式。
+- [StreamFX](https://github.com/Xaymar/obs-StreamFX/releases)：支持更多的信号源、滤镜和转场效果，如：模糊滤镜（Dual Filtering 对电能压力更低）。OBS28 暂只支持绿色模式安装本插件。
 - [OBS Shaderfilter](https://obsproject.com/forum/threads/shaderfilter-went-away.155555/#post-571174)：文字图片特效滤镜，该插件已从社区删除，GitHub 可下载 [最新版](https://github.com/Oncorporation/obs-shaderfilter/releases/)。
 - [multi-rtmp](https://github.com/sorayuki/obs-multi-rtmp)：OBS 多地址推流，同时在多个平台上进行直播。
 - [Asynchronous Source Duplication](https://obsproject.com/forum/resources/asynchronous-source-duplication.1483/)：复制来源可以同时展示在多个场景，复制源会有延迟。

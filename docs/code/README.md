@@ -7,7 +7,7 @@ icon: code
 代码编程的学习路径：
 
 - 基础知识：ES6, MySQL，HTML，Markdown，正则表达式
-- 脚本/开发工具：AutoHotKey，Electron
+- 脚本/开发工具：AutoHotkey，Electron
 - 编程语言：[TypeScript 4.x](https://www.typescriptlang.org/zh/) + [JavaScript](https://www.javascript.com/)
 - 前端框架：[Vue 3.x](https://cn.vuejs.org/)
   - 构建工具：[Vite 2.x](https://cn.vitejs.dev/)

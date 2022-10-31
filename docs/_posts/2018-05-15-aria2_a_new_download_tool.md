@@ -126,7 +126,7 @@ Aira2 下载预热是 BT 下载前的必备步骤，否则速度容易很慢。
 
 ## Aria2 启动器
 
-每次启动 Aria2 下载，总要执行两次，打开 WebUI 链接和 aria2c 两个文件，比较麻烦。因此，我用 AutoHotKey 做了个启动器，可以检测 aria2c 运行状态并一键打开下载界面，简化 Aria 启动。
+每次启动 Aria2 下载，总要执行两次，打开 WebUI 链接和 aria2c 两个文件，比较麻烦。因此，我用 AutoHotkey 做了个启动器，可以检测 aria2c 运行状态并一键打开下载界面，简化 Aria 启动。
 
 下载 [Aria2 启动器](https://wwz.lanzouf.com/iqud50ebl06d)，然后将其解压到 Aria2 运行目录，比如 `D:\Aria2`。Aria2 启动器包含两种方式，二选一即可。
 

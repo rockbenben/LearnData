@@ -151,7 +151,7 @@ Markdown 转 WordPRess 文章时，默认规则无法识别缩进级别。多层
 
 在线文档中，无法像打开超链接一样直接打开本地文件。如果你想节省中间打开时间，可以使用 RunAny。​
 
-[RunAny](https://hui-zz.gitee.io/runany/#/) 是基于 AutoHotKey 的一键启动软件。按下方配置后，点击飞书表格中的「本地位置」，即可使用默认编辑器打开 md 文件。如果你的默认编辑器是 notepad++，则将下方命令中的 `Code.exe` 替换为 `notepad++.exe`。
+[RunAny](https://hui-zz.gitee.io/runany/#/) 是基于 AutoHotkey 的一键启动软件。按下方配置后，点击飞书表格中的「本地位置」，即可使用默认编辑器打开 md 文件。如果你的默认编辑器是 notepad++，则将下方命令中的 `Code.exe` 替换为 `notepad++.exe`。
 
 ```ini
 ;将 Runany 主目录下的 RunAny.ini 文件内的「编辑」模块替换为下方命令

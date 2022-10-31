@@ -137,6 +137,12 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 ---
 
+## Android
+
+[AutoX](https://github.com/kkevsekk1/AutoX)：开源版的 Auto.js，没有包名屏蔽。相关信息可以参考 [快人一步：使用 Tasker+AutoX 一键直达健康码](https://sspai.com/post/65863)。
+
+---
+
 ## 已弃
 
 - 全局手势：[StrokesPlus.net](https://meta.appinn.net/t/topic/29815) & WGestures
