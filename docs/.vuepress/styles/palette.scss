@@ -1,50 +1,21 @@
 /*
 参考样式：
 https://moonvy.com/blog/post/2022/diffusion-accelerates-diffusion/#%E7%BB%98%E7%94%BB%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7
-代码：https://vuepress-theme-hope.github.io/v2/zh/config/style.html
+代码来源：https://vuepress-theme-hope.github.io/v2/zh/config/style.html
 */
 
 $text-color: (
-  light: #252525,
+  light: #2c3e50,
   dark: #b0aeb7,
 );
 
 // content
 $bg-color: (
-  light: #fff,
+  light: #fefefe,
   dark: #252232,
 );
 
-// sidebar
-$bg-color-blur: (
-  light: rgba(255, 255, 255, 0.9),
-  dark: rgba(37, 34, 50, 1),
-);
-
-// navbar
-$bg-color-float-blur: (
-  light: rgba(255, 255, 255, 0.9),
-  dark: rgba(37, 34, 50, 1),
-);
-
-// blog background
-$bg-color-back: (
-  light: #f8f8f8,
-  dark: #252232,
-);
-
-// blog wrapper
-$bg-color-float: (
-  light: #fff,
-  dark: #2c293d,
-);
-
-$bg-color-light: (
-  light: #fff,
-  dark: #2c293d,
-);
-
-$bg-color-active: (
+$bg-color-secondary: (
   light: #f8f8f8,
   dark: #2c293d,
 );
@@ -62,6 +33,6 @@ $box-shadow: (
 );
 
 $card-shadow: (
-  light: rgba(0, 0, 0, 0.15),
-  dark: rgba(0, 0, 0, 0.3),
+  light: rgb(0 0 0 / 15%),
+  dark: rgb(0 0 0 / 30%),
 );
