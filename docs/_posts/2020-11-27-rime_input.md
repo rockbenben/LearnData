@@ -37,9 +37,20 @@ Rime 小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/re
 
 配置时，将官方配置库中的 [double_pinyin_flypy.schema.yaml](https://github.com/rime/rime-double-pinyin/blob/master/double_pinyin_flypy.schema.yaml) 下载到小狼毫的用户文件夹。然后，右键点击任务栏小狼毫图标，选「输入法设定」，只勾选一个「小鹤双拼」。默认方案为繁体，可使用按键 F5 (部分版本是 F4)，将配置默认为简体。
 
-双拼不会显示当前输出字母，可按下方配置修改 [使用双拼时如何同时显示按下的键以及双拼对应的拼音](https://github.com/rime/rime-double-pinyin/issues/6#issuecomment-754367706)。
+双拼的自定义短语，可参考 [小狼毫自定义短语-Rime-双拼](https://blog.csdn.net/neninee/article/details/83692270)。如果设定后，无法使用简体输入，将 `double_pinyin_flypy.schema.yaml` 中的 filters 模块转移到 translators 模块上方。
 
-如果想在双拼中实现自定义短语，可参考 [小狼毫自定义短语-Rime-双拼](https://blog.csdn.net/neninee/article/details/83692270)。如果设定后，无法使用简体输入，将 `double_pinyin_flypy.schema.yaml` 中的 filters 模块转移到 translators 模块上方。
+双拼不会显示当前输出字母，可参考 [使用双拼时如何同时显示按下的键以及双拼对应的拼音](https://github.com/rime/rime-double-pinyin/issues/6#issuecomment-754367706)。
+
+在 double_pinyin_flypy.schema.yaml 中，找到下方的代码行
+
+```yaml
+translator:
+  dictionary: luna_pinyin
+  prism: double_pinyin_flypy
+  preedit_format:
+```
+
+然后换行加入 `- 'xform/^(.*)$/\U$1\E\t | $1/'`。这段是同时显示拼音的核心代码，会显示 `{原始输出}|{对应拼音}`。
 
 ## 进阶指南
 
