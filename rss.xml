@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 03 Nov 2022 14:12:28 GMT</pubDate>
-    <lastBuildDate>Thu, 03 Nov 2022 14:12:28 GMT</lastBuildDate>
+    <pubDate>Fri, 04 Nov 2022 15:30:28 GMT</pubDate>
+    <lastBuildDate>Fri, 04 Nov 2022 15:30:28 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>观察随笔</category>
@@ -84,7 +84,7 @@
 </ul>
 <h3 id="准备-linux-路径" tabindex="-1"> 准备 Linux 路径</h3>
 <p>配置 Stable Diffusion WebUI Docker 后，进入 Linux 环境启动 Docker 容器。不过在启动 Docker 前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
-<p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）</p>
+<p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于 <code>D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker</code>，转换为 Linux 路径则是 <code>/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>。（Mac 可忽略本段，直接使用自身路径。）</p>
 <h2 id="启动-stable-diffusion" tabindex="-1"> 启动 Stable Diffusion</h2>
 <p>准备好 Linux 路径后，启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入切换路径命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压文件目录执行部署命令。</p>
 <div data-ext="sh"><pre><code><span># 自动下载采样模型和依赖包</span>
@@ -495,7 +495,7 @@ MSOCache 其它的目录下内容同样根据注册表的内容把它指示的�
 <p><img src="https://pic4.zhimg.com/v2-d5945359b896ffd09d9973e9597ec06b_r.jpg" alt="" loading="lazy"></p>
 <p>打开 IE 浏览器，访问 <a href="http://live.com" target="_blank" rel="noopener noreferrer">live.com</a>，如果网页提示「登录需要启动 JavaScript」，说明问题的根源出在 IE 的设置上。</p>
 <p><img src="https://pic1.zhimg.com/v2-cc00b3039f755b92f9ae511c8b7debd0_r.jpg" alt="" loading="lazy"></p>
-<p>依次点击「IE 设置 - Internet 选项 - 安全 - 自定义级别」，然后启用脚本选项的「Java 小程序脚本」和「活动脚本」。</p>
+<p>点击「IE 设置」&gt;「Internet 选项」&gt;「安全」&gt;「自定义级别」，然后启用脚本选项的「Java 小程序脚本」和「活动脚本」。</p>
 <p><img src="https://pic2.zhimg.com/v2-717bf3c8b62748b62a04219435b8a75d_r.jpg" alt="" loading="lazy"></p>
 <p><img src="https://pic4.zhimg.com/v2-25697b0c27aa8780c532b7a03a78dcbf_r.jpg" alt="" loading="lazy"></p>
 <p>完成设置后，即可正常登录并打开 OneNote。</p>
@@ -515,7 +515,7 @@ MSOCache 其它的目录下内容同样根据注册表的内容把它指示的�
 <p><strong>方法如下：</strong></p>
 <ol>
 <li>
-<p>左下角「开始菜单」-「运行」，打开“运行”对话框，输入 <code>Regedit</code>，进入注册表编辑器</p>
+<p>点击「开始菜单」，搜索「Regedit」，进入注册表编辑器。</p>
 </li>
 <li>
 <p>打开窗口后，在注册表上方菜单中输入 <code>计算机\HKEY_CURRENT_USER\Control Panel\Desktop</code>。</p>
