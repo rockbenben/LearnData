@@ -92,7 +92,7 @@ order: -47
 
 遇到 GitHub Actions 报错：`git denied to github-actions[bot]` 或 `Process completed with exit code 128`。
 
-依次点击该 repository 的 `Setting - Code and automation - Actions - General`，然后在 Workflow permissions 中开启「Read and write permissions」。
+点击该 repository 的「Setting」>「Code and automation」>「Actions」>「General」，然后在 Workflow permissions 中开启「Read and write permissions」。
 
 ### Error: Process completed with exit code 1
 
@@ -105,7 +105,7 @@ order: -47
 修改旧文章并同步后，WordPress 站的文章没同步修改，而是新增了一篇相同的文章。
 
 - 检查 md 文件名有没有出现大写字母，有没有更改文件名。
-- 进入 WordPress 后台，设置 - 固定链接，选中自定义结构，并将文章链接设为 `/p/%postname%`。
+- 进入 WordPress 后台，点击「设置」>「固定链接」，选中自定义结构，并将文章链接设为 `/p/%postname%`。
 
 如果修改版在检查后依然出现此问题，建议手动将新文章内容覆盖旧文章，然后删除新文章。​ 这个 bug 可以当作是强提醒。当 WordPress 新增了旧文章，你就被提醒要在其他平台修改该文章，让文章版本保持统一。
 

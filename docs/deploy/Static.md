@@ -46,7 +46,7 @@ IPFS 无需服务器就可建立静态网站，号称永不失效，但**国内�
 
 上传 ipfs 到 pinata 之后，cloudflare 等其他网关不一定会完全复制文件，php 无法抓取加载，所以不建议使用 cloudflare 网关。
 
-cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管 - cloudflare DNS - cloudflare SSL」。如果中途将 DNS 指向 `http://gateway.pinata.cloud` 等非 cloudflare ipfs 网关域名，cloudflare SSL 证书将失效。即便把链接改为非加密的 http，pinata 依然会视之为无效链接而拒绝访问。
+cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管」>「cloudflare DNS」>「cloudflare SSL」。如果中途将 DNS 指向 `http://gateway.pinata.cloud` 等非 cloudflare ipfs 网关域名，cloudflare SSL 证书将失效。即便把链接改为非加密的 http，pinata 依然会视之为无效链接而拒绝访问。
 
 对于文件较少且链接有效的域名，可按 [Cloudflare IPFS](https://www.cloudflare.com/zh-cn/distributed-web-gateway/) 页面说明来设置 DNS，提交 IPFS 域名 30 分钟后，即可获取 SSL 证书。
 

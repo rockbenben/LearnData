@@ -25,7 +25,7 @@ order: 2
 
 - 将电脑调整到高性能/卓越模式。
 - 将 Documents、Desktop 转移到 D 盘。
-- 任务栏：在任务栏底部右键单击，选择「任务栏设置」-「通知区域 - 选择哪些图标显示在任务栏上」；在同页面的「多显示器设置」中，取消「在所有显示器上显示任务栏」。
+- 任务栏：在任务栏底部右键单击，选择「任务栏设置」>「通知区域」>「选择哪些图标显示在任务栏上」；在同页面的「多显示器设置」中，取消「在所有显示器上显示任务栏」。
 - [清理导航栏](https://zhuanlan.zhihu.com/p/25942015)。
 - [设置系统强制关机](https://newzone.top/_posts/2017-09-02-forced_shutdown.html)，防止系统关机不成功。
 - Everything 注册右键搜索当前路径；右键清除。
@@ -44,17 +44,17 @@ order: 2
 - Mircrosoft Store：Snipaste、微信 For Windows；
 - 绿色开机：Keepass、Ditto、RunAny、天若 OCR；WPS 安装宏；
 - 配置：Eagle、RIME、Picgo、wonderpen；
-- firefox-about:config 修改原值 18 的 `ui.key.menuAccessKey` 为 0，以屏蔽 alt 键防止热键冲突；关闭 `options - Network Settings - DNS over HTTPS`；
+- firefox-about:config 修改原值 18 的 `ui.key.menuAccessKey` 为 0，以屏蔽 alt 防止热键冲突；选择「options」>「Network Settings」，取消勾选「DNS over HTTPS」；
 - 火绒－安全设置－高级防护－导入隐私规则，增加 [腾讯屏蔽规则](https://github.com/tutugreen/Huorong-Rules/tree/main/Tencent)。
 
 ## 修改按键
 
-- Powertoys：`insert` 键改为 backspace；
+- Powertoys：将 insert 键改为 backspace；
 - Option：计算器改为「上一个桌面」；右键菜单改为「下一个桌面」。
 
 ## 常见问题
 
-- Win11 本地账户也被提示需要登录密码，但设置密码后，无法直接开机登录。设置新密码后，进入 `设置 - 账户 - 登录选项 - 密码`，可以重新设置空密码，实现自动登录。
+- Win11 本地账户也被提示需要登录密码，但设置密码后，无法直接开机登录。设置新密码后，点击「设置」>「账户」>「登录选项」>「密码」，可以重新设置空密码，实现自动登录。
 - 英语键盘删不掉：添加英语语言包，然后再删除，英语键盘也会一起删除。
 - 右键更改前先备份注册表，有几率会影响系统稳定性。
 - 实时将音频转文字：管理员方式安装 [VB-CABLE](https://vb-audio.com/Cable/)，输入输出设备都选 VB-CABLE，详细设置查看 [How to Convert Audio to Text - FREE & No Time Limits](https://www.youtube.com/watch?v=1DsrniDGOJQ)。

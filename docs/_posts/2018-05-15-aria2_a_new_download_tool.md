@@ -99,7 +99,7 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
 使用方法：下载并解压 [AriaNg](https://github.com/mayswind/AriaNg-DailyBuild/archive/master.zip)，运行目录下的 index.html，打开 Aria2 WebUI 界面，将页面链接收藏到书签，方便后续使用 Aria2。
 
-如果 AriaNg 页面出现报错，则从页面左侧进入 `AriaNg 设置 - RPC`，检查 RPC 地址，默认地址为 `localhost:6800`。
+如果 AriaNg 页面出现报错，则从页面左侧选择「AriaNg 设置」>「RPC」，检查 RPC 地址，默认地址为 `localhost:6800`。
 
 ### Aira2 下载预热
 
@@ -117,7 +117,7 @@ Aira2 下载预热是 BT 下载前的必备步骤，否则速度容易很慢。
   有的 Chrome 浏览器无法直接安装 `.crx` 格式的扩展，需将文件解压到新文件夹「xxx」，然后在浏览器地址栏输入 `chrome://extensions/` 开启开发者模式，点击加载已解压的扩展程序，选中刚才解压的文件夹「xxx」。
 - Firefox：[Aria2 Download Manager Integration](https://addons.mozilla.org/en-US/firefox/addon/aria2-integration/)，配置可参考下方的 Chrome 扩展设置。
 
-扩展「添加到 aria2」安装好后，右键扩展图标，点击 `选项 - 设置`，设置如下：
+扩展「添加到 aria2」安装好后，右键扩展图标，点击「选项」>「设置」，设置如下：
 
 - 最小监视：`10` M，低于该容量将由浏览器下载。如果 Aria2 要接手所有下载，可以将最小监视设为 `0.001`。
 - JSON-RPC 链接：`http://localhost:6800/jsonrpc`。

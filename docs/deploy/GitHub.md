@@ -12,7 +12,7 @@ GitHub Actions 是一个持续集成和持续交付 (CI/CD) 平台，可用于�
 - [GitHub Actions 官方市场](https://github.com/marketplace?type=actions)
 - [Awesome Actions](https://github.com/sdras/awesome-actions)
 
-如果 GitHub Actions 命令中有涉及密码等私密信息，则进入项目仓库的「setting - Secrets - Action」，添加密钥进行加密处理。比如新建密钥 PERSONAL_TOKEN，Actions 命令中使用 `${{ secrets.PERSONAL_TOKEN }}` 来指代该密钥。
+如果 GitHub Actions 命令中有涉及密码等私密信息，则进入项目仓库的「setting」>「Secrets」>「Action」，添加密钥进行加密处理。比如新建密钥 PERSONAL_TOKEN，Actions 命令中使用 `${{ secrets.PERSONAL_TOKEN }}` 来指代该密钥。
 
 ### 不同仓库间复制
 

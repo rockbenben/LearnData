@@ -71,7 +71,7 @@ order: -22
 
 ![](http://tc.seoipo.com/20181008130943.png)
 
-回到 Scenarios，点击 Data Output Agent 旁的按钮「Actions - Show」，复制导出的 xml 链接 `http://xxx.xxx/users/1/web_requests/xxx/xxxx.xml`。
+回到 Scenarios，点击 Data Output Agent 旁的按钮「Actions」>「Show」，复制导出的 xml 链接 `http://xxx.xxx/users/1/web_requests/xxx/xxxx.xml`。
 
 ![](http://tc.seoipo.com/20181008131059.png)
 

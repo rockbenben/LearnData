@@ -15,7 +15,7 @@ Home Assistant 原生支持的米家设备较少，需要使用 hacs 下的集�
 
 1. 下载 [hacs](https://github.com/hacs/integration/releases/)，将其解压到 Home Assistant 配置的 config\custom_components\hacs 文件夹下。
 2. 重启 Home Assistant 容器后，在集成中搜索 hacs，安装时按要求提供 github 账户授权。
-3. 进入「HACS - 集成 - 浏览并下载存储库」，下载 Xiaomi Miot Auto 并重启 Home Assistant 容器。^[[从零开始，基于群晖轻松玩转开源 homeassistant 智能家居前期搭建](https://baijiahao.baidu.com/s?id=1721932088542289661)]
+3. 选择「HACS」>「集成」>「浏览并下载存储库」，下载 Xiaomi Miot Auto 并重启 Home Assistant 容器。^[[从零开始，基于群晖轻松玩转开源 homeassistant 智能家居前期搭建](https://baijiahao.baidu.com/s?id=1721932088542289661)]
 
 Home Assistant 虽然一直被吹得很厉害，但即时性的传感器可能不能及时触发，使用时需要注意这点。
 
@@ -27,10 +27,10 @@ Home Assistant 虽然一直被吹得很厉害，但即时性的传感器可能�
 
 1. 部署 Node-RED 时，Node-RED 对存储文件夹的读写权限要求较高，Docker 部署的话需修改 data 的文件夹权限，为避免麻烦，我给了最高权限 `chmod 777 /volume1/docker/nodered/data`。
 2. Node-RED 上安装 [node-red-contrib-home-assistant-websocket](https://zachowj.github.io/node-red-contrib-home-assistant-websocket/guide/#prerequisites)。
-   - 设置 - 节点管理 - 控制板 - 安装，点击右侧刷新按钮，加载节点目录，第一次加载要比较长时间，不用关闭网页。
+   - 选择「设置」>「节点管理」>「控制板」>「安装」，点击右侧刷新按钮，加载节点目录，第一次加载要比较长时间，不用关闭网页。
    - 搜索并安装「node-red-contrib-home-assistant-websocket」。
-3. 进入「Home Assistant - HACS - 集成 - 浏览并下载存储库」，下载 Node-RED Companion。
-4. 进入「Home Assistant - 配置 - 设备与服务 -集成」，添加集成 Node-RED Companion，然后重启 Home Assistant 容器。
+3. 选择「Home Assistant」>「HACS」>「集成」>「浏览并下载存储库」，下载 Node-RED Companion。
+4. 选择「Home Assistant」>「配置」>「设备与服务」>「集成」，添加集成 Node-RED Companion，然后重启 Home Assistant 容器。
 5. 进入 nodered 页面，配置 [home assistant websocket](https://zachowj.github.io/node-red-contrib-home-assistant-websocket/guide/#configuration)，点击右上角的部署。^[[树莓派 HomeAssistant 系列（四）NodeRed 安装配置](https://zhuanlan.zhihu.com/p/456741817)]
 
 ### 常用节点

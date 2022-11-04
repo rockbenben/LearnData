@@ -46,7 +46,7 @@ lucifersun 的 IPTV 直播源比电视直播**慢 15 秒**，对普通用户来�
 
 1. PC 端安排 [Potplayer](http://www.potplayer.org/)。
 
-2. 复制节目 rtsp 直播源链接，打开 Potplayer , 点击右键 - 打开 - 打开剪贴板。
+2. 复制节目 rtsp 直播源链接，打开 Potplayer , 右键单击主界面 >「打开」>「打开剪贴板」。
 
    ![](http://tc.seoipo.com/20180619140722.png)
 

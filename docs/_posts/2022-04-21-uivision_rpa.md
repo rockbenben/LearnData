@@ -86,11 +86,11 @@ UI.Vision RPA 的运行脚本叫做「宏」。界面很简单，左侧是宏的
 
 用不同的变量文本进行重复的网页操作，需要使用 UI.Vision 的 [csvRead](https://ui.vision/rpa/docs/selenium-ide/csvread) 命令。下面以「依次打开不同链接」为例。
 
-1. 点击 UI.Vision 右下角的 `CSV - Import CSV`，用 CSV 文件导入批量处理内容。
-2. 「csvReadArray」命令，Target 输入文件名「1.csv」，Value 输入分组名「link」。
-3. 「executeScript」命令，Target 输入计算脚本 `return ${!LOOP} - 1;`，Value 输入自定义变量名 `num`。数组序号以 0 开始而循环序号 `${!LOOP}` 以 1 起始，所以数组序号为 `${!LOOP}-1`。
-4. 「open」命令，Target 输入变量参数 `${link[${num}]}`，`${link[x]}` 指 link 数组中序号为 x 的成员。
-5. 「pause」命令，Target 输入延时时间，单位为毫秒。
+1. 点击 UI.Vision 右下角的「CSV」>「Import CSV」，用 CSV 文件导入批量处理内容。
+2. 使用「csvReadArray」命令，Target 输入文件名「1.csv」，Value 输入分组名「link」。
+3. 使用「executeScript」命令，Target 输入计算脚本 `return ${!LOOP} - 1;`，Value 输入自定义变量名 `num`。数组序号以 0 开始而循环序号 `${!LOOP}` 以 1 起始，所以数组序号为 `${!LOOP}-1`。
+4. 使用「open」命令，Target 输入变量参数 `${link[${num}]}`，`${link[x]}` 指 link 数组中序号为 x 的成员。
+5. 使用「pause」命令，Target 输入延时时间，单位为毫秒。
 6. 点击右上角「Play Macro」旁边的下拉按钮，然后点击「Play Loop」，有多少行文本需要处理，就循环多少次。
 
 ## 常见问题
@@ -104,7 +104,7 @@ UI.Vision RPA 的运行脚本叫做「宏」。界面很简单，左侧是宏的
 ### 浏览器外使用 RPA
 
 1. 地址栏输入 `chrome://extensions/`，找到扩展 UI.Vision RPA，点击按钮「详情」，启用「允许访问文件网址」。
-2. 右键点击指定脚本，点击「Create autorun HTML」，将自动输出两个 html 文件。
+2. 右键单击指定脚本，点击「Create autorun HTML」，将自动输出两个 html 文件。
 3. 点击与脚本同名的 html 即可启动脚本。
 
 ### 本地运行自动化报错

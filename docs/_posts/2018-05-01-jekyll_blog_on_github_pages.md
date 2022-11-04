@@ -28,7 +28,7 @@ order: -13
 
    ![](http://tc.seoipo.com/20180505202201.png)
 
-5. 同一页面选择「Code and automation - Pages - Build and deployment - Branch」, 将 master branch 设为 Github Pages 来源，网站运行目录默认为 `/(root)`。设置好后，点击「Save」。
+5. 同一页面选择「Code and automation」>「Pages」>「Build and deployment」>「Branch」, 将 master branch 设为 Github Pages 来源，网站运行目录默认为 `/(root)`。设置好后，点击「Save」。
 
    ![](http://tc.seoipo.com/2022-08-08-11-42-16.png)
 

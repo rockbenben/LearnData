@@ -19,7 +19,7 @@ Rime 小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/re
 
 ## 基础设置
 
-安装小狼毫时，不要修改用户文件夹位置，否则后续输入法定制容易出错。安装好后，右键任务栏小狼毫图标，依次点击「输入法设定」- 勾选输入法（推荐「朙月拼音·简化字」）- 选择皮肤，然后正常使用小狼毫输入法了。^[[30 分钟搞定 自由输入法 RIME 简明配置指南](https://www.jianshu.com/p/296bba666604)]^[[Rime 输入法—鼠须管 (Squirrel) 词库添加及配置](https://www.jianshu.com/p/cffc0ea094a7)]
+安装小狼毫时，不要修改用户文件夹位置，否则后续输入法定制容易出错。安装好后，右键单击任务栏的小狼毫图标，点击「输入法设定」，勾选输入法（推荐「朙月拼音·简化字」），点击「中」，选择皮肤后即可使用小狼毫输入法了。^[[30 分钟搞定 自由输入法 RIME 简明配置指南](https://www.jianshu.com/p/296bba666604)]^[[Rime 输入法—鼠须管 (Squirrel) 词库添加及配置](https://www.jianshu.com/p/cffc0ea094a7)]
 
 小狼毫不推荐使用 [四叶草](https://github.com/fkxxyz/rime-cloverpinyin) 之类的集成方案，建议参考 [Squirrel 鼠须管配置](https://github.com/ssnhd/rime) 和 [小狼毫 [rime_win][眀月拼音] 简单配置方法](https://blog.csdn.net/qq_42204675/article/details/86422450) 以「朙月拼音·简化字」为基础定制你自己的输入法，最大限度提升输入法效率。小狼毫的魅力正在于可自定义，让输入法按你的想法输出，定制流程参考下面的进阶指南。
 
@@ -35,7 +35,7 @@ Rime 小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/re
 
 为提高效率，[小狼毫官方配置库](https://github.com/rime/rime-double-pinyin) 收录了自然码双拼、智能 ABC 双拼、小鹤双拼、MSPY 双拼、拼音加加双拼，我使用的是小鹤双拼。
 
-配置时，将官方配置库中的 [double_pinyin_flypy.schema.yaml](https://github.com/rime/rime-double-pinyin/blob/master/double_pinyin_flypy.schema.yaml) 下载到小狼毫的用户文件夹。然后，右键点击任务栏小狼毫图标，选「输入法设定」，只勾选一个「小鹤双拼」。默认方案为繁体，可使用按键 F5 (部分版本是 F4)，将配置默认为简体。
+配置时，将官方配置库中的 [double_pinyin_flypy.schema.yaml](https://github.com/rime/rime-double-pinyin/blob/master/double_pinyin_flypy.schema.yaml) 下载到小狼毫的用户文件夹。然后，右键单击任务栏小狼毫图标，选「输入法设定」，只勾选一个「小鹤双拼」。默认方案为繁体，可使用按键 F5 (部分版本是 F4)，将配置默认为简体。
 
 双拼的自定义短语，可参考 [小狼毫自定义短语-Rime-双拼](https://blog.csdn.net/neninee/article/details/83692270)。如果设定后，无法使用简体输入，将 `double_pinyin_flypy.schema.yaml` 中的 filters 模块转移到 translators 模块上方。
 
@@ -54,13 +54,13 @@ translator:
 
 ## 进阶指南
 
-小狼毫进阶前，需进入小狼毫默认的用户文档位置，新建 yaml 文档来存储输入法设置修改。如果使用「朙月拼音·简化字」输入法方案，则新建「luna_pinyin_simp.custom.yaml」。`%APPDATA%\Rime` 是小狼毫默认的用户文档位置。如果安装时修改过用户文档位置，右键点击任务栏小狼毫图标，选「用户文件夹」，即会进入用户文档。^[[小狼毫 RIME 输入法配置](https://www.dazhuanlan.com/2019/10/06/5d995d43e4432/)]
+小狼毫进阶前，需进入小狼毫默认的用户文档位置，新建 yaml 文档来存储输入法设置修改。如果使用「朙月拼音·简化字」输入法方案，则新建「luna_pinyin_simp.custom.yaml」。`%APPDATA%\Rime` 是小狼毫默认的用户文档位置。如果安装时修改过用户文档位置，右键单击任务栏小狼毫图标，选「用户文件夹」，即会进入用户文档。^[[小狼毫 RIME 输入法配置](https://www.dazhuanlan.com/2019/10/06/5d995d43e4432/)]
 
 Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如 [定制指南](https://github.com/rime/home/wiki/CustomizationGuide)、[文件配置说明](https://github.com/rime/home/wiki/RimeWithSchemata#rime-%E4%B8%AD%E7%9A%84%E6%95%B8%E6%93%9A%E6%96%87%E4%BB%B6%E5%88%86%E4%BD%88%E5%8F%8A%E4%BD%9C%E7%94%A8)、[emoji 集成](https://github.com/rime/rime-emoji) 和 [模糊音设置](https://github.com/rime/home/wiki/CustomizationGuide#%E6%A8%A1%E7%B3%8A%E9%9F%B3)。
 
 如果要多设备 [同步用户资料](https://github.com/rime/home/wiki/UserGuide#%E5%90%8C%E6%AD%A5%E7%94%A8%E6%88%B6%E8%B3%87%E6%96%99)，则打开用户文件夹中的 `installation.yaml`，将其中的设备名称 `installation_id` 从长字符串修改为方便识别的名称，并在 `installation.yaml` 文本最下方添加用户资料同步位置 `sync_dir: 'D:\Sync\RIME'`，路径中不能出现中文。
 
-打字习惯会保存在 `<词典名>.userdb.txt` 或 `<词典名>.userdb.kct.snapshot`。还原时，依次点击「用户词典管理 - 导入文本码表」来恢复词频记录。
+打字习惯会保存在 `<词典名>.userdb.txt` 或 `<词典名>.userdb.kct.snapshot`。还原时，点击「用户词典管理」>「导入文本码表」来恢复词频记录。
 
 小狼毫主版本长年未更新，使用 rime 输入法的核心库 [librime](https://github.com/rime/librime/releases) 替换小狼毫程序文件夹中的 rime.dll 可更新输入法。如果输入法中使用了 `Rime.lua` 的动态输出功能，与核心库可能会冲突，建议不采用 rime.dll 升级。
 

@@ -9,7 +9,7 @@ Tiny Tiny RSS 推荐用 [Awesome TTRSS](http://ttrss.henry.wang/zh/) 的 Docker 
 
 - 主题：[feedly-sepia.css](https://github.com/levito/tt-rss-feedly-theme)
 - 常见问题：[Tiny Tiny RSS – FAQ](https://tt-rss.org/wiki/FAQ)
-- 定期备份：`偏好设置 - 订阅源` 导出订阅源和 tt-rss 设置。
+- 定期备份：选择「偏好设置」>「订阅源」导出订阅源和 tt-rss 设置。
 
 ## 手动部署
 

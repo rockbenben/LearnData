@@ -19,7 +19,7 @@ order: -26
 ## 有线投屏
 
 1. 下载并解压 scrcpy。
-2. 手机端开启 `开发者选项` 及 `USB 调试`。开发者选项默认情况下处于隐藏状态，转到 `设置 - 关于手机`，然后点按版本号七次，返回上一屏幕，在底部可以找到开发者选项。
+2. 手机端开启 `开发者选项` 及 `USB 调试`。开发者选项默认情况下处于隐藏状态，转到「设置」>「关于手机」，然后点按版本号七次，返回上一屏幕，在底部可以找到开发者选项。
 3. 用数据线将手机和电脑连接起来，此时手机上弹出授权提示，点击 `允许 USB 调试`。
 4. 双击解压得到的 **scrcpy.exe** 文件，就能进行有线投屏了。
 
@@ -77,7 +77,7 @@ cd D:\Libraries\Desktop\scrcpy-win64-v1.24
 
 - 更换数据线；
 - 检查手机的「本机 IP」是否正确；
-- 核对有线连接步骤，`开启 USB 调试 - 连接手机与电脑 - 启动 scrcpy`。
+- 核对有线连接步骤，选择「开启 USB 调试」>「连接手机与电脑」>「启动 scrcpy」。
 
 ### ERROR: Exception on thread
 
@@ -92,8 +92,8 @@ cd D:\Libraries\Desktop\scrcpy-win64-v1.24
 
 ### 投屏模糊
 
-如果屏幕设置了缩放比例，投屏界面会模糊。右键 **scrcpy.exe**，点击 `属性 - 兼容性 - 更改高 DPI 设置`，然后勾选「替代高 DPI 缩放行为」，应用后投屏恢复正常。
+如果屏幕设置了缩放比例，投屏界面会模糊。右键单击 scrcpy.exe，点击「属性」>「兼容性」>「更改高 DPI 设置」，然后勾选「替代高 DPI 缩放行为」，应用后投屏恢复正常。
 
 ![](http://tc.seoipo.com/20190829095640.png "解决 scrcpy 投屏模糊")
 
-更多问题报错的解决方法，查看 [官方 FAQ](https://github.com/Genymobile/scrcpy/blob/master/FAQ.md)。
+更多问题报错的解决方法，查看 [scrcpy FAQ](https://github.com/Genymobile/scrcpy/blob/master/FAQ.md)。

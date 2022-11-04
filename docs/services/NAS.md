@@ -7,8 +7,8 @@ order: 1
 
 NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面。群晖 NAS 在使用前，注意以下几点：
 
-- `控制面板－文件服务－SMB－高级设置`，将最小 SMB 协议 设为 SMB1，避免部分应用发现了 NAS 但无法打开共享文件。
-- `控制面板－任务计划 - 新增 - 计划的任务 - 用户定义的脚本`，给 NAS 建立定时任务脚本。
+- 选择「控制面板」>「文件服务」>「SMB」>「高级设置」，将最小 SMB 协议 设为 SMB1，避免部分应用发现了 NAS 但无法打开共享文件。
+- 选择「控制面板」>「任务计划」>「新增」>「计划的任务」>「用户定义的脚本」，给 NAS 建立定时任务脚本。
 - SSD 缓存对家用的 NAS 性能提升不大，没必要加。
 - DS/Transmission 套件：用于 PT 下载 (禁用 DHT，半小时停止做种)。
 - Synology Drive Server 套件：电脑文件备份。
@@ -24,7 +24,7 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 
 推荐用 `docker-compose.yml` 安装 Docker，镜像会自动同步到 NAS 的容器列表中。docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%E9%80%9A%E8%BF%87-docker-compose-%E9%83%A8%E7%BD%B2)。
 
-1. 打开 `控制面板`-`终端机和 SNMP`，启动 SSH 功能。
+1. 选择「控制面板」>「终端机和 SNMP」，启动 SSH 功能。
 2. putty 连接群晖 SSH，进入 `docker-compose.yml` 所在路径，比如 `cd /volume3/storage`。
 3. 通过终端在同目录下运行 `sudo docker-compose up -d` 后等待部署完成。
 4. 关闭 SSH 功能。
@@ -88,8 +88,8 @@ NAS 上常用的 Docker 容器服务：
 
 换下的机械硬盘做冷备份，存储照片等长期数据。
 
-硬盘临期后，用大容量硬盘替换。考虑进入 `存储池 - 更改 RAID 类型`，无损转换 basic 到 Raid1。不过，不同容量硬盘组 RAID，只能以最小磁盘容量计使用空间。
+硬盘临期后，用大容量硬盘替换。选择「存储池」>「更改 RAID 类型」，无损转换 basic 到 Raid1。不过，不同容量硬盘组 RAID，只能以最小磁盘容量计使用空间。
 
 更换硬盘后，注意将数据连同文件夹用 file station 复制过去 (按住 Shift 选中所有你要的文件点右键 移动到...)，关机卸载旧盘。如果该硬盘涉及套件位置，注意检查设置。^[[如何把群晖 NAS 上的套件搬到另外个硬盘上](https://www.bigzhang.com/3264.html)]
 
-共享文件迁移：进入 `控制面板 - 共享文件夹`，把你的共享文件夹位置修改到新储存空间。^[[群晖 NAS 跨存储空间移动共享文件夹 (NAS 新增磁盘)](https://blog.csdn.net/hilaryfrank/article/details/109722319)]
+共享文件迁移：选择「控制面板」>「共享文件夹」，把你的共享文件夹位置修改到新储存空间。^[[群晖 NAS 跨存储空间移动共享文件夹 (NAS 新增磁盘)](https://blog.csdn.net/hilaryfrank/article/details/109722319)]

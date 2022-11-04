@@ -57,7 +57,7 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 配置 Stable Diffusion WebUI Docker 后，进入 Linux 环境启动 Docker 容器。不过在启动 Docker 前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。
 
-Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设容器位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。（Mac 可忽略本段，直接使用自身路径。）
+Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设容器位于 `D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker`，转换为 Linux 路径则是 `/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`。（Mac 可忽略本段，直接使用自身路径。）
 
 ## 启动 Stable Diffusion
 

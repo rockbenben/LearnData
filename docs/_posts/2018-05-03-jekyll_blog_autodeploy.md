@@ -50,11 +50,11 @@ after_success:
   - git push --force https://$DEPLOY_TOKEN@github.com/rockbenben/blog.git master
 ```
 
-`$DEPLOY_TOKEN` 是从 Github 授权得到的，`setting - Developer settings - Personal access tokens - Generate new token`, 然后给于相应权限即可，`admin:public_key, admin:repo_hook, repo`。
+`$DEPLOY_TOKEN` 是从 Github 授权得到的，「setting」>「Developer settings」>「Personal access tokens」>「Generate new token」, 然后给于相应权限即可，`admin:public_key, admin:repo_hook, repo`。
 
 ![](http://tc.seoipo.com/20180504153729.png)
 
-进入 Travis 的 repo 项目，`More options - Settings - Environment Variables`, 新建一个变量`DEPLOY_TOKEN`，把 Github 的授权 token 保存在里面。
+进入 Travis 的 repo 项目，「More options」>「Settings」>「Environment Variables」, 新建一个变量`DEPLOY_TOKEN`，把 Github 的授权 token 保存在里面。
 
 ![](http://tc.seoipo.com/20180504154229.png)
 
@@ -95,13 +95,13 @@ WORKDIR /usr/share/nginx/html
 
 ## Docker 镜像设置
 
-注册并登录 [Docker Hub](https://hub.docker.com)，点击 `Create - Create Automated Build - Create Auto-build Github`, 选择之前新建的 `dockerfiles` repository。
+注册并登录 [Docker Hub](https://hub.docker.com)，点击 「Create」>「Create Automated Build」>「Create Auto-build Github」, 选择之前新建的 `dockerfiles` repository。
 
 建立 Automated Build 镜像后，进入 `Build Seeting`, 点击 Trigger，建立第一个 Docker 镜像。
 
 ![](http://tc.seoipo.com/20180504161016.png)
 
-然后在 `Building Settings - Build Triggers - Activate Triggers` ，复制 Trigger URL。
+然后在「Building Settings」>「Build Triggers」>「Activate Triggers」，复制 Trigger URL。
 
 ![](http://tc.seoipo.com/20180504161245.png)
 

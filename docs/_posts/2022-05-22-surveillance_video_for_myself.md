@@ -49,15 +49,15 @@ order: -46
 
 摄像头录像方案较少，大多是录屏软件的附带功能，我尝试了以下 9 种：
 
-1. 相机：Windows 自带应用，录制方便，但不能调节输出选项。
-2. [FlashBack Express](https://www.flashbackrecorder.com/zh/express/)：能调节帧率，镜像，虚化背景，但免费版只支持 2 小时内的录制。
-3. [Bandicam](https://www.bandicam.cn/)：录制时能抑制噪音，同步录制扬声器音频，自由调节编码、帧率，但免费版只支持录制 10 分钟且有水印。
-4. [Mirillis Action!](https://mirillis.com/zh/products/action.html)：高帧率录制游戏，自动分割视频，自定义叠加元素，但输入帧率不能自由调整，最低只能 15 帧，试用期 30 天。
-5. [oCam](https://ohsoft.net/eng/ocam/intro.php?cate=1002)：打着免费招牌但有弹窗广告，且录制视频偏大。
-6. [ShareX](https://getsharex.com/)：免费开源强大的截图软件，也具备录屏功能，能调节编码和帧率，但只能单一录屏或录像。
-7. [Capture](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0)：免费开源，使用前需手动[配置 ffmpeg](https://blog.csdn.net/dglx_/article/details/122389601)，自定义叠加元素，但项目已停止更新。推荐录制配置为 `FPS:10, Quality:30%`。
-8. [OBS](https://obsproject.com/)：免费开源直播软件，也可以录制视频，操作性极强，但我工作时同时在多路推流直播，无法同时录制摄像头。
-9. [VLC](https://www.videolan.org/vlc/)：免费开源视频软件，能调节输出视频的编码、帧率、格式，几乎全能，相同环节下输出视频最小，但操作麻烦，只能单一录屏或录像，暂停录制容易有 bug。
+- 相机：Windows 自带应用，录制方便，但输出选项少，限制多。
+- [FlashBack Express](https://www.flashbackrecorder.com/zh/express/)：能调节帧率，镜像，虚化背景，但免费版只支持 2 小时内的录制。
+- [Bandicam](https://www.bandicam.cn/)：录制时能降噪，内录扬声器音频，自由调节编码、帧率，但免费版只支持录制 10 分钟且有水印，输出文件名自定义规则极少。Bandicam 支持定时录制计划，但录制的开始和结束都必须由该计划执行，否则录制计划将不会执行。比如使用 Bandicam 的开机录制后，定时录制计划就会失效，需借助 Windows 的任务计划程序来定时录制停止，操作参考 [Bandicam 官方文档](https://www.bandicam.cn/support/tips/timer-recording/)。
+- [Mirillis Action!](https://mirillis.com/zh/products/action.html)：高帧率录制游戏，自动分割视频，自定义叠加元素，但输入帧率不能自由调整，最低只能 15 帧，试用期 30 天。
+- [oCam](https://ohsoft.net/eng/ocam/intro.php?cate=1002)：打着免费招牌但有弹窗广告，且录制视频偏大。
+- [ShareX](https://getsharex.com/)：免费开源强大的截图软件，也具备录屏功能，能调节编码和帧率，但只能单一录屏或录像。
+- [Capture](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0)：免费开源，使用前需手动 [配置 FFmpeg](https://blog.csdn.net/dglx_/article/details/122389601)，自定义叠加元素，但项目已停止更新。测试时，Capture 经常莫名其妙的报错，重启大概率恢复正常，只能偶尔用用，不能用于工作环境。
+- [OBS](https://obsproject.com/)：免费开源直播软件，也可以录制视频，操作性极强，但输出限制多，也难以在直播的同时进行桌面录制。
+- [VLC](https://www.videolan.org/vlc/)：免费开源视频软件，能调节输出视频的编码、帧率、格式，但操作麻烦，只能单一录屏或录像，暂停录制容易有 bug。
 
 Bandicam、Mirillis Action！录制时，电脑无法进入睡眠，ManicTime 也不能检测到你的离开状态。
 
@@ -87,7 +87,7 @@ Bandicam、Mirillis Action！录制时，电脑无法进入睡眠，ManicTime �
 
 > DVR-Scan 是一个跨平台命令行（CLI）应用程序，可以自动检测视频文件中的运动事件（例如安全摄像头镜头）。除了定位每个运动事件的时间和持续时间外，DVR 扫描还将每个运动事件的片段保存到一个新的单独的视频剪辑中。DVR-Scan 免费开源软件（FOSS）是用 Python 编写的，并且基于 Numpy 和 OpenCV，而且可以扩展和黑客入侵。
 
-DVR-Scan 操作很简单，视频目录内右键点击「在终端打开」，执行默认输出命令即可得到过滤后的视频。12 小时的视频，处理用时二十分钟，会占用大量 CPU。有点要注意，DVR-Scan 有个限制，只能导出为`.avi`视频。
+DVR-Scan 操作很简单，视频目录内右键单击「在终端打开」，执行默认输出命令即可得到过滤后的视频。12 小时的视频，处理用时二十分钟，会占用大量 CPU。有点要注意，DVR-Scan 有个限制，只能导出为`.avi`视频。
 
 ```bash
 #默认输出命令

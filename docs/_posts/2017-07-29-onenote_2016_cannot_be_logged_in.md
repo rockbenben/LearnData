@@ -16,7 +16,7 @@ OneNote 安装后，提示输入账号，但点击「下一步」始终没反应
 
 ![](https://pic1.zhimg.com/v2-cc00b3039f755b92f9ae511c8b7debd0_r.jpg)
 
-依次点击「IE 设置 - Internet 选项 - 安全 - 自定义级别」，然后启用脚本选项的「Java 小程序脚本」和「活动脚本」。
+点击「IE 设置」>「Internet 选项」>「安全」>「自定义级别」，然后启用脚本选项的「Java 小程序脚本」和「活动脚本」。
 
 ![](https://pic2.zhimg.com/v2-717bf3c8b62748b62a04219435b8a75d_r.jpg)
 

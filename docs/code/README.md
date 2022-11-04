@@ -32,7 +32,7 @@ GitHub Copilot，Tabnine，aiXcoder 插件均可以辅助补全代码。Tabnine 
 
 ### 修改快捷键
 
-点击「菜单栏 - 文件 - 首选项 - 键盘快捷方式」，修改或解绑快捷键。
+选择「菜单栏」>「文件」>「首选项」>「键盘快捷方式」，修改或解绑快捷键。
 
 以 PicGo 图床为例，其默认配置放置于 `%AppData%\picgo\data.json`，推荐快捷键为
 

@@ -27,7 +27,7 @@ order: 3
 
 ### 报错重置
 
-如果遇到程序自身的报错，打开「设置 - 应用 - 应用和功能」中找到 Power Automate Desktop 应用，并点击「重置」后试试看。
+如果遇到程序自身的报错，点击「设置」>「应用」>「应用和功能」中找到 Power Automate Desktop 应用，并点击「重置」后试试看。
 
 ### 创建 Microsoft 组织账户
 
@@ -43,7 +43,7 @@ order: 3
 
 如果你想给其他人多添加几个账号，则可以通过 [Azure](https://portal.azure.com/) 来管理。
 
-进入「管理 Azure Active Directory - 用户」，添加和管理组织用户。
+进入「管理 Azure Active Directory」>「用户」，添加和管理组织用户。
 
 ## 阿里云盘
 
@@ -205,11 +205,11 @@ Eagle 导入流程：搜索文件夹中的 ZIP/RAR 文件，确认全部解压�
 
 ### Zinc 初次启动
 
-1. 系统属性 - 高级 - 环境变量 - 用户变量，新建变量 `ZINC_FIRST_ADMIN_USER` 和 `ZINC_FIRST_ADMIN_PASSWORD`。这是后面要用到的账户密码，可自由设置，但密码需要包含大小写字母，
+1. 点击「系统属性」>「高级」>「环境变量」>「用户变量」，新建变量 `ZINC_FIRST_ADMIN_USER` 和 `ZINC_FIRST_ADMIN_PASSWORD`。这是后面要用到的账户密码，可自由设置，但密码需要包含大小写字母，
 
 2. 在应用目录下打开终端，执行命令：
 
-```bash
+```shell
 mkdir data
 .\zinc.exe
 ```
