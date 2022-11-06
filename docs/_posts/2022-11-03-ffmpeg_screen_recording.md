@@ -8,6 +8,8 @@ tag:
 order: -50
 ---
 
+> 当所有的录屏应用都无法满足我时，我的目光投向了那个最终极的命令行工具，FFmpeg。
+
 开始 [自我监控](https://newzone.top/_posts/2022-05-22-surveillance_video_for_myself.html) 后，录屏工具的重要性急速提升，我遇到的问题也越来越多。
 
 因为我录屏主要是为了自我监控，所以我需要的帧率并不用很高，甚至越低越好，分辨率同样不必和屏幕一致，能看清我在做什么即可。最初，我用了免费开源的 [VLC](https://www.videolan.org/vlc/)，这也是我文章里采用的方案。它能调节输出视频的编码、帧率、格式，但操作麻烦不说，还不能同时录屏和摄像头，暂停录制容易程序崩溃。
@@ -40,7 +42,7 @@ FFmpeg 是处理多媒体内容 (如音频、视频、字幕和相关元数据) 
 
 下面以我的 Windows 桌面录制方案为例，从多屏幕中指定一个 2k 区域进行录制，并在画面右下角添加 360p 的摄像头录制角度，然后以帧率 0.02 输出监控视频。按 `q` 则停止录制。
 
-![](http://tc.seoipo.com/2022-11-03-13-16-44.png "画中画录屏效果")
+![](http://tc.seoipo.com/2022-11-03-13-16-44.png "输出画面如图例")
 
 ## 录屏准备
 
@@ -70,14 +72,14 @@ FFmpeg 的录制命令 gdigrab 不支持音频录制，也不支持直接调用�
 
 以下是录制命令的说明：
 
-- `-f gdigrab` 使用 FFmpeg 内置屏幕录制命令 [gdigrab](https://ffmpeg.org/ffmpeg-all.html#gdigrab)，录制对象可为全屏、指定范围和指定程序。
+- `-f gdigrab` 使用 FFmpeg 内置的 Windows 屏幕录制命令 [gdigrab](https://ffmpeg.org/ffmpeg-all.html#gdigrab)，录制对象可为全屏、指定范围和指定程序。MacOS 录屏方法为 [AVFoundation](https://ffmpeg.org/ffmpeg-devices.html#avfoundation)，Linux 录屏方法为 [x11grab](https://ffmpeg.org/ffmpeg-all.html#x11grab)。
 - `-r 20/1001` 帧率为 0.02，每 50 秒录制 1 帧。主流大家喜欢用 `-r 30` 录制，我这因为是每日监测视频，用了超低帧率。
 - `-c:v libx264` 是用于设置视频编解码器，一般可不填使用默认配置，`-c:a` 为音频编码。^[[libx265 编码说明](https://ffmpeg.org/ffmpeg-codecs.html#libx265)]
 - `-draw_mouse 1` 在 gdigrab 录制的视频中显示鼠标。
 - `-offset_x 0 -offset_y 0 -video_size 2560x1440` 为起始坐标和选定录制范围。坐标可使用截图软件获取，比如我用 Snipaste，点击 F1 后进入截图界面，鼠标经过当前区域就会显示坐标。
 - `-s 1280x720` 用 scale 方法，设置视频分辨率为 720p。
 - `-i desktop` 为输入设备，指代显示屏。
-- `out.mp4` 为输出视频的名字与格式。默认保存在命令运行文件夹，可以在此处设置输出位置，如 `D:\Backup\Libraries\Desktop\out.mp4`。
+- `out.mp4` 为输出视频的名字与格式。默认保存在命令运行文件夹，可以在此处设置输出位置，如 `D:\Backup\Libraries\Desktop\out.mp4`。或使用时间对视频命名，将 `out.mp4` 替换为 `-f segment -segment_time 2 -strftime 1 %Y-%m-%d_%H-%M-%S.mp4`，视频样例名为 `2022-11-06_10-53-17.mp4`。
 
 除上方命令外，FFmpeg 还有许多参数可以设置，比如 `-pix_fmt yuv420p -preset ultrafast` 提升编码速度，`-filter:v "setpts=0.1*PTS"` 减少视频抽样，但 setpts 不是视频加速，对于低帧率的视频影响很小。^[[x265 的 preset 与编码速度、视频画质以及比特率的关联](https://magiclen.org/x265-preset/)] ^[[FFmpeg 音视频倍速控制](https://blog.csdn.net/zhying719/article/details/123059209)]
 
