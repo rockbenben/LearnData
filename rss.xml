@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 06 Nov 2022 15:34:42 GMT</pubDate>
-    <lastBuildDate>Sun, 06 Nov 2022 15:34:42 GMT</lastBuildDate>
+    <pubDate>Wed, 09 Nov 2022 21:37:17 GMT</pubDate>
+    <lastBuildDate>Wed, 09 Nov 2022 21:37:17 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -30,9 +30,9 @@
 <p>开始 <a href="https://newzone.top/_posts/2022-05-22-surveillance_video_for_myself.html" target="_blank" rel="noopener noreferrer">自我监控</a> 后，录屏工具的重要性急速提升，我遇到的问题也越来越多。</p>
 <p>因为我录屏主要是为了自我监控，所以我需要的帧率并不用很高，甚至越低越好，分辨率同样不必和屏幕一致，能看清我在做什么即可。最初，我用了免费开源的 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">VLC</a>，这也是我文章里采用的方案。它能调节输出视频的编码、帧率、格式，但操作麻烦不说，还不能同时录屏和摄像头，暂停录制容易程序崩溃。</p>
 <p>然后，我试了 <a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">OBS</a>，它的录制功能极其强大，可以任意添加摄像头、文字、图像等，但输出限制多，生成的视频过大。同时，OBS 不支持录制画面与直播画面分开，而我平常习惯边开直播边工作，这令我只能放弃 OBS 录屏。</p>
-<p>接着，我遇到 7.8k Star 的 <a href="https://github.com/MathewSachin/Captura/releases/tag/v8.0.0" target="_blank" rel="noopener noreferrer">Capture</a>，它的自由度较高，能自定义叠加元素，然而项目已于 2018 年停止更新，使用时经常碰到莫名其妙的报错，很不稳定。</p>
+<p>接着，我遇到 7.8k Star 的 <a href="https://github.com/MathewSachin/Captura/releases/tag/v8.0.0" target="_blank" rel="noopener noreferrer">Captura</a>，它的自由度较高，能自定义叠加元素，然而项目已于 2018 年停止更新，使用时经常碰到莫名其妙的报错，很不稳定。</p>
 <p>免费的不行，那收费的会不会好点呢？</p>
-<p>我用 <a href="https://www.bandicam.cn/" target="_blank" rel="noopener noreferrer">Bandicam</a> 录了一周的视频。与 Capture 相比，Bandicam 的稳定性好了很多，不会突然崩溃，还能降噪，内录扬声器音频，但它时不时丢失摄像头，导致无法自动进行录屏。</p>
+<p>我用 <a href="https://www.bandicam.cn/" target="_blank" rel="noopener noreferrer">Bandicam</a> 录了一周的视频。与 Captura 相比，Bandicam 的稳定性好了很多，不会突然崩溃，还能降噪，内录扬声器音频，但它时不时丢失摄像头，导致无法自动进行录屏。</p>
 <p>再后，我测试了其他几款录屏应用：</p>
 <ul>
 <li>相机：Windows 自带应用，录制方便，但输出选项少，限制多。</li>
