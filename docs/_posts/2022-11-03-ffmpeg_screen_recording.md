@@ -16,11 +16,11 @@ order: -50
 
 然后，我试了 [OBS](https://obsproject.com/)，它的录制功能极其强大，可以任意添加摄像头、文字、图像等，但输出限制多，生成的视频过大。同时，OBS 不支持录制画面与直播画面分开，而我平常习惯边开直播边工作，这令我只能放弃 OBS 录屏。
 
-接着，我遇到 7.8k Star 的 [Capture](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0)，它的自由度较高，能自定义叠加元素，然而项目已于 2018 年停止更新，使用时经常碰到莫名其妙的报错，很不稳定。
+接着，我遇到 7.8k Star 的 [Captura](https://github.com/MathewSachin/Captura/releases/tag/v8.0.0)，它的自由度较高，能自定义叠加元素，然而项目已于 2018 年停止更新，使用时经常碰到莫名其妙的报错，很不稳定。
 
 免费的不行，那收费的会不会好点呢？
 
-我用 [Bandicam](https://www.bandicam.cn/) 录了一周的视频。与 Capture 相比，Bandicam 的稳定性好了很多，不会突然崩溃，还能降噪，内录扬声器音频，但它时不时丢失摄像头，导致无法自动进行录屏。
+我用 [Bandicam](https://www.bandicam.cn/) 录了一周的视频。与 Captura 相比，Bandicam 的稳定性好了很多，不会突然崩溃，还能降噪，内录扬声器音频，但它时不时丢失摄像头，导致无法自动进行录屏。
 
 再后，我测试了其他几款录屏应用：
 

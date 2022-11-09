@@ -93,9 +93,11 @@ sudo dnf update #更新所有的软件包
 adduser xxxx
 ```
 
-### [网站重定向](https://www.jb51.net/article/146957.htm)
+### 网站重定向
 
 更改 nginx 配置后，nginx 重载配置后实现网站重定向。`$1` 表示第一个 `()` 内的正则匹配内容，`$2` 为第二个。^[[Nginx rewrite 设置](https://www.w3cschool.cn/nginxsysc/nginxsysc-rewrite.html)]
+
+[网站重定向](https://www.jb51.net/article/146957.htm)
 
 ```ini
 #隐性链接跳转
@@ -128,29 +130,32 @@ location = / {
    ```
 
 3. 配置 [阿里云端口开放](https://www.bt.cn/bbs/thread-2897-1-1.html)，导入安全规则。
-4. 宝塔上修改默认账号密码，并修改登录 22 的默认 SSH 端口。
+4. 宝塔上修改默认账号密码，并修改登录 22 的默认 SSH 端口。如果开通了 FTP，修改 FTP 端口。
 5. 选择「网站」>「添加站点」，将站点根目录放在 /www/wwwroot/xxx，同时新建数据库。
 6. 上传全站文件并解压，然后按照安装提示重新安装一次，最后导入备份数据库。
 7. 404.html 起效，宝塔网站配置文件中，删除 `error_page 404 /404.html;` 中的 `#`。
 8. SSL 证书设置，开启强制 HTTPS；PHP 版本；301 重定向；添加伪静态设置（metinfo 或其他网站后台有代码）。如果 301 设置失败，直接在「伪静态」配置中，放入跳转代码。
-9. [ECS 宝塔设置优化](https://www.bt.cn/bbs/forum.php?mod=viewthread&tid=3117)
+9. 服务器设置参考 [NginxConfig](https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN) 适合新手配置高性能、安全、稳定的 NGINX 服务器的最简单方法。
+10. [ECS 宝塔设置优化](https://www.bt.cn/bbs/forum.php?mod=viewthread&tid=3117)
 
-   - 添加计划任务，定期释放内存，建议设置每天释放一次，执行时机为半夜，如：04:00。
-   - 打开 Linux 工具箱添加 Swap。Swap 推荐与物理内存相同。
-   - 安装 PHP 缓存扩展，尽量使用更高的 PHP 版本，另外安装 opcache(脚本缓存)、redis(内容缓存)、imagemagick、fileinfo、exif。
-   - Redis 优化，在/etc/sysctl.conf 中添加 `net.core.somaxconn = 2048`，然后终端运行 `sysctl -p`。
+    - 添加计划任务，定期释放内存，建议设置每天释放一次，执行时机为半夜，如：04:00。
+    - 打开 Linux 工具箱添加 Swap。Swap 推荐与物理内存相同。
+    - 安装 PHP 缓存扩展，尽量使用更高的 PHP 版本，另外安装 opcache(脚本缓存)、redis(内容缓存)、imagemagick、fileinfo、exif。
+    - Redis 优化，在/etc/sysctl.conf 中添加 `net.core.somaxconn = 2048`，然后终端运行 `sysctl -p`。
 
-10. 防火墙白名单（自定义）
+11. 防火墙白名单（自定义），如：添加 url 规则 `^/rss.php` 到防火墙 URL 白名单，防止 rss 服务被屏蔽。
 
-    - 添加 url 规则 `^/rss.php` 到防火墙 URL 白名单，防止 rss 服务被屏蔽。
+### 服务器迁移
 
-### NginxConfig
+1. 购买按量付费服务器。
+2. 用 [服务器迁移中心 SMC](https://smc.console.aliyun.com/overview) 将旧服务器同步到临时服务器。
+3. 将域名解析到临时系统，确定服务基本正常。
+4. 对旧服务器先建立云盘快照，然后更换操作系统，进行全新部署。
+5. 对比新旧服务器，确认配置正常。
 
-[NginxConfig](https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN) 适合新手配置高性能、安全、稳定的 NGINX 服务器的最简单方法。
+## 常见问题
 
-### 常见问题
-
-#### CPU 100%
+### CPU 100%
 
 当服务器 cpu 或内存突然飙升 100% 时，依次排除当前运行进程，检查是否安装更新了插件、应用或服务。
 
@@ -162,7 +167,7 @@ sleep 10s
 /etc/init.d/nginx start
 ```
 
-#### SSL 证书
+### SSL 证书
 
 如果 SSL 证书部署报错，可以按自动生成来部署。
 
@@ -177,18 +182,16 @@ if ($server_port !~ 443){
 /www/server/panel/vhost/ssl
 ```
 
-#### 数据库出错解决
+### 数据库出错解决
 
 1. mysql 配置中 `mysqld` 在一行添加 `innodb_force_recovery=4`，数值可以 0-6，数值越大对数据库损害越大。正常启动 mysql 后，备份所有数据库和管理密码，并下载到本地。
 2. 在宝塔的「数据库」中删除所有数据库，卸载并重装 mysql。
 3. 重新导入数据库。
 
-#### piwik 手动升级
+### piwik 手动升级
 
 Matomo/Piwik 是免费的统计服务。有时无法使用自动安装包，需要手动升级。
 
 1. 下载最新版应用，并解压到服务器。
 2. 将原目录中的 config/config.ini.php 粘贴到新版中，然后就可以更新数据库进行升级了。
 3. 选择「设置」>「系统」>「地理位置」，拖到页面底部，按页面要求下载 DBIP 包，并重命名保存为 `/www/wwwroot/piwik/misc/DBIP-City.mmdb`。
-
-如果页面中存在 http 类型的下载链接，Matomo 会导致无法下载，将下载链接改为 https 可以解决问题。
