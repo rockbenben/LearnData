@@ -5,13 +5,12 @@ icon: customize
 order: 2
 ---
 
-抓取步骤：https://newzone.top/_posts/2018-10-07-huginn_scraping_any_website.html
-
-`.env` 设置：https://github.com/huginn/huginn/blob/master/.env.example
+- Huginn 部署：查看 [deploy Huginn inside of Docker](https://github.com/huginn/huginn/blob/master/doc/docker/install.md) 和 [.env 设置](https://github.com/huginn/huginn/blob/master/.env.example)，或按下方的教程手动部署到服务器上，轻量使用推荐部署到 Docker。
+- Huginn 抓取教程：[RSS 进阶篇：Huginn - 真·为任意网页定制 RSS 源（PhantomJs 抓取）](https://newzone.top/_posts/2018-10-07-huginn_scraping_any_website.html)
 
 ## 常用 Agent
 
-Huginn Agents：https://github.com/huginn/huginn/wiki/Agent-Types-&-Descriptions
+[Huginn Agents](https://github.com/huginn/huginn/wiki/Agent-Types-&-Descriptions)：
 
 - Website Agent 解析网页、XML 文档和 json 数据，最常使用
 - Event Formatting Agent 事件信息格式化，可以对收到的信息内容进行格式化，允许添加自定义新内容
@@ -34,28 +33,251 @@ Huginn Agents：https://github.com/huginn/huginn/wiki/Agent-Types-&-Descriptions
 
 {{created_at}} 为自带抓取时间，Agent 设置中的特殊字符`+`，需要用反义符`\\`。
 
-## Huginn 被卡住
+## Huginn 部署
 
-Huginn 任务有时会被卡住，后续任务都无法进行，需要重启 Huginn 方可恢复。
-
-因此，我在 NAS 的任务计划中添加了每日运行的脚本，每天 3 点一次关闭镜像 huginn2mariadb 和 huginn2022，然后再依次启动。注意不要直接重启 Hungin Docker，否则数据库会异常。
-
-```bash
-sudo docker stop huginn2mariadb
-sleep 10
-sudo docker stop huginn2022
-sleep 10
-sudo docker start huginn2mariadb
-sleep 10
-sudo docker start huginn2022
-```
-
-如果部署在服务器，则可使用下列命令重启服务。
+Huginn 任务有时会被卡住，后续任务都无法进行。原本使用官方 Docker 镜像，但重启容器无法解决任务卡住的问题。因此，改为手动部署 Huginn，定期使用重置命令防止任务卡住。
 
 ```bash
 cd /home/huginn/huginn
 sudo bundle exec rake production:force_stop
-sudo bundle exec rake prduction:export
+sudo bundle exec rake production:export
+```
+
+部署步骤记录在下方，但还有 4 个**待解决问题**：
+
+- 定期导出数据库到本地。
+- 开机启动 Huginn 服务。
+
+  ```bash
+  #开机设置
+  sudo service mysql restart
+  sudo service nginx restart
+  cd /home/huginn/huginn
+  sudo runsvdir /etc/service &
+  sudo bundle exec rake production:export
+  ```
+
+- 测试任务卡住后，rake production:export 是否有效。
+- `production:export` 运行时提示 `unable to open supervise/stat.new: file does not exist`。此报错似乎不影响 Huginn 的运行，等有时间看看是否有相关报错。
+
+### Ubuntu 手动部署
+
+部署环境：Ubuntu 18.04 的 Docker 镜像（同样适用于服务器）
+安装参考：[Manual Installation on Debian/Ubuntu](https://github.com/huginn/huginn/blob/master/doc/manual/installation.md)，[Novice-setup-guide](https://github.com/huginn/huginn/wiki/Novice-setup-guide)
+
+Huginn 部署步骤：
+
+```bash
+# 进入 huginn 容器命令行，某些容器命令为 /bin/bash
+sudo docker exec -it huginn bash
+# run as root!
+apt-get update -y
+apt-get upgrade -y
+apt-get install sudo -y
+
+# Install vim and set as default editor
+sudo apt-get install -y vim
+sudo update-alternatives --set editor /usr/bin/vim.basic
+
+# Install the required packages
+sudo apt-get install -y runit build-essential git zlib1g-dev libyaml-dev libssl-dev libgdbm-dev libreadline-dev libncurses5-dev libffi-dev curl openssh-server checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libicu-dev logrotate python-docutils pkg-config cmake nodejs graphviz jq
+
+# Ubuntu 18.04 Bionic
+sudo apt-get install -y runit-systemd
+
+# Download Ruby and compile it:
+mkdir /tmp/ruby && cd /tmp/ruby
+curl -L --progress-bar https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.bz2 | tar xj
+cd ruby-2.7.6
+./configure --disable-install-rdoc
+make -j`nproc`
+sudo make install
+
+sudo gem update --system --no-document
+sudo gem install foreman --no-document
+
+# Create a user for Huginn:
+sudo adduser --disabled-login --gecos 'Huginn' huginn
+
+# Install the database packages
+sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev
+```
+
+输入 `service mysql start` 启动数据库，否则下一步数据库设置容易报错 `Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock'`。^[[ERROR 2002 (HY000)](https://blog.csdn.net/qq_36822217/article/details/103156327)]
+
+```bash
+# 逐步设置数据库 root 密码
+sudo mysql_secure_installation
+
+# 用上方设置的密码登陆数据库
+mysql -u root -p
+
+# 逐行输入代码到数据库命令行 `mysql>`，需将 `$password` 替换为你要设置的密码
+CREATE USER 'huginn'@'localhost' IDENTIFIED BY '$password';
+SET default_storage_engine=INNODB;
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, LOCK TABLES ON `huginn_production`.* TO 'huginn'@'localhost';
+FLUSH PRIVILEGES;
+\q
+```
+
+数据库设置好后，拉取 huginn 主体程序，此段命令可以整段复制到 ssh。
+
+```bash
+# We'll install Huginn into the home directory of the user "huginn"
+cd /home/huginn
+
+# Clone Huginn repository
+sudo -u huginn -H git clone https://github.com/huginn/huginn.git -b master huginn
+
+# Go to Huginn installation folder
+cd /home/huginn/huginn
+
+# Copy the example Huginn config
+sudo -u huginn -H cp .env.example .env
+
+# Create the log/, tmp/pids/ and tmp/sockets/ directories
+sudo -u huginn mkdir -p log tmp/pids tmp/sockets
+
+# Make sure Huginn can write to the log/ and tmp/ directories
+sudo chown -R huginn log/ tmp/
+sudo chmod -R u+rwX,go-w log/ tmp/
+
+# Make sure permissions are set correctly
+sudo chmod -R u+rwX,go-w log/
+sudo chmod -R u+rwX tmp/
+sudo -u huginn -H chmod o-rwx .env
+
+# Copy the example Unicorn config
+sudo -u huginn -H cp config/unicorn.rb.example config/unicorn.rb
+```
+
+`sudo -u huginn -H editor .env` 设置 huginn 环境依赖。编辑器为上面安装的 vim，`i` 在光标所在的位置插入，`esc` 退出编辑，`:qw` 保存并退出。
+
+```bash
+DATABASE_ADAPTER=mysql2
+#DATABASE_ENCODING=utf8   #修改点
+DATABASE_RECONNECT=true
+DATABASE_NAME=huginn_production  #修改点
+DATABASE_POOL=20
+DATABASE_USERNAME=huginn   #修改点
+DATABASE_PASSWORD='$password' #修改点，换为你自己的密码
+#DATABASE_HOST=your-domain-here.com
+#DATABASE_PORT=3306
+#DATABASE_SOCKET=/tmp/mysql.sock
+
+# MySQL only: If you are running a MySQL server >=5.5.3, you should
+# set DATABASE_ENCODING to utf8mb4 instead of utf8 so that the
+# database can hold 4-byte UTF-8 characters like emoji.
+DATABASE_ENCODING=utf8mb4  #修改点
+
+...
+RAILS_ENV=production  #修改点
+```
+
+Install Gems 前用子账户重新设置运行目录权限 `sudo chown -R huginn:huginn /home/huginn`，防止报错 `Your user account isn't allowed to install to the system RubyGems`。
+
+```bash
+# 注意看黄字警告
+gem install bundler:2.3.10
+# Docker 环境中，时区容易丢失
+apt-get install tzdata
+# Install Gems
+sudo -u huginn -H bundle config set deployment 'true'
+sudo -u huginn -H bundle config set without 'development test'
+sudo -u huginn -H bundle install
+# 备用 Gems 修复命令
+# bundle update
+# gem update bundler
+# vim /home/huginn/huginn/Gemfile
+
+# Initialize Database
+# Create the database
+sudo -u huginn -H bundle exec rake db:create RAILS_ENV=production
+
+# Migrate to the latest version
+sudo -u huginn -H bundle exec rake db:migrate RAILS_ENV=production
+
+# 设置登陆账户密码，Create admin user and example agents using the default admin/password login
+sudo -u huginn -H bundle exec rake db:seed RAILS_ENV=production SEED_USERNAME=admin SEED_PASSWORD=password
+
+# Compile Assets
+sudo -u huginn -H bundle exec rake assets:precompile RAILS_ENV=production
+```
+
+`sudo -u huginn -H editor Procfile` 修改 huginn 设置。
+
+```bash
+# 在下两行前，添加符号「#」
+#web: bundle exec rails server -p ${PORT-3000} -b ${IP-0.0.0.0}
+#jobs: bundle exec rails runner bin/threaded.rb
+
+# 删除以下下两行前的符号「#」
+web: bundle exec unicorn -c config/unicorn.rb
+jobs: bundle exec rails runner bin/threaded.rb
+```
+
+`sv stop huginn-web-1` 的报错，使用 `foreman export runit -a huginn -l /home/huginn/huginn/log /etc/service`，`chown -R huginn:huginn /etc/service/huginn*`。^[[rake export hangs](https://github.com/huginn/huginn/issues/2410)]
+
+```bash
+# 切换到
+cd /home/huginn/huginn
+# 设置
+git config --global --add safe.directory /home/huginn/huginn
+# 设置开机启动
+sudo runsvdir /etc/service &
+sudo bundle exec rake production:export
+
+# Setup Logrotate
+sudo cp deployment/logrotate/huginn /etc/logrotate.d/huginn
+
+# Ensure Your Huginn Instance Is Running
+sudo bundle exec rake production:status
+```
+
+Nginx 站点设置：
+
+```bash
+sudo apt-get install -y nginx
+
+# Site Configuration
+sudo cp deployment/nginx/huginn /etc/nginx/sites-available/huginn
+sudo ln -s /etc/nginx/sites-available/huginn /etc/nginx/sites-enabled/huginn
+
+# Change YOUR_SERVER_FQDN to the fully-qualified domain name of your host serving Huginn.
+sudo editor /etc/nginx/sites-available/huginn
+
+# 不需要 https，则改为下方配置
+server {
+  listen 80; # 监听的端⼝
+  server_name localhost home.newzone.top; # 域名或ip，这里启用了两个地址，用空格分开
+
+# 测试设置是否正确
+sudo nginx -t
+
+# 移除默认网站设置，只有当服务器/容器只存在 Huginn 网站方执行下行命令
+sudo rm /etc/nginx/sites-enabled/default
+```
+
+以上完成了 Huginn 的所有部署。
+
+### Huginn Docker
+
+Huginn [multi-process](https://github.com/huginn/huginn/tree/master/docker/multi-process) 镜像基于 Ubuntu 18.04，没有 root 权限。如果不导出卷，或者使用单独的数据库容器，则无法在不丢失数据的情况下更新 Huginn。
+
+此外，官方镜像路径与手动版不同，不支持 force_stop 命令。官方建议 Docker 中使用下方命令删除数据库中卡住的任务。这个命令实测是有效的，但我有次碰到了未知 bug，卡住的任务被删除，后续任务却没继续。
+
+```bash
+# get a shell inside the docker container (replace huginn with the name or id of the container)
+sudo docker exec -it huginn /bin/bash
+
+# source the environment file
+source .env
+
+# get a rails console
+bundle exec rails console
+
+# inside the rails console delete  the job
+Delayed::Job.where('locked_at IS NOT NULL AND locked_by IS NOT NULL AND failed_at IS NULL').destroy_all
 ```
 
 ## Agents
@@ -127,7 +349,7 @@ For example, here is a possible Event:
 }
 ```
 
-You may want to send this event to another Agent, for example a Twilio Agent, which expects a `message` key. You can use an Event Formatting Agent’s `instructions` setting to do this in the following way:
+You may want to send this event to another Agent, for example a Twilio Agent, which expects a `message` key. You can use an Event Formatting Agent's `instructions` setting to do this in the following way:
 
 ```json
 "instructions": {
@@ -343,7 +565,7 @@ Boxcar agent 会在 iPhone 推送通知，但其不兼容于 iOS 10 系统，已
 
 To be able to use the Boxcar end-user API, you need your `Access Token`. The access token is available on general “Settings” screen of Boxcar iOS app or from Boxcar Web Inbox settings page.
 
-Please provide your access token in the `user_credentials` option. If you’d like to use a credential, set the `user_credentials` option to `{% credential CREDENTIAL_NAME %}`.
+Please provide your access token in the `user_credentials` option. If you'd like to use a credential, set the `user_credentials` option to `{% credential CREDENTIAL_NAME %}`.
 
 Options:
 
@@ -389,13 +611,13 @@ Set `action` to one of the action types below:
 
 - `configure`: Target Agents have their options updated with the contents of `configure_options`.
 
-Here’s a tip: you can use [Liquid](https://github.com/huginn/huginn/wiki/Formatting-Events-using-Liquid) templating to dynamically determine the action type. For example:
+Here's a tip: you can use [Liquid](https://github.com/huginn/huginn/wiki/Formatting-Events-using-Liquid) templating to dynamically determine the action type. For example:
 
 - To create a CommanderAgent that receives an event from a WeatherAgent every morning to kick an agent flow that is only useful in a nice weather, try this: `{% if conditions contains 'Sunny' or conditions contains 'Cloudy' %}` `run{% endif %}`
 
 - Likewise, if you have a scheduled agent flow specially crafted for rainy days, try this: `{% if conditions contains 'Rain' %}enable{% else %}disabled{% endif %}`
 
-- If you want to update a WeatherAgent based on a UserLocationAgent, you could use `'action': 'configure'` and set ‘configure*options’ to `{ 'location': '{{\_location*.latlng}}' }`.
+- If you want to update a WeatherAgent based on a UserLocationAgent, you could use `'action': 'configure'` and set 'configure*options' to `{ 'location': '{{\_location*.latlng}}' }`.
 
 - In templating, you can use the variable `target` to refer to each target agent, which has the following attributes: `name`, `options`, `sources`, `type`, `url`, `id`, `disabled`, `memory`, `controllers`, `schedule`, `keep_events_for`, `propagate_immediately`, `working`, `receivers`, and `control_targets`.
 
@@ -429,7 +651,7 @@ Set `with_header` to `true` if first line of the CSV file are field names.
 
 This agent can consume a ‘file pointer’ event from the following agents with no additional configuration: `FtpsiteAgent`, `LocalFileAgent`, `S3Agent`. Read more about the concept in the [wiki](https://github.com/huginn/huginn/wiki/How-Huginn-works-with-files).
 
-When receiving the CSV data in a regular event use [JSONPath](http://goessner.net/articles/JsonPath/) to select the path in `data_path`. `data_path` is only used when the received event does not contain a ‘file pointer’.
+When receiving the CSV data in a regular event use [JSONPath](http://goessner.net/articles/JsonPath/) to select the path in `data_path`. `data_path` is only used when the received event does not contain a 'file pointer'.
 
 **Serializing**
 
@@ -468,7 +690,7 @@ Options:
 - `response_headers` - An object with any custom response headers. (example: `{"Access-Control-Allow-Origin": "*"}`)
 - `push_hubs` - Set to a list of PubSubHubbub endpoints you want to publish an update to every time this agent receives an event. (default: none) Popular hubs include [Superfeedr](https://pubsubhubbub.superfeedr.com/) and [Google](https://pubsubhubbub.appspot.com/). Note that publishing updates will make your feed URL known to the public, so if you want to keep it secret, set up a reverse proxy to serve your feed via a safe URL and specify it in `template.self`.
 
-If you’d like to output RSS tags with attributes, such as `enclosure`, use something like the following in your `template`:
+If you'd like to output RSS tags with attributes, such as `enclosure`, use something like the following in your `template`:
 
 ```json
 "enclosure": {
@@ -502,7 +724,7 @@ Sort keys listed earlier take precedence over ones listed later. For example, if
 
 Sorting is done stably, so even if all events have the same set of sort key values the original order is retained. Also, a special Liquid variable `_index_` is provided, which contains the zero-based index number of each event, which means you can exactly reverse the order of events by specifying `[["{{_index_}}", "number", true]]`.
 
-DataOutputAgent will select the last `events_to_show` entries of its received events sorted in the order specified by `events_order`, which is defaulted to the event creation time. So, if you have multiple source agents that may create many events in a run, you may want to either increase `events_to_show` to have a larger “window”, or specify the `events_order` option to an appropriate value (like `date_published`) so events from various sources are properly mixed in the resulted feed.
+DataOutputAgent will select the last `events_to_show` entries of its received events sorted in the order specified by `events_order`, which is defaulted to the event creation time. So, if you have multiple source agents that may create many events in a run, you may want to either increase `events_to_show` to have a larger "window", or specify the `events_order` option to an appropriate value (like `date_published`) so events from various sources are properly mixed in the resulted feed.
 
 There is also an option `events_list_order` that only controls the order of events listed in the final output, without attempting to maintain a total order of received events. It has the same format as `events_order` and is defaulted to `[["{{_index_}}","number",true]]` so the selected events are listed in reverse order like most popular RSS feeds list their articles.
 
@@ -534,7 +756,7 @@ De-duplication Agent 在接受数据后，会自动比对并去除重复数据�
 
 Delay Agent 存储收到的事件，并按计划发送它们的副本。将其用作事件的缓冲区或队列。
 
-`max_events` should be set to the maximum number of events that you’d like to hold in the buffer. When this number is reached, new events will either be ignored, or will displace the oldest event already in the buffer, depending on whether you set `keep` to `newest` or `oldest`.
+`max_events` should be set to the maximum number of events that you'd like to hold in the buffer. When this number is reached, new events will either be ignored, or will displace the oldest event already in the buffer, depending on whether you set `keep` to `newest` or `oldest`.
 
 `expected_receive_period_in_days` is used to determine if the Agent is working. Set it to the maximum number of days that you anticipate passing without this Agent receiving an incoming Event.
 
@@ -550,7 +772,7 @@ Digest Agent 收集发送给它的任何事件并将其作为单个事件发出�
 
 The resulting Event will have a payload message of `message`. You can use liquid templating in the `message`, have a look at the [Wiki](https://github.com/huginn/huginn/wiki/Formatting-Events-using-Liquid) for details.
 
-Set `expected_receive_period_in_days` to the maximum amount of time that you’d expect to pass between Events being received by this Agent.
+Set `expected_receive_period_in_days` to the maximum amount of time that you'd expect to pass between Events being received by this Agent.
 
 If `retained_events` is set to 0 (the default), all received events are cleared after a digest is sent. Set `retained_events` to a value larger than 0 to keep a certain number of events around on a rolling basis to re-send in future digests.
 
@@ -646,15 +868,15 @@ You can specify the email’s subject line by providing a `subject` option, whic
 
 By default, the email body will contain an optional `headline`, followed by a listing of the Events’ keys.
 
-You can customize the email body by including the optional `body` param. Like the `subject`, the `body` can be a simple message or a Liquid template. You could send only the Event’s `some_text` field with a `body` set to `{{ some_text }}`. The body can contain simple HTML and will be sanitized. Note that when using `body`, it will be wrapped with `<html>` and `<body>` tags, so you do not need to add these yourself.
+You can customize the email body by including the optional `body` param. Like the `subject`, the `body` can be a simple message or a Liquid template. You could send only the Event's `some_text` field with a `body` set to `{{ some_text }}`. The body can contain simple HTML and will be sanitized. Note that when using `body`, it will be wrapped with `<html>` and `<body>` tags, so you do not need to add these yourself.
 
-You can specify one or more `recipients` for the email, or skip the option in order to send the email to your account’s default email address.
+You can specify one or more `recipients` for the email, or skip the option in order to send the email to your account's default email address.
 
 You can provide a `from` address for the email, or leave it blank to default to the value of `EMAIL_FROM_ADDRESS` (``).
 
 You can provide a `content_type` for the email and specify `text/plain` or `text/html` to be sent. If you do not specify `content_type`, then the recipient email server will determine the correct rendering.
 
-Set `expected_receive_period_in_days` to the maximum amount of time that you’d expect to pass between Events being received by this Agent.
+Set `expected_receive_period_in_days` to the maximum amount of time that you'd expect to pass between Events being received by this Agent.
 
 ---
 
@@ -664,15 +886,15 @@ Set `expected_receive_period_in_days` to the maximum amount of time that you’d
 
 Email Digest Agent 收集发送给它的任何事件，并按计划通过电子邮件发送。使用事件的数目与 `Keep events` 有关，这意味着如果事件在 Email Digest Agent 计划运行之前到期，它们将不会出现在电子邮件中。
 
-By default, the will have a `subject` and an optional `headline` before listing the Events. If the Events’ payloads contain a `message`, that will be highlighted, otherwise everything in their payloads will be shown.
+By default, the will have a `subject` and an optional `headline` before listing the Events. If the Events' payloads contain a `message`, that will be highlighted, otherwise everything in their payloads will be shown.
 
-You can specify one or more `recipients` for the email, or skip the option in order to send the email to your account’s default email address.
+You can specify one or more `recipients` for the email, or skip the option in order to send the email to your account's default email address.
 
 You can provide a `from` address for the email, or leave it blank to default to the value of `EMAIL_FROM_ADDRESS` (``).
 
 You can provide a `content_type` for the email and specify `text/plain` or `text/html` to be sent. If you do not specify `content_type`, then the recipient email server will determine the correct rendering.
 
-Set `expected_receive_period_in_days` to the maximum amount of time that you’d expect to pass between Events being received by this Agent.
+Set `expected_receive_period_in_days` to the maximum amount of time that you'd expect to pass between Events being received by this Agent.
 
 ---
 
@@ -684,7 +906,7 @@ Evernote Agent 与你的 Evernote 账户相连，新建笔记。
 
 Visit [Evernote](https://dev.evernote.com/doc/) to set up an Evernote app and receive an api key and secret. Store these in the Evernote environment variables in the .env file. You will also need to create a [Sandbox](https://sandbox.evernote.com/Registration.action) account to use during development.
 
-Next, you’ll need to authenticate with Evernote in the [Services](http://huginnio.herokuapp.com/services) section.
+Next, you'll need to authenticate with Evernote in the [Services](http://huginnio.herokuapp.com/services) section.
 
 Options:
 
@@ -700,7 +922,7 @@ Options:
 
   - When `mode` is `update` the parameters of `note` are the attributes of the note to be added/edited. To edit a note, both `title` and `notebook` must be set.
 
-    For example, to add the tags ‘comic’ and ‘CS’ to a note titled ‘xkcd Survey’ in the notebook ‘xkcd’, use:
+    For example, to add the tags 'comic' and 'CS' to a note titled 'xkcd Survey' in the notebook 'xkcd', use:
 
     ```json
     "notes": {
@@ -715,7 +937,7 @@ Options:
 
   - When `mode` is `read` the values are search parameters. Note: The `content` parameter is not used for searching. Setting `title` only filters notes whose titles contain `title` as a substring, not as the exact title.
 
-    For example, to find all notes with tag ‘CS’ in the notebook ‘xkcd’, use:
+    For example, to find all notes with tag 'CS' in the notebook 'xkcd', use:
 
     ```json
     "notes": {

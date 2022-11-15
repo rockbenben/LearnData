@@ -30,8 +30,18 @@ sudo docker commit \
     huginnxubuntu
 ```
 
-## Windows Docker
+## 其他使用
+
+### Windows Docker
 
 Windows 使用 [Docker Desktop](https://www.runoob.com/docker/windows-docker-install.html) 来管理容器，方式参考 [Windows Docker 环境配置](https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html#docker-环境配置)。
 
 WSL 本地路径为 `\\wsl.localhost\`。Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 WSL 调用 Windows 文件需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设 Windows 文件位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。
+
+### 宝塔镜像
+
+如果要在 Docker 上部署网站，推荐宝塔官方的集成镜像，其基于 CentOS 7.9，解决了 Docker 内部链接问题，还可以用计划任务将数据库定时备份到本地，配置参考 [宝塔面板定制 docker 镜像发布 - 集成 LN/AMP 支持](https://www.bt.cn/bbs/thread-79499-1-1.html) 和  [Docker 安装宝塔环境](http://blog.huangyuqiang.cn/index.php/2022/11/02/docker%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E7%8E%AF%E5%A2%83/)。不过该镜像不适合 Huginn 部署，Huginn 不支持 CentOS，将安装命令从 apt-get 替换为 yum，依然无法部署。
+
+测试过不用官方镜像，直接在 Docker 中安装宝塔，出现数据库不启动的问题。
+
+如果宝塔镜像只是测试环境，可以用 `rm -f /www/server/panel/data/admin_path.pl` 关闭面板入口。
