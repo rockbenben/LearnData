@@ -10,19 +10,19 @@ export default sidebar([
     icon: "",
     prefix: "/code/",
     link: "",
-    collapsable: true,
+    collapsible: true,
     children: [
       "README.md",
       {
         text: "Basic",
         icon: "emmet",
-        collapsable: true,
+        collapsible: true,
         children: ["Markdown.md", "Electron.md", "AutoHotkey.md", "Regex.md"],
       },
       {
         text: "FrondEnd",
         icon: "app",
-        collapsable: true,
+        collapsible: true,
         children: ["Vue.md", "HTML.md", "JavaScript.md", "Python.md"],
       },
     ],
@@ -32,7 +32,7 @@ export default sidebar([
     icon: "",
     prefix: "/apps/",
     link: "",
-    collapsable: true,
+    collapsible: true,
     children: "structure",
   },
   {
@@ -40,7 +40,7 @@ export default sidebar([
     icon: "",
     prefix: "/web/",
     link: "",
-    collapsable: true,
+    collapsible: true,
     children: "structure",
   },
   {
@@ -48,7 +48,7 @@ export default sidebar([
     icon: "",
     prefix: "/deploy/",
     link: "",
-    collapsable: true,
+    collapsible: true,
     children: "structure",
   },
   {
@@ -56,7 +56,7 @@ export default sidebar([
     icon: "",
     prefix: "/services/",
     link: "",
-    collapsable: true,
+    collapsible: true,
     children: "structure",
   },
   {
@@ -64,7 +64,7 @@ export default sidebar([
     icon: "",
     prefix: "/windows/",
     link: "",
-    collapsable: true,
+    collapsible: true,
     children: "structure",
   },
   {
@@ -72,7 +72,7 @@ export default sidebar([
     icon: "",
     prefix: "/family/",
     link: "",
-    collapsable: true,
+    collapsible: true,
     children: "structure",
   },
   {
@@ -80,7 +80,7 @@ export default sidebar([
     icon: "blog",
     prefix: "/_posts/",
     link: "/blog",
-    collapsable: true,
+    collapsible: true,
     children: "structure",
   },
 ]);
