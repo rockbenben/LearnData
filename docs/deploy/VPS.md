@@ -77,20 +77,19 @@ anywhere -p 8081
 
 ## 服务器 ECS
 
-### 系统修正
-
-服务器以 centos 为主
+服务器系统为 Debian 11。
 
 ```shell
-# 系统升级，大版本更新后重启服务器
-yum update -y
+apt-get update   # 从数据源更新软件包的列表，运行产生软件包数据库 
+apt-get install wget && apt-get install sudo # 安装 wget 和 sudo
 
-sudo dnf makecache #更新DNF包库
-sudo dnf check-update #检查更新
-sudo dnf update #更新所有的软件包
+# 大版本升级必须先建立快照
+apt-get upgrade  # 更新所有软件包（慎用，不要用！）之前 CentOS 系统错误就是使用了 upgrade 命令。
 
 # 新建用户，非 root 权限
-adduser xxxx
+adduser xxx
+# 为新用户设置密码
+passwd xxx
 ```
 
 ### 网站重定向

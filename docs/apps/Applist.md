@@ -15,7 +15,7 @@ Windows 自用软件，以开源软件为主。
 
 记忆复习：[SuperMemo](https://github.com/L-M-Sherlock/sm18-lazy-package/releases/tag/1.1.3) & [kopia](https://github.com/kopia/kopia)(备份) ~~& Anki~~
 
-文本编辑：Visual Studio Code & Notepad++ & HbuilderX & WPS & office tab ~~& Slide & 方方格子 & Typora & Yu Writer & UltraEdit~~
+文本编辑：Visual Studio Code & Notepad++ & [MarkText](https://github.com/marktext/marktext) & HbuilderX & WPS & office tab ~~& Slide & 方方格子 & Typora & Yu Writer & UltraEdit~~
 
 文字识别：白描 & 天若 OCR ~~& ABBYY Screenshot Reader OCR~~
 
@@ -129,17 +129,16 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 ## 开源工具
 
+- [Whipser](https://github.com/openai/whisper)：自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。
+- [AutoCut](https://github.com/mli/autocut)：通过字幕来剪切视频
+  - [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)：CUDA 的工具安装包，将 N 卡用于 AI 模型相关应用。
+  - [PyTorch](https://pytorch.org/get-started/locally/)：开源的 Python 机器学习库，用于自然语言处理等应用程序。
 - [style2paints](https://github.com/lllyasviel/style2paints)：一款给线稿上色的 AI 辅助工具。能够帮助用户给没有上色的图片，快速完成上色的 AI 工具，上色效果广受好评，完全免费开箱即用。
 - [uncle-novel](https://github.com/uncle-novel/uncle-novel)：一个全网小说下载器及阅读器，可部署在 PC 和安卓上，目录解析与书源结合，支持有声小说与文本小说，可下载 mobi、epub、txt 格式文本小说。
 - [DockIt](http://dogbean.ysepan.com/)：主显示屏中，非全屏状态下，快速将窗口局部化。如何默认不全屏；应用不自动吸边？
 - [WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
 - [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 tube
-
----
-
-## Android
-
-[AutoX](https://github.com/kkevsekk1/AutoX)：开源版的 Auto.js，没有包名屏蔽。相关信息可以参考 [快人一步：使用 Tasker+AutoX 一键直达健康码](https://sspai.com/post/65863)。
+- [AutoX](https://github.com/kkevsekk1/AutoX)：开源版的 Auto.js，没有包名屏蔽。相关信息可以参考 [快人一步：使用 Tasker+AutoX 一键直达健康码](https://sspai.com/post/65863)。
 
 ---
 

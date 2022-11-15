@@ -62,7 +62,7 @@ Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如 [�
 
 打字习惯会保存在 `<词典名>.userdb.txt` 或 `<词典名>.userdb.kct.snapshot`。还原时，点击「用户词典管理」>「导入文本码表」来恢复词频记录。
 
-小狼毫主版本长年未更新，使用 rime 输入法的核心库 [librime](https://github.com/rime/librime/releases) 替换小狼毫程序文件夹中的 rime.dll 可更新输入法。如果输入法中使用了 `Rime.lua` 的动态输出功能，与核心库可能会冲突，建议不采用 rime.dll 升级。
+小狼毫主版本长年未更新，使用 rime 输入法的核心库 [librime](https://github.com/rime/librime/releases) 替换小狼毫程序文件夹中的 rime.dll 可更新输入法。如果输入法中使用了 `Rime.lua` 的动态输出功能，与核心库可能会冲突，不要更换 rime.dll。
 
 ## 常见问题
 
@@ -79,6 +79,12 @@ Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如 [�
 将用户文件夹置为同步文件夹后，提示「有错误，请查看日志%TEMP%\rime.weasel.\*.INFO」。这是由于用户文件夹置为同步文件夹后导致的进程冲突。日志中有提示「另一个程序正在使用此文件，进程无法访问」。
 
 遇到报错后，关闭任务管理器中的 `WeaselServer.exe` 进程，然后重新执行小狼毫算法服务。
+
+### 切换输入法状态
+
+小狼毫只支持按键切换中英文，支持的按键是 Caps_Lock, Shift_L, Shift_R, Control_L, control_R，配置参考 [使用 Control 鍵切換中西文](https://gist.github.com/lotem/2981316)，修改 default.custom.yaml。
+
+虽然小狼毫不能组合键切换，不过可以使用 Windows 键盘切换设置组合键。设置中选择「时间和语言」>「输入」>「高级键盘设置」>「语言栏选项」>「高级键设置」，Ctrl+Space 是 Windows 默认的中文输入法／非输入法切换的快捷键。
 
 ### 输入法候选框闪烁
 

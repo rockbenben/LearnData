@@ -19,6 +19,17 @@ Docker 使用查看 [Docker — 从入门到实践](https://yeasy.gitbook.io/doc
 - 清理容器（慎重）：`sudo docker system prune -a`，用于清理磁盘，删除关闭的容器、无用的数据卷和网络，以及无 tag 和没使用的镜像。
 - 清理数据卷（慎重）：`sudo docker volume prune`，关闭的容器数据卷会被删除，有可能破坏有用数据，需极度谨慎。
 
+## 定制 Docker 镜像
+
+官方镜像很多时候不符合我们的要求，可以按 [使用 docker commit 将修改后的容器保存为镜像及其使用注意事项](https://blog.csdn.net/a772304419/article/details/123199579) 定制属于你自己镜像。
+
+```bash
+sudo docker commit \
+    --message "基于 Ubuntu 18.04 构建的 Huginn" \
+    ubuntu \
+    huginnxubuntu
+```
+
 ## Windows Docker
 
 Windows 使用 [Docker Desktop](https://www.runoob.com/docker/windows-docker-install.html) 来管理容器，方式参考 [Windows Docker 环境配置](https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html#docker-环境配置)。

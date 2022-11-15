@@ -1,5 +1,5 @@
 ---
-title: 3 分钟入门 FFmpeg，抛弃又贵又难用的录屏软件
+title: 抛弃又贵又难用的录屏软件，3 分钟入门 FFmpeg
 date: 2022-11-03
 category:
   - 工具

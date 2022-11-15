@@ -28,7 +28,7 @@ icon: code
 
 本地代码编辑器使用 Visual Studio Code，其插件生态成熟，能实现大部分的需求。
 
-GitHub Copilot，Tabnine，aiXcoder 插件均可以辅助补全代码。Tabnine 和 aiXcoder 有免费版，可以预测一到两行的代码。
+GitHub Copilot，CodeGeeX，Tabnine，aiXcoder 插件均可以辅助补全代码。Tabnine 和 aiXcoder 有免费版，可以预测一到两行的代码。CodeGeeX 由清华大学开发，提供完整补全功能。
 
 ### 修改快捷键
 

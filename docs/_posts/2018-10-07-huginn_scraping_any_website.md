@@ -17,7 +17,7 @@ order: -22
 ## Huginn 准备工作
 
 - 准备 NAS 或服务器；
-- 参考 [Docer 搭建 Huginn](https://github.com/huginn/huginn/blob/master/doc/docker/install.md)、[手动搭建攻略](https://github.com/huginn/huginn/blob/master/doc/manual/installation.md) 或 [Qi 大的攻略](https://wzfou.com/huginn/) 来搭建 Huginn。
+- 参考 [deploy Huginn inside of Docker](https://github.com/huginn/huginn/blob/master/doc/docker/install.md)、[installation guide for Debian/Ubuntu](https://github.com/huginn/huginn/blob/master/doc/manual/installation.md) 来搭建 Huginn。
 - 注册 [PhantomJs Cloud](https://phantomjscloud.com/) ,然后将 API key 保存在 Huginn 的 Credentials 中。很多网站是用 JS 加载动态内容，因此需要 **PhantomJs Cloud** 来抓取页面 JS 缓存。免费版每天限制抓取 500 次页面，需求不大可建立多个账号使用不同 API key，足够个人使用。
 
   ![](http://tc.seoipo.com/20181006010447.png)
