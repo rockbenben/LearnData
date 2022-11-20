@@ -31,9 +31,9 @@ Aria2 真·懒人包无需配置，下载即用，适合不想折腾的人。
 
 真·懒人包：<https://www.seoipo.com/software/Aria2/>
 
-将懒人包解压到 `D:\Aria2`，点击 `AriaNg 启动器.exe` 即可开始下载。两个启动器任选其一，都集成了后端服务和前端 UI，无需启动其他程序。包内均为开源绿色软件，不涉及任何隐私和安装，更没病毒，360 误报拿它没办法。
+将懒人包解压到 `D:\Aria2`，点击 `AriaNg 启动器.exe` 即可开始下载。两个启动器任选其一，都集成了后端服务和前端 UI，无需启动其他程序。包内均为开源绿色软件，不涉及任何隐私和安装，AutoHotkey 插件容易被误报。
 
-2022.11.18 重构启动器，更新 Aria2 1.36.0，AriaNG 1.3.2，并增加 bt-tracker 到 137，方便 BT 和磁力链接提速。
+2022.11.20 重构启动器，更新 Aria2 1.36.0，AriaNG 1.3.2，并增加 bt-tracker 到 137，方便 BT 和磁力链接提速。
 
 功能新增：任务开始、完成和错误时，推送系统通知，aria2.conf 特别功能区块设置通知的开启与关闭，建议来自 @我真的爱发明。
 
@@ -131,4 +131,4 @@ Aira2 下载预热是 BT 下载前的必备步骤，否则速度容易很慢。
 下载 [Aria2 启动器](https://wwz.lanzouf.com/iqud50ebl06d)，然后将其解压到 Aria2 运行目录，比如 `D:\Aria2`。Aria2 启动器包含两种方式，二选一即可。
 
 - **AriaNg 启动器**（推荐）：使用 AriaNg 本地版作下载管理界面。使用该启动器前，需将 [AriaNg](https://github.com/mayswind/AriaNg-DailyBuild/archive/master.zip) 解压到 Aria2 目录下，并将文件夹名改为 AriaNg，执行页面 index.html 位于 `Aria2\AriaNg\index.html`。
-- **Aria2c 启动器**：将 `http://aria2c.com` 作为默认下载界面，不需要多余设置。
+- **Aria2c 启动器**：将 `http://aria2c.com` 作为默认下载界面。该设置较旧，需确保 JSON-RPC Path 为 `http://localhost:6800/jsonrpc`。
