@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 20 Nov 2022 08:19:24 GMT</pubDate>
-    <lastBuildDate>Sun, 20 Nov 2022 08:19:24 GMT</lastBuildDate>
+    <pubDate>Sun, 20 Nov 2022 14:54:18 GMT</pubDate>
+    <lastBuildDate>Sun, 20 Nov 2022 14:54:18 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -130,7 +130,7 @@ scoop <span>install</span> ffmpeg
 <p>目前，我还没找到用字幕管理视频的应用，暂时只能记录下这个想法。笔记软件们继续卷起来，把字幕文件作为数据库索引，通过关键词搜索即可定位到音视频的时间戳，绝对是杀手级功能。</p>
 <h2 id="最后" tabindex="-1"> 最后</h2>
 <p>今年是 AI 工具的爆发年，多个领域都出现优质的开源工具，极大地提升了我的生活、学习和工作效率。</p>
-<p>在遇到 Whisper 前，我用 YouTube 的实时字幕看在线视频，但它是通过语言实时转录而非整句转录，导致效果远差于 Whisper。我使用飞书妙记管理本地视频，但飞书只支持中日英语，机器翻译较死板。Whisper 解决了两者存在的问题，转录效果更好，支持语言更多。</p>
+<p>在遇到 Whisper 前，我用 YouTube 的实时字幕看在线视频，但它是通过语言实时转录而非整句转录，导致效果远差于 Whisper。我使用飞书妙记管理本地视频，但飞书只支持中日英语，机器翻译较死板。Whisper 解决了两者存在的问题，转录效果更好，支持语言更多。此外，Whisper 是语言直译，所以你对字幕语言有基础认知的话，可以将语言与翻译文本匹配，可以进行语音学习。更重要的是，Whisper 是本地端应用，<strong>没有任何在线审查</strong>。</p>
 <p>然而，与 Whisper 完美的英语转录效果相比，其对非英语视频的转录还有很大的提升空间，期待它的后续更新，也希望字幕组都使用上 Whisper，节省字幕转录时间，加快出片速度。</p>
 <p>本文于「<a href="https://sspai.com/post/76899" target="_blank" rel="noopener noreferrer">少数派首发</a>」。</p>
 <hr>
