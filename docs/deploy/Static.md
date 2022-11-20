@@ -26,7 +26,7 @@ order: 1
   - ~~[Statically](https://statically.io/)：jsDeliver 的替代品，在中国大陆所有地区连接异常。~~
   - ~~jsDelivr（已墙）：速度最快，原本是最稳的，但域名暴雷后，经常断开，2022.06.01 彻底打不开。配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新。刷新命令参考 `curl https://purge.jsdelivr.net/gh/username/project/file`。~~
 
-第三方托管过于不稳定，托管于 oss.newzone.top
+第三方托管过于不稳定，最终我转为自托管 oss.newzone.top。
 
 ### 部署平台
 

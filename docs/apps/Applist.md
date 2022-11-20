@@ -73,7 +73,7 @@ Windows 自用软件，以开源软件为主。
 
 ## 文档管理
 
-重命名：FFRenamePro 菲菲更名宝贝 & [SubRenamer](https://github.com/qwqcode/SubRenamer)（字幕批量重命名）~~& ReNamer & Bulk Rename Utility & 拖把更名器~~
+重命名：FFRenamePro & [SubRenamer](https://github.com/qwqcode/SubRenamer)（字幕批量重命名）~~& ReNamer & Bulk Rename Utility & 拖把更名器~~
 
 文本比较：Beyond Compare & [WinMerge](https://github.com/WinMerge/winmerge)(开源)
 
@@ -85,7 +85,7 @@ Windows 自用软件，以开源软件为主。
 
 ## 系统日常
 
-资源管理器：QTTabBar & 360 文件夹（多标签） & [Q-Dir](https://www.softwareok.com/?seite=Freeware/Q-Dir) ~~& Clover（UI 不好看）~~
+资源管理器：[One Commander](https://www.onecommander.com/) & [Q-Dir](https://www.softwareok.com/?seite=Freeware/Q-Dir) & QTTabBar（Win10） ~~& 360 文件夹 & Clover（UI 不好看）~~
 
 浏览器：Chrome & Firefox(资源) & Brave(工具/书签) & Edge(移动端) ~~& Vivaldi & Tor & 猎豹 & 360 & 搜狗 & Maxthon & 百度~~
 
@@ -105,7 +105,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 硬件驱动：360 驱动大师 & [图吧硬件工具箱](http://www.tbtool.cn/) & AIDA64 ~~& SDI Snappy & 驱动精灵 & 鲁大师~~
 
-系统优化：[PowerToys](https://github.com/microsoft/PowerToys/releases/latest)、[RBTray](https://github.com/benbuck/rbtray)（最小化到托盘）、[ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)(右键管理，遇过 bug，推荐火绒右键)、WizTree（磁盘空间分析）、优效日历、StartIsBack++、[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)、Dism++
+系统优化：[PowerToys](https://github.com/microsoft/PowerToys/releases/latest)、[RBTray](https://github.com/benbuck/rbtray)（最小化到托盘）、[ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)(右键管理，遇过 bug，推荐火绒右键)、WizTree（磁盘空间分析）、优效日历、StartIsBack++、[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)、Dism++、[Windows Update Blocker](https://www.sordum.org/downloads/?st-windows-update-blocker)（禁止更新）
 
 ## 低频工具
 
@@ -129,13 +129,12 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 ## 开源工具
 
-- [Whipser](https://github.com/openai/whisper)：自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。
+- [Whipser](https://github.com/openai/whisper)：自动语音识别应用，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。
 - [AutoCut](https://github.com/mli/autocut)：通过字幕来剪切视频
   - [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)：CUDA 的工具安装包，将 N 卡用于 AI 模型相关应用。
   - [PyTorch](https://pytorch.org/get-started/locally/)：开源的 Python 机器学习库，用于自然语言处理等应用程序。
 - [style2paints](https://github.com/lllyasviel/style2paints)：一款给线稿上色的 AI 辅助工具。能够帮助用户给没有上色的图片，快速完成上色的 AI 工具，上色效果广受好评，完全免费开箱即用。
 - [uncle-novel](https://github.com/uncle-novel/uncle-novel)：一个全网小说下载器及阅读器，可部署在 PC 和安卓上，目录解析与书源结合，支持有声小说与文本小说，可下载 mobi、epub、txt 格式文本小说。
-- [DockIt](http://dogbean.ysepan.com/)：主显示屏中，非全屏状态下，快速将窗口局部化。如何默认不全屏；应用不自动吸边？
 - [WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
 - [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 tube
 - [AutoX](https://github.com/kkevsekk1/AutoX)：开源版的 Auto.js，没有包名屏蔽。相关信息可以参考 [快人一步：使用 Tasker+AutoX 一键直达健康码](https://sspai.com/post/65863)。
@@ -155,3 +154,4 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 - 游戏平台：VS & 4399
 - 客服：飞豆客服聊天助手 & [mirai(qq 机器人)](https://github.com/mamoe/mirai) & 酷 Q(已关)
 - 其他：按键精灵、DisplayCal（屏幕）、One Quik(虚拟桌面切换)、Auslogics Disk Defrag(磁盘整理)、Reflector 3(手机投屏)、VoiceBot(声控游戏)
+- [DockIt](http://dogbean.ysepan.com/)：主显示屏中，非全屏状态下，快速将窗口局部化。如何默认不全屏；应用不自动吸边？

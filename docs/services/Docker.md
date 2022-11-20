@@ -30,6 +30,14 @@ sudo docker commit \
     huginnxubuntu
 ```
 
+## Dockerfile 构建镜像
+
+```bash
+    build:
+      context: /volume1/docker/danmuji
+      dockerfile: Dockerfile
+```
+
 ## 其他使用
 
 ### Windows Docker
