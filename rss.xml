@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 20 Nov 2022 14:54:18 GMT</pubDate>
-    <lastBuildDate>Sun, 20 Nov 2022 14:54:18 GMT</lastBuildDate>
+    <pubDate>Mon, 21 Nov 2022 00:02:29 GMT</pubDate>
+    <lastBuildDate>Mon, 21 Nov 2022 00:02:29 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -117,11 +117,11 @@ scoop <span>install</span> ffmpeg
 <li><code>--logprob_threshold</code> 转录频次的阈值，默认为 -1.0。当 logprob_threshold 低于预设时，将不对该片段进行转录。建议修改为 None 或更低的值。</li>
 <li><code>--compression_ratio_threshold</code> 压缩比的阈值，默认为 2.4。当 compression_ratio_threshold 高于预设时，将不对该片段进行转录。</li>
 </ul>
-<p><code>--no_speech_threshold 0.5 --logprob_threshold None --compression_ratio_threshold 2.2</code> 是我常用的参数，你可以按视频情况来调节。</p>
+<p><code>--no_speech_threshold 0.5 --logprob_threshold None --compression_ratio_threshold 2.2</code> 是我常用的参数，你可以按视频情况来调节，幻听参数放在转录命令后面。</p>
 <h2 id="转录成果" tabindex="-1"> 转录成果</h2>
 <p>「夜のヒットスタジオ・スペシャル」：</p>
-<BiliBili bvid="BV1YP411V7vV" /><p>「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」：</p>
-<BiliBili bvid="BV1EP4y117bh" /><p>Whisper 对谈话片段识别不错，但歌曲转录与原意相差甚远。而我特别喜欢中森明菜的歌，所以在转录第二个视频后，特意花了几个小时重新比对歌词。</p>
+<BiliBili bvid="BV1EP4y117bh" /><p>「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」：</p>
+<BiliBili bvid="BV1yG4y1x7Qy" /><p>Whisper 对谈话片段识别不错，但歌曲转录与原意相差甚远。而我特别喜欢中森明菜的歌，所以在转录第二个视频后，特意花了几个小时重新比对歌词。</p>
 <p>但视频发布后，B 站给我推送了明菜歌迷会在一周前发布的带字幕视频。原本我有些沮丧，想着白花工夫了。但我看过对方专业的字幕视频后，心情立马变好了。歌迷会版本的字幕遣词造句都非常讲究，明显是日语精通级别，而我连五十音都没背全，用 10 分钟就能做出能看懂的字幕，质量也没相差巨大，我非常满足。之后，我也可以看没字幕的生肉节目了，不用再傻等字幕组的宠幸。</p>
 <h2 id="更多" tabindex="-1"> 更多</h2>
 <p>除了用 Whisper 转录的字幕来看视频，还能将其用于管理音视频。@PlatyHsu 分享的 <a href="https://marcoshuerta.com/dash/atp_search/" target="_blank" rel="noopener noreferrer">ATP Podcast Search</a> 启发了我，ATP 用 Whisper 转录给一个做了十年的英文播客做了可搜索的索引。那是否有应用在本地端用字幕管理视频文件？</p>
