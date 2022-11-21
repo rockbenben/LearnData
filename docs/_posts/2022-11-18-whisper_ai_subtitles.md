@@ -80,17 +80,17 @@ scoop install ffmpeg
 - `--logprob_threshold` 转录频次的阈值，默认为 -1.0。当 logprob_threshold 低于预设时，将不对该片段进行转录。建议修改为 None 或更低的值。
 - `--compression_ratio_threshold` 压缩比的阈值，默认为 2.4。当 compression_ratio_threshold 高于预设时，将不对该片段进行转录。
 
-`--no_speech_threshold 0.5 --logprob_threshold None --compression_ratio_threshold 2.2` 是我常用的参数，你可以按视频情况来调节。
+`--no_speech_threshold 0.5 --logprob_threshold None --compression_ratio_threshold 2.2` 是我常用的参数，你可以按视频情况来调节，幻听参数放在转录命令后面。
 
 ## 转录成果
 
 「夜のヒットスタジオ・スペシャル」：
 
-<BiliBili bvid="BV1YP411V7vV" />
+<BiliBili bvid="BV1EP4y117bh" />
 
 「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」：
 
-<BiliBili bvid="BV1EP4y117bh" />
+<BiliBili bvid="BV1yG4y1x7Qy" />
 
 Whisper 对谈话片段识别不错，但歌曲转录与原意相差甚远。而我特别喜欢中森明菜的歌，所以在转录第二个视频后，特意花了几个小时重新比对歌词。
 

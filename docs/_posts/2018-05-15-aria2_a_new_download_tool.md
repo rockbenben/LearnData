@@ -131,4 +131,4 @@ Aira2 下载预热是 BT 下载前的必备步骤，否则速度容易很慢。
 下载 [Aria2 启动器](https://wwz.lanzouf.com/iqud50ebl06d)，然后将其解压到 Aria2 运行目录，比如 `D:\Aria2`。Aria2 启动器包含两种方式，二选一即可。
 
 - **AriaNg 启动器**（推荐）：使用 AriaNg 本地版作下载管理界面。使用该启动器前，需将 [AriaNg](https://github.com/mayswind/AriaNg-DailyBuild/archive/master.zip) 解压到 Aria2 目录下，并将文件夹名改为 AriaNg，执行页面 index.html 位于 `Aria2\AriaNg\index.html`。
-- **Aria2c 启动器**：将 `http://aria2c.com` 作为默认下载界面。该设置较旧，需确保 JSON-RPC Path 为 `http://localhost:6800/jsonrpc`。
+- **Aria2c 启动器**：将 `https://aria2c.com` 作为默认下载界面。该设置较旧，需确保 JSON-RPC Path 为 `http://localhost:6800/jsonrpc`。
