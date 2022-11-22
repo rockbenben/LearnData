@@ -8,7 +8,7 @@ icon: strong
 
 消除饥饿感：**10 秒内原地高抬腿快跑 20 次**！当你进行快速跑的时候，肌肉的糖分会补充到血液中，产生给身体增加糖分的错觉。大脑就以为你吃饭了，饥饿感也被消除了。
 
-每天保持 [9000 步](https://www.solidot.org/story?sid=71166)，日常做凯格尔运动。下午 3 点进行重训或 HITT，晚上做睡前瑜伽。
+晨间锻炼使用八段锦（12mins）热身。每天保持 [9000 步](https://www.solidot.org/story?sid=71166)，日常做凯格尔运动。下午 3 点进行重训或 HITT，晚上做睡前瑜伽。
 
 ## [K 歌减肥](https://mp.weixin.qq.com/s/QKJ9PnmGTK7XY0yUWxsMRw)
 

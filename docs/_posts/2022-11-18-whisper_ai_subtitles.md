@@ -1,6 +1,6 @@
 ---
 title: 找不到字幕？Whisper 让不懂外语的你也能看懂日剧
-date: 2022-11-15
+date: 2022-11-18
 category:
   - 工具
 tag:
@@ -64,13 +64,30 @@ scoop install ffmpeg
 
 `--model` 指 Whisper 的转录模型，转录效果为 tiny < base < small < medium < large，默认使用 small。添加参数 `--model medium` 或 `--model large` 可以切换到更大的模型，但转录时间也会变长。如果你是对英文视频进行转录，则在模型参数上添加后缀 `.en`，能提升转录速度。
 
-|  模型  |  大小  | 单英语模型  | 多语言模型 | 最低内存 | 转录速率 |
+|  模型  |  大小  | 单英语模型  | 多语言模型 | 最低显存 | 转录速率 |
 | :----: | :----: | :---------: | :--------: | :------: | :------: |
 |  tiny  |  39 M  |  `tiny.en`  |   `tiny`   |  ~1 GB   |   ~32x   |
 |  base  |  74 M  |  `base.en`  |   `base`   |  ~1 GB   |   ~16x   |
 | small  | 244 M  | `small.en`  |  `small`   |  ~2 GB   |   ~6x    |
 | medium | 769 M  | `medium.en` |  `medium`  |  ~5 GB   |   ~2x    |
 | large  | 1550 M |     N/A     |  `large`   |  ~10 GB  |    1x    |
+
+上方表格是 Whisper 官方提供信息，但目前模型实际增大 50%-100%，要求也增加了，仅作参考。
+
+### 辅助参数
+
+- `--device` 指 whisper 运行算法所用的硬件，默认为 cuda 即显存，或者指定 `--device cpu` 。特别当你显存不够，又想使用较大模型时，推荐指定 CPU 转录。
+- `--temperature` temperature 决定了生成模型的贪婪程度，默认为 0。如果 temperature 低，概率最高的词将远高于其他低概率，模型将可能输出最正确的文本，变化很小。如果 temperature 较高，该模型会输出概率较高的其他单词，而不是概率最高的单词，生成的文本将更加多样化，但有更高的可能性出现语法错误和生成无意义的文本。
+- `--temperature_increment_on_fallback` 当解码失败时，回推时要增加的 temperature，默认为 0.2。
+- `--best_of` temperature 不为零时的侯选个数，默认为 5。
+- `--beam_size` temperature 为零时，number of beams in beam search，默认为 5。beam 直译是光束，但没理解具体意思，我简单理解其为侯选数。
+- `--patience` 用于 beam decoding 的 patience value, as in https://arxiv.org/abs/2204.05424, the default (1.0) is equivalent to conventional beam search (default: None) simple length normalization by default (default: None)
+- `--length_penalty` optional token length penalty coefficient (alpha) as in https://arxiv.org/abs/1609.08144, uses simple length normalization by default (default: None)
+- `--suppress_tokens` 逗号分隔的标记 ID 列表，以便在采样过程中进行抑制; 默认为 -1，这会抑制除常见标点符号外的大多数特殊字符的出现。
+- `--initial_prompt` 可选的文本提示，在命令首行出现，默认为空。
+- `--condition_on_previous_text` 默认为 True，为下一个窗口提供模型之前的输出作为提示；禁用可能会使不同窗口的文本不一致，但模型变得不容易陷入失败循环。
+- `--fp16` 是否启用半精度 fp16 进行推理运算，默认为 True，否则为单精度 fp32，运行时间延长。
+- `--threads` 指定 CPU 运算的线程数，会取代 MKL_NUM_THREADS/OMP_NUM_THREADS (默认：0)
 
 ### 幻听参数
 
@@ -94,11 +111,11 @@ scoop install ffmpeg
 
 Whisper 对谈话片段识别不错，但歌曲转录与原意相差甚远。而我特别喜欢中森明菜的歌，所以在转录第二个视频后，特意花了几个小时重新比对歌词。
 
-但视频发布后，B 站给我推送了明菜歌迷会在一周前发布的带字幕视频。原本我有些沮丧，想着白花工夫了。但我看过对方专业的字幕视频后，心情立马变好了。歌迷会版本的字幕遣词造句都非常讲究，明显是日语精通级别，而我连五十音都没背全，用 10 分钟就能做出能看懂的字幕，质量也没相差巨大，我非常满足。之后，我也可以看没字幕的生肉节目了，不用再傻等字幕组的宠幸。
+但视频发布后，B 站给我推送了明菜歌迷会在一周前发布的带字幕视频。原本我有些沮丧，想着白花工夫了。但我看过对方专业的字幕视频后，心情立马变好了。歌迷会版本的字幕遣词造句都非常讲究，明显是日语精通级别，而我连五十音都没背全，用 10 分钟就能做出能看懂的字幕，质量也没相差巨大，我非常满足。之后，我也可以看没字幕的生肉节目了，不用再傻等字幕组的宠幸。我甚至可以帮中文节目添加字幕，毕竟与声音相比，我们从文字中汲取信息要轻松许多。
 
 ## 更多
 
-除了用 Whisper 转录的字幕来看视频，还能将其用于管理音视频。@PlatyHsu 分享的 [ATP Podcast Search](https://marcoshuerta.com/dash/atp_search/) 启发了我，ATP 用 Whisper 转录给一个做了十年的英文播客做了可搜索的索引。那是否有应用在本地端用字幕管理视频文件？
+除了用 Whisper 转录的字幕来看视频和视频剪辑外，还能将来管理音视频。@PlatyHsu 分享的 [ATP Podcast Search](https://marcoshuerta.com/dash/atp_search/) 启发了我，ATP 用 Whisper 转录给一个做了十年的英文播客做了可搜索的索引。那是否有应用在本地端用字幕管理视频文件？
 
 ![](http://tc.seoipo.com/2022-11-18-23-21-25.png "ATP Podcast Search 搜索界面")
 

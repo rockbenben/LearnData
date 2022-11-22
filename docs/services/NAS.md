@@ -12,15 +12,14 @@ NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面�
 - SSD 缓存对家用的 NAS 性能提升不大，没必要加。
 - DS/Transmission 套件：用于 PT 下载 (禁用 DHT，半小时停止做种)。
 - Synology Drive Server 套件：电脑文件备份。
+- Hyper Backup：本地多硬盘备份，防止一个硬盘丢失后重要文件损坏，比如 docker 容器的本地配置文件夹。
 - 群晖系统分布在所有硬盘，拔出一个不影响使用。但应用会有影响？
 
 ## NAS Docker
 
-NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变，重启不会不影响 docker 配置。升级容器镜像，不影响内部数据库。
+NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变，重启不会不影响 docker 配置。升级容器镜像，不影响内部数据库。群晖的「Docker 导出」只会导出安装镜像和配置，但不包括容器内部使用的数据库，用处不大。
 
-群晖的「Docker 导出」只会导出安装镜像和配置，但不包括容器内部使用的数据库，用处不大。
-
-### Docker 安装
+**Docker 容器安装**：
 
 推荐用 `docker-compose.yml` 安装 Docker，镜像会自动同步到 NAS 的容器列表中。docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%E9%80%9A%E8%BF%87-docker-compose-%E9%83%A8%E7%BD%B2)。
 
@@ -32,8 +31,6 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 注意：root 用户需在命令前添加 `sudo`，否则会提示 `Permission denied`。
 
 ## Docker 容器
-
-NAS 上常用的 Docker 容器服务
 
 ### 常用
 
@@ -51,17 +48,18 @@ NAS 上常用的 Docker 容器服务
 - Tiny Tiny RSS：定期备份订阅源和设置，自动更新，可配置全文插件 [mercury-parser-api](https://registry.hub.docker.com/r/wangqiru/mercury-parser-api)。
 - [Check 酱](https://github.com/easychen/checkchan-dist)：监测网页内容变化，并发送异动到微信。亦支持 http status、json 和 rss 监测。配合自架云端，关电脑后也能运行。
 
+### 娱乐
+
+- [AList](https://github.com/alist-org/alist)：开源的网盘管理工具，还支持对象存储，本地存储，FTP 等等。
+- [LANraragi](https://github.com/Difegue/LANraragi)：免费开源的漫画管理器，支持 zip/rar/targz/lzma/7z/xz/cbz/cbr/pdf 多种格式，可从网页和 [第三方客户端](https://github.com/Difegue/LANraragi/blob/32cc991e8c5bae3bbd57d163278048c50159ae9f/tools/Documentation/advanced-usage/external-readers.md) 浏览。
+- [reader](https://github.com/hectorqin/reader)：阅读 3 的服务器版，摆脱客户端，网页版即可查看。
+- [Bilibili_Danmuji](https://github.com/zzcabc/Docker_Buildx_Danmuji)：B 站直播礼物答谢、定时广告、关注感谢，自动回复工具，房管工具，自动打卡，Bilibili 直播弹幕姬 (使用 websocket 协议)，java 版 B 站弹幕姬。部署 Docker 时需更新 release 文件。
+
 ### 自动化
 
 - [n8n](https://blog.csdn.net/alex_yangchuansheng/article/details/122295193)：开源 IFTTT 工具，偏重于云服务。
 - [Node-RED](../family/HomeAutomation.html#node-red)：开源流处理，类似本地版的 IFTTT。
 - [Home Assistant](https://www.home-assistant.io/)：开源家庭自动化平台，可自定义集中管理各品牌的智能家居设备。米家设备需使用 hacs 下的集成 [Xiaomi Miot Auto](../family/HomeAutomation.html#home-assistant)。
-
-### 加强
-
-- [AList](https://github.com/alist-org/alist)：开源的网盘管理工具，还支持对象存储，本地存储，FTP 等等。
-- [LANraragi](https://github.com/Difegue/LANraragi)：免费开源的漫画管理器，支持 zip/rar/targz/lzma/7z/xz/cbz/cbr/pdf 多种格式，可从网页和 [第三方客户端](https://github.com/Difegue/LANraragi/blob/32cc991e8c5bae3bbd57d163278048c50159ae9f/tools/Documentation/advanced-usage/external-readers.md) 浏览。
-- [Bilibili_Danmuji](https://github.com/zzcabc/Docker_Buildx_Danmuji)：B 站直播礼物答谢、定时广告、关注感谢，自动回复工具，房管工具，自动打卡，Bilibili 直播弹幕姬 (使用 websocket 协议)，java 版 B 站弹幕姬。部署 Docker 时需更新 release 文件。
 
 ### 待了解
 
