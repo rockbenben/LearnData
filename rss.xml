@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 22 Nov 2022 16:55:56 GMT</pubDate>
-    <lastBuildDate>Tue, 22 Nov 2022 16:55:56 GMT</lastBuildDate>
+    <pubDate>Sun, 27 Nov 2022 21:38:31 GMT</pubDate>
+    <lastBuildDate>Sun, 27 Nov 2022 21:38:31 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -22,6 +22,7 @@
       <link>https://newzone.top/_posts/2022-11-18-whisper_ai_subtitles.html</link>
       <guid>https://newzone.top/_posts/2022-11-18-whisper_ai_subtitles.html</guid>
       <source url="https://newzone.top/rss.xml">找不到字幕？Whisper 让不懂外语的你也能看懂日剧</source>
+      <description>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。 Whisper 是今年 9 月被 OpenAI 开...</description>
       <category>工具</category>
       <pubDate>Fri, 18 Nov 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。</p>
@@ -136,8 +137,8 @@ scoop <span>install</span> ffmpeg
 <p><code>--no_speech_threshold 0.5 --logprob_threshold None --compression_ratio_threshold 2.2</code> 是我常用的参数，你可以按视频情况来调节，幻听参数放在转录命令后面。</p>
 <h2 id="转录成果" tabindex="-1"> 转录成果</h2>
 <p>「夜のヒットスタジオ・スペシャル」：</p>
-<BiliBili bvid="BV1EP4y117bh" /><p>「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」：</p>
-<BiliBili bvid="BV1yG4y1x7Qy" /><p>Whisper 对谈话片段识别不错，但歌曲转录与原意相差甚远。而我特别喜欢中森明菜的歌，所以在转录第二个视频后，特意花了几个小时重新比对歌词。</p>
+<i>Content not supported</i><p>「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」：</p>
+<i>Content not supported</i><p>Whisper 对谈话片段识别不错，但歌曲转录与原意相差甚远。而我特别喜欢中森明菜的歌，所以在转录第二个视频后，特意花了几个小时重新比对歌词。</p>
 <p>但视频发布后，B 站给我推送了明菜歌迷会在一周前发布的带字幕视频。原本我有些沮丧，想着白花工夫了。但我看过对方专业的字幕视频后，心情立马变好了。歌迷会版本的字幕遣词造句都非常讲究，明显是日语精通级别，而我连五十音都没背全，用 10 分钟就能做出能看懂的字幕，质量也没相差巨大，我非常满足。之后，我也可以看没字幕的生肉节目了，不用再傻等字幕组的宠幸。我甚至可以帮中文节目添加字幕，毕竟与声音相比，我们从文字中汲取信息要轻松许多。</p>
 <h2 id="更多" tabindex="-1"> 更多</h2>
 <p>除了用 Whisper 转录的字幕来看视频和视频剪辑外，还能将来管理音视频。@PlatyHsu 分享的 <a href="https://marcoshuerta.com/dash/atp_search/" target="_blank" rel="noopener noreferrer">ATP Podcast Search</a> 启发了我，ATP 用 Whisper 转录给一个做了十年的英文播客做了可搜索的索引。那是否有应用在本地端用字幕管理视频文件？</p>
@@ -165,6 +166,7 @@ scoop <span>install</span> ffmpeg
       <link>https://newzone.top/_posts/2022-11-03-ffmpeg_screen_recording.html</link>
       <guid>https://newzone.top/_posts/2022-11-03-ffmpeg_screen_recording.html</guid>
       <source url="https://newzone.top/rss.xml">抛弃又贵又难用的录屏软件，3 分钟入门 FFmpeg</source>
+      <description>当所有的录屏应用都无法满足我时，我的目光投向了那个最终极的命令行工具，FFmpeg。 开始 自我监控 (https://newzone.top/posts/2022-05-22-surveillancevideoformyself.html) 后，录屏工具的重要性急速提升，我遇到的问题也越来越多。 因为我录屏主要是为了自我监控，所以我需要的帧率并不用很...</description>
       <category>工具</category>
       <pubDate>Thu, 03 Nov 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<blockquote>
@@ -273,6 +275,7 @@ scoop <span>install</span> ffmpeg
       <link>https://newzone.top/_posts/2022-09-07-extreme_branding_thinking_with_mate50.html</link>
       <guid>https://newzone.top/_posts/2022-09-07-extreme_branding_thinking_with_mate50.html</guid>
       <source url="https://newzone.top/rss.xml">「华为没电也能打电话」「iPhone 没电也能刷公交卡」，手机品牌是被绑架还是行业底线就是低？</source>
+      <description>华为 Mate50 时隔两年后再次发布，然后就看了一堆标题为「华为 Mate 50 没电也能打电话」的新闻，某度为您找到相关资讯 139 个。看到这标题，我直接傻眼，你们这些媒体是认真的吗？是收了哪边的公关费？ 个人观察 我的主力机是荣耀 20S，用了三年依旧能打，因此我对华为和鸿蒙充满好感，平常的购买也会倾向国产。但是，半路半粉的我看到这个标题，对这...</description>
       <category>观察随笔</category>
       <pubDate>Wed, 07 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>华为 Mate50 时隔两年后再次发布，然后就看了一堆标题为「华为 Mate 50 没电也能打电话」的新闻，某度为您找到相关资讯 139 个。看到这标题，我直接傻眼，你们这些媒体是认真的吗？<strong>是收了哪边的公关费</strong>？</p>
@@ -306,6 +309,7 @@ scoop <span>install</span> ffmpeg
       <link>https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html</link>
       <guid>https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html</guid>
       <source url="https://newzone.top/rss.xml">零基础入门 Stable Diffusion - 无需显卡把 AI 绘画引擎搬进家用电脑</source>
+      <description>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。 Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具，可以在 6GB 显存显卡或无显卡（只依赖...</description>
       <category>工具</category>
       <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。</p>
@@ -399,7 +403,7 @@ scoop <span>install</span> ffmpeg
 </blockquote>
 <h2 id="prompt-matrix" tabindex="-1"> Prompt matrix</h2>
 <p>Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
-<BiliBili bvid="BV1YP411V7vV" /><p>上方视频的调教词为 <code>A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting</code>。<code>|</code> 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。</p>
+<i>Content not supported</i><p>上方视频的调教词为 <code>A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting</code>。<code>|</code> 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。</p>
 <p>另外，我们可以指定场景条件位置，比如 <code>@(moba|rpg|rts) character (2d|3d) model</code> 表示 <code>(moba|rpg|rts 三选一) character (2d|3d 二选一) model</code>，也就是会生成 3*2 张图片。开头的 <code>@</code> 是触发指定场景条件位置的符号，不能省略。</p>
 <h2 id="textual-inversion" tabindex="-1"> Textual Inversion</h2>
 <p>Textual Inversion（文本倒置）是 auto/auto-cpu 分支提供的功能，可以个人定制单词在模型中的含义。比如大众模型中医生多是白人男性，而我们可以输入 5 张亚洲女性照片并将其与 doctor 关联，经过 Textual Inversion 处理后的模型生成的医生形象将以亚洲女性为主。<sup></sup></p>
@@ -468,6 +472,7 @@ wsl <span>-l</span> <span>-v</span>
       <link>https://newzone.top/_posts/2022-08-22-learndata_blog_to_knowledge_management.html</link>
       <guid>https://newzone.top/_posts/2022-08-22-learndata_blog_to_knowledge_management.html</guid>
       <source url="https://newzone.top/rss.xml">抛弃 Notion 知识管理软件的尝试：把博客变为知识库</source>
+      <description>Notion、Obsidian、Logseq、Roam Research、Evernote、flomo、为知、飞书、语雀……知识管理/笔记软件越来越多，我总在不同应用间徘徊。直到有次忽然醒悟，知识管理软件不是管理知识，而是管理笔记。笔记里的知识并不属于你，只有经过消化、应用，才会成为自己的知识。 这么简单的事，我之前却一直没看透，总是把笔记与知识理解划...</description>
       <category>博客</category>
       <category>头脑驿站</category>
       <pubDate>Mon, 22 Aug 2022 00:00:00 GMT</pubDate>
@@ -545,6 +550,7 @@ wsl <span>-l</span> <span>-v</span>
       <link>https://newzone.top/_posts/2022-08-10-new_stuff_shaping_machine.html</link>
       <guid>https://newzone.top/_posts/2022-08-10-new_stuff_shaping_machine.html</guid>
       <source url="https://newzone.top/rss.xml">新玩意｜智能可折叠综合塑形机</source>
+      <description>家里关得太久，体重又涨了 10 斤，再次陷入健身器材焦虑之中。虽然划船机、跑步机、动感单车的结局都是闲鱼出，但我对健身器材的追逐始终没变。这时发现有品众筹的新玩具，两千的综合塑形机。 这款塑形机原理与飞鸟龙门架类似，号称可以充当家庭健身房，锻炼全身的肌肉，包括练肩后束、练背、练上胸、练胸中缝、练下胸、练三头、练二头、练核心、练臀大肌、练大腿外侧。 之前...</description>
       <category>购物</category>
       <pubDate>Wed, 10 Aug 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>家里关得太久，体重又涨了 10 斤，再次陷入健身器材焦虑之中。虽然划船机、跑步机、动感单车的结局都是闲鱼出，但我对健身器材的追逐始终没变。这时发现有品众筹的新玩具，两千的综合塑形机。</p>
@@ -568,6 +574,7 @@ wsl <span>-l</span> <span>-v</span>
       <link>https://newzone.top/_posts/2020-09-22-uefi_asus_board.html</link>
       <guid>https://newzone.top/_posts/2020-09-22-uefi_asus_board.html</guid>
       <source url="https://newzone.top/rss.xml">「硬盘布局不受 UEFI 固件支持」－华硕主板解决方案</source>
+      <description>电脑已经用了 5 年，这次 Win10 更新提示「硬盘布局不受 UEFI 固件支持」。本文是华硕主板的解决方案，其他主板顺序不同，但目的都是将启动模式修改为「Only Legecy」。 电脑重启，按 F2 或 DEL 进入 BIOS。选择「高级模式」&gt;「启动」&gt;「CSM」&gt;「启动设备控制」，设置为「仅 Legecy OPROM」。 设置完成后，Win1...</description>
       <category>系统</category>
       <pubDate>Tue, 22 Sep 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>电脑已经用了 5 年，这次 Win10 更新提示「硬盘布局不受 UEFI 固件支持」。本文是华硕主板的解决方案，其他主板顺序不同，但目的都是将启动模式修改为「Only Legecy」。</p>
@@ -582,6 +589,7 @@ wsl <span>-l</span> <span>-v</span>
       <link>https://newzone.top/_posts/2017-04-18-wechat_multi_open.html</link>
       <guid>https://newzone.top/_posts/2017-04-18-wechat_multi_open.html</guid>
       <source url="https://newzone.top/rss.xml">电脑上实现微信双开，无需网页版或第三方软件</source>
+      <description>由于工作原因，有时候我们需要在电脑上登录多个微信。但微信限制一个客户端只能登陆一个账号，PC 端 + 网页版就成了通用方案，操作效率下降许多。 其实我们还有更好的办法。在微信 PC 版之余，同时安装微信 For Windows，就能实现客户端双开！ 微信 For Windows 安装 打开「运行」对话框，输入并启动「应用商店」或「Microsoft S...</description>
       <category>工具</category>
       <pubDate>Tue, 18 Apr 2017 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>由于工作原因，有时候我们需要在电脑上登录多个微信。但微信限制一个客户端只能登陆一个账号，PC 端 + 网页版就成了通用方案，操作效率下降许多。</p>
@@ -611,6 +619,7 @@ wsl <span>-l</span> <span>-v</span>
       <link>https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html</link>
       <guid>https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html</guid>
       <source url="https://newzone.top/rss.xml">RSS 入门篇：Feed43&amp;FeedEx-为静态网页定制 RSS 源</source>
+      <description>迷上 IFTTT 后急需 RSS 来监测网页，找到免费的 FEED43。网上有很多教程，但对新手都不够友好，就重新整理了一份。 ► 开始烧制属于自己的 feed 1. 进入网页 FEED43 (http://www.feed43.com/) 无需注册，点击 Create your own feed 直接使用。 2. 选定 RSS 网页 将目标网址添入 ...</description>
       <category>自动化</category>
       <pubDate>Sat, 22 Apr 2017 12:54:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>迷上 IFTTT 后急需 RSS 来监测网页，找到免费的 FEED43。网上有很多教程，但对新手都不够友好，就重新整理了一份。</p>
@@ -695,6 +704,7 @@ wsl <span>-l</span> <span>-v</span>
       <link>https://newzone.top/_posts/2017-07-28-office_2016_installer_error.html</link>
       <guid>https://newzone.top/_posts/2017-07-28-office_2016_installer_error.html</guid>
       <source url="https://newzone.top/rss.xml">office 2016 安装程序报错解决办法</source>
+      <description>重新安装 Office 系统或更改安装组件时，经常提示：「找不到有效的安装源」，但实际这些文件都能在安装包内找到。这是由于注册表和组件而导致的报错，「找不到有效的安装源」并不是真实原因，解决方法查看下方。 解决方法 1. 打开 regedit.exe，在注册表中找到路径 计算机\HKEYLOCALMACHINE\SOFTWARE\Microsoft\O...</description>
       <category>系统</category>
       <pubDate>Fri, 28 Jul 2017 11:02:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>重新安装 Office 系统或更改安装组件时，经常提示：「找不到有效的安装源」，但实际这些文件都能在安装包内找到。这是由于注册表和组件而导致的报错，<strong>「找不到有效的安装源」并不是真实原因</strong>，解决方法查看下方。</p>
