@@ -1,6 +1,6 @@
 {
   "name": "learn-data",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -14,9 +14,9 @@
     "@vuepress/plugin-google-analytics": "2.0.0-beta.53",
     "@vuepress/plugin-search": "2.0.0-beta.53",
     "@vuepress/utils": "2.0.0-beta.53",
-    "pnpm": "^7.16.0",
+    "pnpm": "^7.17.1",
     "vue": "^3.2.45",
     "vuepress": "2.0.0-beta.53",
-    "vuepress-theme-hope": "2.0.0-beta.122"
+    "vuepress-theme-hope": "2.0.0-beta.130"
   }
 }
