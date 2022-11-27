@@ -90,8 +90,13 @@ Bandicam、Mirillis Action！录制时，电脑无法进入睡眠，ManicTime �
 DVR-Scan 操作很简单，视频目录内右键单击「在终端打开」，执行默认输出命令即可得到过滤后的视频。12 小时的视频，处理用时二十分钟，会占用大量 CPU。有点要注意，DVR-Scan 有个限制，只能导出为`.avi`视频。
 
 ```bash
-#默认输出命令
+#默认输出命令，不含音频
 dvr-scan -i some_video.mp4 -o some_video_motion_only.avi
+
+#输出含音轨的视频到 output 文件夹,但输出的将为分段
+dvr-scan -i some_video.mp4 -d output -m ffmpeg
+#如果需要获取完整视频，则添加合并命令。（终端为 Windows cmd(管理员)，其他查看 https://trac.ffmpeg.org/wiki/Concatenate#demuxer）
+dvr-scan -i some_video.mp4 -d output -m ffmpeg && (for %i in (output/*.mp4) do @echo file '%i') > output/mylist.txt && ffmpeg -f concat -i output/mylist.txt -c copy output_combine.mp4 -y
 
 # -t 是 DVR-Scan 的动作检测敏感度，默认为 0.15，越低则越敏感
 #下列命令将敏感度调为 0.5，最大程度的删除静止画面帧

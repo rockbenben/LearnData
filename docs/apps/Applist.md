@@ -123,7 +123,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 卸载清理：IObit Uninstaller & Glary Utilities(注册表清理) ~~& Geek Uninstaller~~
 
-偶尔使用：VeraCrypt(本地加密)、Recuva(文件恢复)、[12306Bypass](http://www.12306bypass.com/)、爱思助手、Bluestacks(安卓模拟器)、微 PE 工具箱、[傲梅分区](https://www.disktool.cn/)
+偶尔使用：VeraCrypt(本地加密)、Recuva(文件恢复)、[12306Bypass](http://www.12306bypass.com/)、爱思助手、Bluestacks(安卓模拟器)、[Ventoy](https://www.ventoy.net/cn/index.html)（制作可启动 U 盘）、微 PE 工具箱、[傲梅分区](https://www.disktool.cn/)
 
 飞书妙记：倍速、跳过空白片段、字幕搜索定位视频，将视频（最长 4 小时）转为文字大纲，了解视频梗概，建立基础认知。等到自己上手实操的时候，遇到问题直接搜索文字定位到相关内容，再看文字对应的视频截图确定配置细节。如果视频过大，可以提取音频来上传。^[[视频课程学习留档](https://sspai.com/post/70960)]
 

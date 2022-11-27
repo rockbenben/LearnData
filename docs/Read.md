@@ -31,6 +31,12 @@ icon: read
 
 [3.5 创建你的信息数据库 - 少数派](https://sspai.com/post/54065)
 
+## 电子书
+
+历史、心理等提升类书籍以 PDF 为主，使用 Logseq 作读书笔记。
+
+Calibre 管理所有电子书，选择「连接/共享」>「启动内容服务器」，并对 EPUB/MOBI 作笔记。
+
 ## 费曼技巧
 
 1. Choose a Concept 选择一个概念；

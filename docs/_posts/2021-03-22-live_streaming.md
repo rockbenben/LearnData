@@ -37,7 +37,7 @@ order: -36
 
 **NDI** 最为稳定，能自由调节拍摄参数。打开 NDI 应用，需等待 NDI 界面周边出现绿框或红框，OBS 才可以识别到摄像头。不过 NDI 是收费应用，安卓测试可使用 [NDI 调试 APK](https://wwe.lanzoup.com/iQCMh00b946b)。
 
-**IP Webcam** 推流稳定性一般，容易掉帧，但 [IP Webcam 免费版](https://wwz.lanzouf.com/iT6pH01tj7yb) 足够个人使用。
+**IP Webcam** 推流稳定性一般，容易掉帧，但 [IP Webcam 免费版](https://wwz.lanzouf.com/iT6pH01tj7yb) 足够个人使用。也有人推荐 DroidCam、iriun webcam、ivcam。
 
 - IP Webcam 设置网页将流质量调整至 90%，视频分辨率 720p，能有效减少卡顿。IP camera 耗电低，适合手机长时间直播，支持视频与浏览器等方式。
 - OBS 中选择「场景」>「来源」>「视频源」，「输入」项中填入 IP Webcam 视频地址，例如 `http://192.168.2.234:8080/video`。
