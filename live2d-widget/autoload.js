@@ -33,9 +33,9 @@ if (screen.width >= 768) {
 	]).then(() => {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
-			//apiPath: "https://live2d.fghrsh.net/api/",
+			//apiPath: "https://live2d-widget.netlify.app/live2d_api/",
 			//cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/"
-			//使用 api 才能完美换装
+			//使用 api 才能完美换装，但测试 netlify 和 Vercel api 部署有问题，推荐自建或使用本地 cdn
 			apiPath: "https://newzone.top/live2d-widget/live2d_api/"
 			//cdnPath: live2d_path + "live2d_api/"
 		});
@@ -50,16 +50,16 @@ console.log(`
            ＼ ', !-─‐-i  /  /´
            ／｀ｰ'       L/／｀ヽ､
          /   ／,   /|   ,   ,       ',
-       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ！i
+       ｲ   / /-‐/  i  L_ ﾊ ヽ！i
         ﾚ ﾍ 7 ｲ｀ﾄ   ﾚ'ｧ - ﾄ､! ハ |   |
           !,/7 '0'     ´0i ソ |    |
           |。从"    _     ,,,, / |./    |
           ﾚ'| i＞.､,,__  _,.イ /   .i   |
-            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ。 |
+            ﾚ'| | / k_7_/ﾚ'ヽ,  ﾊ。 |
               | |/i 〈|/   i  ,.ﾍ |  i  |
              .|/ /  i：ﾍ！   ＼  |
               k ヽ>､ﾊ    _,.ﾍ､    /､!
-              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+              !'〈//｀T´', ＼ ｀'7'ｰr'
               ﾚ'ヽ L__|___i,___，ンﾚ | ノ
                   ﾄ-,/  |___./
                   'ｰ'    !_,.:
