@@ -93,9 +93,9 @@ DVR-Scan 操作很简单，视频目录内右键单击「在终端打开」，�
 #默认输出命令，不含音频
 dvr-scan -i some_video.mp4 -o some_video_motion_only.avi
 
-#输出含音轨的视频到 output 文件夹,但输出的将为分段
+#将含音轨的输出视频放于 output 文件夹，但输出会被分为多个视频
 dvr-scan -i some_video.mp4 -d output -m ffmpeg
-#如果需要获取完整视频，则添加合并命令。（终端为 Windows cmd(管理员)，其他查看 https://trac.ffmpeg.org/wiki/Concatenate#demuxer）
+#如果只想获取单个输出视频，则使用视频合并命令。（默认终端为 Windows cmd(管理员)，其他终端查看 https://trac.ffmpeg.org/wiki/Concatenate#demuxer）
 dvr-scan -i some_video.mp4 -d output -m ffmpeg && (for %i in (output/*.mp4) do @echo file '%i') > output/mylist.txt && ffmpeg -f concat -i output/mylist.txt -c copy output_combine.mp4 -y
 
 # -t 是 DVR-Scan 的动作检测敏感度，默认为 0.15，越低则越敏感
