@@ -46,7 +46,7 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 - RSSHub：无需保存数据，pubData 为 GMT 时区，普通用户无法更改，Docker Timezone 设置也不会有改变。
 - Huginn：定期备份抓取脚本，数据库保存在本地。
 - Tiny Tiny RSS：定期备份订阅源和设置，自动更新，可配置全文插件 [mercury-parser-api](https://registry.hub.docker.com/r/wangqiru/mercury-parser-api)。
-- [Check 酱](https://github.com/easychen/checkchan-dist)：监测网页内容变化，并发送异动到微信。亦支持 http status、json 和 rss 监测。配合自架云端，关电脑后也能运行。
+- [Check 酱](https://github.com/easychen/checkchan-dist)：监测网页内容变化，并发送异动到微信。亦支持 http status、json 和 rss 监测。配合自架云端，关电脑后也能运行。同类工具有 [changedetection.io](https://github.com/dgtlmoon/changedetection.io)。
 
 ### 娱乐
 
