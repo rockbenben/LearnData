@@ -95,11 +95,20 @@ export default hopeTheme({
     comment: {
       provider: "Waline",
       serverURL: "https://waline.newzone.top",
+      reaction: [
+        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44d.png',
+        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44f.png',
+        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f60e.png',
+        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f602.png',
+        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f635-200d-1f4ab.png',
+      ],
       // 部署 Waline：https://waline.js.org/guide/get-started.html
       // pageview: true, // 浏览量统计
-      // Waline 等级标签
       walineLocales: {
         "/": {
+          // 表情互动提示文字
+          reactionTitle: "已到达文章底部，欢迎留言、表情互动~", 
+          // Waline 等级标签
           admin: "盛年不重来，一日难再晨",
           level0: "锻体",
           level1: "炼气",
