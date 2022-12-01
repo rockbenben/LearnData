@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 29 Nov 2022 06:27:03 GMT</pubDate>
-    <lastBuildDate>Tue, 29 Nov 2022 06:27:03 GMT</lastBuildDate>
+    <pubDate>Thu, 01 Dec 2022 12:53:13 GMT</pubDate>
+    <lastBuildDate>Thu, 01 Dec 2022 12:53:13 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -27,7 +27,7 @@
       <pubDate>Fri, 18 Nov 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。</p>
 <p>Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是<strong>支持 99 种语言 AI 字幕工具</strong>。</p>
-<p>虽然与 Stable Diffusion 同样归属 AI 工具，但 Whisper 安装非常简单，两行代码即可开箱使用。这部分我不多做赘述，具体可以看 <a href="https://github.com/openai/whisper" target="_blank" rel="noopener noreferrer">Whisper 官方文档</a>。</p>
+<p>虽然与 Stable Diffusion 同样归属 AI 工具，但 Whisper 安装非常简单，终端执行两行代码安装 Whisper 和 FFmpeg 即可使用。如果你不清楚如何安装 FFmpeg，可参考 <a href="https://newzone.top/_posts/2022-11-03-ffmpeg_screen_recording.html#%E9%85%8D%E7%BD%AE-ffmpeg" target="_blank" rel="noopener noreferrer">FFmpeg 配置步骤</a>。这部分我不多做赘述，具体可以看 <a href="https://github.com/openai/whisper" target="_blank" rel="noopener noreferrer">Whisper 官方文档</a>。</p>
 <div data-ext="sh"><pre><code>pip <span>install</span> git+https://github.com/openai/whisper.git
 
 <span># on MacOS using Homebrew (https://brew.sh/)</span>
@@ -138,7 +138,7 @@ scoop <span>install</span> ffmpeg
 <h2 id="转录成果" tabindex="-1"> 转录成果</h2>
 <p>「夜のヒットスタジオ・スペシャル」：</p>
 <i>Content not supported</i><p>「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」：</p>
-<i>Content not supported</i><p>Whisper 对谈话片段识别不错，但歌曲转录与原意相差甚远。而我特别喜欢中森明菜的歌，所以在转录第二个视频后，特意花了几个小时重新比对歌词。</p>
+<i>Content not supported</i><p>上方是我用 Whisper 转录的日语视频，不过哔哩哔哩不支持站外嵌套字幕，查看字幕效果需跳转回 B 站。测试视频中 Whisper 对谈话片段识别不错，但歌曲转录与原意相差甚远。而我特别喜欢中森明菜的歌，所以在转录第二个视频后，特意花了几个小时重新比对歌词。</p>
 <p>但视频发布后，B 站给我推送了明菜歌迷会在一周前发布的带字幕视频。原本我有些沮丧，想着白花工夫了。但我看过对方专业的字幕视频后，心情立马变好了。歌迷会版本的字幕遣词造句都非常讲究，明显是日语精通级别，而我连五十音都没背全，用 10 分钟就能做出能看懂的字幕，质量也没相差巨大，我非常满足。之后，我也可以看没字幕的生肉节目了，不用再傻等字幕组的宠幸。我甚至可以帮中文节目添加字幕，毕竟与声音相比，我们从文字中汲取信息要轻松许多。</p>
 <h2 id="更多" tabindex="-1"> 更多</h2>
 <p>除了用 Whisper 转录的字幕来看视频和视频剪辑外，还能将来管理音视频。@PlatyHsu 分享的 <a href="https://marcoshuerta.com/dash/atp_search/" target="_blank" rel="noopener noreferrer">ATP Podcast Search</a> 启发了我，ATP 用 Whisper 转录给一个做了十年的英文播客做了可搜索的索引。那是否有应用在本地端用字幕管理视频文件？</p>
