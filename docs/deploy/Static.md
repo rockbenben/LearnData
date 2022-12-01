@@ -14,6 +14,8 @@ order: 1
 - [字节 CDN](https://cdn.bytedance.com/)：国内测速表现最佳，缓存过期时间最长设置一年。
 - [Staticfile CDN](https://www.staticfile.org/)：CDN 加速由七牛云提供。
 
+emoji 等可以使用静态资源库上的项目，比如 twemoji，上面有集成 png 图片。
+
 ### NPM 包
 
 - UNPKG：**有墙风险且不稳定**，默认为最新版本，无需 `@latest` 标签。

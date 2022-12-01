@@ -1,6 +1,6 @@
-node_modules
-docs/.vuepress/.temp
-docs/.vuepress/.cache
-docs/.vuepress/dist
-docs/_temp
-docs/_gsdata_
+node_modules/
+docs/.vuepress/.temp/
+docs/.vuepress/.cache/
+docs/.vuepress/dist/
+docs/_temp/
+docs/_gsdata_/

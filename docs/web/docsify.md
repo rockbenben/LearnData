@@ -17,6 +17,9 @@ order: 2
 - [x] [docsify-count](https://github.com/827652549/docsify-count)：docsify 的字数和阅读时长插件。
 - [x] [docsify-waline](https://github.com/cxcn/docsify-waline/blob/main/README.zh-CN.md)：提供评论功能的同时，借用 docsify-count 接口展示阅读量。暂时停止 1300 宽度的 waline 显示，避免页面显示异常。
 - [x] [docsify-toc](https://github.com/mrpotatoes/docsify-toc)：给笔记页内部添加目录。不过本插件与 gitalk、waline 冲突，页面宽于 1300px 时出现 toc 目录，评论区位置也跟着挤到页面顶部，需手动修改。参考链接：[Tainacan Wiki](https://tainacan.github.io/tainacan-wiki/#/general-concepts)，[Sureness](https://github.com/dromara/sureness/blob/master/docs/index.html)，[lifeupapp](https://wiki.lifeupapp.fun/zh-cn/#/features/174)。
+- [x] [docsify-pdf-converter](https://github.com/meff34/docsify-to-pdf-converter)：将 docsify 转为 pdf，不带书签目录。
+  - `illegal operation on a directory` 报错：sidebar 中不要使用简写地址，将 `main/` 改为 `main/README.md`，否则将读取到目录而报错。
+  - `'node_modules' 不是内部或外部命令` 报错：将 package.json 的设置修改为 `"convert": "node_modules\\.bin\\docsify-pdf-converter"`。这问题多发生在 Windows，是由 Windows 与 Linux 路径规则不同而引起的。
 
 ## 配置
 

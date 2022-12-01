@@ -77,7 +77,7 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 - `config.ts` 配置网站环境依赖和网站属性。
 - `sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。
 - `navbar.ts` 配置导航栏，推荐放你常用的文档链接。
-- `theme.ts` 对主题和插件进行配置，[评论插件](https://newzone.top/web/Comments.html) 亦在此文件。
+- `theme.ts` 对主题和插件进行配置，[评论插件](https://newzone.top/web/Comments.html) 设置亦在此文件。
 - `templateBuild.html` 是网页模板，调整网站关键词和第三方统计代码。
 
 注意：LearnData 默认使用了 algolia 全文搜索，如果你没设置 Docsearch 爬虫的话，需删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块。删除后，站点会将页面标题和小标题作为搜索索引。
@@ -103,13 +103,13 @@ LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/l
 
 LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定，为了确保网站能被正常访问，建议增加国内的访问节点。
 
-很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。因此，我没选 Gitee，而是把文档同步到国内服务器（域名需备案）或 Vercel（国外服务永远不知什么时候会断）。
+很多人选择 Gitee Pages 作为国内节点，通过 GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，必须实名验证，免费版无法自定义域名，更别提近期的下架风波。因此，我没选 Gitee，而是把文档同步到国内服务器（域名需备案）或 Vercel（国外服务永远不知什么时候会断）。
 
 ### 同步到服务器
 
 项目搭建好后，出现了红色叉叉，这是 GitHub Actions 同步服务器的失败提示，需按下方操作配置。
 
-服务器设置：进入 GitHub 仓库「setting」>「Secrets」>「Action」，添加 `FTP_HOST`，`FTP_PORT`，`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。配置成功后，每次修改文件，Github 都会自动推送到服务器 FTP。
+服务器设置：进入 GitHub 仓库「setting」>「Secrets」>「Action」，添加 `FTP_HOST`、`FTP_PORT`、`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。之后，Github Actions 在文件发生变动时，会将修改推送到服务器 FTP。
 
 如果你不需要同步到服务器 FTP，建议按常见问题中的操作删除对应代码，或者按照 [GitHub 同步到 oss](https://newzone.top/deploy/Static.html#同步到-oss) 步骤将网页部署到云存储上。
 
@@ -192,6 +192,7 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 ## Features
 
 - [ ] 增加「阅读笔记」区块，该区块将用 docsify 管理，与 LearnData 文章区分离。
+- [x] 增加文章互动区块，让读者能通过 emoji 简便与作者沟通。
 - [x] 看板娘：远程支持 api，也可使用本地文件。
 - [x] 样式调整：黑色主题调整深紫色；调整 TOC 规则。
 - [x] typo 修正：v1.0.3 之前的版本升级需将「docs\.vuepress\sidebar.ts」中的「collapsable」全部替换为「collapsible」。
