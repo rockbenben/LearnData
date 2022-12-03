@@ -52,6 +52,7 @@ FFmpeg 是处理多媒体内容 (如音频、视频、字幕和相关元数据) 
 2. 将 FFmpeg 解压到任意文件夹，比如 `D:\Backup\Libraries\Documents\ffmpeg`。
 3. 开始栏搜索「编辑系统环境变量」，点击进入「环境变量」。
 4. 新建用户变量 `FFMPEG_HOME`，变量值设为刚才的解压路径 `D:\Backup\Libraries\Documents\ffmpeg`。
+
    ![](http://tc.seoipo.com/2022-11-01-18-13-49.png "FFmpeg 全局变量设置")
 
 配置完成后，在终端输入 ffmpeg 即可启动。
