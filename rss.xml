@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 01 Dec 2022 12:53:13 GMT</pubDate>
-    <lastBuildDate>Thu, 01 Dec 2022 12:53:13 GMT</lastBuildDate>
+    <pubDate>Sat, 03 Dec 2022 02:05:37 GMT</pubDate>
+    <lastBuildDate>Sat, 03 Dec 2022 02:05:37 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -196,11 +196,19 @@ scoop <span>install</span> ffmpeg
 <h2 id="录屏准备" tabindex="-1"> 录屏准备</h2>
 <h3 id="配置-ffmpeg" tabindex="-1"> 配置 FFmpeg</h3>
 <ol>
-<li>下载最新版 <a href="https://github.com/BtbN/FFmpeg-Builds/releases/tag/latest" target="_blank" rel="noopener noreferrer">FFmpeg</a>，Windows 环境选择 <code>ffmpeg-master-latest-win64-gpl.zip</code>，GPL 版本包含了所有依赖项。</li>
-<li>将 FFmpeg 解压到任意文件夹，比如 <code>D:\Backup\Libraries\Documents\ffmpeg</code>。</li>
-<li>开始栏搜索「编辑系统环境变量」，点击进入「环境变量」。</li>
-<li>新建用户变量 <code>FFMPEG_HOME</code>，变量值设为刚才的解压路径 <code>D:\Backup\Libraries\Documents\ffmpeg</code>。
-<figure><img src="http://tc.seoipo.com/2022-11-01-18-13-49.png" alt="" title="FFmpeg 全局变量设置" loading="lazy"><figcaption>FFmpeg 全局变量设置</figcaption></figure></li>
+<li>
+<p>下载最新版 <a href="https://github.com/BtbN/FFmpeg-Builds/releases/tag/latest" target="_blank" rel="noopener noreferrer">FFmpeg</a>，Windows 环境选择 <code>ffmpeg-master-latest-win64-gpl.zip</code>，GPL 版本包含了所有依赖项。</p>
+</li>
+<li>
+<p>将 FFmpeg 解压到任意文件夹，比如 <code>D:\Backup\Libraries\Documents\ffmpeg</code>。</p>
+</li>
+<li>
+<p>开始栏搜索「编辑系统环境变量」，点击进入「环境变量」。</p>
+</li>
+<li>
+<p>新建用户变量 <code>FFMPEG_HOME</code>，变量值设为刚才的解压路径 <code>D:\Backup\Libraries\Documents\ffmpeg</code>。</p>
+<p><figure><img src="http://tc.seoipo.com/2022-11-01-18-13-49.png" alt="" title="FFmpeg 全局变量设置" loading="lazy"><figcaption>FFmpeg 全局变量设置</figcaption></figure></p>
+</li>
 </ol>
 <p>配置完成后，在终端输入 ffmpeg 即可启动。</p>
 <p><figure><img src="http://tc.seoipo.com/2022-11-01-18-17-13.png" alt="" title="FFmpeg 配置成功" loading="lazy"><figcaption>FFmpeg 配置成功</figcaption></figure></p>
