@@ -35,7 +35,7 @@ Windows 自用软件，以开源软件为主。
 
 音频处理：[Audacity](https://github.com/audacity/audacity/releases) & iZotope rx9 & [Reaper+ Ultraschall](https://sspai.com/post/76677) ~~& Audition & 神舌变声器 & Goldwave~~
 
-视频播放：[Potplayer](https://zhuanlan.zhihu.com/p/35757176) & VLC ~~& 恒星播放器 & QQ 影音 & 暴风影音 & 射手~~
+视频播放：[Potplayer](https://zhuanlan.zhihu.com/p/35757176) & [LAVFilters](https://github.com/Nevcairiel/LAVFilters/releases) & [madVR](http://www.madvr.com/) & XySubFilter & VLC ~~& 恒星播放器 & QQ 影音 & 暴风影音 & 射手~~，播放器设置参考 [Potplayer + LAVFilters + madVR 配置教程](https://www.likecs.com/show-204327094.html)
 
 视频剪辑：剪映 & LosslessCut(音频提取·视频切割合并) & [ShanaEncoder](https://shana.pe.kr/shanaencoder_download/)(视频压缩) & [Quick Cut](https://github.com/HaujetZhao/QuickCut) (自动剪辑) & HandBrake(视频转换) & Premiere ~~& Shotcut & 500th Video Converter & 小丸工具箱~~
 
@@ -135,10 +135,14 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
   - [PyTorch](https://pytorch.org/get-started/locally/)：开源的 Python 机器学习库，用于自然语言处理等应用程序。
 - [style2paints](https://github.com/lllyasviel/style2paints)：一款给线稿上色的 AI 辅助工具。能够帮助用户给没有上色的图片，快速完成上色的 AI 工具，上色效果广受好评，完全免费开箱即用。
 - [uncle-novel](https://github.com/uncle-novel/uncle-novel)：一个全网小说下载器及阅读器，可部署在 PC 和安卓上，目录解析与书源结合，支持有声小说与文本小说，可下载 mobi、epub、txt 格式文本小说。
-- [WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
-- [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 tube
-- [AutoX](https://github.com/kkevsekk1/AutoX)：开源版的 Auto.js，没有包名屏蔽。相关信息可以参考 [快人一步：使用 Tasker+AutoX 一键直达健康码](https://sspai.com/post/65863)。
 - [VoceChat](https://doc.voce.chat/zh-cn/)：可以部署在网页的轻型客服系统？是否有其他开源选项。
+
+## Android
+
+- [KODI](https://kodi.tv/download/android)：安卓 TV 的最强播放器。
+- [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 YouTube。
+- [WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
+- [AutoX](https://github.com/kkevsekk1/AutoX)：开源版的 Auto.js，没有包名屏蔽。相关信息可以参考 [快人一步：使用 Tasker+AutoX 一键直达健康码](https://sspai.com/post/65863)。
 
 ---
 

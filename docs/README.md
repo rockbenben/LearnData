@@ -50,7 +50,7 @@ icon: note
 
    ![](http://tc.seoipo.com/20180505202201.png)
 
-4. 同一页面选择「Code and automation」>「Pages」>「Build and deployment」>「Branch」, 将 gh-page branch 设为 GitHub Pages 来源，网站运行目录默认为 `/(root)`。设置好后，点击「Save」。
+4. 同一页面选择「Code and automation」>「Pages」>「Build and deployment」>「Branch」, 将 gh-page branch 设为 GitHub Pages 来源，网站运行目录默认为 `/(root)`。设置好后，点击「Save」。如果你没找到 gh-page branch，则在 GitHub 中修改任意文件以手动启动 GitHub Action，待其执行完成后重新设定 Pages 来源。
 
    ![](http://tc.seoipo.com/2022-08-10-19-39-15.png)
 
