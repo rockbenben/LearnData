@@ -2,13 +2,14 @@
 #博客首页设置：https://vuepress-theme-hope.github.io/v2/zh/guide/blog/home.html
 home: true
 layout: Blog
+article: false
 icon: home
-bgImage: http://tc.seoipo.com/home-bg-1.jpg
 title: 互联网小白
 #heroImage: /logo.svg
 heroText: 互联网小白
-heroFullScreen: false
 tagline: 盛年不重来，一日难再晨
+bgImage: http://tc.seoipo.com/home-bg-1.jpg
+heroFullScreen: false
 #projects:
 #  - icon: project
 #    name: 项目名称

@@ -89,8 +89,7 @@ export default hopeTheme({
   hotReload: true,
   plugins: {
     blog: {
-      // 自动摘要
-      autoExcerpt: true,
+      excerpt: true,
     },
 
     // 评论配置（仅做样例，记得更换）
@@ -98,18 +97,23 @@ export default hopeTheme({
       provider: "Waline",
       serverURL: "https://waline.newzone.top",
       reaction: [
-        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44d.png',
-        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44f.png',
-        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f60e.png',
-        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f602.png',
-        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f635-200d-1f4ab.png',
+        "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44d.png",
+        "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f44f.png",
+        "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f60e.png",
+        "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f602.png",
+        "https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/twemoji/13.1.0/72x72/1f635-200d-1f4ab.png",
       ],
       // 部署 Waline：https://waline.js.org/guide/get-started.html
       // pageview: true, // 浏览量统计
       walineLocales: {
         "/": {
           // 表情互动提示文字
-          reactionTitle: "已到达文章底部，欢迎留言、表情互动~", 
+          reactionTitle: "已到达文章底部，欢迎留言、表情互动~",
+          reaction0: "赞一个",
+          reaction1: "支持下",
+          reaction2: "有点酷",
+          reaction3: "啥玩意",
+          reaction4: "看不懂",
           // Waline 等级标签
           admin: "盛年不重来，一日难再晨",
           level0: "锻体",
@@ -132,7 +136,9 @@ export default hopeTheme({
     },
 
     // 组件库
-    components: ["Badge", "BiliBili", "VideoPlayer", "YouTube"],
+    components: {
+      components: ["Badge", "BiliBili", "VideoPlayer", "YouTube"],
+    },
 
     // 禁用不需要的配置
     mdEnhance: {
@@ -148,7 +154,7 @@ export default hopeTheme({
       imageLazyload: true,
       // imageMark: true,
       imageSize: true,
-      imageTitle: true,
+      figure: true,
       include: true, //导入文件
       // katex: true,
       mark: true,
