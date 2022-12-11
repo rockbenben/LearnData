@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 11 Dec 2022 13:42:21 GMT</pubDate>
-    <lastBuildDate>Sun, 11 Dec 2022 13:42:21 GMT</lastBuildDate>
+    <pubDate>Sun, 11 Dec 2022 22:41:28 GMT</pubDate>
+    <lastBuildDate>Sun, 11 Dec 2022 22:41:28 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -19,43 +19,43 @@
     <category>自动化</category>
     <item>
       <title>找不到字幕？Whisper 让不懂外语的你也能看懂日剧</title>
-      <link>https://newzone.top/_posts/2022-11-18-whisper_ai_subtitles.html</link>
-      <guid>https://newzone.top/_posts/2022-11-18-whisper_ai_subtitles.html</guid>
+      <link>https://newzone.top/posts/2022-11-18-whisper_ai_subtitles.html</link>
+      <guid>https://newzone.top/posts/2022-11-18-whisper_ai_subtitles.html</guid>
       <source url="https://newzone.top/rss.xml">找不到字幕？Whisper 让不懂外语的你也能看懂日剧</source>
-      <description>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。 Whisper 是今年 9 月被 OpenAI 开...</description>
+      <description>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。 Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是支持 99 种语言 AI 字幕工具。</description>
       <category>工具</category>
       <pubDate>Fri, 18 Nov 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。</p>
 <p>Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是<strong>支持 99 种语言 AI 字幕工具</strong>。</p>
-<p>虽然与 Stable Diffusion 同样归属 AI 工具，但 Whisper 安装非常简单，终端执行两行代码安装 Whisper 和 FFmpeg 即可使用。如果你不清楚如何安装 FFmpeg，可参考 <a href="https://newzone.top/_posts/2022-11-03-ffmpeg_screen_recording.html#%E9%85%8D%E7%BD%AE-ffmpeg" target="_blank" rel="noopener noreferrer">FFmpeg 配置步骤</a>。这部分我不多做赘述，具体可以看 <a href="https://github.com/openai/whisper" target="_blank" rel="noopener noreferrer">Whisper 官方文档</a>。</p>
-<div data-ext="sh"><pre><code>pip <span>install</span> git+https://github.com/openai/whisper.git
+<p>虽然与 Stable Diffusion 同样归属 AI 工具，但 Whisper 安装非常简单，终端执行两行代码安装 Whisper 和 FFmpeg 即可使用。如果你不清楚如何安装 FFmpeg，可参考 <a href="https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html#%E9%85%8D%E7%BD%AE-ffmpeg" target="_blank" rel="noopener noreferrer">FFmpeg 配置步骤</a>。这部分我不多做赘述，具体可以看 <a href="https://github.com/openai/whisper" target="_blank" rel="noopener noreferrer">Whisper 官方文档</a>。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>pip <span class="token function">install</span> git+https://github.com/openai/whisper.git
 
-<span># on MacOS using Homebrew (https://brew.sh/)</span>
-brew <span>install</span> ffmpeg
+<span class="token comment"># on MacOS using Homebrew (https://brew.sh/)</span>
+brew <span class="token function">install</span> ffmpeg
 
-<span># on Windows using Scoop (https://scoop.sh/)</span>
-scoop <span>install</span> ffmpeg
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>接下来，我会分享如何使用 Whisper 为外语视频自动生成字幕，以日本综艺节目「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」为例。</p>
-<h2 id="音视频转录" tabindex="-1"> 音视频转录</h2>
+<span class="token comment"># on Windows using Scoop (https://scoop.sh/)</span>
+scoop <span class="token function">install</span> ffmpeg
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>接下来，我会分享如何使用 Whisper 为外语视频自动生成字幕，以日本综艺节目「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」为例。</p>
+<h2> 音视频转录</h2>
 <p>在文件所在目录下打开终端，运行 <code>whisper jp.mp4</code> 即可执行音视频转录。测试视频名原本为日语，我改为「jp.mp4」，原因是我系统中只装了中英语言包，使用其他语言作为命令会出现 Invalid argument 报错，从而导致转录失败。Whisper 的媒体分析环节调用了 FFmpeg，所以主流音视频格式均被支持。</p>
 <figure><img src="http://tc.seoipo.com/2022-11-18-09-25-29.png" alt="" tabindex="0" loading="lazy"><figcaption>whisper 命令</figcaption></figure>
 <p>视频时长 90 分钟，我使用 3080Ti 显卡转录，用时 10 分钟。转录过程中不要玩游戏，也不要进行直播等吃显存的行为，否则容易显存不足无法继续。Whisper 对设备要求不高，不过设备会决定转录时长和你能使用的转录模型。如果你使用 CPU 转录，时间会增加 5-10 倍。</p>
 <p>转录完成后，Whisper 将生成原生字幕文件，日语视频会被转录为日语字幕，西班牙语视频会得到西班牙语字幕。</p>
-<h2 id="字幕翻译" tabindex="-1"> 字幕翻译</h2>
-<p>通过 Whisper 获得原生字幕后，接着要将其翻译为中文。这一步需借助 SubtitleEdit Online，它支持免费在线翻译字幕，可使用 Google 和 Yandex 两种翻译引擎。<sup></sup></p>
-<ol>
-<li>打开 <a href="https://www.nikse.dk/subtitleedit/online" target="_blank" rel="noopener noreferrer">SubtitleEdit Online</a>，点击「Subtitle」&gt;「Open...」，选择要导入的字幕文件。</li>
+<h2> 字幕翻译</h2>
+<p>通过 Whisper 获得原生字幕后，接着要将其翻译为中文。这一步需借助 SubtitleEdit Online，它支持免费在线翻译字幕，可使用 Google 和 Yandex 两种翻译引擎。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1">
+</a><ol><a class="footnote-anchor" id="footnote-ref1">
+</a><li><a class="footnote-anchor" id="footnote-ref1">打开 </a><a href="https://www.nikse.dk/subtitleedit/online" target="_blank" rel="noopener noreferrer">SubtitleEdit Online</a>，点击「Subtitle」&gt;「Open...」，选择要导入的字幕文件。</li>
 <li>点击「Auto-translate」，选择翻译引擎，然后在弹出窗口中选择字幕要翻译的语言，并<strong>将页面拖动到最下方</strong>（非常重要），确定所有文字都被翻译后点击 OK 按钮。</li>
 <li>点击「Subtitle」&gt;「Save/download...」，即可保存翻译好的字幕文件。</li>
 </ol>
 <p>除了网页翻译字幕，本地端的神经机器翻译也是种好选择。macOS 用户推荐使用 <a href="https://github.com/argosopentech/argos-translate" target="_blank" rel="noopener noreferrer">Argos Translate</a>，这是基于 OpenNMT 的开源神经机器翻译。如果你的动手能力较强，可以尝试 <a href="https://github.com/Helsinki-NLP/Opus-MT" target="_blank" rel="noopener noreferrer">Opus-MT</a>。不管用哪种方式，都是将字幕以文本方式导出，复制到翻译引擎中翻译，即可得到不同于 Google Translate 的翻译结果。</p>
-<h2 id="whisper-进阶命令" tabindex="-1"> Whisper 进阶命令</h2>
-<h3 id="task" tabindex="-1"> task</h3>
+<h2> Whisper 进阶命令</h2>
+<h3> task</h3>
 <p><code>--task</code> 分为 transcribe（语音转录）和 translate。Whisper 默认使用 <code>--task transcribe</code> 模式，将语音转录为对应的语言字幕。<code>--task translate</code> 是所有语言翻译为英文，目前尚未支持翻译为其他语言。</p>
-<h3 id="language" tabindex="-1"> language</h3>
+<h3> language</h3>
 <p><code>--language</code> 是设置语音转录的语种，支持语种范围查看 <a href="https://github.com/openai/whisper/blob/main/whisper/tokenizer.py" target="_blank" rel="noopener noreferrer">tokenizer.py</a>，比如指定日语 <code>--language japanese</code>。如果你没指定语种，Whisper 会截取音频的前 30 秒来判断语种。</p>
-<p>如果指定语种与文件中的语种并不相同，Whisper 会强制翻译，但 10 分钟以上的音视频会出现大量的重复无意义字幕。<sup></sup> 假设你把日语视频的转录语言设为汉语，前 8 分钟 Whisper 会正确转录到中文，但 8 分钟后的转录字幕会一直重复，并与实际片段无关。</p>
-<h3 id="model" tabindex="-1"> model</h3>
+<p>如果指定语种与文件中的语种并不相同，Whisper 会强制翻译，但 10 分钟以上的音视频会出现大量的重复无意义字幕。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2"> 假设你把日语视频的转录语言设为汉语，前 8 分钟 Whisper 会正确转录到中文，但 8 分钟后的转录字幕会一直重复，并与实际片段无关。</a></p><a class="footnote-anchor" id="footnote-ref2">
+</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> model</h3>
 <p><code>--model</code> 指 Whisper 的转录模型，转录效果为 tiny &lt; base &lt; small &lt; medium &lt; large，默认使用 small。添加参数 <code>--model medium</code> 或 <code>--model large</code> 可以切换到更大的模型，但转录时间也会变长。如果你是对英文视频进行转录，则在模型参数上添加后缀 <code>.en</code>，能提升转录速度。</p>
 <table>
 <thead>
@@ -112,7 +112,7 @@ scoop <span>install</span> ffmpeg
 </tbody>
 </table>
 <p>上方表格是 Whisper 官方提供信息，但目前模型实际增大 50%-100%，要求也增加了，仅作参考。</p>
-<h3 id="辅助参数" tabindex="-1"> 辅助参数</h3>
+<h3> 辅助参数</h3>
 <ul>
 <li><code>--device</code> 指 whisper 运行算法所用的硬件，默认为 cuda 即显存，或者指定 <code>--device cpu</code> 。特别当你显存不够，又想使用较大模型时，推荐指定 CPU 转录。</li>
 <li><code>--temperature</code> temperature 决定了生成模型的贪婪程度，默认为 0。如果 temperature 低，概率最高的词将远高于其他低概率，模型将可能输出最正确的文本，变化很小。如果 temperature 较高，该模型会输出概率较高的其他单词，而不是概率最高的单词，生成的文本将更加多样化，但有更高的可能性出现语法错误和生成无意义的文本。</li>
@@ -127,7 +127,7 @@ scoop <span>install</span> ffmpeg
 <li><code>--fp16</code> 是否启用半精度 fp16 进行推理运算，默认为 True，否则为单精度 fp32，运行时间延长。</li>
 <li><code>--threads</code> 指定 CPU 运算的线程数，会取代 MKL_NUM_THREADS/OMP_NUM_THREADS (默认：0)</li>
 </ul>
-<h3 id="幻听参数" tabindex="-1"> 幻听参数</h3>
+<h3> 幻听参数</h3>
 <p>非英语视频的转录有时会出现幻听，即静默片段被识别出语音，或是转录结果与该片段无关。这些问题是由语气停顿参数引起的。幻听的解决方案是引入 <a href="https://github.com/snakers4/silero-vad" target="_blank" rel="noopener noreferrer">VAD</a>，但 VAD 对动手能力要求较高。如果你的视频转录出现了严重幻听，建议先尝试调节参数阈值。</p>
 <ul>
 <li><code>--no_speech_threshold</code> 无声识别的阈值，默认为 0.6。当 no_speech_threshold 高于阈值且 logprob_threshold 低于预设时，该片段将被标记为静默。对于非英语长视频来说，建议将其调低，否则经常出现大段的重复识别。</li>
@@ -135,44 +135,22 @@ scoop <span>install</span> ffmpeg
 <li><code>--compression_ratio_threshold</code> 压缩比的阈值，默认为 2.4。当 compression_ratio_threshold 高于预设时，将不对该片段进行转录。</li>
 </ul>
 <p><code>--no_speech_threshold 0.5 --logprob_threshold None --compression_ratio_threshold 2.2</code> 是我常用的参数，你可以按视频情况来调节，幻听参数放在转录命令后面。</p>
-<h2 id="转录成果" tabindex="-1"> 转录成果</h2>
+<h2> 转录成果</h2>
 <p>「夜のヒットスタジオ・スペシャル」：</p>
-<i>Content not supported</i><p>「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」：</p>
-<i>Content not supported</i><p>上方是我用 Whisper 转录的日语视频，不过哔哩哔哩不支持站外嵌套字幕，查看字幕效果需跳转回 B 站。测试视频中 Whisper 对谈话片段识别不错，但歌曲转录与原意相差甚远。而我特别喜欢中森明菜的歌，所以在转录第二个视频后，特意花了几个小时重新比对歌词。</p>
-<p>但视频发布后，B 站给我推送了明菜歌迷会在一周前发布的带字幕视频。原本我有些沮丧，想着白花工夫了。但我看过对方专业的字幕视频后，心情立马变好了。歌迷会版本的字幕遣词造句都非常讲究，明显是日语精通级别，而我连五十音都没背全，用 10 分钟就能做出能看懂的字幕，质量也没相差巨大，我非常满足。之后，我也可以看没字幕的生肉节目了，不用再傻等字幕组的宠幸。我甚至可以帮中文节目添加字幕，毕竟与声音相比，我们从文字中汲取信息要轻松许多。</p>
-<h2 id="更多" tabindex="-1"> 更多</h2>
-<p>除了用 Whisper 转录的字幕来看视频和视频剪辑外，还能将来管理音视频。@PlatyHsu 分享的 <a href="https://marcoshuerta.com/dash/atp_search/" target="_blank" rel="noopener noreferrer">ATP Podcast Search</a> 启发了我，ATP 用 Whisper 转录给一个做了十年的英文播客做了可搜索的索引。那是否有应用在本地端用字幕管理视频文件？</p>
-<figure><img src="http://tc.seoipo.com/2022-11-18-23-21-25.png" alt="" tabindex="0" loading="lazy"><figcaption>ATP Podcast Search 搜索界面</figcaption></figure>
-<p>这个想法在技术上实现起来不难，甚至飞书妙记已经起到类似效果，但它是在线应用，不支持上传字幕，而且仅支持原生字幕搜索。换句话说，上传日语视频，你必须用日语搜索，即使妙记提供了中文翻译查看，你也不能中文搜索。而其他的视频笔记，只有 B 站专属的站内视频笔记和只支持 YouTube 的 <a href="http://xlrocket.com/%e7%9c%8b%e8%bf%87%e4%b8%8d%e4%bb%a3%e8%a1%a8%e5%ad%a6%e8%bf%87%ef%bc%8c%e7%8e%b0%e5%9c%a8%e8%83%bd%e8%be%b9%e7%9c%8b%e8%a7%86%e9%a2%91%ef%bc%8c%e8%be%b9%e5%81%9a%e7%ac%94%e8%ae%b0%ef%bc%8c-%e9%9d%9e/" target="_blank" rel="noopener noreferrer">ClarityNotes</a>。</p>
-<p>总体上，还没出现能用字幕/时间戳管理视频的「全视频网站/本地视频」的笔记工具，暂时只能记录下这个想法。笔记软件们继续卷起来，把字幕文件作为数据库索引，通过关键词搜索即可定位到音视频的时间戳，绝对是杀手级功能。</p>
-<h2 id="最后" tabindex="-1"> 最后</h2>
-<p>今年是 AI 工具的爆发年，多个领域都出现优质的开源工具，极大地提升了我的生活、学习和工作效率。</p>
-<p>在遇到 Whisper 前，我用 YouTube 的实时字幕看在线视频，但它是通过语言实时转录而非整句转录，导致效果远差于 Whisper。我使用飞书妙记管理本地视频，但飞书只支持中日英语，机器翻译较死板。Whisper 解决了两者存在的问题，转录效果更好，支持语言更多。此外，Whisper 是语言直译，所以你对字幕语言有基础认知的话，可以将语言与翻译文本匹配，可以进行语音学习。更重要的是，Whisper 是本地端应用，<strong>没有任何在线审查</strong>。</p>
-<p>然而，与 Whisper 完美的英语转录效果相比，其对非英语视频的转录还有很大的提升空间，期待它的后续更新，也希望字幕组都使用上 Whisper，节省字幕转录时间，加快出片速度。</p>
-<p>本文于「<a href="https://sspai.com/post/76899" target="_blank" rel="noopener noreferrer">少数派首发</a>」。</p>
-<hr>
-<section>
-<ol>
-<li id="footnote1"><p><a href="https://www.jihosoft.cn/zimu/tutorial/translate-subtitles/" target="_blank" rel="noopener noreferrer">如何自动翻译字幕：6 个好用的视频字幕翻译工具</a> </p>
-</li>
-<li id="footnote2"><p><a href="https://github.com/openai/whisper/discussions/397" target="_blank" rel="noopener noreferrer">For longer audio files (&gt;10 minutes) not in English, Silero VAD (Voice Activity Detector)</a> </p>
-</li>
-</ol>
-</section>
 ]]></content:encoded>
     </item>
     <item>
       <title>抛弃又贵又难用的录屏软件，3 分钟入门 FFmpeg</title>
-      <link>https://newzone.top/_posts/2022-11-03-ffmpeg_screen_recording.html</link>
-      <guid>https://newzone.top/_posts/2022-11-03-ffmpeg_screen_recording.html</guid>
+      <link>https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html</link>
+      <guid>https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html</guid>
       <source url="https://newzone.top/rss.xml">抛弃又贵又难用的录屏软件，3 分钟入门 FFmpeg</source>
-      <description>当所有的录屏应用都无法满足我时，我的目光投向了那个最终极的命令行工具，FFmpeg。 开始 自我监控 (https://newzone.top/posts/2022-05-22-surveillancevideoformyself.html) 后，录屏工具的重要性急速提升，我遇到的问题也越来越多。 因为我录屏主要是为了自我监控，所以我需要的帧率并不用很...</description>
+      <description>当所有的录屏应用都无法满足我时，我的目光投向了那个最终极的命令行工具，FFmpeg。 开始 自我监控 后，录屏工具的重要性急速提升，我遇到的问题也越来越多。 因为我录屏主要是为了自我监控，所以我需要的帧率并不用很高，甚至越低越好，分辨率同样不必和屏幕一致，能看清我在做什么即可。最初，我用了免费开源的 VLC，这也是我文章里采用的方案。它能调节输出视频的编码、帧率、格式，但操作麻烦不说，还不能同时录屏和摄像头，暂停录制容易程序崩溃。</description>
       <category>工具</category>
       <pubDate>Thu, 03 Nov 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<blockquote>
 <p>当所有的录屏应用都无法满足我时，我的目光投向了那个最终极的命令行工具，FFmpeg。</p>
 </blockquote>
-<p>开始 <a href="https://newzone.top/_posts/2022-05-22-surveillance_video_for_myself.html" target="_blank" rel="noopener noreferrer">自我监控</a> 后，录屏工具的重要性急速提升，我遇到的问题也越来越多。</p>
+<p>开始 <a href="https://newzone.top/posts/2022-05-22-surveillance_video_for_myself.html" target="_blank" rel="noopener noreferrer">自我监控</a> 后，录屏工具的重要性急速提升，我遇到的问题也越来越多。</p>
 <p>因为我录屏主要是为了自我监控，所以我需要的帧率并不用很高，甚至越低越好，分辨率同样不必和屏幕一致，能看清我在做什么即可。最初，我用了免费开源的 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">VLC</a>，这也是我文章里采用的方案。它能调节输出视频的编码、帧率、格式，但操作麻烦不说，还不能同时录屏和摄像头，暂停录制容易程序崩溃。</p>
 <p>然后，我试了 <a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">OBS</a>，它的录制功能极其强大，可以任意添加摄像头、文字、图像等，但输出限制多，生成的视频过大。同时，OBS 不支持录制画面与直播画面分开，而我平常习惯边开直播边工作，这令我只能放弃 OBS 录屏。</p>
 <p>接着，我遇到 7.8k Star 的 <a href="https://github.com/MathewSachin/Captura/releases/tag/v8.0.0" target="_blank" rel="noopener noreferrer">Captura</a>，它的自由度较高，能自定义叠加元素，然而项目已于 2018 年停止更新，使用时经常碰到莫名其妙的报错，很不稳定。</p>
@@ -187,14 +165,14 @@ scoop <span>install</span> ffmpeg
 <li><a href="https://getsharex.com/" target="_blank" rel="noopener noreferrer">ShareX</a>：免费开源强大的截图软件，具备录屏功能，能调节编码和帧率，但只能单一录屏或录像。</li>
 </ul>
 <p>我一共试了 9 款录屏软件，体验都不算好，软件普遍存在无法自定义画面、不兼容、稳定性低的问题。再加上自我监控方案的单次录制时间在 12 小时以上，理想的帧率（0.02 帧）远超出应用最低 15-30 帧的下限。因此，我需要另找一款稳定能兼容自由度高，又能自由定制录屏方案的工具，最终找到的是 FFmpeg。</p>
-<h2 id="为什么-ffmpeg" tabindex="-1"> 为什么 FFmpeg</h2>
+<h2> 为什么 FFmpeg</h2>
 <p>FFmpeg 是处理多媒体内容 (如音频、视频、字幕和相关元数据) 的库和工具的集合，支持在 Linux、MacOS 和 Windows 全平台运行。它提供了录制、转换以及流化音视频的完整解决方案。</p>
 <p>之前那些录屏、视频处理工具几乎都是基于 FFmpeg 而开发的。FFmpeg 能实现它们所有的功能，同时具备超高的稳定性和兼容性。现成的录屏应用与 FFmpeg 相比，优势只在于其美观的界面和简单易上手的录制方案。</p>
 <p>如果你想跳出软件的限制，自由的定制录屏效果，避免莫名其妙的 bug，更加底层的 FFmpeg 反而是更稳定有效的方案。命令行录制看起来复杂，但实际上只需要熟悉十几个参数，你就能定制专属录屏方案，个人感觉比熟悉 Bandicam 的软件界面更简单。</p>
 <p>下面以我的 Windows 桌面录制方案为例，从多屏幕中指定一个 2k 区域进行录制，并在画面右下角添加 360p 的摄像头录制角度，然后以帧率 0.02 输出监控视频。按 <code>q</code> 则停止录制。</p>
 <figure><img src="http://tc.seoipo.com/2022-11-03-13-16-44.png" alt="" tabindex="0" loading="lazy"><figcaption>输出画面如图例</figcaption></figure>
-<h2 id="录屏准备" tabindex="-1"> 录屏准备</h2>
-<h3 id="配置-ffmpeg" tabindex="-1"> 配置 FFmpeg</h3>
+<h2> 录屏准备</h2>
+<h3> 配置 FFmpeg</h3>
 <ol>
 <li>
 <p>下载最新版 <a href="https://github.com/BtbN/FFmpeg-Builds/releases/tag/latest" target="_blank" rel="noopener noreferrer">FFmpeg</a>，Windows 环境选择 <code>ffmpeg-master-latest-win64-gpl.zip</code>，GPL 版本包含了所有依赖项。</p>
@@ -212,67 +190,67 @@ scoop <span>install</span> ffmpeg
 </ol>
 <p>配置完成后，在终端输入 ffmpeg 即可启动。</p>
 <figure><img src="http://tc.seoipo.com/2022-11-01-18-17-13.png" alt="" tabindex="0" loading="lazy"><figcaption>FFmpeg 配置成功</figcaption></figure>
-<h3 id="配置视频-音频设备" tabindex="-1"> 配置视频/音频设备</h3>
+<h3> 配置视频/音频设备</h3>
 <p>FFmpeg 的录制命令 gdigrab 不支持音频录制，也不支持直接调用摄像头，此时需使用开源的 <a href="https://github.com/rdp/screen-capture-recorder-to-video-windows-free/releases" target="_blank" rel="noopener noreferrer">screen-capture-recorder-to-video-windows-free</a> 增强 FFmpeg 的录制功能，其最新版本为 0.12.12。</p>
-<p>通过命令 <code>ffmpeg -list_devices true -f dshow -i dummy</code> 查看支持的 Windows DirectShow 输入设备，采集视频和音频设备，包含设备名称，设备类型等信息。<sup></sup> 这里得到了视频设备「V380 FHD Camera」和音频设备「Analogue 1/2 (Audient iD4)」，之后会用到。</p>
+<p>通过命令 <code>ffmpeg -list_devices true -f dshow -i dummy</code> 查看支持的 Windows DirectShow 输入设备，采集视频和音频设备，包含设备名称，设备类型等信息。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1"> 这里得到了视频设备「V380 FHD Camera」和音频设备「Analogue 1/2 (Audient iD4)」，之后会用到。</a></p><a class="footnote-anchor" id="footnote-ref1">
 <figure><img src="http://tc.seoipo.com/2022-11-03-10-33-52.png" alt="" tabindex="0" loading="lazy"><figcaption>查看视频/音频设备列表</figcaption></figure>
-<h2 id="录制屏幕" tabindex="-1"> 录制屏幕</h2>
-<p>从坐标 0:0 开始圈定出一个 2560x1440 的屏幕范围，然后以 每 50 秒截图 1 帧，输出为 mp4 格式的视频，录制命令为 <code>ffmpeg -f gdigrab -r 20/1001 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 output.mp4</code>。<sup></sup></p>
+</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> 录制屏幕</h2>
+<p>从坐标 0:0 开始圈定出一个 2560x1440 的屏幕范围，然后以 每 50 秒截图 1 帧，输出为 mp4 格式的视频，录制命令为 <code>ffmpeg -f gdigrab -r 20/1001 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 output.mp4</code>。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup></p><a class="footnote-anchor" id="footnote-ref2">
 <p>以下是录制命令的说明：</p>
-<ul>
-<li><code>-f gdigrab</code> 使用 FFmpeg 内置的 Windows 屏幕录制命令 <a href="https://ffmpeg.org/ffmpeg-all.html#gdigrab" target="_blank" rel="noopener noreferrer">gdigrab</a>，录制对象可为全屏、指定范围和指定程序。MacOS 录屏方法为 <a href="https://ffmpeg.org/ffmpeg-devices.html#avfoundation" target="_blank" rel="noopener noreferrer">AVFoundation</a>，Linux 录屏方法为 <a href="https://ffmpeg.org/ffmpeg-all.html#x11grab" target="_blank" rel="noopener noreferrer">x11grab</a>。</li>
+</a><ul><a class="footnote-anchor" id="footnote-ref2">
+</a><li><a class="footnote-anchor" id="footnote-ref2"><code>-f gdigrab</code> 使用 FFmpeg 内置的 Windows 屏幕录制命令 </a><a href="https://ffmpeg.org/ffmpeg-all.html#gdigrab" target="_blank" rel="noopener noreferrer">gdigrab</a>，录制对象可为全屏、指定范围和指定程序。MacOS 录屏方法为 <a href="https://ffmpeg.org/ffmpeg-devices.html#avfoundation" target="_blank" rel="noopener noreferrer">AVFoundation</a>，Linux 录屏方法为 <a href="https://ffmpeg.org/ffmpeg-all.html#x11grab" target="_blank" rel="noopener noreferrer">x11grab</a>。</li>
 <li><code>-r 20/1001</code> 帧率为 0.02，每 50 秒录制 1 帧。主流大家喜欢用 <code>-r 30</code> 录制，我这因为是每日监测视频，用了超低帧率。</li>
-<li><code>-c:v libx264</code> 是用于设置视频编解码器，一般可不填使用默认配置，<code>-c:a</code> 为音频编码。<sup></sup></li>
+<li><code>-c:v libx264</code> 是用于设置视频编解码器，一般可不填使用默认配置，<code>-c:a</code> 为音频编码。<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup></li><a class="footnote-anchor" id="footnote-ref3">
 <li><code>-draw_mouse 1</code> 在 gdigrab 录制的视频中显示鼠标。</li>
 <li><code>-offset_x 0 -offset_y 0 -video_size 2560x1440</code> 为起始坐标和选定录制范围。坐标可使用截图软件获取，比如我用 Snipaste，点击 F1 后进入截图界面，鼠标经过当前区域就会显示坐标。</li>
 <li><code>-s 1280x720</code> 用 scale 方法，设置视频分辨率为 720p。</li>
 <li><code>-i desktop</code> 为输入设备，指代显示屏。</li>
 <li><code>out.mp4</code> 为输出视频的名字与格式。默认保存在命令运行文件夹，可以在此处设置输出位置，如 <code>D:\Backup\Libraries\Desktop\out.mp4</code>。或使用时间对视频命名，将 <code>out.mp4</code> 替换为 <code>-f segment -segment_time 2 -strftime 1 %Y-%m-%d_%H-%M-%S.mp4</code>，视频样例名为 <code>2022-11-06_10-53-17.mp4</code>。</li>
-</ul>
-<p>除上方命令外，FFmpeg 还有许多参数可以设置，比如 <code>-pix_fmt yuv420p -preset ultrafast</code> 提升编码速度，<code>-filter:v &quot;setpts=0.1*PTS&quot;</code> 减少视频抽样，但 setpts 不是视频加速，对于低帧率的视频影响很小。<sup></sup> <sup></sup></p>
-<h2 id="录制摄像头" tabindex="-1"> 录制摄像头</h2>
-<p>然后，我们使用上方获取的视频设备，即可用摄像头进行录制，如 <code>ffmpeg -f dshow -i video=&quot;V380 FHD Camera&quot; output.mp4</code>。</p>
-<p>如果录屏的同时需要录制音频，则在命令中加入之前获取的音频设备，命令变为 <code>ffmpeg -f dshow -i audio=&quot;Analogue 1/2 (Audient iD4)&quot; -f dshow -i video=&quot;V380 FHD Camera&quot; output.mp4</code>。</p>
-<h2 id="输出视频-画中画" tabindex="-1"> 输出视频：画中画</h2>
-<p>清楚如何用 FFmpeg 录制屏幕、摄像头和音频后，我需要将他们放置于同一画面中，将摄像头画面放在录制画面的右下侧，并用 overlay 方法将其置于屏幕画面的上方，遮挡对应区域。<sup></sup> <sup></sup></p>
-<p>综合了以上三步，最终的录制命令为：<code>ffmpeg -f gdigrab -r 1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 output.mp4 -f dshow -i audio=&quot;Analogue 1/2 (Audient iD4)&quot; -f dshow -s 640x360 -i video=&quot;V380 FHD Camera&quot; -filter_complex &quot;overlay=W-w-1:H-h-1&quot; -y</code>。</p>
+</a></ul><a class="footnote-anchor" id="footnote-ref3">
+</a><p><a class="footnote-anchor" id="footnote-ref3">除上方命令外，FFmpeg 还有许多参数可以设置，比如 <code>-pix_fmt yuv420p -preset ultrafast</code> 提升编码速度，<code>-filter:v "setpts=0.1*PTS"</code> 减少视频抽样，但 setpts 不是视频加速，对于低帧率的视频影响很小。<sup class="footnote-ref"></sup></a><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"> <sup class="footnote-ref"></sup></a><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></p><a class="footnote-anchor" id="footnote-ref5">
+</a><h2><a class="footnote-anchor" id="footnote-ref5"></a> 录制摄像头</h2>
+<p>然后，我们使用上方获取的视频设备，即可用摄像头进行录制，如 <code>ffmpeg -f dshow -i video="V380 FHD Camera" output.mp4</code>。</p>
+<p>如果录屏的同时需要录制音频，则在命令中加入之前获取的音频设备，命令变为 <code>ffmpeg -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -i video="V380 FHD Camera" output.mp4</code>。</p>
+<h2> 输出视频：画中画</h2>
+<p>清楚如何用 FFmpeg 录制屏幕、摄像头和音频后，我需要将他们放置于同一画面中，将摄像头画面放在录制画面的右下侧，并用 overlay 方法将其置于屏幕画面的上方，遮挡对应区域。<sup class="footnote-ref"><a href="#footnote6">[6]</a><a class="footnote-anchor" id="footnote-ref6"></a></sup><a class="footnote-anchor" id="footnote-ref6"> <sup class="footnote-ref"></sup></a><a href="#footnote7">[7]</a><a class="footnote-anchor" id="footnote-ref7"></a></p><a class="footnote-anchor" id="footnote-ref7">
+<p>综合了以上三步，最终的录制命令为：<code>ffmpeg -f gdigrab -r 1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 output.mp4 -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -s 640x360 -i video="V380 FHD Camera" -filter_complex "overlay=W-w-1:H-h-1" -y</code>。</p>
 <ul>
 <li><code>-b:v 0 -crf 32</code> 是将视频比特率设置为最小，同时使用恒定质量，CRF 的范围可以从 0（最佳质量）到 63（最小文件大小）。</li>
 <li><code>overlay=W-w-1:H-h-1</code> 这是一个坐标，指浮层放在右下角，距离边缘 1px。</li>
 <li><code>-y</code> 遇到选项时，默认执行 yes 命令，比如覆盖同名的视频文件。</li>
 </ul>
 <p>命令中的录制帧率较低，但不会影响同时录制的音频。之后的录屏只需在终端中运行这段命令，就会自动录制屏幕，按 <code>q</code> 即可停止录制。使用 FFmpeg 后，我的录屏再也没有莫名其妙的崩溃了。</p>
-<h2 id="常见问题" tabindex="-1"> 常见问题</h2>
-<h3 id="could-not-set-video-options" tabindex="-1"> Could not set video options</h3>
-<p>报错 <code>Could not set video options</code>，多是由于录制设置的帧率、分辨率超出设备范围造成的。使用命令 <code>ffmpeg -f dshow -list_options true -i video=&quot;V380 FHD Camera&quot; -loglevel debug</code> 检查设备的输出属性，调整录制属性。</p>
-<h3 id="real-time-buffer" tabindex="-1"> real-time buffer</h3>
+</a><h2><a class="footnote-anchor" id="footnote-ref7"></a> 常见问题</h2>
+<h3> Could not set video options</h3>
+<p>报错 <code>Could not set video options</code>，多是由于录制设置的帧率、分辨率超出设备范围造成的。使用命令 <code>ffmpeg -f dshow -list_options true -i video="V380 FHD Camera" -loglevel debug</code> 检查设备的输出属性，调整录制属性。</p>
+<h3> real-time buffer</h3>
 <p>报错 <code>real-time buffer [xxxxxx] [video input] too full or near too full (181% of size: 3041280 [rtbufsize parameter])! frame dropped!</code>，解决方案参考 <a href="https://github.com/rdp/screen-capture-recorder-to-video-windows-free/issues/136" target="_blank" rel="noopener noreferrer">issue 136</a>。这个报错我依然有出现，不过并未影响到录屏效果。</p>
-<h3 id="摄像头分辨率错误" tabindex="-1"> 摄像头分辨率错误</h3>
+<h3> 摄像头分辨率错误</h3>
 <p>如果摄像头画面出现裁切，分辨率与预想不同，则检查摄像头录制属性和摄像头应用输出分辨率。例如部分版本的 SplitCam Video Driver 对外场景尺寸被固定为 4:3，导致输出画面被裁剪，只能更换其他视频输入源。</p>
-<h3 id="录制画面偏移" tabindex="-1"> 录制画面偏移</h3>
+<h3> 录制画面偏移</h3>
 <p>录制画面比例异常或画幅偏移，这是 Windows 的屏幕缩放造成的，勾选 ffmpeg.exe 的属性「高 DPI 缩放替代」即可解决。</p>
-<h2 id="后续" tabindex="-1"> 后续</h2>
+<h2> 后续</h2>
 <p>如果读了 FFmpeg 的文档，就会发现这个工具异常强大，很多采用 FFmpeg 的工具都没有将它的功能性发挥到极致，用比较普适的功能尽可能地换取了软件操作的易用性。而相应地，如果和我一样，有一个比较小众，甚至特殊的需求，已经打包好的图形界面应用就很有可能力有不逮。这时，FFmpeg 这种底层的命令行工具可能就是唯一选择，而且用了就会发现，它在功能强大的同时还更加稳定，自定义能力也更强。而且如果跨过了起初对于命令行的恐惧，理解和上手其实也不算多难。</p>
 <p>而且，FFmpeg 的功能不止录屏，它还有诸如连续截图、视频转帧率改大小等多种玩法，非常强大。</p>
 <p>前几天，群里有人分享了快速生成 FFmpeg 命令的工具 <a href="https://ffmpeg.guide/" target="_blank" rel="noopener noreferrer">FFmpeg.guide</a>。本以为能帮新手快速入门，使用后却感觉不实用。FFmpeg 最快入门的方法还是得看官方文档，也有一些爱好者整理翻译了相关的中文/视频教程。前期会耗费些时间，但只要定制好自己要的命令，之后能一直用。</p>
 <p>当然，这篇文章的目的是分享我监控自己的延伸，分享使用 FFmpeg 录屏的入门方法，而非完全掌握，因此只介绍了录屏相关的核心命令。如果有需要，还是推荐研究一下官方文档，或者跟着我做的试一试，说不定就有新收获。</p>
 <p>本文于「<a href="https://sspai.com/post/76637" target="_blank" rel="noopener noreferrer">少数派首发</a>」。</p>
-<hr>
-<section>
-<ol>
-<li id="footnote1"><p><a href="https://blog.csdn.net/m0_60352504/article/details/126762161" target="_blank" rel="noopener noreferrer">ffmpeg 录屏命令</a> </p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p><a href="https://blog.csdn.net/m0_60352504/article/details/126762161" target="_blank" rel="noopener noreferrer">ffmpeg 录屏命令</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote2"><p><a href="https://blog.csdn.net/JineD/article/details/123057086" target="_blank" rel="noopener noreferrer">ffmpeg 基础使用</a> </p>
+<li id="footnote2" class="footnote-item"><p><a href="https://blog.csdn.net/JineD/article/details/123057086" target="_blank" rel="noopener noreferrer">ffmpeg 基础使用</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote3"><p><a href="https://ffmpeg.org/ffmpeg-codecs.html#libx265" target="_blank" rel="noopener noreferrer">libx265 编码说明</a> </p>
+<li id="footnote3" class="footnote-item"><p><a href="https://ffmpeg.org/ffmpeg-codecs.html#libx265" target="_blank" rel="noopener noreferrer">libx265 编码说明</a> <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote4"><p><a href="https://magiclen.org/x265-preset/" target="_blank" rel="noopener noreferrer">x265 的 preset 与编码速度、视频画质以及比特率的关联</a> </p>
+<li id="footnote4" class="footnote-item"><p><a href="https://magiclen.org/x265-preset/" target="_blank" rel="noopener noreferrer">x265 的 preset 与编码速度、视频画质以及比特率的关联</a> <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote5"><p><a href="https://blog.csdn.net/zhying719/article/details/123059209" target="_blank" rel="noopener noreferrer">FFmpeg 音视频倍速控制</a> </p>
+<li id="footnote5" class="footnote-item"><p><a href="https://blog.csdn.net/zhying719/article/details/123059209" target="_blank" rel="noopener noreferrer">FFmpeg 音视频倍速控制</a> <a href="#footnote-ref5" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote6"><p><a href="https://www.cnblogs.com/leisure_chn/p/10434209.html" target="_blank" rel="noopener noreferrer">FFmpeg 中 overlay 滤镜用法 - 水印及画中画</a> </p>
+<li id="footnote6" class="footnote-item"><p><a href="https://www.cnblogs.com/leisure_chn/p/10434209.html" target="_blank" rel="noopener noreferrer">FFmpeg 中 overlay 滤镜用法 - 水印及画中画</a> <a href="#footnote-ref6" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote7"><p><a href="https://blog.csdn.net/guanyijun123/article/details/121270650" target="_blank" rel="noopener noreferrer">ffmpeg 调整缩放裁剪视频的基础知识 (转)</a> </p>
+<li id="footnote7" class="footnote-item"><p><a href="https://blog.csdn.net/guanyijun123/article/details/121270650" target="_blank" rel="noopener noreferrer">ffmpeg 调整缩放裁剪视频的基础知识 (转)</a> <a href="#footnote-ref7" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -280,20 +258,20 @@ scoop <span>install</span> ffmpeg
     </item>
     <item>
       <title>「华为没电也能打电话」「iPhone 没电也能刷公交卡」，手机品牌是被绑架还是行业底线就是低？</title>
-      <link>https://newzone.top/_posts/2022-09-07-extreme_branding_thinking_with_mate50.html</link>
-      <guid>https://newzone.top/_posts/2022-09-07-extreme_branding_thinking_with_mate50.html</guid>
+      <link>https://newzone.top/posts/2022-09-07-extreme_branding_thinking_with_mate50.html</link>
+      <guid>https://newzone.top/posts/2022-09-07-extreme_branding_thinking_with_mate50.html</guid>
       <source url="https://newzone.top/rss.xml">「华为没电也能打电话」「iPhone 没电也能刷公交卡」，手机品牌是被绑架还是行业底线就是低？</source>
-      <description>华为 Mate50 时隔两年后再次发布，然后就看了一堆标题为「华为 Mate 50 没电也能打电话」的新闻，某度为您找到相关资讯 139 个。看到这标题，我直接傻眼，你们这些媒体是认真的吗？是收了哪边的公关费？ 个人观察 我的主力机是荣耀 20S，用了三年依旧能打，因此我对华为和鸿蒙充满好感，平常的购买也会倾向国产。但是，半路半粉的我看到这个标题，对这...</description>
+      <description>华为 Mate50 时隔两年后再次发布，然后就看了一堆标题为「华为 Mate 50 没电也能打电话」的新闻，某度为您找到相关资讯 139 个。看到这标题，我直接傻眼，你们这些媒体是认真的吗？是收了哪边的公关费？ 个人观察</description>
       <category>观察随笔</category>
       <pubDate>Wed, 07 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>华为 Mate50 时隔两年后再次发布，然后就看了一堆标题为「华为 Mate 50 没电也能打电话」的新闻，某度为您找到相关资讯 139 个。看到这标题，我直接傻眼，你们这些媒体是认真的吗？<strong>是收了哪边的公关费</strong>？</p>
 <figure><img src="http://tc.seoipo.com/2022-09-07-11-29-53.png?imageMogr2/thumbnail/!60p" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h2 id="个人观察" tabindex="-1"> 个人观察</h2>
+<h2> 个人观察</h2>
 <p>我的主力机是荣耀 20S，用了三年依旧能打，因此我对华为和鸿蒙充满好感，平常的购买也会倾向国产。但是，半路半粉的我看到这个标题，对这款手机的好感直接 <code>-1</code>。</p>
 <p>当然，华为发布会上从没说过「没电也能打电话」，官方说法是「在 1% 低电量下智能启动聚能泵，待机可达三小时或者通话 12 分钟，或亮码 10 次，或扫码 4 次。」这个应急功能实际上是不错的，能缓解充电焦虑。历过数次 2% 直接关机后，我很喜欢这种关机前再榨一把的充电技术。</p>
 <p>有种黑的说法是，「只是把电池低电量保护分级罢了，比如，低电量 15% 电池进入保护，那么，后台只需将 85% 的电量重新显示为 100%，即手机显示的 1% 绝不是真实的 1%，小技俩而已。」</p>
 <p>而我对这种想法是不信的，如果真是这样的套壳宣传，随便检测都能发现，对于华为来说完全是得不偿失。</p>
-<h2 id="华为需要极端宣传吗" tabindex="-1"> 华为需要极端宣传吗？</h2>
+<h2> 华为需要极端宣传吗？</h2>
 <p>「走极端才能创造话题」是品牌成功和营销的第一步，但这只是第一步。</p>
 <p>在美国打压下，华为已经是民族主义的顶流了，正常宣传就能拥有一大堆的拥趸，不必每天打鸡血造话题，更不需要用震惊体来吸引流量。</p>
 <p>那为什么华为依然用「没电也能打电话」这类极端的宣传方式？</p>
@@ -302,11 +280,11 @@ scoop <span>install</span> ffmpeg
 <figure><img src="http://tc.seoipo.com/2022-09-07-13-24-33.png" alt="" tabindex="0" loading="lazy"><figcaption>宣传流量图</figcaption></figure>
 <p>华为总被嘲笑有海军，可能有它自身的原因，但这些极端化媒体的绑架也少不了。</p>
 <p>过多的极端宣传，舆论引起的反噬会远超你获得的利益。不是每个人都会仔细查看你的宣传稿，看到上百篇高级写着华为「没电也能打电话」，真有人会以为你有什么黑科技了。</p>
-<h2 id="手机行业的底线" tabindex="-1"> 手机行业的底线</h2>
+<h2> 手机行业的底线</h2>
 <p>原本以为只是华为这样，但 @Dean 提供了另一个梗「iPhone 没电也能刷公交卡」，理由是门禁卡等 NFC 设备没电也能使用。这个梗从 2018 开始每年都要吹一波，门禁卡没电，那么黑科技加持的 iPhone 没电自然也能刷公交卡。这乍听蛮像一回事的，网上也有一堆人相信，但苹果官方文档直接打脸，「即使您的 iPhone 需要充电，您或许也能够在设备上使用“快捷模式”卡片、凭证和钥匙。如果将 iPhone 关机，这项功能将不可用。」</p>
 <p>可能事实就像 @VirtualProsperity 和 @弘隐 说的一样，「作为前手机行业营销从业者，很负责的说，几乎任何手机品牌不会被媒体绑架。因为营销的时候媒体只是其中一个环节，但绝非重要到要为媒体去绑架的程度」，「手机行业的营销很多时候是很 LOW 的 LOW 到你不敢想象是真的」。</p>
 <p>我也身处广告行业，面对的甲方多为快消品。快消品购买频次高，因此品牌方把品牌商誉和防黑放在首位，而手机更换需要 1-3 年，等到下次购买顾客已经遗忘了前几年的极端宣传。或许手机品牌正因为这点而肆意妄为，一切宣传以传播效果为先，以眼前销量为主。一次两次还行，多次之后你还会上当？还会购买这类品牌？我不会。然而，手机行业的想法可能真的不一样，底线有点低。</p>
-<h2 id="最后" tabindex="-1"> 最后</h2>
+<h2> 最后</h2>
 <p>如果你是刚起家的自媒体和品牌，尽管去用走极端的宣传方式，毕竟营销不是道德审判，活下去才是第一步。</p>
 <p>但如果你已经有一定的知名度了，请先想清楚，你真的需要「走极端」的垃圾流量吗？真的要赌互联网记忆？</p>
 ]]></content:encoded>
@@ -314,10 +292,10 @@ scoop <span>install</span> ffmpeg
     </item>
     <item>
       <title>零基础入门 Stable Diffusion - 无需显卡把 AI 绘画引擎搬进家用电脑</title>
-      <link>https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html</link>
-      <guid>https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html</guid>
+      <link>https://newzone.top/posts/2022-09-05-stable_diffusion_ai_painting.html</link>
+      <guid>https://newzone.top/posts/2022-09-05-stable_diffusion_ai_painting.html</guid>
       <source url="https://newzone.top/rss.xml">零基础入门 Stable Diffusion - 无需显卡把 AI 绘画引擎搬进家用电脑</source>
-      <description>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。 Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具，可以在 6GB 显存显卡或无显卡（只依赖...</description>
+      <description>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。 丁老头进化旅程 Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具，可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行，并在几秒内生成图像，无需预处理和后处理。</description>
       <category>工具</category>
       <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。</p>
@@ -327,17 +305,17 @@ scoop <span>install</span> ffmpeg
 <p>如果想生成大量 AI 图片，可以通过 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Mac 用户建议选择 Stable Diffusion 的 lstein 分支，部署报错参考 <a href="https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore" target="_blank" rel="noopener noreferrer">InvokeAI 文档</a>，<strong>M1/M2 Mac</strong> 推荐使用更简便的 <a href="https://www.charl-e.com/" target="_blank" rel="noopener noreferrer">CHARL-E</a> 或 <a href="https://sspai.com/post/75682" target="_blank" rel="noopener noreferrer">DiffusionBee</a>。</p>
 <figure><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" tabindex="0" loading="lazy"><figcaption>Stable Diffusion 部署流程</figcaption></figure>
 <p>本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。</p>
-<h2 id="docker-环境配置" tabindex="-1"> Docker 环境配置</h2>
-<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup></sup> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>。下面我会介绍各自的启用方式，<strong>二选一即可</strong>，推荐使用子系统 WSL（占用系统盘 30G 的空间）。</p>
-<h3 id="安装-wsl" tabindex="-1"> 安装 WSL</h3>
-<p>在管理员 PowerShell 输入命令 <code>wsl --install</code>，之后终端会默认安装 Ubuntu。系统下载时间较长，注意别关机。<sup></sup> 安装 Ubuntu 完成后，按提示设置 Ubuntu 账户和密码。</p>
-<h3 id="启用-hyper-v" tabindex="-1"> 启用 Hyper-V</h3>
-<p>以管理员身份打开 PowerShell 控制台，输入命令 <code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All</code>。<sup></sup> 重启电脑后，将开启 Hyper-V。</p>
-<h2 id="配置-stable-diffusion" tabindex="-1"> 配置 Stable Diffusion</h2>
+<h2> Docker 环境配置</h2>
+<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1"> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>。下面我会介绍各自的启用方式，<strong>二选一即可</strong>，推荐使用子系统 WSL（占用系统盘 30G 的空间）。</a></p><a class="footnote-anchor" id="footnote-ref1">
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 安装 WSL</h3>
+<p>在管理员 PowerShell 输入命令 <code>wsl --install</code>，之后终端会默认安装 Ubuntu。系统下载时间较长，注意别关机。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2"> 安装 Ubuntu 完成后，按提示设置 Ubuntu 账户和密码。</a></p><a class="footnote-anchor" id="footnote-ref2">
+</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> 启用 Hyper-V</h3>
+<p>以管理员身份打开 PowerShell 控制台，输入命令 <code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All</code>。<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3"> 重启电脑后，将开启 Hyper-V。</a></p><a class="footnote-anchor" id="footnote-ref3">
+</a><h2><a class="footnote-anchor" id="footnote-ref3"></a> 配置 Stable Diffusion</h2>
 <p>按平台选 <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener noreferrer">Docker Desktop</a> 版本，安装后点击左侧的 Add Extensions，推荐 Disk usage 扩展，便于管理 Docker 存储空间。</p>
 <figure><img src="http://tc.seoipo.com/2022-09-04-17-06-27.png" alt="" tabindex="0" loading="lazy"><figcaption>Docker Desktop 界面</figcaption></figure>
 <p>然后，将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 下载并解压到本地硬盘。或者，使用阿里云盘下载 <a href="https://www.aliyundrive.com/s/EKmK7MGrHdn" target="_blank" rel="noopener noreferrer">聚合版</a>。</p>
-<h3 id="选择工具分支" tabindex="-1"> 选择工具分支</h3>
+<h3> 选择工具分支</h3>
 <p>目前 Stable Diffusion 有 hlky、auto、auto-cpu 和 lstein 四个分支。如果要更换分支，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。</p>
 <ul>
 <li><strong>hlky</strong>（推荐）：界面直观，最高分辨率为 1024x1024，是最受欢迎的主题，镜像构建命令为 <code>docker compose --profile hlky up --build</code>。</li>
@@ -345,48 +323,48 @@ scoop <span>install</span> ffmpeg
 <li><strong>auto-cpu</strong>：唯一不依赖显卡的分支。如果没有符合要求的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。A 卡用户注意修改 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker" target="_blank" rel="noopener noreferrer">显卡设置</a>。</li>
 <li><strong>lstein</strong>：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 <code>docker compose --profile lstein up --build</code>。</li>
 </ul>
-<h3 id="准备-linux-路径" tabindex="-1"> 准备 Linux 路径</h3>
+<h3> 准备 Linux 路径</h3>
 <p>配置 Stable Diffusion WebUI Docker 后，进入 Linux 环境启动 Docker 容器。不过在启动 Docker 前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
 <p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于 <code>D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker</code>，转换为 Linux 路径则是 <code>/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>。（Mac 可忽略本段，直接使用自身路径。）</p>
-<h2 id="启动-stable-diffusion" tabindex="-1"> 启动 Stable Diffusion</h2>
+<h2> 启动 Stable Diffusion</h2>
 <p>准备好 Linux 路径后，启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入切换路径命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压文件目录执行部署命令。</p>
-<div data-ext="sh"><pre><code><span># 自动下载采样模型和依赖包</span>
-<span>docker</span> compose <span>--profile</span> download up <span>--build</span>
-<span># 上方命令需要 20 分钟或更长，完成后执行镜像构建命令</span>
-<span>docker</span> compose <span>--profile</span> hlky up <span>--build</span>
-<span># hlky 是推荐分支，也可以选择 auto | auto-cpu | lstein</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>构建完成后，提示访问 <code>http://localhost:7860/</code>，你就可以在本地 AI 生成图片了。<sup></sup></p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token comment"># 自动下载采样模型和依赖包</span>
+<span class="token function">docker</span> compose <span class="token parameter variable">--profile</span> download up <span class="token parameter variable">--build</span>
+<span class="token comment"># 上方命令需要 20 分钟或更长，完成后执行镜像构建命令</span>
+<span class="token function">docker</span> compose <span class="token parameter variable">--profile</span> hlky up <span class="token parameter variable">--build</span>
+<span class="token comment"># hlky 是推荐分支，也可以选择 auto | auto-cpu | lstein</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>构建完成后，提示访问 <code>http://localhost:7860/</code>，你就可以在本地 AI 生成图片了。<sup class="footnote-ref"><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"></a></sup></p><a class="footnote-anchor" id="footnote-ref4">
 <figure><img src="http://tc.seoipo.com/2022-09-04-18-32-31.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>之后，打开 Docker Desktop 就会启动 Stable Diffusion。下载新版 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a> ，按上方步骤重新构建容器即可更新 Stable Diffusion。</p>
-<h2 id="界面说明" tabindex="-1"> 界面说明</h2>
+</a><p><a class="footnote-anchor" id="footnote-ref4">之后，打开 Docker Desktop 就会启动 Stable Diffusion。下载新版 </a><a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a> ，按上方步骤重新构建容器即可更新 Stable Diffusion。</p>
+<h2> 界面说明</h2>
 <p>接下来，我会介绍最流行的 hlky 界面，其他分支的主题界面略有不同，但功能并没有大的变化，如何更换分支看下方的常见问题。</p>
-<h3 id="text-to-image" tabindex="-1"> Text-to-Image</h3>
+<h3> Text-to-Image</h3>
 <p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。风景、创意画等崇尚空间结构的画作类型时，优先推荐竖图或者横图。人像类画作推荐 1:1 的方图，否则可能会出现两个或者多个人脸的叠加现象。生成图片的分辨率是有限制的，可以用 Upscale 放大结果图片。</p>
 <figure><img src="http://tc.seoipo.com/2022-09-05-08-28-23.png" alt="" tabindex="0" loading="lazy"><figcaption>Text-to-Image 界面</figcaption></figure>
 <p>默认使用 Simple 简单模式，点击右侧按钮 Advanced，可查看进阶选项，使用进阶的场景矩阵、面孔修复和分辨率放大等多种功能。</p>
-<h3 id="image-to-image" tabindex="-1"> Image-to-Image</h3>
+<h3> Image-to-Image</h3>
 <p>Image-to-Image 依据文字描述和输入源图，生成相关的图像。该模式若以素描、结构画为来源图，可充分填充图像细节；若以细节充分的照片为来源图，则会输出差异较大的结果。更妙的是，你可以限定区域来生成图像，非常适合图像修改。</p>
 <figure><img src="http://tc.seoipo.com/2022-09-04-15-39-00.png" alt="" tabindex="0" loading="lazy"><figcaption>Image-to-Image 界面</figcaption></figure>
 <p>CLIP interrogator 会根据图像来生成文字描述。Denoising Strength 指与原图的差异度，建议在 0.75-0.9，魔改图片可以设为 0.5 以下。下图中的 Denoising Strength 只有 0.44，整体图片结构与要素没变，但结果如何你看到了。</p>
 <figure><img src="http://tc.seoipo.com/2022-09-04-15-40-26.png" alt="" tabindex="0" loading="lazy"><figcaption>超级魔改图片</figcaption></figure>
-<h3 id="image-lab" tabindex="-1"> Image Lab</h3>
+<h3> Image Lab</h3>
 <p>Image Lab 能批量修正面孔和放大图片分辨率。</p>
 <p>Fix Faces 是通过 GFPGAN 模型来改善图片中的面孔，Effect strength 滑块可以控制效果的强度。但实际效果别报太高期许，下图右侧开启了 Fix Faces，只能说勉强有了五官。</p>
 <figure><img src="http://tc.seoipo.com/2022-09-04-15-47-14.png" alt="" tabindex="0" loading="lazy"><figcaption>A woman flying in the air laughing</figcaption></figure>
 <p>Upscale 放大分辨率功能有 RealESRGAN，GoBIG，Latent Diffusion Super Resolution 和 GoLatent 四种模型，其中的 RealESRGAN 有普通与卡通两种模式，可按需选择。Upscale 图片主要消耗 CPU 与内存资源。</p>
-<h2 id="文字描述图像" tabindex="-1"> 文字描述图像</h2>
+<h2> 文字描述图像</h2>
 <p>Stable Diffusion 是以文字内容 (英文) 描绘一个场景或事物，从而决定你的画面中将出现什么。文字描绘是决定图像生成质量的关键因素。</p>
-<p>样例：<code>A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}</code>。<sup></sup></p>
-<h3 id="常规描述" tabindex="-1"> 常规描述</h3>
+<p>样例：<code>A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}</code>。<sup class="footnote-ref"><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></sup></p><a class="footnote-anchor" id="footnote-ref5">
+</a><h3><a class="footnote-anchor" id="footnote-ref5"></a> 常规描述</h3>
 <ol>
-<li>输入图像的对象、主体，比如一只熊猫、一个持剑的战士，<strong>不要描述动作、情绪和事件</strong>；<sup></sup></li>
+<li>输入图像的对象、主体，比如一只熊猫、一个持剑的战士，<strong>不要描述动作、情绪和事件</strong>；<sup class="footnote-ref"><a href="#footnote6">[6]</a><a class="footnote-anchor" id="footnote-ref6"></a></sup></li><a class="footnote-anchor" id="footnote-ref6">
 <li><strong>画作种类</strong>：一幅画（a painting of + raw prompt）还是一张照片（a photograph of + raw prompt），或者 Watercolor（水彩）、Oil Paint（油画）、Comic（漫画）、Digital Art（数码艺术）、Illustration（插画）、realistic painting（写实画）、photorealistic（写实照片）、Portrait photogram（肖像照）、sculpture (雕塑) 等等，画作种类可以叠加。</li>
 <li><strong>画家/画风</strong>：建议混合多个画家的风格，比如 <code>Studio Ghibli, Van Gogh, Monet</code>，或描述风格种类，比如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
 <li><strong>色调</strong>：yellow color scheme 指整个画面的主色调为黄色。</li>
 <li><strong>参考平台</strong>：Trending on ArtStation，也可以替换为「Facebook」「Pixiv」「Pixbay」等。
 <img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下，不同平台生成的图片" loading="lazy"></li>
-</ol>
-<h3 id="特征描述" tabindex="-1"> 特征描述</h3>
+</a></ol><a class="footnote-anchor" id="footnote-ref6">
+</a><h3><a class="footnote-anchor" id="footnote-ref6"></a> 特征描述</h3>
 <p>除画面主体外，可以用其他具象物体和形容词来填充画面细节。描述词要具体，讲出你要的物体和它的特征。</p>
 <ul>
 <li>次要元素：物体不要太多，两到三个就好。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 <code>beautiful forest background, desert!!, (((sunset)))</code> 中会优先体现「desert」和「sunset」元素。</li>
@@ -397,49 +375,47 @@ scoop <span>install</span> ffmpeg
 <li>画面质量：<code>award winning, breathtaking, groundbreaking, superb, outstanding</code>；</li>
 <li>其他描述：细节和纹理、物体占据画面的大小、年代、渲染 / 建模工具等。</li>
 </ul>
-<h3 id="反向描述" tabindex="-1"> 反向描述</h3>
+<h3> 反向描述</h3>
 <p>negative prompt（反向描述）可以在 auto/auto-cpu 分支中设置，避免画面出现指定元素。</p>
 <ul>
 <li>避免畸形：<code>ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, armless, legless, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art</code>；</li>
 <li>避免裸体：<code>nudity, bare breasts</code>。</li>
 </ul>
-<h3 id="prompt-参考" tabindex="-1"> prompt 参考</h3>
+<h3> prompt 参考</h3>
 <p>除画面主体描述外，其他要素并非必须。如果你只是简单尝试，输入主体「apples」即可。</p>
 <p>如果你不知道生成什么图像，可以使用 <a href="https://promptomania.com/stable-diffusion-prompt-builder/" target="_blank" rel="noopener noreferrer">promptoMANIA</a> 、<a href="https://weirdwonderfulai.art/resources/disco-diffusion-modifiers/" target="_blank" rel="noopener noreferrer">WEIRD WONDERFUL AI ART</a> 按提示组合描述，或参考 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
 <blockquote>
 <p>goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k</p>
 </blockquote>
-<h2 id="prompt-matrix" tabindex="-1"> Prompt matrix</h2>
-<p>Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。<sup></sup> 此时，批次数量的设置会被忽略。</p>
-<i>Content not supported</i><p>上方视频的调教词为 <code>A mecha robot in World War II in realistic style|Shoot with another mecha robot|Bombed by planes|Missile drop|broken|Repaired|cinematic lighting</code>。<code>|</code> 符号后的场景条件将进行排列组合，视频样例有 6 个场景条件生成 64 张图。</p>
-<p>另外，我们可以指定场景条件位置，比如 <code>@(moba|rpg|rts) character (2d|3d) model</code> 表示 <code>(moba|rpg|rts 三选一) character (2d|3d 二选一) model</code>，也就是会生成 3*2 张图片。开头的 <code>@</code> 是触发指定场景条件位置的符号，不能省略。</p>
-<h2 id="textual-inversion" tabindex="-1"> Textual Inversion</h2>
-<p>Textual Inversion（文本倒置）是 auto/auto-cpu 分支提供的功能，可以个人定制单词在模型中的含义。比如大众模型中医生多是白人男性，而我们可以输入 5 张亚洲女性照片并将其与 doctor 关联，经过 Textual Inversion 处理后的模型生成的医生形象将以亚洲女性为主。<sup></sup></p>
+<h2> Prompt matrix</h2>
+<p>Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。<sup class="footnote-ref"><a href="#footnote7">[7]</a><a class="footnote-anchor" id="footnote-ref7"></a></sup><a class="footnote-anchor" id="footnote-ref7"> 此时，批次数量的设置会被忽略。</a></p><a class="footnote-anchor" id="footnote-ref7">
+</a><h2><a class="footnote-anchor" id="footnote-ref7"></a> Textual Inversion</h2>
+<p>Textual Inversion（文本倒置）是 auto/auto-cpu 分支提供的功能，可以个人定制单词在模型中的含义。比如大众模型中医生多是白人男性，而我们可以输入 5 张亚洲女性照片并将其与 doctor 关联，经过 Textual Inversion 处理后的模型生成的医生形象将以亚洲女性为主。<sup class="footnote-ref"><a href="#footnote8">[8]</a><a class="footnote-anchor" id="footnote-ref8"></a></sup></p><a class="footnote-anchor" id="footnote-ref8">
 <p>Textual Inversion 定制流程：</p>
 <ol>
 <li>Preprocess images：设置源图目录和输出目录。</li>
 <li>Create embedding（新建嵌入）：建立模型属性。</li>
 <li>待续。</li>
 </ol>
-<h2 id="常见问题" tabindex="-1"> 常见问题</h2>
-<h3 id="docker-desktop-failed" tabindex="-1"> Docker Desktop failed</h3>
+</a><h2><a class="footnote-anchor" id="footnote-ref8"></a> 常见问题</h2>
+<h3> Docker Desktop failed</h3>
 <p>未正常安装/关闭 Docker 容器时，可能会报错 <code>Docker Desktop failed to start/stop</code>。</p>
 <p>先删除 <code>%AppData%</code> 路径下的 Docker 文件夹，然后在 PowerShell 中输入下方命令，关闭 WSL 和 docker-desktop。最后，手动重启 Docker Desktop。</p>
-<div data-ext="sh"><pre><code>wsl <span>--shutdown</span>
-wsl <span>-l</span> <span>-v</span>
-wsl <span>--unregister</span> docker-desktop
-wsl <span>-l</span> <span>-v</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h3 id="docker-desktop-cannot-start" tabindex="-1"> Docker Desktop cannot start</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>wsl <span class="token parameter variable">--shutdown</span>
+wsl <span class="token parameter variable">-l</span> <span class="token parameter variable">-v</span>
+wsl <span class="token parameter variable">--unregister</span> docker-desktop
+wsl <span class="token parameter variable">-l</span> <span class="token parameter variable">-v</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> Docker Desktop cannot start</h3>
 <p><code>Hardware assisted virtualization and data execution protection must be enabled in the BIOS</code> 报错说明电脑没开启虚拟化。</p>
 <p>在开机的时候多按几次 <code>F2</code> 或 <code>DEL</code> 进入 BIOS，然后设置中开启「Intel Virtual Technology」，AMD 则是将「SVM Support」设置为设置为「Enable」的状态；最后点击「F10」保存退出即可。</p>
-<h3 id="docker-命令失败" tabindex="-1"> docker 命令失败</h3>
+<h3> docker 命令失败</h3>
 <p><code>The command 'docker' could not be found</code> 说明当前命令行确实 Docker 环境缺失，检查 Docker Desktop 是否启动。</p>
-<h3 id="端口访问被拒" tabindex="-1"> 端口访问被拒</h3>
+<h3> 端口访问被拒</h3>
 <p>Docker 容器原本运行正常，端口访问突然被拒绝了，显示 <code>Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:7860 -&gt; 0.0.0.0:0: listen tcp 0.0.0.0:7860: bind: An attempt was made to access a socket in a way forbidden by its access permissions</code>。</p>
-<p>在 Powershell 中输入 <code>netsh int ipv4 show excludedportrange protocol=tcp</code> 检查是否处于被排除端口范围，然后输入 <code>reg add HKLM\SYSTEM\CurrentControlSet\Services\hns\State /v EnableExcludedPortRange /d 0 /f</code> 开启端口。操作完成后，重启电脑即可解封端口。<sup></sup></p>
-<h3 id="filenotfounderror" tabindex="-1"> FileNotFoundError</h3>
+<p>在 Powershell 中输入 <code>netsh int ipv4 show excludedportrange protocol=tcp</code> 检查是否处于被排除端口范围，然后输入 <code>reg add HKLM\SYSTEM\CurrentControlSet\Services\hns\State /v EnableExcludedPortRange /d 0 /f</code> 开启端口。操作完成后，重启电脑即可解封端口。<sup class="footnote-ref"><a href="#footnote9">[9]</a><a class="footnote-anchor" id="footnote-ref9"></a></sup></p><a class="footnote-anchor" id="footnote-ref9">
+</a><h3><a class="footnote-anchor" id="footnote-ref9"></a> FileNotFoundError</h3>
 <p>再次架构容器时报错 <code>FileNotFoundError: [Errno 2] No such file or directory: '/models/model.ckpt'</code>，这是架构位置错误导致的。此时，我们需要检查是否通过 WSL 输入的架构命令，并且 Stable Diffusion WebUI Docker 解压路径是否配置正确。</p>
-<h3 id="采样模型" tabindex="-1"> 采样模型</h3>
+<h3> 采样模型</h3>
 <p>采样模型是 AI 绘画的核心。2022.09.10 支持自动下载采样模型，下方列表仅做参考。</p>
 <ul>
 <li><a href="https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media" target="_blank" rel="noopener noreferrer">Stable Diffusion v1.4 (4GB)</a>, 将压缩包文件重命名为 <code>model.ckpt</code>。</li>
@@ -447,29 +423,29 @@ wsl <span>-l</span> <span>-v</span>
 <li>(可选) <a href="https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth" target="_blank" rel="noopener noreferrer">RealESRGAN_x4plus.pth (64MB)</a> 和 <a href="https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth" target="_blank" rel="noopener noreferrer">RealESRGAN_x4plus_anime_6B.pth (18MB)</a>。</li>
 <li>(可选) <a href="https://heibox.uni-heidelberg.de/f/578df07c8fc04ffbadf3/?dl=1" target="_blank" rel="noopener noreferrer">LDSR (2GB)</a> 和 <a href="https://heibox.uni-heidelberg.de/f/31a76b13ea27482981b4/?dl=1" target="_blank" rel="noopener noreferrer">LDSR 配置</a>，分别重命名为 <code>LDSR.ckpt</code> 和 <code>LDSR.yaml</code>。</li>
 </ul>
-<h2 id="最后" tabindex="-1"> 最后</h2>
+<h2> 最后</h2>
 <p>Stable Diffusion 还不能作为生产力工具，但它让设计变得简单，也让更多普通人打开了 AI 绘画的可能性。推荐大家实际部署玩下，让自己拥有更多的可能。</p>
 <p>本文于「<a href="https://sspai.com/post/75544" target="_blank" rel="noopener noreferrer">少数派首发</a>」。</p>
-<hr>
-<section>
-<ol>
-<li id="footnote1"><p><a href="https://www.runoob.com/docker/windows-docker-install.html" target="_blank" rel="noopener noreferrer">Windows Docker 安装</a> </p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p><a href="https://www.runoob.com/docker/windows-docker-install.html" target="_blank" rel="noopener noreferrer">Windows Docker 安装</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote2"><p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install#install-wsl-command" target="_blank" rel="noopener noreferrer">使用 WSL 在 Windows 上安装 Linux</a> </p>
+<li id="footnote2" class="footnote-item"><p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install#install-wsl-command" target="_blank" rel="noopener noreferrer">使用 WSL 在 Windows 上安装 Linux</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote3"><p><a href="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-hyper-v-using-powershell" target="_blank" rel="noopener noreferrer">在 Windows 10 上安装 Hyper-V</a> </p>
+<li id="footnote3" class="footnote-item"><p><a href="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-hyper-v-using-powershell" target="_blank" rel="noopener noreferrer">在 Windows 10 上安装 Hyper-V</a> <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote4"><p><a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup" target="_blank" rel="noopener noreferrer">Setup Stable Diffusion WebUI Docker</a> </p>
+<li id="footnote4" class="footnote-item"><p><a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup" target="_blank" rel="noopener noreferrer">Setup Stable Diffusion WebUI Docker</a> <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote5"><p><a href="https://www.ifanr.com/app/1484403" target="_blank" rel="noopener noreferrer">外网爆火的 4 款「你说我画」自动作画工具，我们测了下，有 1 款的确超强</a> </p>
+<li id="footnote5" class="footnote-item"><p><a href="https://www.ifanr.com/app/1484403" target="_blank" rel="noopener noreferrer">外网爆火的 4 款「你说我画」自动作画工具，我们测了下，有 1 款的确超强</a> <a href="#footnote-ref5" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote6"><p><a href="https://www.guokr.com/article/462587/" target="_blank" rel="noopener noreferrer">最时髦的 AI 画画，一文包教包会</a> </p>
+<li id="footnote6" class="footnote-item"><p><a href="https://www.guokr.com/article/462587/" target="_blank" rel="noopener noreferrer">最时髦的 AI 画画，一文包教包会</a> <a href="#footnote-ref6" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote7"><p><a href="https://github.com/hlky/stable-diffusion#prompt-matrix" target="_blank" rel="noopener noreferrer">stable-diffusion Prompt matrix</a> </p>
+<li id="footnote7" class="footnote-item"><p><a href="https://github.com/hlky/stable-diffusion#prompt-matrix" target="_blank" rel="noopener noreferrer">stable-diffusion Prompt matrix</a> <a href="#footnote-ref7" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote8"><p><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Textual-Inversion" target="_blank" rel="noopener noreferrer">Textual Inversion</a> </p>
+<li id="footnote8" class="footnote-item"><p><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Textual-Inversion" target="_blank" rel="noopener noreferrer">Textual Inversion</a> <a href="#footnote-ref8" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote9"><p><a href="https://github.com/docker/for-win/issues/3171#issuecomment-572571882" target="_blank" rel="noopener noreferrer">Windows 端口访问被拒</a> </p>
+<li id="footnote9" class="footnote-item"><p><a href="https://github.com/docker/for-win/issues/3171#issuecomment-572571882" target="_blank" rel="noopener noreferrer">Windows 端口访问被拒</a> <a href="#footnote-ref9" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -477,10 +453,10 @@ wsl <span>-l</span> <span>-v</span>
     </item>
     <item>
       <title>抛弃 Notion 知识管理软件的尝试：把博客变为知识库</title>
-      <link>https://newzone.top/_posts/2022-08-22-learndata_blog_to_knowledge_management.html</link>
-      <guid>https://newzone.top/_posts/2022-08-22-learndata_blog_to_knowledge_management.html</guid>
+      <link>https://newzone.top/posts/2022-08-22-learndata_blog_to_knowledge_management.html</link>
+      <guid>https://newzone.top/posts/2022-08-22-learndata_blog_to_knowledge_management.html</guid>
       <source url="https://newzone.top/rss.xml">抛弃 Notion 知识管理软件的尝试：把博客变为知识库</source>
-      <description>Notion、Obsidian、Logseq、Roam Research、Evernote、flomo、为知、飞书、语雀……知识管理/笔记软件越来越多，我总在不同应用间徘徊。直到有次忽然醒悟，知识管理软件不是管理知识，而是管理笔记。笔记里的知识并不属于你，只有经过消化、应用，才会成为自己的知识。 这么简单的事，我之前却一直没看透，总是把笔记与知识理解划...</description>
+      <description>Notion、Obsidian、Logseq、Roam Research、Evernote、flomo、为知、飞书、语雀……知识管理/笔记软件越来越多，我总在不同应用间徘徊。直到有次忽然醒悟，知识管理软件不是管理知识，而是管理笔记。笔记里的知识并不属于你，只有经过消化、应用，才会成为自己的知识。 这么简单的事，我之前却一直没看透，总是把笔记与知识理解划上了等号。当要用到曾摘录的笔记时，就在各类知识管理软件里翻找，折腾一番才找到需要的笔记，有时甚至出现「自己不清楚放在哪里，也不清楚是否有」的情况。记笔记花了一个小时，下次寻找与重新消化又花了一个小时，原本为效率而生的知识管理软件变成了浪费时间的杀手。</description>
       <category>博客</category>
       <category>头脑驿站</category>
       <pubDate>Mon, 22 Aug 2022 00:00:00 GMT</pubDate>
@@ -492,33 +468,33 @@ wsl <span>-l</span> <span>-v</span>
 <figure><img src="http://tc.seoipo.com/2022-08-24-19-14-59.png" alt="" tabindex="0" loading="lazy"><figcaption>笔记/博客自动化发布</figcaption></figure>
 <p>LearnData 的笔记/文章编辑均使用 Markdown，输出不再受到应用的局限。同时，LearnData 看似是由一篇篇文章组成的博客，但其笔记是独立的知识点，是所有知识的终点站，是整理后的知识库。通过 LearnData 就能完成知识的搜索与整理，不再需要来回翻找。把博客转为知识库后，我明显感到学习和知识使用的效率得到提高，开始摆脱「工具奴隶」和「效率中毒」陷阱。</p>
 <figure><img src="http://tc.seoipo.com/2022-08-22-19-28-25.png" alt="" tabindex="0" loading="lazy"><figcaption>笔记 + 文章 = LearnData 知识库</figcaption></figure>
-<h2 id="为什么用网页管理笔记" tabindex="-1"> 为什么用网页管理笔记</h2>
-<h3 id="公开想法" tabindex="-1"> 公开想法</h3>
+<h2> 为什么用网页管理笔记</h2>
+<h3> 公开想法</h3>
 <p>知识管理/笔记软件天然带有私有性质，不对外公开。但是，我的笔记大都来自互联网，要对谁保密？</p>
 <p>我很推崇 Ray Dalio 在《原则》中提到的「头脑极度透明，公开分享想法」。</p>
 <blockquote>
 <p>让其他人无比清晰地看到你在做什么、为什么这么做。头脑越透明，越不会自欺，其他人也会给你诚实的反馈。</p>
 </blockquote>
 <p>作为国内最早一批介绍 Aria2 的人，我曾经写过一篇 Aria2 教程，文章后来被多个网站参考/抄袭，覆盖了 Aria2 某度搜索前三页。在那篇文章的评论区，有好几条留言说文章逻辑差看不懂的，也经常有热心人帮我怼回去。其实，那篇文章的初版真的很糟糕，只是写得比较早，当时没几篇中文教程，大家只能看这篇教程。我写文章的初衷是方便自己用，避免一个解决方案用完就忘，下次又从头开始。那篇文章是在大家的反馈下，迭代了三个版本才开始变得完整和逻辑化。这些反馈也是我坚持写博客的原动力。这跟费曼学习法的道理相通，当你写文章帮助其他人时，你也在加深自己对知识的理解。建立 LearnData 只有一个月，但我从中获取的正反馈超过私有笔记一年的获得。笔记公开化是有百利而无一害。</p>
-<h3 id="输出分享" tabindex="-1"> 输出分享</h3>
+<h3> 输出分享</h3>
 <p>其次，网页形式让笔记方便分享。除了效率工具心得，我把生活技巧、购物评价和说明书也放在 LearnData。家人或朋友需要帮助时，直接访问网页即可，不需要安装 app 或折腾账户分享，比如我经常分享的 <a href="https://newzone.top/family/Maintenance.html#%E9%80%9A%E9%A9%AC%E6%A1%B6" target="_blank" rel="noopener noreferrer">通马桶技巧</a> 和疏通器说明书。</p>
 <figure><img src="http://tc.seoipo.com/2022-08-19-22-52-29.png" alt="" tabindex="0" loading="lazy"><figcaption>生活知识页面样例</figcaption></figure>
-<h3 id="被动消化知识" tabindex="-1"> 被动消化知识</h3>
+<h3> 被动消化知识</h3>
 <p>如果只是公开分享，LearnData 与笔记软件并无区别，它的优点更在于网页有限的笔记数量。</p>
 <p>虽然网页可以无限地存放笔记，但打开页面只能看到少量的几十篇内容。一旦笔记堆积过多，你就像触发了整理开关似的，对笔记开始消化重构。这就是网页容量上的无限性和视觉/直觉上的有限性，存储是无限但视觉上只能有很小的一块。这里的直觉指，看一眼界面就能找到所需知识点的效果。</p>
 <p>比如，我的 code 区块笔记存放超过 10 篇后，每次找代码笔记都需要 10 选 1，知识查找时间也翻倍了。我意识到节点过多，不能让自己将时间花在查询上。因此，我把代码笔记分为 Basic 和 FrontEnd 两块，总结划分的同时，编程知识也再次得到消化。</p>
 <p>而网页与笔记软件的区别也正在于此，LearnData 的主页、侧边栏和导航栏就是能展示的路径，你必须不断对笔记提纯才能提高使用率。否则，如果你只是「积累」笔记而非消化知识，无论使用什么工具和方法，成效都是 0。</p>
-<h3 id="漂亮决定生产力" tabindex="-1"> 漂亮决定生产力</h3>
+<h3> 漂亮决定生产力</h3>
 <p>另外，网页能自由调整外观样式，更换为你喜欢的界面。这也是为什么 LearnData 舍弃了初版的 docsify 框架，改为复杂许多的 VuePress 框架。docsify 官方模板过于简单，没有界面设计模块，难以满足知识管理界面必须直观漂亮的要求，而这点直接决定了生产力，不能让步。</p>
 <p>知识管理/笔记软件将 Markdown 文件作为一个个区块，而网页可以将其视为一体。LearnData 支持多级侧边栏和目录，让阅读查找变得简单。</p>
 <figure><img src="http://tc.seoipo.com/2022-08-19-22-42-03.png" alt="" tabindex="0" loading="lazy"><figcaption>LearnData 页面布局</figcaption></figure>
-<h2 id="为什么不用-obsidian" tabindex="-1"> 为什么不用 Obsidian</h2>
+<h2> 为什么不用 Obsidian</h2>
 <p>@北鸮 提到「脱离 Notion 可以理解，Markdown 很自由，那为啥不用 Obsidian 呢？也有标题，也有标签，也可以有层级，开源软件还有 Logseq 替代」。</p>
 <p>Obsidian 等双链笔记想法设计很好，我们可以自由地在不同知识点间切换，节省搜索和关联的时间。但知识点的联系是靠人工打标签来建立的，而非根据关键词自动建立图谱关系。这跟 URL 链接又有什么区别？因此我认为，<strong>双链笔记并不适合知识库</strong>。（如果对双链笔记理解错误，欢迎纠正。）</p>
 <figure><img src="http://tc.seoipo.com/2022-08-19-21-39-41.png?imageMogr2/thumbnail/!60p" alt="" tabindex="0" loading="lazy"><figcaption>我的 Obsidian 图谱，只有右下角简悦抓取的素材有相同标签而聚作一团</figcaption></figure>
 <p>建立知识点联系后，双链笔记能轻松处理成千上万个文档，按条件整合文本方便阅读。但是，多数人常用知识范围不会超过一百。如果你的个人笔记上千了，说明你要不是科研大佬，要不没消化甚至是根本没读过这些笔记，只是在记笔记。</p>
 <p>除去博客，我只有 37 篇笔记，而且按功能划分为 7 个区块。你觉得这点文件，用树状管理方便，还是用双链笔记打一堆标签来得好？即使有时标题里找不到某个关键词，我用全文搜索达到目的。我个人会倾向于简单方便的树状标题管理。</p>
-<h2 id="抛弃知识软件-不用" tabindex="-1"> 抛弃知识软件 ≠ 不用</h2>
+<h2> 抛弃知识软件 ≠ 不用</h2>
 <p>选择 Markdown 就得卸载知识软件吗？</p>
 <p>抛弃知识软件并不是不用，而是将其视为知识的中转站。知识软件的趋势是 ALL IN ONE，记录全能成了标榜的主打功能。可是，<strong>光收集而不应用的知识等于零</strong>，只会增加你后续的使用成本。</p>
 <p>知识软件对我来说，是功能清晰的素材库。我会不断清空素材库，将小的知识点融入 LearnData 笔记区，成体系内容则写成博客，确保 LearnData 成为知识库的终点。</p>
@@ -532,7 +508,7 @@ wsl <span>-l</span> <span>-v</span>
 <li>SuperMemo 与 Anki 功能类似，帮助定期复习需重复记忆的知识点。</li>
 </ul>
 <p>而对于 Obsidian，我将其视为笔记的备份站。通过 GoodSync，LearnData 笔记发生修改后，相关更新会实时同步到 Obsidian，完成笔记的备份。期待有天 Obsidian 完善双链功能，帮笔记自动打上标签，到时备份笔记就能转正，我也能无缝切换到新的知识管理应用。</p>
-<h2 id="如果你也想试试" tabindex="-1"> 如果你也想试试……</h2>
+<h2> 如果你也想试试……</h2>
 <p>如何搭建把博客转为知识库，建立属于你的 LearnData 知识管理网站呢？</p>
 <p>首先，确定你有 GitHub 账户，懂 Markdown 和基础 HTML 知识。然后，按 <a href="https://newzone.top/#%E6%90%AD%E5%BB%BA-LearnData" target="_blank" rel="noopener noreferrer">LearnData 部署教程</a> 即可完成搭建和配置。如果你的笔记已经 Markdown 化，把文档放在 docs 目录下就可以建立你自己的知识库。</p>
 <p>笔记结构可以参考我的分类。这没有绝对的界限，只要看到自己觉得有价值的知识点，都可以往 LearnData 里丢。但是，不要全文本地化收藏，简单提取用链接引用即可，除少量精品外，网络时代的文章隔几年就会失效，没必要收藏为一篇篇的笔记。当下次应用到这个知识点时，我们再考虑整理事宜，否则，长时间用不到的知识，又有什么整理的价值呢。</p>
@@ -547,7 +523,7 @@ wsl <span>-l</span> <span>-v</span>
 <li>生活区：说明书，生活记录及小技巧；</li>
 <li>博客区：聚合所有博客文章，并以分类、标签、时间轴等方式进行组合。</li>
 </ul>
-<h2 id="最后" tabindex="-1"> 最后</h2>
+<h2> 最后</h2>
 <p>两个月前，我在 WordPress 博客篇中喊着「md2wordpress 是最后一次博客方案」，但由于 WordPress 与 Markdown 各种不兼容，写完没多久就换到支持原生 Markdown 解析的 VuePress。</p>
 <p>这次我不想再立 Flag 了，只希望能放过自己。每进行一次知识迁移，真是大伤，休息一段时间吧。</p>
 <p>如果你有兴趣尝试 <a href="https://newzone.top/" target="_blank" rel="noopener noreferrer">LearnData</a>，欢迎通过链接访问并复制模板尝试，具体的操作方法与常见问答我都写在博客中。有进一步的问题或讨论欢迎在评论区留言。</p>
@@ -555,10 +531,10 @@ wsl <span>-l</span> <span>-v</span>
     </item>
     <item>
       <title>新玩意｜智能可折叠综合塑形机</title>
-      <link>https://newzone.top/_posts/2022-08-10-new_stuff_shaping_machine.html</link>
-      <guid>https://newzone.top/_posts/2022-08-10-new_stuff_shaping_machine.html</guid>
+      <link>https://newzone.top/posts/2022-08-10-new_stuff_shaping_machine.html</link>
+      <guid>https://newzone.top/posts/2022-08-10-new_stuff_shaping_machine.html</guid>
       <source url="https://newzone.top/rss.xml">新玩意｜智能可折叠综合塑形机</source>
-      <description>家里关得太久，体重又涨了 10 斤，再次陷入健身器材焦虑之中。虽然划船机、跑步机、动感单车的结局都是闲鱼出，但我对健身器材的追逐始终没变。这时发现有品众筹的新玩具，两千的综合塑形机。 这款塑形机原理与飞鸟龙门架类似，号称可以充当家庭健身房，锻炼全身的肌肉，包括练肩后束、练背、练上胸、练胸中缝、练下胸、练三头、练二头、练核心、练臀大肌、练大腿外侧。 之前...</description>
+      <description>家里关得太久，体重又涨了 10 斤，再次陷入健身器材焦虑之中。虽然划船机、跑步机、动感单车的结局都是闲鱼出，但我对健身器材的追逐始终没变。这时发现有品众筹的新玩具，两千的综合塑形机。 已闲置于墙角</description>
       <category>购物</category>
       <pubDate>Wed, 10 Aug 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>家里关得太久，体重又涨了 10 斤，再次陷入健身器材焦虑之中。虽然划船机、跑步机、动感单车的结局都是闲鱼出，但我对健身器材的追逐始终没变。这时发现有品众筹的新玩具，两千的综合塑形机。</p>
@@ -579,10 +555,10 @@ wsl <span>-l</span> <span>-v</span>
     </item>
     <item>
       <title>「硬盘布局不受 UEFI 固件支持」－华硕主板解决方案</title>
-      <link>https://newzone.top/_posts/2020-09-22-uefi_asus_board.html</link>
-      <guid>https://newzone.top/_posts/2020-09-22-uefi_asus_board.html</guid>
+      <link>https://newzone.top/posts/2020-09-22-uefi_asus_board.html</link>
+      <guid>https://newzone.top/posts/2020-09-22-uefi_asus_board.html</guid>
       <source url="https://newzone.top/rss.xml">「硬盘布局不受 UEFI 固件支持」－华硕主板解决方案</source>
-      <description>电脑已经用了 5 年，这次 Win10 更新提示「硬盘布局不受 UEFI 固件支持」。本文是华硕主板的解决方案，其他主板顺序不同，但目的都是将启动模式修改为「Only Legecy」。 电脑重启，按 F2 或 DEL 进入 BIOS。选择「高级模式」&gt;「启动」&gt;「CSM」&gt;「启动设备控制」，设置为「仅 Legecy OPROM」。 设置完成后，Win1...</description>
+      <description>电脑已经用了 5 年，这次 Win10 更新提示「硬盘布局不受 UEFI 固件支持」。本文是华硕主板的解决方案，其他主板顺序不同，但目的都是将启动模式修改为「Only Legecy」。 电脑重启，按 F2 或 DEL 进入 BIOS。选择「高级模式」&amp;gt;「启动」&amp;gt;「CSM」&amp;gt;「启动设备控制」，设置为「仅 Legecy OPROM」。 华硕主板设置截图</description>
       <category>系统</category>
       <pubDate>Tue, 22 Sep 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>电脑已经用了 5 年，这次 Win10 更新提示「硬盘布局不受 UEFI 固件支持」。本文是华硕主板的解决方案，其他主板顺序不同，但目的都是将启动模式修改为「Only Legecy」。</p>
@@ -594,20 +570,20 @@ wsl <span>-l</span> <span>-v</span>
     </item>
     <item>
       <title>电脑上实现微信双开，无需网页版或第三方软件</title>
-      <link>https://newzone.top/_posts/2017-04-18-wechat_multi_open.html</link>
-      <guid>https://newzone.top/_posts/2017-04-18-wechat_multi_open.html</guid>
+      <link>https://newzone.top/posts/2017-04-18-wechat_multi_open.html</link>
+      <guid>https://newzone.top/posts/2017-04-18-wechat_multi_open.html</guid>
       <source url="https://newzone.top/rss.xml">电脑上实现微信双开，无需网页版或第三方软件</source>
-      <description>由于工作原因，有时候我们需要在电脑上登录多个微信。但微信限制一个客户端只能登陆一个账号，PC 端 + 网页版就成了通用方案，操作效率下降许多。 其实我们还有更好的办法。在微信 PC 版之余，同时安装微信 For Windows，就能实现客户端双开！ 微信 For Windows 安装 打开「运行」对话框，输入并启动「应用商店」或「Microsoft S...</description>
+      <description>由于工作原因，有时候我们需要在电脑上登录多个微信。但微信限制一个客户端只能登陆一个账号，PC 端 + 网页版就成了通用方案，操作效率下降许多。 其实我们还有更好的办法。在微信 PC 版之余，同时安装微信 For Windows，就能实现客户端双开！ 微信 For Windows 安装 打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装 微信 For Windows。</description>
       <category>工具</category>
       <pubDate>Tue, 18 Apr 2017 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>由于工作原因，有时候我们需要在电脑上登录多个微信。但微信限制一个客户端只能登陆一个账号，PC 端 + 网页版就成了通用方案，操作效率下降许多。</p>
 <p>其实我们还有更好的办法。在微信 PC 版之余，同时安装微信 For Windows，就能实现客户端双开！</p>
-<h2 id="微信-for-windows-安装" tabindex="-1"> 微信 For Windows 安装</h2>
+<h2> 微信 For Windows 安装</h2>
 <p>打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装 <code>微信 For Windows</code>。</p>
 <figure><img src="http://tc.seoipo.com/2022-05-06-04-21-30.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>安装好后，就能与微信 PC 版一齐启动，互不干扰。</p>
 <figure><img src="http://tc.seoipo.com/2022-05-06-04-21-40.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h2 id="开机启动两个微信" tabindex="-1"> 开机启动两个微信</h2>
+<h2> 开机启动两个微信</h2>
 <p>找到系统启动文件夹，文件夹路径为：<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code>。或者打开「运行」对话框，输入命令「shell:startup」，回车即可打开「启动文件夹」。</p>
 <p>将微信 for windows 10 的快捷方式放到「启动」文件夹里。</p>
 <figure><img src="http://tc.seoipo.com/2022-05-06-04-23-49.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
@@ -624,84 +600,84 @@ wsl <span>-l</span> <span>-v</span>
     </item>
     <item>
       <title>RSS 入门篇：Feed43&amp;FeedEx-为静态网页定制 RSS 源</title>
-      <link>https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html</link>
-      <guid>https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html</guid>
+      <link>https://newzone.top/posts/2017-04-22-rss_feed43_feedex.html</link>
+      <guid>https://newzone.top/posts/2017-04-22-rss_feed43_feedex.html</guid>
       <source url="https://newzone.top/rss.xml">RSS 入门篇：Feed43&amp;FeedEx-为静态网页定制 RSS 源</source>
-      <description>迷上 IFTTT 后急需 RSS 来监测网页，找到免费的 FEED43。网上有很多教程，但对新手都不够友好，就重新整理了一份。 ► 开始烧制属于自己的 feed 1. 进入网页 FEED43 (http://www.feed43.com/) 无需注册，点击 Create your own feed 直接使用。 2. 选定 RSS 网页 将目标网址添入 ...</description>
+      <description>迷上 IFTTT 后急需 RSS 来监测网页，找到免费的 FEED43。网上有很多教程，但对新手都不够友好，就重新整理了一份。 ► 开始烧制属于自己的 feed 1. 进入网页 FEED43 无需注册，点击 Create your own feed 直接使用。</description>
       <category>自动化</category>
       <pubDate>Sat, 22 Apr 2017 12:54:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>迷上 IFTTT 后急需 RSS 来监测网页，找到免费的 FEED43。网上有很多教程，但对新手都不够友好，就重新整理了一份。</p>
 <p><strong>► 开始烧制属于自己的 feed</strong></p>
-<h2 id="_1-进入网页" tabindex="-1"> 1. 进入网页</h2>
+<h2> 1. 进入网页</h2>
 <p><a href="http://www.feed43.com/" target="_blank" rel="noopener noreferrer">FEED43</a> 无需注册，点击 Create your own feed 直接使用。</p>
 <figure><img src="https://pic1.zhimg.com/v2-b5da0b08f632376fad3925a779e373b4_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h2 id="_2-选定-rss-网页" tabindex="-1"> 2. 选定 RSS 网页</h2>
+<h2> 2. 选定 RSS 网页</h2>
 <p>将目标网址添入 Step1. Specify source page address (URL)，将输入的源代码复制到 txt 文档中（方便之后写抓取规则）</p>
 <figure><img src="https://pic1.zhimg.com/v2-1b687a5b1c325ba6d04fbdcc13b95668_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>如果 Page Source 显示为乱码，Encoding 可设为 <strong>UTF-8</strong> 。</p>
-<h2 id="_3-定制-rss-抓取规则" tabindex="-1"> 3. 定制 RSS 抓取规则</h2>
+<h2> 3. 定制 RSS 抓取规则</h2>
 <p>Global Search Pattern 是选择你要搜索的范围。可以不填，这样会搜索整个页面，一般新手都选择整个页面，即空白。Item (repeatable) Search Pattern 这部分最重要，是我们要抓取的内容。</p>
 <figure><img src="https://pic1.zhimg.com/v2-b1fa90c59739bddc0c27134cd36ba6bc_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>仔细查看 Step1 中的源代码，找到区需要抓取的部分，输入到 Item (repeatable) Search Pattern。</p>
 <p>测试网址：<code>http://news.163.com/special/0001386F/rank_whole.html</code>。</p>
 <p>需要抓取的源代码：</p>
-<div data-ext="html"><pre><code><span><span><span>&lt;</span>tr</span><span>></span></span>
-  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>red<span>"</span></span><span>></span></span>
-    <span><span><span>&lt;</span>span</span><span>></span></span>2<span><span><span>&lt;/</span>span</span>
-    <span>></span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>更时尚更运动 车展实拍解析红旗 H5<span>"</span></span>
-      <span>></span></span>更时尚更运动 车展实拍解析红旗 H5<span><span><span>&lt;/</span>a</span>
-    <span>></span></span>
-  <span><span><span>&lt;/</span>td</span><span>></span></span>
-  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>cBlue<span>"</span></span><span>></span></span>11211615<span><span><span>&lt;/</span>td</span><span>></span></span>
-<span><span><span>&lt;/</span>tr</span><span>></span></span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><figure><img src="https://pic2.zhimg.com/v2-cf6dbf2c09189f7517ec63abdc80c50d_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>red<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span>
+    <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>更时尚更运动 车展实拍解析红旗 H5<span class="token punctuation">"</span></span>
+      <span class="token punctuation">&gt;</span></span>更时尚更运动 车展实拍解析红旗 H5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span>
+    <span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cBlue<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>11211615<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><img src="https://pic2.zhimg.com/v2-cf6dbf2c09189f7517ec63abdc80c50d_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p><strong>抓取规则</strong>：</p>
-<div data-ext="html"><pre><code><span><span><span>&lt;</span>tr</span><span>></span></span>
+<div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
   {*}
-  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>{*}<span>"</span></span><span>></span></span><span><span><span>&lt;</span>span</span><span>></span></span>{*}<span><span><span>&lt;/</span>span</span><span>></span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>{%}<span>"</span></span><span>></span></span>{%}<span><span><span>&lt;/</span>a</span><span>></span></span><span><span><span>&lt;/</span>td</span><span>></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{*}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>{*}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{%}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{%}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
   {*}
-  <span><span><span>&lt;</span>td</span> <span>class</span><span><span>=</span><span>"</span>cBlue<span>"</span></span><span>></span></span>{*}<span><span><span>&lt;/</span>td</span><span>></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cBlue<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{*}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
   {*}
-<span><span><span>&lt;/</span>tr</span><span>></span></span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>点击 Extract，进行抓取。</p>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>点击 Extract，进行抓取。</p>
 <figure><img src="https://pic4.zhimg.com/v2-e9486741a6229ab258a95147f584571b_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h2 id="_4-整理-rss-输入格式" tabindex="-1"> 4. 整理 rss 输入格式</h2>
+<h2> 4. 整理 rss 输入格式</h2>
 <p>Define output format，一般情况下前面三个会已经写好，后三个就将前面得出的 item 里面的元素填入即可，我这里{%1}对应的是链接所以填入 Link，{%2}对于标题就填入 Title。</p>
 <figure><img src="https://pic1.zhimg.com/v2-b4614f5c46090f2eb762aac87d604350_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>然后点击 preview，完成制作，同时出现预览。</p>
 <figure><img src="https://pic2.zhimg.com/v2-498bf1f1c0b14da172498b58f59e39b9_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>如果注册了 FEED43 的账号，可以修改 rss 地址，但不能改为中文，否则会 rss 出错。</p>
-<h2 id="_5-获取-rss-地址" tabindex="-1"> 5. 获取 RSS 地址</h2>
+<h2> 5. 获取 RSS 地址</h2>
 <p>点击 Feed URL 可得 rss 地址，我这里是 <a href="https://www.feed43.com/dianji.xml" target="_blank" rel="noopener noreferrer">https://www.feed43.com/dianji.xml</a></p>
 <figure><img src="https://pic1.zhimg.com/v2-f3b00e876d8df136f7d354b4fc22f900_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>在 RSS reader 中展示为</p>
 <figure><img src="https://pic4.zhimg.com/v2-6d8f503ff3da16eb985ca1d3ae2de98f_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h2 id="_6-全文抓取" tabindex="-1"> 6. 全文抓取</h2>
+<h2> 6. 全文抓取</h2>
 <p>feed43 导出的条目必须点击链接才能看到内容。在 rss 展示全文，需要通过 FeedEx 再转一次。注意：feed43 免费用户过多，<strong>需在浏览器中打开一次才能得到真实链接</strong> (一般为 <code>http://node2.feed43.com</code>)，FeedEx 需使用真实链接，一般 3 分钟内转换好。</p>
 <p>FeedEx：<a href="https://feedex.net/" target="_blank" rel="noopener noreferrer">https://feedex.net/</a></p>
 <figure><img src="https://pic4.zhimg.com/v2-8e3701adffa1d6fb4ea10dda2704988b_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>feeds43 免费版每 6 小时抓取一次，显示最新的 20 条内容。</p>
 <p>如果网页源更新较频繁的话，可使用 RSSHub 和 Huginn。</p>
-<h2 id="rss-合集" tabindex="-1"> RSS 合集</h2>
+<h2> RSS 合集</h2>
 <p>汇总的 RSS 永久订阅 feeds，均通过 RSSHub 和 Huginn 制作。如果有兴趣自制 RSS，可参考以下教程。</p>
 <ul>
 <li>
-<p><a href="https://newzone.top/_posts/2017-04-22-rss_feed43_feedex.html" target="_blank" rel="noopener noreferrer">RSS 入门篇：FEED43&amp;FeedEx-为静态网页定制 RSS 源</a></p>
+<p><a href="https://newzone.top/posts/2017-04-22-rss_feed43_feedex.html" target="_blank" rel="noopener noreferrer">RSS 入门篇：FEED43&amp;FeedEx-为静态网页定制 RSS 源</a></p>
 </li>
 <li>
-<p><a href="https://newzone.top/_posts/2018-10-07-huginn_scraping_any_website.html" target="_blank" rel="noopener noreferrer">RSS 进阶篇：Huginn - 真·为任意网页定制 RSS 源（PhantomJs 抓取）</a></p>
+<p><a href="https://newzone.top/posts/2018-10-07-huginn_scraping_any_website.html" target="_blank" rel="noopener noreferrer">RSS 进阶篇：Huginn - 真·为任意网页定制 RSS 源（PhantomJs 抓取）</a></p>
 </li>
 <li>
-<p><a href="https://newzone.top/_posts/2019-04-01-rsshub_noob.html" target="_blank" rel="noopener noreferrer">RSS 速成篇：RSSHub 捡现成的轮子</a></p>
+<p><a href="https://newzone.top/posts/2019-04-01-rsshub_noob.html" target="_blank" rel="noopener noreferrer">RSS 速成篇：RSSHub 捡现成的轮子</a></p>
 </li>
 <li>
-<p><a href="https://newzone.top/_posts/2020-03-25-rsshub_on_vps.html" target="_blank" rel="noopener noreferrer">RSS 速成篇 2：RSSHub 自部署</a></p>
+<p><a href="https://newzone.top/posts/2020-03-25-rsshub_on_vps.html" target="_blank" rel="noopener noreferrer">RSS 速成篇 2：RSSHub 自部署</a></p>
 </li>
 <li>
-<p><a href="https://newzone.top/_posts/2021-10-23-nas_with_rsshub_and_huginn.html" target="_blank" rel="noopener noreferrer">RSS 完结篇：节省千元服务费，RSSHub、Huginn 转移 NAS</a></p>
+<p><a href="https://newzone.top/posts/2021-10-23-nas_with_rsshub_and_huginn.html" target="_blank" rel="noopener noreferrer">RSS 完结篇：节省千元服务费，RSSHub、Huginn 转移 NAS</a></p>
 </li>
 <li>
-<p><a href="https://newzone.top/_posts/2022-03-17-rss_persistent_link_collection.html" target="_blank" rel="noopener noreferrer">RSS 汇总篇：RSS 永久链接合集，拒绝 RSS 失效</a></p>
+<p><a href="https://newzone.top/posts/2022-03-17-rss_persistent_link_collection.html" target="_blank" rel="noopener noreferrer">RSS 汇总篇：RSS 永久链接合集，拒绝 RSS 失效</a></p>
 </li>
 </ul>
 ]]></content:encoded>
@@ -709,15 +685,15 @@ wsl <span>-l</span> <span>-v</span>
     </item>
     <item>
       <title>office 2016 安装程序报错解决办法</title>
-      <link>https://newzone.top/_posts/2017-07-28-office_2016_installer_error.html</link>
-      <guid>https://newzone.top/_posts/2017-07-28-office_2016_installer_error.html</guid>
+      <link>https://newzone.top/posts/2017-07-28-office_2016_installer_error.html</link>
+      <guid>https://newzone.top/posts/2017-07-28-office_2016_installer_error.html</guid>
       <source url="https://newzone.top/rss.xml">office 2016 安装程序报错解决办法</source>
-      <description>重新安装 Office 系统或更改安装组件时，经常提示：「找不到有效的安装源」，但实际这些文件都能在安装包内找到。这是由于注册表和组件而导致的报错，「找不到有效的安装源」并不是真实原因，解决方法查看下方。 解决方法 1. 打开 regedit.exe，在注册表中找到路径 计算机\HKEYLOCALMACHINE\SOFTWARE\Microsoft\O...</description>
+      <description>重新安装 Office 系统或更改安装组件时，经常提示：「找不到有效的安装源」，但实际这些文件都能在安装包内找到。这是由于注册表和组件而导致的报错，「找不到有效的安装源」并不是真实原因，解决方法查看下方。 解决方法 打开 regedit.exe，在注册表中找到路径 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Delivery\SourceEngine\Downloads\{90160000-00BA-0804-1000-0000000FF1CE}-C\Sources\PROPLUS16(RG)-6186D162。 修改 Path 数据，改为安装包位置，比如 F:\5.软件资源\系统重装\SW_DVD5_Office_Professional_Plus_2016_64Bit_ChnSimp_MLF_X20-42426\groove.zh-cn。 在 C 盘建立安装组件： 把安装包路径 \groove.zh-cn\ 下的文件复制到 C:\MSOCache\All Users\{90160000-00BA-0804-1000-0000000FF1CE}-C 目录下 (如果没有这个目录就自己建立)。 把安装包路径 \proplus.ww\ 下的文件复制到 C:\MSOCache\All Users\{90160000-0011-0000-1000-0000000FF1CE}-C。 将需要的程序文件放入 MSOCache 路径 MSOCache 其它的目录下内容同样根据注册表的内容把它指示的光盘中的安装文件复制到相应的目录下。如果没有那个目录就要自己建立，类似的目录一共有 12 个。 如果不想全装可以只选择需要的软件，下面以 Onenote 和 Access 为例。 Onenote 把安装包路径 \onenote.zh-cn\ 下的文件复制到 C:\MSOCache\All Users\{90160000-00A1-0804-1000-0000000FF1CE}-CC。 Access 把安装包路径 \access.zh-cn\ 下的文件复制到 C:\MSOCache\All Users\{90160000-0015-0804-1000-0000000FF1CE}-C。 最后进入安装包运行 setup.exe 安装正常。</description>
       <category>系统</category>
       <pubDate>Fri, 28 Jul 2017 11:02:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>重新安装 Office 系统或更改安装组件时，经常提示：「找不到有效的安装源」，但实际这些文件都能在安装包内找到。这是由于注册表和组件而导致的报错，<strong>「找不到有效的安装源」并不是真实原因</strong>，解决方法查看下方。</p>
 <figure><img src="https://pic3.zhimg.com/v2-85bd2a49a47ee6d0c8eade7b3c249516_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h2 id="解决方法" tabindex="-1"> 解决方法</h2>
+<h2> 解决方法</h2>
 <ol>
 <li>
 <p>打开 regedit.exe，在注册表中找到路径 <code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Delivery\SourceEngine\Downloads\{90160000-00BA-0804-1000-0000000FF1CE}-C\Sources\PROPLUS16(RG)-6186D162</code>。</p>
