@@ -194,6 +194,10 @@ OBS 美颜需借助第三方应用，推荐 [YY 开播](https://v.yy.com/)。
 1. 打开 SplitCam，选择默认摄像头。
 2. Snap Camera、Capture 等调用摄像头，选择「SplitCam Video Driver」。
 
+### NVIDIA BROADCAST
+
+N 卡用户强烈推荐 [NVIDIA Broadcast](https://www.nvidia.cn/geforce/guides/broadcast-app-setup-guide/)。它利用 AI 的强大功能将标准网络摄像头和麦克风升级为高端智能设备，通过麦克风去噪、房间回声消除、虚拟背景、网络摄像头人像跟踪和视频降噪等 AI 功能，提高直播的视频和音频质量。通过 NVIDIA RTX GPU 上搭载的名为 Tensor Core 的专用 AI 处理器，AI 网络能够实时运行高质量的效果。
+
 ## 直播娱乐
 
 ### 虚拟主播
