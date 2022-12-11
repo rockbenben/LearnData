@@ -50,7 +50,7 @@ jobs:
       ### 没有服务器的话，请删除本区块代码，防止报错 ###
       # 将页面推送到服务器，timeout 时间从默认的 1 分钟调整到 10 分钟。
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           local-dir: docs/.vuepress/dist/
           server: ${{ secrets.ftp_host }}

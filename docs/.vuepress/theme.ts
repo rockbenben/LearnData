@@ -89,7 +89,7 @@ export default hopeTheme({
   hotReload: true,
   plugins: {
     blog: {
-      autoExcerpt: true,
+      excerpt: true,
     },
 
     // 评论配置（仅做样例，记得更换）

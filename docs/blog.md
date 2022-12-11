@@ -1,8 +1,7 @@
 ---
 #博客首页设置：https://vuepress-theme-hope.github.io/v2/zh/guide/blog/home.html
 home: true
-layout: Blog
-article: false
+layout: BlogHome
 icon: home
 title: 互联网小白
 #heroImage: /logo.svg
