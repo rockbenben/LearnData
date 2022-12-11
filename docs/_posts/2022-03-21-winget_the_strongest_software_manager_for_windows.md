@@ -75,7 +75,7 @@ winstall 页面选好程序后，导出自动生成的批量安装命令，并�
 
 国内使用 winget 容易出现问题「尝试更新源时失败」，下载 [winget 官方最新包](https://github.com/microsoft/winget-cli/releases) 可解决问题。
 
-另一个可能是 Internet 选项的 TLS 版本设置过低，开启 TLS 1.2 即可恢复，具体操作查看 [Windows 应用商店 (Microsoft store) 打不开？](https://newzone.top/_posts/2022-02-19-microsoft_store_fixed.html#解决方法)。
+另一个可能是 Internet 选项的 TLS 版本设置过低，开启 TLS 1.2 即可恢复，具体操作查看 [Windows 应用商店 (Microsoft store) 打不开？](https://newzone.top/posts/2022-02-19-microsoft_store_fixed.html#解决方法)。
 
 ### 其他问题
 

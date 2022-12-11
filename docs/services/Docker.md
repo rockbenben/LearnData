@@ -42,7 +42,7 @@ sudo docker commit \
 
 ### Windows Docker
 
-Windows 使用 [Docker Desktop](https://www.runoob.com/docker/windows-docker-install.html) 来管理容器，方式参考 [Windows Docker 环境配置](https://newzone.top/_posts/2022-09-05-stable_diffusion_ai_painting.html#docker-环境配置)。
+Windows 使用 [Docker Desktop](https://www.runoob.com/docker/windows-docker-install.html) 来管理容器，方式参考 [Windows Docker 环境配置](https://newzone.top/posts/2022-09-05-stable_diffusion_ai_painting.html#docker-环境配置)。
 
 WSL 本地路径为 `\\wsl.localhost\`。Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 WSL 调用 Windows 文件需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设 Windows 文件位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。
 

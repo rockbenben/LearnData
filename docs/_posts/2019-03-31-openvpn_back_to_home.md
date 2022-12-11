@@ -21,7 +21,7 @@ order: -24
 
 电信分配的公网 IP 经常会更换，每次都需要重定向子域名。在路由器 koolshare - 软件中心中安装 Aliddns，帮助更新家的公网 IP。插件中输入定向子域名和阿里云的 appkey，配置就完成了。如果没有自动在阿里云解析，可以先手动解析设置。
 
-光猫设置参考 [光猫改造 篇三：百卓 GP1700 进阶设置 - 端口映射](https://newzone.top/_posts/2018-06-08-Baizhuo_GP1700.html)。
+光猫设置参考 [光猫改造 篇三：百卓 GP1700 进阶设置 - 端口映射](https://newzone.top/posts/2018-06-08-Baizhuo_GP1700.html)。
 
 ## OpenVPN 配置
 

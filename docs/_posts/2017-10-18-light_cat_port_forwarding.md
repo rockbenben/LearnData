@@ -8,7 +8,7 @@ tag:
 order: -8
 ---
 
-光猫默认没有管理权限，需要先获得光猫的超管密码，参考 [光猫改造 篇一：超级管理员密码破解（E8-C-EPON RG201O-CA_V1A2）](https://newzone.top/_posts/2017-10-18-Light_cat_E8-C-EPON_admin.html)。
+光猫默认没有管理权限，需要先获得光猫的超管密码，参考 [光猫改造 篇一：超级管理员密码破解（E8-C-EPON RG201O-CA_V1A2）](https://newzone.top/posts/2017-10-18-Light_cat_E8-C-EPON_admin.html)。
 
 **光猫端口映射步骤：**
 

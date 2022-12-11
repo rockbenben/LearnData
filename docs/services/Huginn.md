@@ -6,7 +6,7 @@ order: 2
 ---
 
 - Huginn 部署：查看 [deploy Huginn inside of Docker](https://github.com/huginn/huginn/blob/master/doc/docker/install.md) 和 [.env 设置](https://github.com/huginn/huginn/blob/master/.env.example)，或按下方的教程手动部署到服务器上，轻量使用推荐部署到 Docker。
-- Huginn 抓取教程：[RSS 进阶篇：Huginn - 真·为任意网页定制 RSS 源（PhantomJs 抓取）](https://newzone.top/_posts/2018-10-07-huginn_scraping_any_website.html)
+- Huginn 抓取教程：[RSS 进阶篇：Huginn - 真·为任意网页定制 RSS 源（PhantomJs 抓取）](https://newzone.top/posts/2018-10-07-huginn_scraping_any_website.html)
 
 ## 常用 Agent
 

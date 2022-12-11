@@ -27,7 +27,7 @@ order: 2
 - 将 Documents、Desktop 转移到 D 盘。
 - 任务栏：在任务栏底部右键单击，选择「任务栏设置」>「通知区域」>「选择哪些图标显示在任务栏上」；在同页面的「多显示器设置」中，取消「在所有显示器上显示任务栏」。
 - [清理导航栏](https://zhuanlan.zhihu.com/p/25942015)。
-- [设置系统强制关机](https://newzone.top/_posts/2017-09-02-forced_shutdown.html)，防止系统关机不成功。
+- [设置系统强制关机](https://newzone.top/posts/2017-09-02-forced_shutdown.html)，防止系统关机不成功。
 - Everything 注册右键搜索当前路径；右键清除。
   - win+r，regedit 打开注册表，打开路径 `HKEY_CLASSES_ROOT\Directory\Background\shell`。
   - 新建项，命名随意（即右键菜单显示的文字）-「Everything 搜索当前路径」。
@@ -38,7 +38,7 @@ order: 2
 
 ## 安装应用
 
-- [winstall](https://newzone.top/_posts/2022-03-21-winget_the_strongest_software_manager_for_windows.html) 批量安装应用；
+- [winstall](https://newzone.top/posts/2022-03-21-winget_the_strongest_software_manager_for_windows.html) 批量安装应用；
 - 电脑运行 Android 手机应用，[Win11 安卓子系统](https://www.iplaysoft.com/win11-wsa.html) (WSA) 安装；
 - Synology Drive：设置 NAS 本地备份；
 - Mircrosoft Store：Snipaste、微信 For Windows；

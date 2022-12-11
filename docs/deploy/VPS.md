@@ -104,7 +104,7 @@ location /xx1 {proxy_pass <https://xxx.com/;>}
 
 #404 前，将旧文章链接格式转为新的，使用绝对路径
 location ^~ /p{
-    rewrite ^/p/(.*)$  https://newzone.top/_posts/$1.html;
+    rewrite ^/p/(.*)$  https://newzone.top/posts/$1.html;
 }
 
 # huginn 设置中 location 添加 301 定向，兼容老路径链接
