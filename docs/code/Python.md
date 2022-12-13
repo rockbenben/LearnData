@@ -210,7 +210,9 @@ range 函数具有一些特性：
 - 如果 step 是负整数，则最后一个元素（start + i \_ step）大于 stop。
 - step 参数必须是非零整数，否则抛出 VauleError 异常。
 
-## [向列表添加元素](http://www.runoob.com/python/python-lists.html)
+## 向列表添加元素
+
+[向列表添加元素](http://www.runoob.com/python/python-lists.html)
 
 ```python
 list =[1,"xxxx",3.14,[1,3,3]]

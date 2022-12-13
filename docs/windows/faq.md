@@ -54,15 +54,19 @@ Windows 遇到不懂的问题，可以在 [Microsoft 支持社区](https://answe
 
 图标转换： [ConvertICO](https://convertico.com/) 将 png 图片转化为 ico 文件，从而自定义图标。
 
-### [Nativefier](https://github.com/jiahaog/nativefier/)
+### Pake
 
-利用开源的 Nativefier 能将网页转制成为一个 **可安装的** 桌面应用，支持 macOS 10.9+ / Windows / Linux 系统。其原理就是将网页利用 Electron 技术将网页内容封装起来，成为一个可执行、可安装的应用程序。
+[Pake](https://github.com/tw93/Pake) 用 Rust 打包网页生成很小的桌面 App，支持 Mac / Windows / Linux 系统，并提供热门网页的大包文件。
+
+### Nativefier
+
+利用开源的 [Nativefier](https://github.com/jiahaog/nativefier/) 能将网页转制成为一个 **可安装的** 桌面应用，支持 macOS 10.9+ / Windows / Linux 系统。其原理就是将网页利用 Electron 技术将网页内容封装起来，成为一个可执行、可安装的应用程序。
 
 然而这样的方式需要一些比较复杂的安装配置。由于 Nativefier 是 `Node.js` 编写的，所以不仅需要安装 `Node.js` 环境，还要安装 `npm` 包管理器，才可以通过 `npm install nativefier -g` 安装 Nativefier。安装之后 Nativefier 也只有命令行的交互方式，没有图形化界面。
 
-### [Web2Desk](https://desktop.appmaker.xyz/)
+### Web2Desk
 
-Web2Desk 让我们可以直接输入网页链接、应用名称和应用图标，然后经过其在服务器上面的构建，直接给我们提供 Windows、macOS 和 Linux 的原生安装程序的下载。
+[Web2Desk](https://desktop.appmaker.xyz/) 让我们可以直接输入网页链接、应用名称和应用图标，然后经过其在服务器上面的构建，直接给我们提供 Windows、macOS 和 Linux 的原生安装程序的下载。
 
 但测试中，用 Web2Desk 转换滴答清单 Web, 无法记录登陆状态，实用性较低。
 

@@ -86,9 +86,9 @@ Logseq 更改页面标题，会同步更改所有标签名。
 - TOC Generator 插件生成目录：`{{renderer :tocgen}}`。
 - `shift+左键` 将新页面打开在**右侧边栏**中。
 
-### [query](https://www.bilibili.com/video/BV1eq4y1N7Su)
+### query
 
-query 能按条件精准地找到结果，并动态更新在页面中，公式参考 [官方文档](https://docs.logseq.com/#/page/queries)。
+[query](https://www.bilibili.com/video/BV1eq4y1N7Su) 能按条件精准地找到结果，并动态更新在页面中，公式参考 [官方文档](https://docs.logseq.com/#/page/queries)。
 
 首先，在文本后方添加 tag，比如
 

@@ -23,13 +23,15 @@ order: 2
 
 ## 配置
 
-### [emoji](https://docsify.js.org/#/zh-cn/plugins?id=emoji)
+### docsify emoji
 
-emoji 插件在标题中使用容易出错，建议使用 `&#58;`。例如，原本是 `:100:`，替换为 `&#58;100:`。
+[emoji 插件](https://docsify.js.org/#/zh-cn/plugins?id=emoji) 在标题中使用容易出错，建议使用 `&#58;`。例如，原本是 `:100:`，替换为 `&#58;100:`。
 
 实际使用中，我直接复制 emoji，都能正常显示。
 
-## [本地命令](https://github.com/docsifyjs/docsify-cli)
+## 本地命令
+
+[docsify 本地命令](https://github.com/docsifyjs/docsify-cli):
 
 `<path>` 默认为当前路径，可使用子文件夹指定路径，如 `./docs` 或 `docs`。
 

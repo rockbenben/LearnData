@@ -64,11 +64,13 @@ icon: note
 
 LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保存路径和网站配置在 `docs` 文件夹。
 
-`docs/.vuepress` 存放网站配置文件。`docs/_post` 存放博客文章。`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你可以按范围或功能来新建文件夹存放笔记。
+`docs/.vuepress` 存放网站配置文件。`docs/_posts` 存放博客文章。`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你可以按范围或功能来新建文件夹存放笔记。
 
 `docs/README.md` 是默认主页，`docs/blog.md` 配置博客页面，`docs/intro.md` 是你的个人介绍。
 
 ![](http://tc.seoipo.com/2022-08-22-18-04-08.png "docs 路径结构")
+
+注意：VuePress2 从 beta.54 开始忽略文件夹名的前缀 `_`，比如博客路径为 `/_posts/`，转为网页后链接路径会是 `/posts/`。
 
 ### 配置文件
 

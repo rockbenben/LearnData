@@ -173,11 +173,11 @@ return
 
 键入热字串后，再加**空格**、或 **tab**、或**回车**，就可以触发缩写。
 
-## [AHK 使用样例](https://segmentfault.com/a/1190000004611125)
+## AHK 使用样例
 
 ### 神速激活/打开/隐藏程序
 
-`Win+C`激活 Chrome 状态切换：Chrome 没打开时 --> 打开；打开没激活状态时候 --> 激活；打开处在激活状态时候 ---> 隐藏。
+`Win+C`激活 Chrome 状态切换：Chrome 没打开时 --> 打开；打开没激活状态时候 --> 激活；打开处在激活状态时候 ---> 隐藏。^[[Win 下最爱效率利器:AutoHotKey](https://segmentfault.com/a/1190000004611125)]
 
 ```autohotkey
 #c::

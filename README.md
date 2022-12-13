@@ -71,11 +71,13 @@
 
 LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保存路径和网站配置在 `docs` 文件夹。
 
-`docs/.vuepress` 存放网站配置文件。`docs/_post` 存放博客文章。`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你可以按范围或功能来新建文件夹存放笔记。
+`docs/.vuepress` 存放网站配置文件。`docs/_posts` 存放博客文章。`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你可以按范围或功能来新建文件夹存放笔记。
 
 `docs/README.md` 是默认主页，`docs/blog.md` 配置博客页面，`docs/intro.md` 是你的个人介绍。
 
 ![](http://tc.seoipo.com/2022-08-22-18-04-08.png "docs 路径结构")
+
+注意：VuePress2 从 beta.54 开始忽略文件夹名的前缀 `_`，比如博客路径为 `/_posts/`，转为网页后链接路径会是 `/posts/`。
 
 ### 配置文件
 
@@ -199,6 +201,7 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 ## Features
 
 - [ ] 增加「阅读笔记」区块，该区块将用 docsify 管理，与 LearnData 文章区分离。
+- [ ] 是否使用 CHANGELOG.md 细化每个版本尖的区别？
 - [x] 增加文章互动区块，让读者能通过 emoji 简便与作者沟通。
 - [x] 看板娘：远程支持 api，也可使用本地文件。
 - [x] 样式调整：黑色主题调整深紫色；调整 TOC 规则。
