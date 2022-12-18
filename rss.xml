@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 17 Dec 2022 03:36:42 GMT</pubDate>
-    <lastBuildDate>Sat, 17 Dec 2022 03:36:42 GMT</lastBuildDate>
+    <pubDate>Sun, 18 Dec 2022 01:35:45 GMT</pubDate>
+    <lastBuildDate>Sun, 18 Dec 2022 01:35:45 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -302,42 +302,55 @@ scoop <span class="token function">install</span> ffmpeg
 <figure><img src="http://tc.seoipo.com/2022-09-04-11-53-20.png" alt="" tabindex="0" loading="lazy"><figcaption>丁老头进化旅程</figcaption></figure>
 <p>Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具，<strong>可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行</strong>，并在几秒内生成图像，无需预处理和后处理。</p>
 <p>体验 AI 绘图可借助在线工具 <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" target="_blank" rel="noopener noreferrer">Hugging Face</a>、<a href="https://beta.dreamstudio.ai/" target="_blank" rel="noopener noreferrer">DreamStudio</a> 或 <a href="https://wenxin.baidu.com/moduleApi/ernieVilg" target="_blank" rel="noopener noreferrer">百度文心</a>。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。</p>
-<p>如果想生成大量 AI 图片，可以通过 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Mac 用户建议选择 Stable Diffusion 的 lstein 分支，部署报错参考 <a href="https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore" target="_blank" rel="noopener noreferrer">InvokeAI 文档</a>，<strong>M1/M2 Mac</strong> 推荐使用更简便的 <a href="https://www.charl-e.com/" target="_blank" rel="noopener noreferrer">CHARL-E</a> 或 <a href="https://sspai.com/post/75682" target="_blank" rel="noopener noreferrer">DiffusionBee</a>。</p>
+<p>如果想生成大量 AI 图片，可以通过 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Mac 用户建议选择 Stable Diffusion 的 invoke 分支，部署报错参考 <a href="https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore" target="_blank" rel="noopener noreferrer">InvokeAI 文档</a>，<strong>M1/M2 Mac</strong> 推荐使用更简便的 <a href="https://www.charl-e.com/" target="_blank" rel="noopener noreferrer">CHARL-E</a> 或 <a href="https://sspai.com/post/75682" target="_blank" rel="noopener noreferrer">DiffusionBee</a>。</p>
 <figure><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" tabindex="0" loading="lazy"><figcaption>Stable Diffusion 部署流程</figcaption></figure>
 <p>本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。</p>
 <h2> Docker 环境配置</h2>
-<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1"> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>。下面我会介绍各自的启用方式，<strong>二选一即可</strong>，推荐使用子系统 WSL（占用系统盘 30G 的空间）。</a></p><a class="footnote-anchor" id="footnote-ref1">
+<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1"> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>，二选一即可，推荐使用子系统 WSL（占用系统盘 30G 的空间）。</a></p><a class="footnote-anchor" id="footnote-ref1">
 </a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 安装 WSL</h3>
 <p>在管理员 PowerShell 输入命令 <code>wsl --install</code>，之后终端会默认安装 Ubuntu。系统下载时间较长，注意别关机。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2"> 安装 Ubuntu 完成后，按提示设置 Ubuntu 账户和密码。</a></p><a class="footnote-anchor" id="footnote-ref2">
 </a><h3><a class="footnote-anchor" id="footnote-ref2"></a> 启用 Hyper-V</h3>
 <p>以管理员身份打开 PowerShell 控制台，输入命令 <code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All</code>。<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3"> 重启电脑后，将开启 Hyper-V。</a></p><a class="footnote-anchor" id="footnote-ref3">
-</a><h2><a class="footnote-anchor" id="footnote-ref3"></a> 配置 Stable Diffusion</h2>
+</a><h3><a class="footnote-anchor" id="footnote-ref3"></a> Linux 路径（Windows）</h3>
+<p>配置 WebUI Docker 要进入 Linux 环境，因此 Windows 用户需将其路径转换为 Linux 路径，Mac/Linux 用户可忽略本步。</p>
+<p>假设容器位于 <code>D:\Desktop\stable-diffusion-webui-docker</code>：</p>
+<ol>
+<li>把磁盘符号改为小写，转换为 <code>d:\Desktop\stable-diffusion-webui-docker</code></li>
+<li>添加 <code>/mnt/</code> 前缀，转换为 <code>/mnt/d:\Desktop\stable-diffusion-webui-docker</code>。因为 Windows 本地磁盘是挂载在 Linux 的 mnt 目录下的。</li>
+<li>将反斜扛 <code>\</code> 替换为 <code>/</code>。最终得到 Linux 路径 <code>/mnt/d:/Desktop/stable-diffusion-webui-docker</code>。</li>
+</ol>
+<h2> 配置 Stable Diffusion</h2>
+<h3> 安装 Docker Desktop</h3>
 <p>按平台选 <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener noreferrer">Docker Desktop</a> 版本，安装后点击左侧的 Add Extensions，推荐 Disk usage 扩展，便于管理 Docker 存储空间。</p>
-<figure><img src="http://tc.seoipo.com/2022-09-04-17-06-27.png" alt="" tabindex="0" loading="lazy"><figcaption>Docker Desktop 界面</figcaption></figure>
-<p>然后，将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 下载并解压到本地硬盘。或者，使用阿里云盘下载 <a href="https://www.aliyundrive.com/s/EKmK7MGrHdn" target="_blank" rel="noopener noreferrer">聚合版</a>。</p>
-<h3> 选择工具分支</h3>
-<p>目前 Stable Diffusion 有 hlky、auto、auto-cpu 和 lstein 四个分支。如果要更换分支，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。</p>
+<h3> 下载 WebUI Docker</h3>
+<p>然后，下载 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker 配置包</a> 或 <a href="https://www.aliyundrive.com/s/EKmK7MGrHdn" target="_blank" rel="noopener noreferrer">阿里云盘聚合版</a>，将其解压到指定路径。聚合版包括相关依赖，因此文件较大。之后更新 WebUI Docker，也是按上方步骤重新构建容器即可更新 Stable Diffusion。</p>
+<h3> 分支介绍</h3>
+<p>目前 Stable Diffusion 有 sygil、auto、auto-cpu 和 invoke 四个分支。如果要更换分支，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。原本的 hlkcy 分支更名为 sygil，原本的 lstein 分支更名为 invoke。</p>
 <ul>
-<li><strong>hlky</strong>（推荐）：界面直观，最高分辨率为 1024x1024，是最受欢迎的主题，镜像构建命令为 <code>docker compose --profile hlky up --build</code>。</li>
-<li><strong>auto</strong>：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 <code>docker compose --profile auto up --build</code>。</li>
-<li><strong>auto-cpu</strong>：唯一不依赖显卡的分支。如果没有符合要求的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。A 卡用户注意修改 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker" target="_blank" rel="noopener noreferrer">显卡设置</a>。</li>
-<li><strong>lstein</strong>：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 <code>docker compose --profile lstein up --build</code>。</li>
+<li><strong>sygil</strong>：界面直观，最高分辨率为 1024x1024，镜像构建命令为 <code>docker compose --profile sygil up --build</code>。</li>
+<li><strong>auto</strong>（推荐）：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 <code>docker compose --profile auto up --build</code>。默认使用 6GB 以上的显存，如果你的显卡内存较低，则将配置中的 <code>--medvram</code> 改为 <code>--lowvram</code>。A 卡用户注意修改 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker" target="_blank" rel="noopener noreferrer">显卡设置</a>。</li>
+<li><strong>auto-cpu</strong>：唯一不依赖显卡的分支。如果没有符合要求的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。</li>
+<li><strong>invoke</strong>：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 <code>docker compose --profile invoke up --build</code>。</li>
 </ul>
-<h3> 准备 Linux 路径</h3>
-<p>配置 Stable Diffusion WebUI Docker 后，进入 Linux 环境启动 Docker 容器。不过在启动 Docker 前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。</p>
-<p>Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 <code>/mnt/</code> 前缀，然后把磁盘符号改为小写，并将反斜扛 <code>\</code> 替换为 <code>/</code>。假设容器位于 <code>D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker</code>，转换为 Linux 路径则是 <code>/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>。（Mac 可忽略本段，直接使用自身路径。）</p>
-<h2> 启动 Stable Diffusion</h2>
-<p>准备好 Linux 路径后，启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入切换路径命令 <code>cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker</code>，进入 Stable Diffusion WebUI Docker 解压文件目录执行部署命令。</p>
+<h3> 构建 Stable Diffusion</h3>
+<p>启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入路径切换命令 <code>cd /mnt/d/Desktop/stable-diffusion-webui-docker</code>，该路径为 Stable Diffusion WebUI Docker 解压文件目录。然后，输入下方的部署命令。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token comment"># 自动下载采样模型和依赖包</span>
 <span class="token function">docker</span> compose <span class="token parameter variable">--profile</span> download up <span class="token parameter variable">--build</span>
 <span class="token comment"># 上方命令需要 20 分钟或更长，完成后执行镜像构建命令</span>
-<span class="token function">docker</span> compose <span class="token parameter variable">--profile</span> hlky up <span class="token parameter variable">--build</span>
-<span class="token comment"># hlky 是推荐分支，也可以选择 auto | auto-cpu | lstein</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>构建完成后，提示访问 <code>http://localhost:7860/</code>，你就可以在本地 AI 生成图片了。<sup class="footnote-ref"><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"></a></sup></p><a class="footnote-anchor" id="footnote-ref4">
-<figure><img src="http://tc.seoipo.com/2022-09-04-18-32-31.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-</a><p><a class="footnote-anchor" id="footnote-ref4">之后，打开 Docker Desktop 就会启动 Stable Diffusion。下载新版 </a><a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">配置文件</a> ，按上方步骤重新构建容器即可更新 Stable Diffusion。</p>
-<h2> 界面说明</h2>
-<p>接下来，我会介绍最流行的 hlky 界面，其他分支的主题界面略有不同，但功能并没有大的变化，如何更换分支看下方的常见问题。</p>
+
+<span class="token function">docker</span> compose <span class="token parameter variable">--profile</span> sygil up <span class="token parameter variable">--build</span>
+<span class="token comment"># auto 是功能最多的分支，可以选择 auto | auto-cpu | invoke | sygil | sygil-sl</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><img src="http://tc.seoipo.com/2022-09-04-18-32-31.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>构建完成后，提示访问 <code>http://localhost:7860/</code>，你就可以在本地电脑上用 AI 生成图片了。<sup class="footnote-ref"><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"></a></sup></p><a class="footnote-anchor" id="footnote-ref4">
+</a><h2><a class="footnote-anchor" id="footnote-ref4"></a> 使用说明</h2>
+<p>使用界面以 sygil 分支为例，其他分支的主题界面略有不同，但功能上并没有根本性差异。</p>
+<h3> 启动 Stable Diffusion</h3>
+<ol>
+<li>打开 Docker Desktop。</li>
+<li>在 Containers 中选中分支容器，点击启动。</li>
+<li>浏览器中访问 <code>http://localhost:7860/</code>。</li>
+</ol>
+<figure><img src="http://tc.seoipo.com/2022-09-04-17-06-27.png" alt="" tabindex="0" loading="lazy"><figcaption>Docker Desktop 界面</figcaption></figure>
 <h3> Text-to-Image</h3>
 <p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。风景、创意画等崇尚空间结构的画作类型时，优先推荐竖图或者横图。人像类画作推荐 1:1 的方图，否则可能会出现两个或者多个人脸的叠加现象。生成图片的分辨率是有限制的，可以用 Upscale 放大结果图片。</p>
 <figure><img src="http://tc.seoipo.com/2022-09-05-08-28-23.png" alt="" tabindex="0" loading="lazy"><figcaption>Text-to-Image 界面</figcaption></figure>
@@ -388,7 +401,7 @@ scoop <span class="token function">install</span> ffmpeg
 <p>goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k</p>
 </blockquote>
 <h2> Prompt matrix</h2>
-<p>Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。<sup class="footnote-ref"><a href="#footnote7">[7]</a><a class="footnote-anchor" id="footnote-ref7"></a></sup><a class="footnote-anchor" id="footnote-ref7"> 此时，批次数量的设置会被忽略。</a></p><a class="footnote-anchor" id="footnote-ref7">
+<p>Prompt matrix 是 sygil 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。<sup class="footnote-ref"><a href="#footnote7">[7]</a><a class="footnote-anchor" id="footnote-ref7"></a></sup><a class="footnote-anchor" id="footnote-ref7"> 此时，批次数量的设置会被忽略。</a></p><a class="footnote-anchor" id="footnote-ref7">
 </a><h2><a class="footnote-anchor" id="footnote-ref7"></a> Textual Inversion</h2>
 <p>Textual Inversion（文本倒置）是 auto/auto-cpu 分支提供的功能，可以个人定制单词在模型中的含义。比如大众模型中医生多是白人男性，而我们可以输入 5 张亚洲女性照片并将其与 doctor 关联，经过 Textual Inversion 处理后的模型生成的医生形象将以亚洲女性为主。<sup class="footnote-ref"><a href="#footnote8">[8]</a><a class="footnote-anchor" id="footnote-ref8"></a></sup></p><a class="footnote-anchor" id="footnote-ref8">
 <p>Textual Inversion 定制流程：</p>
@@ -416,7 +429,7 @@ wsl <span class="token parameter variable">-l</span> <span class="token paramete
 </a><h3><a class="footnote-anchor" id="footnote-ref9"></a> FileNotFoundError</h3>
 <p>再次架构容器时报错 <code>FileNotFoundError: [Errno 2] No such file or directory: '/models/model.ckpt'</code>，这是架构位置错误导致的。此时，我们需要检查是否通过 WSL 输入的架构命令，并且 Stable Diffusion WebUI Docker 解压路径是否配置正确。</p>
 <h3> 采样模型</h3>
-<p>采样模型是 AI 绘画的核心。2022.09.10 支持自动下载采样模型，下方列表仅做参考。</p>
+<p>采样模型是 AI 绘画的核心。2022.09.10 已支持自动下载采样模型，下方列表仅做参考。</p>
 <ul>
 <li><a href="https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media" target="_blank" rel="noopener noreferrer">Stable Diffusion v1.4 (4GB)</a>, 将压缩包文件重命名为 <code>model.ckpt</code>。</li>
 <li>(可选) <a href="https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.4.pth" target="_blank" rel="noopener noreferrer">GFPGANv1.4.pth (340MB)</a>。</li>
@@ -441,7 +454,7 @@ wsl <span class="token parameter variable">-l</span> <span class="token paramete
 </li>
 <li id="footnote6" class="footnote-item"><p><a href="https://www.guokr.com/article/462587/" target="_blank" rel="noopener noreferrer">最时髦的 AI 画画，一文包教包会</a> <a href="#footnote-ref6" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote7" class="footnote-item"><p><a href="https://github.com/hlky/stable-diffusion#prompt-matrix" target="_blank" rel="noopener noreferrer">stable-diffusion Prompt matrix</a> <a href="#footnote-ref7" class="footnote-backref">↩︎</a></p>
+<li id="footnote7" class="footnote-item"><p><a href="https://github.com/sygil/stable-diffusion#prompt-matrix" target="_blank" rel="noopener noreferrer">stable-diffusion Prompt matrix</a> <a href="#footnote-ref7" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="footnote8" class="footnote-item"><p><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Textual-Inversion" target="_blank" rel="noopener noreferrer">Textual Inversion</a> <a href="#footnote-ref8" class="footnote-backref">↩︎</a></p>
 </li>
