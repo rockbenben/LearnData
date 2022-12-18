@@ -18,7 +18,7 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 体验 AI 绘图可借助在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion)、[DreamStudio](https://beta.dreamstudio.ai/) 或 [百度文心](https://wenxin.baidu.com/moduleApi/ernieVilg)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。
 
-如果想生成大量 AI 图片，可以通过 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Mac 用户建议选择 Stable Diffusion 的 lstein 分支，部署报错参考 [InvokeAI 文档](https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore)，**M1/M2 Mac** 推荐使用更简便的 [CHARL-E](https://www.charl-e.com/) 或 [DiffusionBee](https://sspai.com/post/75682)。
+如果想生成大量 AI 图片，可以通过 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Mac 用户建议选择 Stable Diffusion 的 invoke 分支，部署报错参考 [InvokeAI 文档](https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore)，**M1/M2 Mac** 推荐使用更简便的 [CHARL-E](https://www.charl-e.com/) 或 [DiffusionBee](https://sspai.com/post/75682)。
 
 ![](http://tc.seoipo.com/2022-09-05-16-22-45.png "Stable Diffusion 部署流程")
 
@@ -26,7 +26,7 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 ## Docker 环境配置
 
-本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。^[[Windows Docker 安装](https://www.runoob.com/docker/windows-docker-install.html)] 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，**配置 WSL 或是启用 Hyper-V**。下面我会介绍各自的启用方式，**二选一即可**，推荐使用子系统 WSL（占用系统盘 30G 的空间）。
+本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。^[[Windows Docker 安装](https://www.runoob.com/docker/windows-docker-install.html)] 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，**配置 WSL 或是启用 Hyper-V**，二选一即可，推荐使用子系统 WSL（占用系统盘 30G 的空间）。
 
 ### 安装 WSL
 
@@ -36,50 +36,63 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 以管理员身份打开 PowerShell 控制台，输入命令 `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All`。^[[在 Windows 10 上安装 Hyper-V](https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-hyper-v-using-powershell)] 重启电脑后，将开启 Hyper-V。
 
+### Linux 路径（Windows）
+
+配置 WebUI Docker 要进入 Linux 环境，因此 Windows 用户需将其路径转换为 Linux 路径，Mac/Linux 用户可忽略本步。
+
+假设容器位于 `D:\Desktop\stable-diffusion-webui-docker`：
+
+1. 把磁盘符号改为小写，转换为 `d:\Desktop\stable-diffusion-webui-docker`
+2. 添加 `/mnt/` 前缀，转换为 `/mnt/d:\Desktop\stable-diffusion-webui-docker`。因为 Windows 本地磁盘是挂载在 Linux 的 mnt 目录下的。
+3. 将反斜扛 `\` 替换为 `/`。最终得到 Linux 路径 `/mnt/d:/Desktop/stable-diffusion-webui-docker`。
+
 ## 配置 Stable Diffusion
+
+### 安装 Docker Desktop
 
 按平台选 [Docker Desktop](https://docs.docker.com/get-docker/) 版本，安装后点击左侧的 Add Extensions，推荐 Disk usage 扩展，便于管理 Docker 存储空间。
 
-![](http://tc.seoipo.com/2022-09-04-17-06-27.png "Docker Desktop 界面")
+### 下载 WebUI Docker
 
-然后，将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 下载并解压到本地硬盘。或者，使用阿里云盘下载 [聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)。
+然后，下载 [Stable Diffusion WebUI Docker 配置包](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 或 [阿里云盘聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)，将其解压到指定路径。聚合版包括相关依赖，因此文件较大。之后更新 WebUI Docker，也是按上方步骤重新构建容器即可更新 Stable Diffusion。
 
-### 选择工具分支
+### 分支介绍
 
-目前 Stable Diffusion 有 hlky、auto、auto-cpu 和 lstein 四个分支。如果要更换分支，则更改镜像构建命令 `docker compose --profile [ui] up --build`，将 `[ui]` 替换为所需的镜像名即可。
+目前 Stable Diffusion 有 sygil、auto、auto-cpu 和 invoke 四个分支。如果要更换分支，则更改镜像构建命令 `docker compose --profile [ui] up --build`，将 `[ui]` 替换为所需的镜像名即可。原本的 hlkcy 分支更名为 sygil，原本的 lstein 分支更名为 invoke。
 
-- **hlky**（推荐）：界面直观，最高分辨率为 1024x1024，是最受欢迎的主题，镜像构建命令为 `docker compose --profile hlky up --build`。
-- **auto**：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 `docker compose --profile auto up --build`。
-- **auto-cpu**：唯一不依赖显卡的分支。如果没有符合要求的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 `docker compose --profile auto-cpu up --build`。A 卡用户注意修改 [显卡设置](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker)。
-- **lstein**：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 `docker compose --profile lstein up --build`。
+- **sygil**：界面直观，最高分辨率为 1024x1024，镜像构建命令为 `docker compose --profile sygil up --build`。
+- **auto**（推荐）：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 `docker compose --profile auto up --build`。默认使用 6GB 以上的显存，如果你的显卡内存较低，则将配置中的 `--medvram` 改为 `--lowvram`。A 卡用户注意修改 [显卡设置](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker)。
+- **auto-cpu**：唯一不依赖显卡的分支。如果没有符合要求的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 `docker compose --profile auto-cpu up --build`。
+- **invoke**：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 `docker compose --profile invoke up --build`。
 
-### 准备 Linux 路径
+### 构建 Stable Diffusion
 
-配置 Stable Diffusion WebUI Docker 后，进入 Linux 环境启动 Docker 容器。不过在启动 Docker 前，我们需拥有 Stable Diffusion 的 Linux/Mac 路径。
-
-Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 Windows 的 Linux 路径需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设容器位于 `D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker`，转换为 Linux 路径则是 `/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`。（Mac 可忽略本段，直接使用自身路径。）
-
-## 启动 Stable Diffusion
-
-准备好 Linux 路径后，启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入切换路径命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`，进入 Stable Diffusion WebUI Docker 解压文件目录执行部署命令。
+启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入路径切换命令 `cd /mnt/d/Desktop/stable-diffusion-webui-docker`，该路径为 Stable Diffusion WebUI Docker 解压文件目录。然后，输入下方的部署命令。
 
 ```shell
 # 自动下载采样模型和依赖包
 docker compose --profile download up --build
 # 上方命令需要 20 分钟或更长，完成后执行镜像构建命令
-docker compose --profile hlky up --build
-# hlky 是推荐分支，也可以选择 auto | auto-cpu | lstein
-```
 
-构建完成后，提示访问 `http://localhost:7860/`，你就可以在本地 AI 生成图片了。^[[Setup Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup)]
+docker compose --profile sygil up --build
+# auto 是功能最多的分支，可以选择 auto | auto-cpu | invoke | sygil | sygil-sl
+```
 
 ![](http://tc.seoipo.com/2022-09-04-18-32-31.png)
 
-之后，打开 Docker Desktop 就会启动 Stable Diffusion。下载新版 [配置文件](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) ，按上方步骤重新构建容器即可更新 Stable Diffusion。
+构建完成后，提示访问 `http://localhost:7860/`，你就可以在本地电脑上用 AI 生成图片了。^[[Setup Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup)]
 
-## 界面说明
+## 使用说明
 
-接下来，我会介绍最流行的 hlky 界面，其他分支的主题界面略有不同，但功能并没有大的变化，如何更换分支看下方的常见问题。
+使用界面以 sygil 分支为例，其他分支的主题界面略有不同，但功能上并没有根本性差异。
+
+### 启动 Stable Diffusion
+
+1. 打开 Docker Desktop。
+2. 在 Containers 中选中分支容器，点击启动。
+3. 浏览器中访问 `http://localhost:7860/`。
+
+  ![](http://tc.seoipo.com/2022-09-04-17-06-27.png "Docker Desktop 界面")
 
 ### Text-to-Image
 
@@ -153,7 +166,7 @@ negative prompt（反向描述）可以在 auto/auto-cpu 分支中设置，避�
 
 ## Prompt matrix
 
-Prompt matrix 是 hlky 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。^[[stable-diffusion Prompt matrix](https://github.com/hlky/stable-diffusion#prompt-matrix)] 此时，批次数量的设置会被忽略。
+Prompt matrix 是 sygil 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。^[[stable-diffusion Prompt matrix](https://github.com/sygil/stable-diffusion#prompt-matrix)] 此时，批次数量的设置会被忽略。
 
 <BiliBili bvid="BV1YP411V7vV" />
 
@@ -208,7 +221,7 @@ Docker 容器原本运行正常，端口访问突然被拒绝了，显示 `Error
 
 ### 采样模型
 
-采样模型是 AI 绘画的核心。2022.09.10 支持自动下载采样模型，下方列表仅做参考。
+采样模型是 AI 绘画的核心。2022.09.10 已支持自动下载采样模型，下方列表仅做参考。
 
 - [Stable Diffusion v1.4 (4GB)](https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media), 将压缩包文件重命名为 `model.ckpt`。
 - (可选) [GFPGANv1.4.pth (340MB)](https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.4.pth)。
