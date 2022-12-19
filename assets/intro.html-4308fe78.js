@@ -1,1 +1,0 @@
-import{ae as t,G as o,H as n,F as e}from"./framework-146c82c7.js";const s={},_=e("p",null,"互联网广告人，",-1),c=e("p",null,"迷信新工具、新方法，",-1),l=e("p",null,"坚持批评与自我批评，对每一个机遇保持开放的态度，勇于尝试新鲜的事物，",-1),r=e("p",null,"热衷于研究开源软件、心理学理论，定期分享探索成果。",-1),a=[_,c,l,r];function i(d,u){return o(),n("div",null,a)}const p=t(s,[["render",i],["__file","intro.html.vue"]]);export{p as default};
