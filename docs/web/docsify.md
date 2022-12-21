@@ -11,7 +11,7 @@ order: 2
 
 ## 插件
 
-[docsify 插件列表](https://docsify-preview.vercel.app/#/zh-cn/awesome?id=plugins)：
+[docsify 插件列表](https://github.com/docsifyjs/awesome-docsify#plugins)：
 
 - [x] [docsify 笔记类参考](https://notebook.js.org/#/README)：看板娘，多级页面，页面点击效果，网站运行时间。
 - [x] [docsify-count](https://github.com/827652549/docsify-count)：docsify 的字数和阅读时长插件。

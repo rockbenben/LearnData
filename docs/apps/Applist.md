@@ -87,7 +87,7 @@ Windows 自用软件，以开源软件为主。
 
 资源管理器：[One Commander](https://www.onecommander.com/) & [Q-Dir](https://www.softwareok.com/?seite=Freeware/Q-Dir) & QTTabBar（Win10） ~~& 360 文件夹 & Clover（UI 不好看）~~
 
-浏览器：Chrome & Firefox(资源) & Brave(工具/书签) & Edge(移动端) ~~& Vivaldi & Tor & 猎豹 & 360 & 搜狗 & Maxthon & 百度~~
+浏览器：Chrome & Firefox(资源) & Brave(工具/书签) & Edge(移动端) & Tor ~~& Vivaldi & Tor & 猎豹 & 360 & 搜狗 & Maxthon & 百度~~
 
 输入法：小狼毫 & `Win+H`（系统语音输入）~~& QuickCut & 讯飞语记 & 微软输入法 & 影子输入法 & 搜狗输入法 & 讯飞输入法 & 百度输入法~~
 

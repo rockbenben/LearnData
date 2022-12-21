@@ -63,6 +63,7 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 - [Home Assistant](https://www.home-assistant.io/)：开源家庭自动化平台，可自定义集中管理各品牌的智能家居设备。米家设备需使用 hacs 下的集成 [Xiaomi Miot Auto](../family/HomeAutomation.html#home-assistant)。
 - [Monica](https://github.com/monicahq/monica)：Monica 允许人们记录所有关于朋友和家人的重要事情。喜欢和他们一起的活动。你最后一次打电话给某人的时候，你们谈了些什么。它会帮助你记住他们孩子的名字和年龄。它还能提醒你打电话给一个很久没联系的人。Monica 的容器设置查看 [Monica Docker](https://github.com/monicahq/docker)。
 - [supermanito/Helloworld](https://supermanito.github.io/Helloworld/#/)：京东签到等脚本，功能很强大，没怎么研究。
+- [ubuntu-desktop-lxde-vnc](https://registry.hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc)：能在 Docker 上运行的 Ubuntu 桌面版，适合挂载要长期运行的程序。测试 OBS 时，对内存要求不高，但 CPU 直冲 100%，fps 只有 7。
 
 ### 待了解
 
