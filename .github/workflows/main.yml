@@ -30,13 +30,12 @@ jobs:
           node-version: 18
           cache: pnpm
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
+      # 将读书笔记复制到静态页路径，然后构建页面
       - name: Build Docs
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
+          pnpm cpx "docs/reading/**" docs/.vuepress/public/reading
           pnpm run docs:build
           > docs/.vuepress/dist/.nojekyll
 
