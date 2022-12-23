@@ -1,0 +1,3 @@
+- [🚀 LearnData](https://newzone.top/)
+- [📝 博客文章](https://newzone.top/blog.html)
+- [🔨 工具收藏](https://nav.newzone.top/)
