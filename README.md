@@ -89,7 +89,7 @@ LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保
 - `theme.ts` 对主题和插件进行配置，[评论插件](https://newzone.top/web/Comments.html) 设置亦在此文件。
 - `templateBuild.html` 是网页模板，调整网站关键词和第三方统计代码。
 
-注意：LearnData 默认使用了 algolia 全文搜索，如果你没设置 Docsearch 爬虫的话，需删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块。删除后，站点会将页面标题和小标题作为搜索索引。
+注意：LearnData 默认使用了 algolia 全文搜索。如果你没使用 algolia 爬虫，则删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块，网站会启用页面标题节点作为搜索索引。
 
 ### 看板娘
 

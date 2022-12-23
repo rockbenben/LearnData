@@ -29,7 +29,7 @@ export default navbar([
     prefix: "/",
     children: [
       "apps/Applist",
-      "apps/AppNotes",
+      "apps/ChatGPT",
       "apps/Chrome",
       {
         text: "服务/系统",
