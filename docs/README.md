@@ -64,7 +64,7 @@ icon: note
 
 LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保存路径和网站配置在 `docs` 文件夹。
 
-`docs/.vuepress` 存放网站配置文件。`docs/_posts` 存放博客文章。`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你可以按范围或功能来新建文件夹存放笔记。
+`docs/.vuepress` 存放网站配置文件。`docs/_posts` 存放博客文章，`docs/reading` 存放读书笔记。`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你可以按范围或功能来新建文件夹存放笔记。
 
 `docs/README.md` 是默认主页，`docs/blog.md` 配置博客页面，`docs/intro.md` 是你的个人介绍。
 
@@ -94,6 +94,19 @@ LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/l
 
 - 将 `docs\.vuepress\public\live2d-widget\autoload.js` 文件第三行的 `const live2d_path = "/live2d-widget/"` 修改为 `const live2d_path = "/yyy/live2d-widget/"`。
 - 将 `docs\.vuepress\templateBuild.html` 文件中看板娘区块代码 `<script src="/live2d-widget/autoload.js">` 修改为 `<script src="/yyy/live2d-widget/autoload.js">`。
+
+### 读书笔记
+
+读书笔记中会有大量原文引用，这与 LearnData 将知识点精简化的初衷并不相符。为了避免增加知识点的使用难度，读书笔记使用 docsify 来构建，并统一放置于 `docs\reading`。该路径下的文件不会被转为 html 文件，而是在静态页面生成完毕后，被自动复制到静态网站下完成 docsify 页面构建和独立的读书笔记搜索接口。
+
+如果你没部署 Waline，也不需要阅读量统计和评论区，可删除 `docs\reading\index.html` 中的 Waline 区块。
+
+```javascript
+waline: {
+   serverURL: "https://waline.newzone.top",
+   ...
+}
+```
 
 ### 本地图片引用
 

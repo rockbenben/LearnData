@@ -1,8 +1,13 @@
----
-article: false
-title: 读书方法
-icon: read
----
+# 读书笔记
+
+- 书单：Notion 数据库管理。
+- 汇总：LearnData 读书笔记。
+  - Calibre：管理所有电子书，阅读时选择「连接/共享」>「启动内容服务器」，可对 EPUB/MOBI 作笔记。
+  - Logseq：对历史、心理等提升类 PDF 进行笔记。
+
+后续考虑参考 [郭飞书单](https://www.guofei.site/reading/#/) 来进行自动抓取字数与书单列表。
+
+## 阅读技巧
 
 阅读技巧：[戴雨森阅读法](https://zhuanlan.zhihu.com/p/25858189)、雪球速读法
 
@@ -30,12 +35,6 @@ icon: read
 [2.4 如何提升信息处理速度 - 少数派](https://sspai.com/post/53852)
 
 [3.5 创建你的信息数据库 - 少数派](https://sspai.com/post/54065)
-
-## 电子书
-
-历史、心理等提升类书籍以 PDF 为主，使用 Logseq 作读书笔记。
-
-Calibre 管理所有电子书，选择「连接/共享」>「启动内容服务器」，并对 EPUB/MOBI 作笔记。
 
 ## 费曼技巧
 
