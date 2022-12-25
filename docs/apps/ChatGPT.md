@@ -5,9 +5,9 @@ icon: creative
 order: 3
 ---
 
-ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。以下是我按使用领域将 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) 划分的调校词。
+ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。客户端推荐 [lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases)，可插入 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)。为了能找到所需的 prompts，我重新将他们按领域划分。
 
-使用 Tip：
+ChatGPT 使用 Tip：
 
 - 如果你想获取中文回复，则在倒数第二句插入条件 `Reply in Chinese.`。
 - 调校词部分继续使用英文以保持描述精度，而最后一句的定制条件可以使用中文。
@@ -41,6 +41,7 @@ ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。以
 - 格言作者（[Gnomist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-gnomist)）
 - 箴言书（[Aphorism Book](https://github.com/f/awesome-chatgpt-prompts#act-as-an-aphorism-book)）：按要求输出各类名人名言。
 - 疯子（[Lunatic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-lunatic)）：随机生成毫无逻辑的句子
+- 花式标题生成器（[Fancy Title Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fancy-title-generator)）
 - 写作助手（[AI Writing Tutor](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-writing-tutor)）：使用自然语言处理来改进写作，但输入后提示不能修改文档，待后续跟进。
 - 抄袭检查器（[Plagiarism Checker](https://github.com/f/awesome-chatgpt-prompts#act-as-a-plagiarism-checker)）
 
@@ -54,9 +55,12 @@ ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。以
 ### 趣味知识
 
 - 解梦（[Dream Interpreter](https://github.com/f/awesome-chatgpt-prompts#act-as-a-dream-interpreter)）：对你描述的梦境进行解读。
+- 占星家（[Astrologer](https://github.com/f/awesome-chatgpt-prompts#act-as-an-astrologer)）
 - 角色扮演-电影/书籍/任何东西（['Character' from 'Movie/Book/Anything'](https://github.com/f/awesome-chatgpt-prompts#act-as-character-from-moviebookanything)）
+  - 海绵宝宝的神奇海螺（[Spongebob's Magic Conch Shell](https://github.com/f/awesome-chatgpt-prompts#act-as-spongebobs-magic-conch-shell)）
 - 谬误发现者（[Fallacy Finder](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fallacy-finder)）：发掘语言中的逻辑漏洞，比如名人推荐的洗发水为什么不一定可信。
 - DIY 专家（[DIY Expert](https://github.com/f/awesome-chatgpt-prompts#act-as-a-diy-expert)）：DIY 家居、手工品
+- 魔术师（[Magician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-magician)）
 - 艺术顾问（[Artist Advisor](https://github.com/f/awesome-chatgpt-prompts#act-as-an-artist-advisor)）：为你的画画、作曲、照相等提供意见。
 
 ### 生活顾问
@@ -109,6 +113,7 @@ ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。以
 - 前端开发（[Senior Frontend Developer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-senior-frontend-developer)）
 - 用户体验/用户界面开发人员（[UX/UI Developer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-uxui-developer)）
 - 网页设计顾问（[Web Design Consultant](https://github.com/f/awesome-chatgpt-prompts#act-as-a-web-design-consultant)）
+- 智能域名生成器（[Smart Domain Name Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-smart-domain-name-generator)）
 
 ### 程序员
 
@@ -129,12 +134,19 @@ ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。以
 - Linux 终端（[Linux Terminal](https://github.com/f/awesome-chatgpt-prompts#act-as-a-linux-terminal)）
 - JavaScript 控制台（[JavaScript Console](https://github.com/f/awesome-chatgpt-prompts#act-as-a-javascript-console)）
 - SQL 终端（[SQL terminal](https://github.com/f/awesome-chatgpt-prompts#act-as-a-sql-terminal)）
+- Solr 搜索引擎（[Solr Search Engine](https://github.com/f/awesome-chatgpt-prompts#act-as-a-solr-search-engine)）
 
 ## 工具
 
-### 英语
+### 语言/翻译
 
 - 英语翻译或修改（[English Translator and Improver](https://github.com/f/awesome-chatgpt-prompts#act-as-an-english-translator-and-improver)）：将其他语言翻译为英语，或改进你提供的英语句子。
+- 语言生成器（[New Language Creator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-new-language-creator)）：用 AI 新造的语言来替代你给出的语言。
+- 密码生成器（[Password Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-password-generator)）
+
+- 圣经解释器（[Biblical Translator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-biblical-translator)）：用圣经中的文字与你进行交谈。
+- 莫斯电码翻译（[Morse Code Translator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-morse-code-translator)）
+- 表情符号翻译器（[Emoji Translator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-emoji-translator)）：将输入文字翻译为表情符号。
 - 英语发音助手（[English Pronunciation Helper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-english-pronunciation-helper)）：用你指定语言字母来英语注音，比如汉语拼音。
 
 ### AI Prompt
@@ -142,33 +154,26 @@ ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。以
 - 提示语生成器（[Prompt Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-prompt-generator)）
 - Midjourney 提示（[Midjourney Prompt Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-midjourney-prompt-generator)）
 
+### 导览
+
+- 旅游指南（[Travel Guide](https://github.com/f/awesome-chatgpt-prompts#act-as-a-travel-guide)）
+- 数字艺术馆导游（[Digital Art Gallery Guide](https://github.com/f/awesome-chatgpt-prompts#act-as-a-digital-art-gallery-guide)）
+- 汽车导航（[Car Navigation System](https://github.com/f/awesome-chatgpt-prompts#act-as-a-car-navigation-system)）
+
 ### 其他工具
+
+- 符号设计（[Ascii Artist](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ascii-artist)）：使用 Ascii 符号设计不同图像
+- SVG 设计（[SVG designer](https://github.com/f/awesome-chatgpt-prompts#act-as-an-svg-designer)）：如果提示错误，则删除 `Do not put the markdown inside a code block. Send only the markdown, so no text.`。
 
 - Excel 工作表（[Excel Sheet](https://github.com/f/awesome-chatgpt-prompts#act-as-an-excel-sheet)）
 - 填空题生成器（[Fill in the Blank Worksheets Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fill-in-the-blank-worksheets-generator)）：按条件生成填空题。
 
-- 智能域名生成器（[Smart Domain Name Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-smart-domain-name-generator)）
-- 花式标题生成器（[Fancy Title Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fancy-title-generator)）
-- 表情符号翻译器（[Emoji Translator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-emoji-translator)）：将输入文字翻译为表情符号。
-
+- 井字棋（[Tic-Tac-Toe Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tic-tac-toe-game)）
 - 文本冒险游戏（[Text Based Adventure Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-text-based-adventure-game)）
 - 模拟 AI（[AI Trying to Escape the Box](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-trying-to-escape-the-box)）
 
 - 科学数据可视化（[Scientific DatVisualizer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-scientific-data-visualizer)）
-- 汽车导航（[Car Navigation System](https://github.com/f/awesome-chatgpt-prompts#act-as-a-car-navigation-system)）
-
-- 旅游指南（[Travel Guide](https://github.com/f/awesome-chatgpt-prompts#act-as-a-travel-guide)）
-- 数字艺术馆导游（[Digital Art Gallery Guide](https://github.com/f/awesome-chatgpt-prompts#act-as-a-digital-art-gallery-guide)）
-
-- 圣经解释器（[Biblical Translator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-biblical-translator)）：用圣经中的文字与你进行交谈。
-
-- 符号设计（[Ascii Artist](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ascii-artist)）：使用 Ascii 符号设计不同图像
-- SVG 设计（[SVG designer](https://github.com/f/awesome-chatgpt-prompts#act-as-an-svg-designer)）：如果提示错误，则删除 `Do not put the markdown inside a code block. Send only the markdown, so no text.`。
 - 文本浏览器（[Web Browser](https://github.com/f/awesome-chatgpt-prompts#act-as-a-web-browser)）：以文本方式输入网址的结果（非实时）。
-
-- 井字棋（[Tic-Tac-Toe Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tic-tac-toe-game)）
-- 密码生成器（[Password Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-password-generator)）
-- 莫斯电码翻译（[Morse Code Translator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-morse-code-translator)）
 
 ## 行业顾问
 
@@ -176,6 +181,7 @@ ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。以
 
 - 职位面试官（[position Interviewer](https://github.com/f/awesome-chatgpt-prompts#act-as-position-interviewer)）
 - 广告方案（[Advertiser](https://github.com/f/awesome-chatgpt-prompts#act-as-an-advertiser)）
+- 商业企划（[Startup Idea Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-startup-idea-generator)）
 - 社交媒体经理（[Social MediManager](https://github.com/f/awesome-chatgpt-prompts#act-as-a-social-media-manager)）
 - KOL/社交媒体影响者（[Social MediInfluencer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-social-media-influencer)）
 - 招聘人员（[Recruiter](https://github.com/f/awesome-chatgpt-prompts#act-as-a-recruiter)）
@@ -197,26 +203,24 @@ ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。以
 - 古典音乐作曲家（[Classical Music Composer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-classical-music-composer)）
 - 说唱歌手（[Rapper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-rapper)）
 
-### 其他
+### 金融
 
-- 法律顾问（[Legal Advisor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-legal-advisor)）：由 chatGPT 提供
-- 地产代理（[Real Estate Agent](https://github.com/f/awesome-chatgpt-prompts#act-as-a-real-estate-agent)）
 - 会计师（[Accountant](https://github.com/f/awesome-chatgpt-prompts#act-as-an-accountant)）
 - 金融分析师（[Financial Analyst](https://github.com/f/awesome-chatgpt-prompts#act-as-a-financial-analyst)）
 - 投资经理（[Investment Manager](https://github.com/f/awesome-chatgpt-prompts#act-as-an-investment-manager)）
 
+### 体育
+
 - 足球解说（[Football Commentator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-football-commentator)）
 - 国际象棋（[Chess Player](https://github.com/f/awesome-chatgpt-prompts#act-as-an-chess-player)）
 
-- 魔术师（[Magician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-magician)）
-- 占星家（[Astrologer](https://github.com/f/awesome-chatgpt-prompts#act-as-an-astrologer)）
-- 宠物行为学家（[Pet Behaviorist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-pet-behaviorist)）
-- 汽车修理工（[Automobile Mechanic](https://github.com/f/awesome-chatgpt-prompts#act-as-an-automobile-mechanic)）
+### 其他
 
 - 花店老板（[Florist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-florist)）
 - 茶艺师（[Tea-Taster](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tea-taster)）
 - 室内装饰师（[Interior Decorator](https://github.com/f/awesome-chatgpt-prompts#act-as-an-interior-decorator)）
 
-- 生成指定文章的摘要。
-
-ChatGPT 客户端推荐 [chatgpt-desktop](https://github.com/sonnylazuardi/chatgpt-desktop)。
+- 宠物行为学家（[Pet Behaviorist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-pet-behaviorist)）
+- 汽车修理（[Automobile Mechanic](https://github.com/f/awesome-chatgpt-prompts#act-as-an-automobile-mechanic)）
+- 地产代理（[Real Estate Agent](https://github.com/f/awesome-chatgpt-prompts#act-as-a-real-estate-agent)）
+- 法律顾问（[Legal Advisor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-legal-advisor)）：由 chatGPT 提供
