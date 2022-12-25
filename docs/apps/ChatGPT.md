@@ -5,7 +5,7 @@ icon: creative
 order: 3
 ---
 
-ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。客户端推荐 [lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases)，可插入 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)。为了能找到所需的 prompts，我重新将他们按领域划分。
+ChatGPT 不止是对话工具，更能在专业领域为我们提供建议。客户端推荐 [lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases)，可插入 ChatGPT Prompts。为了能更简单的找到调校词，我按领域作了 ChatGPT 功能表，会随 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) 而更新。
 
 ChatGPT 使用 Tip：
 
