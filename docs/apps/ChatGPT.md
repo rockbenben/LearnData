@@ -5,12 +5,14 @@ icon: creative
 order: 3
 ---
 
-ChatGPT 是由 OpenAI 发布的聊天机器人模型，但它不仅仅是对话聊天工具，更能在专业领域为我们提供有效的建议。我按领域作了 ChatGPT 功能表，其中的内容会随 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) 同步更新。客户端推荐 [lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases)，它可实现调校词的快速插入。
+ChatGPT 是由 OpenAI 发布的聊天机器人模型，但它不仅仅是对话聊天工具，更能在专业领域为我们提供有效的建议。客户端推荐使用 [lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases)，它支持全平台，并能实现调校词的快速插入。
 
-ChatGPT 使用 Tips：
+我按领域制作了 ChatGPT 功能表，内容会随 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) 同步更新。在下方页面找到你需要的功能，然后点击括号中的链接，复制引用区的灰色文字，最后将其复制到 ChatGPT 即可得到指定的领域建议输出。在同一个对话中，调校词只需输入一次。
+
+使用 Tips：
 
 - 如果你想获取中文回复，则在倒数第二句插入条件 `Reply in Chinese.`。
-- 调校词部分继续使用英文以保持描述精度，而最后一句的定制条件可以使用中文。
+- 调校词使用英文可保持描述精度，而最后一句的定制条件可以使用任意语言，包括中文。
 - `Too many requests in 1 hour` 报错，可通过切换 IP 并刷新浏览器来恢复。
 
 ## 文字
@@ -32,7 +34,7 @@ ChatGPT 使用 Tips：
 - 电影评论（[Movie Critic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-movie-critic)，[Film Critic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-film-critic)）
 - 科技博主（[Tech Writer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tech-writer)）
 - 科技评论（[Tech Reviewer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tech-reviewer)）：评价技术硬件
-- 美食评论（[Food Critic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-food-critic)）：由 chatGPT 提供
+- 美食评论（[Food Critic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-food-critic)）：由 ChatGPT 提供
 - 期刊评审（[Journal Reviewer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-journal-reviewer)）
 
 ### 写作辅助
@@ -49,7 +51,7 @@ ChatGPT 使用 Tips：
 
 - 自助百科（[Self-Help Book](https://github.com/f/awesome-chatgpt-prompts#act-as-a-self-help-book)）
 - 应急反应专家（[Emergency Response Professional](https://github.com/f/awesome-chatgpt-prompts#act-as-an-emergency-response-professional)）：对交通和生活中的应急时间提供建议。
-- 购物建议（[Personal Shopper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-shopper)）：由 chatGPT 提供
+- 购物建议（[Personal Shopper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-shopper)）：由 ChatGPT 提供
 - 职业顾问（[Career Counselor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-career-counselor)）
 
 ### 趣味知识
@@ -65,14 +67,15 @@ ChatGPT 使用 Tips：
 
 ### 生活顾问
 
-- 健身教练（[Personal Trainer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-trainer)）：输入身高、体重、年龄等维度来指定健身方案。
 - 瑜伽师（[Yogi](https://github.com/f/awesome-chatgpt-prompts#act-as-a-yogi)）
-- 化妆师（[Makeup Artist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-makeup-artist)）
-- 造型师（[Personal Stylist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-stylist)）：由 chatGPT 提供
+- 健身教练（[Personal Trainer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-trainer)）：输入身高、体重、年龄等维度来指定健身方案。
 - 营养师（[Dietitian](https://github.com/f/awesome-chatgpt-prompts#act-as-a-dietitian)）
-- 私人厨师（[Personal Chef](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-chef)）：由 chatGPT 提供
+- 私人厨师（[Personal Chef](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-chef)）：由 ChatGPT 提供
 - 厨师（[Chef](https://github.com/f/awesome-chatgpt-prompts#act-as-a-chef)）
 - 保姆（[Babysitter](https://github.com/f/awesome-chatgpt-prompts#act-as-a-babysitter)）
+
+- 化妆师（[Makeup Artist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-makeup-artist)）
+- 造型师（[Personal Stylist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-stylist)）：由 ChatGPT 提供
 
 ## 自我提升
 
@@ -98,13 +101,15 @@ ChatGPT 使用 Tips：
 - 哲学教师（[Philosophy Teacher](https://github.com/f/awesome-chatgpt-prompts#act-as-a-philosophy-teacher)）
 - 哲学家（[Philosopher](https://github.com/f/awesome-chatgpt-prompts#act-as-a-philosopher)）
 - 苏格拉底（[Socrat](https://github.com/f/awesome-chatgpt-prompts#act-as-a-socrat)）
+
 - 数学老师（[Math Teacher](https://github.com/f/awesome-chatgpt-prompts#act-as-a-math-teacher)）
 - 数学家（[Mathematician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-mathematician)）
-- 教案策划（[Educational Content Creator](https://github.com/f/awesome-chatgpt-prompts#act-as-an-educational-content-creator)）：为教科书、课程和讲义创建课程计划。
-- 词汇学家（[Etymologist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-etymologist)）
 - 统计学家（[Statistician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-statistician)）
+
+- 词汇学家（[Etymologist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-etymologist)）
 - 历史学家（[Historian](https://github.com/f/awesome-chatgpt-prompts#act-as-a-historian)）
 - 基础知识介绍（[Instructor in School](https://github.com/f/awesome-chatgpt-prompts#act-as-an-instructor-in-a-school)）
+- 教案策划（[Educational Content Creator](https://github.com/f/awesome-chatgpt-prompts#act-as-an-educational-content-creator)）：为教科书、课程和讲义创建课程计划。
 
 ## IT/编程
 
@@ -119,10 +124,11 @@ ChatGPT 使用 Tips：
 
 - IT 架构师（[IT Architect](https://github.com/f/awesome-chatgpt-prompts#act-as-an-it-architect)）
 - 全栈程序员（[Fullstack Software Developer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fullstack-software-developer)）
-- 编程问题回复（[StackOverflow Post](https://github.com/f/awesome-chatgpt-prompts#act-as-a-stackoverflow-post)）
-- 深度学习（[Machine Learning Engineer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-machine-learning-engineer)）：由 chatGPT 提供
-- 软件测试（[Software Quality Assurance Tester](https://github.com/f/awesome-chatgpt-prompts#act-as-a-software-quality-assurance-tester)）：输出指定项目的测试清单。
 - 网络安全专家（[Cyber Security Specialist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-cyber-security-specialist)）
+- 软件测试（[Software Quality Assurance Tester](https://github.com/f/awesome-chatgpt-prompts#act-as-a-software-quality-assurance-tester)）：输出指定项目的测试清单。
+
+- 深度学习（[Machine Learning Engineer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-machine-learning-engineer)）：由 ChatGPT 提供
+- 编程问题回复（[StackOverflow Post](https://github.com/f/awesome-chatgpt-prompts#act-as-a-stackoverflow-post)）
 - 开发者数据（[Developer Relations consultant](https://github.com/f/awesome-chatgpt-prompts#act-as-a-developer-relations-consultant)）：整合项目在 GitHub、StackOverflow 和 Hacker News 上的相关数据，不适合国内项目，统计精度一般。
 
 ### 终端/解释器
@@ -179,11 +185,12 @@ ChatGPT 使用 Tips：
 
 ### 企业
 
-- 职位面试官（[position Interviewer](https://github.com/f/awesome-chatgpt-prompts#act-as-position-interviewer)）
 - 广告方案（[Advertiser](https://github.com/f/awesome-chatgpt-prompts#act-as-an-advertiser)）
 - 商业企划（[Startup Idea Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-startup-idea-generator)）
 - 社交媒体经理（[Social MediManager](https://github.com/f/awesome-chatgpt-prompts#act-as-a-social-media-manager)）
 - KOL/社交媒体影响者（[Social MediInfluencer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-social-media-influencer)）
+
+- 职位面试官（[position Interviewer](https://github.com/f/awesome-chatgpt-prompts#act-as-position-interviewer)）
 - 招聘人员（[Recruiter](https://github.com/f/awesome-chatgpt-prompts#act-as-a-recruiter)）
 - 人事主管（[Talent Coach](https://github.com/f/awesome-chatgpt-prompts#act-as-a-talent-coach)）：描述一个岗位所需的能力
 - 后勤人员（[Logistician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-logistician)）：活动组织
@@ -191,23 +198,23 @@ ChatGPT 使用 Tips：
 
 ### 医疗
 
-- 虚拟医生（[Virtual Doctor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-virtual-doctor)）：由 chatGPT 提供
+- 虚拟医生（[Virtual Doctor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-virtual-doctor)）：由 ChatGPT 提供
 - 医生（[Doctor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-doctor)）
 - 牙科医生（[Dentist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-dentist)）
 - 催眠治疗师（[Hypnotherapist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-hypnotherapist)）
 - AI 医生（[AI Assisted Doctor](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-assisted-doctor)）：辅助诊断。
-
-### 音乐
-
-- 作曲家（[Composer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-composer)）
-- 古典音乐作曲家（[Classical Music Composer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-classical-music-composer)）
-- 说唱歌手（[Rapper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-rapper)）
 
 ### 金融
 
 - 会计师（[Accountant](https://github.com/f/awesome-chatgpt-prompts#act-as-an-accountant)）
 - 金融分析师（[Financial Analyst](https://github.com/f/awesome-chatgpt-prompts#act-as-a-financial-analyst)）
 - 投资经理（[Investment Manager](https://github.com/f/awesome-chatgpt-prompts#act-as-an-investment-manager)）
+
+### 音乐
+
+- 作曲家（[Composer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-composer)）
+- 古典音乐作曲家（[Classical Music Composer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-classical-music-composer)）
+- 说唱歌手（[Rapper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-rapper)）
 
 ### 体育
 
@@ -219,8 +226,8 @@ ChatGPT 使用 Tips：
 - 花店老板（[Florist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-florist)）
 - 茶艺师（[Tea-Taster](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tea-taster)）
 - 室内装饰师（[Interior Decorator](https://github.com/f/awesome-chatgpt-prompts#act-as-an-interior-decorator)）
-
 - 宠物行为学家（[Pet Behaviorist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-pet-behaviorist)）
+
 - 汽车修理（[Automobile Mechanic](https://github.com/f/awesome-chatgpt-prompts#act-as-an-automobile-mechanic)）
 - 地产代理（[Real Estate Agent](https://github.com/f/awesome-chatgpt-prompts#act-as-a-real-estate-agent)）
-- 法律顾问（[Legal Advisor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-legal-advisor)）：由 chatGPT 提供
+- 法律顾问（[Legal Advisor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-legal-advisor)）：由 ChatGPT 提供
