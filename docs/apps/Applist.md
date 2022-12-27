@@ -9,13 +9,15 @@ Windows 自用软件，以开源软件为主。
 
 ## 知识记录
 
-知识管理：Notion & 飞书 & flomo & Airtable & 妙笔 & Joplin & 简悦 ~~& Wiz 笔记 & OneNote~~
+本地笔记：Logseq & Obsidian & 思源笔记 & 妙笔 & Joplin ~~& Wiz 笔记 & OneNote~~
 
-清单日记：Logseq & 滴答清单 & 桌面日历 & Habitify ~~& Workflowy & Trello~~
+在线笔记：Notion & 飞书 & flomo & Airtable & 简悦
+
+清单日历：滴答清单 & Trello & Habitify & 桌面日历 ~~& Workflowy~~
 
 记忆复习：[SuperMemo](https://github.com/L-M-Sherlock/sm18-lazy-package/releases/tag/1.1.3) & [kopia](https://github.com/kopia/kopia)(备份) ~~& Anki~~
 
-文本编辑：Visual Studio Code & Notepad++ & [MarkText](https://github.com/marktext/marktext) & HbuilderX & WPS & office tab ~~& Slide & 方方格子 & Typora & Yu Writer & UltraEdit~~
+文本编辑：Visual Studio Code & Notepad++ & HbuilderX & WPS & office tab ~~& [MarkText](https://github.com/marktext/marktext) & Slide & 方方格子 & Typora & Yu Writer & UltraEdit~~
 
 文字识别：白描 & 天若 OCR ~~& ABBYY Screenshot Reader OCR~~
 
