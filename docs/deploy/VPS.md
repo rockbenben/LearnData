@@ -181,6 +181,18 @@ if ($server_port !~ 443){
 /www/server/panel/vhost/ssl
 ```
 
+### CORS 跨域
+
+POST 表单等操作需要涉及第三方 API，需要添加扩域域名，避免 CORS 报错。
+
+```bash
+    add_header Access-Control-Allow-Origin "*";
+    add_header Access-Control-Allow-Credentials "true";
+    add_header Access-Control-Allow-Methods "GET, POST, OPTIONS";
+    add_header Access-Control-Allow-Headers "DNT,web-token,app-token,Authorization,Accept,Origin,Keep-Alive,User-Agent,X-Mx-ReqToken,X-Data-Type,X-Auth-Token,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range";
+    add_header Access-Control-Expose-Headers "Content-Length,Content-Range";
+```
+
 ### 数据库出错解决
 
 1. mysql 配置中 `mysqld` 在一行添加 `innodb_force_recovery=4`，数值可以 0-6，数值越大对数据库损害越大。正常启动 mysql 后，备份所有数据库和管理密码，并下载到本地。

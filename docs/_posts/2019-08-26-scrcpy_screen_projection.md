@@ -14,7 +14,7 @@ order: -26
 
 市面上主流的多屏协同软件都是基于 scrcpy 开发的套壳产品，bug 也没修复，推荐直接使用官方的 scrcpy。
 
-本文以 Window 投屏为例，进入官方站点下载 [scrcpy-win64-v1.24.zip](https://github.com/Genymobile/scrcpy/releases/download/v1.24/scrcpy-win64-v1.24.zip)，或使用 [国内搬运链接](https://wwz.lanzouf.com/iezWX03zx4de)。
+本文以 Window 投屏为例，进入官方站点下载 [scrcpy-win64-v1.25.zip](https://github.com/Genymobile/scrcpy/releases/download/v1.25/scrcpy-win64-v1.25.zip)，或使用 [国内搬运链接](https://wwva.lanzoue.com/iHnRJ0jm0uhe)。
 
 ## 有线投屏
 
@@ -31,7 +31,7 @@ order: -26
 
 ```shell
 # a.将命令目录切换 scrcpy 文件夹。Win11 在 scrcpy 文件夹中右键「在终端中打开」，会自动切换到当前路径。
-cd D:\Libraries\Desktop\scrcpy-win64-v1.24
+cd D:\Libraries\Desktop\scrcpy-win64-v1.25
 ​
 # b.在手机端开启「开发者选项」及「USB 调试」，然后使用数据线将手机和电脑连接并允许 USB 调试，开启手机端口。
 .\adb tcpip 5555
@@ -61,7 +61,7 @@ cd D:\Libraries\Desktop\scrcpy-win64-v1.24
 
 ```shell
 # 将命令目录切换到 scrcpy 文件夹
-cd D:\Libraries\Desktop\scrcpy-win64-v1.24
+cd D:\Libraries\Desktop\scrcpy-win64-v1.25
 ​
 # 开始录制，录屏文件会以命令指定的文件名自动保存在当前文件夹内。
 .\scrcpy -r filename.mp4
@@ -89,6 +89,12 @@ cd D:\Libraries\Desktop\scrcpy-win64-v1.24
 .\scrcpy -m 1024
 .\scrcpy -m 800
 ```
+
+### 华为不能投屏
+
+华为/荣耀切换为无线投屏时，拔掉数据线，系统会关闭 usb 调试，导致投屏终止。
+
+解决方案来自 @残荷听雨：「进工程模式，把 usb 调成开发模式，先打开“在充电模式下允许 ADB 调试”，再打开 usb 调试。这样操作后，再拔掉数据线，它就不会自动关闭 usb 调试了。副作用是，“在充电模式下允许 ADB 调试”会自动常开，在网吧等公共区域，仅用数据线充电时就需要手动关掉 usb 调试，防止被黑。」
 
 ### 投屏模糊
 

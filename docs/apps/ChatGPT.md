@@ -178,6 +178,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，但它不仅仅是对话�
 - 模拟 AI（[AI Trying to Escape the Box](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-trying-to-escape-the-box)）
 - 科学数据可视化（[Scientific DatVisualizer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-scientific-data-visualizer)）
 - 文本浏览器（[Web Browser](https://github.com/f/awesome-chatgpt-prompts#act-as-a-web-browser)）：以文本方式输入网址的结果（非实时）。
+- 消息生成器（[Commit Message Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-commit-message-generator)）
 
 ## 行业顾问
 

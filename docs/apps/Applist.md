@@ -49,7 +49,7 @@ Windows 自用软件，以开源软件为主。
 
 ## 屏幕录制
 
-录屏直播：OBS & [Captura](https://github.com/MathewSachin/Captura/releases) & [SplitCam](https://splitcam.com/) (摄像头多开) & [ScreenToGif](https://www.screentogif.com/) ~~& FlashBack Express~~
+录屏直播：OBS & [Captura](https://github.com/MathewSachin/Captura/releases) & [SplitCam](https://splitcam.com/) (摄像头多开) & [terminalizer](https://github.com/faressoft/terminalizer)（终端录制） & [ScreenToGif](https://www.screentogif.com/) ~~& FlashBack Express~~
 
 换脸特效：Snap Camera（操作简单） & [Avatarify Python](https://github.com/alievk/avatarify)
 
