@@ -151,9 +151,9 @@ export default hopeTheme({
       // echarts: true,
       // flowchart: true,
       gfm: true,
-      imageLazyload: true,
-      // imageMark: true,
-      imageSize: true,
+      imgLazyload: true,
+      // imgMark: true,
+      imgSize: true,
       figure: true,
       include: true, //导入文件
       // katex: true,
