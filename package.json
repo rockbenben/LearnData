@@ -1,6 +1,6 @@
 {
   "name": "learn-data",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -12,12 +12,12 @@
     "@vuepress/client": "2.0.0-beta.60",
     "@vuepress/plugin-docsearch": "2.0.0-beta.60",
     "@vuepress/plugin-google-analytics": "2.0.0-beta.60",
-    "@vuepress/plugin-search": "2.0.0-beta.60",
     "@vuepress/utils": "2.0.0-beta.60",
     "cpx2": "^4.2.0",
     "pnpm": "^7.21.0",
     "vue": "^3.2.45",
     "vuepress": "2.0.0-beta.60",
-    "vuepress-theme-hope": "2.0.0-beta.148"
+    "vuepress-theme-hope": "2.0.0-beta.149",
+    "vuepress-plugin-search-pro": "2.0.0-beta.149"
   }
 }

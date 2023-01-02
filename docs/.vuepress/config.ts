@@ -1,7 +1,7 @@
 import { defineUserConfig } from "vuepress";
 // import { webpackBundler } from "@vuepress/bundler-webpack";
 // import { defineUserConfig } from "@vuepress/cli";
-import { searchPlugin } from "@vuepress/plugin-search";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { path } from "@vuepress/utils";
@@ -37,9 +37,10 @@ export default defineUserConfig({
       appId: "M4EXXEZIEG",
       apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
     }),
-    // 本地搜索：默认情况下，该插件会将页面标题和小标题作为搜索索引。
-    searchPlugin({
-      // 你的选项
+    // 本地搜索，删除上方 docsearchPlugin 区块后生效
+    searchProPlugin({
+      // 索引全部内容
+      indexContent: true,
     }),
     // 谷歌分析 ID
     googleAnalyticsPlugin({
