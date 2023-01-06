@@ -37,11 +37,11 @@ order: -36
 
 **NDI** 最为稳定，能自由调节拍摄参数。打开 NDI 应用，需等待 NDI 界面周边出现绿框或红框，OBS 才可以识别到摄像头。不过 NDI 是收费应用，安卓测试可使用 [NDI 调试 APK](https://wwe.lanzoup.com/iQCMh00b946b)。
 
-**IP Webcam** 推流稳定性一般，容易掉帧，但 [IP Webcam 免费版](https://wwz.lanzouf.com/iT6pH01tj7yb) 足够个人使用。也有人推荐 DroidCam、iriun webcam、ivcam。
+**IP Webcam** 推流稳定性一般，容易掉帧，但 [IP Webcam 免费版](https://wwz.lanzouf.com/iT6pH01tj7yb) 足够个人使用。下文为 IP Webcam 基础设置，如果出现闪退等问题，可尝试 iriun webcam、DroidCam 和 ivcam。
 
 - IP Webcam 设置网页将流质量调整至 90%，视频分辨率 720p，能有效减少卡顿。IP camera 耗电低，适合手机长时间直播，支持视频与浏览器等方式。
-- OBS 中选择「场景」>「来源」>「视频源」，「输入」项中填入 IP Webcam 视频地址，例如 `http://192.168.2.234:8080/video`。
-- OBS 中选择「场景」>「来源」>「添加浏览器」，「URL」项中填入 IP Webcam 浏览器全屏地址，例如 `http://192.168.2.234:8080/jsfs.html`。注意：浏览器推流，容易出现闪屏。
+- OBS 中选择「场景」>「来源」>「媒体源」，取消勾选本地文件，「输入」项中填入 IP Webcam 视频地址，例如 `http://192.168.2.234:8080/video`。
+- OBS 中选择「场景」>「来源」>「浏览器」，「URL」项中填入 IP Webcam 浏览器全屏地址，例如 `http://192.168.2.234:8080/jsfs.html`。注意：浏览器推流，容易出现闪屏。
 
 无他伴侣（不推荐），虽然国内大量教程介绍无他伴侣，但使用中出现非常多的问题，如：摄影角度很难控制；无法使用 FaceRig 等变脸应用；直播 10 分钟后，摄像头经常自动与 OBS 断开连接；直播 2 小时后，OBS 无法检测到无他伴侣。
 
@@ -77,97 +77,11 @@ order: -36
 
 补光灯可放于正面 45 度成蝴蝶光 (派拉蒙光)，可显瘦显轮廓；背后可使用辅助光或一张白纸反光，防止正面灯光太亮。
 
-## OBS 直播
+## 直播软件
 
-[OBS](https://obsproject.com/) 开源免费，能对直播界面进行调整和美化，是最流行的直播软件，大部分直播软件都基于 OBS。
+### OBS
 
-### OBS 设置
-
-直播前调整 OBS 设置，优化直播效果。
-
-- 直播推流：「设置」>「通用」>「推流」中的服务调整为「自定义」，服务器和串流密钥则按平台要求输入。
-
-  ![](http://tc.seoipo.com/2022-06-30-14-33-34.png "推流服务器设置")
-
-- 直播清晰度：直播并非越清晰越好，对网络稳定性要求较高，建议将「设置」>「输出」>「串流」>「视频比特率」设为 4000-6000 Kbps。
-- 直播分辨率：分辨率一般 1080p 或 720p，帧率为 30。注意「设置」>「视频」中的输出分辨率要与基础分辨率一致，游戏直播中将「常用 FPS 值 (帧率)」从 30 调整到 60。
-- 直播延迟：「设置」>「高级」>「串流延迟」开启 20s 的延迟时间，避免网络卡顿。
-- 音频输出：「场景」>「来源」>「混音器」，右键单击调整「高级音频属性」。
-  - 默认音频设置为「关闭监听」，音频仅对直播间观众输出，主播听不到。
-  - 仅监听 (输出静音)：主播能听到，但观众能通过主播话筒的收音听到声音，不过音量会小很多。
-  - 监听并输出：主播和观众都能直接听到。如果主播在该模式下使用了话筒，建议使用耳麦，否则话筒音量容易被输出音频盖住，观众难以听清主播声音。修改音量或使用滤镜并不能降低输出音频音量。
-
-**注意**：
-
-- 来源使用窗口采集时，窗口不能最小化，否则窗口会卡住不同步。
-- 直播电脑超过 5 年的话，可考虑使用两台主机 (PC、手机均可) 进行 NDI 双机推流，避免卡顿。
-
-### OBS 滤镜
-
-OBS 滤镜是对音视频来源进行裁剪、过滤、增益等多种处理的工具。
-
-- 色度键：绿幕抠图必用，能将指定颜色变为透明，比如抠掉绿色，将绿幕换成其他场景。
-
-  ![色度键滤镜一键抠图](http://tc.seoipo.com/20210328235013.gif "色度键滤镜一键抠图")
-
-- 应用 LUT：使用 LUT 对画面进行色彩调整，相当于平常手机修图用的风格滤镜，对画面效果提升巨大。将 OBS 滤镜插件目录下的 original.png 复制到 Photoshop，然后进入右侧的调整界面，选择第二行的最右侧「创建新的颜色查找调节图层」，尝试载入自带的 3DLUT 文件，最后导出 png 文件，这也就是直播能用的 LUT 文件。如果自带 LUT 不能满足需求，则使用 Premiere 调节定制 LUT cube 文件。
-- 裁剪/填充：对来源进行裁剪，剪去多余的部分。
-- 增益：当麦克风声音过大或过小时，可以通过增益滤镜调整音量，但是不宜设置数值过大，容易造成声音失真。
-- 噪音阈值：当背景有噪音时，设置噪音阈值来控制底噪，降低噪音干扰。
-- 色彩校正：修改伽玛度、对比度、亮度、饱和度，对来源的显示效果进行调整。
-
-### 常用插件
-
-OBS 插件多为绿色版本，进入 `%ProgramFiles%\obs-studio\data\obs-plugins` 和 `%ProgramFiles%\obs-studio\obs-plugins\64bit` 按插件关键词删出相关文件即可卸载插件。
-
-- [StreamFX](https://github.com/Xaymar/obs-StreamFX/releases)：支持更多的信号源、滤镜和转场效果，如：模糊滤镜（Dual Filtering 对电能压力更低）。OBS28 暂只支持绿色模式安装本插件。
-- [OBS Shaderfilter](https://obsproject.com/forum/threads/shaderfilter-went-away.155555/#post-571174)：文字图片特效滤镜，该插件已从社区删除，GitHub 可下载 [最新版](https://github.com/Oncorporation/obs-shaderfilter/releases/)。
-- [multi-rtmp](https://github.com/sorayuki/obs-multi-rtmp)：OBS 多地址推流，同时在多个平台上进行直播。
-- [Asynchronous Source Duplication](https://obsproject.com/forum/resources/asynchronous-source-duplication.1483/)：复制来源可以同时展示在多个场景，复制源会有延迟。
-- [VLC](https://www.videolan.org/vlc/)：非插件，安装 VLC 应用后，OBS 就能使用「VLC 视频源」(播放列表)。
-- [咩播](https://www.kuabo.cn/)、[智播](http://zbmate.com/)：第三方的直播美化插件，新手可参考使用。
-
-### 进阶插件
-
-进阶插件的功能更多，配置也更复杂，新手可暂时忽略。如果未在下方列表没找到你需要的功能，可以进入 [OBS 插件库](https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/) 搜索。
-
-- [Advanced Scene Switcher](https://obsproject.com/forum/resources/advanced-scene-switcher.395/)：使用「宏」来自动完成各种任务，按条件切换场景、来源。比如，电脑闲置 10 分钟后，让摄像头来源变为不可见。
-- [Move transition](https://obsproject.com/forum/resources/move-transition.913/)：记录来源的位置变化，生成元素移动的动画效果。比如，视频演讲时，将摄像头位置从屏幕右下移动到中央。
-- [Transition Table](https://obsproject.com/forum/resources/transition-table.1174/)：场景切换效果，设定不同场景间的切换规则。
-- [Source Dock](https://obsproject.com/forum/resources/source-dock.1317/)：为单独场景或来源建立控制栏，使用小窗口预览场景。
-- [Source Copy](https://obsproject.com/forum/resources/source-copy.1261/)：更方便地复制、保存场景设置。
-- [Scene Collection Manager](https://obsproject.com/forum/resources/scene-collection-manager.1434/)：自动备份场景，防止误操作。
-- [Audio Monitor](https://obsproject.com/forum/resources/audio-monitor.1186/)：将来源声音输出给指定设备播放，方便单独调节音量，能让主播与观众听到不同的音频效果。
-- [Downstream Keyer](https://obsproject.com/forum/resources/downstream-keyer.1254/)：切换场景时，置顶指定场景。
-- [Multi Source Effect](https://github.com/norihiro/obs-multisource-effect)：滤镜效果
-- [Teleport](https://github.com/fzwoch/obs-teleport)：NDI 替代品，局域网设备推流到直播。
-- [spectralizer](https://github.com/univrsal/spectralizer)：音频频谱，用滤镜「图像掩码」的「混合图层」给频谱遮罩滤镜。
-- transition matrix 过渡矩阵
-- scrab 截图
-- lower third in html/css 文字运动特效
-- input overlay 输入显示
-- motion-effect 动画效果
-- reply source 回放控制
-- advanced scene switcher 高级场景切换器
-- PTZ controller PTZ 摄影机云台控制器
-
-以下插件仅作记录，用于 OBS 27：
-
-- [Virtual Cam Filter](https://obsproject.com/forum/resources/virtual-cam-filter.1142/)：能让来源单独输出虚拟摄像头，OBS 28 已内置该功能。
-- [obs-websocket](https://obsproject.com/forum/resources/obs-websocket-remote-control-obs-studio-from-websockets.466/)：远程控制插件，OBS 28 已内置该功能。
-- [NDI](https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/): 局域网视频无线传输技术 NDI 插件。
-- [Animated captions](https://obsproject.com/forum/resources/animated-captions-with-obs-controller-and-a-preview-function.1407/)：自定义弹幕功能，无漂浮弹幕，适用较少。
-- [Background Removal](https://github.com/royshil/obs-backgroundremoval)：无绿幕移除背景，需搭配神经网络环境。
-
-## 其他直播软件
-
-### 小葫芦弹幕助手
-
-[小葫芦弹幕助手](https://zs.xiaohulu.com/danmu/) 能实时显示网友的互动、打赏，尤其适合游戏直播。不过，小葫芦弹幕助手的弹幕答谢、自动定时弹幕、手动弹幕等功能均已暂停，不建议新手充值会员。
-
-如果你不是游戏主播，不需要在直播界面中显示弹幕，就不要安装小葫芦弹幕插件。安装弹幕助手后，会影响 OBS 窗口捕获功能，无法抓取基于 Electron 的应用界面。如果窗口捕捉黑屏，删除 `C:\Program Files\obs-studio\obs-plugins\64bit` 目录内的 `CalabashDanmuPlugin.dll`、`CalabashWinCapture.dll`、`ObssDanmuInfo.dll`，重启 OBS 即可恢复。但当下次使用弹幕助手时，这三个文件会自动安装，黑屏问题复现，只能重新删除指定文件。
-
-小葫芦直播助手集成了 OBS 和弹幕助手的功能，但为了直播的扩展性，依然推荐由 OBS 入门。
+[Open Broadcaster Software](https://obsproject.com/)（OBS）是一款免费开源的视频录制和直播应用，适用于 Windows、Mac 和 Linux 平台。新手建议由 OBS 入门直播，使用教程查看 [直播入门篇一：OBS 28 基础设置与使用](https://newzone.top/posts/2023-01-05-live_obs_basic.html)。
 
 ### YY 开播 (美颜)
 
@@ -197,6 +111,14 @@ OBS 美颜需借助第三方应用，推荐 [YY 开播](https://v.yy.com/)。
 ### NVIDIA BROADCAST
 
 N 卡用户强烈推荐 [NVIDIA Broadcast](https://www.nvidia.cn/geforce/guides/broadcast-app-setup-guide/)。它利用 AI 的强大功能将标准网络摄像头和麦克风升级为高端智能设备，通过麦克风去噪、房间回声消除、虚拟背景、网络摄像头人像跟踪和视频降噪等 AI 功能，提高直播的视频和音频质量。通过 NVIDIA RTX GPU 上搭载的名为 Tensor Core 的专用 AI 处理器，AI 网络能够实时运行高质量的效果。
+
+### 小葫芦弹幕助手
+
+[小葫芦弹幕助手](https://zs.xiaohulu.com/danmu/) 能实时显示网友的互动、打赏，尤其适合游戏直播。不过，小葫芦弹幕助手的弹幕答谢、自动定时弹幕、手动弹幕等功能均已暂停，不建议新手充值会员。
+
+如果你不是游戏主播，不需要在直播界面中显示弹幕，就不要安装小葫芦弹幕插件。安装弹幕助手后，会影响 OBS 窗口捕获功能，无法抓取基于 Electron 的应用界面。如果窗口捕捉黑屏，删除 `C:\Program Files\obs-studio\obs-plugins\64bit` 目录内的 `CalabashDanmuPlugin.dll`、`CalabashWinCapture.dll`、`ObssDanmuInfo.dll`，重启 OBS 即可恢复。但当下次使用弹幕助手时，这三个文件会自动安装，黑屏问题复现，只能重新删除指定文件。
+
+小葫芦直播助手集成了 OBS 和弹幕助手的功能，但为了直播的扩展性，依然推荐由 OBS 入门。
 
 ## 直播娱乐
 
@@ -258,7 +180,7 @@ MorphVOX Pro、神舌等软件变声器对使用者的语气要求较高。
 ### 抖音直播
 
 1. 电脑端下载 [直播伴侣](https://www.douyin.com/falcon/webcast_openpc/pages/streamingtool_download/index.html)，适配西瓜视频、抖音、抖音火山版的直播。
-2. 左侧点击「添加元素」>「采集」，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道，推流延迟 20s。
+2. 左侧点击「添加元素」>「采集」，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道。
 
    ![](http://tc.seoipo.com/2022-06-29-23-59-02.png "抖音直播设置")
 
