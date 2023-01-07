@@ -55,7 +55,7 @@ Windows 蓝屏原因众多，你在网上搜到的解决方案，大多与你情
 
 如果是与系统模块、驱动无关的未知程序，可使用 [Everything](https://www.voidtools.com/zh-cn/downloads/) 搜索该进程的位置，**备份后尝试删除**该程序。如果提示文件被占用，可使用火绒或 Unlocker 来解除文件占用，但一定要先**做好备份**。
 
-`MpKslDrv.sys` 一般用于恶意软件保护，对系统影响不大。如果出现该报错，则在备份后删除报错文件。（**准备好 PE 系统**以防万一）
+`MpKslDrv.sys` 一般用于恶意软件保护，对系统影响不大。如果出现该报错，则使用 Defender Control 关掉微软杀毒 Defender Antivirus Service。@yys 爱与诚 反馈，「当我关掉 defender 的时候 他自己消失了，不用我删除。当我打开 他又出现了，又删除不了。」
 
 ## 蓝屏解决集锦
 
