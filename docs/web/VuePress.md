@@ -9,7 +9,7 @@ order: 1
 
 不过，VuePress 网站需要依赖包环境，生成的静态文件在本地运行会缺少组件，需要服务器或其他云服务上运行。如果本地部署中出现未知 bug，推荐使用 [StackBlitz](https://stackblitz.com/) 在线 IDE 工具测试，打开 `https://stackblitz.com/github/用户名/仓库名` 即可将对应 GitHub 仓库导入 StackBlitz。开发时，建议用 dev 命令测试，这样可以查看打包前的动态代码，发现组件间的内部链接。
 
-LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/guide/)，图标为 [Iconfont 精选图标](https://theme-hope.vuejs.press/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87)，页面修改查看 [样式配置](https://vuepress-theme-hope.github.io/v2/zh/config/style.html)，其他主题和插件参考 [Awesome VuePress V2](https://github.com/vuepress/awesome-vuepress/blob/main/v2.md) 和 [看板娘](https://www.npmjs.com/package/vuepress-plugin-helper-live2d)。
+LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/guide/)，图标为 [Iconfont 精选图标](https://theme-hope.vuejs.press/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87)，页面修改查看 [样式配置](https://theme-hope.vuejs.press/zh/config/style.html)，其他主题和插件参考 [Awesome VuePress V2](https://github.com/vuepress/awesome-vuepress/blob/main/v2.md) 和 [看板娘](https://www.npmjs.com/package/vuepress-plugin-helper-live2d)。
 
 ## 初始配置
 
@@ -165,9 +165,9 @@ export default hopeTheme({
 
 - [x] ~~插入 Bilibili 或第三方视频，可使用专用 [组件库](https://vuepress-theme-hope.github.io/v2/components/zh/guide/)，配置参考 [组件案例 config.ts](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/demo/components/src/.vuepress/config.ts).~~
 - [x] ~~插件[docsearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html)：将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。~~
-- [x] ~~README 页面如何隐藏，使用 index: false，参考[主题设置](https://vuepress-theme-hope.github.io/v2/zh/guide/layout/sidebar.html#%E9%80%9A%E8%BF%87%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90)~~
+- [x] ~~README 页面如何隐藏，使用 index: false，参考[主题设置](https://theme-hope.vuejs.press/zh/guide/layout/sidebar.html#%E9%80%9A%E8%BF%87%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90)~~
 - [x] ~~去 meta 标签，测试并未成功，不再尝试~~
-- [x] ~~[waline](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/comment.html#waline) 评论插件，无需账户，更适合大众。~~
+- [x] ~~[waline](https://theme-hope.vuejs.press/zh/guide/feature/comment.html#waline) 评论插件，无需账户，更适合大众。~~
 - [x] ~~google analytics 没反应，实际已经包含在 js 中了~~
 - [x] ~~不用自动开启一堆的网站，关闭 prefetch~~
 - [x] ~~生成文件名固定化，chainWebpack~~
@@ -177,7 +177,7 @@ export default hopeTheme({
 - [x] 独立设置页面标题。未成功，所有页面都会加入默认标题。
 - [x] 侧边栏显示客服图片。icon 位置直接放链接也没用。
 - [x] 指定页面子标题不被目录页识别。但页面中取消 toc 的话，网页位置会出现偏移。
-- [x] [修改导航栏 brand 链接](https://vuepress-theme-hope.github.io/v2/zh/cookbook/advanced/replace.html#%E6%8F%92%E6%A7%BD%E5%88%A9%E7%94%A8)，需用本地文件替代 [主题默认设置](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/packages/theme/src/client/module/navbar/components/NavbarBrand.ts)。设置的 ts 未生效，暂时放弃。
+- [x] [修改导航栏 brand 链接](https://theme-hope.vuejs.press/zh/cookbook/advanced/replace.html#%E6%8F%92%E6%A7%BD%E5%88%A9%E7%94%A8)，需用本地文件替代 [主题默认设置](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/packages/theme/src/client/module/navbar/components/NavbarBrand.ts)。设置的 ts 未生效，暂时放弃。
 - [x] ~~子域名中部署 blog 和 note，分别使用不同路径。这方案可以与 WordPress 共存，但未了避免后续出错，还是取消了。~~
 - [x] ~~Giscus 评论区设置~~
 - [x] ~~导航栏添加 repo 位置~~

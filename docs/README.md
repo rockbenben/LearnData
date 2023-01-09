@@ -15,11 +15,11 @@ icon: note
 
 ## ✨ 初衷
 
-曾经，我把知识记录在 Notion、Obsidian、飞书等知识管理软件上，散落各处，使用起来很麻烦，也难以对外分享。
+曾经，我把知识记录在 Notion、Obsidian、飞书等知识管理软件上，导致笔记散落各处，使用起来非常麻烦，也难以对外分享。
 
-但是，**笔记里的知识并不属于你，只有经过消化、应用，才会成为自己的知识。**
+更重要的是，**笔记里的知识并不属于你，只有经过消化、应用，才会成为自己的知识。**
 
-因此，我基于 VuePress 和 vuepress-theme-hope 建立了 LearnData，将所有笔记与文章聚合在同一页面形成知识库，方便自己使用和分享输出。
+因此，我基于 VuePress 和 vuepress-theme-hope 建立了 LearnData，将所有笔记与文章重新整合，聚合到同一页面形成知识库，方便自己使用和分享输出。
 
 ![](http://tc.seoipo.com/2022-08-22-19-28-25.png?imageMogr2/thumbnail/!80p "笔记 + 文章 = LearnData 知识库")
 
@@ -60,29 +60,35 @@ icon: note
 
 ## 🔣 配置 LearnData
 
-### 配置路径
+### 文档结构
 
-LearnData 的文章页面配置查看主目录下的 `samplepage.md`，文本保存路径和网站配置在 `docs` 文件夹。
+LearnData 的网站配置和文本存放在 `docs` 文件夹下，文章与页面配置可参考主目录下的 `samplepage.md`。
 
-`docs/.vuepress` 存放网站配置文件。`docs/_posts` 存放博客文章，`docs/reading` 存放读书笔记。`docs/_temp` 默认不同步到 GitHub，需手动在本地建立 `_temp` 文件夹，用来存放草稿。你可以按范围或功能来新建文件夹存放笔记。
+docs 目录结构如下：
 
-`docs/README.md` 是默认主页，`docs/blog.md` 配置博客页面，`docs/intro.md` 是你的个人介绍。
+```bash
+docs
+|── .vuepress               # 网站配置
+│   ├── config.ts           # 网站环境依赖和网站属性
+│   ├── sidebar.ts          # 侧边栏
+│   ├── navbar.ts           # 导航栏
+│   ├── theme.ts            # 主题和插件
+│   └── templateBuild.html  # 网页模板，网站关键词和统计
+|── _posts                  # 博客文章目录
+├── _temp                   # 草稿箱
+├── reading                 # 读书笔记
+├── anyname                 # 自定义文件夹
+├── blog.md                 # 博客页面
+└── intro.md                # 博主个人介绍
+```
 
-![](http://tc.seoipo.com/2022-08-22-18-04-08.png "docs 路径结构")
+`docs/.vuepress` 路径下是网站的配置文件，我在上面添加了详细的注释。你可以参照注释和  [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress) 调整配置。修改 `docs/.vuepress/sidebar.ts` 中的文件夹路径，后台自动抓取路径下的 md 文件来生成侧边栏。`docs/.vuepress/theme.ts` 中配置了 [评论插件](https://newzone.top/web/Comments.html) 。
 
-注意：VuePress2 从 beta.54 开始忽略文件夹名的前缀 `_`，比如博客路径为 `/_posts/`，转为网页后链接路径会是 `/posts/`。
+注意：
 
-### 配置文件
-
-`docs/.vuepress` 路径下是网站的配置文件，我在上面添加了详细的注释。你可以参照注释自由调整配置，或参考 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
-
-- `config.ts` 配置网站环境依赖和网站属性。
-- `sidebar.ts` 配置侧边栏，替换文档中文件夹路径即可，后台自动抓取路径下的 md 文件来生成侧边栏。
-- `navbar.ts` 配置导航栏，推荐放你常用的文档链接。
-- `theme.ts` 对主题和插件进行配置，[评论插件](https://newzone.top/web/Comments.html) 设置亦在此文件。
-- `templateBuild.html` 是网页模板，调整网站关键词和第三方统计代码。
-
-注意：LearnData 默认使用了 algolia 全文搜索。如果你没使用 algolia 爬虫，则删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块，网站将转用本地全文索引搜索。
+- `docs/_temp` 默认不同步到 GitHub。你需要手动在本地建立 `_temp` 文件夹，用来存放草稿。
+- VuePress2 从 beta.54 开始忽略文件夹名的前缀 `_`，比如博客路径为 `/_posts/`，转为网页后链接路径会是 `/posts/`。
+- LearnData 默认使用了 algolia 全文搜索。如果你没使用 algolia 爬虫，则删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块，网站将转用本地全文索引搜索。
 
 ### 看板娘
 
@@ -151,7 +157,7 @@ Vercel 部署步骤如下：
    - 将下方代码编辑到 `.github/workflows/main.yml` 文件底部，注意修改 `dst_owner` 和 `dst_repo_name`。
 
    ```yml
-   #将页面更新到 Vercel
+   # 将页面更新到 Vercel
    - name: Copy file to Vercel
      if: always()
      uses: andstor/copycat-action@v3

@@ -4,7 +4,7 @@ import navbar from "./navbar";
 import sidebar from "./sidebar";
 
 export default hopeTheme({
-  // 主题选项：https://vuepress-theme-hope.github.io/v2/zh/config/theme/layout.html
+  // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
   hostname: "https://newzone.top",
 
   author: {
@@ -24,7 +24,8 @@ export default hopeTheme({
   editLink: true,
 
   // 深色模式配置
-  // darkmode: "disable",
+  darkmode: "switch",
+
   themeColor: {
     blue: "#2196f3",
     red: "#f26d6d",
@@ -61,10 +62,10 @@ export default hopeTheme({
   // footer: "默认页脚",
   // displayFooter: true,
 
-  // 页面布局 Frontmatter 配置：https://vuepress-theme-hope.github.io/v2/zh/config/frontmatter/layout.html#pageinfo
+  // 页面布局 Frontmatter 配置：https://theme-hope.vuejs.press/zh/config/frontmatter/layout.html#pageinfo
   pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
 
-  // 主题功能选项：https://vuepress-theme-hope.github.io/v2/zh/config/theme/feature.html
+  // 主题功能选项：https://theme-hope.vuejs.press/zh/config/theme/feature.html
   blog: {
     articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
     name: "清顺",
