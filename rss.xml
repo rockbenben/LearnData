@@ -6,27 +6,72 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 09 Jan 2023 16:14:27 GMT</pubDate>
-    <lastBuildDate>Mon, 09 Jan 2023 16:14:27 GMT</lastBuildDate>
+    <pubDate>Thu, 12 Jan 2023 16:57:06 GMT</pubDate>
+    <lastBuildDate>Thu, 12 Jan 2023 16:57:06 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
     <category>观察随笔</category>
-    <category>博客</category>
-    <category>头脑驿站</category>
-    <category>购物</category>
-    <category>系统</category>
-    <category>自动化</category>
     <item>
-      <title>直播入门攻略一：OBS28 的界面、设置与使用</title>
-      <link>https://newzone.top/posts/2023-01-05-live_obs_basic.html</link>
-      <guid>https://newzone.top/posts/2023-01-05-live_obs_basic.html</guid>
-      <source url="https://newzone.top/rss.xml">直播入门攻略一：OBS28 的界面、设置与使用</source>
-      <description>Open Broadcaster Software（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。我写过一篇 直播入门攻略，其中覆盖了我在直播中遇到的所有问题，但它对新手过于冗长，太复杂了。</description>
+      <title>直播入门攻略零 | 硬件篇：直播设备</title>
+      <link>https://newzone.top/apps/livestreaming/0_live_equipments.html</link>
+      <guid>https://newzone.top/apps/livestreaming/0_live_equipments.html</guid>
+      <source url="https://newzone.top/rss.xml">直播入门攻略零 | 硬件篇：直播设备</source>
+      <description>直播已经成为一种主流的传播方式，几乎所有的行业都会使用它。经过两年的持续直播，我总结出了一套直播入门攻略，从设备、软件和技巧三个方面，帮助你快速入门直播，开始自己的直播之旅。 本文是直播入门攻略的前置篇，主要介绍直播所需的设备，以及如何避免购买不必要的高价设备。直播设备可分为电脑、补光灯、稳定器（三脚架）、音频采集（收音器）和视频采集（摄像头）。 电脑 OBS 直播对电脑配置要求较高，建议使用三年内购买的主流配置台式机。台机推荐预算在一万元以上，显卡为 3060 以上，内存为 32G。 补光灯 露脸主播一定要配柔光灯或环形灯，可以提升颜值。如果带眼镜的话，可以用小型补光灯代替环形灯，以免反射出光圈影响视觉。补光灯可以放在正面 45 度成蝴蝶光（派拉蒙光），可以显瘦显轮廓；背后可以使用辅助光或一张白纸反光，以防止正面灯光太亮。</description>
       <category>工具</category>
-      <pubDate>Thu, 05 Jan 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">Open Broadcaster Software</a>（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。我写过一篇 <a href="https://newzone.top/posts/2021-03-22-live_streaming.html" target="_blank" rel="noopener noreferrer">直播入门攻略</a>，其中覆盖了我在直播中遇到的所有问题，但它对新手过于冗长，太复杂了。</p>
-<p>趁着 OBS 28 的版本大更新，我重写了直播入门教程，下文将介绍 OBS 28 的界面、设置和基础使用。</p>
+      <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
+      <content:encoded><![CDATA[<p>直播已经成为一种主流的传播方式，几乎所有的行业都会使用它。经过两年的持续直播，我总结出了一套直播入门攻略，从设备、软件和技巧三个方面，帮助你快速入门直播，开始自己的直播之旅。</p>
+<p>本文是直播入门攻略的前置篇，主要介绍直播所需的设备，以及如何避免购买不必要的高价设备。直播设备可分为电脑、补光灯、稳定器（三脚架）、音频采集（收音器）和视频采集（摄像头）。</p>
+<h2> 电脑</h2>
+<p>OBS 直播对电脑配置要求较高，建议使用三年内购买的主流配置台式机。台机推荐预算在一万元以上，显卡为 3060 以上，内存为 32G。</p>
+<h2> 补光灯</h2>
+<p>露脸主播一定要配柔光灯或环形灯，可以提升颜值。如果带眼镜的话，可以用小型补光灯代替环形灯，以免反射出光圈影响视觉。补光灯可以放在正面 45 度成蝴蝶光（派拉蒙光），可以显瘦显轮廓；背后可以使用辅助光或一张白纸反光，以防止正面灯光太亮。</p>
+<h2> 三脚架</h2>
+<p>三脚架主要有两类：桌面款，建议高度为 55cm；站立款，建议高度为 210cm。价位从 10-500 元不等，效果无明显区别，新手用户的三脚架预算建议不要超过 100 元。</p>
+<h2> 音频采集</h2>
+<p>收音设备的费用从几元到几千元不等。手机的收音性能比绝大多数话筒好，如果你使用手机摄像方案，可以先不用购买收音器材。</p>
+<p>廉价麦克风存在收音范围窄、不清晰、多噪音等问题，但价格低廉、使用方便，适合新人测试使用。</p>
+<p>桌面直播多使用「声卡 + 话筒」方案，预算需要超过一千元。不要购买廉价的山寨声卡，还不如手机收音来得清晰。</p>
+<p>外出直播或进阶用户推荐 RODE 或 DJI 的无线麦克风，这两款音频水准都可以吊打同行。RODE 是老牌话筒厂家，音质有保障；DJI 麦克风推出不久，但集百家之长，设计非常人性化，小白使用也很方便。</p>
+<h2> 视频采集</h2>
+<p>桌面摄像头、手机和微单相机都可以作为直播的视频采集来源。</p>
+<h3> 摄像头</h3>
+<p>桌面摄像头的价格在 50-1000 元不等，但实际效果没有太大的区别。个人体验过罗技 C930 后，发现画面模糊不清晰，将问题反馈给客服后得知，画质不清晰是桌面摄像头的通病。</p>
+<p>不管是几十元的廉价摄像头还是上千元的罗技 C1000，它们的实际像素都<strong>只有 200 万</strong>。宣传中的 2000 万像素是通过软件放大的效果，画质并没有实质性的变化。入门用户可以选择 100 元的自动变焦摄像头。</p>
+<p>桌面摄像头搭配三角架可以调整更佳的角度，购买时要注意摄像头是否有<strong>三脚架接口</strong>。</p>
+<h3> 手机</h3>
+<p>如果室内没有桌面摄像头，而又想用电脑做直播推流，可以考虑用手机替代摄像头，步骤可参考下方介绍。</p>
+<h3> 相机</h3>
+<p>相比摄像头的算法像素效果，只有相机才能达到真正意义上的高清直播。</p>
+<p>如果你的相机有外接视频接口（例如：HDMI、mini HDMI、SDI），可以通过视频采集卡将相机视频转为直播视频传入电脑。索尼、佳能等主流相机都有专门的直播软件，不需要采集卡就可以直接连接电脑进行直播。运动相机 GoPro 也已经支持相机直播传输，希望国内厂商也能跟上。</p>
+<p>将相机用作摄像头的费用较高，一般需要几千到几万，只建议已购买相机的主播采用此方案。</p>
+<h2> 手机作摄像头</h2>
+<h3> Camo</h3>
+<p><a href="https://apps.apple.com/app/reincubate-camo/id1514199064?platform=iphone" target="_blank" rel="noopener noreferrer">Camo</a> 专用于 iOS 设备，连接数据线后可将 iPhone 或 iPad 变为直播摄像头。</p>
+<h3> NDI</h3>
+<p>NDI 是最稳定的，可自由调节拍摄参数。打开 NDI 应用后，需等待 NDI 界面周边出现绿框或红框，OBS 才可以识别到摄像头。不过 NDI 是收费应用，安卓用户可使用 <a href="https://wwe.lanzoup.com/iQCMh00b946b" target="_blank" rel="noopener noreferrer">NDI 调试 APK</a>。</p>
+<h3> IP Webcam</h3>
+<p>IP Webcam 的推流稳定性一般，容易掉帧，但 <a href="https://wwz.lanzouf.com/iT6pH01tj7yb" target="_blank" rel="noopener noreferrer">IP Webcam 免费版</a> 足够个人使用。</p>
+<p>下文为 IP Webcam 基础设置：</p>
+<ul>
+<li>进入 IP Webcam 设置页面，将流质量调整至 90%，视频分辨率设为 720p，可有效减少卡顿。IP camera 耗电低，适合手机长时间直播，支持视频与浏览器等方式。</li>
+<li>在 OBS 中，选择「场景」&gt;「来源」&gt;「媒体源」，取消勾选本地文件，「输入」项中填入 IP Webcam 视频地址，例如 <code>http://192.168.2.234:8080/video</code>。</li>
+<li>OBS 中选择「场景」&gt;「来源」&gt;「浏览器」，「URL」项中填入 IP Webcam 浏览器全屏地址，例如 <code>http://192.168.2.234:8080/jsfs.html</code>。注意：浏览器推流容易出现闪屏。</li>
+</ul>
+<h3> 其他</h3>
+<p>如果出现闪退等问题，可尝试 iriun webcam、DroidCam 和 ivcam。</p>
+<p>不推荐使用无他伴侣，尽管国内有大量教程介绍它，但使用中会出现很多问题，例如：摄影角度很难控制；无法使用 FaceRig 等变脸应用；直播 10 分钟后，摄像头经常自动与 OBS 断开连接；直播 2 小时后，OBS 无法检测到无他伴侣。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>直播入门攻略一 | OBS 篇：OBS 29 新手指南</title>
+      <link>https://newzone.top/apps/livestreaming/1_obs_basic.html</link>
+      <guid>https://newzone.top/apps/livestreaming/1_obs_basic.html</guid>
+      <source url="https://newzone.top/rss.xml">直播入门攻略一 | OBS 篇：OBS 29 新手指南</source>
+      <description>Open Broadcaster Software（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件都是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。本文将从基础开始，为新手介绍 OBS 的界面、设置和直播使用方法。 主界面 OBS 界面看起来有些复杂，但可以分为菜单栏、预览区、主按钮区和运行状态四个区块。日常使用中，我们只需要接触主按钮区，它包括场景、来源、混音器、转场特效和控制按钮。</description>
+      <category>工具</category>
+      <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
+      <content:encoded><![CDATA[<p><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">Open Broadcaster Software</a>（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件都是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。本文将从基础开始，为新手介绍 OBS 的界面、设置和直播使用方法。</p>
 <h2> 主界面</h2>
 <p>OBS 界面看起来有些复杂，但可以分为菜单栏、预览区、主按钮区和运行状态四个区块。日常使用中，我们只需要接触主按钮区，它包括场景、来源、混音器、转场特效和控制按钮。</p>
 <figure><img src="http://tc.seoipo.com/2023-01-05-20-47-16.png" alt="" tabindex="0" loading="lazy"><figcaption>OBS 主界面</figcaption></figure>
@@ -93,6 +138,7 @@
 <li>游戏源：采集游戏画面。</li>
 <li>显示器采集：捕获单个显示器的完整视频画面。</li>
 <li>媒体源：播放本地或在线的音视频文件。</li>
+<li>VLC 视频源：安装 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">VLC</a> 才能启用本来源。「VLC 视频源」用于多个音视频按序播放，支持字幕。</li>
 </ul>
 <h3> 组合输出</h3>
 <ul>
@@ -116,6 +162,9 @@
 <p>「模糊」属于效果滤镜，可将指定区域模糊化以维护隐私。推荐设置：类型设为「Dual Filtering（双重过滤）」，大小为 4，应用蒙版后可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求更低。要使用模糊滤镜，需要安装插件 <a href="https://github.com/Xaymar/obs-StreamFX/releases" target="_blank" rel="noopener noreferrer">StreamFX</a>。</p>
 <figure><img src="http://tc.seoipo.com/2023-01-08-06-49-05.png" alt="" tabindex="0" loading="lazy"><figcaption>右侧为模糊效果</figcaption></figure>
 <figure><img src="http://tc.seoipo.com/2023-01-06-02-51-10.png" alt="" tabindex="0" loading="lazy"><figcaption>模糊滤镜设置</figcaption></figure>
+<h3> 色彩校正</h3>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Color-Grade" target="_blank" rel="noopener noreferrer">色彩校正</a>（Color Grading）是使用伽玛、对比度、亮度、饱和度、色调偏移、不透明度、颜色叠加、添加颜色来改变或校正最终画面的颜色和亮度的过程。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-08-07-01-17.png" alt="" tabindex="0" loading="lazy"><figcaption>色彩校正</figcaption></figure>
 <h3> 应用 LUT</h3>
 <p>「应用 LUT」属于效果滤镜。它使用 LUT 对画面进行色彩调整，相当于手机修图用的风格滤镜，能够大大提升画面效果。初期可以使用我的 <a href="https://wwva.lanzoue.com/iEyOs0k8kj3g" target="_blank" rel="noopener noreferrer">LUT 设置</a>，「路径」指向解压后的 png 文件。</p>
 <p>自制 LUT 文件参照下列步骤：</p>
@@ -131,6 +180,371 @@
 <p>右下角弹出提示「OBS Studio 已断开连接。正在重新连接...」，这说明直播服务设置错误。选择「设置」&gt;「直播」，更新服务器和推流码内容。注意：某些平台只要断开，推流码就会改变。</p>
 <h2> 后续</h2>
 <p>我原本想一篇写完 OBS 的入门，但基础使用已经占据了较长篇幅。为了避免重蹈上一篇的覆辙，OBS 插件的介绍会放在篇二更新。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>直播入门攻略二 | StreamFX 篇：最强大的 OBS 插件</title>
+      <link>https://newzone.top/apps/livestreaming/2_obs_streamfx.html</link>
+      <guid>https://newzone.top/apps/livestreaming/2_obs_streamfx.html</guid>
+      <source url="https://newzone.top/rss.xml">直播入门攻略二 | StreamFX 篇：最强大的 OBS 插件</source>
+      <description>StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果，是 OBS 必装的效果插件。本文将介绍 StreamFX 的 28 种滤镜效果。 安装 StreamFX 在 StreamFX 发布页 上按平台选择安装包。StreamFX for OBS 29 处于测试阶段，在升级此插件前，请按照 卸载教程 执行旧版清理。</description>
+      <category>工具</category>
+      <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
+      <content:encoded><![CDATA[<p>StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果，是 OBS 必装的效果插件。本文将介绍 StreamFX 的 28 种滤镜效果。</p>
+<h2> 安装 StreamFX</h2>
+<p>在 <a href="https://github.com/Xaymar/obs-StreamFX/releases" target="_blank" rel="noopener noreferrer">StreamFX 发布页</a> 上按平台选择安装包。StreamFX for OBS 29 处于测试阶段，在升级此插件前，请按照 <a href="https://github.com/Xaymar/obs-StreamFX/wiki/Uninstallation" target="_blank" rel="noopener noreferrer">卸载教程</a> 执行旧版清理。</p>
+<p>安装成功后，StreamFX 会出现在 OBS 上方的菜单栏上。下文中，我将使用不同滤镜处理样图，并提供对比图。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-27-34.png" alt="" tabindex="0" loading="lazy"><figcaption>样例原图</figcaption></figure>
+<h2> 来源镜像</h2>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Source-Mirror" target="_blank" rel="noopener noreferrer">来源镜像</a>（Source Mirror）是一种来源，而不是滤镜。它可以克隆任何源或场景，并将其应用于当前场景。对来源镜像叠加滤镜和任意效果，都不会对原始来源造成影响。</p>
+<h2> 3D 转换</h2>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-3D-Transform" target="_blank" rel="noopener noreferrer">3D 转换</a>（3D Transform）可以将 2D 图片的坐标系转换为三维，从而可以自由旋转、移动和缩放，形成类似星球大战中的字幕特效。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-27-01.png" alt="" tabindex="0" loading="lazy"><figcaption>3D 转换</figcaption></figure>
+<h2> 模糊</h2>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur" target="_blank" rel="noopener noreferrer">模糊</a>（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Liner 和 Dual-Filtering。一般来说，建议将类型设置为「Dual Filtering（双重过滤）」，大小为 4，应用蒙版后可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求也更低。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-08-06-49-05.png" alt="" tabindex="0" loading="lazy"><figcaption>右侧为模糊效果</figcaption></figure>
+<figure><img src="http://tc.seoipo.com/2023-01-06-02-51-10.png" alt="" tabindex="0" loading="lazy"><figcaption>模糊滤镜设置</figcaption></figure>
+<h2> 动态蒙版</h2>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Dynamic-Mask" target="_blank" rel="noopener noreferrer">动态蒙版</a>（Dynamic Mask）允许叠加任意来源或场景，并使用红色、绿色、蓝色和 alpha 通道建立画面蒙版。下图展示了使用红色通道叠加雨滴来源的效果。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-08-07-05-42.png" alt="" tabindex="0" loading="lazy"><figcaption>动态蒙版</figcaption></figure>
+<h2> SDF 特效</h2>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-SDF-Effects" target="_blank" rel="noopener noreferrer">SDF 特效</a>（Shader Signed Distance Field Effects）仅对拥有透明图层的画面有效，比如被移除背景后的摄像头画面。SDF 特效会对外观轮廓进行发光处理，并占用大量显存性能。![<a href="https://jishuin.proginn.com/p/763bfbd5a086" target="_blank" rel="noopener noreferrer">什么是 SDF？</a>] ![<a href="https://github.com/Xaymar/obs-StreamFX/issues/512" target="_blank" rel="noopener noreferrer">"SDF Effects" filter is undocumented</a>]</p>
+<figure><img src="http://tc.seoipo.com/2023-01-09-18-56-14.webp" alt="" tabindex="0" loading="lazy"><figcaption>SDF 特效-外发光+变形</figcaption></figure>
+<h2> 着色器</h2>
+<p>着色器滤镜位于 <code>%ProgramFiles%/obs-studio/data/obs-plugins/StreamFX/examples/shaders/filter</code>，后缀均为 <code>.effect</code>。切换着色器文件后，需点击「刷新选项和参数」。</p>
+<h3> 色彩滤镜</h3>
+<ul>
+<li>
+<p>colorize：对画面重新着色，效果与色彩校正滤镜相似。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-11-16.png" alt="" tabindex="0" loading="lazy"><figcaption>colorize</figcaption></figure>
+</li>
+<li>
+<p>posterize：向上下周围放入像素值。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-46-26.png" alt="" tabindex="0" loading="lazy"><figcaption>posterize</figcaption></figure>
+</li>
+<li>
+<p>smaa：将画面的轮廓线条化。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-03-18.png" alt="" tabindex="0" loading="lazy"><figcaption>smaa</figcaption></figure>
+</li>
+</ul>
+<h3> 位移变换</h3>
+<ul>
+<li>
+<p>bulge_pinch：挤压滤镜，使图像的中心产生凸起或凹下的效果，可生成循环凸凹的动画。</p>
+<p><img src="http://tc.seoipo.com/2023-01-07-23-14-10.png" alt="" title="bulge_pinch 凸起效果" loading="lazy">
+<img src="http://tc.seoipo.com/2023-01-07-23-14-47.png" alt="" title="bulge_pinch 凹下的效果" loading="lazy"></p>
+</li>
+<li>
+<p>displace：置换滤镜，可以产生弯曲，碎裂的图像效果。置换滤镜比较特殊的是设置完毕后，还需要选择一个图像文件作为位移图，滤镜根据位移图上的颜色值移动图像像素。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-02-59.png" alt="" tabindex="0" loading="lazy"><figcaption>displace</figcaption></figure>
+</li>
+<li>
+<p>drunk：画面随机晃动</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-57-18.gif" alt="" tabindex="0" loading="lazy"><figcaption>drunk</figcaption></figure>
+</li>
+<li>
+<p>swirl：漩涡打旋效果，可调整旋涡位置和大小，并可呈现漩涡的正反转动态效果。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-06-45.png" alt="" tabindex="0" loading="lazy"><figcaption>swirl</figcaption></figure>
+</li>
+<li>
+<p>wave：波浪滤镜是通过坐标变换来模拟水波效果，使图像呈现出水波的扭曲特效。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-12-23.png" alt="" tabindex="0" loading="lazy"><figcaption>wave</figcaption></figure>
+</li>
+<li>
+<p>zigzag：使图像产生同心圆状的波纹效果。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-30-25.png" alt="" tabindex="0" loading="lazy"><figcaption>zigzag</figcaption></figure>
+</li>
+</ul>
+<h3> 画面遮盖</h3>
+<ul>
+<li>
+<p>pixelation：像素化滤镜，可选择滤镜范围。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-48-41.png" alt="" tabindex="0" loading="lazy"><figcaption>pixelation</figcaption></figure>
+</li>
+<li>
+<p>hexagonize：用六角形状元素重构画面，可调节蜂窝元素的大小。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-50-21.png" alt="" tabindex="0" loading="lazy"><figcaption>hexagonize</figcaption></figure>
+</li>
+<li>
+<p>semiline：百叶窗栅格形滤镜，让画面像被一个关闭中的百叶窗遮盖。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-32-17.png" alt="" tabindex="0" loading="lazy"><figcaption>semiline</figcaption></figure>
+</li>
+<li>
+<p>blur-gaussian：模糊滤镜效果（高斯），对硬件配置要求高。</p>
+</li>
+</ul>
+<h3> 增强滤镜</h3>
+<ul>
+<li>
+<p>vignette：晕影/虚光照，用以增强镜头感，突出拍摄主体，营造画面的意境氛围。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-10-30.png" alt="" tabindex="0" loading="lazy"><figcaption>vignette</figcaption></figure>
+</li>
+<li>
+<p>rounded-rect：圆角矩形渲染</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-43-07.png" alt="" tabindex="0" loading="lazy"><figcaption>rounded-rect</figcaption></figure>
+</li>
+<li>
+<p>crt-curvature：将画面放置于 CRT 电视中，可调整画面曲率和四周的光晕颜色。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-09-05.png" alt="" tabindex="0" loading="lazy"><figcaption>crt-curvature</figcaption></figure>
+</li>
+<li>
+<p>crt-scanlines：仿 CRT 扫描线效果。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-06-17.gif" alt="" tabindex="0" loading="lazy"><figcaption>crt-scanlines</figcaption></figure>
+</li>
+<li>
+<p>repeat：将画面复制排列，例图是 3x3 复制画面。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-44-59.png" alt="" tabindex="0" loading="lazy"><figcaption>repeat</figcaption></figure>
+</li>
+<li>
+<p>fxaa：快速近似抗锯齿，是一种「比较廉价」的抗锯齿技术，多用于游戏直播/录制，适用于性能不高的电脑配置。</p>
+</li>
+</ul>
+<h2> N 卡滤镜</h2>
+<p>本部分的滤镜需要需 NVIDIA 2060 及以上显卡，并安装 <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-sdk/resources/" target="_blank" rel="noopener noreferrer">NVIDIA Video Effects &amp; AR SDK Redistributable</a>。这些滤镜效果均可用 NVIDIA Broadcast 实现。</p>
+<ul>
+<li>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Upscaling" target="_blank" rel="noopener noreferrer">画质提升</a>（Upscaling）：提升画质分辨率，可以将老式摄像头提升到 4K 画质。</p>
+</li>
+<li>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Denoising" target="_blank" rel="noopener noreferrer">降噪</a>（Denoising Filter）：对画面进行降噪。</p>
+</li>
+<li>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Auto-Framing" target="_blank" rel="noopener noreferrer">自动帧</a>（Auto-Framing）：通过 NVIDIA AR 的自动追踪人脸技术，自动裁剪和放大用户、并且在用户移动时保持帧居中。</p>
+</li>
+<li>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Virtual-Greenscreen" target="_blank" rel="noopener noreferrer">英伟达背景移除</a>（Virtual Greenscreen）：无需绿幕也能帮你移除人像背景，移除效果略逊色于 NVIDIA Broadcast。样图是用的是漫画，如果是真人画面，移除效果会好很多。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-19-50.png" alt="" tabindex="0" loading="lazy"><figcaption>人像背景移除</figcaption></figure>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>直播入门攻略三 | 插件篇：OBS 进阶插件</title>
+      <link>https://newzone.top/apps/livestreaming/3_obs_plugins.html</link>
+      <guid>https://newzone.top/apps/livestreaming/3_obs_plugins.html</guid>
+      <source url="https://newzone.top/rss.xml">直播入门攻略三 | 插件篇：OBS 进阶插件</source>
+      <description>OBS 与其他直播/录制应用最大的区别在于 OBS 社区，它给 OBS 带来了强大的扩展性。下文中我会介绍除 StreamFX 外的 15 款流行插件。（本文未完成，待填充） 插件安装与卸载 OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）两种。便携模式的插件配置可以复制到其他电脑上使用。 若要卸载 Windows 下的 OBS 便携模式插件，可以进入 %ProgramFiles%\obs-studio\data\obs-plugins 和 %ProgramFiles%\obs-studio\obs-plugins\64bit，搜索插件名，然后删除相关文件。</description>
+      <category>工具</category>
+      <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
+      <content:encoded><![CDATA[<p>OBS 与其他直播/录制应用最大的区别在于 OBS 社区，它给 OBS 带来了强大的扩展性。下文中我会介绍除 StreamFX 外的 15 款流行插件。（本文未完成，待填充）</p>
+<h2> 插件安装与卸载</h2>
+<p>OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）两种。便携模式的插件配置可以复制到其他电脑上使用。</p>
+<p>若要卸载 Windows 下的 OBS 便携模式插件，可以进入 <code>%ProgramFiles%\obs-studio\data\obs-plugins</code> 和 <code>%ProgramFiles%\obs-studio\obs-plugins\64bit</code>，搜索插件名，然后删除相关文件。</p>
+<h2> 多平台直播：multi-rtmp</h2>
+<p><a href="https://github.com/sorayuki/obs-multi-rtmp" target="_blank" rel="noopener noreferrer">multi-rtmp</a> 使得 OBS 支持多地址推流，以为着同时在多个平台上进行直播。</p>
+<p>开启多地址推流前，你需要点击控制按钮「开始直播」，然后再点「停止直播」。</p>
+<h2> 自动切换场景</h2>
+<p><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/" target="_blank" rel="noopener noreferrer">Advanced Scene Switcher</a>：使用「宏」来自动完成各种任务，按条件切换场景、来源。比如，电脑闲置 10 分钟后，让摄像头来源变为不可见。</p>
+<h2> Move transition</h2>
+<p><a href="https://obsproject.com/forum/resources/move-transition.913/" target="_blank" rel="noopener noreferrer">Move transition</a>：记录来源的位置变化，生成元素移动的动画效果。比如，视频演讲时，将摄像头位置从屏幕右下移动到中央。</p>
+<h2> Transition Table</h2>
+<p><a href="https://obsproject.com/forum/resources/transition-table.1174/" target="_blank" rel="noopener noreferrer">Transition Table</a>：场景切换效果，设定不同场景间的切换规则。</p>
+<h2> Source Dock</h2>
+<p><a href="https://obsproject.com/forum/resources/source-dock.1317/" target="_blank" rel="noopener noreferrer">Source Dock</a>：为单独场景或来源建立控制栏，使用小窗口预览场景。</p>
+<h2> Source Copy</h2>
+<p><a href="https://obsproject.com/forum/resources/source-copy.1261/" target="_blank" rel="noopener noreferrer">Source Copy</a>：更方便地复制、保存场景设置。</p>
+<h2> 其他</h2>
+<ul>
+<li><a href="https://obsproject.com/forum/resources/scene-collection-manager.1434/" target="_blank" rel="noopener noreferrer">Scene Collection Manager</a>：自动备份场景，防止误操作。</li>
+<li><a href="https://obsproject.com/forum/resources/audio-monitor.1186/" target="_blank" rel="noopener noreferrer">Audio Monitor</a>：将来源声音输出给指定设备播放，方便单独调节音量，能让主播与观众听到不同的音频效果。</li>
+<li><a href="https://obsproject.com/forum/resources/downstream-keyer.1254/" target="_blank" rel="noopener noreferrer">Downstream Keyer</a>：切换场景时，置顶指定场景。</li>
+<li><a href="https://github.com/norihiro/obs-multisource-effect" target="_blank" rel="noopener noreferrer">Multi Source Effect</a>：滤镜效果</li>
+<li><a href="https://github.com/fzwoch/obs-teleport" target="_blank" rel="noopener noreferrer">Teleport</a>：NDI 替代品，局域网设备推流到直播。</li>
+<li><a href="https://github.com/univrsal/spectralizer" target="_blank" rel="noopener noreferrer">spectralizer</a>：音频频谱，用滤镜「图像掩码」的「混合图层」给频谱遮罩滤镜。</li>
+<li><a href="https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/" target="_blank" rel="noopener noreferrer">NDI</a>: 局域网视频无线传输技术 NDI 插件。</li>
+<li><a href="https://obsproject.com/forum/resources/scrab.845/" target="_blank" rel="noopener noreferrer">scrab</a>：屏幕截图。添加了一个可配置的热键快速选择一个屏幕区域，并添加它作为一个图像源到当前场景。有人反馈 OBS 28 后有 bug，暂未修复。</li>
+<li><a href="https://obsproject.com/forum/resources/lower-thirds-in-html-css.928/" target="_blank" rel="noopener noreferrer">Lower thirds in HTML/CSS</a>：文字运动特效，适合展示 logo 和标题。</li>
+<li><a href="https://obsproject.com/forum/resources/input-overlay.552/" target="_blank" rel="noopener noreferrer">Input Overlay</a>：同步显示键盘、鼠标和游戏板上的输入。</li>
+</ul>
+<h2> 美化插件</h2>
+<p>第三方的直播美化插件提供了时钟、榜单、弹幕、游戏等互动来源，用于美化直播间，新手可参考使用。美化插件免费版一般足够用了，比如 <a href="https://yun.miebo.cn/" target="_blank" rel="noopener noreferrer">咩播</a>、<a href="http://zbmate.com/" target="_blank" rel="noopener noreferrer">智播</a>。</p>
+<h2> 弃用插件</h2>
+<p>以下插件已弃用，仅作记录：</p>
+<ul>
+<li><a href="https://obsproject.com/forum/resources/virtual-cam-filter.1142/" target="_blank" rel="noopener noreferrer">Virtual Cam Filter</a>：能让来源单独输出虚拟摄像头，OBS 28 已内置此功能。</li>
+<li><a href="https://obsproject.com/forum/resources/obs-websocket-remote-control-obs-studio-from-websockets.466/" target="_blank" rel="noopener noreferrer">obs-websocket</a>：远程控制插件，OBS 28 已内置此功能。</li>
+<li><a href="https://obsproject.com/forum/resources/animated-captions-with-obs-controller-and-a-preview-function.1407/" target="_blank" rel="noopener noreferrer">Animated captions</a>：自定义弹幕功能，无漂浮弹幕，适用较少，仅用于 OBS 27。</li>
+<li><a href="https://obsproject.com/forum/threads/shaderfilter-went-away.155555/#post-571174" target="_blank" rel="noopener noreferrer">OBS Shaderfilter</a>：文字图片特效滤镜。此插件已被从社区删除，下载使用 <a href="https://github.com/Oncorporation/obs-shaderfilter/releases/" target="_blank" rel="noopener noreferrer">GitHub 备份</a>，其功能已被 StreamFX 取代。</li>
+<li><a href="https://obsproject.com/forum/resources/asynchronous-source-duplication.1483/" target="_blank" rel="noopener noreferrer">Asynchronous Source Duplication</a>：复制来源可以同时展示在多个场景，复制源会有延迟。其功能已被 StreamFX 的来源镜像取代。</li>
+</ul>
+<h2> 更多</h2>
+<p>如果你在上文中没有找到你需要的功能功能，可以访问 <a href="https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/" target="_blank" rel="noopener noreferrer">OBS 插件库</a> 进行搜索。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>直播入门攻略四 | 特效篇：美颜、变声、多开、虚拟主播</title>
+      <link>https://newzone.top/apps/livestreaming/4_live_effects.html</link>
+      <guid>https://newzone.top/apps/livestreaming/4_live_effects.html</guid>
+      <source url="https://newzone.top/rss.xml">直播入门攻略四 | 特效篇：美颜、变声、多开、虚拟主播</source>
+      <description>虽然 OBS 的功能已经非常强大，但通过第三方软件可以更简单地给我们带来美颜、变声、虚拟主播等特效。 美颜 推荐使用 YY 开播 来实现直播美颜功能。 打开 YY 开播，调用摄像头摄像，开启美颜功能。然后，在 OBS 中调用 YY 开播，如果有绿幕，可以添加「色度值」滤镜进行视频抠图。一旦配置好，下次启动 OBS 时，软件会自动调用 YY 开播开启美颜，无需重复配置。但是，「美颜 + 直播」对电脑配置的要求较高，如果直播画面出现明显卡顿，建议关闭 YY 开播。</description>
+      <category>工具</category>
+      <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
+      <content:encoded><![CDATA[<p>虽然 OBS 的功能已经非常强大，但通过第三方软件可以更简单地给我们带来美颜、变声、虚拟主播等特效。</p>
+<h2> 美颜</h2>
+<p>推荐使用 <a href="https://v.yy.com/" target="_blank" rel="noopener noreferrer">YY 开播</a> 来实现直播美颜功能。</p>
+<p>打开 YY 开播，调用摄像头摄像，开启美颜功能。然后，在 OBS 中调用 YY 开播，如果有绿幕，可以添加「色度值」滤镜进行视频抠图。一旦配置好，下次启动 OBS 时，软件会自动调用 YY 开播开启美颜，无需重复配置。但是，「美颜 + 直播」对电脑配置的要求较高，如果直播画面出现明显卡顿，建议关闭 YY 开播。</p>
+<p><strong>使用注意</strong>：</p>
+<ul>
+<li>剧烈运动时，不要开美颜直播，否则容易卡顿。</li>
+<li>不要开启 YY 直播中除美颜外的功能，如虚拟背景、虚拟形象等，否则直播中的画面背景无法透明化。</li>
+</ul>
+<h2> 变声</h2>
+<p>直播变声可以通过硬件和软件两种方式实现。软件变声器，如 MorphVOX Pro 和神舌，对使用者的语气要求较高。我在淘宝找人进行了声音精调，但效果仍然无法仿真。店家发的语气教程也没有太多参考价值，初学者很难入门。硬件变声器的效果更加糟糕，强烈不推荐。</p>
+<h2> 虚拟主播</h2>
+<p>如果不想录脸直播，可以配合软件使用虚拟形象直播。此类换脸软件会占用较高的 CPU，需要使用三年内的主流配置。</p>
+<h3> Snap Camera</h3>
+<p><a href="https://snapcamera.snapchat.com/" target="_blank" rel="noopener noreferrer">Snap Camera</a> 是 SnapChat 的免费增强现实应用。它可以帮助你在电脑直播/录屏时实现挡脸头套、美化滤镜等特效。如果你熟悉 3D 建模，可以使用 Lens Studio 定制属于你自己的变脸特效。但需要注意的是，当你喝水、低头或脸部被遮挡时，脸部特效会失效。</p>
+<figure><img src="http://tc.seoipo.com/SnapCamera.gif" alt="Snap Camera 效果图" tabindex="0" loading="lazy"><figcaption>Snap Camera 效果图</figcaption></figure>
+<p>如果你无法使用 Snap Camera，可以尝试 FaceRig 和 PrprLive。</p>
+<h3> FaceRig</h3>
+<p><a href="https://store.steampowered.com/app/274920/FaceRig/" target="_blank" rel="noopener noreferrer">FaceRig</a>（Steam 已停售）可以通过对五官的动作捕捉，让卡通脸的表情进行同步变化，但不能对头部以下的部分进行捕捉和同步。使用时，需要打开 FaceRig 中的「切换广播」，否则 OBS 窗口会显示为黑屏。</p>
+<figure><img src="http://tc.seoipo.com/20210329092154.gif" alt="FaceRig 演示图" tabindex="0" loading="lazy"><figcaption>FaceRig 演示图</figcaption></figure>
+<p>注意：百度搜索 FaceRig 的首个结果是<strong>虚假官网</strong>，价格高且无保障，不要在上面进行购买。</p>
+<h3> PrprLive</h3>
+<p><a href="https://store.steampowered.com/app/1279610/PrprLive/" target="_blank" rel="noopener noreferrer">PrprLive</a> 是国内的变脸软件，基础版免费，同样在 Steam 销售，付费前先试试基础版。</p>
+<h2> 动态素材</h2>
+<p>为了丰富直播场景，可以使用带绿幕的视频来添加动态特效，或者借助类虚拟主播技术来实现交互。例如 <a href="https://d.appinn.com/bongo-cat-mver/" target="_blank" rel="noopener noreferrer">Bongo Cat Mver</a>，它能实时同步键盘与鼠标状态，增加直播趣味性。如果你使用的是 Bongo Cat 全键盘同步模型，建议打乱映射规则，以防止隐私泄露。</p>
+<figure><img src="http://tc.seoipo.com/2022-06-30-08-29-40.png" alt="直播间的猫咪" tabindex="0" loading="lazy"><figcaption>直播间的猫咪</figcaption></figure>
+<h2> 摄像头多开</h2>
+<p>摄像头默认只能被一个应用调用。借助 <a href="https://splitcam.com/" target="_blank" rel="noopener noreferrer">SplitCam</a>，你能在摄像头画面上叠加元素，使用镜像、高亮滤镜微调画面，还能让摄像头画面同步给多个应用。</p>
+<p>例如，摄像头可以同时用于 OBS 直播和 Capture 录屏，在不同用途上可以叠加不同滤镜和特效，呈现出不同的画面。</p>
+<p><strong>使用流程</strong>：</p>
+<ol>
+<li>打开 SplitCam，选择默认摄像头。</li>
+<li>Snap Camera、Capture 等第三方调用摄像头时，选择「SplitCam Video Driver」。</li>
+</ol>
+<h2> 其他应用</h2>
+<h3> NVIDIA BROADCAST</h3>
+<p>如果你使用的是 NVIDIA 显卡，强烈推荐安装 <a href="https://www.nvidia.cn/geforce/guides/broadcast-app-setup-guide/" target="_blank" rel="noopener noreferrer">NVIDIA Broadcast</a>。它利用 AI 的强大功能将标准网络摄像头和麦克风升级为高端智能设备，通过麦克风去噪、房间回声消除、虚拟背景、网络摄像头人像跟踪和视频降噪等 AI 功能，提高直播的视频和音频质量。通过 NVIDIA RTX GPU 上搭载的名为 Tensor Core 的专用 AI 处理器，AI 网络能够实时运行高质量的效果。</p>
+<h3> 小葫芦弹幕助手</h3>
+<p><a href="https://zs.xiaohulu.com/danmu/" target="_blank" rel="noopener noreferrer">小葫芦弹幕助手</a> 可实时显示网友的互动和打赏，尤其适合游戏直播。但是，由于弹幕答谢、自动定时弹幕、手动弹幕等功能已暂停，不建议新手充值会员。</p>
+<p>如果不需要在直播界面中显示弹幕，不要安装小葫芦弹幕插件。安装后，会影响 OBS 窗口捕获功能，无法抓取基于 Electron 的应用界面，从而导致窗口捕捉黑屏。解决方法是删除 <code>C:\Program Files\obs-studio\obs-plugins\64bit</code> 目录内的 <code>CalabashDanmuPlugin.dll</code>、<code>CalabashWinCapture.dll</code>、<code>ObssDanmuInfo.dll</code>，重启 OBS 即可恢复，但下次使用弹幕助手时，这三个文件会自动安装，黑屏问题复现，只能重新删除指定文件。</p>
+<p>小葫芦直播助手集成了 OBS 和弹幕助手的功能，但为了直播的扩展性，仍然建议从 OBS 入门。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>直播入门攻略五 | 平台篇：主流直播平台介绍</title>
+      <link>https://newzone.top/apps/livestreaming/5_live_platforms.html</link>
+      <guid>https://newzone.top/apps/livestreaming/5_live_platforms.html</guid>
+      <source url="https://newzone.top/rss.xml">直播入门攻略五 | 平台篇：主流直播平台介绍</source>
+      <description>主流直播平台有淘宝、京东、抖音、快手、视频号、哔哩哔哩、小红书、微博直播、斗鱼、虎牙和 YouTube。接下来，我将逐一介绍如何使用 PC 端的 OBS 在这些平台上进行直播。 淘宝直播 下载 淘宝直播客户端，打开后点击「我要开播」，进入直播间界面。 淘宝直播设置 在左侧点击「添加元素」&amp;gt;「摄像头」，选择「OBS-Camera」，即可同步 OBS 直播画面。淘宝直播客户端也是基于 OBS，但不支持推流直播，只能通过虚拟摄像头同步画面。</description>
+      <category>工具</category>
+      <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
+      <content:encoded><![CDATA[<p>主流直播平台有淘宝、京东、抖音、快手、视频号、哔哩哔哩、小红书、微博直播、斗鱼、虎牙和 YouTube。接下来，我将逐一介绍如何使用 PC 端的 OBS 在这些平台上进行直播。</p>
+<h2> 淘宝直播</h2>
+<ol>
+<li>
+<p>下载 <a href="https://market.m.taobao.com/app/mtb/live-portal/download/index.html" target="_blank" rel="noopener noreferrer">淘宝直播客户端</a>，打开后点击「我要开播」，进入直播间界面。</p>
+<figure><img src="http://tc.seoipo.com/2022-06-29-22-23-26.png" alt="" tabindex="0" loading="lazy"><figcaption>淘宝直播设置</figcaption></figure>
+</li>
+<li>
+<p>在左侧点击「添加元素」&gt;「摄像头」，选择「OBS-Camera」，即可同步 OBS 直播画面。淘宝直播客户端也是基于 OBS，但不支持推流直播，只能通过虚拟摄像头同步画面。</p>
+</li>
+</ol>
+<p>除了客户端，还可以通过 <a href="https://liveplatform.taobao.com/restful/index/home/" target="_blank" rel="noopener noreferrer">直播中控台</a> 来设置淘宝直播间。</p>
+<h2> 抖音直播</h2>
+<ol>
+<li>
+<p>下载 <a href="https://www.douyin.com/falcon/webcast_openpc/pages/streamingtool_download/index.html" target="_blank" rel="noopener noreferrer">直播伴侣电脑端</a>，它可以适配西瓜视频、抖音、抖音火山版的直播。</p>
+</li>
+<li>
+<p>在左侧点击「添加元素」&gt;「采集」，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道。</p>
+<figure><img src="http://tc.seoipo.com/2022-06-29-23-59-02.png" alt="" tabindex="0" loading="lazy"><figcaption>抖音直播设置</figcaption></figure>
+</li>
+</ol>
+<p>以上为抖音新手的电脑直播步骤，如果你的抖音粉丝在一万以上，可以使用 <a href="http://streamingtool.douyin.com/docs/guide/96319/" target="_blank" rel="noopener noreferrer">OBS 模式推流</a>。</p>
+<h2> 快手直播</h2>
+<p>快手直播无需 PC 客户端，可在 <a href="https://studio.kuaishou.com/profile" target="_blank" rel="noopener noreferrer">快手云直播</a> 页面配置直播间，支持 OBS 模式推流直播。若直播断流超过 2 分钟或直播超过 7 天，则会自动下播。</p>
+<h2> 视频号直播</h2>
+<p>要使用电脑直播视频号，需要先完成 <a href="https://channels.weixin.qq.com/platform/live/apply" target="_blank" rel="noopener noreferrer">视频号认证</a>。</p>
+<p>视频号认证最重要的一环是<strong>有效关注数 1000 人以上</strong>，可疑和外挂用户都不包含在有效人数内。达到 1000 有效粉丝后，就可以在视频号助手网页端发起直播推流了。</p>
+<h2> B 站直播</h2>
+<p>哔哩哔哩可以在 <a href="https://link.bilibili.com/p/eden/download#/web" target="_blank" rel="noopener noreferrer">直播姬客户端</a> 或 <a href="https://link.bilibili.com/p/center/index#/my-room/start-live" target="_blank" rel="noopener noreferrer">网页端</a> 上进行在线直播。直播封面必须包含图像，不支持纯文本封面。</p>
+<p>如果你主做 B 站直播，可以试试哔哩哔哩直播机器人 <a href="https://github.com/iwxyi/Bilibili-MagicalDanmaku" target="_blank" rel="noopener noreferrer">神奇弹幕</a>，它集成了弹幕姬、答谢姬、点歌姬、回复姬和工作流 (workflow)，支持弹幕聊天、观众互动、自动点歌、数据统计、私信处理等功能。这个应用看起来很有趣，我还没有使用过。</p>
+<h2> 知乎直播</h2>
+<p>在 <a href="https://www.zhihu.com/creator/streaming/push" target="_blank" rel="noopener noreferrer">知乎推流直播</a> 页面开启直播后，就可以使用知乎的电脑直播。</p>
+<p>知乎直播注意：</p>
+<ul>
+<li>推流直播不能与第三方连接谈话；手机直播不支持绿幕抠图。</li>
+<li>当你在电脑直播时，用手机进入知乎客户端，会提示「是否继续直播」，选择「继续」可进入直播界面与观众互动，选「忽略」则停止直播。</li>
+<li>如果直播时间超过一个月，小葫芦直播码会失效，无法继续使用小葫芦直播助手和弹幕助手。</li>
+</ul>
+<h2> 小红书直播</h2>
+<p>小红书使用 <a href="http://www.xiaohongshu.com/zhibo/robs" target="_blank" rel="noopener noreferrer">直播助手</a> 来设置推流，可以查看 <a href="ttps://fe-video-qc.xhscdn.com/fe-platform/f03ae58e50e6d53580fa16a58e9dffbbbabbb5f0.pdf">官方文档</a> 了解开播步骤。</p>
+<p>当我登录直播助手时，提示「暂无直播权限，请联系运营及客服开通」，但手机却可以直播，这说明提示中的直播权限专指电脑端直播。因此，我在应用中提交了问题，但一直未收到客服回复。</p>
+<h2> 微博直播</h2>
+<p>微博直播需先完成实名认证，然后在 <a href="https://weibo.com/manage/frame?furl=https%3A%2F%2Fweibo.com%2Fl%2Fwblive%2Fadmin%2Fhome%2Fauthentication" target="_blank" rel="noopener noreferrer">微博管理中心</a> 创建直播。详细的开播步骤，可以参考官方的 <a href="https://weibo.com/l/wblive/act/k2mw80kz3kw0" target="_blank" rel="noopener noreferrer">微博 PC 开播教程</a>。</p>
+<h2> Youtube 直播</h2>
+<p>如果您在过去 90 天内没有进行 YouTube 直播，平台会要求验证您的频道。首次启用直播功能可能需要最长等待 24 小时。</p>
+<ol>
+<li>打开 <a href="http://youtube.com/livestreaming" target="_blank" rel="noopener noreferrer">YouTube 直播控制室</a>。</li>
+<li>点击直播标签页或为新直播安排时间。</li>
+<li>从直播控制室复制直播网址和直播码，然后将其粘贴到编码器中。</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>直播入门攻略六 | 技巧篇：直播定位与策划</title>
+      <link>https://newzone.top/apps/livestreaming/6_live_positioning.html</link>
+      <guid>https://newzone.top/apps/livestreaming/6_live_positioning.html</guid>
+      <source url="https://newzone.top/rss.xml">直播入门攻略六 | 技巧篇：直播定位与策划</source>
+      <description>直播过几次了，但是你的直播间总是没有人看，偶尔来了人也不知道说什么。作为直播新手，遇到这种情况是很正常的。建议按照本文的章节，逐一比对，对你的直播进行定位和策划。 直播定位 开设直播前，从你的兴趣、能力和直播目的出发，确定直播定位。 我是谁：我的职业/身份是什么。 面向谁：目标用户画像：性别、年龄、兴趣、收入、消费能力、性格特征等。 我能提供什么：核心竞争力：陪伴？专业知识？丰富经验？渠道资源？ 解决目标用户什么问题：排遣寂寞？选购答疑？ 定位完成后，把自己放在目标观众角度进行换位思考，调整直播定位。</description>
+      <category>工具</category>
+      <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
+      <content:encoded><![CDATA[<p>直播过几次了，但是你的直播间总是没有人看，偶尔来了人也不知道说什么。作为直播新手，遇到这种情况是很正常的。建议按照本文的章节，逐一比对，对你的直播进行定位和策划。</p>
+<h2> 直播定位</h2>
+<p>开设直播前，从你的兴趣、能力和直播目的出发，确定直播定位。</p>
+<ul>
+<li>我是谁：我的职业/身份是什么。</li>
+<li>面向谁：目标用户画像：性别、年龄、兴趣、收入、消费能力、性格特征等。</li>
+<li>我能提供什么：核心竞争力：陪伴？专业知识？丰富经验？渠道资源？</li>
+<li>解决目标用户什么问题：排遣寂寞？选购答疑？</li>
+</ul>
+<p>定位完成后，把自己放在目标观众角度进行换位思考，调整直播定位。</p>
+<ul>
+<li>你喜欢哪类型的直播？喜欢谁的直播？为什么？每个主播至少列出 3 个吸引你的点。</li>
+<li>你不喜欢哪种直播？为什么？</li>
+<li>如果是你做直播，你希望是什么样的？你的底线是什么？有什么顾虑？顾虑和目标比起来，孰轻孰重？</li>
+</ul>
+<p>如果前期定位依然不清，可以<strong>观察头部主播、找到对标主播</strong>，模仿对标主播的直播间。</p>
+<h2> 开播时间</h2>
+<p><strong>保持长时间和持续开播，稳定开播频次与时间段</strong>。</p>
+<p>例如，每周固定开播两到三场，每次直播不低于 30 分钟。直播频率和直播时长是做好直播的基础，如果开播时长和开播频率不稳定，系统就无法准确地进行推荐。</p>
+<p>新人直播有流量扶持，即使初期没有观众也要坚持开播。尽量选择白天等冷门时间段，竞争相对较小。</p>
+<p>娱乐直播保持 2.5 小时以上，电商直播保持 3.5 小时以上才会有官方稳定推流。</p>
+<h2> 直播策划</h2>
+<h3> 选题</h3>
+<p>直播选题决定直播前期自然流量的多少。</p>
+<p>新手直播流量不高时，主题尽量搭上最新热点，<strong>抓住热点，立即开始，利用现有内容，抢占黄金流量时间</strong>。但你的直播内容一定要与热点相关，否则牛头不对马嘴，自然流量也不会留下来。</p>
+<p>选定主题后，<strong>准备 15~20 分钟的脚本，在直播中循环使用</strong>。即使直播间没人，也不要停止说话，否则进入的自然流量会变少。</p>
+<h3> 标题</h3>
+<p>直播标题控制在 8 个字，可以通过关键词搜索站内热门，从中参考直播标题。直播标题没有搜索权重，所以不需要堆砌关键词，只要能清楚地表达直播间主题就可以了。</p>
+<p>标题要素：</p>
+<ul>
+<li>突出主播特征，如：人物特质、性格。</li>
+<li>突出内容，如：才艺展示、音乐主题、户外和其他类别。</li>
+<li>突出玩法吸引，比如：各种秒杀活动、免费赠送等。</li>
+<li>突出实力，清楚地表现出你的能力，当然做解说也可以。</li>
+</ul>
+<h3> 预告</h3>
+<p>开播前，一定要先发直播预告或短视频，以便让更多观众进入直播间。预告发布最好在开播前两小时完成。</p>
+<p>在开播页面，请提前设置好<strong>封面标题</strong>并勾选<strong>定位</strong>。</p>
+<p>有特色的封面可以提升观众对直播间的兴趣，建议使用本人或与内容相关的图片作为封面。如果不知道如何设置好封面标题，可以参考其他观众较多的直播间。</p>
+<p>打开直播定位，可以让更多的同城观众看到你的直播间，对直播间的流量有非常大的帮助。</p>
+<h3> 环境</h3>
+<p>灯光和环境声音决定了你的直播效果。</p>
+<p>直播间灯光要亮，露脸主播可以将灯光打在脸部的右前方 45 度，这能提升你的颜值。</p>
+<p>直播前，尽量关闭门窗和不必要的电器，降低直播间环境噪音，以避免干扰直播效果。</p>
+<h2> 直播互动</h2>
+<p>开场前 10~15 分钟是暖场阶段，你可以先和观众互动，等人多了再正式开始主题。</p>
+<p>有新观众进入直播间时，要主动欢迎他们。有意识地引导用户关注、互动，呼吁点亮粉丝灯牌，及时感谢礼物。</p>
+<p>对于用户评论，要<strong>先读出弹幕</strong>，然后做出应答。粉丝提出意见对我们是有帮助的，一定要虚心接受并表示感谢。</p>
+<p>如果有团队配合，可以安排管理员维持直播间的秩序并活跃气氛，参与直播平台的官方活动，适当购买直播道具（宠粉红包福袋）。</p>
+<p>下播后，进行数据复盘，调整直播间的标题、封面和背景。</p>
+<h2> 开播锻炼</h2>
+<p>开播前把脸部肌肉活动开。嘴张到最大，舌顶上颚 60 秒；嘴张到最大，尽量伸舌 30 秒。说话时，让嘴唇用力。</p>
+<h2> 总结</h2>
+<p>经过两年的直播，我深知直播的硬件、软件和技巧只是锦上添花。如果你想体验直播，不想深入研究，只需拿出手机开播即可。开始直播时，可能会有很多疑问和顾虑，效果也不一定很好。但只有勇敢尝试新事物，不断开拓，我们的人生才会有更多可能性。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -405,412 +819,6 @@ scoop <span class="token function">install</span> ffmpeg
 <p>但如果你已经有一定的知名度了，请先想清楚，你真的需要「走极端」的垃圾流量吗？真的要赌互联网记忆？</p>
 ]]></content:encoded>
       <enclosure url="http://tc.seoipo.com/2022-09-07-11-29-53.png?imageMogr2/thumbnail/!60p" type="image/"/>
-    </item>
-    <item>
-      <title>零基础入门 Stable Diffusion - 无需显卡把 AI 绘画引擎搬进家用电脑</title>
-      <link>https://newzone.top/posts/2022-09-05-stable_diffusion_ai_painting.html</link>
-      <guid>https://newzone.top/posts/2022-09-05-stable_diffusion_ai_painting.html</guid>
-      <source url="https://newzone.top/rss.xml">零基础入门 Stable Diffusion - 无需显卡把 AI 绘画引擎搬进家用电脑</source>
-      <description>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。 丁老头进化旅程 Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具，可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行，并在几秒内生成图像，无需预处理和后处理。</description>
-      <category>工具</category>
-      <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。</p>
-<figure><img src="http://tc.seoipo.com/2022-09-04-11-53-20.png" alt="" tabindex="0" loading="lazy"><figcaption>丁老头进化旅程</figcaption></figure>
-<p>Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具，<strong>可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行</strong>，并在几秒内生成图像，无需预处理和后处理。</p>
-<p>体验 AI 绘图可借助在线工具 <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" target="_blank" rel="noopener noreferrer">Hugging Face</a>、<a href="https://beta.dreamstudio.ai/" target="_blank" rel="noopener noreferrer">DreamStudio</a> 或 <a href="https://wenxin.baidu.com/moduleApi/ernieVilg" target="_blank" rel="noopener noreferrer">百度文心</a>。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。</p>
-<p>如果想生成大量 AI 图片，可以通过 Docker Desktop 将 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker</a> 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Mac 用户建议选择 Stable Diffusion 的 invoke 分支，部署报错参考 <a href="https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore" target="_blank" rel="noopener noreferrer">InvokeAI 文档</a>，<strong>M1/M2 Mac</strong> 推荐使用更简便的 <a href="https://www.charl-e.com/" target="_blank" rel="noopener noreferrer">CHARL-E</a> 或 <a href="https://sspai.com/post/75682" target="_blank" rel="noopener noreferrer">DiffusionBee</a>。</p>
-<figure><img src="http://tc.seoipo.com/2022-09-05-16-22-45.png" alt="" tabindex="0" loading="lazy"><figcaption>Stable Diffusion 部署流程</figcaption></figure>
-<p>本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。</p>
-<h2> Docker 环境配置</h2>
-<p>本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1"> 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，<strong>配置 WSL 或是启用 Hyper-V</strong>，二选一即可，推荐使用子系统 WSL（占用系统盘 30G 的空间）。</a></p><a class="footnote-anchor" id="footnote-ref1">
-</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 安装 WSL</h3>
-<p>在管理员 PowerShell 输入命令 <code>wsl --install</code>，之后终端会默认安装 Ubuntu。系统下载时间较长，注意别关机。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2"> 安装 Ubuntu 完成后，按提示设置 Ubuntu 账户和密码。</a></p><a class="footnote-anchor" id="footnote-ref2">
-</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> 启用 Hyper-V</h3>
-<p>以管理员身份打开 PowerShell 控制台，输入命令 <code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All</code>。<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3"> 重启电脑后，将开启 Hyper-V。</a></p><a class="footnote-anchor" id="footnote-ref3">
-</a><h3><a class="footnote-anchor" id="footnote-ref3"></a> Linux 路径（Windows）</h3>
-<p>配置 WebUI Docker 要进入 Linux 环境，因此 Windows 用户需将其路径转换为 Linux 路径，Mac/Linux 用户可忽略本步。</p>
-<p>假设容器位于 <code>D:\Desktop\stable-diffusion-webui-docker</code>：</p>
-<ol>
-<li>把磁盘符号改为小写，转换为 <code>d:\Desktop\stable-diffusion-webui-docker</code></li>
-<li>添加 <code>/mnt/</code> 前缀，转换为 <code>/mnt/d:\Desktop\stable-diffusion-webui-docker</code>。因为 Windows 本地磁盘是挂载在 Linux 的 mnt 目录下的。</li>
-<li>将反斜扛 <code>\</code> 替换为 <code>/</code>。最终得到 Linux 路径 <code>/mnt/d:/Desktop/stable-diffusion-webui-docker</code>。</li>
-</ol>
-<h2> 配置 Stable Diffusion</h2>
-<h3> 安装 Docker Desktop</h3>
-<p>按平台选 <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener noreferrer">Docker Desktop</a> 版本，安装后点击左侧的 Add Extensions，推荐 Disk usage 扩展，便于管理 Docker 存储空间。</p>
-<h3> 下载 WebUI Docker</h3>
-<p>然后，下载 <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/" target="_blank" rel="noopener noreferrer">Stable Diffusion WebUI Docker 配置包</a> 或 <a href="https://www.aliyundrive.com/s/EKmK7MGrHdn" target="_blank" rel="noopener noreferrer">阿里云盘聚合版</a>，将其解压到指定路径。聚合版包括相关依赖，因此文件较大。之后更新 WebUI Docker，也是按上方步骤重新构建容器即可更新 Stable Diffusion。</p>
-<h3> 分支介绍</h3>
-<p>目前 Stable Diffusion 有 sygil、auto、auto-cpu 和 invoke 四个分支。如果要更换分支，则更改镜像构建命令 <code>docker compose --profile [ui] up --build</code>，将 <code>[ui]</code> 替换为所需的镜像名即可。原本的 hlkcy 分支更名为 sygil，原本的 lstein 分支更名为 invoke。</p>
-<ul>
-<li><strong>sygil</strong>：界面直观，最高分辨率为 1024x1024，镜像构建命令为 <code>docker compose --profile sygil up --build</code>。</li>
-<li><strong>auto</strong>（推荐）：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 <code>docker compose --profile auto up --build</code>。默认使用 6GB 以上的显存，如果你的显卡内存较低，则将配置中的 <code>--medvram</code> 改为 <code>--lowvram</code>。A 卡用户注意修改 <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker" target="_blank" rel="noopener noreferrer">显卡设置</a>。</li>
-<li><strong>auto-cpu</strong>：唯一不依赖显卡的分支。如果没有符合要求的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 <code>docker compose --profile auto-cpu up --build</code>。</li>
-<li><strong>invoke</strong>：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 <code>docker compose --profile invoke up --build</code>。</li>
-</ul>
-<h3> 构建 Stable Diffusion</h3>
-<p>启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入路径切换命令 <code>cd /mnt/d/Desktop/stable-diffusion-webui-docker</code>，该路径为 Stable Diffusion WebUI Docker 解压文件目录。然后，输入下方的部署命令。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token comment"># 自动下载采样模型和依赖包</span>
-<span class="token function">docker</span> compose <span class="token parameter variable">--profile</span> download up <span class="token parameter variable">--build</span>
-<span class="token comment"># 上方命令需要 20 分钟或更长，完成后执行镜像构建命令</span>
-
-<span class="token function">docker</span> compose <span class="token parameter variable">--profile</span> sygil up <span class="token parameter variable">--build</span>
-<span class="token comment"># auto 是功能最多的分支，可以选择 auto | auto-cpu | invoke | sygil | sygil-sl</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><img src="http://tc.seoipo.com/2022-09-04-18-32-31.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>构建完成后，提示访问 <code>http://localhost:7860/</code>，你就可以在本地电脑上用 AI 生成图片了。<sup class="footnote-ref"><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"></a></sup></p><a class="footnote-anchor" id="footnote-ref4">
-</a><h2><a class="footnote-anchor" id="footnote-ref4"></a> 使用说明</h2>
-<p>使用界面以 sygil 分支为例，其他分支的主题界面略有不同，但功能上并没有根本性差异。</p>
-<h3> 启动 Stable Diffusion</h3>
-<ol>
-<li>打开 Docker Desktop。</li>
-<li>在 Containers 中选中分支容器，点击启动。</li>
-<li>浏览器中访问 <code>http://localhost:7860/</code>。</li>
-</ol>
-<figure><img src="http://tc.seoipo.com/2022-09-04-17-06-27.png" alt="" tabindex="0" loading="lazy"><figcaption>Docker Desktop 界面</figcaption></figure>
-<h3> Text-to-Image</h3>
-<p>Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。风景、创意画等崇尚空间结构的画作类型时，优先推荐竖图或者横图。人像类画作推荐 1:1 的方图，否则可能会出现两个或者多个人脸的叠加现象。生成图片的分辨率是有限制的，可以用 Upscale 放大结果图片。</p>
-<figure><img src="http://tc.seoipo.com/2022-09-05-08-28-23.png" alt="" tabindex="0" loading="lazy"><figcaption>Text-to-Image 界面</figcaption></figure>
-<p>默认使用 Simple 简单模式，点击右侧按钮 Advanced，可查看进阶选项，使用进阶的场景矩阵、面孔修复和分辨率放大等多种功能。</p>
-<h3> Image-to-Image</h3>
-<p>Image-to-Image 依据文字描述和输入源图，生成相关的图像。该模式若以素描、结构画为来源图，可充分填充图像细节；若以细节充分的照片为来源图，则会输出差异较大的结果。更妙的是，你可以限定区域来生成图像，非常适合图像修改。</p>
-<figure><img src="http://tc.seoipo.com/2022-09-04-15-39-00.png" alt="" tabindex="0" loading="lazy"><figcaption>Image-to-Image 界面</figcaption></figure>
-<p>CLIP interrogator 会根据图像来生成文字描述。Denoising Strength 指与原图的差异度，建议在 0.75-0.9，魔改图片可以设为 0.5 以下。下图中的 Denoising Strength 只有 0.44，整体图片结构与要素没变，但结果如何你看到了。</p>
-<figure><img src="http://tc.seoipo.com/2022-09-04-15-40-26.png" alt="" tabindex="0" loading="lazy"><figcaption>超级魔改图片</figcaption></figure>
-<h3> Image Lab</h3>
-<p>Image Lab 能批量修正面孔和放大图片分辨率。</p>
-<p>Fix Faces 是通过 GFPGAN 模型来改善图片中的面孔，Effect strength 滑块可以控制效果的强度。但实际效果别报太高期许，下图右侧开启了 Fix Faces，只能说勉强有了五官。</p>
-<figure><img src="http://tc.seoipo.com/2022-09-04-15-47-14.png" alt="" tabindex="0" loading="lazy"><figcaption>A woman flying in the air laughing</figcaption></figure>
-<p>Upscale 放大分辨率功能有 RealESRGAN，GoBIG，Latent Diffusion Super Resolution 和 GoLatent 四种模型，其中的 RealESRGAN 有普通与卡通两种模式，可按需选择。Upscale 图片主要消耗 CPU 与内存资源。</p>
-<h2> 文字描述图像</h2>
-<p>Stable Diffusion 是以文字内容 (英文) 描绘一个场景或事物，从而决定你的画面中将出现什么。文字描绘是决定图像生成质量的关键因素。</p>
-<p>样例：<code>A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}</code>。<sup class="footnote-ref"><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></sup></p><a class="footnote-anchor" id="footnote-ref5">
-</a><h3><a class="footnote-anchor" id="footnote-ref5"></a> 常规描述</h3>
-<ol>
-<li>输入图像的对象、主体，比如一只熊猫、一个持剑的战士，<strong>不要描述动作、情绪和事件</strong>；<sup class="footnote-ref"><a href="#footnote6">[6]</a><a class="footnote-anchor" id="footnote-ref6"></a></sup></li><a class="footnote-anchor" id="footnote-ref6">
-<li><strong>画作种类</strong>：一幅画（a painting of + raw prompt）还是一张照片（a photograph of + raw prompt），或者 Watercolor（水彩）、Oil Paint（油画）、Comic（漫画）、Digital Art（数码艺术）、Illustration（插画）、realistic painting（写实画）、photorealistic（写实照片）、Portrait photogram（肖像照）、sculpture (雕塑) 等等，画作种类可以叠加。</li>
-<li><strong>画家/画风</strong>：建议混合多个画家的风格，比如 <code>Studio Ghibli, Van Gogh, Monet</code>，或描述风格种类，比如 <code>very coherent symmetrical artwork</code>，将作品结构设为「连贯且对称」。</li>
-<li><strong>色调</strong>：yellow color scheme 指整个画面的主色调为黄色。</li>
-<li><strong>参考平台</strong>：Trending on ArtStation，也可以替换为「Facebook」「Pixiv」「Pixbay」等。
-<img src="http://tc.seoipo.com/2022-09-16-22-33-26.png" alt="" title="相同参数下，不同平台生成的图片" loading="lazy"></li>
-</a></ol><a class="footnote-anchor" id="footnote-ref6">
-</a><h3><a class="footnote-anchor" id="footnote-ref6"></a> 特征描述</h3>
-<p>除画面主体外，可以用其他具象物体和形容词来填充画面细节。描述词要具体，讲出你要的物体和它的特征。</p>
-<ul>
-<li>次要元素：物体不要太多，两到三个就好。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 <code>beautiful forest background, desert!!, (((sunset)))</code> 中会优先体现「desert」和「sunset」元素。</li>
-<li>人物特征：<code>detailed gorgeous face, delicate features, elegant, Googly Eyes, Bone, big tits, silver hair, olive skin, Mini smile</code>；</li>
-<li>特定润色：<code>insanely detailed and intricate, gorgeous, surrealism, smooth, sharp focus, Painting, Digital Art, Concept Art, Illustration, Artstation, in a symbolic and meaningful style, 8K</code>；</li>
-<li>光线描述：<code>Natural Lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight</code>，或逼真光照 <code>Unreal Engine</code>；</li>
-<li>镜头视角：<code>Cinematic, Magazine, Golden Hour, F/22, Depth of Field, Side-View</code>；</li>
-<li>画面质量：<code>award winning, breathtaking, groundbreaking, superb, outstanding</code>；</li>
-<li>其他描述：细节和纹理、物体占据画面的大小、年代、渲染 / 建模工具等。</li>
-</ul>
-<h3> 反向描述</h3>
-<p>negative prompt（反向描述）可以在 auto/auto-cpu 分支中设置，避免画面出现指定元素。</p>
-<ul>
-<li>避免畸形：<code>ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, armless, legless, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art</code>；</li>
-<li>避免裸体：<code>nudity, bare breasts</code>。</li>
-</ul>
-<h3> prompt 参考</h3>
-<p>除画面主体描述外，其他要素并非必须。如果你只是简单尝试，输入主体「apples」即可。</p>
-<p>如果你不知道生成什么图像，可以使用 <a href="https://promptomania.com/stable-diffusion-prompt-builder/" target="_blank" rel="noopener noreferrer">promptoMANIA</a> 、<a href="https://weirdwonderfulai.art/resources/disco-diffusion-modifiers/" target="_blank" rel="noopener noreferrer">WEIRD WONDERFUL AI ART</a> 按提示组合描述，或参考 AI 图库 <a href="https://prompthero.com/" target="_blank" rel="noopener noreferrer">PromptHero</a> 和 <a href="https://openart.ai/" target="_blank" rel="noopener noreferrer">OpenArt</a> 上其他人分享的成品图和描述文案，比如</p>
-<blockquote>
-<p>goddess close-up portrait skull with mohawk, ram skull, skeleton, thorax, x-ray, backbone, jellyfish phoenix head, nautilus, orchid, skull, betta fish, bioluminiscent creatures, intricate artwork by Tooth Wu and wlop and beeple, highly detailed, digital painting, Trending on artstation, very coherent symmetrical artwork, concept art, smooth, sharp focus, illustration, 8k</p>
-</blockquote>
-<h2> Prompt matrix</h2>
-<p>Prompt matrix 是 sygil 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。<sup class="footnote-ref"><a href="#footnote7">[7]</a><a class="footnote-anchor" id="footnote-ref7"></a></sup><a class="footnote-anchor" id="footnote-ref7"> 此时，批次数量的设置会被忽略。</a></p><a class="footnote-anchor" id="footnote-ref7">
-</a><h2><a class="footnote-anchor" id="footnote-ref7"></a> Textual Inversion</h2>
-<p>Textual Inversion（文本倒置）是 auto/auto-cpu 分支提供的功能，可以个人定制单词在模型中的含义。比如大众模型中医生多是白人男性，而我们可以输入 5 张亚洲女性照片并将其与 doctor 关联，经过 Textual Inversion 处理后的模型生成的医生形象将以亚洲女性为主。<sup class="footnote-ref"><a href="#footnote8">[8]</a><a class="footnote-anchor" id="footnote-ref8"></a></sup></p><a class="footnote-anchor" id="footnote-ref8">
-<p>Textual Inversion 定制流程：</p>
-<ol>
-<li>Preprocess images：设置源图目录和输出目录。</li>
-<li>Create embedding（新建嵌入）：建立模型属性。</li>
-<li>待续。</li>
-</ol>
-</a><h2><a class="footnote-anchor" id="footnote-ref8"></a> 常见问题</h2>
-<h3> Docker Desktop failed</h3>
-<p>未正常安装/关闭 Docker 容器时，可能会报错 <code>Docker Desktop failed to start/stop</code>。</p>
-<p>先删除 <code>%AppData%</code> 路径下的 Docker 文件夹，然后在 PowerShell 中输入下方命令，关闭 WSL 和 docker-desktop。最后，手动重启 Docker Desktop。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>wsl <span class="token parameter variable">--shutdown</span>
-wsl <span class="token parameter variable">-l</span> <span class="token parameter variable">-v</span>
-wsl <span class="token parameter variable">--unregister</span> docker-desktop
-wsl <span class="token parameter variable">-l</span> <span class="token parameter variable">-v</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> Docker Desktop cannot start</h3>
-<p><code>Hardware assisted virtualization and data execution protection must be enabled in the BIOS</code> 报错说明电脑没开启虚拟化。</p>
-<p>在开机的时候多按几次 <code>F2</code> 或 <code>DEL</code> 进入 BIOS，然后设置中开启「Intel Virtual Technology」，AMD 则是将「SVM Support」设置为设置为「Enable」的状态；最后点击「F10」保存退出即可。</p>
-<h3> docker 命令失败</h3>
-<p><code>The command 'docker' could not be found</code> 说明当前命令行确实 Docker 环境缺失，检查 Docker Desktop 是否启动。</p>
-<h3> 端口访问被拒</h3>
-<p>Docker 容器原本运行正常，端口访问突然被拒绝了，显示 <code>Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:7860 -&gt; 0.0.0.0:0: listen tcp 0.0.0.0:7860: bind: An attempt was made to access a socket in a way forbidden by its access permissions</code>。</p>
-<p>在 Powershell 中输入 <code>netsh int ipv4 show excludedportrange protocol=tcp</code> 检查是否处于被排除端口范围，然后输入 <code>reg add HKLM\SYSTEM\CurrentControlSet\Services\hns\State /v EnableExcludedPortRange /d 0 /f</code> 开启端口。操作完成后，重启电脑即可解封端口。<sup class="footnote-ref"><a href="#footnote9">[9]</a><a class="footnote-anchor" id="footnote-ref9"></a></sup></p><a class="footnote-anchor" id="footnote-ref9">
-</a><h3><a class="footnote-anchor" id="footnote-ref9"></a> FileNotFoundError</h3>
-<p>再次架构容器时报错 <code>FileNotFoundError: [Errno 2] No such file or directory: '/models/model.ckpt'</code>，这是架构位置错误导致的。此时，我们需要检查是否通过 WSL 输入的架构命令，并且 Stable Diffusion WebUI Docker 解压路径是否配置正确。</p>
-<h3> 采样模型</h3>
-<p>采样模型是 AI 绘画的核心。2022.09.10 已支持自动下载采样模型，下方列表仅做参考。</p>
-<ul>
-<li><a href="https://www.googleapis.com/storage/v1/b/aai-blog-files/o/sd-v1-4.ckpt?alt=media" target="_blank" rel="noopener noreferrer">Stable Diffusion v1.4 (4GB)</a>, 将压缩包文件重命名为 <code>model.ckpt</code>。</li>
-<li>(可选) <a href="https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.4.pth" target="_blank" rel="noopener noreferrer">GFPGANv1.4.pth (340MB)</a>。</li>
-<li>(可选) <a href="https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth" target="_blank" rel="noopener noreferrer">RealESRGAN_x4plus.pth (64MB)</a> 和 <a href="https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth" target="_blank" rel="noopener noreferrer">RealESRGAN_x4plus_anime_6B.pth (18MB)</a>。</li>
-<li>(可选) <a href="https://heibox.uni-heidelberg.de/f/578df07c8fc04ffbadf3/?dl=1" target="_blank" rel="noopener noreferrer">LDSR (2GB)</a> 和 <a href="https://heibox.uni-heidelberg.de/f/31a76b13ea27482981b4/?dl=1" target="_blank" rel="noopener noreferrer">LDSR 配置</a>，分别重命名为 <code>LDSR.ckpt</code> 和 <code>LDSR.yaml</code>。</li>
-</ul>
-<h2> 最后</h2>
-<p>Stable Diffusion 还不能作为生产力工具，但它让设计变得简单，也让更多普通人打开了 AI 绘画的可能性。推荐大家实际部署玩下，让自己拥有更多的可能。</p>
-<p>本文于「<a href="https://sspai.com/post/75544" target="_blank" rel="noopener noreferrer">少数派首发</a>」。</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p><a href="https://www.runoob.com/docker/windows-docker-install.html" target="_blank" rel="noopener noreferrer">Windows Docker 安装</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote2" class="footnote-item"><p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install#install-wsl-command" target="_blank" rel="noopener noreferrer">使用 WSL 在 Windows 上安装 Linux</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote3" class="footnote-item"><p><a href="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-hyper-v-using-powershell" target="_blank" rel="noopener noreferrer">在 Windows 10 上安装 Hyper-V</a> <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote4" class="footnote-item"><p><a href="https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup" target="_blank" rel="noopener noreferrer">Setup Stable Diffusion WebUI Docker</a> <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote5" class="footnote-item"><p><a href="https://www.ifanr.com/app/1484403" target="_blank" rel="noopener noreferrer">外网爆火的 4 款「你说我画」自动作画工具，我们测了下，有 1 款的确超强</a> <a href="#footnote-ref5" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote6" class="footnote-item"><p><a href="https://www.guokr.com/article/462587/" target="_blank" rel="noopener noreferrer">最时髦的 AI 画画，一文包教包会</a> <a href="#footnote-ref6" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote7" class="footnote-item"><p><a href="https://github.com/sygil/stable-diffusion#prompt-matrix" target="_blank" rel="noopener noreferrer">stable-diffusion Prompt matrix</a> <a href="#footnote-ref7" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote8" class="footnote-item"><p><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Textual-Inversion" target="_blank" rel="noopener noreferrer">Textual Inversion</a> <a href="#footnote-ref8" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote9" class="footnote-item"><p><a href="https://github.com/docker/for-win/issues/3171#issuecomment-572571882" target="_blank" rel="noopener noreferrer">Windows 端口访问被拒</a> <a href="#footnote-ref9" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>抛弃 Notion 知识管理软件的尝试：把博客变为知识库</title>
-      <link>https://newzone.top/posts/2022-08-22-learndata_blog_to_knowledge_management.html</link>
-      <guid>https://newzone.top/posts/2022-08-22-learndata_blog_to_knowledge_management.html</guid>
-      <source url="https://newzone.top/rss.xml">抛弃 Notion 知识管理软件的尝试：把博客变为知识库</source>
-      <description>Notion、Obsidian、Logseq、Roam Research、Evernote、flomo、为知、飞书、语雀……知识管理/笔记软件越来越多，我总在不同应用间徘徊。直到有次忽然醒悟，知识管理软件不是管理知识，而是管理笔记。笔记里的知识并不属于你，只有经过消化、应用，才会成为自己的知识。 这么简单的事，我之前却一直没看透，总是把笔记与知识理解划上了等号。当要用到曾摘录的笔记时，就在各类知识管理软件里翻找，折腾一番才找到需要的笔记，有时甚至出现「自己不清楚放在哪里，也不清楚是否有」的情况。记笔记花了一个小时，下次寻找与重新消化又花了一个小时，原本为效率而生的知识管理软件变成了浪费时间的杀手。</description>
-      <category>博客</category>
-      <category>头脑驿站</category>
-      <pubDate>Mon, 22 Aug 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>Notion、Obsidian、Logseq、Roam Research、Evernote、flomo、为知、飞书、语雀……知识管理/笔记软件越来越多，我总在不同应用间徘徊。直到有次忽然醒悟，知识管理软件不是管理知识，而是管理笔记。<strong>笔记里的知识并不属于你，只有经过消化、应用，才会成为自己的知识。</strong></p>
-<p>这么简单的事，我之前却一直没看透，总是把笔记与知识理解划上了等号。当要用到曾摘录的笔记时，就在各类知识管理软件里翻找，折腾一番才找到需要的笔记，有时甚至出现「自己不清楚放在哪里，也不清楚是否有」的情况。记笔记花了一个小时，下次寻找与重新消化又花了一个小时，原本为效率而生的知识管理软件变成了浪费时间的杀手。</p>
-<p>另一方面，我们在用知识管理软件的美观界面和强大功能的同时，也被这些软件所限制，无法完全按自己的想法输出笔记。比如，你长了一双翅膀，<strong>Markdown 文本是自由的天地，而进入 Notion 则被隔成一个个小房间</strong>，你在房间里待着很舒服，可一旦想去其他房间，就必须脱离 block，不比 Markdown 可以自由飞翔。</p>
-<figure><img src="http://tc.seoipo.com/2022-08-22-18-02-07.png" alt="" tabindex="0" loading="lazy"><figcaption>Markdown VS Notion</figcaption></figure>
-<p>突破迷思后，我基于 VuePress 和 vuepress-theme-hope 建立了 <a href="https://github.com/rockbenben/LearnData" target="_blank" rel="noopener noreferrer">LearnData</a> 项目，把知识笔记、生活记录、博客和任何觉得有价值的记录转成 Markdown 文本，然后推送到 GitHub 生成 Pages 静态页面，同步到国内云服务器形成 <a href="https://newzone.top/" target="_blank" rel="noopener noreferrer">LearnData - 开源笔记</a>。</p>
-<figure><img src="http://tc.seoipo.com/2022-08-24-19-14-59.png" alt="" tabindex="0" loading="lazy"><figcaption>笔记/博客自动化发布</figcaption></figure>
-<p>LearnData 的笔记/文章编辑均使用 Markdown，输出不再受到应用的局限。同时，LearnData 看似是由一篇篇文章组成的博客，但其笔记是独立的知识点，是所有知识的终点站，是整理后的知识库。通过 LearnData 就能完成知识的搜索与整理，不再需要来回翻找。把博客转为知识库后，我明显感到学习和知识使用的效率得到提高，开始摆脱「工具奴隶」和「效率中毒」陷阱。</p>
-<figure><img src="http://tc.seoipo.com/2022-08-22-19-28-25.png" alt="" tabindex="0" loading="lazy"><figcaption>笔记 + 文章 = LearnData 知识库</figcaption></figure>
-<h2> 为什么用网页管理笔记</h2>
-<h3> 公开想法</h3>
-<p>知识管理/笔记软件天然带有私有性质，不对外公开。但是，我的笔记大都来自互联网，要对谁保密？</p>
-<p>我很推崇 Ray Dalio 在《原则》中提到的「头脑极度透明，公开分享想法」。</p>
-<blockquote>
-<p>让其他人无比清晰地看到你在做什么、为什么这么做。头脑越透明，越不会自欺，其他人也会给你诚实的反馈。</p>
-</blockquote>
-<p>作为国内最早一批介绍 Aria2 的人，我曾经写过一篇 Aria2 教程，文章后来被多个网站参考/抄袭，覆盖了 Aria2 某度搜索前三页。在那篇文章的评论区，有好几条留言说文章逻辑差看不懂的，也经常有热心人帮我怼回去。其实，那篇文章的初版真的很糟糕，只是写得比较早，当时没几篇中文教程，大家只能看这篇教程。我写文章的初衷是方便自己用，避免一个解决方案用完就忘，下次又从头开始。那篇文章是在大家的反馈下，迭代了三个版本才开始变得完整和逻辑化。这些反馈也是我坚持写博客的原动力。这跟费曼学习法的道理相通，当你写文章帮助其他人时，你也在加深自己对知识的理解。建立 LearnData 只有一个月，但我从中获取的正反馈超过私有笔记一年的获得。笔记公开化是有百利而无一害。</p>
-<h3> 输出分享</h3>
-<p>其次，网页形式让笔记方便分享。除了效率工具心得，我把生活技巧、购物评价和说明书也放在 LearnData。家人或朋友需要帮助时，直接访问网页即可，不需要安装 app 或折腾账户分享，比如我经常分享的 <a href="https://newzone.top/family/Maintenance.html#%E9%80%9A%E9%A9%AC%E6%A1%B6" target="_blank" rel="noopener noreferrer">通马桶技巧</a> 和疏通器说明书。</p>
-<figure><img src="http://tc.seoipo.com/2022-08-19-22-52-29.png" alt="" tabindex="0" loading="lazy"><figcaption>生活知识页面样例</figcaption></figure>
-<h3> 被动消化知识</h3>
-<p>如果只是公开分享，LearnData 与笔记软件并无区别，它的优点更在于网页有限的笔记数量。</p>
-<p>虽然网页可以无限地存放笔记，但打开页面只能看到少量的几十篇内容。一旦笔记堆积过多，你就像触发了整理开关似的，对笔记开始消化重构。这就是网页容量上的无限性和视觉/直觉上的有限性，存储是无限但视觉上只能有很小的一块。这里的直觉指，看一眼界面就能找到所需知识点的效果。</p>
-<p>比如，我的 code 区块笔记存放超过 10 篇后，每次找代码笔记都需要 10 选 1，知识查找时间也翻倍了。我意识到节点过多，不能让自己将时间花在查询上。因此，我把代码笔记分为 Basic 和 FrontEnd 两块，总结划分的同时，编程知识也再次得到消化。</p>
-<p>而网页与笔记软件的区别也正在于此，LearnData 的主页、侧边栏和导航栏就是能展示的路径，你必须不断对笔记提纯才能提高使用率。否则，如果你只是「积累」笔记而非消化知识，无论使用什么工具和方法，成效都是 0。</p>
-<h3> 漂亮决定生产力</h3>
-<p>另外，网页能自由调整外观样式，更换为你喜欢的界面。这也是为什么 LearnData 舍弃了初版的 docsify 框架，改为复杂许多的 VuePress 框架。docsify 官方模板过于简单，没有界面设计模块，难以满足知识管理界面必须直观漂亮的要求，而这点直接决定了生产力，不能让步。</p>
-<p>知识管理/笔记软件将 Markdown 文件作为一个个区块，而网页可以将其视为一体。LearnData 支持多级侧边栏和目录，让阅读查找变得简单。</p>
-<figure><img src="http://tc.seoipo.com/2022-08-19-22-42-03.png" alt="" tabindex="0" loading="lazy"><figcaption>LearnData 页面布局</figcaption></figure>
-<h2> 为什么不用 Obsidian</h2>
-<p>@北鸮 提到「脱离 Notion 可以理解，Markdown 很自由，那为啥不用 Obsidian 呢？也有标题，也有标签，也可以有层级，开源软件还有 Logseq 替代」。</p>
-<p>Obsidian 等双链笔记想法设计很好，我们可以自由地在不同知识点间切换，节省搜索和关联的时间。但知识点的联系是靠人工打标签来建立的，而非根据关键词自动建立图谱关系。这跟 URL 链接又有什么区别？因此我认为，<strong>双链笔记并不适合知识库</strong>。（如果对双链笔记理解错误，欢迎纠正。）</p>
-<figure><img src="http://tc.seoipo.com/2022-08-19-21-39-41.png?imageMogr2/thumbnail/!60p" alt="" tabindex="0" loading="lazy"><figcaption>我的 Obsidian 图谱，只有右下角简悦抓取的素材有相同标签而聚作一团</figcaption></figure>
-<p>建立知识点联系后，双链笔记能轻松处理成千上万个文档，按条件整合文本方便阅读。但是，多数人常用知识范围不会超过一百。如果你的个人笔记上千了，说明你要不是科研大佬，要不没消化甚至是根本没读过这些笔记，只是在记笔记。</p>
-<p>除去博客，我只有 37 篇笔记，而且按功能划分为 7 个区块。你觉得这点文件，用树状管理方便，还是用双链笔记打一堆标签来得好？即使有时标题里找不到某个关键词，我用全文搜索达到目的。我个人会倾向于简单方便的树状标题管理。</p>
-<h2> 抛弃知识软件 ≠ 不用</h2>
-<p>选择 Markdown 就得卸载知识软件吗？</p>
-<p>抛弃知识软件并不是不用，而是将其视为知识的中转站。知识软件的趋势是 ALL IN ONE，记录全能成了标榜的主打功能。可是，<strong>光收集而不应用的知识等于零</strong>，只会增加你后续的使用成本。</p>
-<p>知识软件对我来说，是功能清晰的素材库。我会不断清空素材库，将小的知识点融入 LearnData 笔记区，成体系内容则写成博客，确保 LearnData 成为知识库的终点。</p>
-<figure><img src="http://tc.seoipo.com/2022-08-21-21-38-47.png" alt="" tabindex="0" loading="lazy"><figcaption>知识类素材库</figcaption></figure>
-<ul>
-<li>Logseq 将信息节点化，能按日期整合文本，因此我用它来记录笔记，并定期生成周报和月报回顾。</li>
-<li>飞书文档自带侧边目录栏，对长文档优化很好，因此我用它记录工作心得，定期形成工作流程在公司分享。</li>
-<li>WonderPen 带多层级标题，当一点头绪方向都没有时，素材就直接丢这。</li>
-<li>Notion 貌似全能，但其可替代性也最高，知识库迁移到 LearnData 后，Notion 仅存放涉及个人信息和不方便转移的旧文档。</li>
-<li>Airtable 表格功能最强，虽然已经被其他软件赶上了，但前期存储过多，表格类继续放这。</li>
-<li>SuperMemo 与 Anki 功能类似，帮助定期复习需重复记忆的知识点。</li>
-</ul>
-<p>而对于 Obsidian，我将其视为笔记的备份站。通过 GoodSync，LearnData 笔记发生修改后，相关更新会实时同步到 Obsidian，完成笔记的备份。期待有天 Obsidian 完善双链功能，帮笔记自动打上标签，到时备份笔记就能转正，我也能无缝切换到新的知识管理应用。</p>
-<h2> 如果你也想试试……</h2>
-<p>如何搭建把博客转为知识库，建立属于你的 LearnData 知识管理网站呢？</p>
-<p>首先，确定你有 GitHub 账户，懂 Markdown 和基础 HTML 知识。然后，按 <a href="https://newzone.top/#%E6%90%AD%E5%BB%BA-LearnData" target="_blank" rel="noopener noreferrer">LearnData 部署教程</a> 即可完成搭建和配置。如果你的笔记已经 Markdown 化，把文档放在 docs 目录下就可以建立你自己的知识库。</p>
-<p>笔记结构可以参考我的分类。这没有绝对的界限，只要看到自己觉得有价值的知识点，都可以往 LearnData 里丢。但是，不要全文本地化收藏，简单提取用链接引用即可，除少量精品外，网络时代的文章隔几年就会失效，没必要收藏为一篇篇的笔记。当下次应用到这个知识点时，我们再考虑整理事宜，否则，长时间用不到的知识，又有什么整理的价值呢。</p>
-<ul>
-<li>置顶：日常习惯、健身、阅读；</li>
-<li>代码：常用代码的学习使用笔记；</li>
-<li>软件应用：常用应用、Chrome 扩展及相关教程；</li>
-<li>页面开发：页面插件和框架生成工具；</li>
-<li>网站部署：网站相关的平台、工具及知识收集；</li>
-<li>Linux 服务：NAS 和服务器上的后端应用，主要以 Docker 方式部署；</li>
-<li>系统问题：Windows 系统优化和相关问题；</li>
-<li>生活区：说明书，生活记录及小技巧；</li>
-<li>博客区：聚合所有博客文章，并以分类、标签、时间轴等方式进行组合。</li>
-</ul>
-<h2> 最后</h2>
-<p>两个月前，我在 WordPress 博客篇中喊着「md2wordpress 是最后一次博客方案」，但由于 WordPress 与 Markdown 各种不兼容，写完没多久就换到支持原生 Markdown 解析的 VuePress。</p>
-<p>这次我不想再立 Flag 了，只希望能放过自己。每进行一次知识迁移，真是大伤，休息一段时间吧。</p>
-<p>如果你有兴趣尝试 <a href="https://newzone.top/" target="_blank" rel="noopener noreferrer">LearnData</a>，欢迎通过链接访问并复制模板尝试，具体的操作方法与常见问答我都写在博客中。有进一步的问题或讨论欢迎在评论区留言。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>新玩意｜智能可折叠综合塑形机</title>
-      <link>https://newzone.top/posts/2022-08-10-new_stuff_shaping_machine.html</link>
-      <guid>https://newzone.top/posts/2022-08-10-new_stuff_shaping_machine.html</guid>
-      <source url="https://newzone.top/rss.xml">新玩意｜智能可折叠综合塑形机</source>
-      <description>家里关得太久，体重又涨了 10 斤，再次陷入健身器材焦虑之中。虽然划船机、跑步机、动感单车的结局都是闲鱼出，但我对健身器材的追逐始终没变。这时发现有品众筹的新玩具，两千的综合塑形机。 已闲置于墙角</description>
-      <category>购物</category>
-      <pubDate>Wed, 10 Aug 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>家里关得太久，体重又涨了 10 斤，再次陷入健身器材焦虑之中。虽然划船机、跑步机、动感单车的结局都是闲鱼出，但我对健身器材的追逐始终没变。这时发现有品众筹的新玩具，两千的综合塑形机。</p>
-<figure><img src="https://cdn.sspai.com/2022/08/09/article/74429ae5770ce6fe9b338527105a4744?imageView2/2/w/450/q/90/interlace/1/ignore-error/1" alt="" tabindex="0" loading="lazy"><figcaption>已闲置于墙角</figcaption></figure>
-<p>这款塑形机原理与飞鸟龙门架类似，号称可以充当家庭健身房，锻炼全身的肌肉，包括练肩后束、练背、练上胸、练胸中缝、练下胸、练三头、练二头、练核心、练臀大肌、练大腿外侧。</p>
-<p>之前我就想练飞鸟，不过龙门架实在太大，而这台机器折叠后只占 0.18 平，还能移动位置，完美匹配屋内使用的需求。虽然这是众筹产品，要等 2 个月，还是心动下单了。</p>
-<figure><img src="https://cdn.sspai.com/2022/08/09/37a78274cca974e793582250954c75dc.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" tabindex="0" loading="lazy"><figcaption>左侧为龙门架，右侧为塑形机</figcaption></figure>
-<p>等待收货时间内，体重继续上涨，总想着健身器材到了就瘦了。但是当收到货后，我终于理解了「<strong>什么叫做众筹</strong>」。</p>
-<p>锻炼时必须用身体抵住塑形机，否则机器会跟着你的动作滑走。虽然滑动的原因在于机器较轻，只有 60 KG，但我无法理解的是，厂家连基本的防滑措施也没有做，仿佛生产前从没人真的用过机器。<strong>防滑降噪脚垫在拖动时倒蛮好用的</strong>，拖起来特别丝滑，完全没有阻抗。为了避免塑形机不断滑走，我只能买了个阻门器，装上后就能避免机器乱滑动了。</p>
-<figure><img src="https://cdn.sspai.com/2022/08/09/article/6d2731baacf4174c4b7465b11ba715fd?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" tabindex="0" loading="lazy"><figcaption>右下方是红色的阻门器，硬拉终于不会滑了</figcaption></figure>
-<p>解决滑动问题后，我打开塑形机官方视频，才发现其中 90% 的动作用不到塑形机，甚至是根本就扯不上关系。买之前，我看着详情页感觉动作特多功能特强，用过后，才发现「这就是所有的动作」。</p>
-<figure><img src="https://cdn.sspai.com/2022/08/09/article/db951607296d83ce9a0ff181d724de14?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="" tabindex="0" loading="lazy"><figcaption>官方示例动作图</figcaption></figure>
-<p>不过，机器都收货了，动作少也得跟着练。可是，按照塑形机官方教程锻炼一组后，我的肩膀和手臂都被勒伤。原因是与身体接触的部分都是特粗尼龙绳，没有任何缓冲，一用力就容易勒伤。两千的机器连块 PU 皮都要省，可能是想让大家穿着特别严实来锻炼吧。</p>
-<p>钢板间隙过大，凳子要蛮力打开，锻炼视频无法暂停，APP 没有语音提示，视频教程无法切换动作，几乎机器到处都有问题，只能将原因归于众筹了，第一款模具真的是无语。</p>
-<p>当然，这款塑形机也是有好处的。传统龙门架使用铁块配重，重量最少也得上百公斤，而且占地大无法移动。塑形机采用磁力配重，重量只有 60KG，机器折叠后 0.18 平方，配上<strong>防滑降噪脚垫非常方便移动。</strong></p>
-<p>塑形机确实能帮我练到平常少运动的肌肉，目前主要用它练背，等有了新玩具再出闲鱼。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>「硬盘布局不受 UEFI 固件支持」－华硕主板解决方案</title>
-      <link>https://newzone.top/posts/2020-09-22-uefi_asus_board.html</link>
-      <guid>https://newzone.top/posts/2020-09-22-uefi_asus_board.html</guid>
-      <source url="https://newzone.top/rss.xml">「硬盘布局不受 UEFI 固件支持」－华硕主板解决方案</source>
-      <description>电脑已经用了 5 年，这次 Win10 更新提示「硬盘布局不受 UEFI 固件支持」。本文是华硕主板的解决方案，其他主板顺序不同，但目的都是将启动模式修改为「Only Legecy」。 电脑重启，按 F2 或 DEL 进入 BIOS。选择「高级模式」&amp;gt;「启动」&amp;gt;「CSM」&amp;gt;「启动设备控制」，设置为「仅 Legecy OPROM」。 华硕主板设置截图</description>
-      <category>系统</category>
-      <pubDate>Tue, 22 Sep 2020 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>电脑已经用了 5 年，这次 Win10 更新提示「硬盘布局不受 UEFI 固件支持」。本文是华硕主板的解决方案，其他主板顺序不同，但目的都是将启动模式修改为「Only Legecy」。</p>
-<p>电脑重启，按 F2 或 DEL 进入 BIOS。选择「高级模式」&gt;「启动」&gt;「CSM」&gt;「启动设备控制」，设置为「仅 Legecy OPROM」。</p>
-<figure><img src="https://pic4.zhimg.com/v2-8a26bd62460f662caad3dba696c54efb_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption>华硕主板设置截图</figcaption></figure>
-<p>设置完成后，Win10 就可以正常更新了。</p>
-<p>有人反馈「改了启动不了系统」，这是由于系统硬件与你新的设置冲突造成的，并不会造成系统破坏。只需重新进入 BIOS，将设置改回或将 BIOS 还原为默认设置，即可进入系统。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>电脑上实现微信双开，无需网页版或第三方软件</title>
-      <link>https://newzone.top/posts/2017-04-18-wechat_multi_open.html</link>
-      <guid>https://newzone.top/posts/2017-04-18-wechat_multi_open.html</guid>
-      <source url="https://newzone.top/rss.xml">电脑上实现微信双开，无需网页版或第三方软件</source>
-      <description>由于工作原因，有时候我们需要在电脑上登录多个微信。但微信限制一个客户端只能登陆一个账号，PC 端 + 网页版就成了通用方案，操作效率下降许多。 其实我们还有更好的办法。在微信 PC 版之余，同时安装微信 For Windows，就能实现客户端双开！ 微信 For Windows 安装 打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装 微信 For Windows。</description>
-      <category>工具</category>
-      <pubDate>Tue, 18 Apr 2017 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>由于工作原因，有时候我们需要在电脑上登录多个微信。但微信限制一个客户端只能登陆一个账号，PC 端 + 网页版就成了通用方案，操作效率下降许多。</p>
-<p>其实我们还有更好的办法。在微信 PC 版之余，同时安装微信 For Windows，就能实现客户端双开！</p>
-<h2> 微信 For Windows 安装</h2>
-<p>打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装 <code>微信 For Windows</code>。</p>
-<figure><img src="http://tc.seoipo.com/2022-05-06-04-21-30.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>安装好后，就能与微信 PC 版一齐启动，互不干扰。</p>
-<figure><img src="http://tc.seoipo.com/2022-05-06-04-21-40.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h2> 开机启动两个微信</h2>
-<p>找到系统启动文件夹，文件夹路径为：<code>%AppData%\Microsoft\Windows\Start Menu\Programs\Startup</code>。或者打开「运行」对话框，输入命令「shell:startup」，回车即可打开「启动文件夹」。</p>
-<p>将微信 for windows 10 的快捷方式放到「启动」文件夹里。</p>
-<figure><img src="http://tc.seoipo.com/2022-05-06-04-23-49.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>三开的话，可以在 Microsoft Store 上安装 微信 (UWP) 。</p>
-<p>如果还需要继续多开微信，可以参考 @刘舒怡 的方法：</p>
-<blockquote>
-<p>只要在 2 秒内快速连续双击打开软件，就能弹出很多登录界面，你想登多少个就登多少个</p>
-</blockquote>
-<p>另外，有人专门开发了微信/QQ 多开的补丁，需要四开以上的可以试试 <a href="https://github.com/huiyadanli/RevokeMsgPatcher" target="_blank" rel="noopener noreferrer">RevokeMsgPatcher</a>。</p>
-<p>但多开补丁风险未知，我只用了其中的防撤回功能，需谨慎使用多开补丁。</p>
-<p>国内搬运地址：<a href="https://wwz.lanzouf.com/ij0oz05ns3di" target="_blank" rel="noopener noreferrer">RevokeMsgPatcher.v1.5.zip</a></p>
-]]></content:encoded>
-      <enclosure url="http://tc.seoipo.com/2022-05-06-04-21-30.png" type="image/png"/>
-    </item>
-    <item>
-      <title>RSS 入门篇：Feed43&amp;FeedEx-为静态网页定制 RSS 源</title>
-      <link>https://newzone.top/posts/2017-04-22-rss_feed43_feedex.html</link>
-      <guid>https://newzone.top/posts/2017-04-22-rss_feed43_feedex.html</guid>
-      <source url="https://newzone.top/rss.xml">RSS 入门篇：Feed43&amp;FeedEx-为静态网页定制 RSS 源</source>
-      <description>迷上 IFTTT 后急需 RSS 来监测网页，找到免费的 FEED43。网上有很多教程，但对新手都不够友好，就重新整理了一份。 ► 开始烧制属于自己的 feed 1. 进入网页 FEED43 无需注册，点击 Create your own feed 直接使用。</description>
-      <category>自动化</category>
-      <pubDate>Sat, 22 Apr 2017 12:54:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>迷上 IFTTT 后急需 RSS 来监测网页，找到免费的 FEED43。网上有很多教程，但对新手都不够友好，就重新整理了一份。</p>
-<p><strong>► 开始烧制属于自己的 feed</strong></p>
-<h2> 1. 进入网页</h2>
-<p><a href="http://www.feed43.com/" target="_blank" rel="noopener noreferrer">FEED43</a> 无需注册，点击 Create your own feed 直接使用。</p>
-<figure><img src="https://pic1.zhimg.com/v2-b5da0b08f632376fad3925a779e373b4_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h2> 2. 选定 RSS 网页</h2>
-<p>将目标网址添入 Step1. Specify source page address (URL)，将输入的源代码复制到 txt 文档中（方便之后写抓取规则）</p>
-<figure><img src="https://pic1.zhimg.com/v2-1b687a5b1c325ba6d04fbdcc13b95668_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>如果 Page Source 显示为乱码，Encoding 可设为 <strong>UTF-8</strong> 。</p>
-<h2> 3. 定制 RSS 抓取规则</h2>
-<p>Global Search Pattern 是选择你要搜索的范围。可以不填，这样会搜索整个页面，一般新手都选择整个页面，即空白。Item (repeatable) Search Pattern 这部分最重要，是我们要抓取的内容。</p>
-<figure><img src="https://pic1.zhimg.com/v2-b1fa90c59739bddc0c27134cd36ba6bc_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>仔细查看 Step1 中的源代码，找到区需要抓取的部分，输入到 Item (repeatable) Search Pattern。</p>
-<p>测试网址：<code>http://news.163.com/special/0001386F/rank_whole.html</code>。</p>
-<p>需要抓取的源代码：</p>
-<div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>red<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span>
-    <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>更时尚更运动 车展实拍解析红旗 H5<span class="token punctuation">"</span></span>
-      <span class="token punctuation">&gt;</span></span>更时尚更运动 车展实拍解析红旗 H5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span>
-    <span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cBlue<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>11211615<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><figure><img src="https://pic2.zhimg.com/v2-cf6dbf2c09189f7517ec63abdc80c50d_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p><strong>抓取规则</strong>：</p>
-<div class="language-html line-numbers-mode" data-ext="html"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
-  {*}
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{*}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>{*}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{%}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{%}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-  {*}
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>cBlue<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{*}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-  {*}
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>点击 Extract，进行抓取。</p>
-<figure><img src="https://pic4.zhimg.com/v2-e9486741a6229ab258a95147f584571b_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h2> 4. 整理 rss 输入格式</h2>
-<p>Define output format，一般情况下前面三个会已经写好，后三个就将前面得出的 item 里面的元素填入即可，我这里{%1}对应的是链接所以填入 Link，{%2}对于标题就填入 Title。</p>
-<figure><img src="https://pic1.zhimg.com/v2-b4614f5c46090f2eb762aac87d604350_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>然后点击 preview，完成制作，同时出现预览。</p>
-<figure><img src="https://pic2.zhimg.com/v2-498bf1f1c0b14da172498b58f59e39b9_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>如果注册了 FEED43 的账号，可以修改 rss 地址，但不能改为中文，否则会 rss 出错。</p>
-<h2> 5. 获取 RSS 地址</h2>
-<p>点击 Feed URL 可得 rss 地址，我这里是 <a href="https://www.feed43.com/dianji.xml" target="_blank" rel="noopener noreferrer">https://www.feed43.com/dianji.xml</a></p>
-<figure><img src="https://pic1.zhimg.com/v2-f3b00e876d8df136f7d354b4fc22f900_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>在 RSS reader 中展示为</p>
-<figure><img src="https://pic4.zhimg.com/v2-6d8f503ff3da16eb985ca1d3ae2de98f_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h2> 6. 全文抓取</h2>
-<p>feed43 导出的条目必须点击链接才能看到内容。在 rss 展示全文，需要通过 FeedEx 再转一次。注意：feed43 免费用户过多，<strong>需在浏览器中打开一次才能得到真实链接</strong> (一般为 <code>http://node2.feed43.com</code>)，FeedEx 需使用真实链接，一般 3 分钟内转换好。</p>
-<p>FeedEx：<a href="https://feedex.net/" target="_blank" rel="noopener noreferrer">https://feedex.net/</a></p>
-<figure><img src="https://pic4.zhimg.com/v2-8e3701adffa1d6fb4ea10dda2704988b_r.jpg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>feeds43 免费版每 6 小时抓取一次，显示最新的 20 条内容。</p>
-<p>如果网页源更新较频繁的话，可使用 RSSHub 和 Huginn。</p>
-<h2> RSS 合集</h2>
-<p>汇总的 RSS 永久订阅 feeds，均通过 RSSHub 和 Huginn 制作。如果有兴趣自制 RSS，可参考以下教程。</p>
-<ul>
-<li>
-<p><a href="https://newzone.top/posts/2017-04-22-rss_feed43_feedex.html" target="_blank" rel="noopener noreferrer">RSS 入门篇：FEED43&amp;FeedEx-为静态网页定制 RSS 源</a></p>
-</li>
-<li>
-<p><a href="https://newzone.top/posts/2018-10-07-huginn_scraping_any_website.html" target="_blank" rel="noopener noreferrer">RSS 进阶篇：Huginn - 真·为任意网页定制 RSS 源（PhantomJs 抓取）</a></p>
-</li>
-<li>
-<p><a href="https://newzone.top/posts/2019-04-01-rsshub_noob.html" target="_blank" rel="noopener noreferrer">RSS 速成篇：RSSHub 捡现成的轮子</a></p>
-</li>
-<li>
-<p><a href="https://newzone.top/posts/2020-03-25-rsshub_on_vps.html" target="_blank" rel="noopener noreferrer">RSS 速成篇 2：RSSHub 自部署</a></p>
-</li>
-<li>
-<p><a href="https://newzone.top/posts/2021-10-23-nas_with_rsshub_and_huginn.html" target="_blank" rel="noopener noreferrer">RSS 完结篇：节省千元服务费，RSSHub、Huginn 转移 NAS</a></p>
-</li>
-<li>
-<p><a href="https://newzone.top/posts/2022-03-17-rss_persistent_link_collection.html" target="_blank" rel="noopener noreferrer">RSS 汇总篇：RSS 永久链接合集，拒绝 RSS 失效</a></p>
-</li>
-</ul>
-]]></content:encoded>
-      <enclosure url="https://pic1.zhimg.com/v2-b5da0b08f632376fad3925a779e373b4_r.jpg" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
