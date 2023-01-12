@@ -92,7 +92,7 @@ docker compose --profile sygil up --build
 2. 在 Containers 中选中分支容器，点击启动。
 3. 浏览器中访问 `http://localhost:7860/`。
 
-  ![](http://tc.seoipo.com/2022-09-04-17-06-27.png "Docker Desktop 界面")
+![](http://tc.seoipo.com/2022-09-04-17-06-27.png "Docker Desktop 界面")
 
 ### Text-to-Image
 

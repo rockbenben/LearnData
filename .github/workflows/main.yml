@@ -39,7 +39,7 @@ jobs:
           pnpm run docs:build
           > docs/.vuepress/dist/.nojekyll
 
-      - name: Deploy
+      - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # 这是文档部署到的分支名称

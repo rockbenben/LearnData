@@ -28,7 +28,13 @@ export default defineUserConfig({
   templateBuild: path.resolve(__dirname, "templateBuild.html"),
 
   // 禁止文件夹生成静态文件，参考 [VuePress 文档]（https://v2.vuepress.vuejs.org/zh/guide/page.html#routing）
-  pagePatterns: ["**/*.md", "!_temp", "!reading", "!.vuepress", "!node_modules"],
+  pagePatterns: [
+    "**/*.md",
+    "!_temp",
+    "!reading",
+    "!.vuepress",
+    "!node_modules",
+  ],
 
   plugins: [
     // algolia 全文搜索：没设置爬虫的话，需删除 docsearchPlugin 区块以使用节点搜索

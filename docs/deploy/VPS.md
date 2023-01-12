@@ -80,7 +80,7 @@ anywhere -p 8081
 服务器系统为 Debian 11。
 
 ```shell
-apt-get update   # 从数据源更新软件包的列表，运行产生软件包数据库 
+apt-get update   # 从数据源更新软件包的列表，运行产生软件包数据库
 apt-get install wget && apt-get install sudo # 安装 wget 和 sudo
 
 # 大版本升级必须先建立快照

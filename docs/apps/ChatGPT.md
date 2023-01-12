@@ -12,7 +12,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，但它不仅仅是对话�
 使用 Tips：
 
 - 如果你想获取中文回复，则在倒数第二句插入条件 `Reply in Chinese.`。
-- 调校词使用英文以保持描述精度，而最后一句的定制条件可以使用任意语言，包括中文。
+- 调校词使用英文以保持描述精度，而最后一句的定制条件可以使用任意语言，包括中文。后续回答中的定制条件可使用引号 `""` 框选，防止被误认为调校词。
 - `Too many requests in 1 hour` 报错，可通过切换 IP 并刷新浏览器来恢复。
 
 ## 文字
@@ -184,6 +184,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，但它不仅仅是对话�
 
 ### 企业
 
+- CEO（[Chief Executive Officer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-chief-executive-officer)）
 - 销售（[Salesperson](https://github.com/f/awesome-chatgpt-prompts#act-as-a-salesperson)）
 - 广告方案（[Advertiser](https://github.com/f/awesome-chatgpt-prompts#act-as-an-advertiser)）
 - 商业企划（[Startup Idea Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-startup-idea-generator)）

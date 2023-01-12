@@ -15,11 +15,7 @@ export default navbar([
         text: "页面开发",
         icon: "vue",
         prefix: "",
-        children: [
-          "web/VuePress",
-          "web/docsify",
-          "deploy/VPS",
-        ],
+        children: ["web/VuePress", "web/docsify", "deploy/VPS"],
       },
     ],
   },
@@ -35,10 +31,7 @@ export default navbar([
         text: "服务/系统",
         icon: "any",
         prefix: "",
-        children: [
-          "services/NAS",
-          "windows/faq",
-        ],
+        children: ["services/NAS", "windows/faq"],
       },
     ],
   },
@@ -46,11 +39,7 @@ export default navbar([
     text: "生活",
     icon: "emmet",
     prefix: "/family/",
-    children: [
-      "Diet",
-      "Shoppinglist",
-      "Coupon",
-    ],
+    children: ["Diet", "Shoppinglist", "Coupon"],
   },
   { text: "工具收藏", icon: "tool", link: "https://nav.newzone.top/" },
 ]);

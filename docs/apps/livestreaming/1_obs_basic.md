@@ -1,17 +1,14 @@
 ---
-title: 直播入门攻略一：OBS28 的界面、设置与使用
-date: 2023-01-05
+title: 直播入门攻略一 | OBS 篇：OBS 29 新手指南
 category:
   - 工具
 tag:
   - OBS
   - 直播
-order: -52
+order: 1
 ---
 
-[Open Broadcaster Software](https://obsproject.com/)（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。我写过一篇 [直播入门攻略](https://newzone.top/posts/2021-03-22-live_streaming.html)，其中覆盖了我在直播中遇到的所有问题，但它对新手过于冗长，太复杂了。
-
-趁着 OBS 28 的版本大更新，我重写了直播入门教程，下文将介绍 OBS 28 的界面、设置和基础使用。
+[Open Broadcaster Software](https://obsproject.com/)（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件都是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。本文将从基础开始，为新手介绍 OBS 的界面、设置和直播使用方法。
 
 ## 主界面
 
@@ -119,6 +116,7 @@ OBS 界面看起来有些复杂，但可以分为菜单栏、预览区、主按�
 - 游戏源：采集游戏画面。
 - 显示器采集：捕获单个显示器的完整视频画面。
 - 媒体源：播放本地或在线的音视频文件。
+- VLC 视频源：安装 [VLC](https://www.videolan.org/vlc/) 才能启用本来源。「VLC 视频源」用于多个音视频按序播放，支持字幕。
 
 ### 组合输出
 
@@ -150,6 +148,12 @@ OBS 界面看起来有些复杂，但可以分为菜单栏、预览区、主按�
 ![](http://tc.seoipo.com/2023-01-08-06-49-05.png "右侧为模糊效果")
 
 ![](http://tc.seoipo.com/2023-01-06-02-51-10.png "模糊滤镜设置")
+
+### 色彩校正
+
+[色彩校正](https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Color-Grade)（Color Grading）是使用伽玛、对比度、亮度、饱和度、色调偏移、不透明度、颜色叠加、添加颜色来改变或校正最终画面的颜色和亮度的过程。
+
+![](http://tc.seoipo.com/2023-01-08-07-01-17.png "色彩校正")
 
 ### 应用 LUT
 

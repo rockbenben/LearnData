@@ -50,7 +50,7 @@ WSL 本地路径为 `\\wsl.localhost\`。Windows 本地磁盘挂载在 Linux 的
 
 ### 宝塔镜像
 
-如果要在 Docker 上部署网站，推荐宝塔官方的集成镜像，其基于 CentOS 7.9，解决了 Docker 内部链接问题，还可以用计划任务将数据库定时备份到本地，配置参考 [宝塔面板定制 docker 镜像发布 - 集成 LN/AMP 支持](https://www.bt.cn/bbs/thread-79499-1-1.html) 和  [Docker 安装宝塔环境](http://blog.huangyuqiang.cn/index.php/2022/11/02/docker%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E7%8E%AF%E5%A2%83/)。不过该镜像不适合 Huginn 部署，Huginn 不支持 CentOS，将安装命令从 apt-get 替换为 yum，依然无法部署。
+如果要在 Docker 上部署网站，推荐宝塔官方的集成镜像，其基于 CentOS 7.9，解决了 Docker 内部链接问题，还可以用计划任务将数据库定时备份到本地，配置参考 [宝塔面板定制 docker 镜像发布 - 集成 LN/AMP 支持](https://www.bt.cn/bbs/thread-79499-1-1.html) 和 [Docker 安装宝塔环境](http://blog.huangyuqiang.cn/index.php/2022/11/02/docker%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E7%8E%AF%E5%A2%83/)。不过该镜像不适合 Huginn 部署，Huginn 不支持 CentOS，将安装命令从 apt-get 替换为 yum，依然无法部署。
 
 测试过不用官方镜像，直接在 Docker 中安装宝塔，出现数据库不启动的问题。
 
