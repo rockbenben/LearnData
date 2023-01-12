@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 12 Jan 2023 16:57:06 GMT</pubDate>
-    <lastBuildDate>Thu, 12 Jan 2023 16:57:06 GMT</lastBuildDate>
+    <pubDate>Thu, 12 Jan 2023 21:28:57 GMT</pubDate>
+    <lastBuildDate>Thu, 12 Jan 2023 21:28:57 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -544,7 +544,7 @@
 <h2> 开播锻炼</h2>
 <p>开播前把脸部肌肉活动开。嘴张到最大，舌顶上颚 60 秒；嘴张到最大，尽量伸舌 30 秒。说话时，让嘴唇用力。</p>
 <h2> 总结</h2>
-<p>经过两年的直播，我深知直播的硬件、软件和技巧只是锦上添花。如果你想体验直播，不想深入研究，只需拿出手机开播即可。开始直播时，可能会有很多疑问和顾虑，效果也不一定很好。但只有勇敢尝试新事物，不断开拓，我们的人生才会有更多可能性。</p>
+<p>经过两年的直播，我深知直播的硬件、软件和技巧只是锦上添花。若要体验直播，不想深入研究，只需拿出手机开播即可。开始直播时，可能会有很多疑问和顾虑，效果也不一定很好。但只有勇敢尝试新事物，不断开拓，我们的人生才会有更多可能性。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -698,7 +698,7 @@ scoop <span class="token function">install</span> ffmpeg
 <h2> 为什么 FFmpeg</h2>
 <p>FFmpeg 是处理多媒体内容 (如音频、视频、字幕和相关元数据) 的库和工具的集合，支持在 Linux、MacOS 和 Windows 全平台运行。它提供了录制、转换以及流化音视频的完整解决方案。</p>
 <p>之前那些录屏、视频处理工具几乎都是基于 FFmpeg 而开发的。FFmpeg 能实现它们所有的功能，同时具备超高的稳定性和兼容性。现成的录屏应用与 FFmpeg 相比，优势只在于其美观的界面和简单易上手的录制方案。</p>
-<p>如果你想跳出软件的限制，自由的定制录屏效果，避免莫名其妙的 bug，更加底层的 FFmpeg 反而是更稳定有效的方案。命令行录制看起来复杂，但实际上只需要熟悉十几个参数，你就能定制专属录屏方案，个人感觉比熟悉 Bandicam 的软件界面更简单。</p>
+<p>若要跳出软件的限制，自由的定制录屏效果，避免莫名其妙的 bug，更加底层的 FFmpeg 反而是更稳定有效的方案。命令行录制看起来复杂，但实际上只需要熟悉十几个参数，你就能定制专属录屏方案，个人感觉比熟悉 Bandicam 的软件界面更简单。</p>
 <p>下面以我的 Windows 桌面录制方案为例，从多屏幕中指定一个 2k 区域进行录制，并在画面右下角添加 360p 的摄像头录制角度，然后以帧率 0.02 输出监控视频。按 <code>q</code> 则停止录制。</p>
 <figure><img src="http://tc.seoipo.com/2022-11-03-13-16-44.png" alt="" tabindex="0" loading="lazy"><figcaption>输出画面如图例</figcaption></figure>
 <h2> 录屏准备</h2>
