@@ -100,7 +100,7 @@ Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如 [�
 
 ### 符号直接上屏
 
-小狼毫给字符都提供了多个候选，比如 / 默认有 `"、", "/", "／", "÷"` 四个候选词。如果你想按 / 键直接输出「、」，则按下方代码修改 luna_pinyin.schema.yaml 中的 punctuator 区块。^[[一例、定製標點符號](https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%A8%99%E9%BB%9E%E7%AC%A6%E8%99%9F)]
+小狼毫给字符都提供了多个候选，比如 / 默认有 `"、", "/", "／", "÷"` 四个候选词。若要按 / 键直接输出「、」，则按下方代码修改 luna_pinyin.schema.yaml 中的 punctuator 区块。^[[一例、定製標點符號](https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%A8%99%E9%BB%9E%E7%AC%A6%E8%99%9F)]
 
 ```yaml
 punctuator:

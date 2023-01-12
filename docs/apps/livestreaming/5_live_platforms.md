@@ -3,7 +3,6 @@ title: 直播入门攻略五 | 平台篇：主流直播平台介绍
 category:
   - 工具
 tag:
-  - OBS
   - 直播
 order: 5
 ---

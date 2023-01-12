@@ -39,7 +39,7 @@ order: 2
 
 ### Serve 启动
 
-如果你想在电脑上查看 docsify 页面，可执行 serve 架构命令，在本地主机上运行服务。默认本地端口为 3000，可以指定端口。
+若要在电脑上查看 docsify 页面，可执行 serve 架构命令，在本地主机上运行服务。默认本地端口为 3000，可以指定端口。
 
 ```shell
 docsify serve <path> [--open false] [--port 3000]

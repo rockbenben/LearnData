@@ -26,7 +26,7 @@ export default navbar([
     children: [
       "apps/Applist",
       "apps/ChatGPT",
-      "apps/Chrome",
+      { text: "直播手册", icon: "quote", link: "apps/livestreaming/1_obs_basic" },
       {
         text: "服务/系统",
         icon: "any",

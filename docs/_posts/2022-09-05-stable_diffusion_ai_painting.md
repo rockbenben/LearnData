@@ -141,7 +141,7 @@ Stable Diffusion 是以文字内容 (英文) 描绘一个场景或事物，从�
 
 除画面主体外，可以用其他具象物体和形容词来填充画面细节。描述词要具体，讲出你要的物体和它的特征。
 
-- 次要元素：物体不要太多，两到三个就好。如果你想特别强调某个元素，可以加很多括号或者惊叹号，比如 `beautiful forest background, desert!!, (((sunset)))` 中会优先体现「desert」和「sunset」元素。
+- 次要元素：物体不要太多，两到三个就好。若要特别强调某个元素，可以加很多括号或者惊叹号，比如 `beautiful forest background, desert!!, (((sunset)))` 中会优先体现「desert」和「sunset」元素。
 - 人物特征：`detailed gorgeous face, delicate features, elegant, Googly Eyes, Bone, big tits, silver hair, olive skin, Mini smile`；
 - 特定润色：`insanely detailed and intricate, gorgeous, surrealism, smooth, sharp focus, Painting, Digital Art, Concept Art, Illustration, Artstation, in a symbolic and meaningful style, 8K`；
 - 光线描述：`Natural Lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight`，或逼真光照 `Unreal Engine`；

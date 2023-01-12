@@ -43,7 +43,7 @@ order: 4
 
 ### 管理组织用户
 
-如果你想给其他人多添加几个账号，则可以通过 [Azure](https://portal.azure.com/) 来管理。
+若要给其他人多添加几个账号，则可以通过 [Azure](https://portal.azure.com/) 来管理。
 
 进入「管理 Azure Active Directory」>「用户」，添加和管理组织用户。
 

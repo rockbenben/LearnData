@@ -3,7 +3,6 @@ title: 直播入门攻略四 | 特效篇：美颜、变声、多开、虚拟主�
 category:
   - 工具
 tag:
-  - OBS
   - 直播
 order: 4
 ---

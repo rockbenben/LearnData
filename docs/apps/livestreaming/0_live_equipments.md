@@ -4,7 +4,6 @@ subtitle: 新手如何开直播？直播新手攻略：从小白入门到网红�
 category:
   - 工具
 tag:
-  - OBS
   - 直播
 order: 0.1
 ---
