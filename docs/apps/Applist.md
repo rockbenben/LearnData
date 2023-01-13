@@ -71,7 +71,7 @@ Windows 自用软件，以开源软件为主。
 
 时间管理：ManicTime & Toggl Track ~~& RescueTime(订阅)~~
 
-本地搜索：Everything([拼音扩展](https://github.com/Chaoses-Ib/IbEverythingExt)) ~~& AnyTXT Searcher & DocFetcher（全文） & Archivarius 3000~~
+本地搜索：Everything([拼音扩展](https://github.com/Chaoses-Ib/IbEverythingExt)) & AnyTXT Searcher（全文|OCR）~~& DocFetcher & Archivarius 3000~~
 
 ## 文档管理
 

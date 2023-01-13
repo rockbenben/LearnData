@@ -84,7 +84,7 @@ cd D:\Libraries\Desktop\scrcpy-win64-v1.25
 报错 `ERROR: Exception on thread Thread[main,5,main]`，通常是因为手机不兼容 scrcpy 默认的分辨率设置。解决方法是，修改 scrcpy 启动代码，使用较低的分辨率。
 
 ```shell
-# 三项分辨率设置，任选其一。
+# 三个分辨率设置，任选其一。
 .\scrcpy -m 1920
 .\scrcpy -m 1024
 .\scrcpy -m 800

@@ -101,7 +101,7 @@ docs
 
 LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)，支持随机对话、切换人物服饰和玩打飞机游戏，能提升网站美观度和趣味性。如果不需要看板娘，可以删除 `docs\.vuepress\public` 下的 live2d-widget 文件夹。
 
-要启用看板娘模型，需要打开 `docs\.vuepress\public\live2d-widget\autoload.js`，将 `apiPath: "https://newzone.top/live2d-widget/live2d_api/"` 改为 `cdnPath: live2d_path + "live2d_api/"`。如果未正确配置，看板娘会出现跨域报错，只显示文字而不显示图片。如果使用服务器自建 [live2d api](https://github.com/fghrsh/live2d_api) 的话，可以修改看板娘模型。
+要启用看板娘模型，需要修改 `docs\.vuepress\public\live2d-widget\autoload.js` 文件，将其中的 `apiPath: "https://newzone.top/live2d-widget/live2d_api/"` 替换为 `cdnPath: live2d_path + "live2d_api/"`。如果未正确配置，看板娘会出现跨域报错，只显示文字而不显示图片。如果使用服务器自建 [live2d api](https://github.com/fghrsh/live2d_api) 的话，可以修改看板娘模型。
 
 如果网站部署在子页面 `https://xxx.github.io/yyy`，则需将子页面路径 yyy 加入到以下两个文件：
 

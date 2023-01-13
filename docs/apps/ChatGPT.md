@@ -5,15 +5,15 @@ icon: creative
 order: 3
 ---
 
-ChatGPT 是由 OpenAI 发布的聊天机器人模型，但它不仅仅是对话聊天工具，更能在专业领域为我们提供有效的建议。客户端推荐使用 [lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases)，它支持全平台，并能实现调校词的快速插入。
+ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对话聊天，还能在专业领域提供有效的建议。建议使用 [lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases) 客户端，可全平台不少，能快速插入提示词。
 
-我按领域制作了 ChatGPT 功能表，随 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) 同步更新。在下方页面找到你需要的功能，然后点击括号中的链接，复制引用区的灰色文字，最后将其复制到 ChatGPT 即可得到指定的领域建议输出。在同一个对话中，调校词只需输入一次。
+我根据领域类别制作了 ChatGPT 功能表，会随 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) 同步更新。在下方页面中找到你需要的功能，点击括号中的链接，复制引用区的灰色文字，最后将其粘贴到 ChatGPT 即可得到指定领域的建议输出。在同一个对话中，提示词只需输入一次。
 
 使用 Tips：
 
-- 若要使用中文回复，则在倒数第二句插入条件 `Reply in Chinese.`。
-- 调校词使用英文以保持描述精度，而最后一句的定制条件可以使用任意语言，包括中文。后续回答中的定制条件可使用引号 `""` 框选，防止被误认为调校词。
-- `Too many requests in 1 hour` 报错，可通过切换 IP 并刷新浏览器来恢复。
+- 若要使用中文回复，请在倒数第二句插入条件 `Reply in Chinese.`。
+- 为了保持描述的精确性，提示词请使用英文，而最后一句的定制条件可以使用任何语言，包括中文。
+- 后续回答中的定制条件可以使用引号 `""` 框选，以防止被误认为是新的提示词。
 
 ## 文字
 

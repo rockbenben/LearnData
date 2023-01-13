@@ -23,6 +23,8 @@ LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/g
    - theme.ts：对主题和插件进行设置。
 5. 如果遇到报错，执行命令 `pnpm add vuepress@next vuepress-theme-hope@next && pnpm i && pnpm up` 修复并升级相关依赖包。如果依然有问题，则删除 node_modules 和 lock 文件，执行 `npm install && pnpm i && pnpm up` 重置依赖包文件。
 
+如果遇到错误 `[ERR_MODULE_NOT_FOUND]: Cannot find package`，则将 package.json 放在 demo project 中生成 lock 文件，比对 lock 文件是否为正确生成依赖树，将正确的 lock 文件复制到项目下。
+
 每个插件和主题版本只支持一个 VuePress 版本，因此要稳定的话，需用固定版本号的环境依赖才可以，比如主题 `vuepress-theme-hope@2.0.0-beta.155` 仅支持 `vuepress@2.0.0-beta.60`。如果要测试最新的环境配置，可使用 `pnpm add vuepress@next vuepress-theme-hope@next @vuepress/plugin-google-analytics@next @vuepress/plugin-search@next @vuepress/plugin-docsearch@next && pnpm i && pnpm up`。
 
 ## 搜索插件
