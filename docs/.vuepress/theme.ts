@@ -106,7 +106,7 @@ export default hopeTheme({
       ],
       // 部署 Waline：https://waline.js.org/guide/get-started.html
       // pageview: true, // 浏览量统计
-      walineLocales: {
+      locales: {
         "/": {
           // 表情互动提示文字
           reactionTitle: "已到达文章底部，欢迎留言、表情互动~",
