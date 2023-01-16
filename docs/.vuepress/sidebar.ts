@@ -7,29 +7,7 @@ export default sidebar([
   // 读书笔记架构更换到 docsify，不能使用相对链接
   { text: "读书笔记", icon: "read", link: "https://newzone.top/reading/" },
   {
-    text: "🚀 代码",
-    icon: "",
-    prefix: "/code/",
-    link: "",
-    collapsible: true,
-    children: [
-      "README.md",
-      {
-        text: "Basic",
-        icon: "emmet",
-        collapsible: true,
-        children: ["Markdown.md", "Electron.md", "AutoHotkey.md", "Regex.md"],
-      },
-      {
-        text: "FrondEnd",
-        icon: "app",
-        collapsible: true,
-        children: ["Vue.md", "HTML.md", "JavaScript.md", "Python.md"],
-      },
-    ],
-  },
-  {
-    text: "🧰 软件应用",
+    text: "🧰 应用手册",
     icon: "",
     prefix: "/apps/",
     link: "",
@@ -41,7 +19,7 @@ export default sidebar([
       "AppNotes.md",
       {
         text: "直播手册",
-        icon: "",
+        icon: "load",
         prefix: "livestreaming/",
         link: "",
         collapsible: true,
@@ -66,6 +44,28 @@ export default sidebar([
     children: "structure",
   },
   {
+    text: "🚀 代码学习",
+    icon: "",
+    prefix: "/code/",
+    link: "",
+    collapsible: true,
+    children: [
+      "README.md",
+      {
+        text: "Basic",
+        icon: "emmet",
+        collapsible: true,
+        children: ["Markdown.md", "Electron.md", "AutoHotkey.md", "Regex.md"],
+      },
+      {
+        text: "FrondEnd",
+        icon: "app",
+        collapsible: true,
+        children: ["Vue.md", "HTML.md", "JavaScript.md", "Python.md"],
+      },
+    ],
+  },
+  {
     text: "🐋 Linux 服务",
     icon: "",
     prefix: "/services/",
@@ -82,7 +82,7 @@ export default sidebar([
     children: "structure",
   },
   {
-    text: "🛖 生活",
+    text: "🛖 生活记录",
     icon: "",
     prefix: "/family/",
     link: "",

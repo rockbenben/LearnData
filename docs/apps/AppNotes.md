@@ -1,6 +1,6 @@
 ---
 article: false
-title: 应用笔记
+title: 工具笔记
 icon: plugin
 order: 4
 ---
@@ -193,12 +193,6 @@ sort: "title"
 TheBrain 可以把知识无限扩充，都连接在一起。但将工作流导图放入 TheBrain 后发现并不合适，比较适合更细化的内容？
 
 - [善用佳软张玉新老师 · TheBrain ≠ 思维导图——运用 TheBrain 的三个阶段](https://www.bilibili.com/video/BV19a411578T)
-
-## Eagle 素材管理
-
-Eagle 优势之一是去重，我素材库过 T，文件几十万个，无法一个个清楚，但导入 Eagle 就可以去掉重复素材。
-
-Eagle 导入流程：搜索文件夹中的 ZIP/RAR 文件，确认全部解压。
 
 ## Zinc
 
