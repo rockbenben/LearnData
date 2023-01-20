@@ -6,6 +6,7 @@ export default sidebar([
   "/Fitness",
   // 读书笔记架构更换到 docsify，不能使用相对链接
   { text: "读书笔记", icon: "read", link: "https://newzone.top/reading/" },
+  // 指定显示页面
   {
     text: "🧰 应用手册",
     icon: "",
@@ -14,9 +15,10 @@ export default sidebar([
     collapsible: true,
     children: [
       "Applist.md",
-      "Chrome.md",
       "ChatGPT.md",
+      "design.md",
       "AppNotes.md",
+      "Chrome.md",
       {
         text: "直播手册",
         icon: "load",

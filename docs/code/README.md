@@ -67,6 +67,4 @@ GitHub Copilot，CodeGeeX，Tabnine，aiXcoder 插件均可以辅助补全代码
 
 ## MySQL
 
-Windows 平台下，需要先设置 MySQL 服务器，然后使用数据库软件进行连接。
-
-如果没有将 MySQL 服务器设为自动启动，每次开机后需要手动启动。右键点击菜单栏最左侧，选择「计算机管理」>「服务和应用程序」>「服务」>「MYSQL57」，双击启动即可。
+在 Windows 平台上，需要先设置 [MySQL Server](https://downloads.mysql.com/archives/installer/)，然后使用数据库软件进行连接。如果使用本地数据库且未将 MySQL Server 设为自动启动，每次开机后需要手动启动。启动流程为：右键点击菜单栏最左侧，选择「计算机管理」>「服务和应用程序」>「服务」>「MYSQL57」，双击启动即可。

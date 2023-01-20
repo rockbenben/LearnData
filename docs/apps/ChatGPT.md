@@ -2,7 +2,7 @@
 article: false
 title: ChatGPT
 icon: creative
-order: 4
+order: 2
 ---
 
 ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对话聊天，还能在专业领域提供有效的建议。[lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases) 提供了一个可以快速插入提示词的客户端，推荐使用。[Playground](https://beta.openai.com/playground) 是调用 OpenAI API 的文字生成工具，它比 ChatGPT 更灵活，可以容纳更长的输入（4000 字符），并且可以自定义调整模型和生成参数，但它的生成效果一般要弱于 ChatGPT，仅适合深度研究用户调试使用。
