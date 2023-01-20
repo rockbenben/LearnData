@@ -47,9 +47,9 @@ export default hopeTheme({
   navbar: navbar,
   // 导航栏布局
   navbarLayout: {
-    left: ["Brand"],
+    start: ["Brand"],
     center: ["Links"],
-    right: ["Repo", "Outlook", "Search"],
+    end: ["Repo", "Outlook", "Search"],
   },
   // 是否在向下滚动时自动隐藏导航栏
   // navbarAutoHide: "always",
