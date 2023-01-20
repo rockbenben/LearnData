@@ -170,29 +170,6 @@ Vercel 部署步骤如下：
        clean: true
    ```
 
-## 🆙 版本升级
-
-LearnData 一般不需要升级，除非你想使用新功能。一般升级时，除了 docs 目录外，所有内容都使用最新版本的 LearnData 进行覆盖升级，`docs/.vuepress` 中的 `config.ts` 和 `theme.ts` 与新版文件进行比对，选择性升级，其他文档则无需更改。
-
-以下是升级目录的说明：
-
-```bash
-LearnData
-|── .github                     # 比对升级（一般覆盖）
-├── docs
-│   |── .vuepress               # 比对升级
-│   │   ├── config.ts           # 大升级时需比对升级
-│   │   ├── theme.ts            # 大升级时需比对升级
-│   │   ├── sidebar.ts          # 侧边栏，一般不变
-│   │   ├── navbar.ts           # 导航栏，一般不变
-│   │   ├── templateBuild.html  # 网页模板，一般不变
-│   │   └── public              # 自定义文档，一般不变
-│   |── reading                 # 读书笔记，一般不变
-│   ├── blog.md                 # 博客页面，一般不变
-│   └── others                  # 笔记/博客，无需更改
-└── others                      # 使用新版 LearnData 覆盖
-```
-
 ## 🤔 常见问题
 
 ### 网页显示异常
