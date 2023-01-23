@@ -7,14 +7,14 @@ order: 2
 
 ## 重装准备
 
-- 备份 [必备应用](../apps/index.html)，油猴脚本，输入法配置，UMP 版微信聊天记录 `C:\Users\Benson\AppData\Local\Packages\TencentWeChatLimited.forWindows10_sdtnhv12zgd7a\LocalCache\Roaming\Tencent\WeChatAppStore`。
+- 备份[必备应用](https://newzone.top/apps/Applist.html)，油猴脚本，输入法配置，UMP 版微信聊天记录 `C:\Users\Benson\AppData\Local\Packages\TencentWeChatLimited.forWindows10_sdtnhv12zgd7a\LocalCache\Roaming\Tencent\WeChatAppStore`。
 - 核对群晖已同步到最新备份。
 - 反激活已购软件，如：Eagle、MoneyWiz、妙笔。
-- 更新 [原版镜像](https://www.microsoft.com/zh-cn/software-download/windows11)。
+- 更新[原版镜像](https://www.microsoft.com/zh-cn/software-download/windows11)。
 
 ## 安装系统
 
-系统重装/维修前，在 **exFAT** 格式的 U 盘上安装 [微 PE 工具箱](https://www.wepe.com.cn/)。Windows 10/11 镜像超过 4GB，已经不再支持 FAT32 格式的 U 盘。
+系统重装/维修前，在 **exFAT** 格式的 U 盘上安装[微 PE 工具箱](https://www.wepe.com.cn/)。Windows 10/11 镜像超过 4GB，已经不再支持 FAT32 格式的 U 盘。
 
 使用 U 盘引导安装系统：
 
@@ -45,7 +45,7 @@ order: 2
 - 绿色开机：Keepass、Ditto、RunAny、天若 OCR；WPS 安装宏；
 - 配置：Eagle、RIME、Picgo、wonderpen；
 - firefox-about:config 修改原值 18 的 `ui.key.menuAccessKey` 为 0，以屏蔽 alt 防止热键冲突；选择「options」>「Network Settings」，取消勾选「DNS over HTTPS」；
-- 火绒－安全设置－高级防护－导入隐私规则，增加 [腾讯屏蔽规则](https://github.com/tutugreen/Huorong-Rules/tree/main/Tencent)。
+- 火绒－安全设置－高级防护－导入隐私规则，增加[腾讯屏蔽规则](https://github.com/tutugreen/Huorong-Rules/tree/main/Tencent)。
 
 ## 修改按键
 
@@ -58,4 +58,4 @@ order: 2
 - 英语键盘删不掉：添加英语语言包，然后再删除，英语键盘也会一起删除。
 - 右键更改前先备份注册表，有几率会影响系统稳定性。
 - 实时将音频转文字：管理员方式安装 [VB-CABLE](https://vb-audio.com/Cable/)，输入输出设备都选 VB-CABLE，详细设置查看 [How to Convert Audio to Text - FREE & No Time Limits](https://www.youtube.com/watch?v=1DsrniDGOJQ)。
-- 开机用 [管理员权限启动脚本](../code/AutoHotkey.html#管理员权限运行脚本)。
+- 开机用[管理员权限启动脚本](../code/AutoHotkey.html#管理员权限运行脚本)。

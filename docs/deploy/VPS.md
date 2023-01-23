@@ -120,7 +120,7 @@ location = / {
 
 ### 全新安装服务器
 
-1. 安装 [宝塔面板](https://www.bt.cn/bbs/thread-19376-1-1.html)。
+1. 安装[宝塔面板](https://www.bt.cn/bbs/thread-19376-1-1.html)。
 2. 删除阿里云主机监控。
 
    ```shell
@@ -128,14 +128,14 @@ location = / {
    chkconfig --del aegis  # 删除服务
    ```
 
-3. 配置 [阿里云端口开放](https://www.bt.cn/bbs/thread-2897-1-1.html)，导入安全规则。
+3. 配置[阿里云端口开放](https://www.bt.cn/bbs/thread-2897-1-1.html)，导入安全规则。
 4. 宝塔上修改默认账号密码，并修改登录 22 的默认 SSH 端口。如果开通了 FTP，修改 FTP 端口。
 5. 选择「网站」>「添加站点」，将站点根目录放在 /www/wwwroot/xxx，同时新建数据库。
 6. 上传全站文件并解压，然后按照安装提示重新安装一次，最后导入备份数据库。
 7. 404.html 起效，宝塔网站配置文件中，删除 `error_page 404 /404.html;` 中的 `#`。
 8. SSL 证书设置，开启强制 HTTPS；PHP 版本；301 重定向；添加伪静态设置（metinfo 或其他网站后台有代码）。如果 301 设置失败，直接在「伪静态」配置中，放入跳转代码。
 9. 服务器设置参考 [NginxConfig](https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN) 适合新手配置高性能、安全、稳定的 NGINX 服务器的最简单方法。
-10. [ECS 宝塔设置优化](https://www.bt.cn/bbs/forum.php?mod=viewthread&tid=3117)
+10. [ECS 宝塔设置优化](https://www.bt.cn/bbs/forum.php?mod=viewthread&tid=3117)：
 
     - 添加计划任务，定期释放内存，建议设置每天释放一次，执行时机为半夜，如：04:00。
     - 打开 Linux 工具箱添加 Swap。Swap 推荐与物理内存相同。
@@ -147,7 +147,7 @@ location = / {
 ### 服务器迁移
 
 1. 购买按量付费服务器。
-2. 用 [服务器迁移中心 SMC](https://smc.console.aliyun.com/overview) 将旧服务器同步到临时服务器。
+2. 用[服务器迁移中心 SMC](https://smc.console.aliyun.com/overview) 将旧服务器同步到临时服务器。
 3. 将域名解析到临时系统，确定服务基本正常。
 4. 对旧服务器先建立云盘快照，然后更换操作系统，进行全新部署。
 5. 对比新旧服务器，确认配置正常。
@@ -156,7 +156,7 @@ location = / {
 
 ### CPU 100%
 
-当服务器 cpu 或内存突然飙升 100% 时，依次排除当前运行进程，检查是否安装更新了插件、应用或服务。
+当服务器 CPU 或内存突然飙升 100% 时，依次排除当前运行进程，检查是否安装更新了插件、应用或服务。
 
 如果找不到原因，可以临时设置定期任务。每隔 3 小时重启一次 nginx/apache。有时重启不正常，因此重启命令后 10 秒，再启动一次 nginx/apache。
 

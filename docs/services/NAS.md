@@ -34,7 +34,7 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 
 ### 常用
 
-- [qbittorrent](https://registry.hub.docker.com/r/linuxserver/qbittorrent/)：需修改所有默认端口，否则容易报错。PT 下载关闭 `BitTorrent - DHT` 和其他隐私选项，半小时停止做种，将下载文件添加 Everyone 权限，其他设置参考 [群晖使用 qbittorrent](https://blog.csdn.net/weixin_45120915/article/details/114691473)。
+- [qbittorrent](https://registry.hub.docker.com/r/linuxserver/qbittorrent/)：需修改所有默认端口，否则容易报错。PT 下载关闭 `BitTorrent - DHT` 和其他隐私选项，半小时停止做种，将下载文件添加 Everyone 权限，其他设置参考[群晖使用 qbittorrent](https://blog.csdn.net/weixin_45120915/article/details/114691473)。
 - [PhotoPrism](https://docs.photoprism.app/)：基于 ai 私有化部署的个人相册。如果部署时出错，则尝试删除数据库文件夹下的内容。地点标记功能非常强大，类似本地版 Google Photos。
 - [qiandao](https://github.com/AragonSnow/qiandao)：自动签到开源框架，需搭配浏览器扩展 [get-cookies](https://github.com/ckx000/get-cookies) 使用，可导出配置。
 - [watchtower](https://containrrr.dev/watchtower/)：监控并更新 Docker 容器。

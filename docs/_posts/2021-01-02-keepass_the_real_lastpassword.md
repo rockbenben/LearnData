@@ -83,7 +83,7 @@ KeePass 需要配置插件，才能实现密码自动输入。下载插件并放
 
 ### KeeTrayTOTP
 
-如果你有更高安全要求，[KeeTrayTOTP](https://github.com/victor-rds/KeeTrayTOTP/releases/) 能增加二次动态验证，使用参考 [使用 KeePass 管理两步验证](https://www.cnblogs.com/tielemao/p/9613839.html)。
+如果你有更高安全要求，[KeeTrayTOTP](https://github.com/victor-rds/KeeTrayTOTP/releases/) 能增加二次动态验证，使用参考[使用 KeePass 管理两步验证](https://www.cnblogs.com/tielemao/p/9613839.html)。
 
 ### WebAutoType
 

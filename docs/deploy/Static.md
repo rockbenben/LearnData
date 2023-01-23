@@ -19,8 +19,8 @@ emoji 等可以使用静态资源库上的项目，比如 twemoji，上面有集
 ### NPM 包
 
 - UNPKG：**有墙风险且不稳定**，默认为最新版本，无需 `@latest` 标签。
-  - 将静态文件发布为 npm 包，参考 [一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
-  - 加速：在 [npm 官方源](https://www.npmjs.com/) 中搜索包位置，然后使用前缀 `https://unpkg.com/`。
+  - 将静态文件发布为 npm 包，参考[一分钟教你发布 npm 包](https://segmentfault.com/a/1190000023075167)。
+  - 加速：在 [npm 官方源](https://www.npmjs.com/)中搜索包位置，然后使用前缀 `https://unpkg.com/`。
 - [NPM MIRROR](https://npmmirror.com/)：NPM 项目的国内镜像镜像，不能做静态托管用途。`https://registry.npmmirror.com/项目名/版本号` 可以看见项目的各种信息，但看不了里面的文件。
 - UNPKG 镜像：有资源可以用服务器自建服务，反向代理 unpkg。
   - ~~饿了么 CDN（已关）：国内唯一能用的 npm 镜像，2022.07.13 发现外部访问被拒绝。之前饿了么并没说支持对外，可能已经彻底取消了。使用饿了么 CDN 时，注意 `https://npm.elemecdn.com/react@latest/` 需要时间更新，具体频率未知，可固定大版本号来获取更新 `https://npm.elemecdn.com/react@^18/`。~~

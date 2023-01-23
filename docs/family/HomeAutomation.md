@@ -19,7 +19,7 @@ Home Assistant 原生支持的米家设备较少，需要使用 hacs 下的集�
 
 Home Assistant 虽然一直被吹得很厉害，但即时性的传感器可能不能及时触发，使用时需要注意这点。
 
-> 对于人体传感器、门磁、无线开关类设备，它们的状态通常为瞬时状态 (即：事件)，部分型号支持获取最后一次事件触发的时间，且默认轮询时长为 15 秒，对于无法获取最后触发事件的设备，即使修改轮询时间到 1 秒，也可能无法获取正确的状态。因此此类设备通过本插件集成后不太推荐用于触发实时自动化，仅适合作为如几分钟无人移动关灯这类自动化的条件。如果需要实时更新状态，推荐使用 [多模网关](https://home.miot-spec.com/s/lumi.gateway.mgl03) 配合 [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) 集成。^[[为什么设备状态会有延迟？如何减小延迟？](https://github.com/al-one/hass-xiaomi-miot/issues/100#issuecomment-909031222)]
+> 对于人体传感器、门磁、无线开关类设备，它们的状态通常为瞬时状态 (即：事件)，部分型号支持获取最后一次事件触发的时间，且默认轮询时长为 15 秒，对于无法获取最后触发事件的设备，即使修改轮询时间到 1 秒，也可能无法获取正确的状态。因此此类设备通过本插件集成后不太推荐用于触发实时自动化，仅适合作为如几分钟无人移动关灯这类自动化的条件。如果需要实时更新状态，推荐使用[多模网关](https://home.miot-spec.com/s/lumi.gateway.mgl03)配合 [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) 集成。^[[为什么设备状态会有延迟？如何减小延迟？](https://github.com/al-one/hass-xiaomi-miot/issues/100#issuecomment-909031222)]
 
 ## Node-RED
 
@@ -57,7 +57,7 @@ Home Assistant 虽然一直被吹得很厉害，但即时性的传感器可能�
 
 ### 智趣盒子
 
-[智趣盒子](https://item.taobao.com/item.htm?id=635639747170) 集成了 Home Assistant 和 Node-RED 的 Docker，Home Assistant 能部署 Addons、supervisor，能直接插开源网关。
+[智趣盒子](https://item.taobao.com/item.htm?id=635639747170)集成了 Home Assistant 和 Node-RED 的 Docker，Home Assistant 能部署 Addons、supervisor，能直接插开源网关。
 
 > 盒子基于 arm 的 linux 的 debian 系统上运行 docker，在 docker 的基础上构建了 supervisor 版本，跟 homeassistant 开发官方的 hassos 的最大差异就是打开了 root 的权限，可以在底层进行操作。这些比较适合国内的使用环境（网络改善，装第三方工具等）.
 

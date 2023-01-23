@@ -11,7 +11,7 @@ order: -25
 
 RSS 使用已经介绍了 feed43 和 Huginn，但这些工具或需要学习，或需要硬件。与之相比，RSSHub 有着成熟的配置，可以直接使用。
 
-**RSSHub** 是个开源项目，对微博、知乎、豆瓣、bilibili、Youtube 等主流网站进行 RSS 转化。我们只要访问 [RSSHub 官网](https://docs.rsshub.app/) ，上面定期更新了主流媒体的 rss 项目。
+**RSSHub** 是个开源项目，对微博、知乎、豆瓣、bilibili、Youtube 等主流网站进行 RSS 转化。我们只要访问 [RSSHub 官网](https://docs.rsshub.app/)，上面定期更新了主流媒体的 rss 项目。
 
 ![](http://tc.seoipo.com/20190331012441.png)
 

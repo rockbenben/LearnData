@@ -31,7 +31,7 @@ HTTPS 网页中，js、css、gif 等文件都必须要使用 https，否则会�
 | "        | 引号   | \&quot;  | \&#34;   |
 | '        | 撇号   | \&apos;  | \&#39;   |
 
-## JavaScript 插件^[[开源 JavaScript 插件和库](https://www.cnblogs.com/zhnaglei/p/6697638.html)]
+## JavaScript 插件
 
 - [font-awesome](https://fontawesome.com/)：图标字体。
 - [Layui](https://layuion.com/)：开源模块化前端 UI 组件库。
@@ -40,7 +40,7 @@ HTTPS 网页中，js、css、gif 等文件都必须要使用 https，否则会�
 - [Day.js](https://dayjs.gitee.io/docs/zh-CN/get-set/get-set)：时间输入转换，支持时间戳，格式化时间、过去时间展示、解决因时区变更。
 - [list.js](https://github.com/javve/list.js)：实时搜索页面，并直接显示结果页面。为列表、表格或其他任何 HTMLL 标签增加了搜索，排序，过滤器和灵活性等元素。网页中会自动会大段空格压缩为一个空格，不用特意替换。
 - [watermark.js](https://github.com/saucxs/watermark-dom)：网页文字水印。
-- [codemirror](https://codemirror.net/)：代码编辑器，为 textarea 加行号。
+- [codemirror](https://codemirror.net/)：代码编辑器，为 textarea 加行号。^[[开源 JavaScript 插件和库](https://www.cnblogs.com/zhnaglei/p/6697638.html)]
 
 ### 功能加强
 

@@ -10,19 +10,19 @@ tag:
 order: -49
 ---
 
-我从小特别羡慕会画画的伙伴，他们能绘出心中所想，而本人水平最高的肖像画是丁老头。接触 Stable Diffusion 后，我脱胎换骨，给自己贴上了「会画画」的新标签。
+我从小特别羡慕会画画的伙伴。他们能够将心中的想法画出来，而我最高水平的肖像画是丁老头。在接触 Stable Diffusion 之后，我感觉自己脱胎换骨，给自己贴上了「会画画」的新标签。
 
 ![](http://tc.seoipo.com/2022-09-04-11-53-20.png "丁老头进化旅程")
 
 Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具，**可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行**，并在几秒内生成图像，无需预处理和后处理。
 
-体验 AI 绘图可借助在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion)、[DreamStudio](https://beta.dreamstudio.ai/) 或 [百度文心](https://wenxin.baidu.com/moduleApi/ernieVilg)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。
+体验 AI 绘图可借助在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion)、[DreamStudio](https://beta.dreamstudio.ai/) 或[百度文心](https://wenxin.baidu.com/moduleApi/ernieVilg)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。
 
 如果想生成大量 AI 图片，可以通过 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Mac 用户建议选择 Stable Diffusion 的 invoke 分支，部署报错参考 [InvokeAI 文档](https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore)，**M1/M2 Mac** 推荐使用更简便的 [CHARL-E](https://www.charl-e.com/) 或 [DiffusionBee](https://sspai.com/post/75682)。
 
 ![](http://tc.seoipo.com/2022-09-05-16-22-45.png "Stable Diffusion 部署流程")
 
-本文以 Windows 平台为例，下面会依次介绍环境配置，Stable Diffusion 安装和基本使用方法。
+以 Windows 平台为例，本文将依次介绍 Docker 环境配置、Stable Diffusion 安装及基本使用方法。
 
 ## Docker 环境配置
 
@@ -54,15 +54,15 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 ### 下载 WebUI Docker
 
-然后，下载 [Stable Diffusion WebUI Docker 配置包](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/) 或 [阿里云盘聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)，将其解压到指定路径。聚合版包括相关依赖，因此文件较大。之后更新 WebUI Docker，也是按上方步骤重新构建容器即可更新 Stable Diffusion。
+下载 [Stable Diffusion WebUI Docker 配置包](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)或[阿里云盘聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)，将其解压到指定路径。聚合版包括相关依赖和模型，因此文件较大。更新 Stable Diffusion WebUI Docker 时，也可按上述步骤重新构建容器。
 
 ### 分支介绍
 
-目前 Stable Diffusion 有 sygil、auto、auto-cpu 和 invoke 四个分支。如果要更换分支，则更改镜像构建命令 `docker compose --profile [ui] up --build`，将 `[ui]` 替换为所需的镜像名即可。原本的 hlkcy 分支更名为 sygil，原本的 lstein 分支更名为 invoke。
+目前，Stable Diffusion 有 sygil、auto、auto-cpu 和 invoke 四个分支。如果要更换分支，可以修改镜像构建命令 `docker compose --profile [ui] up --build`，将 `[ui]` 替换为所需的镜像名即可。原先的 `hlky` 分支已经更名为 `sygil`，`lstein` 分支更名为 `invoke`。
 
 - **sygil**：界面直观，最高分辨率为 1024x1024，镜像构建命令为 `docker compose --profile sygil up --build`。
-- **auto**（推荐）：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 `docker compose --profile auto up --build`。默认使用 6GB 以上的显存，如果你的显卡内存较低，则将配置中的 `--medvram` 改为 `--lowvram`。A 卡用户注意修改 [显卡设置](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker)。
-- **auto-cpu**：唯一不依赖显卡的分支。如果没有符合要求的显卡，可以使用 CPU 版本，稍后的镜像构建命令为 `docker compose --profile auto-cpu up --build`。
+- **auto**（推荐）：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 `docker compose --profile auto up --build`。默认使用 6GB 以上的显存，如果你的显卡内存较低，则将配置中的 `--medvram` 改为 `--lowvram`。A 卡用户注意修改[显卡设置](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker)。
+- **auto-cpu**：唯一不依赖显卡的分支。如果没有符合要求的显卡，可以使用 CPU 模式，内存配置需满足 16G 以上，构建镜像的命令为 `docker compose --profile auto-cpu up --build`。
 - **invoke**：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 `docker compose --profile invoke up --build`。
 
 ### 构建 Stable Diffusion
@@ -209,6 +209,10 @@ wsl -l -v
 
 `The command 'docker' could not be found` 说明当前命令行确实 Docker 环境缺失，检查 Docker Desktop 是否启动。
 
+### exited with code 137
+
+`exited with code 137` 通常意味着内存不足，超出内存导致进程被关闭。建议硬件配置最低为 16G 内存，尤其是使用 auto-cpu 模式时。
+
 ### 端口访问被拒
 
 Docker 容器原本运行正常，端口访问突然被拒绝了，显示 `Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:7860 -> 0.0.0.0:0: listen tcp 0.0.0.0:7860: bind: An attempt was made to access a socket in a way forbidden by its access permissions`。
@@ -230,6 +234,6 @@ Docker 容器原本运行正常，端口访问突然被拒绝了，显示 `Error
 
 ## 最后
 
-Stable Diffusion 还不能作为生产力工具，但它让设计变得简单，也让更多普通人打开了 AI 绘画的可能性。推荐大家实际部署玩下，让自己拥有更多的可能。
+Stable Diffusion 还不能作为生产力工具，但它使设计变得简单，也为普通人开启了 AI 绘画的可能性。建议大家实际部署玩下，让自己拥有更多的可能。
 
 本文于「[少数派首发](https://sspai.com/post/75544)」。

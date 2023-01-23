@@ -43,22 +43,20 @@ sudo bundle exec rake production:force_stop
 sudo bundle exec rake production:export
 ```
 
-部署步骤记录在下方，但还有 4 个**待解决问题**：
+部署步骤记录在下方，但还有 3 个**待解决问题**：
 
 - 定期导出数据库到本地。
-- 开机启动 Huginn 服务。
+- 测试任务卡住后，rake production:export 是否有效。
+- 开机启动 Huginn 服务，需在 Docker 容器终端机中执行。runsvdir 在 SSH 中会报错 `supervise/lock: temporary failure`，但在终端机中运行正常。`production:export` 步骤会提示 `unable to open supervise/stat.new: file does not exist`，但此报错似乎不影响 Huginn 的运行，等有时间看看是否有相关报错。
 
   ```bash
-  #开机设置
   sudo service mysql restart
   sudo service nginx restart
   cd /home/huginn/huginn
   sudo runsvdir /etc/service &
+  sudo bundle exec rake production:force_stop
   sudo bundle exec rake production:export
   ```
-
-- 测试任务卡住后，rake production:export 是否有效。
-- `production:export` 运行时提示 `unable to open supervise/stat.new: file does not exist`。此报错似乎不影响 Huginn 的运行，等有时间看看是否有相关报错。
 
 ### Ubuntu 手动部署
 

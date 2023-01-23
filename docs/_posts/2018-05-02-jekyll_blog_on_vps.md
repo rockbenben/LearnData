@@ -11,7 +11,7 @@ order: -14
 
 Github 墙得太厉害，就想在服务器上自建 Jekyll 环境，用上 Travis CI 和 Docker 后才发现完全没必要。。
 
-Jekyll 环境官方 [安装指南](https://www.jekyll.com.cn/docs/quickstart/)：
+Jekyll 环境官方[安装指南](https://www.jekyll.com.cn/docs/quickstart/)：
 
 1. 使用 RVM 安装 Ruby (rvm -> ruby -> gem 网上大量教程就不赘述了)
 

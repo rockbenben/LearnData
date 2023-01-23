@@ -174,7 +174,7 @@ docsify 使用简单，如果使用了前文我修改过的[发布工具](https:
 
 40% 的网站基于 WordPress 架构，因此 WordPress 有超多的主题和插件，可以实现你想要的功能，比如 RSS、Newsletter。
 
-如果你拥有较多的粉丝，可以使用 [Substack](https://substack.com/) 和 [竹白](https://zhubai.love/) 来分发博客。这两者都支持 Newsletter 付费订阅。只针对国内用户的话，竹白可支持微信订阅。
+如果你拥有较多的粉丝，可以使用 [Substack](https://substack.com/) 和[竹白](https://zhubai.love/)来分发博客。这两者都支持 Newsletter 付费订阅。只针对国内用户的话，竹白可支持微信订阅。
 
 ## 后续
 

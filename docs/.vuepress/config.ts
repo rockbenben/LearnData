@@ -23,7 +23,7 @@ export default defineUserConfig({
   // 是否开启页面预拉取，如果服务器宽带足够，可改为 true，会提升其他页面加载速度
   shouldPrefetch: false,
 
-  // 修改页面模板，@vuepress-theme-hope/templates/index.build.html
+  // 修改页面模板，https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/packages/theme/templates/index.build.html
   // 配置参考：https://vuepress.github.io/zh/reference/theme-api.html#templatebuild
   templateBuild: path.resolve(__dirname, "templateBuild.html"),
 

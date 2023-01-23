@@ -11,7 +11,7 @@ mounted 是生命周期函数，自动执行。
 
 props 主要用于组件的传值，他的工作就是为了接收外面传过来的数据，与 data、el、ref 是一个级别的配置项。
 
-按键、事件都可以加入 [修饰符](https://cn.vuejs.org/guide/essentials/event-handling.html#event-modifiers)，简化代码。
+按键、事件都可以加入[修饰符](https://cn.vuejs.org/guide/essentials/event-handling.html#event-modifiers)，简化代码。
 
 ```JavaScript
 //从 Vue 对象中将 ref, reactive, readonly, toRefs 方法解构出来

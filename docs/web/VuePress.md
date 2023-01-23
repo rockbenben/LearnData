@@ -13,7 +13,7 @@ LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/g
 
 ## 初始配置
 
-1. 环境配置：安装 pnpm，也支持 npm 和 yarn，可参考 [环境部署教程](../deploy/VPS.html#环境部署)。
+1. 环境配置：安装 pnpm，也支持 npm 和 yarn，可参考[环境部署教程](../deploy/VPS.html#环境部署)。
 2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope@next docs`。vuepress-theme-hope 主题的样例文件会存储在该路径下。有时因版本问题，样例运行会报错，此时须用固定版本号来安装依赖环境，终端中输入 `pnpm add vuepress@2.0.0-beta.60 @vuepress/client@2.0.0-beta.60 vuepress-theme-hope@2.0.0-beta.155 && pnpm docs:dev`。
 3. 执行命令 `pnpm docs:dev` 启动样例网站。
 4. `docs\.vuepress` 路径下的 config.ts，navbar.ts，sidebar.ts，theme.ts 可以修改页面属性，设置方法参考 [官方案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。

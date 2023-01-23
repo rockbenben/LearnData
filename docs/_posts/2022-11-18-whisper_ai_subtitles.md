@@ -14,7 +14,7 @@ order: -51
 
 Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是**支持 99 种语言 AI 字幕工具**。
 
-虽然与 Stable Diffusion 同样归属 AI 工具，但 Whisper 安装非常简单，终端执行两行代码安装 Whisper 和 FFmpeg 即可使用。如果你不清楚如何安装 FFmpeg，可参考 [FFmpeg 配置步骤](https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html#%E9%85%8D%E7%BD%AE-ffmpeg)。这部分我不多做赘述，具体可以看 [Whisper 官方文档](https://github.com/openai/whisper)。
+虽然与 Stable Diffusion 同样归属 AI 工具，但 Whisper 安装非常简单，终端执行两行代码安装 Whisper 和 FFmpeg 即可使用。如果你不清楚如何安装 FFmpeg，可参考[FFmpeg 配置步骤](https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html#%E9%85%8D%E7%BD%AE-ffmpeg)。这部分我不多做赘述，具体可以看[Whisper 官方文档](https://github.com/openai/whisper)。
 
 ```bash
 pip install git+https://github.com/openai/whisper.git

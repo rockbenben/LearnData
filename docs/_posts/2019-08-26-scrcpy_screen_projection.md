@@ -14,7 +14,7 @@ order: -26
 
 市面上主流的多屏协同软件大多都是基于 scrcpy 开发的套壳产品，而且 bug 也没有得到修复，因此建议直接使用官方的 scrcpy。
 
-本文以 Windows 投屏为例，可以前往官方站点下载 [scrcpy-win64-v1.25.zip](https://github.com/Genymobile/scrcpy/releases/download/v1.25/scrcpy-win64-v1.25.zip)，或者使用 [国内搬运链接](https://wwva.lanzoue.com/iHnRJ0jm0uhe)。
+本文以 Windows 投屏为例，可以前往官方站点下载 [scrcpy-win64-v1.25.zip](https://github.com/Genymobile/scrcpy/releases/download/v1.25/scrcpy-win64-v1.25.zip)，或者使用[国内搬运链接](https://wwva.lanzoue.com/iHnRJ0jm0uhe)。
 
 ## 有线投屏
 

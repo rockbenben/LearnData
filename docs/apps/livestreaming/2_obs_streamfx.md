@@ -12,7 +12,7 @@ StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果�
 
 ## 安装 StreamFX
 
-在 [StreamFX 发布页](https://github.com/Xaymar/obs-StreamFX/releases) 上按平台选择安装包。StreamFX for OBS 29 处于测试阶段，在升级此插件前，请按照 [卸载教程](https://github.com/Xaymar/obs-StreamFX/wiki/Uninstallation) 执行旧版清理。
+在 [StreamFX 发布页](https://github.com/Xaymar/obs-StreamFX/releases)上按平台选择安装包。StreamFX for OBS 29 处于测试阶段，在升级此插件前，请按照[卸载教程](https://github.com/Xaymar/obs-StreamFX/wiki/Uninstallation)执行旧版清理。
 
 安装成功后，StreamFX 会出现在 OBS 上方的菜单栏上。下文中，我将使用不同滤镜处理样图，并提供对比图。
 

@@ -18,7 +18,7 @@ koolproxy 是可以运行在路由器上的广告屏蔽软件，跟其他最大�
 
 ![](http://tc.seoipo.com/20180610143928.png)
 
-运行命令后，就可以下载 https 证书，之后的设置参考[Merlin 版 Koolproxy3.1.x 使用教程](http://koolshare.cn/thread-80430-1-1.html)。
+运行命令后，就可以下载 https 证书，之后的设置参考 [Merlin 版 Koolproxy3.1.x 使用教程](http://koolshare.cn/thread-80430-1-1.html)。
 
 保存 Koolproxy 设置后，一定要**重启路由**，否则可能部分屏蔽设置未成功生效。
 

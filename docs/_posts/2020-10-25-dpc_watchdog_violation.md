@@ -28,7 +28,7 @@ Windows 蓝屏的原因众多，你在网上搜到的解决方案，大多与你
 有些蓝屏比较复杂，由多方面的原因造成，新手很难分析。如果你看不懂或者不想分析日志，可以将蓝屏日志完整上传到微软社区，一般几个小时就会有人回复。
 
 1. 打开文件夹 `C:\Windows\Minidump`，导出日志 `*.dmp`。
-2. 将 dmp 蓝屏日志上传至 [微软社区](https://answers.microsoft.com/zh-hans/newthread?threadtype=Questions&cancelurl=/zh-hans/windows/forum&forum=windows&filter=)，会有技术人员帮助你分析蓝屏原因。由于微软社区不支持上传附件，请先将 dmp 日志上传至百度云或微云，然后将分享链接放在问题中。
+2. 将 dmp 蓝屏日志上传至[微软社区](https://answers.microsoft.com/zh-hans/newthread?threadtype=Questions&cancelurl=/zh-hans/windows/forum&forum=windows&filter=)，会有技术人员帮助你分析蓝屏原因。由于微软社区不支持上传附件，请先将 dmp 日志上传至百度云或微云，然后将分享链接放在问题中。
 
 ## 蓝屏解决方案
 
@@ -70,7 +70,7 @@ Windows 蓝屏的原因众多，你在网上搜到的解决方案，大多与你
 
 ### 装不了 WinDbg
 
-少数情况安装应用报错，本地无法分析日志。此时，我们可以导出蓝屏日志，上传到 [微软社区](https://answers.microsoft.com/zh-hans/newthread?threadtype=Questions&cancelurl=/zh-hans/windows/forum&forum=windows&filter=)，会有人帮助分析原因。
+少数情况安装应用报错，本地无法分析日志。此时，我们可以导出蓝屏日志，上传到[微软社区](https://answers.microsoft.com/zh-hans/newthread?threadtype=Questions&cancelurl=/zh-hans/windows/forum&forum=windows&filter=)，会有人帮助分析原因。
 
 ### 分析日志时报错
 

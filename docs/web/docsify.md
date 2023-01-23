@@ -25,7 +25,7 @@ order: 2
 
 ### docsify emoji
 
-[emoji 插件](https://docsify.js.org/#/zh-cn/plugins?id=emoji) 在标题中使用容易出错，建议使用 `&#58;`。例如，原本是 `:100:`，替换为 `&#58;100:`。
+[emoji 插件](https://docsify.js.org/#/zh-cn/plugins?id=emoji)在标题中使用容易出错，建议使用 `&#58;`。例如，原本是 `:100:`，替换为 `&#58;100:`。
 
 实际使用中，我直接复制 emoji，都能正常显示。
 

@@ -82,7 +82,7 @@ docs
 └── intro.md                # 博主个人介绍
 ```
 
-`docs/.vuepress` 路径下是网站的配置文件，我在上面添加了详细的注释。你可以参考注释和 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress) 来调整配置。修改 `docs/.vuepress/sidebar.ts` 中的文件夹路径，后台会自动抓取路径下的 md 文件来生成侧边栏。`docs/.vuepress/theme.ts` 中配置了 [评论插件](https://newzone.top/web/Comments.html)。
+`docs/.vuepress` 路径下是网站的配置文件，我在上面添加了详细的注释。你可以参考注释和 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)来调整配置。修改 `docs/.vuepress/sidebar.ts` 中的文件夹路径，后台会自动抓取路径下的 md 文件来生成侧边栏。`docs/.vuepress/theme.ts` 中配置了[评论插件](https://newzone.top/web/Comments.html)。
 
 注意：
 
@@ -198,7 +198,7 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 
 ### 本地运行 LearnData
 
-1. 安装环境 npm 和 pnpm，可参考 [环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
+1. 安装环境 npm 和 pnpm，可参考[环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
 2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm i && pnpm up`。
 3. 完成前两步后，终端中输入 `pnpm docs:dev`，成功后会提示访问链接，默认为 `http://localhost:8080/`。
 

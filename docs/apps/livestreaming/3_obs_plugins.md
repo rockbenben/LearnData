@@ -71,4 +71,4 @@ OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）�
 
 ## 更多
 
-如果你在上文中没有找到你需要的功能功能，可以访问 [OBS 插件库](https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/) 进行搜索。
+如果你在上文中没有找到你需要的功能功能，可以访问 [OBS 插件库](https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/)进行搜索。

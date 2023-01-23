@@ -63,7 +63,7 @@ order: -23
 
 国内其他输入法在这点上也都半斤八两，为了不被键盘记录器惦记，我只能切换为开源的小狼毫输入法。
 
-语音输入则转用开源的[Quick Cut](https://github.com/HaujetZhao/QuickCut)，使用阿里云、腾讯云的商用语音接口，识别率比免费的搜狗和讯飞都高。
+语音输入则转用开源的 [Quick Cut](https://github.com/HaujetZhao/QuickCut)，使用阿里云、腾讯云的商用语音接口，识别率比免费的搜狗和讯飞都高。
 
 ![Quick Cut 界面](http://tc.seoipo.com/2022-05-25-18-08-06.png?imageMogr2/thumbnail/!60p)
 

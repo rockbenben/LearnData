@@ -15,7 +15,7 @@ order: -43
 
 ## 原生程序管理-winget
 
-[winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/) 是 Windows 程序包管理器的命令行工具。在 Windows 10 和 Windows 11 计算机上，使用 winget 命令行工具来发现、安装、升级、删除和配置应用程序。早期版本的 Windows 不支持 winget，需在 [winget 官方](https://github.com/microsoft/winget-cli/releases) 或 [国内搬运](https://wwz.lanzouf.com/ixZL701smc4d) 下载后缀为 `.msixbundle` 的应用安装程序。
+[winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/) 是 Windows 程序包管理器的命令行工具。在 Windows 10 和 Windows 11 计算机上，使用 winget 命令行工具来发现、安装、升级、删除和配置应用程序。早期版本的 Windows 不支持 winget，需在 [winget 官方](https://github.com/microsoft/winget-cli/releases)或[国内搬运](https://wwz.lanzouf.com/ixZL701smc4d) 下载后缀为 `.msixbundle` 的应用安装程序。
 
 安装应用安装程序后，可以通过在命令提示符 (cmd) 下键入「winget」来运行程序命令。
 
@@ -73,7 +73,7 @@ winstall 页面选好程序后，导出自动生成的批量安装命令，并�
 
 ### 尝试更新源时失败
 
-国内使用 winget 容易出现问题「尝试更新源时失败」，下载 [winget 官方最新包](https://github.com/microsoft/winget-cli/releases) 可解决问题。
+国内使用 winget 容易出现问题「尝试更新源时失败」，下载 [winget 官方最新包](https://github.com/microsoft/winget-cli/releases)可解决问题。
 
 另一个可能是 Internet 选项的 TLS 版本设置过低，开启 TLS 1.2 即可恢复，具体操作查看 [Windows 应用商店 (Microsoft store) 打不开？](https://newzone.top/posts/2022-02-19-microsoft_store_fixed.html#解决方法)。
 

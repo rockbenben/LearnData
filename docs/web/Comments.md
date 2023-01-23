@@ -19,7 +19,7 @@ LearnData 使用的是 Waline 评论插件，部署简单，有后端管理。�
 
 Waline 支持 Akismet 反垃圾评论和免注册留言，不过匿名留言会带来安全隐患，建议开启评论通知，避免极端情况。Waline 的评论通知支持多种方式，包括 QQ、微信、邮件等，回复评论作者仅支持邮件通知。
 
-Vercel 项目中选择「Overview」>「Settings」>「Environment Variables」，然后按照 [Waline 评论通知](https://waline.js.org/guide/server/notification.html) 配置所需环境变量。如果需要 Webhook 等更多通知方式，则查看 [Waline 服务端配置](https://waline.js.org/reference/server.html)。配置成功后，选择「Overview」>「Deployments」，进行 Redeploy，重新部署后环境变量和评论通知方会生效。
+Vercel 项目中选择「Overview」>「Settings」>「Environment Variables」，然后按照 [Waline 评论通知](https://waline.js.org/guide/server/notification.html)配置所需环境变量。如果需要 Webhook 等更多通知方式，则查看 [Waline 服务端配置](https://waline.js.org/reference/server.html)。配置成功后，选择「Overview」>「Deployments」，进行 Redeploy，重新部署后环境变量和评论通知方会生效。
 
 目前 `*.vercel.app` 域名已经被 DNS 污染，会出现「无法加载评论」，国内使用建议绑定自定义域名，域名对备案暂无硬性要求。
 

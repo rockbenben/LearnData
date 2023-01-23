@@ -43,7 +43,7 @@ Aria2 真·懒人包无需配置，下载即可使用，适合不想折腾的人
 
 ## Aria2 设置
 
-1. 下载 [Aria2 快速设置包](https://aria2c.com/archiver/aria2.zip) 或 [备用链接](https://wwz.lanzouf.com/iROZE0eai3xe)，将其解压到存放文件夹，例如 `D:\Aria2`。
+1. 下载 [Aria2 快速设置包](https://aria2c.com/archiver/aria2.zip)或[备用链接](https://wwz.lanzouf.com/iROZE0eai3xe)，将其解压到存放文件夹，例如 `D:\Aria2`。
 
 2. 官网下载 [Aria2 程序](https://github.com/aria2/aria2/releases)（Windows 选择 [aria2-1.36.0-win-64bit-build1.zip](https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0-win-64bit-build1.zip)），然后解压到快速设置包的存放文件夹中，替代其中的 `aria2c.exe` 程序。
 
@@ -51,7 +51,7 @@ Aria2 真·懒人包无需配置，下载即可使用，适合不想折腾的人
 
 3. 点击 `aria2.exe` 启动 aria2，系统托盘区会同步出现应用图标。
 
-4. 参照 [懒人包配置](https://wwz.lanzouf.com/iwv6f0eadq9i) 修改 `aria2.conf`，更多设置参考 [aria2c 官方文档](https://aria2.github.io/manual/en/html/aria2c.html)。^[[Aria2 基础上手指南](https://zhuanlan.zhihu.com/p/30666881)]
+4. 参照[懒人包配置](https://wwz.lanzouf.com/iwv6f0eadq9i)修改 `aria2.conf`，更多设置参考 [aria2c 官方文档](https://aria2.github.io/manual/en/html/aria2c.html)。^[[Aria2 基础上手指南](https://zhuanlan.zhihu.com/p/30666881)]
 
    修改默认下载目录：
 
@@ -76,7 +76,7 @@ Aria2 真·懒人包无需配置，下载即可使用，适合不想折腾的人
    enable-peer-exchange=true
    ```
 
-   在文档最后一行添加 BT trackers，最新 trackers 列表从 [ngosang/trackerslist](https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt) 中获取, tracker 中用 `,` 隔开。
+   在文档最后一行添加 BT trackers，最新 trackers 列表从 [ngosang/trackerslist](https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt) 中获取，tracker 中用 `,` 隔开。
 
    ```conf
    # bt-tracker 更新，解决 Aria2 BT 下载速度慢没速度的问题
@@ -113,7 +113,7 @@ Aira2 下载预热是 BT 下载前的必备步骤，否则速度容易很慢。
 
 如果想用 Aria2 接管浏览器的下载管理，需安装插件/扩展。
 
-- Chrome：安装 [添加到 aria2](https://chrome.google.com/webstore/detail/nimeojfecmndgolmlmjghjmbpdkhhogl) 扩展。下载包可以用 [国内搬运地址](https://wwi.lanzoui.com/i4Fmeetsdaj)，或是懒人包内置文件。
+- Chrome：安装[添加到 aria2](https://chrome.google.com/webstore/detail/nimeojfecmndgolmlmjghjmbpdkhhogl) 扩展。下载包可以用[国内搬运地址](https://wwi.lanzoui.com/i4Fmeetsdaj)，或是懒人包内置文件。
   如果浏览器无法直接安装 `.crx` 格式的扩展，可以将文件解压到新文件夹「xxx」，然后在浏览器的地址栏输入 `chrome://extensions/` 开启开发者模式，点击加载已解压的扩展程序，选中刚才解压的文件夹「xxx」。
 - Firefox：安装 [Aria2 Download Manager Integration](https://addons.mozilla.org/en-US/firefox/addon/aria2-integration/) 扩展，可参考下方的 Chrome 扩展设置进行配置。
 

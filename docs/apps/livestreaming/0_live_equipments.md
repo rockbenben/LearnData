@@ -70,7 +70,7 @@ NDI 是最稳定的，可自由调节拍摄参数。打开 NDI 应用后，需�
 
 ### IP Webcam
 
-IP Webcam 的推流稳定性一般，容易掉帧，但 [IP Webcam 免费版](https://wwz.lanzouf.com/iT6pH01tj7yb) 足够个人使用。
+IP Webcam 的推流稳定性一般，容易掉帧，但 [IP Webcam 免费版](https://wwz.lanzouf.com/iT6pH01tj7yb)足够个人使用。
 
 下文为 IP Webcam 基础设置：
 

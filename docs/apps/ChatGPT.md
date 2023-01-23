@@ -38,13 +38,15 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 
 ### 写作辅助
 
+- 文章标题生成器（[Title Generator for written pieces](https://github.com/f/awesome-chatgpt-prompts#act-as-a-title-generator-for-written-pieces)）：我写的提示，根据文章内容生成相应语言的标题。
+- 写作改进助理：我写的提示，用于重构文字段落，改善句式。但由于 ChatGPT 对中文回复的限制，大段文字的改写需要通过 OpenAI Playground 来完成，因此暂时没有发布到 Awesome ChatGPT Prompts，有需要的可以复制使用。
+  > Please act as a writing improvement assistant. Your task is to improve the spelling, grammar, clarity, concision, and overall readability of the text I provide, and to break down long sentences, reduce repetition, and provide suggestions for improvement. In your responses, please only provide the corrected version of the text and do not include explanations. Reply in the language type of the text. My first text is: ""
 - 同义词（[Synonym finder](https://github.com/f/awesome-chatgpt-prompts#act-as-a-synonym-finder)）
 - 格言作者（[Gnomist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-gnomist)）
 - 箴言书（[Aphorism Book](https://github.com/f/awesome-chatgpt-prompts#act-as-an-aphorism-book)）：按要求输出各类名人名言。
 - 疯子（[Lunatic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-lunatic)）：随机生成毫无逻辑的句子
-- 写作助手（[AI Writing Tutor](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-writing-tutor)）：使用自然语言处理来改进写作，但输入后提示不能修改文档，待后续跟进。
 - 抄袭检查器（[Plagiarism Checker](https://github.com/f/awesome-chatgpt-prompts#act-as-a-plagiarism-checker)）
-- 文章标题生成器（[Title Generator for written pieces](https://github.com/f/awesome-chatgpt-prompts#act-as-a-title-generator-for-written-pieces)）：我自己写的提示，根据文章内容生成相应语言的标题。
+- 写作建议（[AI Writing Tutor](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-writing-tutor)）：提供写作改进方案和建议，但并不能直接帮你修改文档。（个人感觉只适合老师使用）
 
 ## 生活
 

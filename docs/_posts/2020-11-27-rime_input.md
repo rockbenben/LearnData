@@ -19,11 +19,11 @@ Rime 小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/re
 
 安装小狼毫时，不要修改用户文件夹位置，否则后续输入法定制容易出错。安装完成后，右键单击任务栏的小狼毫图标，点击「输入法设定」，勾选输入法（推荐「朙月拼音·简化字」），点击「中」，选择皮肤后即可使用小狼毫输入法。^[[30 分钟搞定 自由输入法 RIME 简明配置指南](https://www.jianshu.com/p/296bba666604)]^[[Rime 输入法—鼠须管 (Squirrel) 词库添加及配置](https://www.jianshu.com/p/cffc0ea094a7)]
 
-小狼毫不推荐使用 [四叶草](https://github.com/fkxxyz/rime-cloverpinyin) 等集成方案，建议参考 [Squirrel 鼠须管配置](https://github.com/ssnhd/rime) 和 [小狼毫 [rime_win][眀月拼音] 简单配置方法](https://blog.csdn.net/qq_42204675/article/details/86422450) 以「朙月拼音·简化字」为基础定制自己的输入法，最大限度提升输入法效率。小狼毫的魅力在于可自定义，让输入法按你的想法输出，定制流程参考下面的进阶指南。
+小狼毫不推荐使用[四叶草](https://github.com/fkxxyz/rime-cloverpinyin)等集成方案，建议参考 [Squirrel 鼠须管配置](https://github.com/ssnhd/rime)和[小狼毫 [rime_win][眀月拼音] 简单配置方法](https://blog.csdn.net/qq_42204675/article/details/86422450) 以「朙月拼音·简化字」为基础定制自己的输入法，最大限度提升输入法效率。小狼毫的魅力在于可自定义，让输入法按你的想法输出，定制流程参考下面的进阶指南。
 
 ## 扩充词库
 
-扩充词库包含英文联想、网络流行语、成语、俗语等，能提高输出效率。热门词库有 [BetterRime 词库](https://github.com/Chernfalin/better-rime-dict)、[SuperRime 拓展词库](https://github.com/Chernfalin/SuperRimeDict)、[自定义短语](https://gist.github.com/lotem/5440677) 和 [Rime 擴充詞庫](https://github.com/rime-aca/dictionaries)。
+扩充词库包含英文联想、网络流行语、成语、俗语等，能提高输出效率。热门词库有 [BetterRime 词库](https://github.com/Chernfalin/better-rime-dict)、[SuperRime 拓展词库](https://github.com/Chernfalin/SuperRimeDict)、[自定义短语](https://gist.github.com/lotem/5440677)和 [Rime 擴充詞庫](https://github.com/rime-aca/dictionaries)。
 
 从容量上来说，SuperRime 词库 > BetterRime 词库 > Rime 擴充詞庫，但词库越大错误收录也越多，建议按实际需求选择词库。
 
@@ -31,13 +31,13 @@ Rime 小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/re
 
 ## 双拼方案
 
-为了提高输出效率，我使用的是小鹤双拼方案。[小狼毫官方配置库](https://github.com/rime/rime-double-pinyin) 收录了自然码双拼、智能 ABC 双拼、小鹤双拼、MSPY 双拼和拼音加加双拼。
+为了提高输出效率，我使用的是小鹤双拼方案。[小狼毫官方配置库](https://github.com/rime/rime-double-pinyin)收录了自然码双拼、智能 ABC 双拼、小鹤双拼、MSPY 双拼和拼音加加双拼。
 
-配置时，将官方配置库中的 [double_pinyin_flypy.schema.yaml](https://github.com/rime/rime-double-pinyin/blob/master/double_pinyin_flypy.schema.yaml) 下载到小狼毫的用户文件夹。然后，右键单击任务栏小狼毫图标，选「输入法设定」，只勾选一个「小鹤双拼」。默认方案为繁体，可使用按键 F5 (部分版本是 F4)，将配置默认为简体。如果你不想翻页找字，可以参考由 @functoreality 提供的 [双拼加辅助码方案](https://github.com/functoreality/rime-flypy-zrmfast)。
+配置时，将官方配置库中的 [double_pinyin_flypy.schema.yaml](https://github.com/rime/rime-double-pinyin/blob/master/double_pinyin_flypy.schema.yaml) 下载到小狼毫的用户文件夹。然后，右键单击任务栏小狼毫图标，选「输入法设定」，只勾选一个「小鹤双拼」。默认方案为繁体，可使用按键 F5 (部分版本是 F4)，将配置默认为简体。如果你不想翻页找字，可以参考由 @functoreality 提供的[双拼加辅助码方案](https://github.com/functoreality/rime-flypy-zrmfast)。
 
-双拼的自定义短语可参考 [小狼毫自定义短语-Rime-双拼](https://blog.csdn.net/neninee/article/details/83692270)。如果设定后无法使用简体输入，可将 `double_pinyin_flypy.schema.yaml` 中的 filters 模块剪贴到 translators 模块上方。
+双拼的自定义短语可参考[小狼毫自定义短语-Rime-双拼](https://blog.csdn.net/neninee/article/details/83692270)。如果设定后无法使用简体输入，可将 `double_pinyin_flypy.schema.yaml` 中的 filters 模块剪贴到 translators 模块上方。
 
-双拼不会显示当前输出字母，可参考 [使用双拼时如何同时显示按下的键以及双拼对应的拼音](https://github.com/rime/rime-double-pinyin/issues/6#issuecomment-754367706)。在 double_pinyin_flypy.schema.yaml 文件中，找到下方的代码行，然后换行加入 `- 'xform/^(.*)$/\U$1\E\t | $1/'`。这是同时显示拼音的核心代码，配置后的双拼会显示为 `{原始输出}|{对应拼音}`。
+双拼不会显示当前输出字母，可参考[使用双拼时如何同时显示按下的键以及双拼对应的拼音](https://github.com/rime/rime-double-pinyin/issues/6#issuecomment-754367706)。在 double_pinyin_flypy.schema.yaml 文件中，找到下方的代码行，然后换行加入 `- 'xform/^(.*)$/\U$1\E\t | $1/'`。这是同时显示拼音的核心代码，配置后的双拼会显示为 `{原始输出}|{对应拼音}`。
 
 ```yaml
 translator:
@@ -50,9 +50,9 @@ translator:
 
 在进阶前，需要进入小狼毫的默认用户文档位置，新建 YAML 文档来存储输入法设置修改。如果使用「朙月拼音·简化字」输入法方案，则新建「luna_pinyin_simp.custom.yaml」。`%APPDATA%\Rime` 是小狼毫默认的用户文档位置。如果安装时修改了用户文档位置，右键单击任务栏小狼毫图标，选择「用户文件夹」，即可进入用户文档。^[[小狼毫 RIME 输入法配置](https://www.dazhuanlan.com/2019/10/06/5d995d43e4432/)]
 
-Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如 [定制指南](https://github.com/rime/home/wiki/CustomizationGuide)、[文件配置说明](https://github.com/rime/home/wiki/RimeWithSchemata#rime-%E4%B8%AD%E7%9A%84%E6%95%B8%E6%93%9A%E6%96%87%E4%BB%B6%E5%88%86%E4%BD%88%E5%8F%8A%E4%BD%9C%E7%94%A8)、[emoji 集成](https://github.com/rime/rime-emoji) 和 [模糊音设置](https://github.com/rime/home/wiki/CustomizationGuide#%E6%A8%A1%E7%B3%8A%E9%9F%B3)。
+Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如[定制指南](https://github.com/rime/home/wiki/CustomizationGuide)、[文件配置说明](https://github.com/rime/home/wiki/RimeWithSchemata#rime-%E4%B8%AD%E7%9A%84%E6%95%B8%E6%93%9A%E6%96%87%E4%BB%B6%E5%88%86%E4%BD%88%E5%8F%8A%E4%BD%9C%E7%94%A8)、[emoji 集成](https://github.com/rime/rime-emoji) 和 [模糊音设置](https://github.com/rime/home/wiki/CustomizationGuide#%E6%A8%A1%E7%B3%8A%E9%9F%B3)。
 
-如果要在多个设备上 [同步用户资料](https://github.com/rime/home/wiki/UserGuide#%E5%90%8C%E6%AD%A5%E7%94%A8%E6%88%B6%E8%B3%87%E6%96%99)，请打开用户文件夹中的 `installation.yaml`，将其中的设备名称 `installation_id` 从长字符串修改为方便识别的名称，并在 `installation.yaml` 文本末尾添加用户资料同步位置 `sync_dir: 'D:\Sync\RIME'`，路径中不能出现中文。
+如果要在多个设备上[同步用户资料](https://github.com/rime/home/wiki/UserGuide#%E5%90%8C%E6%AD%A5%E7%94%A8%E6%88%B6%E8%B3%87%E6%96%99)，请打开用户文件夹中的 `installation.yaml`，将其中的设备名称 `installation_id` 从长字符串修改为方便识别的名称，并在 `installation.yaml` 文本末尾添加用户资料同步位置 `sync_dir: 'D:\Sync\RIME'`，路径中不能出现中文。
 
 打字习惯会保存在 `<词典名>.userdb.txt` 或 `<词典名>.userdb.kct.snapshot` 中。要还原个人输入习惯，则点击「用户词典管理」>「导入文本码表」来恢复词频记录。
 
@@ -76,7 +76,7 @@ Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如 [�
 
 ### 切换输入法状态
 
-小狼毫只支持按键切换中英文，支持的按键是 Caps_Lock, Shift_L, Shift_R, Control_L, control_R，配置参考 [使用 Control 鍵切換中西文](https://gist.github.com/lotem/2981316)，修改 default.custom.yaml。
+小狼毫只支持按键切换中英文，支持的按键是 Caps_Lock, Shift_L, Shift_R, Control_L, control_R，配置参考[使用 Control 鍵切換中西文](https://gist.github.com/lotem/2981316)，修改 default.custom.yaml。
 
 虽然小狼毫不能组合键切换，但可以使用 Windows 键盘切换设置组合键。设置中选择「时间和语言」>「输入」>「高级键盘设置」>「语言栏选项」>「高级键设置」，Ctrl+Space 是 Windows 默认的中文输入法/非输入法切换的快捷键。
 

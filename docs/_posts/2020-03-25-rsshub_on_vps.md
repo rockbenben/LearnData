@@ -16,7 +16,7 @@ RSSHub 使用非常简单，但随着使用者增多，微博、知乎加大了�
 ## 部署步骤
 
 1. 将 RSSHub 代码下载到根目录 root，执行命令 `git clone https://github.com/DIYgod/RSSHub.git`。
-2. 安装宝塔面板，查看 [官方安装教程](https://www.bt.cn/bbs/thread-19376-1-1.html)。
+2. 安装宝塔面板，查看[官方安装教程](https://www.bt.cn/bbs/thread-19376-1-1.html)。
 3. 登陆宝塔面板，点击「软件商店」-「运行环境」，安装**PM2 管理器**。
 
    ![](http://tc.seoipo.com/20200325120705.png)
@@ -37,7 +37,7 @@ RSSHub 使用非常简单，但随着使用者增多，微博、知乎加大了�
 
 2. 根据 [bilibili 番剧路由](https://docs.rsshub.app/social-media.html#bilibili)的文档，将生成源 `https://rsshub.app/bilibili/bangumi/media/9192` 其中的域名 `https://rsshub.app` 替换为你自部署的域名，如 `http://rsshub.xxx.com/bilibili/bangumi/media/9192`。
 
-另外 RSSHub 支持很多实用的参数，比如内容过滤、全文输出等。全文输出参数为 `mode=fulltext`，应用举例：果壳科学人全文输出 `https://rsshub.xxx.com/guokr/scientific?mode=fulltext`。其他可以在 [通用参数](https://docs.rsshub.app/parameter.html) 官方文档了解具体使用方法。
+另外 RSSHub 支持很多实用的参数，比如内容过滤、全文输出等。全文输出参数为 `mode=fulltext`，应用举例：果壳科学人全文输出 `https://rsshub.xxx.com/guokr/scientific?mode=fulltext`。其他可以在[通用参数](https://docs.rsshub.app/parameter.html)官方文档了解具体使用方法。
 
 ## RSSHub VS. Huginn
 

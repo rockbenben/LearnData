@@ -5,7 +5,7 @@ icon: tab
 order: 3
 ---
 
-QTTabBar 让你在 Windows 资源管理器中使用 Tab 多标签功能。这款应用存在两个版本，一个是日本作者 @Quizo 的 [原版 QTTabBar](http://qttabbar.wikidot.com/) （闭源，更新慢），另一个是国内反编译出的 [开源 QTTabBar](https://github.com/indiff/qttabbar)。
+QTTabBar 让你在 Windows 资源管理器中使用 Tab 多标签功能。这款应用存在两个版本，一个是日本作者 @Quizo 的[原版 QTTabBar](http://qttabbar.wikidot.com/)（闭源，更新慢），另一个是国内反编译出的[开源 QTTabBar](https://github.com/indiff/qttabbar)。
 
 目前两个版本都存在相同问题，菜单栏是灰色的选不了 QTTabBar，IE 管理加载项里是空的，第三方扩展也启用了。
 

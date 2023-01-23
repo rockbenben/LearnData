@@ -30,7 +30,7 @@ Airtable 是新型的表格制作工具，可以把文字、图片、链接、�
 5. filed 栏目类型可以设为文本、链接、附件、单选多选等多种玩法，在使用中可以多试试。
    ![](http://tc.seoipo.com/20180524100437.png)
 
-更多玩法，参考 [官方说明文档](https://support.airtable.com/hc/en-us/articles/203229705)。
+更多玩法，参考[官方说明文档](https://support.airtable.com/hc/en-us/articles/203229705)。
 
 ## 应用 Airtable
 
