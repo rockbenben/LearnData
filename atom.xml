@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://newzone.top/atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://newzone.top/</id>
+  <title>LearnData-开源笔记</title>
+  <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
+  <author>
+    <name>清顺</name>
+    <uri>https://newzone.top</uri>
+  </author>
+  <logo>https://newzone.top/logo.svg</logo>
+  <rights>Copyright by 清顺</rights>
+  <updated>2023-01-24T16:24:27.905Z</updated>
+  <generator>vuepress-plugin-feed2</generator>
+  <link rel="self" href="https://newzone.top/atom.xml"/>
+  <link rel="alternate" href="https://newzone.top/"/>
+  <category term="工具"/>
+  <category term="观察随笔"/>
+  <contributor>
+    <name>清顺</name>
+    <uri>https://newzone.top</uri>
+  </contributor>
+  <entry>
+    <title type="text">直播入门攻略零 | 硬件篇：直播设备</title>
+    <id>https://newzone.top/apps/livestreaming/0_live_equipments.html</id>
+    <link href="https://newzone.top/apps/livestreaming/0_live_equipments.html"/>
+    <updated>2023-01-23T14:11:29.000Z</updated>
+    <summary type="html"><![CDATA[<p>直播已经成为一种主流的传播方式，几乎所有的行业都会使用它。经过两年的持续直播，我总结出了一套直播入门攻略，从设备、软件和技巧三个方面，帮助你快速入门直播，开始自己的直播之旅。</p>
+<p>本文是直播入门攻略的前置篇，主要介绍直播所需的设备，以及如何避免购买不必要的高价设备。直播设备可分为电脑、补光灯、稳定器（三脚架）、音频采集（收音器）和视频采集（摄像头）。</p>
+<h2> 电脑</h2>
+<p>OBS 直播对电脑配置要求较高，建议使用三年内购买的主流配置台式机。台机推荐预算在一万元以上，显卡为 3060 以上，内存为 32G。</p>
+<h2> 补光灯</h2>
+<p>露脸主播一定要配柔光灯或环形灯，可以提升颜值。如果带眼镜的话，可以用小型补光灯代替环形灯，以免反射出光圈影响视觉。补光灯可以放在正面 45 度成蝴蝶光（派拉蒙光），可以显瘦显轮廓；背后可以使用辅助光或一张白纸反光，以防止正面灯光太亮。</p>]]></summary>
+    <content type="html"><![CDATA[<p>直播已经成为一种主流的传播方式，几乎所有的行业都会使用它。经过两年的持续直播，我总结出了一套直播入门攻略，从设备、软件和技巧三个方面，帮助你快速入门直播，开始自己的直播之旅。</p>
+<p>本文是直播入门攻略的前置篇，主要介绍直播所需的设备，以及如何避免购买不必要的高价设备。直播设备可分为电脑、补光灯、稳定器（三脚架）、音频采集（收音器）和视频采集（摄像头）。</p>
+<h2> 电脑</h2>
+<p>OBS 直播对电脑配置要求较高，建议使用三年内购买的主流配置台式机。台机推荐预算在一万元以上，显卡为 3060 以上，内存为 32G。</p>
+<h2> 补光灯</h2>
+<p>露脸主播一定要配柔光灯或环形灯，可以提升颜值。如果带眼镜的话，可以用小型补光灯代替环形灯，以免反射出光圈影响视觉。补光灯可以放在正面 45 度成蝴蝶光（派拉蒙光），可以显瘦显轮廓；背后可以使用辅助光或一张白纸反光，以防止正面灯光太亮。</p>
+<h2> 三脚架</h2>
+<p>三脚架主要有两类：桌面款，建议高度为 55cm；站立款，建议高度为 210cm。价位从 10-500 元不等，效果无明显区别，新手用户的三脚架预算建议不要超过 100 元。</p>
+<h2> 音频采集</h2>
+<p>收音设备的费用从几元到几千元不等。手机的收音性能比绝大多数话筒好，如果你使用手机摄像方案，可以先不用购买收音器材。</p>
+<p>廉价麦克风存在收音范围窄、不清晰、多噪音等问题，但价格低廉、使用方便，适合新人测试使用。</p>
+<p>桌面直播多使用「声卡 + 话筒」方案，预算需要超过一千元。不要购买廉价的山寨声卡，还不如手机收音来得清晰。</p>
+<p>外出直播或进阶用户推荐 RODE 或 DJI 的无线麦克风，这两款音频水准都可以吊打同行。RODE 是老牌话筒厂家，音质有保障；DJI 麦克风推出不久，但集百家之长，设计非常人性化，小白使用也很方便。</p>
+<h2> 视频采集</h2>
+<p>桌面摄像头、手机和微单相机都可以作为直播的视频采集来源。</p>
+<h3> 摄像头</h3>
+<p>桌面摄像头的价格在 50-1000 元不等，但实际效果没有太大的区别。个人体验过罗技 C930 后，发现画面模糊不清晰，将问题反馈给客服后得知，画质不清晰是桌面摄像头的通病。</p>
+<p>不管是几十元的廉价摄像头还是上千元的罗技 C1000，它们的实际像素都<strong>只有 200 万</strong>。宣传中的 2000 万像素是通过软件放大的效果，画质并没有实质性的变化。入门用户可以选择 100 元的自动变焦摄像头。</p>
+<p>桌面摄像头搭配三角架可以调整更佳的角度，购买时要注意摄像头是否有<strong>三脚架接口</strong>。</p>
+<h3> 手机</h3>
+<p>如果室内没有桌面摄像头，而又想用电脑做直播推流，可以考虑用手机替代摄像头，步骤可参考下方介绍。</p>
+<h3> 相机</h3>
+<p>相比摄像头的算法像素效果，只有相机才能达到真正意义上的高清直播。</p>
+<p>如果你的相机有外接视频接口（例如：HDMI、mini HDMI、SDI），可以通过视频采集卡将相机视频转为直播视频传入电脑。索尼、佳能等主流相机都有专门的直播软件，不需要采集卡就可以直接连接电脑进行直播。运动相机 GoPro 也已经支持相机直播传输，希望国内厂商也能跟上。</p>
+<p>将相机用作摄像头的费用较高，一般需要几千到几万，只建议已购买相机的主播采用此方案。</p>
+<h2> 手机作摄像头</h2>
+<h3> Camo</h3>
+<p><a href="https://apps.apple.com/app/reincubate-camo/id1514199064?platform=iphone" target="_blank" rel="noopener noreferrer">Camo</a> 专用于 iOS 设备，连接数据线后可将 iPhone 或 iPad 变为直播摄像头。</p>
+<h3> NDI</h3>
+<p>NDI 是最稳定的，可自由调节拍摄参数。打开 NDI 应用后，需等待 NDI 界面周边出现绿框或红框，OBS 才可以识别到摄像头。不过 NDI 是收费应用，安卓用户可使用 <a href="https://wwe.lanzoup.com/iQCMh00b946b" target="_blank" rel="noopener noreferrer">NDI 调试 APK</a>。</p>
+<h3> IP Webcam</h3>
+<p>IP Webcam 的推流稳定性一般，容易掉帧，但 <a href="https://wwz.lanzouf.com/iT6pH01tj7yb" target="_blank" rel="noopener noreferrer">IP Webcam 免费版</a>足够个人使用。</p>
+<p>下文为 IP Webcam 基础设置：</p>
+<ul>
+<li>进入 IP Webcam 设置页面，将流质量调整至 90%，视频分辨率设为 720p，可有效减少卡顿。IP camera 耗电低，适合手机长时间直播，支持视频与浏览器等方式。</li>
+<li>在 OBS 中，选择「场景」&gt;「来源」&gt;「媒体源」，取消勾选本地文件，「输入」项中填入 IP Webcam 视频地址，例如 <code>http://192.168.2.234:8080/video</code>。</li>
+<li>OBS 中选择「场景」&gt;「来源」&gt;「浏览器」，「URL」项中填入 IP Webcam 浏览器全屏地址，例如 <code>http://192.168.2.234:8080/jsfs.html</code>。注意：浏览器推流容易出现闪屏。</li>
+</ul>
+<h3> 其他</h3>
+<p>如果出现闪退等问题，可尝试 iriun webcam、DroidCam 和 ivcam。</p>
+<p>不推荐使用无他伴侣，尽管国内有大量教程介绍它，但使用中会出现很多问题，例如：摄影角度很难控制；无法使用 FaceRig 等变脸应用；直播 10 分钟后，摄像头经常自动与 OBS 断开连接；直播 2 小时后，OBS 无法检测到无他伴侣。</p>
+]]></content>
+    <author>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </contributor>
+    <published>2023-01-12T16:55:27.000Z</published>
+    <rights>Copyright by 清顺</rights>
+  </entry>
+  <entry>
+    <title type="text">直播入门攻略一 | OBS 篇：OBS 29 新手指南</title>
+    <id>https://newzone.top/apps/livestreaming/1_obs_basic.html</id>
+    <link href="https://newzone.top/apps/livestreaming/1_obs_basic.html"/>
+    <updated>2023-01-12T16:55:27.000Z</updated>
+    <summary type="html"><![CDATA[<p><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">Open Broadcaster Software</a>（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件都是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。本文将从基础开始，为新手介绍 OBS 的界面、设置和直播使用方法。</p>
+<h2> 主界面</h2>
+<p>OBS 界面看起来有些复杂，但可以分为菜单栏、预览区、主按钮区和运行状态四个区块。日常使用中，我们只需要接触主按钮区，它包括场景、来源、混音器、转场特效和控制按钮。</p>]]></summary>
+    <content type="html"><![CDATA[<p><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">Open Broadcaster Software</a>（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件都是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。本文将从基础开始，为新手介绍 OBS 的界面、设置和直播使用方法。</p>
+<h2> 主界面</h2>
+<p>OBS 界面看起来有些复杂，但可以分为菜单栏、预览区、主按钮区和运行状态四个区块。日常使用中，我们只需要接触主按钮区，它包括场景、来源、混音器、转场特效和控制按钮。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-05-20-47-16.png" alt="" tabindex="0" loading="lazy"><figcaption>OBS 主界面</figcaption></figure>
+<h3> 场景</h3>
+<p>场景（Scenes）是指直播中不同的场面。不同的场景可以用于不同的领域或场合，例如自习室场景、街拍场景、个人访问、卖货直播。</p>
+<p>场景有四个按钮，从左到右依次为：添加场景，删除场景，向上移动场景，向下移动场景。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-05-21-16-34.png" alt="" tabindex="0" loading="lazy"><figcaption>场景按钮</figcaption></figure>
+<h3> 来源</h3>
+<p>来源（Source）是指场景中的素材，比如摄像头画面、图像、音频等。来源区有 7 个按钮，上方两个为源属性和滤镜，下方 5 个按钮依次为：添加来源，删除来源，源属性，向上移动源，向下移动源。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-05-22-47-14.png" alt="" tabindex="0" loading="lazy"><figcaption>来源按钮</figcaption></figure>
+<h3> 混音器</h3>
+<p>混音器（Audio Mixer）是直播的音频控制器。点击混音器左下角的齿轮按钮，进入「高级音频属性」，可管理所有的音频设备。</p>
+<p>混音器设置中，「音频监听」最为重要。默认为「关闭监听」，指音频仅对直播间观众播放，主播听不到。「仅监听 (输出静音)」表示观众听不到，但主播能听到，观众可通过主播话筒的收音听到声音。「监听并输出」表示主播和观众都能听到。「监听并输出」模式中，建议主播使用耳麦，而不是话筒，否则观众容易听不清主播说话的声音，话筒声音会被输出音频盖住。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-06-01-22-30.png" alt="" tabindex="0" loading="lazy"><figcaption>直播高级音频属性</figcaption></figure>
+<h3> 转场特效</h3>
+<p>转场特效（Scene Transitions）指的是在两个场景或素材之间，采用渐变、移动、滑入滑出等技巧，实现场景或情节之间平滑过渡的效果。</p>
+<h3> 控制按钮</h3>
+<p>控制按钮（Controls）区域集成了 OBS 的核心功能，按钮分别为「开始直播」「开始录制」「启动虚拟摄像机」「工作室模式」。</p>
+<p>「启动虚拟摄像机」是将 OBS 场景作为摄像头画面对外输出，适合将画面输出到不支持 OBS 推流的平台或软件。例如，抖音直播要求粉丝在一万以上才能使用 OBS 推流，而启用虚拟摄像头后，将直播摄像头设为「OBS-Camera」即可达到类似推流效果。</p>
+<p>「工作室模式」下，显示区域会分为两块：左侧为预览区，右侧为输出区。点击中间按钮「转场特效」，即可将左侧预览区输出到直播画面。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-06-01-38-21.png" alt="" tabindex="0" loading="lazy"><figcaption>工作室模式</figcaption></figure>
+<h2> 设置</h2>
+<p>在使用 OBS 直播前，请先点击右上角菜单栏中的「文件」&gt;「设置」，调整 OBS 的设置。</p>
+<h3> 直播</h3>
+<p>点击「设置」&gt;「直播」，将「服务」调整为自定义，服务器和推流码则按平台要求输入。</p>
+<figure><img src="http://tc.seoipo.com/2022-06-30-14-33-34.png" alt="" tabindex="0" loading="lazy"><figcaption>推流服务器设置</figcaption></figure>
+<h3> 输出</h3>
+<p>点击「设置」&gt;「输出」，将「输出模式」设为高级，其他设置参考下方样例。</p>
+<ul>
+<li>「直播设置」&gt;「编码器」中，如果你的显卡配置不错，尽量选硬件编码，如 <code>NVIDIA NVENC H.264</code>。</li>
+<li>「编码器设置」&gt;「比特率」用来设置直播的清晰度，推荐 4000-6000 Kbps。注意：直播并非越清晰越好，它对网络稳定性要求较高，过高的清晰度可能导致直播卡顿。我的自习室直播间只有 2500 Kbps。</li>
+</ul>
+<figure><img src="http://tc.seoipo.com/2023-01-05-20-06-39.png" alt="" tabindex="0" loading="lazy"><figcaption>直播输出设置</figcaption></figure>
+<h3> 音频</h3>
+<p>点击「设置」&gt;「音频」&gt;「通用」，将声道设为单声道。除非你是歌唱主播，否则无需使用立体声。</p>
+<h3> 视频</h3>
+<p>点击「设置」&gt;「视频」，按需设置直播分辨率，通常为 <code>1920x1080</code> 或 <code>1280x720</code>。如果你是做电商直播，需要进行<strong>竖屏直播</strong>，就将分辨率反过来设置，比如 <code>1080x1920</code> 或 <code>720x1280</code>。「输出（画布）分辨率」与「基础（缩放）分辨率」建议设为相同数值，避免出现缩放问题。</p>
+<p>「常用帧率」在日常直播中只需要 30，游戏直播建议调整到 60。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-05-20-22-29.png" alt="" tabindex="0" loading="lazy"><figcaption>直播分辨率设置</figcaption></figure>
+<h3> 高级</h3>
+<p>点击「设置」&gt;「高级」，将「进程优先级」设为高，以降低电脑卡顿的概率。然后，启用「直播延迟」和「自动重连」功能，以避免直播事故的发生。「直播延迟」启用后，观众看到的直播画面会比实时要慢，延迟时间一般为 3~20 秒。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-05-21-09-13.png" alt="" tabindex="0" loading="lazy"><figcaption>OBS 高级设置</figcaption></figure>
+<h2> 直播来源</h2>
+<p>了解 OBS 界面和设置后，我们回到主按钮区的「来源」，深入了解来源种类和滤镜。直播来源种类繁多，可以分为四类：静态来源、音频来源、视频来源和组合来源。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-06-02-10-05.png" alt="" tabindex="0" loading="lazy"><figcaption>直播来源</figcaption></figure>
+<h3> 静态来源</h3>
+<ul>
+<li>文本（GDI+）：添加文字，并可设置背景和移动效果。</li>
+<li>色源：添加指定色彩的纯色画面素材。</li>
+<li>图像：添加静态图像素材。</li>
+<li>图像幻灯片放映：以幻灯片形式播放指定图像文件。</li>
+<li>浏览器：以浏览器方式显示网址内容或打开本地 html 文件。</li>
+</ul>
+<h3> 音频来源</h3>
+<ul>
+<li>音频输入采集：话筒输入。</li>
+<li>音频输出采集：音响输出。</li>
+<li>应用程序音频捕获：获取指定应用程序的音频输出。</li>
+</ul>
+<h3> 视频来源</h3>
+<ul>
+<li>视频采集设备：捕获设备的视频画面，多用于摄像头。</li>
+<li>窗口采集：捕获指定程序的窗口画面。使用窗口采集时，窗口不能最小化，否则窗口会卡住不同步。</li>
+<li>游戏源：采集游戏画面。</li>
+<li>显示器采集：捕获单个显示器的完整视频画面。</li>
+<li>媒体源：播放本地或在线的音视频文件。</li>
+<li>VLC 视频源：安装 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">VLC</a> 才能启用本来源。「VLC 视频源」用于多个音视频按序播放，支持字幕。</li>
+</ul>
+<h3> 组合输出</h3>
+<ul>
+<li>场景：将指定场景作为来源输入当前场景中。</li>
+<li>来源镜像：将指定来源复制到当前场景。</li>
+<li>分组：将来源置于同一分组，可批量更改可见性和锁定状态。</li>
+</ul>
+<h2> 滤镜</h2>
+<p>选择「来源」&gt;「滤镜」，可对来源素材进行裁剪、过滤、增益等多种处理。滤镜可分为效果滤镜和音视频滤镜。下文将介绍几种常用滤镜。</p>
+<h3> 常用滤镜</h3>
+<ul>
+<li>裁剪/填充：效果滤镜，对来源进行裁剪，剪去多余的部分。</li>
+<li>色彩校正：效果滤镜，修改伽玛度、对比度、亮度、饱和度，对来源的显示效果进行调整。</li>
+<li>增益：音视频滤镜，当麦克风声音过大或过小时，可以通过增益滤镜调整音量，但是不宜设置数值过大，容易造成声音失真。</li>
+<li>噪音阈值：音视频滤镜，当背景有噪音时，设置噪音阈值来控制底噪，降低噪音干扰。</li>
+</ul>
+<h3> 色度键（抠图）</h3>
+<p>「色度键」属于效果滤镜，能将指定颜色变为透明，多用于绿幕实时抠图，可以在直播时把绿幕替换为其他场景。</p>
+<figure><img src="http://tc.seoipo.com/20210328235013.gif" alt="色度键滤镜一键抠图" tabindex="0" loading="lazy"><figcaption>色度键滤镜一键抠图</figcaption></figure>
+<h3> 模糊</h3>
+<p>「模糊」属于效果滤镜，可将指定区域模糊化以维护隐私。推荐设置：类型设为「Dual Filtering（双重过滤）」，大小为 4，应用蒙版后可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求更低。要使用模糊滤镜，需要安装插件 <a href="https://github.com/Xaymar/obs-StreamFX/releases" target="_blank" rel="noopener noreferrer">StreamFX</a>。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-08-06-49-05.png" alt="" tabindex="0" loading="lazy"><figcaption>右侧为模糊效果</figcaption></figure>
+<figure><img src="http://tc.seoipo.com/2023-01-06-02-51-10.png" alt="" tabindex="0" loading="lazy"><figcaption>模糊滤镜设置</figcaption></figure>
+<h3> 色彩校正</h3>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Color-Grade" target="_blank" rel="noopener noreferrer">色彩校正</a>（Color Grading）是使用伽玛、对比度、亮度、饱和度、色调偏移、不透明度、颜色叠加、添加颜色来改变或校正最终画面的颜色和亮度的过程。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-08-07-01-17.png" alt="" tabindex="0" loading="lazy"><figcaption>色彩校正</figcaption></figure>
+<h3> 应用 LUT</h3>
+<p>「应用 LUT」属于效果滤镜。它使用 LUT 对画面进行色彩调整，相当于手机修图用的风格滤镜，能够大大提升画面效果。初期可以使用我的 <a href="https://wwva.lanzoue.com/iEyOs0k8kj3g" target="_blank" rel="noopener noreferrer">LUT 设置</a>，「路径」指向解压后的 png 文件。</p>
+<p>自制 LUT 文件参照下列步骤：</p>
+<ol>
+<li>将 OBS 滤镜插件目录下的 original.png 复制到 Photoshop。</li>
+<li>进入 Photoshop 右侧的调整界面，选择第二行的最右侧「创建新的颜色查找调节图层」。</li>
+<li>载入自带的 3DLUT 文件，调整后导出为 png 文件。这个 png 就是直播能用的 LUT 文件。如果自带 LUT 不能满足需求，则使用 Premiere 调节定制 LUT cube 文件。</li>
+</ol>
+<h2> 常见问题</h2>
+<h3> 直播延迟严重</h3>
+<p>选择「设置」&gt;「高级」，检查「直播延迟」是否启用了。主流机器不会导致直播严重延迟，出现延迟的原因多是因为启用了「直播延迟」设置。</p>
+<h3> 一直断开重连</h3>
+<p>右下角弹出提示「OBS Studio 已断开连接。正在重新连接...」，这说明直播服务设置错误。选择「设置」&gt;「直播」，更新服务器和推流码内容。注意：某些平台只要断开，推流码就会改变。</p>
+<h2> 后续</h2>
+<p>我原本想一篇写完 OBS 的入门，但基础使用已经占据了较长篇幅。为了避免重蹈上一篇的覆辙，OBS 插件的介绍会放在篇二更新。</p>
+]]></content>
+    <author>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </contributor>
+    <published>2023-01-12T16:55:27.000Z</published>
+    <rights>Copyright by 清顺</rights>
+  </entry>
+  <entry>
+    <title type="text">直播入门攻略二 | StreamFX 篇：最强大的 OBS 插件</title>
+    <id>https://newzone.top/apps/livestreaming/2_obs_streamfx.html</id>
+    <link href="https://newzone.top/apps/livestreaming/2_obs_streamfx.html"/>
+    <updated>2023-01-23T14:11:29.000Z</updated>
+    <summary type="html"><![CDATA[<p>StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果，是 OBS 必装的效果插件。本文将介绍 StreamFX 的 28 种滤镜效果。</p>
+<h2> 安装 StreamFX</h2>
+<p>在 <a href="https://github.com/Xaymar/obs-StreamFX/releases" target="_blank" rel="noopener noreferrer">StreamFX 发布页</a>上按平台选择安装包。StreamFX for OBS 29 处于测试阶段，在升级此插件前，请按照<a href="https://github.com/Xaymar/obs-StreamFX/wiki/Uninstallation" target="_blank" rel="noopener noreferrer">卸载教程</a>执行旧版清理。</p>]]></summary>
+    <content type="html"><![CDATA[<p>StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果，是 OBS 必装的效果插件。本文将介绍 StreamFX 的 28 种滤镜效果。</p>
+<h2> 安装 StreamFX</h2>
+<p>在 <a href="https://github.com/Xaymar/obs-StreamFX/releases" target="_blank" rel="noopener noreferrer">StreamFX 发布页</a>上按平台选择安装包。StreamFX for OBS 29 处于测试阶段，在升级此插件前，请按照<a href="https://github.com/Xaymar/obs-StreamFX/wiki/Uninstallation" target="_blank" rel="noopener noreferrer">卸载教程</a>执行旧版清理。</p>
+<p>安装成功后，StreamFX 会出现在 OBS 上方的菜单栏上。下文中，我将使用不同滤镜处理样图，并提供对比图。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-27-34.png" alt="" tabindex="0" loading="lazy"><figcaption>样例原图</figcaption></figure>
+<h2> 来源镜像</h2>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Source-Mirror" target="_blank" rel="noopener noreferrer">来源镜像</a>（Source Mirror）是一种来源，而不是滤镜。它可以克隆任何源或场景，并将其应用于当前场景。对来源镜像叠加滤镜和任意效果，都不会对原始来源造成影响。</p>
+<h2> 3D 转换</h2>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-3D-Transform" target="_blank" rel="noopener noreferrer">3D 转换</a>（3D Transform）可以将 2D 图片的坐标系转换为三维，从而可以自由旋转、移动和缩放，形成类似星球大战中的字幕特效。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-27-01.png" alt="" tabindex="0" loading="lazy"><figcaption>3D 转换</figcaption></figure>
+<h2> 模糊</h2>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur" target="_blank" rel="noopener noreferrer">模糊</a>（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Liner 和 Dual-Filtering。一般来说，建议将类型设置为「Dual Filtering（双重过滤）」，大小为 4，应用蒙版后可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求也更低。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-08-06-49-05.png" alt="" tabindex="0" loading="lazy"><figcaption>右侧为模糊效果</figcaption></figure>
+<figure><img src="http://tc.seoipo.com/2023-01-06-02-51-10.png" alt="" tabindex="0" loading="lazy"><figcaption>模糊滤镜设置</figcaption></figure>
+<h2> 动态蒙版</h2>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Dynamic-Mask" target="_blank" rel="noopener noreferrer">动态蒙版</a>（Dynamic Mask）允许叠加任意来源或场景，并使用红色、绿色、蓝色和 alpha 通道建立画面蒙版。下图展示了使用红色通道叠加雨滴来源的效果。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-08-07-05-42.png" alt="" tabindex="0" loading="lazy"><figcaption>动态蒙版</figcaption></figure>
+<h2> SDF 特效</h2>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-SDF-Effects" target="_blank" rel="noopener noreferrer">SDF 特效</a>（Shader Signed Distance Field Effects）仅对拥有透明图层的画面有效，比如被移除背景后的摄像头画面。SDF 特效会对外观轮廓进行发光处理，并占用大量显存性能。![<a href="https://jishuin.proginn.com/p/763bfbd5a086" target="_blank" rel="noopener noreferrer">什么是 SDF？</a>] ![<a href="https://github.com/Xaymar/obs-StreamFX/issues/512" target="_blank" rel="noopener noreferrer">"SDF Effects" filter is undocumented</a>]</p>
+<figure><img src="http://tc.seoipo.com/2023-01-09-18-56-14.webp" alt="" tabindex="0" loading="lazy"><figcaption>SDF 特效-外发光+变形</figcaption></figure>
+<h2> 着色器</h2>
+<p>着色器滤镜位于 <code>%ProgramFiles%/obs-studio/data/obs-plugins/StreamFX/examples/shaders/filter</code>，后缀均为 <code>.effect</code>。切换着色器文件后，需点击「刷新选项和参数」。</p>
+<h3> 色彩滤镜</h3>
+<ul>
+<li>
+<p>colorize：对画面重新着色，效果与色彩校正滤镜相似。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-11-16.png" alt="" tabindex="0" loading="lazy"><figcaption>colorize</figcaption></figure>
+</li>
+<li>
+<p>posterize：向上下周围放入像素值。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-46-26.png" alt="" tabindex="0" loading="lazy"><figcaption>posterize</figcaption></figure>
+</li>
+<li>
+<p>smaa：将画面的轮廓线条化。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-03-18.png" alt="" tabindex="0" loading="lazy"><figcaption>smaa</figcaption></figure>
+</li>
+</ul>
+<h3> 位移变换</h3>
+<ul>
+<li>
+<p>bulge_pinch：挤压滤镜，使图像的中心产生凸起或凹下的效果，可生成循环凸凹的动画。</p>
+<p><img src="http://tc.seoipo.com/2023-01-07-23-14-10.png" alt="" title="bulge_pinch 凸起效果" loading="lazy">
+<img src="http://tc.seoipo.com/2023-01-07-23-14-47.png" alt="" title="bulge_pinch 凹下的效果" loading="lazy"></p>
+</li>
+<li>
+<p>displace：置换滤镜，可以产生弯曲，碎裂的图像效果。置换滤镜比较特殊的是设置完毕后，还需要选择一个图像文件作为位移图，滤镜根据位移图上的颜色值移动图像像素。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-02-59.png" alt="" tabindex="0" loading="lazy"><figcaption>displace</figcaption></figure>
+</li>
+<li>
+<p>drunk：画面随机晃动</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-57-18.gif" alt="" tabindex="0" loading="lazy"><figcaption>drunk</figcaption></figure>
+</li>
+<li>
+<p>swirl：漩涡打旋效果，可调整旋涡位置和大小，并可呈现漩涡的正反转动态效果。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-06-45.png" alt="" tabindex="0" loading="lazy"><figcaption>swirl</figcaption></figure>
+</li>
+<li>
+<p>wave：波浪滤镜是通过坐标变换来模拟水波效果，使图像呈现出水波的扭曲特效。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-12-23.png" alt="" tabindex="0" loading="lazy"><figcaption>wave</figcaption></figure>
+</li>
+<li>
+<p>zigzag：使图像产生同心圆状的波纹效果。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-30-25.png" alt="" tabindex="0" loading="lazy"><figcaption>zigzag</figcaption></figure>
+</li>
+</ul>
+<h3> 画面遮盖</h3>
+<ul>
+<li>
+<p>pixelation：像素化滤镜，可选择滤镜范围。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-48-41.png" alt="" tabindex="0" loading="lazy"><figcaption>pixelation</figcaption></figure>
+</li>
+<li>
+<p>hexagonize：用六角形状元素重构画面，可调节蜂窝元素的大小。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-50-21.png" alt="" tabindex="0" loading="lazy"><figcaption>hexagonize</figcaption></figure>
+</li>
+<li>
+<p>semiline：百叶窗栅格形滤镜，让画面像被一个关闭中的百叶窗遮盖。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-32-17.png" alt="" tabindex="0" loading="lazy"><figcaption>semiline</figcaption></figure>
+</li>
+<li>
+<p>blur-gaussian：模糊滤镜效果（高斯），对硬件配置要求高。</p>
+</li>
+</ul>
+<h3> 增强滤镜</h3>
+<ul>
+<li>
+<p>vignette：晕影/虚光照，用以增强镜头感，突出拍摄主体，营造画面的意境氛围。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-10-30.png" alt="" tabindex="0" loading="lazy"><figcaption>vignette</figcaption></figure>
+</li>
+<li>
+<p>rounded-rect：圆角矩形渲染</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-43-07.png" alt="" tabindex="0" loading="lazy"><figcaption>rounded-rect</figcaption></figure>
+</li>
+<li>
+<p>crt-curvature：将画面放置于 CRT 电视中，可调整画面曲率和四周的光晕颜色。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-09-05.png" alt="" tabindex="0" loading="lazy"><figcaption>crt-curvature</figcaption></figure>
+</li>
+<li>
+<p>crt-scanlines：仿 CRT 扫描线效果。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-06-17.gif" alt="" tabindex="0" loading="lazy"><figcaption>crt-scanlines</figcaption></figure>
+</li>
+<li>
+<p>repeat：将画面复制排列，例图是 3x3 复制画面。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-22-44-59.png" alt="" tabindex="0" loading="lazy"><figcaption>repeat</figcaption></figure>
+</li>
+<li>
+<p>fxaa：快速近似抗锯齿，是一种「比较廉价」的抗锯齿技术，多用于游戏直播/录制，适用于性能不高的电脑配置。</p>
+</li>
+</ul>
+<h2> N 卡滤镜</h2>
+<p>本部分的滤镜需要需 NVIDIA 2060 及以上显卡，并安装 <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-sdk/resources/" target="_blank" rel="noopener noreferrer">NVIDIA Video Effects &amp; AR SDK Redistributable</a>。这些滤镜效果均可用 NVIDIA Broadcast 实现。</p>
+<ul>
+<li>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Upscaling" target="_blank" rel="noopener noreferrer">画质提升</a>（Upscaling）：提升画质分辨率，可以将老式摄像头提升到 4K 画质。</p>
+</li>
+<li>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Denoising" target="_blank" rel="noopener noreferrer">降噪</a>（Denoising Filter）：对画面进行降噪。</p>
+</li>
+<li>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Auto-Framing" target="_blank" rel="noopener noreferrer">自动帧</a>（Auto-Framing）：通过 NVIDIA AR 的自动追踪人脸技术，自动裁剪和放大用户、并且在用户移动时保持帧居中。</p>
+</li>
+<li>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Virtual-Greenscreen" target="_blank" rel="noopener noreferrer">英伟达背景移除</a>（Virtual Greenscreen）：无需绿幕也能帮你移除人像背景，移除效果略逊色于 NVIDIA Broadcast。样图是用的是漫画，如果是真人画面，移除效果会好很多。</p>
+<figure><img src="http://tc.seoipo.com/2023-01-07-23-19-50.png" alt="" tabindex="0" loading="lazy"><figcaption>人像背景移除</figcaption></figure>
+</li>
+</ul>
+]]></content>
+    <author>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </contributor>
+    <published>2023-01-12T16:55:27.000Z</published>
+    <rights>Copyright by 清顺</rights>
+  </entry>
+  <entry>
+    <title type="text">直播入门攻略三 | 插件篇：OBS 进阶插件</title>
+    <id>https://newzone.top/apps/livestreaming/3_obs_plugins.html</id>
+    <link href="https://newzone.top/apps/livestreaming/3_obs_plugins.html"/>
+    <updated>2023-01-23T14:11:29.000Z</updated>
+    <summary type="html"><![CDATA[<p>OBS 与其他直播/录制应用最大的区别在于 OBS 社区，它给 OBS 带来了强大的扩展性。下文中我会介绍除 StreamFX 外的 15 款流行插件。（本文未完成，待填充）</p>
+<h2> 插件安装与卸载</h2>
+<p>OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）两种。便携模式的插件配置可以复制到其他电脑上使用。</p>
+<p>若要卸载 Windows 下的 OBS 便携模式插件，可以进入 <code>%ProgramFiles%\obs-studio\data\obs-plugins</code> 和 <code>%ProgramFiles%\obs-studio\obs-plugins\64bit</code>，搜索插件名，然后删除相关文件。</p>]]></summary>
+    <content type="html"><![CDATA[<p>OBS 与其他直播/录制应用最大的区别在于 OBS 社区，它给 OBS 带来了强大的扩展性。下文中我会介绍除 StreamFX 外的 15 款流行插件。（本文未完成，待填充）</p>
+<h2> 插件安装与卸载</h2>
+<p>OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）两种。便携模式的插件配置可以复制到其他电脑上使用。</p>
+<p>若要卸载 Windows 下的 OBS 便携模式插件，可以进入 <code>%ProgramFiles%\obs-studio\data\obs-plugins</code> 和 <code>%ProgramFiles%\obs-studio\obs-plugins\64bit</code>，搜索插件名，然后删除相关文件。</p>
+<h2> 多平台直播：multi-rtmp</h2>
+<p><a href="https://github.com/sorayuki/obs-multi-rtmp" target="_blank" rel="noopener noreferrer">multi-rtmp</a> 使得 OBS 支持多地址推流，以为着同时在多个平台上进行直播。</p>
+<p>开启多地址推流前，你需要点击控制按钮「开始直播」，然后再点「停止直播」。</p>
+<h2> 自动切换场景</h2>
+<p><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/" target="_blank" rel="noopener noreferrer">Advanced Scene Switcher</a>：使用「宏」来自动完成各种任务，按条件切换场景、来源。比如，电脑闲置 10 分钟后，让摄像头来源变为不可见。</p>
+<h2> Move transition</h2>
+<p><a href="https://obsproject.com/forum/resources/move-transition.913/" target="_blank" rel="noopener noreferrer">Move transition</a>：记录来源的位置变化，生成元素移动的动画效果。比如，视频演讲时，将摄像头位置从屏幕右下移动到中央。</p>
+<h2> Transition Table</h2>
+<p><a href="https://obsproject.com/forum/resources/transition-table.1174/" target="_blank" rel="noopener noreferrer">Transition Table</a>：场景切换效果，设定不同场景间的切换规则。</p>
+<h2> Source Dock</h2>
+<p><a href="https://obsproject.com/forum/resources/source-dock.1317/" target="_blank" rel="noopener noreferrer">Source Dock</a>：为单独场景或来源建立控制栏，使用小窗口预览场景。</p>
+<h2> Source Copy</h2>
+<p><a href="https://obsproject.com/forum/resources/source-copy.1261/" target="_blank" rel="noopener noreferrer">Source Copy</a>：更方便地复制、保存场景设置。</p>
+<h2> 其他</h2>
+<ul>
+<li><a href="https://obsproject.com/forum/resources/scene-collection-manager.1434/" target="_blank" rel="noopener noreferrer">Scene Collection Manager</a>：自动备份场景，防止误操作。</li>
+<li><a href="https://obsproject.com/forum/resources/audio-monitor.1186/" target="_blank" rel="noopener noreferrer">Audio Monitor</a>：将来源声音输出给指定设备播放，方便单独调节音量，能让主播与观众听到不同的音频效果。</li>
+<li><a href="https://obsproject.com/forum/resources/downstream-keyer.1254/" target="_blank" rel="noopener noreferrer">Downstream Keyer</a>：切换场景时，置顶指定场景。</li>
+<li><a href="https://github.com/norihiro/obs-multisource-effect" target="_blank" rel="noopener noreferrer">Multi Source Effect</a>：滤镜效果</li>
+<li><a href="https://github.com/fzwoch/obs-teleport" target="_blank" rel="noopener noreferrer">Teleport</a>：NDI 替代品，局域网设备推流到直播。</li>
+<li><a href="https://github.com/univrsal/spectralizer" target="_blank" rel="noopener noreferrer">spectralizer</a>：音频频谱，用滤镜「图像掩码」的「混合图层」给频谱遮罩滤镜。</li>
+<li><a href="https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/" target="_blank" rel="noopener noreferrer">NDI</a>: 局域网视频无线传输技术 NDI 插件。</li>
+<li><a href="https://obsproject.com/forum/resources/scrab.845/" target="_blank" rel="noopener noreferrer">scrab</a>：屏幕截图。添加了一个可配置的热键快速选择一个屏幕区域，并添加它作为一个图像源到当前场景。有人反馈 OBS 28 后有 bug，暂未修复。</li>
+<li><a href="https://obsproject.com/forum/resources/lower-thirds-in-html-css.928/" target="_blank" rel="noopener noreferrer">Lower thirds in HTML/CSS</a>：文字运动特效，适合展示 logo 和标题。</li>
+<li><a href="https://obsproject.com/forum/resources/input-overlay.552/" target="_blank" rel="noopener noreferrer">Input Overlay</a>：同步显示键盘、鼠标和游戏板上的输入。</li>
+</ul>
+<h2> 美化插件</h2>
+<p>第三方的直播美化插件提供了时钟、榜单、弹幕、游戏等互动来源，用于美化直播间，新手可参考使用。美化插件免费版一般足够用了，比如 <a href="https://yun.miebo.cn/" target="_blank" rel="noopener noreferrer">咩播</a>、<a href="http://zbmate.com/" target="_blank" rel="noopener noreferrer">智播</a>。</p>
+<h2> 弃用插件</h2>
+<p>以下插件已弃用，仅作记录：</p>
+<ul>
+<li><a href="https://obsproject.com/forum/resources/virtual-cam-filter.1142/" target="_blank" rel="noopener noreferrer">Virtual Cam Filter</a>：能让来源单独输出虚拟摄像头，OBS 28 已内置此功能。</li>
+<li><a href="https://obsproject.com/forum/resources/obs-websocket-remote-control-obs-studio-from-websockets.466/" target="_blank" rel="noopener noreferrer">obs-websocket</a>：远程控制插件，OBS 28 已内置此功能。</li>
+<li><a href="https://obsproject.com/forum/resources/animated-captions-with-obs-controller-and-a-preview-function.1407/" target="_blank" rel="noopener noreferrer">Animated captions</a>：自定义弹幕功能，无漂浮弹幕，适用较少，仅用于 OBS 27。</li>
+<li><a href="https://obsproject.com/forum/threads/shaderfilter-went-away.155555/#post-571174" target="_blank" rel="noopener noreferrer">OBS Shaderfilter</a>：文字图片特效滤镜。此插件已被从社区删除，下载使用 <a href="https://github.com/Oncorporation/obs-shaderfilter/releases/" target="_blank" rel="noopener noreferrer">GitHub 备份</a>，其功能已被 StreamFX 取代。</li>
+<li><a href="https://obsproject.com/forum/resources/asynchronous-source-duplication.1483/" target="_blank" rel="noopener noreferrer">Asynchronous Source Duplication</a>：复制来源可以同时展示在多个场景，复制源会有延迟。其功能已被 StreamFX 的来源镜像取代。</li>
+</ul>
+<h2> 更多</h2>
+<p>如果你在上文中没有找到你需要的功能功能，可以访问 <a href="https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/" target="_blank" rel="noopener noreferrer">OBS 插件库</a>进行搜索。</p>
+]]></content>
+    <author>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </contributor>
+    <published>2023-01-12T16:55:27.000Z</published>
+    <rights>Copyright by 清顺</rights>
+  </entry>
+  <entry>
+    <title type="text">直播入门攻略四 | 特效篇：美颜、变声、多开、虚拟主播</title>
+    <id>https://newzone.top/apps/livestreaming/4_live_effects.html</id>
+    <link href="https://newzone.top/apps/livestreaming/4_live_effects.html"/>
+    <updated>2023-01-23T14:11:29.000Z</updated>
+    <summary type="html"><![CDATA[<p>虽然 OBS 的功能已经非常强大，但通过第三方软件可以更简单地给我们带来美颜、变声、虚拟主播等特效。</p>
+<h2> 美颜</h2>
+<p>推荐使用 <a href="https://v.yy.com/" target="_blank" rel="noopener noreferrer">YY 开播</a>来实现直播美颜功能。</p>
+<p>打开 YY 开播，调用摄像头摄像，开启美颜功能。然后，在 OBS 中调用 YY 开播，如果有绿幕，可以添加「色度值」滤镜进行视频抠图。一旦配置好，下次启动 OBS 时，软件会自动调用 YY 开播开启美颜，无需重复配置。但是，「美颜 + 直播」对电脑配置的要求较高，如果直播画面出现明显卡顿，建议关闭 YY 开播。</p>]]></summary>
+    <content type="html"><![CDATA[<p>虽然 OBS 的功能已经非常强大，但通过第三方软件可以更简单地给我们带来美颜、变声、虚拟主播等特效。</p>
+<h2> 美颜</h2>
+<p>推荐使用 <a href="https://v.yy.com/" target="_blank" rel="noopener noreferrer">YY 开播</a>来实现直播美颜功能。</p>
+<p>打开 YY 开播，调用摄像头摄像，开启美颜功能。然后，在 OBS 中调用 YY 开播，如果有绿幕，可以添加「色度值」滤镜进行视频抠图。一旦配置好，下次启动 OBS 时，软件会自动调用 YY 开播开启美颜，无需重复配置。但是，「美颜 + 直播」对电脑配置的要求较高，如果直播画面出现明显卡顿，建议关闭 YY 开播。</p>
+<p><strong>使用注意</strong>：</p>
+<ul>
+<li>剧烈运动时，不要开美颜直播，否则容易卡顿。</li>
+<li>不要开启 YY 直播中除美颜外的功能，如虚拟背景、虚拟形象等，否则直播中的画面背景无法透明化。</li>
+</ul>
+<h2> 变声</h2>
+<p>直播变声可以通过硬件和软件两种方式实现。软件变声器，如 MorphVOX Pro 和神舌，对使用者的语气要求较高。我在淘宝找人进行了声音精调，但效果仍然无法仿真。店家发的语气教程也没有太多参考价值，初学者很难入门。硬件变声器的效果更加糟糕，强烈不推荐。</p>
+<h2> 虚拟主播</h2>
+<p>如果不想录脸直播，可以配合软件使用虚拟形象直播。此类换脸软件会占用较高的 CPU，需要使用三年内的主流配置。</p>
+<h3> Snap Camera</h3>
+<p><a href="https://snapcamera.snapchat.com/" target="_blank" rel="noopener noreferrer">Snap Camera</a> 是 SnapChat 的免费增强现实应用。它可以帮助你在电脑直播/录屏时实现挡脸头套、美化滤镜等特效。如果你熟悉 3D 建模，可以使用 Lens Studio 定制属于你自己的变脸特效。但需要注意的是，当你喝水、低头或脸部被遮挡时，脸部特效会失效。</p>
+<figure><img src="http://tc.seoipo.com/SnapCamera.gif" alt="Snap Camera 效果图" tabindex="0" loading="lazy"><figcaption>Snap Camera 效果图</figcaption></figure>
+<p>如果你无法使用 Snap Camera，可以尝试 FaceRig 和 PrprLive。</p>
+<h3> FaceRig</h3>
+<p><a href="https://store.steampowered.com/app/274920/FaceRig/" target="_blank" rel="noopener noreferrer">FaceRig</a>（Steam 已停售）可以通过对五官的动作捕捉，让卡通脸的表情进行同步变化，但不能对头部以下的部分进行捕捉和同步。使用时，需要打开 FaceRig 中的「切换广播」，否则 OBS 窗口会显示为黑屏。</p>
+<figure><img src="http://tc.seoipo.com/20210329092154.gif" alt="FaceRig 演示图" tabindex="0" loading="lazy"><figcaption>FaceRig 演示图</figcaption></figure>
+<p>注意：百度搜索 FaceRig 的首个结果是<strong>虚假官网</strong>，价格高且无保障，不要在上面进行购买。</p>
+<h3> PrprLive</h3>
+<p><a href="https://store.steampowered.com/app/1279610/PrprLive/" target="_blank" rel="noopener noreferrer">PrprLive</a> 是国内的变脸软件，基础版免费，同样在 Steam 销售，付费前先试试基础版。</p>
+<h2> 动态素材</h2>
+<p>为了丰富直播场景，可以使用带绿幕的视频来添加动态特效，或者借助类虚拟主播技术来实现交互。例如 <a href="https://d.appinn.com/bongo-cat-mver/" target="_blank" rel="noopener noreferrer">Bongo Cat Mver</a>，它能实时同步键盘与鼠标状态，增加直播趣味性。如果你使用的是 Bongo Cat 全键盘同步模型，建议打乱映射规则，以防止隐私泄露。</p>
+<figure><img src="http://tc.seoipo.com/2022-06-30-08-29-40.png" alt="直播间的猫咪" tabindex="0" loading="lazy"><figcaption>直播间的猫咪</figcaption></figure>
+<h2> 摄像头多开</h2>
+<p>摄像头默认只能被一个应用调用。借助 <a href="https://splitcam.com/" target="_blank" rel="noopener noreferrer">SplitCam</a>，你能在摄像头画面上叠加元素，使用镜像、高亮滤镜微调画面，还能让摄像头画面同步给多个应用。</p>
+<p>例如，摄像头可以同时用于 OBS 直播和 Capture 录屏，在不同用途上可以叠加不同滤镜和特效，呈现出不同的画面。</p>
+<p><strong>使用流程</strong>：</p>
+<ol>
+<li>打开 SplitCam，选择默认摄像头。</li>
+<li>Snap Camera、Capture 等第三方调用摄像头时，选择「SplitCam Video Driver」。</li>
+</ol>
+<h2> 其他应用</h2>
+<h3> NVIDIA BROADCAST</h3>
+<p>如果你使用的是 NVIDIA 显卡，强烈推荐安装 <a href="https://www.nvidia.cn/geforce/guides/broadcast-app-setup-guide/" target="_blank" rel="noopener noreferrer">NVIDIA Broadcast</a>。它利用 AI 的强大功能将标准网络摄像头和麦克风升级为高端智能设备，通过麦克风去噪、房间回声消除、虚拟背景、网络摄像头人像跟踪和视频降噪等 AI 功能，提高直播的视频和音频质量。通过 NVIDIA RTX GPU 上搭载的名为 Tensor Core 的专用 AI 处理器，AI 网络能够实时运行高质量的效果。</p>
+<h3> 小葫芦弹幕助手</h3>
+<p><a href="https://zs.xiaohulu.com/danmu/" target="_blank" rel="noopener noreferrer">小葫芦弹幕助手</a>可实时显示网友的互动和打赏，尤其适合游戏直播。但是，由于弹幕答谢、自动定时弹幕、手动弹幕等功能已暂停，不建议新手充值会员。</p>
+<p>如果不需要在直播界面中显示弹幕，不要安装小葫芦弹幕插件。安装后，会影响 OBS 窗口捕获功能，无法抓取基于 Electron 的应用界面，从而导致窗口捕捉黑屏。解决方法是删除 <code>C:\Program Files\obs-studio\obs-plugins\64bit</code> 目录内的 <code>CalabashDanmuPlugin.dll</code>、<code>CalabashWinCapture.dll</code>、<code>ObssDanmuInfo.dll</code>，重启 OBS 即可恢复，但下次使用弹幕助手时，这三个文件会自动安装，黑屏问题复现，只能重新删除指定文件。</p>
+<p>小葫芦直播助手集成了 OBS 和弹幕助手的功能，但为了直播的扩展性，仍然建议从 OBS 入门。</p>
+]]></content>
+    <author>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </contributor>
+    <published>2023-01-12T16:55:27.000Z</published>
+    <rights>Copyright by 清顺</rights>
+  </entry>
+  <entry>
+    <title type="text">直播入门攻略五 | 平台篇：主流直播平台介绍</title>
+    <id>https://newzone.top/apps/livestreaming/5_live_platforms.html</id>
+    <link href="https://newzone.top/apps/livestreaming/5_live_platforms.html"/>
+    <updated>2023-01-23T14:11:29.000Z</updated>
+    <summary type="html"><![CDATA[<p>主流直播平台有淘宝、京东、抖音、快手、视频号、哔哩哔哩、小红书、微博直播、斗鱼、虎牙和 YouTube。接下来，我将逐一介绍如何使用 PC 端的 OBS 在这些平台上进行直播。</p>
+<h2> 淘宝直播</h2>
+<ol>
+<li>
+<p>下载<a href="https://market.m.taobao.com/app/mtb/live-portal/download/index.html" target="_blank" rel="noopener noreferrer">淘宝直播客户端</a>，打开后点击「我要开播」，进入直播间界面。</p>
+<figure><img src="http://tc.seoipo.com/2022-06-29-22-23-26.png" alt="" tabindex="0" loading="lazy"><figcaption>淘宝直播设置</figcaption></figure>
+</li>
+<li>
+<p>在左侧点击「添加元素」&gt;「摄像头」，选择「OBS-Camera」，即可同步 OBS 直播画面。淘宝直播客户端也是基于 OBS，但不支持推流直播，只能通过虚拟摄像头同步画面。</p>
+</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<p>主流直播平台有淘宝、京东、抖音、快手、视频号、哔哩哔哩、小红书、微博直播、斗鱼、虎牙和 YouTube。接下来，我将逐一介绍如何使用 PC 端的 OBS 在这些平台上进行直播。</p>
+<h2> 淘宝直播</h2>
+<ol>
+<li>
+<p>下载<a href="https://market.m.taobao.com/app/mtb/live-portal/download/index.html" target="_blank" rel="noopener noreferrer">淘宝直播客户端</a>，打开后点击「我要开播」，进入直播间界面。</p>
+<figure><img src="http://tc.seoipo.com/2022-06-29-22-23-26.png" alt="" tabindex="0" loading="lazy"><figcaption>淘宝直播设置</figcaption></figure>
+</li>
+<li>
+<p>在左侧点击「添加元素」&gt;「摄像头」，选择「OBS-Camera」，即可同步 OBS 直播画面。淘宝直播客户端也是基于 OBS，但不支持推流直播，只能通过虚拟摄像头同步画面。</p>
+</li>
+</ol>
+<p>除了客户端，还可以通过<a href="https://liveplatform.taobao.com/restful/index/home/" target="_blank" rel="noopener noreferrer">直播中控台</a>来设置淘宝直播间。</p>
+<h2> 抖音直播</h2>
+<ol>
+<li>
+<p>下载<a href="https://www.douyin.com/falcon/webcast_openpc/pages/streamingtool_download/index.html" target="_blank" rel="noopener noreferrer">直播伴侣电脑端</a>，它可以适配西瓜视频、抖音、抖音火山版的直播。</p>
+</li>
+<li>
+<p>在左侧点击「添加元素」&gt;「采集」，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道。</p>
+<figure><img src="http://tc.seoipo.com/2022-06-29-23-59-02.png" alt="" tabindex="0" loading="lazy"><figcaption>抖音直播设置</figcaption></figure>
+</li>
+</ol>
+<p>以上为抖音新手的电脑直播步骤，如果你的抖音粉丝在一万以上，可以使用 <a href="http://streamingtool.douyin.com/docs/guide/96319/" target="_blank" rel="noopener noreferrer">OBS 模式推流</a>。</p>
+<h2> 快手直播</h2>
+<p>快手直播无需 PC 客户端，可在<a href="https://studio.kuaishou.com/profile" target="_blank" rel="noopener noreferrer">快手云直播</a>页面配置直播间，支持 OBS 模式推流直播。若直播断流超过 2 分钟或直播超过 7 天，则会自动下播。</p>
+<h2> 视频号直播</h2>
+<p>要使用电脑直播视频号，需要先完成<a href="https://channels.weixin.qq.com/platform/live/apply" target="_blank" rel="noopener noreferrer">视频号认证</a>。</p>
+<p>视频号认证最重要的一环是<strong>有效关注数 1000 人以上</strong>，可疑和外挂用户都不包含在有效人数内。达到 1000 有效粉丝后，就可以在视频号助手网页端发起直播推流了。</p>
+<h2> B 站直播</h2>
+<p>哔哩哔哩可以在<a href="https://link.bilibili.com/p/eden/download#/web" target="_blank" rel="noopener noreferrer">直播姬客户端</a>或<a href="https://link.bilibili.com/p/center/index#/my-room/start-live" target="_blank" rel="noopener noreferrer">B 站直播间网页端</a>上进行在线直播。直播封面必须包含图像，不支持纯文本封面。</p>
+<p>如果你主做 B 站直播，可以试试哔哩哔哩直播机器人<a href="https://github.com/iwxyi/Bilibili-MagicalDanmaku" target="_blank" rel="noopener noreferrer">神奇弹幕</a>，它集成了弹幕姬、答谢姬、点歌姬、回复姬和工作流 (workflow)，支持弹幕聊天、观众互动、自动点歌、数据统计、私信处理等功能。这个应用看起来很有趣，我还没有使用过。</p>
+<h2> 知乎直播</h2>
+<p>在<a href="https://www.zhihu.com/creator/streaming/push" target="_blank" rel="noopener noreferrer">知乎推流直播</a>页面开启直播后，就可以使用知乎的电脑直播。</p>
+<p>知乎直播注意：</p>
+<ul>
+<li>推流直播不能与第三方连接谈话；手机直播不支持绿幕抠图。</li>
+<li>当你在电脑直播时，用手机进入知乎客户端，会提示「是否继续直播」，选择「继续」可进入直播界面与观众互动，选「忽略」则停止直播。</li>
+<li>如果直播时间超过一个月，小葫芦直播码会失效，无法继续使用小葫芦直播助手和弹幕助手。</li>
+</ul>
+<h2> 小红书直播</h2>
+<p>小红书使用<a href="http://www.xiaohongshu.com/zhibo/robs" target="_blank" rel="noopener noreferrer">直播助手</a>来设置推流，可以查看<a href="ttps://fe-video-qc.xhscdn.com/fe-platform/f03ae58e50e6d53580fa16a58e9dffbbbabbb5f0.pdf">官方文档</a> 了解开播步骤。</p>
+<p>当我登录直播助手时，提示「暂无直播权限，请联系运营及客服开通」，但手机却可以直播，这说明提示中的直播权限专指电脑端直播。因此，我在应用中提交了问题，但一直未收到客服回复。</p>
+<h2> 微博直播</h2>
+<p>微博直播需先完成实名认证，然后在<a href="https://weibo.com/manage/frame?furl=https%3A%2F%2Fweibo.com%2Fl%2Fwblive%2Fadmin%2Fhome%2Fauthentication" target="_blank" rel="noopener noreferrer">微博管理中心</a>创建直播。详细的开播步骤，可以参考官方的<a href="https://weibo.com/l/wblive/act/k2mw80kz3kw0" target="_blank" rel="noopener noreferrer">微博 PC 开播教程</a>。</p>
+<h2> Youtube 直播</h2>
+<p>如果您在过去 90 天内没有进行 YouTube 直播，平台会要求验证您的频道。首次启用直播功能可能需要最长等待 24 小时。</p>
+<ol>
+<li>打开 <a href="http://youtube.com/livestreaming" target="_blank" rel="noopener noreferrer">YouTube 直播控制室</a>。</li>
+<li>点击直播标签页或为新直播安排时间。</li>
+<li>从直播控制室复制直播网址和直播码，然后将其粘贴到编码器中。</li>
+</ol>
+]]></content>
+    <author>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </contributor>
+    <published>2023-01-12T16:55:27.000Z</published>
+    <rights>Copyright by 清顺</rights>
+  </entry>
+  <entry>
+    <title type="text">直播入门攻略六 | 技巧篇：直播定位与策划</title>
+    <id>https://newzone.top/apps/livestreaming/6_live_positioning.html</id>
+    <link href="https://newzone.top/apps/livestreaming/6_live_positioning.html"/>
+    <updated>2023-01-12T21:27:08.000Z</updated>
+    <summary type="html"><![CDATA[<p>直播过几次了，但是你的直播间总是没有人看，偶尔来了人也不知道说什么。作为直播新手，遇到这种情况是很正常的。建议按照本文的章节，逐一比对，对你的直播进行定位和策划。</p>
+<h2> 直播定位</h2>
+<p>开设直播前，从你的兴趣、能力和直播目的出发，确定直播定位。</p>
+<ul>
+<li>我是谁：我的职业/身份是什么。</li>
+<li>面向谁：目标用户画像：性别、年龄、兴趣、收入、消费能力、性格特征等。</li>
+<li>我能提供什么：核心竞争力：陪伴？专业知识？丰富经验？渠道资源？</li>
+<li>解决目标用户什么问题：排遣寂寞？选购答疑？</li>
+</ul>
+<p>定位完成后，把自己放在目标观众角度进行换位思考，调整直播定位。</p>]]></summary>
+    <content type="html"><![CDATA[<p>直播过几次了，但是你的直播间总是没有人看，偶尔来了人也不知道说什么。作为直播新手，遇到这种情况是很正常的。建议按照本文的章节，逐一比对，对你的直播进行定位和策划。</p>
+<h2> 直播定位</h2>
+<p>开设直播前，从你的兴趣、能力和直播目的出发，确定直播定位。</p>
+<ul>
+<li>我是谁：我的职业/身份是什么。</li>
+<li>面向谁：目标用户画像：性别、年龄、兴趣、收入、消费能力、性格特征等。</li>
+<li>我能提供什么：核心竞争力：陪伴？专业知识？丰富经验？渠道资源？</li>
+<li>解决目标用户什么问题：排遣寂寞？选购答疑？</li>
+</ul>
+<p>定位完成后，把自己放在目标观众角度进行换位思考，调整直播定位。</p>
+<ul>
+<li>你喜欢哪类型的直播？喜欢谁的直播？为什么？每个主播至少列出 3 个吸引你的点。</li>
+<li>你不喜欢哪种直播？为什么？</li>
+<li>如果是你做直播，你希望是什么样的？你的底线是什么？有什么顾虑？顾虑和目标比起来，孰轻孰重？</li>
+</ul>
+<p>如果前期定位依然不清，可以<strong>观察头部主播、找到对标主播</strong>，模仿对标主播的直播间。</p>
+<h2> 开播时间</h2>
+<p><strong>保持长时间和持续开播，稳定开播频次与时间段</strong>。</p>
+<p>例如，每周固定开播两到三场，每次直播不低于 30 分钟。直播频率和直播时长是做好直播的基础，如果开播时长和开播频率不稳定，系统就无法准确地进行推荐。</p>
+<p>新人直播有流量扶持，即使初期没有观众也要坚持开播。尽量选择白天等冷门时间段，竞争相对较小。</p>
+<p>娱乐直播保持 2.5 小时以上，电商直播保持 3.5 小时以上才会有官方稳定推流。</p>
+<h2> 直播策划</h2>
+<h3> 选题</h3>
+<p>直播选题决定直播前期自然流量的多少。</p>
+<p>新手直播流量不高时，主题尽量搭上最新热点，<strong>抓住热点，立即开始，利用现有内容，抢占黄金流量时间</strong>。但你的直播内容一定要与热点相关，否则牛头不对马嘴，自然流量也不会留下来。</p>
+<p>选定主题后，<strong>准备 15~20 分钟的脚本，在直播中循环使用</strong>。即使直播间没人，也不要停止说话，否则进入的自然流量会变少。</p>
+<h3> 标题</h3>
+<p>直播标题控制在 8 个字，可以通过关键词搜索站内热门，从中参考直播标题。直播标题没有搜索权重，所以不需要堆砌关键词，只要能清楚地表达直播间主题就可以了。</p>
+<p>标题要素：</p>
+<ul>
+<li>突出主播特征，如：人物特质、性格。</li>
+<li>突出内容，如：才艺展示、音乐主题、户外和其他类别。</li>
+<li>突出玩法吸引，比如：各种秒杀活动、免费赠送等。</li>
+<li>突出实力，清楚地表现出你的能力，当然做解说也可以。</li>
+</ul>
+<h3> 预告</h3>
+<p>开播前，一定要先发直播预告或短视频，以便让更多观众进入直播间。预告发布最好在开播前两小时完成。</p>
+<p>在开播页面，请提前设置好<strong>封面标题</strong>并勾选<strong>定位</strong>。</p>
+<p>有特色的封面可以提升观众对直播间的兴趣，建议使用本人或与内容相关的图片作为封面。如果不知道如何设置好封面标题，可以参考其他观众较多的直播间。</p>
+<p>打开直播定位，可以让更多的同城观众看到你的直播间，对直播间的流量有非常大的帮助。</p>
+<h3> 环境</h3>
+<p>灯光和环境声音决定了你的直播效果。</p>
+<p>直播间灯光要亮，露脸主播可以将灯光打在脸部的右前方 45 度，这能提升你的颜值。</p>
+<p>直播前，尽量关闭门窗和不必要的电器，降低直播间环境噪音，以避免干扰直播效果。</p>
+<h2> 直播互动</h2>
+<p>开场前 10~15 分钟是暖场阶段，你可以先和观众互动，等人多了再正式开始主题。</p>
+<p>有新观众进入直播间时，要主动欢迎他们。有意识地引导用户关注、互动，呼吁点亮粉丝灯牌，及时感谢礼物。</p>
+<p>对于用户评论，要<strong>先读出弹幕</strong>，然后做出应答。粉丝提出意见对我们是有帮助的，一定要虚心接受并表示感谢。</p>
+<p>如果有团队配合，可以安排管理员维持直播间的秩序并活跃气氛，参与直播平台的官方活动，适当购买直播道具（宠粉红包福袋）。</p>
+<p>下播后，进行数据复盘，调整直播间的标题、封面和背景。</p>
+<h2> 开播锻炼</h2>
+<p>开播前把脸部肌肉活动开。嘴张到最大，舌顶上颚 60 秒；嘴张到最大，尽量伸舌 30 秒。说话时，让嘴唇用力。</p>
+<h2> 总结</h2>
+<p>经过两年的直播，我深知直播的硬件、软件和技巧只是锦上添花。若要体验直播，不想深入研究，只需拿出手机开播即可。开始直播时，可能会有很多疑问和顾虑，效果也不一定很好。但只有勇敢尝试新事物，不断开拓，我们的人生才会有更多可能性。</p>
+]]></content>
+    <author>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </contributor>
+    <published>2023-01-12T16:55:27.000Z</published>
+    <rights>Copyright by 清顺</rights>
+  </entry>
+  <entry>
+    <title type="text">找不到字幕？Whisper 让不懂外语的你也能看懂日剧</title>
+    <id>https://newzone.top/posts/2022-11-18-whisper_ai_subtitles.html</id>
+    <link href="https://newzone.top/posts/2022-11-18-whisper_ai_subtitles.html"/>
+    <updated>2023-01-23T14:11:29.000Z</updated>
+    <summary type="html"><![CDATA[<p>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。</p>
+<p>Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是<strong>支持 99 种语言 AI 字幕工具</strong>。</p>]]></summary>
+    <content type="html"><![CDATA[<p>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。</p>
+<p>Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是<strong>支持 99 种语言 AI 字幕工具</strong>。</p>
+<p>虽然与 Stable Diffusion 同样归属 AI 工具，但 Whisper 安装非常简单，终端执行两行代码安装 Whisper 和 FFmpeg 即可使用。如果你不清楚如何安装 FFmpeg，可参考<a href="https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html#%E9%85%8D%E7%BD%AE-ffmpeg" target="_blank" rel="noopener noreferrer">FFmpeg 配置步骤</a>。这部分我不多做赘述，具体可以看<a href="https://github.com/openai/whisper" target="_blank" rel="noopener noreferrer">Whisper 官方文档</a>。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>接下来，我会分享如何使用 Whisper 为外语视频自动生成字幕，以日本综艺节目「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」为例。</p>
+<h2> 音视频转录</h2>
+<p>在文件所在目录下打开终端，运行 <code>whisper jp.mp4</code> 即可执行音视频转录。测试视频名原本为日语，我改为「jp.mp4」，原因是我系统中只装了中英语言包，使用其他语言作为命令会出现 Invalid argument 报错，从而导致转录失败。Whisper 的媒体分析环节调用了 FFmpeg，所以主流音视频格式均被支持。</p>
+<figure><img src="http://tc.seoipo.com/2022-11-18-09-25-29.png" alt="" tabindex="0" loading="lazy"><figcaption>whisper 命令</figcaption></figure>
+<p>视频时长 90 分钟，我使用 3080Ti 显卡转录，用时 10 分钟。转录过程中不要玩游戏，也不要进行直播等吃显存的行为，否则容易显存不足无法继续。Whisper 对设备要求不高，不过设备会决定转录时长和你能使用的转录模型。如果你使用 CPU 转录，时间会增加 5-10 倍。</p>
+<p>转录完成后，Whisper 将生成原生字幕文件，日语视频会被转录为日语字幕，西班牙语视频会得到西班牙语字幕。</p>
+<h2> 字幕翻译</h2>
+<p>通过 Whisper 获得原生字幕后，接着要将其翻译为中文。这一步需借助 SubtitleEdit Online，它支持免费在线翻译字幕，可使用 Google 和 Yandex 两种翻译引擎。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1">
+</a><ol><a class="footnote-anchor" id="footnote-ref1">
+</a><li><a class="footnote-anchor" id="footnote-ref1">打开 </a><a href="https://www.nikse.dk/subtitleedit/online" target="_blank" rel="noopener noreferrer">SubtitleEdit Online</a>，点击「Subtitle」&gt;「Open...」，选择要导入的字幕文件。</li>
+<li>点击「Auto-translate」，选择翻译引擎，然后在弹出窗口中选择字幕要翻译的语言，并<strong>将页面拖动到最下方</strong>（非常重要），确定所有文字都被翻译后点击 OK 按钮。</li>
+<li>点击「Subtitle」&gt;「Save/download...」，即可保存翻译好的字幕文件。</li>
+</ol>
+<p>除了网页翻译字幕，本地端的神经机器翻译也是种好选择。macOS 用户推荐使用 <a href="https://github.com/argosopentech/argos-translate" target="_blank" rel="noopener noreferrer">Argos Translate</a>，这是基于 OpenNMT 的开源神经机器翻译。如果你的动手能力较强，可以尝试 <a href="https://github.com/Helsinki-NLP/Opus-MT" target="_blank" rel="noopener noreferrer">Opus-MT</a>。不管用哪种方式，都是将字幕以文本方式导出，复制到翻译引擎中翻译，即可得到不同于 Google Translate 的翻译结果。</p>
+<h2> Whisper 进阶命令</h2>
+<h3> task</h3>
+<p><code>--task</code> 分为 transcribe（语音转录）和 translate。Whisper 默认使用 <code>--task transcribe</code> 模式，将语音转录为对应的语言字幕。<code>--task translate</code> 是所有语言翻译为英文，目前尚未支持翻译为其他语言。</p>
+<h3> language</h3>
+<p><code>--language</code> 是设置语音转录的语种，支持语种范围查看 <a href="https://github.com/openai/whisper/blob/main/whisper/tokenizer.py" target="_blank" rel="noopener noreferrer">tokenizer.py</a>，比如指定日语 <code>--language japanese</code>。如果你没指定语种，Whisper 会截取音频的前 30 秒来判断语种。</p>
+<p>如果指定语种与文件中的语种并不相同，Whisper 会强制翻译，但 10 分钟以上的音视频会出现大量的重复无意义字幕。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2"> 假设你把日语视频的转录语言设为汉语，前 8 分钟 Whisper 会正确转录到中文，但 8 分钟后的转录字幕会一直重复，并与实际片段无关。</a></p><a class="footnote-anchor" id="footnote-ref2">
+</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> model</h3>
+<p><code>--model</code> 指 Whisper 的转录模型，转录效果为 tiny &lt; base &lt; small &lt; medium &lt; large，默认使用 small。添加参数 <code>--model medium</code> 或 <code>--model large</code> 可以切换到更大的模型，但转录时间也会变长。如果你是对英文视频进行转录，则在模型参数上添加后缀 <code>.en</code>，能提升转录速度。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">模型</th>
+<th style="text-align:center">大小</th>
+<th style="text-align:center">单英语模型</th>
+<th style="text-align:center">多语言模型</th>
+<th style="text-align:center">最低显存</th>
+<th style="text-align:center">转录速率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">tiny</td>
+<td style="text-align:center">39 M</td>
+<td style="text-align:center"><code>tiny.en</code></td>
+<td style="text-align:center"><code>tiny</code></td>
+<td style="text-align:center">~1 GB</td>
+<td style="text-align:center">~32x</td>
+</tr>
+<tr>
+<td style="text-align:center">base</td>
+<td style="text-align:center">74 M</td>
+<td style="text-align:center"><code>base.en</code></td>
+<td style="text-align:center"><code>base</code></td>
+<td style="text-align:center">~1 GB</td>
+<td style="text-align:center">~16x</td>
+</tr>
+<tr>
+<td style="text-align:center">small</td>
+<td style="text-align:center">244 M</td>
+<td style="text-align:center"><code>small.en</code></td>
+<td style="text-align:center"><code>small</code></td>
+<td style="text-align:center">~2 GB</td>
+<td style="text-align:center">~6x</td>
+</tr>
+<tr>
+<td style="text-align:center">medium</td>
+<td style="text-align:center">769 M</td>
+<td style="text-align:center"><code>medium.en</code></td>
+<td style="text-align:center"><code>medium</code></td>
+<td style="text-align:center">~5 GB</td>
+<td style="text-align:center">~2x</td>
+</tr>
+<tr>
+<td style="text-align:center">large</td>
+<td style="text-align:center">1550 M</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center"><code>large</code></td>
+<td style="text-align:center">~10 GB</td>
+<td style="text-align:center">1x</td>
+</tr>
+</tbody>
+</table>
+<p>上方表格是 Whisper 官方提供信息，但目前模型实际增大 50%-100%，要求也增加了，仅作参考。</p>
+<h3> 辅助参数</h3>
+<ul>
+<li><code>--device</code> 指 whisper 运行算法所用的硬件，默认为 cuda 即显存，或者指定 <code>--device cpu</code> 。特别当你显存不够，又想使用较大模型时，推荐指定 CPU 转录。</li>
+<li><code>--temperature</code> temperature 决定了生成模型的贪婪程度，默认为 0。如果 temperature 低，概率最高的词将远高于其他低概率，模型将可能输出最正确的文本，变化很小。如果 temperature 较高，该模型会输出概率较高的其他单词，而不是概率最高的单词，生成的文本将更加多样化，但有更高的可能性出现语法错误和生成无意义的文本。</li>
+<li><code>--temperature_increment_on_fallback</code> 当解码失败时，回推时要增加的 temperature，默认为 0.2。</li>
+<li><code>--best_of</code> temperature 不为零时的侯选个数，默认为 5。</li>
+<li><code>--beam_size</code> temperature 为零时，number of beams in beam search，默认为 5。beam 直译是光束，但没理解具体意思，我简单理解其为侯选数。</li>
+<li><code>--patience</code> 用于 beam decoding 的 patience value, as in <a href="https://arxiv.org/abs/2204.05424" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2204.05424</a>, the default (1.0) is equivalent to conventional beam search (default: None) simple length normalization by default (default: None)</li>
+<li><code>--length_penalty</code> optional token length penalty coefficient (alpha) as in <a href="https://arxiv.org/abs/1609.08144" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/1609.08144</a>, uses simple length normalization by default (default: None)</li>
+<li><code>--suppress_tokens</code> 逗号分隔的标记 ID 列表，以便在采样过程中进行抑制; 默认为 -1，这会抑制除常见标点符号外的大多数特殊字符的出现。</li>
+<li><code>--initial_prompt</code> 可选的文本提示，在命令首行出现，默认为空。</li>
+<li><code>--condition_on_previous_text</code> 默认为 True，为下一个窗口提供模型之前的输出作为提示；禁用可能会使不同窗口的文本不一致，但模型变得不容易陷入失败循环。</li>
+<li><code>--fp16</code> 是否启用半精度 fp16 进行推理运算，默认为 True，否则为单精度 fp32，运行时间延长。</li>
+<li><code>--threads</code> 指定 CPU 运算的线程数，会取代 MKL_NUM_THREADS/OMP_NUM_THREADS (默认：0)</li>
+</ul>
+<h3> 幻听参数</h3>
+<p>非英语视频的转录有时会出现幻听，即静默片段被识别出语音，或是转录结果与该片段无关。这些问题是由语气停顿参数引起的。幻听的解决方案是引入 <a href="https://github.com/snakers4/silero-vad" target="_blank" rel="noopener noreferrer">VAD</a>，但 VAD 对动手能力要求较高。如果你的视频转录出现了严重幻听，建议先尝试调节参数阈值。</p>
+<ul>
+<li><code>--no_speech_threshold</code> 无声识别的阈值，默认为 0.6。当 no_speech_threshold 高于阈值且 logprob_threshold 低于预设时，该片段将被标记为静默。对于非英语长视频来说，建议将其调低，否则经常出现大段的重复识别。</li>
+<li><code>--logprob_threshold</code> 转录频次的阈值，默认为 -1.0。当 logprob_threshold 低于预设时，将不对该片段进行转录。建议修改为 None 或更低的值。</li>
+<li><code>--compression_ratio_threshold</code> 压缩比的阈值，默认为 2.4。当 compression_ratio_threshold 高于预设时，将不对该片段进行转录。</li>
+</ul>
+<p><code>--no_speech_threshold 0.5 --logprob_threshold None --compression_ratio_threshold 2.2</code> 是我常用的参数，你可以按视频情况来调节，幻听参数放在转录命令后面。</p>
+<h2> 转录成果</h2>
+<p>「夜のヒットスタジオ・スペシャル」：</p>
+]]></content>
+    <author>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </contributor>
+    <published>2022-11-18T00:00:00.000Z</published>
+    <rights>Copyright by 清顺</rights>
+  </entry>
+  <entry>
+    <title type="text">抛弃又贵又难用的录屏软件，3 分钟入门 FFmpeg</title>
+    <id>https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html</id>
+    <link href="https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html"/>
+    <updated>2023-01-23T14:11:29.000Z</updated>
+    <summary type="html"><![CDATA[<blockquote>
+<p>当所有的录屏应用都无法满足我时，我的目光投向了那个最终极的命令行工具，FFmpeg。</p>
+</blockquote>
+<p>开始<a href="https://newzone.top/posts/2022-05-22-surveillance_video_for_myself.html" target="_blank" rel="noopener noreferrer">自我监控</a>后，录屏工具的重要性迅速提升，我遇到的问题也越来越多。因为我录屏主要是为了自我监控，所以我需要的帧率不必很高，甚至越低越好，分辨率也不必和屏幕一致，只要能看清我在做什么就可以了。</p>]]></summary>
+    <content type="html"><![CDATA[<blockquote>
+<p>当所有的录屏应用都无法满足我时，我的目光投向了那个最终极的命令行工具，FFmpeg。</p>
+</blockquote>
+<p>开始<a href="https://newzone.top/posts/2022-05-22-surveillance_video_for_myself.html" target="_blank" rel="noopener noreferrer">自我监控</a>后，录屏工具的重要性迅速提升，我遇到的问题也越来越多。因为我录屏主要是为了自我监控，所以我需要的帧率不必很高，甚至越低越好，分辨率也不必和屏幕一致，只要能看清我在做什么就可以了。</p>
+<p>最初，我使用了免费开源的 <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">VLC</a>，这也是我监控文章中采用的方案。它能调节输出视频的编码、帧率、格式，但操作麻烦，而且不能同时录屏和摄像头，暂停录制也容易导致程序崩溃。</p>
+<p>然后，我尝试了 <a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">OBS</a>，它的录制功能极其强大，可以任意添加摄像头、文字、图像等，但输出限制多，生成的视频体积过大。同时，OBS 不支持录制画面与直播画面分开，而我平常习惯边开直播边工作，这令我只能放弃 OBS 录屏。</p>
+<p>接着，我发现了 7.8k Star 的 <a href="https://github.com/MathewSachin/Captura/releases/tag/v8.0.0" target="_blank" rel="noopener noreferrer">Captura</a>，它的自由度较高，能自定义叠加元素，但项目已于 2018 年停止更新，使用时经常碰到莫名其妙的报错，很不稳定。</p>
+<p>免费的不行，那么收费的会不会好点呢？</p>
+<p>我用 <a href="https://www.bandicam.cn/" target="_blank" rel="noopener noreferrer">Bandicam</a> 录制了一周的视频。与 Captura 相比，Bandicam 的稳定性有了很大的提升，不会突然崩溃，还有降噪和内录扬声器功能，但它偶尔会丢失摄像头，导致无法自动录屏。</p>
+<p>再后，我测试了其他几款录屏应用：</p>
+<ul>
+<li>相机：Windows 自带应用，录制方便，但输出选项较少，限制多。</li>
+<li><a href="https://www.flashbackrecorder.com/zh/express/" target="_blank" rel="noopener noreferrer">FlashBack Express</a>：能调节帧率，画面镜像，虚化背景，但免费版只支持 2 小时内的录制。</li>
+<li><a href="https://mirillis.com/zh/products/action.html" target="_blank" rel="noopener noreferrer">Mirillis Action!</a>：高帧率录制游戏，自动分割视频，自定义叠加元素，但输入帧率不能自由调整，最低只能 15 帧，试用期 30 天。</li>
+<li><a href="https://ohsoft.net/eng/ocam/intro.php?cate=1002" target="_blank" rel="noopener noreferrer">oCam</a>：打着免费招牌但有弹窗广告，且输出视频偏大。</li>
+<li><a href="https://getsharex.com/" target="_blank" rel="noopener noreferrer">ShareX</a>：免费开源强大的截图软件，具备录屏功能，能调节编码和帧率，但只能单一录屏或录像。</li>
+</ul>
+<p>我一共试了 9 款录屏软件，体验都不太好，软件普遍存在无法自定义画面、不兼容、稳定性低的问题。再加上自我监控方案的单次录制时间超过 12 小时，理想的帧率（0.02 帧）远超出应用最低 15-30 帧的下限。因此，我需要另外找一款稳定、兼容性高、又能自由定制录屏方案的工具，最终找到的是 FFmpeg。</p>
+<h2> 为什么 FFmpeg</h2>
+<p>FFmpeg 是处理多媒体内容 (如音频、视频、字幕和相关元数据) 的库和工具的集合，支持在 Linux、MacOS 和 Windows 平台上运行。它提供了录制、转换以及流化音视频的完整解决方案。</p>
+<p>上文尝试的录屏、视频处理工具几乎都是基于 FFmpeg 而开发的。不仅能实现它们的所有功能，还具有超高的稳定性和兼容性。与 FFmpeg 相比，现成的录屏应用的优势仅在于其美观的界面和简单易上手的录制方案。</p>
+<p>若要跳出软件的限制，自由地定制录屏效果，避免莫名其妙的 bug，更底层的 FFmpeg 反而是更稳定有效的方案。命令行录制看起来复杂，但实际上只需要熟悉十几个参数，你就能定制专属录屏方案，个人感觉比熟悉 Bandicam 的软件界面更简单。</p>
+<p>以我在 Windows 上的桌面录制方案为例，从多屏幕中指定一个 2K 区域进行录制，并在画面右下角添加 360P 的摄像头录制角度，然后以帧率 0.02 输出监控视频。按 <code>q</code> 则停止录制。</p>
+<figure><img src="http://tc.seoipo.com/2022-11-03-13-16-44.png" alt="" tabindex="0" loading="lazy"><figcaption>输出画面如图例</figcaption></figure>
+<h2> 录屏准备</h2>
+<h3> 配置 FFmpeg</h3>
+<ol>
+<li>
+<p>下载最新版 <a href="https://github.com/BtbN/FFmpeg-Builds/releases/tag/latest" target="_blank" rel="noopener noreferrer">FFmpeg</a>，Windows 环境选择 <code>ffmpeg-master-latest-win64-gpl.zip</code>，GPL 版本包含了所有依赖项。</p>
+</li>
+<li>
+<p>将 FFmpeg 解压到任意文件夹，比如 <code>D:\Backup\Libraries\Documents\ffmpeg</code>。</p>
+</li>
+<li>
+<p>开始栏搜索「编辑系统环境变量」，点击进入「环境变量」。</p>
+</li>
+<li>
+<p>新建用户变量 <code>FFMPEG_HOME</code>，变量值设为刚才的解压路径 <code>D:\Backup\Libraries\Documents\ffmpeg</code>。</p>
+<figure><img src="http://tc.seoipo.com/2022-11-01-18-13-49.png" alt="" tabindex="0" loading="lazy"><figcaption>FFmpeg 全局变量设置</figcaption></figure>
+</li>
+</ol>
+<p>配置完成后，在终端输入 ffmpeg 即可启动。</p>
+<figure><img src="http://tc.seoipo.com/2022-11-01-18-17-13.png" alt="" tabindex="0" loading="lazy"><figcaption>FFmpeg 配置成功</figcaption></figure>
+<h3> 配置视频/音频设备</h3>
+<p>FFmpeg 的录制命令 gdigrab 不支持音频录制，也不支持直接调用摄像头，此时需使用开源的 <a href="https://github.com/rdp/screen-capture-recorder-to-video-windows-free/releases" target="_blank" rel="noopener noreferrer">screen-capture-recorder-to-video-windows-free</a> 增强 FFmpeg 的录制功能，其最新版本为 0.12.12。</p>
+<p>通过命令 <code>ffmpeg -list_devices true -f dshow -i dummy</code> 查看支持的 Windows DirectShow 输入设备，采集视频和音频设备，包含设备名称，设备类型等信息。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1"> 这里得到了视频设备「V380 FHD Camera」和音频设备「Analogue 1/2 (Audient iD4)」，之后会用到。</a></p><a class="footnote-anchor" id="footnote-ref1">
+<figure><img src="http://tc.seoipo.com/2022-11-03-10-33-52.png" alt="" tabindex="0" loading="lazy"><figcaption>查看视频/音频设备列表</figcaption></figure>
+</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> 录制屏幕</h2>
+<p>从坐标 0:0 开始圈定出一个 2560x1440 的屏幕范围，然后以 每 50 秒截图 1 帧，输出为 mp4 格式的视频，录制命令为 <code>ffmpeg -f gdigrab -r 20/1001 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 output.mp4</code>。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup></p><a class="footnote-anchor" id="footnote-ref2">
+<p>以下是录制命令的说明：</p>
+</a><ul><a class="footnote-anchor" id="footnote-ref2">
+</a><li><a class="footnote-anchor" id="footnote-ref2"><code>-f gdigrab</code> 使用 FFmpeg 内置的 Windows 屏幕录制命令 </a><a href="https://ffmpeg.org/ffmpeg-all.html#gdigrab" target="_blank" rel="noopener noreferrer">gdigrab</a>，录制对象可为全屏、指定范围和指定程序。MacOS 录屏方法为 <a href="https://ffmpeg.org/ffmpeg-devices.html#avfoundation" target="_blank" rel="noopener noreferrer">AVFoundation</a>，Linux 录屏方法为 <a href="https://ffmpeg.org/ffmpeg-all.html#x11grab" target="_blank" rel="noopener noreferrer">x11grab</a>。</li>
+<li><code>-r 20/1001</code> 帧率为 0.02，每 50 秒录制 1 帧。主流大家喜欢用 <code>-r 30</code> 录制，我这因为是每日监测视频，用了超低帧率。</li>
+<li><code>-c:v libx264</code> 是用于设置视频编解码器，一般可不填使用默认配置，<code>-c:a</code> 为音频编码。<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup></li><a class="footnote-anchor" id="footnote-ref3">
+<li><code>-draw_mouse 1</code> 在 gdigrab 录制的视频中显示鼠标。</li>
+<li><code>-offset_x 0 -offset_y 0 -video_size 2560x1440</code> 为起始坐标和选定录制范围。坐标可使用截图软件获取，比如我用 Snipaste，点击 F1 后进入截图界面，鼠标经过当前区域就会显示坐标。</li>
+<li><code>-s 1280x720</code> 用 scale 方法，设置视频分辨率为 720p。</li>
+<li><code>-i desktop</code> 为输入设备，指代显示屏。</li>
+<li><code>out.mp4</code> 为输出视频的名字与格式。默认保存在命令运行文件夹，可以在此处设置输出位置，如 <code>D:\Backup\Libraries\Desktop\out.mp4</code>。或使用时间对视频命名，将 <code>out.mp4</code> 替换为 <code>-f segment -segment_time 2 -strftime 1 %Y-%m-%d_%H-%M-%S.mp4</code>，视频样例名为 <code>2022-11-06_10-53-17.mp4</code>。</li>
+</a></ul><a class="footnote-anchor" id="footnote-ref3">
+</a><p><a class="footnote-anchor" id="footnote-ref3">除上方命令外，FFmpeg 还有许多参数可以设置，比如 <code>-pix_fmt yuv420p -preset ultrafast</code> 提升编码速度，<code>-filter:v "setpts=0.1*PTS"</code> 减少视频抽样，但 setpts 不是视频加速，对于低帧率的视频影响很小。<sup class="footnote-ref"></sup></a><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"> <sup class="footnote-ref"></sup></a><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></p><a class="footnote-anchor" id="footnote-ref5">
+</a><h2><a class="footnote-anchor" id="footnote-ref5"></a> 录制摄像头</h2>
+<p>然后，我们使用上方获取的视频设备，即可用摄像头进行录制，如 <code>ffmpeg -f dshow -i video="V380 FHD Camera" output.mp4</code>。</p>
+<p>如果录屏的同时需要录制音频，则在命令中加入之前获取的音频设备，命令变为 <code>ffmpeg -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -i video="V380 FHD Camera" output.mp4</code>。</p>
+<h2> 输出视频：画中画</h2>
+<p>清楚如何用 FFmpeg 录制屏幕、摄像头和音频后，我需要将他们放置于同一画面中，将摄像头画面放在录制画面的右下侧，并用 overlay 方法将其置于屏幕画面的上方，遮挡对应区域。<sup class="footnote-ref"><a href="#footnote6">[6]</a><a class="footnote-anchor" id="footnote-ref6"></a></sup><a class="footnote-anchor" id="footnote-ref6"> <sup class="footnote-ref"></sup></a><a href="#footnote7">[7]</a><a class="footnote-anchor" id="footnote-ref7"></a></p><a class="footnote-anchor" id="footnote-ref7">
+<p>综合了以上三步，最终的录制命令为：<code>ffmpeg -f gdigrab -r 1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 output.mp4 -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -s 640x360 -i video="V380 FHD Camera" -filter_complex "overlay=W-w-1:H-h-1" -y</code>。</p>
+<ul>
+<li><code>-b:v 0 -crf 32</code> 是将视频比特率设置为最小，同时使用恒定质量，CRF 的范围可以从 0（最佳质量）到 63（最小文件大小）。</li>
+<li><code>overlay=W-w-1:H-h-1</code> 这是一个坐标，指浮层放在右下角，距离边缘 1px。</li>
+<li><code>-y</code> 遇到选项时，默认执行 yes 命令，比如覆盖同名的视频文件。</li>
+</ul>
+<p>命令中的录制帧率较低，但不会影响同时录制的音频。之后的录屏只需在终端中运行这段命令，就会自动录制屏幕，按 <code>q</code> 即可停止录制。使用 FFmpeg 后，我的录屏再也没有莫名其妙的崩溃了。</p>
+</a><h2><a class="footnote-anchor" id="footnote-ref7"></a> 常见问题</h2>
+<h3> Could not set video options</h3>
+<p>报错 <code>Could not set video options</code>，多是由于录制设置的帧率、分辨率超出设备范围造成的。使用命令 <code>ffmpeg -f dshow -list_options true -i video="V380 FHD Camera" -loglevel debug</code> 检查设备的输出属性，调整录制属性。</p>
+<h3> real-time buffer</h3>
+<p>报错 <code>real-time buffer [xxxxxx] [video input] too full or near too full (181% of size: 3041280 [rtbufsize parameter])! frame dropped!</code>，解决方案参考 <a href="https://github.com/rdp/screen-capture-recorder-to-video-windows-free/issues/136" target="_blank" rel="noopener noreferrer">issue 136</a>。这个报错我依然有出现，不过并未影响到录屏效果。</p>
+<h3> 摄像头分辨率错误</h3>
+<p>如果摄像头画面出现裁切，分辨率与预期不同，可以检查摄像头录制属性和摄像头应用输出分辨率。例如，部分版本的 SplitCam Video Driver 将外场景尺寸固定为 4:3，导致输出画面被裁剪，因此只能更换其他视频输入源。</p>
+<h3> 录制画面偏移</h3>
+<p>如果录制画面比例异常或画幅偏移，这可能是 Windows 的屏幕缩放造成的。可以在 ffmpeg.exe 的属性中勾选「高 DPI 缩放替代」来解决这个问题。</p>
+<h2> 后续</h2>
+<p>如果读了 FFmpeg 的文档，就会发现这个工具异常强大，很多采用 FFmpeg 的工具都没有将它的功能性发挥到极致，以比较普适的功能尽可能地换取软件操作的易用性。而对于像我这样有一个比较小众、甚至特殊需求的人来说，已经打包好的图形界面应用就很有可能力有不逮。这时，FFmpeg 这种底层的命令行工具可能就是唯一的选择，而且用了之后会发现，它在功能强大的同时还更加稳定，自定义能力也更强。而且，如果跨过了起初对于命令行的恐惧，理解和上手其实也不算多难。</p>
+<p>此外，FFmpeg 的功能不止录屏，它还有诸如连续截图、视频转帧率改大小等多种玩法，非常强大。</p>
+<p>前几天，群里有人分享了快速生成 FFmpeg 命令的工具 <a href="https://ffmpeg.guide/" target="_blank" rel="noopener noreferrer">FFmpeg.guide</a>。本以为能帮新手快速入门，使用后却感觉不实用。FFmpeg 最快入门的方法还是得看官方文档，也有一些爱好者整理翻译了相关的中文/视频教程。前期会耗费一些时间，但只要定制好自己要的命令，之后就能一直使用。</p>
+<p>当然，本文的目的是分享我监控自己的延伸，分享使用 FFmpeg 录屏的入门方法，而非完全掌握，因此只介绍了录屏相关的核心命令。如果有需要，还是推荐研究一下官方文档，或者跟着我做的试一试，说不定就有新收获。</p>
+<p>本文于「<a href="https://sspai.com/post/76637" target="_blank" rel="noopener noreferrer">少数派首发</a>」。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p><a href="https://blog.csdn.net/m0_60352504/article/details/126762161" target="_blank" rel="noopener noreferrer">ffmpeg 录屏命令</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p><a href="https://blog.csdn.net/JineD/article/details/123057086" target="_blank" rel="noopener noreferrer">ffmpeg 基础使用</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote3" class="footnote-item"><p><a href="https://ffmpeg.org/ffmpeg-codecs.html#libx265" target="_blank" rel="noopener noreferrer">libx265 编码说明</a> <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote4" class="footnote-item"><p><a href="https://magiclen.org/x265-preset/" target="_blank" rel="noopener noreferrer">x265 的 preset 与编码速度、视频画质以及比特率的关联</a> <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote5" class="footnote-item"><p><a href="https://blog.csdn.net/zhying719/article/details/123059209" target="_blank" rel="noopener noreferrer">FFmpeg 音视频倍速控制</a> <a href="#footnote-ref5" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote6" class="footnote-item"><p><a href="https://www.cnblogs.com/leisure_chn/p/10434209.html" target="_blank" rel="noopener noreferrer">FFmpeg 中 overlay 滤镜用法 - 水印及画中画</a> <a href="#footnote-ref6" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote7" class="footnote-item"><p><a href="https://blog.csdn.net/guanyijun123/article/details/121270650" target="_blank" rel="noopener noreferrer">ffmpeg 调整缩放裁剪视频的基础知识 (转)</a> <a href="#footnote-ref7" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    <author>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </contributor>
+    <published>2022-11-03T00:00:00.000Z</published>
+    <rights>Copyright by 清顺</rights>
+  </entry>
+  <entry>
+    <title type="text">「华为没电也能打电话」「iPhone 没电也能刷公交卡」，手机品牌是被绑架还是行业底线就是低？</title>
+    <id>https://newzone.top/posts/2022-09-07-extreme_branding_thinking_with_mate50.html</id>
+    <link href="https://newzone.top/posts/2022-09-07-extreme_branding_thinking_with_mate50.html"/>
+    <updated>2022-09-25T12:53:43.000Z</updated>
+    <summary type="html"><![CDATA[<p>华为 Mate50 时隔两年后再次发布，然后就看了一堆标题为「华为 Mate 50 没电也能打电话」的新闻，某度为您找到相关资讯 139 个。看到这标题，我直接傻眼，你们这些媒体是认真的吗？<strong>是收了哪边的公关费</strong>？</p>
+<figure><img src="http://tc.seoipo.com/2022-09-07-11-29-53.png?imageMogr2/thumbnail/!60p" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<h2> 个人观察</h2>]]></summary>
+    <content type="html"><![CDATA[<p>华为 Mate50 时隔两年后再次发布，然后就看了一堆标题为「华为 Mate 50 没电也能打电话」的新闻，某度为您找到相关资讯 139 个。看到这标题，我直接傻眼，你们这些媒体是认真的吗？<strong>是收了哪边的公关费</strong>？</p>
+<figure><img src="http://tc.seoipo.com/2022-09-07-11-29-53.png?imageMogr2/thumbnail/!60p" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<h2> 个人观察</h2>
+<p>我的主力机是荣耀 20S，用了三年依旧能打，因此我对华为和鸿蒙充满好感，平常的购买也会倾向国产。但是，半路半粉的我看到这个标题，对这款手机的好感直接 <code>-1</code>。</p>
+<p>当然，华为发布会上从没说过「没电也能打电话」，官方说法是「在 1% 低电量下智能启动聚能泵，待机可达三小时或者通话 12 分钟，或亮码 10 次，或扫码 4 次。」这个应急功能实际上是不错的，能缓解充电焦虑。历过数次 2% 直接关机后，我很喜欢这种关机前再榨一把的充电技术。</p>
+<p>有种黑的说法是，「只是把电池低电量保护分级罢了，比如，低电量 15% 电池进入保护，那么，后台只需将 85% 的电量重新显示为 100%，即手机显示的 1% 绝不是真实的 1%，小技俩而已。」</p>
+<p>而我对这种想法是不信的，如果真是这样的套壳宣传，随便检测都能发现，对于华为来说完全是得不偿失。</p>
+<h2> 华为需要极端宣传吗？</h2>
+<p>「走极端才能创造话题」是品牌成功和营销的第一步，但这只是第一步。</p>
+<p>在美国打压下，华为已经是民族主义的顶流了，正常宣传就能拥有一大堆的拥趸，不必每天打鸡血造话题，更不需要用震惊体来吸引流量。</p>
+<p>那为什么华为依然用「没电也能打电话」这类极端的宣传方式？</p>
+<p>我猜测是被自媒体绑架了。</p>
+<p>除打包合作外，媒体宣传费用是建立在播放、阅读、互动的基础上。即使是固定价格的打包合作，这次的流量也会决定是否有下次的合作。因此，对自媒体来说，它不在乎观众对品牌的观感是否被消耗，它在乎的是流量，是互动。即使有黑子，那也是互动啊。有了互动，平台会持续给宣传载体进行加权并推流，自媒体的议价能力也持续提高。</p>
+<figure><img src="http://tc.seoipo.com/2022-09-07-13-24-33.png" alt="" tabindex="0" loading="lazy"><figcaption>宣传流量图</figcaption></figure>
+<p>华为总被嘲笑有海军，可能有它自身的原因，但这些极端化媒体的绑架也少不了。</p>
+<p>过多的极端宣传，舆论引起的反噬会远超你获得的利益。不是每个人都会仔细查看你的宣传稿，看到上百篇高级写着华为「没电也能打电话」，真有人会以为你有什么黑科技了。</p>
+<h2> 手机行业的底线</h2>
+<p>原本以为只是华为这样，但 @Dean 提供了另一个梗「iPhone 没电也能刷公交卡」，理由是门禁卡等 NFC 设备没电也能使用。这个梗从 2018 开始每年都要吹一波，门禁卡没电，那么黑科技加持的 iPhone 没电自然也能刷公交卡。这乍听蛮像一回事的，网上也有一堆人相信，但苹果官方文档直接打脸，「即使您的 iPhone 需要充电，您或许也能够在设备上使用“快捷模式”卡片、凭证和钥匙。如果将 iPhone 关机，这项功能将不可用。」</p>
+<p>可能事实就像 @VirtualProsperity 和 @弘隐 说的一样，「作为前手机行业营销从业者，很负责的说，几乎任何手机品牌不会被媒体绑架。因为营销的时候媒体只是其中一个环节，但绝非重要到要为媒体去绑架的程度」，「手机行业的营销很多时候是很 LOW 的 LOW 到你不敢想象是真的」。</p>
+<p>我也身处广告行业，面对的甲方多为快消品。快消品购买频次高，因此品牌方把品牌商誉和防黑放在首位，而手机更换需要 1-3 年，等到下次购买顾客已经遗忘了前几年的极端宣传。或许手机品牌正因为这点而肆意妄为，一切宣传以传播效果为先，以眼前销量为主。一次两次还行，多次之后你还会上当？还会购买这类品牌？我不会。然而，手机行业的想法可能真的不一样，底线有点低。</p>
+<h2> 最后</h2>
+<p>如果你是刚起家的自媒体和品牌，尽管去用走极端的宣传方式，毕竟营销不是道德审判，活下去才是第一步。</p>
+<p>但如果你已经有一定的知名度了，请先想清楚，你真的需要「走极端」的垃圾流量吗？真的要赌互联网记忆？</p>
+]]></content>
+    <author>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </author>
+    <category term="观察随笔"/>
+    <contributor>
+      <name>清顺</name>
+      <uri>https://newzone.top</uri>
+    </contributor>
+    <published>2022-09-07T00:00:00.000Z</published>
+    <rights>Copyright by 清顺</rights>
+  </entry>
+</feed>
