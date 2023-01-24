@@ -132,6 +132,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 ## 开源工具
 
 - [Whipser](https://github.com/openai/whisper)：自动语音识别应用，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。
+- [CodeFormer](https://github.com/sczhou/CodeFormer)：使用 AI 算法修复图像和视频中的人脸。注意：路径与文件名不能出现中文。
 - [AutoCut](https://github.com/mli/autocut)：通过字幕来剪切视频
   - [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)：CUDA 的工具安装包，将 N 卡用于 AI 模型相关应用。
   - [PyTorch](https://pytorch.org/get-started/locally/)：开源的 Python 机器学习库，用于自然语言处理等应用程序。

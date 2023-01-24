@@ -1,6 +1,15 @@
-node_modules/
-docs/.vuepress/.temp/
-docs/.vuepress/.cache/
-docs/.vuepress/dist/
+# Node modules
+**/node_modules/**
+
+# Cache
+**/.vuepress/.cache/**
+# Temp
+**/.vuepress/.temp/**
+# Output
+**/.vuepress/dist/**
+
+# 自定义草稿箱
 docs/_temp/
+
+# GoodSync
 _gsdata_/
