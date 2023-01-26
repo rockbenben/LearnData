@@ -81,7 +81,7 @@ Windows 自用软件，以开源软件为主。
 
 文本比较：Beyond Compare & [WinMerge](https://github.com/WinMerge/winmerge)(开源)
 
-局域网传输：[FastCopy](http://fastcopy.jp/) & [Snapdrop](https://snapdrop.net/#) & 局域网通讯 (酷安) ~~& Send Anywhere & Pushbullet~~
+局域网传输：[FastCopy](http://fastcopy.jp/) & [Snapdrop](https://meta.appinn.net/t/topic/31209/1) & [LocalSend](https://www.appinn.com/localsend/) ~~& 局域网通讯 (酷安) & Send Anywhere & Pushbullet~~
 
 文件归档：[Dropit](http://www.dropitproject.com/)(自动文件归档) & GoodSync(文件同步) & [DropPoint](https://www.appinn.com/droppoint/)(复制中转框)
 

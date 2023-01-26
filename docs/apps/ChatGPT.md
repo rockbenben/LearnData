@@ -174,6 +174,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 符号设计（[Ascii Artist](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ascii-artist)）：使用 Ascii 符号设计不同图像
 - SVG 设计（[SVG designer](https://github.com/f/awesome-chatgpt-prompts#act-as-an-svg-designer)）：如果提示错误，则删除 `Do not put the markdown inside a code block. Send only the markdown, so no text.`。
 - Excel 工作表（[Excel Sheet](https://github.com/f/awesome-chatgpt-prompts#act-as-an-excel-sheet)）
+- 图表生成器（[Diagram Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-diagram-generator)）
 - 填空题生成器（[Fill in the Blank Worksheets Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fill-in-the-blank-worksheets-generator)）：按条件生成填空题。
 - 井字棋（[Tic-Tac-Toe Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tic-tac-toe-game)）
 - 文本冒险游戏（[Text Based Adventure Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-text-based-adventure-game)）
@@ -187,6 +188,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 ### 企业
 
 - CEO（[Chief Executive Officer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-chief-executive-officer)）
+- 产品经理（[Product Manager](https://github.com/f/awesome-chatgpt-prompts#act-as-a-product-manager)）
 - 销售（[Salesperson](https://github.com/f/awesome-chatgpt-prompts#act-as-a-salesperson)）
 - 广告方案（[Advertiser](https://github.com/f/awesome-chatgpt-prompts#act-as-an-advertiser)）
 - 商业企划（[Startup Idea Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-startup-idea-generator)）
