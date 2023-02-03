@@ -78,15 +78,15 @@ sudo apt-get install -y vim
 sudo update-alternatives --set editor /usr/bin/vim.basic
 
 # Install the required packages
-sudo apt-get install -y runit build-essential git zlib1g-dev libyaml-dev libssl-dev libgdbm-dev libreadline-dev libncurses5-dev libffi-dev curl openssh-server checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libicu-dev logrotate python-docutils pkg-config cmake nodejs graphviz jq
+sudo apt-get install -y runit build-essential git zlib1g-dev libyaml-dev libssl-dev libgdbm-dev libreadline-dev libncurses5-dev libffi-dev curl openssh-server checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libicu-dev logrotate python-docutils pkg-config cmake nodejs graphviz jq shared-mime-info
 
 # Ubuntu 18.04 Bionic
 sudo apt-get install -y runit-systemd
 
 # Download Ruby and compile it:
 mkdir /tmp/ruby && cd /tmp/ruby
-curl -L --progress-bar https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.bz2 | tar xj
-cd ruby-2.7.6
+curl -L --progress-bar https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.7.tar.bz2 | tar xj
+cd ruby-2.7.7
 ./configure --disable-install-rdoc
 make -j`nproc`
 sudo make install
@@ -149,16 +149,16 @@ sudo -u huginn -H chmod o-rwx .env
 sudo -u huginn -H cp config/unicorn.rb.example config/unicorn.rb
 ```
 
-`sudo -u huginn -H editor .env` 设置 huginn 环境依赖。编辑器为上面安装的 vim，`i` 在光标所在的位置插入，`esc` 退出编辑，`:qw` 保存并退出。
+`sudo -u huginn -H editor .env` 设置 huginn 环境依赖，更多选项查看 [.env 设置案例](https://github.com/huginn/huginn/blob/master/.env.example)。编辑器为上面安装的 vim，`i` 在光标所在的位置插入，`esc` 退出编辑，`:qw` 保存并退出。
 
 ```bash
 DATABASE_ADAPTER=mysql2
-#DATABASE_ENCODING=utf8   #修改点
+#DATABASE_ENCODING=utf8   # 修改点
 DATABASE_RECONNECT=true
-DATABASE_NAME=huginn_production  #修改点
+DATABASE_NAME=huginn_production  # 修改点
 DATABASE_POOL=20
-DATABASE_USERNAME=huginn   #修改点
-DATABASE_PASSWORD='$password' #修改点，换为你自己的密码
+DATABASE_USERNAME=huginn   # 修改点
+DATABASE_PASSWORD='$password' # 修改点，换为你自己的密码
 #DATABASE_HOST=your-domain-here.com
 #DATABASE_PORT=3306
 #DATABASE_SOCKET=/tmp/mysql.sock
@@ -169,7 +169,11 @@ DATABASE_PASSWORD='$password' #修改点，换为你自己的密码
 DATABASE_ENCODING=utf8mb4  #修改点
 
 ...
-RAILS_ENV=production  #修改点
+RAILS_ENV=production  # 修改点
+
+USE_GRAPHVIZ_DOT=dot # 取消注释，启用 GRAPHVIZ 来生成 diagram
+
+TIMEZONE="Asia/Shanghai" # 修改时区
 ```
 
 Install Gems 前用子账户重新设置运行目录权限 `sudo chown -R huginn:huginn /home/huginn`，防止报错 `Your user account isn't allowed to install to the system RubyGems`。

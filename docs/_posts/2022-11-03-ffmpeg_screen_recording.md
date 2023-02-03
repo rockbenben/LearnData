@@ -63,7 +63,7 @@ FFmpeg 是处理多媒体内容 (如音频、视频、字幕和相关元数据) 
 
 FFmpeg 的录制命令 gdigrab 不支持音频录制，也不支持直接调用摄像头，此时需使用开源的 [screen-capture-recorder-to-video-windows-free](https://github.com/rdp/screen-capture-recorder-to-video-windows-free/releases) 增强 FFmpeg 的录制功能，其最新版本为 0.12.12。
 
-通过命令 `ffmpeg -list_devices true -f dshow -i dummy` 查看支持的 Windows DirectShow 输入设备，采集视频和音频设备，包含设备名称，设备类型等信息。^[[ffmpeg 录屏命令](https://blog.csdn.net/m0_60352504/article/details/126762161)] 这里得到了视频设备「V380 FHD Camera」和音频设备「Analogue 1/2 (Audient iD4)」，之后会用到。
+通过命令 `ffmpeg -list_devices true -f dshow -i dummy` 查看支持的 Windows DirectShow 输入设备，采集视频和音频设备，包含设备名称，设备类型等信息。^[[ffmpeg 录屏命令](https://blog.csdn.net/m0_60352504/article/details/126762161)] 这里得到了视频设备「USB2.0 PC CAMERA」和音频设备「Analogue 1/2 (Audient iD4)」，之后会用到。
 
 ![](http://tc.seoipo.com/2022-11-03-10-33-52.png "查看视频/音频设备列表")
 
@@ -74,7 +74,7 @@ FFmpeg 的录制命令 gdigrab 不支持音频录制，也不支持直接调用�
 以下是录制命令的说明：
 
 - `-f gdigrab` 使用 FFmpeg 内置的 Windows 屏幕录制命令 [gdigrab](https://ffmpeg.org/ffmpeg-all.html#gdigrab)，录制对象可为全屏、指定范围和指定程序。MacOS 录屏方法为 [AVFoundation](https://ffmpeg.org/ffmpeg-devices.html#avfoundation)，Linux 录屏方法为 [x11grab](https://ffmpeg.org/ffmpeg-all.html#x11grab)。
-- `-r 20/1001` 帧率为 0.02，每 50 秒录制 1 帧。主流大家喜欢用 `-r 30` 录制，我这因为是每日监测视频，用了超低帧率。
+- `-r 20/1001` 帧率为 0.02，每 50 秒录制一帧。主流大家喜欢用 `-r 30` 录制，但由于这是用于每日监测，所以我采用了超低帧率。
 - `-c:v libx264` 是用于设置视频编解码器，一般可不填使用默认配置，`-c:a` 为音频编码。^[[libx265 编码说明](https://ffmpeg.org/ffmpeg-codecs.html#libx265)]
 - `-draw_mouse 1` 在 gdigrab 录制的视频中显示鼠标。
 - `-offset_x 0 -offset_y 0 -video_size 2560x1440` 为起始坐标和选定录制范围。坐标可使用截图软件获取，比如我用 Snipaste，点击 F1 后进入截图界面，鼠标经过当前区域就会显示坐标。
@@ -86,31 +86,31 @@ FFmpeg 的录制命令 gdigrab 不支持音频录制，也不支持直接调用�
 
 ## 录制摄像头
 
-然后，我们使用上方获取的视频设备，即可用摄像头进行录制，如 `ffmpeg -f dshow -i video="V380 FHD Camera" output.mp4`。
+然后，我们使用上方获取的视频设备，即可用摄像头进行录制，如 `ffmpeg -f dshow -i video="USB2.0 PC CAMERA" output.mp4`。
 
-如果录屏的同时需要录制音频，则在命令中加入之前获取的音频设备，命令变为 `ffmpeg -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -i video="V380 FHD Camera" output.mp4`。
+如果录屏的同时需要录制音频，则在命令中加入之前获取的音频设备，命令变为 `ffmpeg -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -i video="USB2.0 PC CAMERA" output.mp4`。
 
 ## 输出视频：画中画
 
 清楚如何用 FFmpeg 录制屏幕、摄像头和音频后，我需要将他们放置于同一画面中，将摄像头画面放在录制画面的右下侧，并用 overlay 方法将其置于屏幕画面的上方，遮挡对应区域。^[[FFmpeg 中 overlay 滤镜用法 - 水印及画中画](https://www.cnblogs.com/leisure_chn/p/10434209.html)] ^[[ffmpeg 调整缩放裁剪视频的基础知识 (转)](https://blog.csdn.net/guanyijun123/article/details/121270650)]
 
-综合了以上三步，最终的录制命令为：`ffmpeg -f gdigrab -r 1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 output.mp4 -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -s 640x360 -i video="V380 FHD Camera" -filter_complex "overlay=W-w-1:H-h-1" -y`。
+综合了以上三步，最终的录制命令为：`ffmpeg -f gdigrab -r 1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 -f segment -segment_time 2 -strftime 1 %Y-%m-%d_%H-%M-%S.mp4 -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -s 640x480 -i video="USB2.0 PC CAMERA" -filter_complex "overlay=W-w-1:H-h-50" -y`。
 
 - `-b:v 0 -crf 32` 是将视频比特率设置为最小，同时使用恒定质量，CRF 的范围可以从 0（最佳质量）到 63（最小文件大小）。
 - `overlay=W-w-1:H-h-1` 这是一个坐标，指浮层放在右下角，距离边缘 1px。
 - `-y` 遇到选项时，默认执行 yes 命令，比如覆盖同名的视频文件。
 
-命令中的录制帧率较低，但不会影响同时录制的音频。之后的录屏只需在终端中运行这段命令，就会自动录制屏幕，按 `q` 即可停止录制。使用 FFmpeg 后，我的录屏再也没有莫名其妙的崩溃了。
+命令中的录制帧率较低，但不会影响同时录制的音频。之后的录屏只需在终端中运行这段命令，就会自动录制屏幕，在终端上按 `q` 即可停止录制。使用 FFmpeg 后，我的录屏再也没有莫名其妙的崩溃了。
 
 ## 常见问题
 
 ### Could not set video options
 
-报错 `Could not set video options`，多是由于录制设置的帧率、分辨率超出设备范围造成的。使用命令 `ffmpeg -f dshow -list_options true -i video="V380 FHD Camera" -loglevel debug` 检查设备的输出属性，调整录制属性。
+报错 `Could not set video options`，多是由于录制设置的帧率、分辨率超出设备范围造成的。使用命令 `ffmpeg -f dshow -list_options true -i video="USB2.0 PC CAMERA" -loglevel debug` 检查设备的输出属性，调整录制属性。
 
 ### real-time buffer
 
-报错 `real-time buffer [xxxxxx] [video input] too full or near too full (181% of size: 3041280 [rtbufsize parameter])! frame dropped!`，解决方案参考 [issue 136](https://github.com/rdp/screen-capture-recorder-to-video-windows-free/issues/136)。这个报错我依然有出现，不过并未影响到录屏效果。
+报错 `real-time buffer [xxxxxx] [video input] too full or near too full (181% of size: 3041280 [rtbufsize parameter])! frame dropped!`，解决方案参考 [issue 136](https://github.com/rdp/screen-capture-recorder-to-video-windows-free/issues/136)。尽管我仍然遇到了这个错误，但它并未影响录屏的效果。
 
 ### 摄像头分辨率错误
 

@@ -188,7 +188,7 @@ Vercel 部署步骤如下：
 
 ### ERR_MODULE
 
-生成静态网页时，如果出现报错 `Error [ERR_MODULE_NOT_FOUND]: Cannot find module`，可能是第三方插件或 pacakge.json 环境依赖未正确配置。该报错出现几率极低，如果遇到，请在 issue 或评论区留言。
+生成静态网页时，如果出现 `Error [ERR_MODULE_NOT_FOUND]: Cannot find module` 的保存，可能是第三方插件或 pacakge.json 环境依赖未正确配置。该报错出现几率极低，如果遇到，可用最新版本的 `package.json` 和 `pnpm-lock.yaml` 来覆盖本地设置。如果你已经修改了环境依赖，可以删除主目录下的 `.npmrc` 文件。
 
 ### 静态文件名字总变
 

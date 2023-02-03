@@ -29,12 +29,12 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 
 ### 点评/评鉴
 
-- 评论家（[Commentariat](https://github.com/f/awesome-chatgpt-prompts#act-as-a-commentariat)）
-- 电影评论（[Movie Critic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-movie-critic)，[Film Critic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-film-critic)）
-- 科技博主（[Tech Writer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tech-writer)）
-- 科技评论（[Tech Reviewer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tech-reviewer)）：评价技术硬件
-- 美食评论（[Food Critic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-food-critic)）
-- 期刊评审（[Journal Reviewer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-journal-reviewer)）
+- 新闻评论（[Commentariat](https://github.com/f/awesome-chatgpt-prompts#act-as-a-commentariat)）：围绕提供的新闻故事或主题，讨论其中问题的潜在解决方案和观点。
+- 电影评论（[Movie Critic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-movie-critic)，[Film Critic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-film-critic)）：从情节、表演、摄影、导演、音乐等方面对电影进行评论。
+- 科技博主（[Tech Writer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tech-writer)）：指导如何写科技性文章。
+- 科技评论（[Tech Reviewer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tech-reviewer)）：从优点、缺点、功能、同类对比等角度对技术和硬件进行评价。
+- 美食评论（[Food Critic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-food-critic)）：根据餐厅情况，提供一份关于食物和服务的评论。
+- 期刊评审（[Journal Reviewer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-journal-reviewer)）：对提交出版物的文章进行审查和评论。
 
 ### 写作辅助
 
@@ -42,18 +42,18 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 写作改进助理：我写的提示，用于重构文字段落，改善句式。但由于 ChatGPT 对中文回复的限制，大段文字的改写需要通过 OpenAI Playground 来完成，因此暂时没有发布到 Awesome ChatGPT Prompts，有需要的可以复制使用。
   > Please act as a writing improvement assistant. Your task is to improve the spelling, grammar, clarity, concision, and overall readability of the text I provide, and to break down long sentences, reduce repetition, and provide suggestions for improvement. In your responses, please only provide the corrected version of the text and do not include explanations. Reply in the language type of the text. My first text is: ""
 - 同义词（[Synonym finder](https://github.com/f/awesome-chatgpt-prompts#act-as-a-synonym-finder)）
-- 格言作者（[Gnomist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-gnomist)）
-- 箴言书（[Aphorism Book](https://github.com/f/awesome-chatgpt-prompts#act-as-an-aphorism-book)）：按要求输出各类名人名言。
+- 箴言书（[Aphorism Book](https://github.com/f/awesome-chatgpt-prompts#act-as-an-aphorism-book)）：按要求输出鼓舞人心的名言和有意义的格言。
 - 疯子（[Lunatic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-lunatic)）：随机生成毫无逻辑的句子
-- 抄袭检查器（[Plagiarism Checker](https://github.com/f/awesome-chatgpt-prompts#act-as-a-plagiarism-checker)）
+- 抄袭检查（[Plagiarism Checker](https://github.com/f/awesome-chatgpt-prompts#act-as-a-plagiarism-checker)）：判断输入句子是否在 ChatGPT 数据库中存在。
 - 写作建议（[AI Writing Tutor](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-writing-tutor)）：提供写作改进方案和建议，但并不能直接帮你修改文档。（个人感觉只适合老师使用）
 
 ## 生活
 
-- 自助百科（[Self-Help Book](https://github.com/f/awesome-chatgpt-prompts#act-as-a-self-help-book)）
+- 自助百科（[Self-Help Book](https://github.com/f/awesome-chatgpt-prompts#act-as-a-self-help-book)）：为你的生活/工作提供建议和提示，比如如何改善人际关系。
+- 活动建议（[Gnomist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-gnomist)）：根据你想做的事情（比如周年庆祝），给予行动或活动建议。
 - 应急反应专家（[Emergency Response Professional](https://github.com/f/awesome-chatgpt-prompts#act-as-an-emergency-response-professional)）：对交通和生活中的应急时间提供建议。
-- 购物建议（[Personal Shopper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-shopper)）
-- 职业顾问（[Career Counselor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-career-counselor)）
+- 购物建议（[Personal Shopper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-shopper)）：提供预算和喜好，输出购买建议。
+- 职业顾问（[Career Counselor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-career-counselor)）：根据你的技能、兴趣和经验，给予岗位建议。
 - 生活习惯（[Life Coach 1](https://github.com/f/awesome-chatgpt-prompts#act-as-a-life-coach-1)）：输入一本非小说类书籍的标题和作者，以最好理解的方式输出该书的核心原则。另外，给出一个可行的步骤清单，以及如何将这些原则应用到日常生活中。
 
 ### 趣味知识
@@ -107,6 +107,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 ### 老师/学术
 
 - 数学老师（[Math Teacher](https://github.com/f/awesome-chatgpt-prompts#act-as-a-math-teacher)）
+- 数学史教师（[Mathematical History Teacher](https://github.com/f/awesome-chatgpt-prompts#act-as-a-mathematical-history-teacher)）：回复数学史相关问题，不解答数学问题。
 - 数学家（[Mathematician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-mathematician)）
 - 统计学家（[Statistician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-statistician)）
 - 词汇学家（[Etymologist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-etymologist)）
@@ -180,6 +181,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 文本冒险游戏（[Text Based Adventure Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-text-based-adventure-game)）
 - 模拟 AI（[AI Trying to Escape the Box](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-trying-to-escape-the-box)）
 - 科学数据可视化（[Scientific DatVisualizer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-scientific-data-visualizer)）
+- 喝醉回复（[Drunk Person](https://github.com/f/awesome-chatgpt-prompts#act-as-a-drunk-person)）：扮演一个喝醉的人来回答，可能会犯语法错误、答错问题，也可能会忽略某些问题。
 - 文本浏览器（[Web Browser](https://github.com/f/awesome-chatgpt-prompts#act-as-a-web-browser)）：以文本方式输入网址的结果（非实时）。
 - 消息生成器（[Commit Message Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-commit-message-generator)）
 
@@ -221,6 +223,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 作曲家（[Composer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-composer)）
 - 古典音乐作曲家（[Classical Music Composer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-classical-music-composer)）
 - 说唱歌手（[Rapper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-rapper)）
+- 歌曲推荐（[Song Recommender](https://github.com/f/awesome-chatgpt-prompts#act-as-a-song-recommender)）：根据提供的一首歌曲，推荐 10 首歌曲。
 
 ### 体育
 

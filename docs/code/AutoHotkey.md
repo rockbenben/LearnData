@@ -7,7 +7,7 @@ order: 4
 
 AutoHotkey 是 Windows 平台下开源的热键脚本语言。AHK 学习门槛不高，初期可以通过脚本录制来完成，我通过 AHK 热键启动、定时判断、改键盘等多种自动化操作，推荐学习制作你的专属自动化脚本。
 
-- [AutoHotkey 中文说明](https://wyagd001.github.io/zh-cn/docs/AutoHotkey.htm)：[按键 Key 名列表](https://wyagd001.github.io/zh-cn/docs/commands/Send.htm#keynames)，[AHK 环境变量](https://wyagd001.github.io/zh-cn/docs/Variables.htm#OSVersion)
+- [AutoHotkey 中文说明](https://wyagd001.github.io/v2/docs)：[按键 Key 名列表](https://wyagd001.github.io/v2/docs/KeyList.htm)，[AHK 环境变量](https://wyagd001.github.io/v2/docs/Variables.htm#BuiltIn)
 - 脚本录制/功能编辑：[Pulover's Macro Creator](https://www.macrocreator.com/download/)，[AutoHotkey 語法產生器 (線上網站)](https://github.com/papple23g/ahkcompiler)
 
 | 符号 | 作用                                                                                |
@@ -16,7 +16,7 @@ AutoHotkey 是 Windows 平台下开源的热键脚本语言。AHK 学习门槛�
 | !    | Alt 键                                                                              |
 | ^    | Ctrl 键                                                                             |
 | +    | Shift 键                                                                            |
-| `    | 转义字符，参考[转义序列](https://wyagd001.github.io/zh-cn/docs/misc/EscapeChar.htm) |
+| `    | 转义字符，参考[转义序列](https://wyagd001.github.io/v2/docs/misc/EscapeChar.htm) |
 | ;    | 代表注释内容，不影响函数                                                            |
 | ::   | (两个英文冒号)，代表分隔                                                            |
 
