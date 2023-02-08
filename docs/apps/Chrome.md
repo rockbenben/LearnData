@@ -81,6 +81,8 @@ order: 5
 
 - [Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)：优化 GitHub 代码，支持鼠标悬停、代码搜索、查看引用等。
 
+- [沉浸式翻译](https://chrome.google.com/webstore/detail/immersive-translate/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)：免费的双语对照网页翻译，[彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh) 的替代品。
+
 ## 实用工具
 
 - [Vimium C](https://github.com/gdh1995/vimium-c/blob/master/README-zh.md)：全键盘操作浏览器，建议开启 `chrome://flags/#extensions-on-chrome-urls`。
@@ -98,7 +100,5 @@ order: 5
 - [Similar Sites](https://chrome.google.com/webstore/detail/similar-sites-discover-re/necpbmbhhdiplmfhmjicabdeighkndkn)：发现与您当前正在浏览的网站类似的网站。
 
 - [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg/)：查看竞争对手网站使用哪些技术、工具和第三方服务。
-
-- [彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh)：双语对照网页翻译，使用更简单。
 
 - [Link to Text Fragment](https://chrome.google.com/webstore/detail/link-to-text-fragment/pbcodcjpfjdpcineamnnmbkkmkdpajjg)：分享网页并将高亮你选中文本 (仅支持 chrome 浏览器)。

@@ -45,7 +45,7 @@ icon: check
 
 ### 自我监控
 
-为了更好地监督自己，我制定了一套 [自我监控方案](https://newzone.top/posts/2022-05-22-surveillance_video_for_myself.html)，以记录自己的私人工作状态。
+为了更好地监督自己，我制定了一套[自我监控方案](https://newzone.top/posts/2022-05-22-surveillance_video_for_myself.html)，以记录自己的私人工作状态。
 
 1. 开机（8 点）启动录屏命令，并检测护眼提醒是否开启。可参考 [FFmpeg 录屏方案](https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html)来修改命令：
 
@@ -62,7 +62,7 @@ icon: check
    Run, PowerShell.exe -NoExit -Command &{dvr-scan -i output.mp4 -o %A_YYYY%-%A_MM%-%A_DD%_Scanned.avi}, D:\Backup\Libraries\Desktop
    ```
 
-3. 使用 VLC 播放器可以以 31.25 倍的速度回放监控视频，并结合 ManicTime 来回顾当日内容。要轻松实现 VLC 的高倍速播放，可以在「菜单栏」->「视图」中开启「状态栏」。此外，通过剪辑，可以达到 100 倍的播放速度。
+3. 使用 VLC 播放器可以以 31.25 倍的速度回放监控视频，并结合 ManicTime 来回顾当日内容。要轻松实现 VLC 的高倍速播放，可以在「菜单栏」->「视图」中开启「状态栏」。此外，通过剪映，可以达到 100 倍的播放速度。
 
 ## 时间管理
 
