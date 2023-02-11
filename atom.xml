@@ -9,7 +9,7 @@
   </author>
   <logo>https://newzone.top/logo.svg</logo>
   <rights>Copyright by 清顺</rights>
-  <updated>2023-02-08T21:28:55.831Z</updated>
+  <updated>2023-02-11T23:10:45.527Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -854,7 +854,7 @@
     <title type="text">抛弃又贵又难用的录屏软件，3 分钟入门 FFmpeg</title>
     <id>https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html</id>
     <link href="https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html"/>
-    <updated>2023-02-03T23:01:57.000Z</updated>
+    <updated>2023-02-11T23:09:17.000Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>当所有的录屏应用都无法满足我时，我的目光投向了那个最终极的命令行工具，FFmpeg。</p>
 </blockquote>
@@ -919,13 +919,13 @@
 <li><code>-i desktop</code> 为输入设备，指代显示屏。</li>
 <li><code>out.mp4</code> 为输出视频的名字与格式。默认保存在命令运行文件夹，可以在此处设置输出位置，如 <code>D:\Backup\Libraries\Desktop\out.mp4</code>。或使用时间对视频命名，将 <code>out.mp4</code> 替换为 <code>-f segment -segment_time 2 -strftime 1 %Y-%m-%d_%H-%M-%S.mp4</code>，视频样例名为 <code>2022-11-06_10-53-17.mp4</code>。</li>
 </a></ul><a class="footnote-anchor" id="footnote-ref3">
-</a><p><a class="footnote-anchor" id="footnote-ref3">除上方命令外，FFmpeg 还有许多参数可以设置，比如 <code>-pix_fmt yuv420p -preset ultrafast</code> 提升编码速度，<code>-filter:v "setpts=0.1*PTS"</code> 减少视频抽样，但 setpts 不是视频加速，对于低帧率的视频影响很小。<sup class="footnote-ref"></sup></a><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"> <sup class="footnote-ref"></sup></a><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></p><a class="footnote-anchor" id="footnote-ref5">
+</a><p><a class="footnote-anchor" id="footnote-ref3">除上方命令外，FFmpeg 还有许多参数可以设置，比如 <code>-pix_fmt yuv420p -preset ultrafast</code> 提升编码速度，<code>-filter:v 'setpts=0.1*PTS'</code> 减少视频抽样，但 setpts 不是视频加速，对于低帧率的视频影响很小。<sup class="footnote-ref"></sup></a><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"> <sup class="footnote-ref"></sup></a><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></p><a class="footnote-anchor" id="footnote-ref5">
 </a><h2><a class="footnote-anchor" id="footnote-ref5"></a> 录制摄像头</h2>
-<p>然后，我们使用上方获取的视频设备，即可用摄像头进行录制，如 <code>ffmpeg -f dshow -i video="USB2.0 PC CAMERA" output.mp4</code>。</p>
-<p>如果录屏的同时需要录制音频，则在命令中加入之前获取的音频设备，命令变为 <code>ffmpeg -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -i video="USB2.0 PC CAMERA" output.mp4</code>。</p>
+<p>然后，我们使用上方获取的视频设备，即可用摄像头进行录制，如 <code>ffmpeg -f dshow -i video='USB2.0 PC CAMERA' output.mp4</code>。</p>
+<p>如果录屏的同时需要录制音频，则在命令中加入之前获取的音频设备，命令变为 <code>ffmpeg -f dshow -i audio='Analogue 1/2 (Audient iD4)' -f dshow -i video='USB2.0 PC CAMERA' output.mp4</code>。</p>
 <h2> 输出视频：画中画</h2>
 <p>清楚如何用 FFmpeg 录制屏幕、摄像头和音频后，我需要将他们放置于同一画面中，将摄像头画面放在录制画面的右下侧，并用 overlay 方法将其置于屏幕画面的上方，遮挡对应区域。<sup class="footnote-ref"><a href="#footnote6">[6]</a><a class="footnote-anchor" id="footnote-ref6"></a></sup><a class="footnote-anchor" id="footnote-ref6"> <sup class="footnote-ref"></sup></a><a href="#footnote7">[7]</a><a class="footnote-anchor" id="footnote-ref7"></a></p><a class="footnote-anchor" id="footnote-ref7">
-<p>综合了以上三步，最终的录制命令为：<code>ffmpeg -f gdigrab -r 1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 -f segment -segment_time 2 -strftime 1 %Y-%m-%d_%H-%M-%S.mp4 -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -s 640x480 -i video="USB2.0 PC CAMERA" -filter_complex "overlay=W-w-1:H-h-50" -y</code>。</p>
+<p>综合了以上三步，最终的录制命令为：<code>ffmpeg -f gdigrab -r 1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 -f segment -segment_time 2 -strftime 1 %Y-%m-%d_%H-%M-%S.mp4 -f dshow -i audio='Analogue 1/2 (Audient iD4)' -f dshow -s 640x480 -i video='USB2.0 PC CAMERA' -filter_complex 'overlay=W-w-1:H-h-50' -y</code>。</p>
 <ul>
 <li><code>-b:v 0 -crf 32</code> 是将视频比特率设置为最小，同时使用恒定质量，CRF 的范围可以从 0（最佳质量）到 63（最小文件大小）。</li>
 <li><code>overlay=W-w-1:H-h-1</code> 这是一个坐标，指浮层放在右下角，距离边缘 1px。</li>
@@ -934,13 +934,15 @@
 <p>命令中的录制帧率较低，但不会影响同时录制的音频。之后的录屏只需在终端中运行这段命令，就会自动录制屏幕，在终端上按 <code>q</code> 即可停止录制。使用 FFmpeg 后，我的录屏再也没有莫名其妙的崩溃了。</p>
 </a><h2><a class="footnote-anchor" id="footnote-ref7"></a> 常见问题</h2>
 <h3> Could not set video options</h3>
-<p>报错 <code>Could not set video options</code>，多是由于录制设置的帧率、分辨率超出设备范围造成的。使用命令 <code>ffmpeg -f dshow -list_options true -i video="USB2.0 PC CAMERA" -loglevel debug</code> 检查设备的输出属性，调整录制属性。</p>
+<p>报错 <code>Could not set video options</code>，多是由于录制设置的帧率、分辨率超出设备范围造成的。使用命令 <code>ffmpeg -f dshow -list_options true -i video='USB2.0 PC CAMERA' -loglevel debug</code> 检查设备的输出属性，调整录制属性。</p>
 <h3> real-time buffer</h3>
 <p>报错 <code>real-time buffer [xxxxxx] [video input] too full or near too full (181% of size: 3041280 [rtbufsize parameter])! frame dropped!</code>，解决方案参考 <a href="https://github.com/rdp/screen-capture-recorder-to-video-windows-free/issues/136" target="_blank" rel="noopener noreferrer">issue 136</a>。尽管我仍然遇到了这个错误，但它并未影响录屏的效果。</p>
 <h3> 摄像头分辨率错误</h3>
 <p>如果摄像头画面出现裁切，分辨率与预期不同，可以检查摄像头录制属性和摄像头应用输出分辨率。例如，部分版本的 SplitCam Video Driver 将外场景尺寸固定为 4:3，导致输出画面被裁剪，因此只能更换其他视频输入源。</p>
 <h3> 录制画面偏移</h3>
 <p>如果录制画面比例异常或画幅偏移，这可能是 Windows 的屏幕缩放造成的。可以在 ffmpeg.exe 的属性中勾选「高 DPI 缩放替代」来解决这个问题。</p>
+<h3> 脚本启动报错</h3>
+<p>使用 AutoHotkey 等外部脚本启用录屏命令时，报错 <code>Could not find video device with name [USB2.0]</code>，而正确设备名是「USB2.0 PC CAMERA」。检查录制命令中是否使用了双引号，需将双引号 <code>"</code> 替换为单引号 <code>'</code>。</p>
 <h2> 后续</h2>
 <p>如果读了 FFmpeg 的文档，就会发现这个工具异常强大，很多采用 FFmpeg 的工具都没有将它的功能性发挥到极致，以比较普适的功能尽可能地换取软件操作的易用性。而对于像我这样有一个比较小众、甚至特殊需求的人来说，已经打包好的图形界面应用就很有可能力有不逮。这时，FFmpeg 这种底层的命令行工具可能就是唯一的选择，而且用了之后会发现，它在功能强大的同时还更加稳定，自定义能力也更强。而且，如果跨过了起初对于命令行的恐惧，理解和上手其实也不算多难。</p>
 <p>此外，FFmpeg 的功能不止录屏，它还有诸如连续截图、视频转帧率改大小等多种玩法，非常强大。</p>
