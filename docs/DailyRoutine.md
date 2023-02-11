@@ -50,12 +50,13 @@ icon: check
 1. 开机（8 点）启动录屏命令，并检测护眼提醒是否开启。可参考 [FFmpeg 录屏方案](https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html)来修改命令：
 
    ```bash
-   ffmpeg -f gdigrab -r 0.1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 output.mp4 -f dshow -s 640x480 -i video="USB2.0 PC CAMERA" -filter_complex "overlay=W-w-1:H-h-50" -y
+   ffmpeg -f gdigrab -r 0.1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 output.mp4 -f dshow -s 640x480 -i video='USB2.0 PC CAMERA' -filter_complex 'overlay=W-w-1:H-h-50' -y
    ```
 
 2. 晚上 10 点执行关机程序：静音、关闭护眼提醒、关闭录屏终端，并使用 dvr-scan 删除视频中的静止帧。这些步骤可以通过 AutoHotkey 命令自动完成。
 
    ```autohotkey
+   Send, {Volume_Mute}
    Process, Close, Stretchly.exe
    Process, Close, pwsh.exe
    Sleep, 500000

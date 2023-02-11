@@ -47,14 +47,14 @@ sudo bundle exec rake production:export
 
 - 定期导出数据库到本地。
 - 测试任务卡住后，rake production:export 是否有效。
-- 开机启动 Huginn 服务，需在 Docker 容器终端机中执行。runsvdir 在 SSH 中会报错 `supervise/lock: temporary failure`，但在终端机中运行正常。`production:export` 步骤会提示 `unable to open supervise/stat.new: file does not exist`，但此报错似乎不影响 Huginn 的运行，等有时间看看是否有相关报错。
+- 开机启动 Huginn 服务，可在 Docker 容器终端机中执行。`production:export` 步骤会提示 `unable to lock supervise/lock: temporary failure`，但此报错似乎不影响 Huginn 的运行，等有时间看看是否有相关报错。
 
   ```bash
   sudo service mysql restart
   sudo service nginx restart
   cd /home/huginn/huginn
+  git config --global --add safe.directory /home/huginn/huginn
   sudo runsvdir /etc/service &
-  sudo bundle exec rake production:force_stop
   sudo bundle exec rake production:export
   ```
 
@@ -62,6 +62,7 @@ sudo bundle exec rake production:export
 
 部署环境：Ubuntu 18.04 的 Docker 镜像（同样适用于服务器）
 安装参考：[Manual Installation on Debian/Ubuntu](https://github.com/huginn/huginn/blob/master/doc/manual/installation.md)，[Novice-setup-guide](https://github.com/huginn/huginn/wiki/Novice-setup-guide)
+手动升级：[manual Update](https://github.com/huginn/huginn/blob/master/doc/manual/update.md)
 
 Huginn 部署步骤：
 
@@ -149,7 +150,7 @@ sudo -u huginn -H chmod o-rwx .env
 sudo -u huginn -H cp config/unicorn.rb.example config/unicorn.rb
 ```
 
-`sudo -u huginn -H editor .env` 设置 huginn 环境依赖，更多选项查看 [.env 设置案例](https://github.com/huginn/huginn/blob/master/.env.example)。编辑器为上面安装的 vim，`i` 在光标所在的位置插入，`esc` 退出编辑，`:qw` 保存并退出。
+`sudo -u huginn -H editor .env` 设置 huginn 环境依赖，更多选项查看 [.env 设置案例](https://github.com/huginn/huginn/blob/master/.env.example)。编辑器为上面安装的 vim，`i` 在光标所在的位置插入，`esc` 退出编辑，`:wq` 保存并退出。
 
 ```bash
 DATABASE_ADAPTER=mysql2
@@ -173,14 +174,16 @@ RAILS_ENV=production  # 修改点
 
 USE_GRAPHVIZ_DOT=dot # 取消注释，启用 GRAPHVIZ 来生成 diagram
 
-TIMEZONE="Asia/Shanghai" # 修改时区
+DEFAULT_HTTP_USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" # 浏览器访问
+
+TIMEZONE="CST (China Standard Time)" # 时区需按指定格式填写，否则会报错 runsv not running
 ```
 
 Install Gems 前用子账户重新设置运行目录权限 `sudo chown -R huginn:huginn /home/huginn`，防止报错 `Your user account isn't allowed to install to the system RubyGems`。
 
 ```bash
 # 注意看黄字警告
-gem install bundler:2.3.10
+gem install bundler
 # Docker 环境中，时区容易丢失
 apt-get install tzdata
 # Install Gems
@@ -218,7 +221,7 @@ web: bundle exec unicorn -c config/unicorn.rb
 jobs: bundle exec rails runner bin/threaded.rb
 ```
 
-`sv stop huginn-web-1` 的报错，使用 `foreman export runit -a huginn -l /home/huginn/huginn/log /etc/service`，`chown -R huginn:huginn /etc/service/huginn*`。^[[rake export hangs](https://github.com/huginn/huginn/issues/2410)]
+`'sv stop huginn-web-1' exited with a non-zero return value: fail: huginn-web-1: runsv not running` 的报错，使用 `foreman export runit -a huginn -l /home/huginn/huginn/log /etc/service` 和 `chown -R huginn:huginn /etc/service/huginn*`。^[[rake export hangs](https://github.com/huginn/huginn/issues/2410)] ^[[Huginn failed to restart after installed node and systemd](https://github.com/huginn/huginn/issues/1618)] 如果是重启 Huginn 时出现此报错，则检查 `sudo -u huginn -H editor .env` 设置。
 
 ```bash
 # 切换到

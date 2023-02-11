@@ -82,19 +82,19 @@ FFmpeg 的录制命令 gdigrab 不支持音频录制，也不支持直接调用�
 - `-i desktop` 为输入设备，指代显示屏。
 - `out.mp4` 为输出视频的名字与格式。默认保存在命令运行文件夹，可以在此处设置输出位置，如 `D:\Backup\Libraries\Desktop\out.mp4`。或使用时间对视频命名，将 `out.mp4` 替换为 `-f segment -segment_time 2 -strftime 1 %Y-%m-%d_%H-%M-%S.mp4`，视频样例名为 `2022-11-06_10-53-17.mp4`。
 
-除上方命令外，FFmpeg 还有许多参数可以设置，比如 `-pix_fmt yuv420p -preset ultrafast` 提升编码速度，`-filter:v "setpts=0.1*PTS"` 减少视频抽样，但 setpts 不是视频加速，对于低帧率的视频影响很小。^[[x265 的 preset 与编码速度、视频画质以及比特率的关联](https://magiclen.org/x265-preset/)] ^[[FFmpeg 音视频倍速控制](https://blog.csdn.net/zhying719/article/details/123059209)]
+除上方命令外，FFmpeg 还有许多参数可以设置，比如 `-pix_fmt yuv420p -preset ultrafast` 提升编码速度，`-filter:v 'setpts=0.1*PTS'` 减少视频抽样，但 setpts 不是视频加速，对于低帧率的视频影响很小。^[[x265 的 preset 与编码速度、视频画质以及比特率的关联](https://magiclen.org/x265-preset/)] ^[[FFmpeg 音视频倍速控制](https://blog.csdn.net/zhying719/article/details/123059209)]
 
 ## 录制摄像头
 
-然后，我们使用上方获取的视频设备，即可用摄像头进行录制，如 `ffmpeg -f dshow -i video="USB2.0 PC CAMERA" output.mp4`。
+然后，我们使用上方获取的视频设备，即可用摄像头进行录制，如 `ffmpeg -f dshow -i video='USB2.0 PC CAMERA' output.mp4`。
 
-如果录屏的同时需要录制音频，则在命令中加入之前获取的音频设备，命令变为 `ffmpeg -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -i video="USB2.0 PC CAMERA" output.mp4`。
+如果录屏的同时需要录制音频，则在命令中加入之前获取的音频设备，命令变为 `ffmpeg -f dshow -i audio='Analogue 1/2 (Audient iD4)' -f dshow -i video='USB2.0 PC CAMERA' output.mp4`。
 
 ## 输出视频：画中画
 
 清楚如何用 FFmpeg 录制屏幕、摄像头和音频后，我需要将他们放置于同一画面中，将摄像头画面放在录制画面的右下侧，并用 overlay 方法将其置于屏幕画面的上方，遮挡对应区域。^[[FFmpeg 中 overlay 滤镜用法 - 水印及画中画](https://www.cnblogs.com/leisure_chn/p/10434209.html)] ^[[ffmpeg 调整缩放裁剪视频的基础知识 (转)](https://blog.csdn.net/guanyijun123/article/details/121270650)]
 
-综合了以上三步，最终的录制命令为：`ffmpeg -f gdigrab -r 1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 -f segment -segment_time 2 -strftime 1 %Y-%m-%d_%H-%M-%S.mp4 -f dshow -i audio="Analogue 1/2 (Audient iD4)" -f dshow -s 640x480 -i video="USB2.0 PC CAMERA" -filter_complex "overlay=W-w-1:H-h-50" -y`。
+综合了以上三步，最终的录制命令为：`ffmpeg -f gdigrab -r 1 -draw_mouse 1 -offset_x 0 -offset_y 0 -video_size 2560x1440 -i desktop -s 1280x720 -b:v 0 -crf 32 -f segment -segment_time 2 -strftime 1 %Y-%m-%d_%H-%M-%S.mp4 -f dshow -i audio='Analogue 1/2 (Audient iD4)' -f dshow -s 640x480 -i video='USB2.0 PC CAMERA' -filter_complex 'overlay=W-w-1:H-h-50' -y`。
 
 - `-b:v 0 -crf 32` 是将视频比特率设置为最小，同时使用恒定质量，CRF 的范围可以从 0（最佳质量）到 63（最小文件大小）。
 - `overlay=W-w-1:H-h-1` 这是一个坐标，指浮层放在右下角，距离边缘 1px。
@@ -106,7 +106,7 @@ FFmpeg 的录制命令 gdigrab 不支持音频录制，也不支持直接调用�
 
 ### Could not set video options
 
-报错 `Could not set video options`，多是由于录制设置的帧率、分辨率超出设备范围造成的。使用命令 `ffmpeg -f dshow -list_options true -i video="USB2.0 PC CAMERA" -loglevel debug` 检查设备的输出属性，调整录制属性。
+报错 `Could not set video options`，多是由于录制设置的帧率、分辨率超出设备范围造成的。使用命令 `ffmpeg -f dshow -list_options true -i video='USB2.0 PC CAMERA' -loglevel debug` 检查设备的输出属性，调整录制属性。
 
 ### real-time buffer
 
@@ -119,6 +119,10 @@ FFmpeg 的录制命令 gdigrab 不支持音频录制，也不支持直接调用�
 ### 录制画面偏移
 
 如果录制画面比例异常或画幅偏移，这可能是 Windows 的屏幕缩放造成的。可以在 ffmpeg.exe 的属性中勾选「高 DPI 缩放替代」来解决这个问题。
+
+### 脚本启动报错
+
+使用 AutoHotkey 等外部脚本启用录屏命令时，报错 `Could not find video device with name [USB2.0]`，而正确设备名是「USB2.0 PC CAMERA」。检查录制命令中是否使用了双引号，需将双引号 `"` 替换为单引号 `'`。
 
 ## 后续
 

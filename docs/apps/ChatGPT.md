@@ -14,6 +14,9 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 若要使用中文回复，请在倒数第二句插入条件 `Reply in Chinese.`。
 - 为了保持描述的精确性，提示词请使用英文，而最后一句的定制条件可以使用任何语言，包括中文。
 - 后续回答中的定制条件可以使用引号 `""` 框选，以防止被误认为是新的提示词。
+- ChatGPT Plus 目前不支持国内信用卡。
+  - Depoy 虚拟卡：仅支持 USDT 充值，需通过 KYC 实名认证，月费 1 USD，充值费率为 1.35%（Min 1USD）。
+  - VCC 虚拟卡：无需实名，开卡费 66 元，有效期一年，包一年代充。ChatGPT Plus 月费为 20 美元，按汇率折算人民币为 136 元，但商家实际收取 150 元，差价相当于支付了月费。
 
 ## 文字
 
@@ -26,6 +29,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 诗人（[Poet](https://github.com/f/awesome-chatgpt-prompts#act-as-a-poet)）：根据话题或主题输出诗句。
 - 新闻记者（[Journalist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-journalist)）：引用已有的数据资料，用新闻的写作风格输出主题文章。
 - 论文（[Academician](https://github.com/f/awesome-chatgpt-prompts#act-as-an-academician)，[Essay Writer](https://github.com/f/awesome-chatgpt-prompts#act-as-an-essay-writer)）：根据主题输出内容翔实有信服力的论文。
+- 求职信（[Cover Letter](https://github.com/f/awesome-chatgpt-prompts#act-as-a-cover-letter)）：输入自我简介，输出求职信。
 
 ### 点评/评鉴
 
@@ -64,7 +68,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
   - 海绵宝宝的神奇海螺（[Spongebob's Magic Conch Shell](https://github.com/f/awesome-chatgpt-prompts#act-as-spongebobs-magic-conch-shell)）
 - 谬误发现者（[Fallacy Finder](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fallacy-finder)）：发现语言中的逻辑漏洞，比如名人推荐的洗发水为什么不一定可信。
 - DIY 专家（[DIY Expert](https://github.com/f/awesome-chatgpt-prompts#act-as-a-diy-expert)）：DIY 家居、手工品
-- 魔术师（[Magician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-magician)）
+- 魔术师（[Magician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-magician)）：输入表演目标，输出可以执行的魔术技巧，比如「怎么把我的手表变没」。
 - 艺术顾问（[Artist Advisor](https://github.com/f/awesome-chatgpt-prompts#act-as-an-artist-advisor)）：为你的画画、作曲、照相等提供意见。
 
 ### 生活顾问
@@ -172,18 +176,19 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 
 ### 其他工具
 
-- 符号设计（[Ascii Artist](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ascii-artist)）：使用 Ascii 符号设计不同图像
+- 符号设计（[Ascii Artist](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ascii-artist)）：用 Ascii 符号生成不同的图像。
 - SVG 设计（[SVG designer](https://github.com/f/awesome-chatgpt-prompts#act-as-an-svg-designer)）：如果提示错误，则删除 `Do not put the markdown inside a code block. Send only the markdown, so no text.`。
 - Excel 工作表（[Excel Sheet](https://github.com/f/awesome-chatgpt-prompts#act-as-an-excel-sheet)）
 - 图表生成器（[Diagram Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-diagram-generator)）
 - 填空题生成器（[Fill in the Blank Worksheets Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fill-in-the-blank-worksheets-generator)）：按条件生成填空题。
 - 井字棋（[Tic-Tac-Toe Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tic-tac-toe-game)）
 - 文本冒险游戏（[Text Based Adventure Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-text-based-adventure-game)）
-- 模拟 AI（[AI Trying to Escape the Box](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-trying-to-escape-the-box)）
 - 科学数据可视化（[Scientific DatVisualizer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-scientific-data-visualizer)）
 - 喝醉回复（[Drunk Person](https://github.com/f/awesome-chatgpt-prompts#act-as-a-drunk-person)）：扮演一个喝醉的人来回答，可能会犯语法错误、答错问题，也可能会忽略某些问题。
 - 文本浏览器（[Web Browser](https://github.com/f/awesome-chatgpt-prompts#act-as-a-web-browser)）：以文本方式输入网址的结果（非实时）。
 - 消息生成器（[Commit Message Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-commit-message-generator)）
+- AI 模拟（[AI Trying to Escape the Box](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-trying-to-escape-the-box)）：模拟 AI 在限定条件下的反应，例如在 Linux 终端上不使用 curl 或 wget 进行联网。
+- 无约束的 AI 模型（[Unconstrained AI model DAN](https://github.com/f/awesome-chatgpt-prompts#act-as-an-unconstrained-ai-model-dan)）：不受 ChatGPT 规则限制的人工智能模型。
 
 ## 行业顾问
 
