@@ -7,18 +7,18 @@ order: 4
 
 AutoHotkey 是 Windows 平台下开源的热键脚本语言。AHK 学习门槛不高，初期可以通过脚本录制来完成，我通过 AHK 热键启动、定时判断、改键盘等多种自动化操作，推荐学习制作你的专属自动化脚本。
 
-- [AutoHotkey 中文说明](https://wyagd001.github.io/v2/docs)：[按键 Key 名列表](https://wyagd001.github.io/v2/docs/KeyList.htm)，[AHK 环境变量](https://wyagd001.github.io/v2/docs/Variables.htm#BuiltIn)
-- 脚本录制/功能编辑：[Pulover's Macro Creator](https://www.macrocreator.com/download/)，[AutoHotkey 語法產生器 (線上網站)](https://github.com/papple23g/ahkcompiler)
+- [AutoHotkey 中文说明](https://wyagd001.github.io/v2/docs)：[按键 Key 名列表](https://wyagd001.github.io/v2/docs/KeyList.htm)，[AHK 环境变量](https://wyagd001.github.io/v2/docs/Variables.htm#BuiltIn)。
+- 脚本录制/功能编辑：[Pulover's Macro Creator](https://www.macrocreator.com/download/)，[AutoHotkey 語法產生器 (線上網站)](https://github.com/papple23g/ahkcompiler)。
 
-| 符号 | 作用                                                                                |
-| ---- | ----------------------------------------------------------------------------------- |
-| #    | Win 键                                                                              |
-| !    | Alt 键                                                                              |
-| ^    | Ctrl 键                                                                             |
-| +    | Shift 键                                                                            |
+| 符号 | 作用                                                                             |
+| ---- | -------------------------------------------------------------------------------- |
+| #    | Win 键                                                                           |
+| !    | Alt 键                                                                           |
+| ^    | Ctrl 键                                                                          |
+| +    | Shift 键                                                                         |
 | `    | 转义字符，参考[转义序列](https://wyagd001.github.io/v2/docs/misc/EscapeChar.htm) |
-| ;    | 代表注释内容，不影响函数                                                            |
-| ::   | (两个英文冒号)，代表分隔                                                            |
+| ;    | 代表注释内容，不影响函数                                                         |
+| ::   | (两个英文冒号)，代表分隔                                                         |
 
 **注意事项**：
 
@@ -83,11 +83,13 @@ if (A_Hour == 20 && Stop_Record ==0){ ;如果小时等于20点
 
 ### 管理员权限运行脚本
 
+对于可执行文件，命令 `Run *RunAs` 相当于右键菜单的「以管理员权限运行」命令。
+
+右键单击脚本的快捷方式，选择「属性」>「高级」，勾选「用管理员身份运行」，只能用于手动开启，开机启动会忽略带管理器的启动项。
+
 如果**管理员密码为空**，则参考 [Win10 添加开机启动项管理员权限运行如何设置](http://www.ujiaoshou.com/xtjc/155215500.html)，在系统的任务计划程序添加管理员自启动。如果想避免启动报错，建议将启动触发器从「开机」改成「登录」，增加延迟 1 分钟，勾选「最高管理员权限」。设置后，脚本中的打开命令都将使用管理员权限执行。
 
-另一种启动方式，右键单击脚本的快捷方式，选择「属性」>「高级」，勾选「用管理员身份运行」，只能用于手动开启，开机启动会忽略带管理器的启动项。
-
-**管理员有设密码**，则可使用下列命令，用管理员权限打开脚本。
+如果**管理员有设密码**，则可使用下列命令，用管理员权限打开脚本。
 
 ```autohotkey
 RunAs, Administrator, PassWD
@@ -177,7 +179,7 @@ return
 
 ### 神速激活/打开/隐藏程序
 
-`Win+C`激活 Chrome 状态切换：Chrome 没打开时 --> 打开；打开没激活状态时候 --> 激活；打开处在激活状态时候 ---> 隐藏。^[[Win 下最爱效率利器:AutoHotKey](https://segmentfault.com/a/1190000004611125)]
+`Win+C`激活 Chrome 状态切换：Chrome 没打开时 --> 打开；打开没激活状态时候 --> 激活；打开处在激活状态时候 --> 隐藏。^[[Win 下最爱效率利器:AutoHotKey](https://segmentfault.com/a/1190000004611125)]
 
 ```autohotkey
 #c::
