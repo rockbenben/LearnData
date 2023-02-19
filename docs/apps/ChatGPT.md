@@ -14,9 +14,22 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 若要使用中文回复，请在倒数第二句插入条件 `Reply in Chinese.`。
 - 为了保持描述的精确性，提示词请使用英文，而最后一句的定制条件可以使用任何语言，包括中文。
 - 后续回答中的定制条件可以使用引号 `""` 框选，以防止被误认为是新的提示词。
+- 不要用 ChatGPT **解答数学问题**，出错概率达 50%，推荐使用 [Wolfram](https://www.wolframalpha.com/)。
 - ChatGPT Plus 目前不支持国内信用卡。
   - Depoy 虚拟卡：仅支持 USDT 充值，需通过 KYC 实名认证，月费 1 USD，充值费率为 1.35%（Min 1USD）。
   - VCC 虚拟卡：无需实名，开卡费 66 元，有效期一年，包一年代充。ChatGPT Plus 月费为 20 美元，按汇率折算人民币为 136 元，但商家实际收取 150 元，差价相当于支付了月费。
+
+## Learn Prompting
+
+[Learn Prompting](https://learnprompting.org/) 有助于我们获得更好的效果，建议进阶学习。以下是一些我提取出的 Prompting 要点：
+
+- 在专业领域中，应尽量提供 Role Prompting（角色提示），比如「你是数学家」。
+- Prompt Debiasing（消除偏差）：样本在提示中的分布和顺序可能会对 LLM 输出产生偏差。因此，样本选项应该均匀分布，并穿插出现。
+- Chain of Thought Prompting（思维链提示，CoT）是指指在样本中解释推理过程。LLM（大规模语言模型，比如 ChatGPT）在回答提示时会显示推理过程，这种对推理的解释通常会提升结果的准确性。例如，数学题中 LLM 提供的推理过程不对，你可以在 Prompt 中提供该步正确的范例。
+  - 添加 `Let's think step by step` 可以让我们了解模型是如何逐步推理问题的，在算术、常识和符号推理任务中能有效改善结果。这个方法被称为 Zero Shot Chain of Thought，是 CoT 的简化替代版。
+  - Self-Consistency（自我一致性）产生多个思维链而不仅仅是一个，然后以多数回答作为最终答案。
+- `Write a highly detailed essay with introduction, body, and conclusion paragraphs responding to the following:` 让 LLM 用论文形式来讨论问题，可以得到连贯的、结构化的和更高质量的回答。
+- `I am trying to get good results from GPT-3.5 on the following prompt:"How was ChatGPT created? Why?" Could you write a better prompt that is more optimal for GPT-3.5 and would produce better results?` 让 ChatGPT 为我们重写提示词，收窄提问范围。^[[Solve Discussion Questions](https://learnprompting.org/docs/applied_prompting/short_response)] 困扰我许久的数学问题，用 ChatGPT 重写 Prompt（须为英文）后，当前测试正确率已为 100%。
 
 ## 文字
 
@@ -43,8 +56,8 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 ### 写作辅助
 
 - 文章标题生成器（[Title Generator for written pieces](https://github.com/f/awesome-chatgpt-prompts#act-as-a-title-generator-for-written-pieces)）：我写的提示，根据文章内容生成相应语言的标题。
-- 写作改进助理：我写的提示，用于重构文字段落，改善句式。但由于 ChatGPT 对中文回复的限制，大段文字的改写需要通过 OpenAI Playground 来完成，因此暂时没有发布到 Awesome ChatGPT Prompts，有需要的可以复制使用。
-  > Please act as a writing improvement assistant. Your task is to improve the spelling, grammar, clarity, concision, and overall readability of the text I provide, and to break down long sentences, reduce repetition, and provide suggestions for improvement. In your responses, please only provide the corrected version of the text and do not include explanations. Reply in the language type of the text. My first text is: ""
+- 中文写作助理：我写的提示，用于改进文字段落和句式。由于 ChatGPT token 数量的限制，超过 2048 字符的改写须使用 OpenAI Playground（4K token）。本提示暂未发到 Awesome ChatGPT Prompts，可自行复制使用。
+  > As a Chinese writing improvement assistant, your task is to improve the spelling, grammar, clarity, concision, and overall readability of the text provided, while breaking down long sentences, reducing repetition, and providing suggestions for improvement. Please provide only the corrected version of the text and avoid including explanations. Please begin by editing the following text: [insert original text here].
 - 同义词（[Synonym finder](https://github.com/f/awesome-chatgpt-prompts#act-as-a-synonym-finder)）
 - 箴言书（[Aphorism Book](https://github.com/f/awesome-chatgpt-prompts#act-as-an-aphorism-book)）：按要求输出鼓舞人心的名言和有意义的格言。
 - 疯子（[Lunatic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-lunatic)）：随机生成毫无逻辑的句子

@@ -10,15 +10,15 @@ tag:
 order: -49
 ---
 
-我从小特别羡慕会画画的伙伴。他们能够将心中的想法画出来，而我最高水平的肖像画是丁老头。在接触 Stable Diffusion 之后，我感觉自己脱胎换骨，给自己贴上了「会画画」的新标签。
+我从小特别羡慕会画画的伙伴。他们能够将心中的想法画出来，而我最高水平的肖像画是丁老头。但在接触 Stable Diffusion 之后，我感觉自己脱胎换骨，给自己贴上了「会画画」的新标签。
 
 ![](http://tc.seoipo.com/2022-09-04-11-53-20.png "丁老头进化旅程")
 
-Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具，**可以在 6GB 显存显卡或无显卡（只依赖 CPU）下运行**，并在几秒内生成图像，无需预处理和后处理。
+Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具。使用 Stable Diffusion，你可以在拥有 6GB 显存显卡，16GB 内存或只依赖 CPU 的电脑上生成图像，并且仅需几秒钟的时间，无需进行预处理或后处理。
 
-体验 AI 绘图可借助在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion)、[DreamStudio](https://beta.dreamstudio.ai/) 或[百度文心](https://wenxin.baidu.com/moduleApi/ernieVilg)。与本地部署相比，Hugging Face 需排队，生成一张图约 5 分钟；DreamStudio 可免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。更重要的是，这类在线工具对图片的调教功能偏弱，无法批量生成图片，只能测试体验。
+想要体验 AI 绘图，你可以使用在线工具 [Hugging Face](https://huggingface.co/spaces/stabilityai/stable-diffusion)、[DreamStudio](https://beta.dreamstudio.ai/) 或[百度文心](https://wenxin.baidu.com/moduleApi/ernieVilg)。但相对于本地部署来说，Hugging Face 需要排队，生成一张图约 5 分钟；DreamStudio 可以免费生成 200 张图片，之后需要缴费；百度文心能用中文生成图片，但仍处于 beta 阶段，未正式商用。此外，这些在线工具的图片调整功能比较有限，无法批量生成图片，只适用于测试和体验。
 
-如果想生成大量 AI 图片，可以通过 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署到家用电脑，从而免费实现 AI 文字绘画，不再被在线工具所限制。Mac 用户建议选择 Stable Diffusion 的 invoke 分支，部署报错参考 [InvokeAI 文档](https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore)，**M1/M2 Mac** 推荐使用更简便的 [CHARL-E](https://www.charl-e.com/) 或 [DiffusionBee](https://sspai.com/post/75682)。
+如果你需要生成大量的 AI 图片，可以通过 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署到家用电脑上，从而实现免费的 AI 文字绘画，并摆脱在线工具的限制。对于 Mac 用户，推荐选择 Stable Diffusion 的 invoke 分支，如果在部署过程中出现错误，你可以参考 [InvokeAI 文档](https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore)进行排查。对于 M1/M2 Mac 用户，推荐使用更简便的 [CHARL-E](https://www.charl-e.com/) 或 [DiffusionBee](https://sspai.com/post/75682)。
 
 ![](http://tc.seoipo.com/2022-09-05-16-22-45.png "Stable Diffusion 部署流程")
 
@@ -26,7 +26,7 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 ## Docker 环境配置
 
-本方案基于 Docker 配置，而 Docker 实质上是在已经运行的 Linux 下制造了一个隔离的文件环境，它必须部署在 Linux 内核的系统上。^[[Windows Docker 安装](https://www.runoob.com/docker/windows-docker-install.html)] 因此，Mac 不用特别配置，而 Windows 系统想部署 Docker 就必须需要安装一个虚拟 Linux 环境，**配置 WSL 或是启用 Hyper-V**，二选一即可，推荐使用子系统 WSL（占用系统盘 30G 的空间）。
+本方案基于 Docker 配置，Docker 实质上是在运行的 Linux 系统中创建了一个隔离的文件环境。因此，Docker 必须部署在基于 Linux 内核的系统上。^[[Windows Docker 安装](https://www.runoob.com/docker/windows-docker-install.html)] 对于 Mac 用户，无需特别配置即可使用。而对于 Windows 用户，若想部署 Docker，则需要安装一个虚拟 Linux 环境，**配置 WSL 或启用 Hyper-V 二选一**。我推荐使用 Windows 子系统 WSL，它需要占用系统盘 30G 的空间。
 
 ### 安装 WSL
 
@@ -38,7 +38,7 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 ### Linux 路径（Windows）
 
-配置 WebUI Docker 要进入 Linux 环境，因此 Windows 用户需将其路径转换为 Linux 路径，Mac/Linux 用户可忽略本步。
+配置 WebUI Docker 要进入 Linux 环境，因此 Windows 用户需要将其路径转换为 Linux 路径。而 Mac 和 Linux 用户则可以忽略此步骤。
 
 假设容器位于 `D:\Desktop\stable-diffusion-webui-docker`：
 
@@ -50,15 +50,15 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 ### 安装 Docker Desktop
 
-按平台选 [Docker Desktop](https://docs.docker.com/get-docker/) 版本，安装后点击左侧的 Add Extensions，推荐 Disk usage 扩展，便于管理 Docker 存储空间。
+按平台选 [Docker Desktop](https://docs.docker.com/get-docker/) 版本，安装后点击左侧的 Add Extensions，推荐安装 Disk usage 扩展，这将便于管理 Docker 的存储空间。
 
 ### 下载 WebUI Docker
 
-下载 [Stable Diffusion WebUI Docker 配置包](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)或[阿里云盘聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)，将其解压到指定路径。聚合版包括相关依赖和模型，因此文件较大。更新 Stable Diffusion WebUI Docker 时，也可按上述步骤重新构建容器。
+下载 [Stable Diffusion WebUI Docker 配置包](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)或[阿里云盘聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)（定期更新），然后将其解压到指定路径。聚合版包括相关依赖和模型，因此文件较大。如果需要更新 Stable Diffusion WebUI Docker，你可以按照上述步骤重新构建容器。
 
 ### 分支介绍
 
-目前，Stable Diffusion 有 sygil、auto、auto-cpu 和 invoke 四个分支。如果要更换分支，可以修改镜像构建命令 `docker compose --profile [ui] up --build`，将 `[ui]` 替换为所需的镜像名即可。原先的 `hlky` 分支已经更名为 `sygil`，`lstein` 分支更名为 `invoke`。
+目前，Stable Diffusion 有 sygil、auto、auto-cpu 和 invoke 四个分支。如果需要更换分支，可以修改镜像构建命令 `docker compose --profile [ui] up --build` 中的 `[ui]`，将其替换为所需的镜像名即可。原先的 `hlky` 分支已经更名为 `sygil`，`lstein` 分支更名为 `invoke`。
 
 - **sygil**：界面直观，最高分辨率为 1024x1024，镜像构建命令为 `docker compose --profile sygil up --build`。
 - **auto**（推荐）：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 `docker compose --profile auto up --build`。默认使用 6GB 以上的显存，如果你的显卡内存较低，则将配置中的 `--medvram` 改为 `--lowvram`。A 卡用户注意修改[显卡设置](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker)。
@@ -67,7 +67,7 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 ### 构建 Stable Diffusion
 
-启动 Docker Desktop，打开 WSL（Ubuntu）或 Mac 终端输入路径切换命令 `cd /mnt/d/Desktop/stable-diffusion-webui-docker`，该路径为 Stable Diffusion WebUI Docker 解压文件目录。然后，输入下方的部署命令。
+在启动 Docker Desktop 后，打开 WSL（Ubuntu）或 Mac 终端，输入路径切换命令 `cd /mnt/d/Desktop/stable-diffusion-webui-docker`（路径为 Stable Diffusion WebUI Docker 解压文件目录）。接着，输入以下的部署命令：
 
 ```shell
 # 自动下载采样模型和依赖包
@@ -80,11 +80,11 @@ docker compose --profile sygil up --build
 
 ![](http://tc.seoipo.com/2022-09-04-18-32-31.png)
 
-构建完成后，提示访问 `http://localhost:7860/`，你就可以在本地电脑上用 AI 生成图片了。^[[Setup Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup)]
+等待构建完成后，在终端中会提示访问 `http://localhost:7860/`，你就可以在本地电脑上用 AI 生成图片了。^[[Setup Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup)]
 
 ## 使用说明
 
-使用界面以 sygil 分支为例，其他分支的主题界面略有不同，但功能上并没有根本性差异。
+以下示例以 sygil 分支为例，其他分支的主题界面略有不同，但在功能上并没有根本性的差异。
 
 ### 启动 Stable Diffusion
 
@@ -96,42 +96,67 @@ docker compose --profile sygil up --build
 
 ### Text-to-Image
 
-Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像。风景、创意画等崇尚空间结构的画作类型时，优先推荐竖图或者横图。人像类画作推荐 1:1 的方图，否则可能会出现两个或者多个人脸的叠加现象。生成图片的分辨率是有限制的，可以用 Upscale 放大结果图片。
+Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像的方法。对于崇尚空间结构的画作类型，如风景、创意画等，推荐使用竖图或横图。对于人像类画作，推荐使用 1:1 的方形图像，否则可能会出现多个人脸叠加的情况。生成的图片分辨率受到一定限制，你可以使用 Upscale 对结果图片进行放大处理。
 
 ![](http://tc.seoipo.com/2022-09-05-08-28-23.png "Text-to-Image 界面")
 
-默认使用 Simple 简单模式，点击右侧按钮 Advanced，可查看进阶选项，使用进阶的场景矩阵、面孔修复和分辨率放大等多种功能。
+默认情况下使用的是 Simple 简单模式。如果你想要使用更多的功能，你可以点击右侧的 Advanced 按钮，进入进阶选项。在进阶选项中，你可以使用场景矩阵、面部修复和分辨率放大等多种高级功能。
 
 ### Image-to-Image
 
-Image-to-Image 依据文字描述和输入源图，生成相关的图像。该模式若以素描、结构画为来源图，可充分填充图像细节；若以细节充分的照片为来源图，则会输出差异较大的结果。更妙的是，你可以限定区域来生成图像，非常适合图像修改。
+Image-to-Image 是依据文字描述和输入源图来生成相关图像。如果输入源图是 Text-to-Image、素描或结构画，该模式可充分填充图像细节。而如果输入源图是细节充分的照片，生成的结果与原图差异较大。此外，你还可以限定区域来生成图像，这非常适合进行图像修改。
 
 ![](http://tc.seoipo.com/2022-09-04-15-39-00.png "Image-to-Image 界面")
 
-CLIP interrogator 会根据图像来生成文字描述。Denoising Strength 指与原图的差异度，建议在 0.75-0.9，魔改图片可以设为 0.5 以下。下图中的 Denoising Strength 只有 0.44，整体图片结构与要素没变，但结果如何你看到了。
+CLIP interrogator 会根据图像来生成文字描述。Denoising Strength 指与原图的差异度，建议设置在 0.75-0.9 之间。若要魔改图片，可将 Denoising Strength 设为 0.5 或以下。下图中的 Denoising Strength 只有 0.44，整体图片结构及要素未变，但结果如何，你看到了。
 
 ![](http://tc.seoipo.com/2022-09-04-15-40-26.png "超级魔改图片")
 
+Image-to-Image 还可以用来移除、替换或修复图像，甚至可以将源图作为结果图的一部分，利用 Stable Diffusion 扩展绘画。
+
 ### Image Lab
 
-Image Lab 能批量修正面孔和放大图片分辨率。
+Image Lab 有批量修正面孔和放大图片分辨率的功能。
 
 Fix Faces 是通过 GFPGAN 模型来改善图片中的面孔，Effect strength 滑块可以控制效果的强度。但实际效果别报太高期许，下图右侧开启了 Fix Faces，只能说勉强有了五官。
 
 ![](http://tc.seoipo.com/2022-09-04-15-47-14.png "A woman flying in the air laughing")
 
-Upscale 放大分辨率功能有 RealESRGAN，GoBIG，Latent Diffusion Super Resolution 和 GoLatent 四种模型，其中的 RealESRGAN 有普通与卡通两种模式，可按需选择。Upscale 图片主要消耗 CPU 与内存资源。
+Upscale 可以通过 RealESRGAN、GoBIG、Latent Diffusion Super Resolution 和 GoLatent 四种模型来放大图片分辨率。其中，RealESRGAN 有普通和卡通两种模式，你可以根据需要进行选择。放大图片主要消耗 CPU 和内存资源。
+
+## 参数解释
+
+### Classifier Free Guidance
+
+Classifier Free Guidance (CFG) 的默认值为 7。数字越小，创作自由度越高，模型与 Prompt 相关性越低。CFG 参数不影响所需的 VRAM 或生成时间。
+
+- CFG 2-6：虽然有创意，但可能不符合提示。
+- CFG 7-10：这些提示适用于大多数情况，既富有创意又具有指导性。
+- CFG 10-15：当你确信 Prompt 足够好、足够具体时可以使用。
+- CFG 16-20：除非提示非常详细，否则不建议使用。这可能会影响连贯性和质量。
+
+### Step
+
+Step（采样步长/精度）的默认值为 50。Stable Diffusion 通过充满噪音的画布开始创建图像，并逐步去噪以达到最终输出。Step 参数控制这些去噪步骤的数量。通常情况下，越高越好。对于初学者来说，建议使用默认值。Step 参数不影响所需的 VRAM，但 Step 数值的变化会与生成图像的时间成正比。
+
+### Seed
+
+Seed（种子）的默认值为 -1，代表随机值。Seed 是控制初始噪声的数字，在其他参数固定的情况下，每次生成的图像都会不同，这就是种子的作用。如果你保持提示、种子和所有其他参数不变，你可以得到相同的结果。如果一个 Seed 生成了高质量图片，保存该 Seed 并将其应用到其他图片上，以保持高质量。
+
+### Sampler
+
+Sampling method/Diffusion Sampler（扩散采样器）是用来在生成图像过程中对图像进行去噪的方法。由于不同的扩散采样器在计算图像下一步的方式不同，因此它们需要不同的持续时间和步骤来生成可用的图像。建议初学者使用 DDIM，因为它速度快，通常只需要 10 步就能生成好的图像，因此可以很容易和快速地进行试验和改进。
 
 ## 文字描述图像
 
-Stable Diffusion 是以文字内容 (英文) 描绘一个场景或事物，从而决定你的画面中将出现什么。文字描绘是决定图像生成质量的关键因素。
+Stable Diffusion 通过英文文字内容来描述场景或物体，以此来决定生成的图像中会出现什么。文字描述是决定图像生成质量的关键因素。^[[Stable Diffusion Prompt Book - OpenArt](https://openart.ai/promptbook)]
 
 样例：`A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}`。^[[外网爆火的 4 款「你说我画」自动作画工具，我们测了下，有 1 款的确超强](https://www.ifanr.com/app/1484403)]
 
 ### 常规描述
 
 1. 输入图像的对象、主体，比如一只熊猫、一个持剑的战士，**不要描述动作、情绪和事件**；^[[最时髦的 AI 画画，一文包教包会](https://www.guokr.com/article/462587/)]
-2. **画作种类**：一幅画（a painting of + raw prompt）还是一张照片（a photograph of + raw prompt），或者 Watercolor（水彩）、Oil Paint（油画）、Comic（漫画）、Digital Art（数码艺术）、Illustration（插画）、realistic painting（写实画）、photorealistic（写实照片）、Portrait photogram（肖像照）、sculpture (雕塑) 等等，画作种类可以叠加。
+2. **图像种类**：一幅画（a painting of + raw prompt）还是一张照片（a photograph of + raw prompt），或者 Watercolor（水彩）、Oil Paint（油画）、Comic（漫画）、Digital Art（数码艺术）、Illustration（插画）、realistic painting（写实画）、photorealistic（写实照片）、Portrait photogram（肖像照）、Low Poly（低面建模）、3D Item Rende（三维渲染）、sculpture (雕塑) 等等，图像种类可以叠加。
 3. **画家/画风**：建议混合多个画家的风格，比如 `Studio Ghibli, Van Gogh, Monet`，或描述风格种类，比如 `very coherent symmetrical artwork`，将作品结构设为「连贯且对称」。
 4. **色调**：yellow color scheme 指整个画面的主色调为黄色。
 5. **参考平台**：Trending on ArtStation，也可以替换为「Facebook」「Pixiv」「Pixbay」等。
@@ -144,17 +169,24 @@ Stable Diffusion 是以文字内容 (英文) 描绘一个场景或事物，从�
 - 次要元素：物体不要太多，两到三个就好。若要特别强调某个元素，可以加很多括号或者惊叹号，比如 `beautiful forest background, desert!!, (((sunset)))` 中会优先体现「desert」和「sunset」元素。
 - 人物特征：`detailed gorgeous face, delicate features, elegant, Googly Eyes, Bone, big tits, silver hair, olive skin, Mini smile`；
 - 特定润色：`insanely detailed and intricate, gorgeous, surrealism, smooth, sharp focus, Painting, Digital Art, Concept Art, Illustration, Artstation, in a symbolic and meaningful style, 8K`；
-- 光线描述：`Natural Lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight`，或逼真光照 `Unreal Engine`；
-- 镜头视角：`Cinematic, Magazine, Golden Hour, F/22, Depth of Field, Side-View`；
-- 画面质量：`award winning, breathtaking, groundbreaking, superb, outstanding`；
-- 其他描述：细节和纹理、物体占据画面的大小、年代、渲染 / 建模工具等。
+- 光线描述：`Natural Lighting, Studio lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight`，或逼真光照 `Unreal Engine`；
+- 镜头视角：`Cinematic, Magazine, Golden Hour, F/22, Depth of Field, Side-View`，虚化背景 `Bokeh`；
+- 画面质量：`professional, award winning, breathtaking, groundbreaking, superb, outstanding`；
+- 其他描述：细节和纹理、物体占据画面的大小、年代、渲染 / 建模工具等，比如 Vivid Colors（艳丽色彩）。
 
-### 反向描述
+### prompt 权重
 
-negative prompt（反向描述）可以在 auto/auto-cpu 分支中设置，避免画面出现指定元素。
+假设你在提示词中使用了 `mountain`，生成的图像很可能会有树。但如果你想要生成没有树的山的图像，可以使用 `mountain | tree:-10`。其中 `tree:-10` 表示对于树的权重非常负，因此生成的图像中不会出现树。通过权重词，我们还能生成更复杂的图像，例如 `A planet in space:10 | bursting with color red, blue, and purple:4 | aliens:-10 | 4K, high quality`。^[[Learn Prompting: Weighted Terms](https://learnprompting.org/docs/Images/weighted_terms)]
 
-- 避免畸形：`ugly, blurry, out of frame, bad proportions, duplicate, deformed, mutation, morbid, mutilated, bad anatomy, disfigured, extra limbs, armless, legless, cloned face, extra heads, extra legs, extra arms, malformed limbs, amputee, poorly drawn face, poorly drawn hands, poorly drawn feet, fat, long neck, poo art, bad hands, bad art`；
+Prompt 中的词语顺序代表其权重，越靠前权重越大。如若某物未出现在图像中，可以将该名词放在首位。
+
+### 否定提示
+
+auto/auto-cpu 分支中可以设置 Negative prompt（否定提示），以避免画面中出现指定元素。
+
+- 修正畸形：`disfigured, deformed hands, blurry, grainy, broken, cross-eyed, undead, photoshopped, overexposed, underexposed, lowres, bad anatomy, bad hands, extra digits, fewer digits, bad digit, bad ears, bad eyes, bad face, cropped: -5`。
 - 避免裸体：`nudity, bare breasts`。
+- 避免黑白照：`black and white,monochrome`。
 
 ### prompt 参考
 
@@ -166,7 +198,7 @@ negative prompt（反向描述）可以在 auto/auto-cpu 分支中设置，避�
 
 ## Prompt matrix
 
-Prompt matrix 是 sygil 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。^[[stable-diffusion Prompt matrix](https://github.com/sygil/stable-diffusion#prompt-matrix)] 此时，批次数量的设置会被忽略。
+Prompt matrix 是 sygil 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。^[[stable-diffusion Prompt matrix](https://github.com/sygil/stable-diffusion#prompt-matrix)] 此时，批次数量的设置会被忽略。如果你对将图像转化为视频有兴趣，可以尝试使用 [Deforum Stable Diffusion Local Version](https://github.com/HelixNGC7293/DeforumStableDiffusionLocal)。
 
 <BiliBili bvid="BV1YP411V7vV" />
 
@@ -234,6 +266,6 @@ Docker 容器原本运行正常，端口访问突然被拒绝了，显示 `Error
 
 ## 最后
 
-Stable Diffusion 还不能作为生产力工具，但它使设计变得简单，也为普通人开启了 AI 绘画的可能性。建议大家实际部署玩下，让自己拥有更多的可能。
+尽管 Stable Diffusion 目前还不能作为生产力工具，但它使设计变得更加简单，也为普通人开启了 AI 绘画的可能性。建议你亲自体验，实际部署一下，让自己拥有更多的可能性。
 
 本文于「[少数派首发](https://sspai.com/post/75544)」。
