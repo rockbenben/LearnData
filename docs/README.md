@@ -172,6 +172,10 @@ Vercel 部署步骤如下：
 
 ## 🤔 常见问题
 
+### failed with exit code 128
+
+GitHub Page 部署报错 `failed with exit code 128`，这是由于 repo 权限不足导致的。进入项目仓库的「Settings」>「Code and automation」>「Actions」>「General」，选中底部 Workflow permissions 中的 `Read and write permissions`，点击保存后重新部署即可。
+
 ### 网页显示异常
 
 网站只显示文字，不能正常显示网页，这是网站路径不正确导致的页面样式错误。

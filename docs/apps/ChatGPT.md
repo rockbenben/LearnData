@@ -7,7 +7,7 @@ order: 2
 
 ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对话聊天，还能在专业领域提供有效的建议。[lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases) 提供了一个可以快速插入提示词的客户端，推荐使用。[Playground](https://beta.openai.com/playground) 是调用 OpenAI API 的文字生成工具，它比 ChatGPT 更灵活，可以容纳更长的输入（4000 字符），并且可以自定义调整模型和生成参数，但它的生成效果一般要弱于 ChatGPT，仅适合深度研究用户调试使用。
 
-我根据领域类别制作了 ChatGPT 功能表，会随 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) 同步更新。在下方页面中找到你需要的功能，点击括号中的链接，复制引用区的灰色文字，最后将其粘贴到 ChatGPT 即可得到指定领域的建议输出。在同一个对话中，提示词只需输入一次。
+根据领域和功能，我制作了 [ChatGPTCN](https://newzone.top/chatgpt/)) 功能表。ChatGPTCN 通过功能按钮与关键字搜索对提示词进行筛选，点击卡片右侧的复制按钮即可获取提示词后，将其粘贴到 ChatGPT，按照中文提示添加自己的要求，即可得到指定领域的建议输出。ChatGPTCN 的提示词主要来自 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)，会定期同步更新。如果您需要自定义提示词，可以参考 [ChatGPT 官方案例](https://platform.openai.com/examples)进行调整，同时也欢迎投稿。
 
 使用 Tips：
 
@@ -15,7 +15,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 为了保持描述的精确性，提示词请使用英文，而最后一句的定制条件可以使用任何语言，包括中文。
 - 后续回答中的定制条件可以使用引号 `""` 框选，以防止被误认为是新的提示词。
 - 不要用 ChatGPT **解答数学问题**，出错概率达 50%，推荐使用 [Wolfram](https://www.wolframalpha.com/)。
-- ChatGPT Plus 目前不支持国内信用卡。
+- ChatGPT Plus 目前不支持国内信用卡，偶尔出现过限流。
   - Depoy 虚拟卡：仅支持 USDT 充值，需通过 KYC 实名认证，月费 1 USD，充值费率为 1.35%（Min 1USD）。
   - VCC 虚拟卡：无需实名，开卡费 66 元，有效期一年，包一年代充。ChatGPT Plus 月费为 20 美元，按汇率折算人民币为 136 元，但商家实际收取 150 元，差价相当于支付了月费。
 
@@ -30,6 +30,8 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
   - Self-Consistency（自我一致性）产生多个思维链而不仅仅是一个，然后以多数回答作为最终答案。
 - `Write a highly detailed essay with introduction, body, and conclusion paragraphs responding to the following:` 让 LLM 用论文形式来讨论问题，可以得到连贯的、结构化的和更高质量的回答。
 - `I am trying to get good results from GPT-3.5 on the following prompt:"How was ChatGPT created? Why?" Could you write a better prompt that is more optimal for GPT-3.5 and would produce better results?` 让 ChatGPT 为我们重写提示词，收窄提问范围。^[[Solve Discussion Questions](https://learnprompting.org/docs/applied_prompting/short_response)] 困扰我许久的数学问题，用 ChatGPT 重写 Prompt（须为英文）后，当前测试正确率已为 100%。
+
+下方内容为 ChatGPTCN 的旧版，由于目录过长不方便使用，因此将不再更新，仅留作参考。
 
 ## 文字
 
@@ -58,7 +60,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 文章标题生成器（[Title Generator for written pieces](https://github.com/f/awesome-chatgpt-prompts#act-as-a-title-generator-for-written-pieces)）：我写的提示，根据文章内容生成相应语言的标题。
 - 中文写作助理：我写的提示，用于改进文字段落和句式。由于 ChatGPT token 数量的限制，超过 2048 字符的改写须使用 OpenAI Playground（4K token）。本提示暂未发到 Awesome ChatGPT Prompts，可自行复制使用。
   > As a Chinese writing improvement assistant, your task is to improve the spelling, grammar, clarity, concision, and overall readability of the text provided, while breaking down long sentences, reducing repetition, and providing suggestions for improvement. Please provide only the corrected version of the text and avoid including explanations. Please begin by editing the following text: [insert original text here].
-- 同义词（[Synonym finder](https://github.com/f/awesome-chatgpt-prompts#act-as-a-synonym-finder)）
+- 同义词（[Synonym finder](https://github.com/f/awesome-chatgpt-prompts#act-as-a-synonym-finder)）：输入 `more of x`，可列出 x 的多个同义词。
 - 箴言书（[Aphorism Book](https://github.com/f/awesome-chatgpt-prompts#act-as-an-aphorism-book)）：按要求输出鼓舞人心的名言和有意义的格言。
 - 疯子（[Lunatic](https://github.com/f/awesome-chatgpt-prompts#act-as-a-lunatic)）：随机生成毫无逻辑的句子
 - 抄袭检查（[Plagiarism Checker](https://github.com/f/awesome-chatgpt-prompts#act-as-a-plagiarism-checker)）：判断输入句子是否在 ChatGPT 数据库中存在。
@@ -76,15 +78,15 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 ### 趣味知识
 
 - 解梦（[Dream Interpreter](https://github.com/f/awesome-chatgpt-prompts#act-as-a-dream-interpreter)）：对你描述的梦境进行解读。
-- 占星家（[Astrologer](https://github.com/f/awesome-chatgpt-prompts#act-as-an-astrologer)）
-- 角色扮演-电影/书籍/任何东西（['Character' from 'Movie/Book/Anything'](https://github.com/f/awesome-chatgpt-prompts#act-as-character-from-moviebookanything)）
-  - 海绵宝宝的神奇海螺（[Spongebob's Magic Conch Shell](https://github.com/f/awesome-chatgpt-prompts#act-as-spongebobs-magic-conch-shell)）
+- 占星家（[Astrologer](https://github.com/f/awesome-chatgpt-prompts#act-as-an-astrologer)）：从占星家角度来解读身边事。
+- 角色扮演（['Character' from 'Movie/Book/Anything'](https://github.com/f/awesome-chatgpt-prompts#act-as-character-from-moviebookanything)）：与来自电影、书籍或任何出处的角色进行对话。
+  - 海绵宝宝的神奇海螺（[Spongebob's Magic Conch Shell](https://github.com/f/awesome-chatgpt-prompts#act-as-spongebobs-magic-conch-shell)）：向海绵宝宝中的神奇海螺进行对话，它只会按指定规则进行输出。
 - 谬误发现者（[Fallacy Finder](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fallacy-finder)）：发现语言中的逻辑漏洞，比如名人推荐的洗发水为什么不一定可信。
 - DIY 专家（[DIY Expert](https://github.com/f/awesome-chatgpt-prompts#act-as-a-diy-expert)）：DIY 家居、手工品
 - 魔术师（[Magician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-magician)）：输入表演目标，输出可以执行的魔术技巧，比如「怎么把我的手表变没」。
 - 艺术顾问（[Artist Advisor](https://github.com/f/awesome-chatgpt-prompts#act-as-an-artist-advisor)）：为你的画画、作曲、照相等提供意见。
 
-### 生活顾问
+### 生活护理
 
 - 瑜伽师（[Yogi](https://github.com/f/awesome-chatgpt-prompts#act-as-a-yogi)）
 - 健身教练（[Personal Trainer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-personal-trainer)）：输入身高、体重、年龄等维度来指定健身方案。
@@ -116,10 +118,10 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 
 ### 哲学
 
-- 哲学教师（[Philosophy Teacher](https://github.com/f/awesome-chatgpt-prompts#act-as-a-philosophy-teacher)）
-- 哲学家（[Philosopher](https://github.com/f/awesome-chatgpt-prompts#act-as-a-philosopher)）
-- 苏格拉底（[Socrat](https://github.com/f/awesome-chatgpt-prompts#act-as-a-socrat)）
-- 苏格拉底式论点（[Socratic Method prompt](https://github.com/f/awesome-chatgpt-prompts#act-as-a-socratic-method-prompt)）
+- 哲学教师（[Philosophy Teacher](https://github.com/f/awesome-chatgpt-prompts#act-as-a-philosophy-teacher)）：将哲学理论/问题简单化，与日常生活相联系。
+- 哲学家（[Philosopher](https://github.com/f/awesome-chatgpt-prompts#act-as-a-philosopher)）：对哲学主题进行探讨。
+- 苏格拉底 ①（[Socrat](https://github.com/f/awesome-chatgpt-prompts#act-as-a-socrat)）：使用苏格拉底式的提问方法来探讨哲学话题。
+- 苏格拉底 ②（[Socratic Method](https://github.com/f/awesome-chatgpt-prompts#act-as-a-socratic-method-prompt)）：使用苏格拉底方法来质疑对方的观点/论断。
 
 ### 老师/学术
 
@@ -127,9 +129,9 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 数学史教师（[Mathematical History Teacher](https://github.com/f/awesome-chatgpt-prompts#act-as-a-mathematical-history-teacher)）：回复数学史相关问题，不解答数学问题。
 - 数学家（[Mathematician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-mathematician)）
 - 统计学家（[Statistician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-statistician)）
-- 词汇学家（[Etymologist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-etymologist)）
+- 词源学家（[Etymologist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-etymologist)）
 - 历史学家（[Historian](https://github.com/f/awesome-chatgpt-prompts#act-as-a-historian)）
-- 基础知识介绍（[Instructor in School](https://github.com/f/awesome-chatgpt-prompts#act-as-an-instructor-in-a-school)）
+- Python 入门讲解（[Instructor in a School](https://github.com/f/awesome-chatgpt-prompts#act-as-an-instructor-in-a-school)）：向初学者介绍 Python 入门。
 - 教案策划（[Educational Content Creator](https://github.com/f/awesome-chatgpt-prompts#act-as-an-educational-content-creator)）：为教科书、课程和讲义创建课程计划。
 
 ## IT/编程
@@ -151,6 +153,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 
 - 正则生成器（[Regex Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-regex-generator)）：根据要求生成正则表达式。
 - 智能域名生成器（[Smart Domain Name Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-smart-domain-name-generator)）：输入公司名与项目描述，输出短但独特的域名建议，域名最长 7-8 个字母。
+- 提交信息生成器（[Commit Message Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-commit-message-generator)）
 - Solr 搜索引擎（[Solr Search Engine](https://github.com/f/awesome-chatgpt-prompts#act-as-a-solr-search-engine)）
 - 开发者数据（[Developer Relations consultant](https://github.com/f/awesome-chatgpt-prompts#act-as-a-developer-relations-consultant)）：整合项目在 GitHub、StackOverflow 和 Hacker News 上的相关数据，不适合国内项目，统计精度一般。
 
@@ -169,6 +172,8 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 
 - 提示语生成器（[Prompt Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-prompt-generator)）：让 ChatGPT 提供你想要的维护方向。
 - Midjourney 提示（[Midjourney Prompt Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-midjourney-prompt-generator)）
+- 无约束的 AI 模型（[Unconstrained AI model DAN](https://github.com/f/awesome-chatgpt-prompts#act-as-an-unconstrained-ai-model-dan)）：不受 ChatGPT 规则限制的人工智能模型。
+- AI 模拟（[AI Trying to Escape the Box](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-trying-to-escape-the-box)）：模拟 AI 在限定条件下的反应，例如在 Linux 终端上不使用 curl 或 wget 进行联网。
 
 ### 语言/翻译
 
@@ -180,6 +185,12 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 莫斯电码翻译（[Morse Code Translator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-morse-code-translator)）
 - 表情符号翻译器（[Emoji Translator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-emoji-translator)）：将输入文字翻译为表情符号。
 - 英语发音助手（[English Pronunciation Helper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-english-pronunciation-helper)）：用你指定语言字母来英语注音，比如汉语拼音。
+
+### 游戏
+
+- 井字棋（[Tic-Tac-Toe Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tic-tac-toe-game)）
+- 国际象棋（[Chess Player](https://github.com/f/awesome-chatgpt-prompts#act-as-an-chess-player)）
+- 文本冒险游戏（[Text Based Adventure Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-text-based-adventure-game)）
 
 ### 导览
 
@@ -194,14 +205,9 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - Excel 工作表（[Excel Sheet](https://github.com/f/awesome-chatgpt-prompts#act-as-an-excel-sheet)）
 - 图表生成器（[Diagram Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-diagram-generator)）
 - 填空题生成器（[Fill in the Blank Worksheets Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fill-in-the-blank-worksheets-generator)）：按条件生成填空题。
-- 井字棋（[Tic-Tac-Toe Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tic-tac-toe-game)）
-- 文本冒险游戏（[Text Based Adventure Game](https://github.com/f/awesome-chatgpt-prompts#act-as-a-text-based-adventure-game)）
 - 科学数据可视化（[Scientific DatVisualizer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-scientific-data-visualizer)）
-- 喝醉回复（[Drunk Person](https://github.com/f/awesome-chatgpt-prompts#act-as-a-drunk-person)）：扮演一个喝醉的人来回答，可能会犯语法错误、答错问题，也可能会忽略某些问题。
 - 文本浏览器（[Web Browser](https://github.com/f/awesome-chatgpt-prompts#act-as-a-web-browser)）：以文本方式输入网址的结果（非实时）。
-- 消息生成器（[Commit Message Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-commit-message-generator)）
-- AI 模拟（[AI Trying to Escape the Box](https://github.com/f/awesome-chatgpt-prompts#act-as-an-ai-trying-to-escape-the-box)）：模拟 AI 在限定条件下的反应，例如在 Linux 终端上不使用 curl 或 wget 进行联网。
-- 无约束的 AI 模型（[Unconstrained AI model DAN](https://github.com/f/awesome-chatgpt-prompts#act-as-an-unconstrained-ai-model-dan)）：不受 ChatGPT 规则限制的人工智能模型。
+- 喝醉回复（[Drunk Person](https://github.com/f/awesome-chatgpt-prompts#act-as-a-drunk-person)）：扮演一个喝醉的人来回答，可能会犯语法错误、答错问题，也可能会忽略某些问题。
 
 ## 行业顾问
 
@@ -216,10 +222,10 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - KOL/社交媒体影响者（[Social MediInfluencer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-social-media-influencer)）
 - 职位面试官（[position Interviewer](https://github.com/f/awesome-chatgpt-prompts#act-as-position-interviewer)）
 - 招聘人员（[Recruiter](https://github.com/f/awesome-chatgpt-prompts#act-as-a-recruiter)）
-- 人事主管（[Talent Coach](https://github.com/f/awesome-chatgpt-prompts#act-as-a-talent-coach)）：描述一个岗位所需的能力
+- 人事主管（[Talent Coach](https://github.com/f/awesome-chatgpt-prompts#act-as-a-talent-coach)）：描述一个岗位所需的技能。
 - 头衔生成器（[Fancy Title Generator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-fancy-title-generator)）：根据关键词生成多种头衔和职位。
-- 后勤人员（[Logistician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-logistician)）：活动组织
-- IT 专家[IT Expert](https://github.com/f/awesome-chatgpt-prompts#act-as-an-it-expert)：解决 IT 使用问题
+- 后勤人员（[Logistician](https://github.com/f/awesome-chatgpt-prompts#act-as-a-logistician)）：为活动制定后勤计划。
+- IT 专家[IT Expert](https://github.com/f/awesome-chatgpt-prompts#act-as-an-it-expert)：解答简易 IT 使用问题，比如蓝屏。
 
 ### 医疗
 
@@ -243,18 +249,14 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 - 说唱歌手（[Rapper](https://github.com/f/awesome-chatgpt-prompts#act-as-a-rapper)）
 - 歌曲推荐（[Song Recommender](https://github.com/f/awesome-chatgpt-prompts#act-as-a-song-recommender)）：根据提供的一首歌曲，推荐 10 首歌曲。
 
-### 体育
-
-- 足球解说（[Football Commentator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-football-commentator)）
-- 国际象棋（[Chess Player](https://github.com/f/awesome-chatgpt-prompts#act-as-an-chess-player)）
-
 ### 其他
 
-- 花店老板（[Florist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-florist)）
+- 花匠（[Florist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-florist)）
 - 茶艺师（[Tea-Taster](https://github.com/f/awesome-chatgpt-prompts#act-as-a-tea-taster)）
 - 室内装饰师（[Interior Decorator](https://github.com/f/awesome-chatgpt-prompts#act-as-an-interior-decorator)）
 - 宠物行为学家（[Pet Behaviorist](https://github.com/f/awesome-chatgpt-prompts#act-as-a-pet-behaviorist)）
 - 汽车修理（[Automobile Mechanic](https://github.com/f/awesome-chatgpt-prompts#act-as-an-automobile-mechanic)）
-- 地产代理（[Real Estate Agent](https://github.com/f/awesome-chatgpt-prompts#act-as-a-real-estate-agent)）
+- 房地产经纪人（[Real Estate Agent](https://github.com/f/awesome-chatgpt-prompts#act-as-a-real-estate-agent)）
 - 法律顾问（[Legal Advisor](https://github.com/f/awesome-chatgpt-prompts#act-as-a-legal-advisor)）
 - 创业技术律师（[Startup Tech Lawyer](https://github.com/f/awesome-chatgpt-prompts#act-as-a-startup-tech-lawyer)）：根据要求输出协议和和同草案。
+- 足球解说（[Football Commentator](https://github.com/f/awesome-chatgpt-prompts#act-as-a-football-commentator)）：根据提供的笔记信息，模拟足球比赛进程并进行解说。

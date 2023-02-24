@@ -15,6 +15,7 @@ Windows 遇到不懂的问题，可以在 [Microsoft 支持社区](https://answe
 | Win 键 + D         | 显示桌面，再点击一次后恢复             |
 | Win 键 + E         | 快速启动文件资源管理器                 |
 | **Win 键 + Tab**   | 查看当前桌面打开的窗口和所有桌面       |
+| Win + Ctrl + L     | 实时字幕（Windows 11）                 |
 | Win + Ctrl + D     | 创建新的虚拟桌面，新桌面里没有打开窗口 |
 | Win + Ctrl + 左/右 | 切换虚拟桌面                           |
 | Win + I            | 系统设置                               |
