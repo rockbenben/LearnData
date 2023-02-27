@@ -7,11 +7,11 @@ order: 2
 
 ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对话聊天，还能在专业领域提供有效的建议。[lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases) 提供了一个可以快速插入提示词的客户端，推荐使用。[Playground](https://beta.openai.com/playground) 是调用 OpenAI API 的文字生成工具，它比 ChatGPT 更灵活，可以容纳更长的输入（4000 字符），并且可以自定义调整模型和生成参数，但它的生成效果一般要弱于 ChatGPT，仅适合深度研究用户调试使用。
 
-根据领域和功能，我制作了 [ChatGPTCN](https://newzone.top/chatgpt/)) 功能表。ChatGPTCN 通过功能按钮与关键字搜索对提示词进行筛选，点击卡片右侧的复制按钮即可获取提示词后，将其粘贴到 ChatGPT，按照中文提示添加自己的要求，即可得到指定领域的建议输出。ChatGPTCN 的提示词主要来自 [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)，会定期同步更新。如果您需要自定义提示词，可以参考 [ChatGPT 官方案例](https://platform.openai.com/examples)进行调整，同时也欢迎投稿。
+为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 [ChatGPT Shortcut](https://newzone.top/chatgpt/) 页面。即使是初学者，你只需复制提示词，稍加修改后发送给 ChatGPT，就能获得指定输出，让你的生产力加倍！
 
-使用 Tips：
+ChatGPT Tips:
 
-- 若要使用中文回复，请在倒数第二句插入条件 `Reply in Chinese.`。
+- 若要使用中文回复，请在倒数第二句插入条件 `Respond in Chinese.`。
 - 为了保持描述的精确性，提示词请使用英文，而最后一句的定制条件可以使用任何语言，包括中文。
 - 后续回答中的定制条件可以使用引号 `""` 框选，以防止被误认为是新的提示词。
 - 不要用 ChatGPT **解答数学问题**，出错概率达 50%，推荐使用 [Wolfram](https://www.wolframalpha.com/)。
@@ -21,17 +21,17 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 
 ## Learn Prompting
 
-[Learn Prompting](https://learnprompting.org/) 有助于我们获得更好的效果，建议进阶学习。以下是一些我提取出的 Prompting 要点：
+[Learn Prompting](https://learnprompting.org/) 有助于我们获得更好的效果，建议进阶学习。以下是一些 prompts 要点：
 
 - 在专业领域中，应尽量提供 Role Prompting（角色提示），比如「你是数学家」。
 - Prompt Debiasing（消除偏差）：样本在提示中的分布和顺序可能会对 LLM 输出产生偏差。因此，样本选项应该均匀分布，并穿插出现。
 - Chain of Thought Prompting（思维链提示，CoT）是指指在样本中解释推理过程。LLM（大规模语言模型，比如 ChatGPT）在回答提示时会显示推理过程，这种对推理的解释通常会提升结果的准确性。例如，数学题中 LLM 提供的推理过程不对，你可以在 Prompt 中提供该步正确的范例。
   - 添加 `Let's think step by step` 可以让我们了解模型是如何逐步推理问题的，在算术、常识和符号推理任务中能有效改善结果。这个方法被称为 Zero Shot Chain of Thought，是 CoT 的简化替代版。
   - Self-Consistency（自我一致性）产生多个思维链而不仅仅是一个，然后以多数回答作为最终答案。
-- `Write a highly detailed essay with introduction, body, and conclusion paragraphs responding to the following:` 让 LLM 用论文形式来讨论问题，可以得到连贯的、结构化的和更高质量的回答。
-- `I am trying to get good results from GPT-3.5 on the following prompt:"How was ChatGPT created? Why?" Could you write a better prompt that is more optimal for GPT-3.5 and would produce better results?` 让 ChatGPT 为我们重写提示词，收窄提问范围。^[[Solve Discussion Questions](https://learnprompting.org/docs/applied_prompting/short_response)] 困扰我许久的数学问题，用 ChatGPT 重写 Prompt（须为英文）后，当前测试正确率已为 100%。
 
-下方内容为 ChatGPTCN 的旧版，由于目录过长不方便使用，因此将不再更新，仅留作参考。
+::: info
+下方内容为 [ChatGPT Shortcut](https://newzone.top/chatgpt/) 的初始版本，由于目录过长不方便使用，因此将不再更新，仅留作参考。
+:::
 
 ## 文字
 
