@@ -13,7 +13,7 @@ order: -53
 
 为了能让 ChatGPT 成为生产力工具，我花大量时间逐个研究提示词的规则和范例，如 [ChatGPT Prompt Examples](https://platform.openai.com/examples)、[Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)、[Learn Prompting](https://learnprompting.org/) 等。我筛选出了 163 个 Prompts（提示词），仅记录它们的功能而非内容，这就让我的笔记超过了 5000 字。提示词目录也变得越来越长，即使将浏览器全屏，也无法完整显示。起初，我制作提示词目录是为了方便自己，但每次需要查找提示词时，我不得不依靠记忆。这些笔记反而成为了负担，拖累 ChatGPT 的工作效率。
 
-为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 [ChatGPT Shortcut](https://newzone.top/chatgpt/) 页面。即使是初学者，你只需复制提示词，稍加修改后发送给 ChatGPT，就能获得指定输出，让你的生产力加倍！
+为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需**打开 [ChatGPT Shortcut](https://newzone.top/chatgpt/)，复制提示词，稍加修改后发送给 ChatGPT**，就能获得指定输出，让你的生产力加倍！
 
 ## 使用说明
 
@@ -51,7 +51,7 @@ ChatGPT Shortcut 页面默认显示全部的提示词，页面分为标签区、
 
 ### 为什么提示词用英文？
 
-ChatGPT Shortcut 是为方便中文母语人士使用 ChatGPT 而创建的，但是提示词却全部是英文。这是因为相较于中文，ChatGPT 对英文的理解更为出色。即使是国内第一个对话式大型语言模型 MOSS，也承认 MOSS 的英文回答水平比中文高，建议使用英文。
+ChatGPT Shortcut 是为方便中文母语人士使用 ChatGPT 而创建的，但是提示词却全部是英文。这是因为相较于中文，ChatGPT 对英文的理解更为出色。即使是国内第一个对话式大型语言模型 MOSS，也承认 MOSS 的英文回答水平比中文高，建议使用英文。（MOSS 已不对外开放）
 
 使用中文提示词可能会得到不错的结果，但是当你再次输入相同的中文提示时，结果可能与之前大相径庭。因为 ChatGPT 对中文的理解每次都不同，所以建议大家在生产力型提示词的输入中使用英文提示词，以保证输出效果。此外，英文提示词带来的回复也很可能是英文的，你可以在提示词结尾添加 `respond in Chinese`，将回复指定为中文。
 
@@ -65,7 +65,7 @@ ChatGPT 虽然非常强大，但并不是万能的。有时它会输出虚假信
 
 ### 提示词不好用
 
-所有提示词均来自互联网，会定期进行更新。虽然我测试过每一条提示词，但实际效果会因人而异。如需自定义提示词，可以参考 ChatGPT Shortcut 和 [ChatGPT Prompt Examples](https://platform.openai.com/examples) 进行调整。如果你发现任何错误或有好的提示词，欢迎[反馈和投稿](https://github.com/rockbenben/ChatGPT-Shortcut/issues/new)。
+所有提示词均来自互联网，会定期进行更新。虽然我测试过每一条提示词，但实际效果会因人而异。如需自定义提示词，可以参考 ChatGPT Shortcut 和 [ChatGPT Prompt Examples](https://platform.openai.com/examples) 进行调整。如果你发现任何错误或有好的提示词，欢迎[反馈和投稿](https://github.com/rockbenben/ChatGPT-Shortcut/discussions/11)。
 
 ## 为什么执着于 ChatGPT？
 
