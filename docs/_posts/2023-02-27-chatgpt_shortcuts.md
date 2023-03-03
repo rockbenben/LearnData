@@ -65,7 +65,7 @@ ChatGPT 虽然非常强大，但并不是万能的。有时它会输出虚假信
 
 ### 提示词不好用
 
-所有提示词均来自互联网，会定期进行更新。虽然我测试过每一条提示词，但实际效果会因人而异。如需自定义提示词，可以参考 ChatGPT Shortcut 和 [ChatGPT Prompt Examples](https://platform.openai.com/examples) 进行调整。如果你发现任何错误或有好的提示词，欢迎[反馈和投稿](https://github.com/rockbenben/ChatGPT-Shortcut/discussions/11)。
+所有提示词均来自互联网，会定期进行更新。虽然我测试过每一条提示词，但实际效果可能因需求而有所偏差。你可以参考页面和 [ChatGPT Prompt Examples](https://platform.openai.com/examples) 进行调整。如果你发现任何错误、有创意的想法或有好的提示词，欢迎[反馈和投稿](https://github.com/rockbenben/ChatGPT-Shortcut/discussions/11)。
 
 ## 为什么执着于 ChatGPT？
 
@@ -77,4 +77,4 @@ ChatGPT 虽然非常强大，但并不是万能的。有时它会输出虚假信
 
 目前，ChatGPT 已经有 1 亿用户，但这仅仅是 80 亿人口中很小的一部分。无论你身处哪个行业，你使用 ChatGPT 都代表着你在行业前沿。尽管你可能认为这看起来似乎与你的行业无关，但使用它就代表着你比别人更早地迈出了这一步，可以探索更多的可能性。
 
-我希望能够让更多的人了解和使用 ChatGPT，摆脱对其聊天机器人的刻板印象，而是用它来提高工作效率。因为我相信，在未来，ChatGPT 和其他 AI 工具会扮演越来越重要的角色，成为我们生产力的强大工具。
+我并不期待 ChatGPT Shortcut 成为完美的工具，而是希望它能为大家推开使用 AI 的一道门缝。我希望让更多人了解和使用 ChatGPT，摆脱对其聊天机器人的刻板印象，以提高工作效率。因为我相信，在未来，ChatGPT 和其他 AI 工具将扮演越来越重要的角色，成为我们生产力的强大工具。
