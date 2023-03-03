@@ -9,7 +9,7 @@
   </author>
   <logo>https://newzone.top/logo.svg</logo>
   <rights>Copyright by 清顺</rights>
-  <updated>2023-03-02T23:17:12.663Z</updated>
+  <updated>2023-03-03T02:02:05.467Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -22,11 +22,11 @@
     <title type="text">为了帮你用好 ChatGPT，我造了个「轮子」</title>
     <id>https://newzone.top/posts/2023-02-27-chatgpt_shortcuts.html</id>
     <link href="https://newzone.top/posts/2023-02-27-chatgpt_shortcuts.html"/>
-    <updated>2023-03-02T23:15:43.000Z</updated>
+    <updated>2023-03-03T02:00:32.000Z</updated>
     <summary type="html"><![CDATA[<p>最近，关于 ChatGPT 的讨论越来越多，但大多数人仅仅将其视为一款聊天机器人，并从猎奇的角度去测试其人工智能的回答。然而，ChatGPT 不仅仅是一个猎奇的 AI 玩具，未来它将会成为必备生产工具。ChatGPT 之类的 AI 工具将用它巨大的语言知识库，为我们创造更多的价值。</p>
-<p>为了能让 ChatGPT 成为生产力工具，我花大量时间逐个研究提示词的规则和范例，如 <a href="https://platform.openai.com/examples" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Examples</a>、<a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener noreferrer">Awesome ChatGPT Prompts</a>、<a href="https://learnprompting.org/" target="_blank" rel="noopener noreferrer">Learn Prompting</a> 等。我筛选出了 163 个 Prompts（提示词），仅记录它们的功能而非内容，这就让我的笔记超过了 5000 字。提示词目录也变得越来越长，即使将浏览器全屏，也无法完整显示。起初，我制作提示词目录是为了方便自己，但每次需要查找提示词时，我不得不依靠记忆。这些笔记反而成为了负担，拖累 ChatGPT 的工作效率。</p>]]></summary>
+<p>ChatGPT 的回复质量取决于提示词（即 Prompt）。这通常是用户提供的问题或文本，以激活模型生成回复。简单来说，prompt 就是用户想要询问的内容，作为输入送到 ChatGPT 中，ChatGPT 会尝试理解这个输入，然后输出合适的回答或响应。通过优化提示词，可以使 ChatGPT 生成更加准确、有用的回复。为了能让 ChatGPT 成为生产力工具，我花大量时间逐个研究提示词的规则和范例，如 <a href="https://platform.openai.com/examples" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Examples</a>、<a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener noreferrer">Awesome ChatGPT Prompts</a>、<a href="https://learnprompting.org/" target="_blank" rel="noopener noreferrer">Learn Prompting</a> 等。我筛选出了 163 个 Prompts（提示词），仅记录它们的功能而非内容，这就让我的笔记超过了 5000 字。提示词目录也变得越来越长，即使将浏览器全屏，也无法完整显示。起初，我制作提示词目录是为了方便自己，但每次需要查找提示词时，我不得不依靠记忆。这些笔记反而成为了负担，拖累 ChatGPT 的工作效率。</p>]]></summary>
     <content type="html"><![CDATA[<p>最近，关于 ChatGPT 的讨论越来越多，但大多数人仅仅将其视为一款聊天机器人，并从猎奇的角度去测试其人工智能的回答。然而，ChatGPT 不仅仅是一个猎奇的 AI 玩具，未来它将会成为必备生产工具。ChatGPT 之类的 AI 工具将用它巨大的语言知识库，为我们创造更多的价值。</p>
-<p>为了能让 ChatGPT 成为生产力工具，我花大量时间逐个研究提示词的规则和范例，如 <a href="https://platform.openai.com/examples" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Examples</a>、<a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener noreferrer">Awesome ChatGPT Prompts</a>、<a href="https://learnprompting.org/" target="_blank" rel="noopener noreferrer">Learn Prompting</a> 等。我筛选出了 163 个 Prompts（提示词），仅记录它们的功能而非内容，这就让我的笔记超过了 5000 字。提示词目录也变得越来越长，即使将浏览器全屏，也无法完整显示。起初，我制作提示词目录是为了方便自己，但每次需要查找提示词时，我不得不依靠记忆。这些笔记反而成为了负担，拖累 ChatGPT 的工作效率。</p>
+<p>ChatGPT 的回复质量取决于提示词（即 Prompt）。这通常是用户提供的问题或文本，以激活模型生成回复。简单来说，prompt 就是用户想要询问的内容，作为输入送到 ChatGPT 中，ChatGPT 会尝试理解这个输入，然后输出合适的回答或响应。通过优化提示词，可以使 ChatGPT 生成更加准确、有用的回复。为了能让 ChatGPT 成为生产力工具，我花大量时间逐个研究提示词的规则和范例，如 <a href="https://platform.openai.com/examples" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Examples</a>、<a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener noreferrer">Awesome ChatGPT Prompts</a>、<a href="https://learnprompting.org/" target="_blank" rel="noopener noreferrer">Learn Prompting</a> 等。我筛选出了 163 个 Prompts（提示词），仅记录它们的功能而非内容，这就让我的笔记超过了 5000 字。提示词目录也变得越来越长，即使将浏览器全屏，也无法完整显示。起初，我制作提示词目录是为了方便自己，但每次需要查找提示词时，我不得不依靠记忆。这些笔记反而成为了负担，拖累 ChatGPT 的工作效率。</p>
 <p>为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需<strong>打开 <a href="https://newzone.top/chatgpt/" target="_blank" rel="noopener noreferrer">ChatGPT Shortcut</a>，复制提示词，稍加修改后发送给 ChatGPT</strong>，就能获得指定输出，让你的生产力加倍！</p>
 <h2> 使用说明</h2>
 <p>ChatGPT Shortcut 页面默认显示全部的提示词，页面分为标签区、搜索区和提示词展示区。</p>
@@ -53,13 +53,13 @@
 <h3> 输出虚假信息</h3>
 <p>ChatGPT 虽然非常强大，但并不是万能的。有时它会输出虚假信息。例如，当我需要将上百条信息录入到 ChatGPT Shortcut 中时，我让 ChatGPT 按指定格式转换数据。但是在转换过程中，我发现其中一些信息被 ChatGPT 误写。例如，在文本中一条标签是 <code>movie critic</code>，而 ChatGPT 将其更改为 <code>film critic</code>。尽管这在文本中不会造成什么影响，但放在代码中会报错。因此，在使用 ChatGPT 时，务必检查其输出内容。</p>
 <h3> 提示词不好用</h3>
-<p>所有提示词均来自互联网，会定期进行更新。虽然我测试过每一条提示词，但实际效果会因人而异。如需自定义提示词，可以参考 ChatGPT Shortcut 和 <a href="https://platform.openai.com/examples" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Examples</a> 进行调整。如果你发现任何错误或有好的提示词，欢迎<a href="https://github.com/rockbenben/ChatGPT-Shortcut/discussions/11" target="_blank" rel="noopener noreferrer">反馈和投稿</a>。</p>
+<p>所有提示词均来自互联网，会定期进行更新。虽然我测试过每一条提示词，但实际效果可能因需求而有所偏差。你可以参考页面和 <a href="https://platform.openai.com/examples" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Examples</a> 进行调整。如果你发现任何错误、有创意的想法或有好的提示词，欢迎<a href="https://github.com/rockbenben/ChatGPT-Shortcut/discussions/11" target="_blank" rel="noopener noreferrer">反馈和投稿</a>。</p>
 <h2> 为什么执着于 ChatGPT？</h2>
 <p>家人看到我每天把大量时间花在 ChatGPT，实际上并不能理解。因为这看起来跟我的工作关系不大。ChatGPT 帮我节省的时间远少于我的投入，帮我写的代码和文章都需要大幅修改，而查找的资料也基本上只是基础知识，而对于具体的问题我还需要去专业网站进行查询。那么，ChatGPT 究竟有什么用呢？等它成熟了再去使用不好吗？</p>
 <p>但是，我们需要明确的是，使用 ChatGPT 等 AI 工具可以提高我们的工作效率和解放我们的时间，让我们可以更专注于创造性的工作和创新性的思考。比如，ChatGPT 在文章修订、语气转换、语音录入、代码解释、创意思维等方面已经成为我不可或缺的工具。虽然 ChatGPT 目前的功能和表现还有待提高和改进，但它毕竟是未来工具的一部分，是我们不断提高自己和适应未来的必要工具。我相信随着时间的推移，ChatGPT 的表现会越来越优秀，让我们的工作更高效，更具有创造性。</p>
 <h2> 最后</h2>
 <p>目前，ChatGPT 已经有 1 亿用户，但这仅仅是 80 亿人口中很小的一部分。无论你身处哪个行业，你使用 ChatGPT 都代表着你在行业前沿。尽管你可能认为这看起来似乎与你的行业无关，但使用它就代表着你比别人更早地迈出了这一步，可以探索更多的可能性。</p>
-<p>我希望能够让更多的人了解和使用 ChatGPT，摆脱对其聊天机器人的刻板印象，而是用它来提高工作效率。因为我相信，在未来，ChatGPT 和其他 AI 工具会扮演越来越重要的角色，成为我们生产力的强大工具。</p>
+<p>我并不期待 ChatGPT Shortcut 成为完美的工具，而是希望它能为大家推开使用 AI 的一道门缝。我希望让更多人了解和使用 ChatGPT，摆脱对其聊天机器人的刻板印象，以提高工作效率。因为我相信，在未来，ChatGPT 和其他 AI 工具将扮演越来越重要的角色，成为我们生产力的强大工具。</p>
 ]]></content>
     <author>
       <name>清顺</name>
