@@ -5,11 +5,23 @@ icon: creative
 order: 2
 ---
 
-ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对话聊天，还能在专业领域提供有效的建议。[lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases) 提供了一个可以快速插入提示词的客户端，推荐使用。[Playground](https://beta.openai.com/playground) 是调用 OpenAI API 的文字生成工具，它比 ChatGPT 更灵活，可以容纳更长的输入（4000 字符），并且可以自定义调整模型和生成参数，但它的生成效果一般要弱于 ChatGPT，仅适合深度研究用户调试使用。
+ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对话聊天，还能在专业领域提供有效的建议。为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 [ChatGPT Shortcut](https://newzone.top/chatgpt/) 页面。即使是初学者，你只需复制提示词，稍加修改后发送给 ChatGPT，就能获得指定输出，让你的生产力加倍！
 
-为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 [ChatGPT Shortcut](https://newzone.top/chatgpt/) 页面。即使是初学者，你只需复制提示词，稍加修改后发送给 ChatGPT，就能获得指定输出，让你的生产力加倍！
+## ChatGPT 客户端
 
-ChatGPT Tips:
+我主要使用以下三个工具：
+
+- [川虎 ChatGPT](https://github.com/GaiZhenbiao/ChuanhuChatGPT)：调用 API 的网页客户端，新手也能简单配置。
+- [lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases)：可以快速插入提示词的客户端，不过 IP 严格程度与官方一样严格。
+- [Playground](https://beta.openai.com/playground) 是官方调用 OpenAI API 的网页工具，不过不如第三方好用。它可以自定义调整模型和生成参数，但它的生成效果一般要弱于 ChatGPT，仅适合深度研究用户调试使用。
+
+第三方 API 客户端的优势：
+
+- 费用低：ChatGPT Plus 包月费用是 20 美元，平均而言每天需要 0.67 美元。相比之下，API 的费用每 1000 个 tokens 仅为 0.002 美元。这意味着，我使用 API 的话，每天可以使用 300 次 ChatGPT，而我每天实际也就只需要 100 次。
+- 限制少：API 限制相较于 ChatGPT 网页版也要少得多，最大 token 数量为 4096 个，而网页版仅有 2048 个。需要注意的是，提问和对话的所有文本内容都包括在 token 数量内。
+- 可移动性：ChatGPT 网页版对 IP 非常严格，使用人数多的服务商 IP 大多被封禁。与此相比，API 的限制要少得多，而且可以部署网页版，方便外出使用。
+
+## ChatGPT Tips
 
 - 若要使用中文回复，请在倒数第二句插入条件 `Respond in Chinese.`。
 - 为了保持描述的精确性，提示词请使用英文，而最后一句的定制条件可以使用任何语言，包括中文。
