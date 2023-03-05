@@ -76,11 +76,11 @@ export default hopeTheme({
     medias: {
       GitHub: "https://github.com/rockbenben",
       Zhihu: "https://www.zhihu.com/people/qingwhat",
-      少数派: [
+      '少数派': [
         "https://sspai.com/u/zqj05i4v/posts",
         path.resolve(__dirname, "icons/sspai.svg"),
       ],
-      Wechat: "http://tc.seoipo.com/wechat.svg",
+      Wechat: "https://tc.seoipo.com/wechat.svg",
       Email: "mailto:learndata@newzone.top",
       Discord: "https://discord.gg/PZTQfJ4GjX",
       RSS: "https://newzone.top/rss.xml",
@@ -88,6 +88,8 @@ export default hopeTheme({
   },
   // 开发模式下是否启动热更新，显示所有更改并重新渲染
   hotReload: true,
+  // 隐藏打印按钮
+  print: false,
   plugins: {
     blog: {
       excerpt: true,
