@@ -30,7 +30,7 @@ order: -46
    晨间唤醒参考了[积极心理学](https://www.xuetangx.com/course/THU07111001088/)，收集积极情绪材料，给自己创造美好的情绪。
 2. **录制视频**：用 VLC 和摄像头录制视频，按计划开始工作学习。
 3. **过滤视频**：晚上 11 点，DVR-Scan 过滤静止视频片段，记录录制时长和处理后的视频时长。
-   ![视频时长记录表格](http://tc.seoipo.com/2022-05-22-10-05-04.png)
+   ![视频时长记录表格](https://tc.seoipo.com/2022-05-22-10-05-04.png)
 4. **视频回放**：100x 倍速回放工作视频，检查工作效率和成果。如果需要听声音，则使用 PotPlayer 播放降噪，剪辑出要使用的片段。原始视频和过滤视频保存一月，定期清理。
 5. **当日回顾**：记录 3 件好事，总结好事发生的原因。
    这可以是日常生活中常见的小事，比如读到一本好书、吃到一道好菜、听到一个亲友的好消息、在公交车上有人为你让座、孩子今天会走路了，等等。
@@ -67,15 +67,15 @@ Bandicam、Mirillis Action！录制时，电脑无法进入睡眠，ManicTime �
 
 1. 打开 VLC 的 Media -> Open Capture Device，将 `Video device name` 和 `Audio device name` 选为摄像头，然后点击底部 `Play` 按钮旁边的下拉菜单，选中 `Convert`。
 
-   ![](http://tc.seoipo.com/2022-05-21-22-09-08.png)
+   ![](https://tc.seoipo.com/2022-05-21-22-09-08.png)
 
 2. Settings -> Profile 中选择视频输出方案，推荐选择 `Video - H.264 + MP3 (MP4)`，接着点击旁边的扳手按钮，修改输出方案。
 
-   ![](http://tc.seoipo.com/2022-05-21-22-11-09.png)
+   ![](https://tc.seoipo.com/2022-05-21-22-11-09.png)
 
 3. Profile edition -> Video codec -> Encoding parameters，依次调整视频的编码、比特率、画面质量、帧率，编码建议使用 H-264，码率推荐 10 fps。
 
-   ![](http://tc.seoipo.com/2022-05-21-22-12-32.png)
+   ![](https://tc.seoipo.com/2022-05-21-22-12-32.png)
 
 4. Destination file 设置输出路径和视频名称。
 
@@ -129,7 +129,7 @@ DVR-Scan 进阶命令查看[官方文档](https://dvr-scan.readthedocs.io/en/lat
 - **关闭规格化**：这时声音就不会那么大，也不会过于杂了，这时的声音已经相比处理前干净多了。
 - **开启超高音**：打开均衡器，选择「超高音」方案。
 
-  ![PotPlayer 播放降噪设置](http://tc.seoipo.com/2022-05-19-10-47-18.png)
+  ![PotPlayer 播放降噪设置](https://tc.seoipo.com/2022-05-19-10-47-18.png)
 
 设置完成后，播放时 PotPlayer 会自动对视频进行降噪，无需额外花时间处理视频。
 

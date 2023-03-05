@@ -140,7 +140,7 @@ swapcase() #将字符串中大写转换为小写，小写转换为大写
 not 1 or 0 and 1 or 3 and 4 or 5
 (not 1) or (0 and 1) or (3 and 4) or 5
 
-![Python 运算符优先级](http://tc.seoipo.com/2022-06-29-18-18-44.png)
+![Python 运算符优先级](https://tc.seoipo.com/2022-06-29-18-18-44.png)
 
 ## 条件三元表达式
 

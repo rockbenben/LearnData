@@ -9,9 +9,9 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 
 ## ChatGPT 客户端
 
-我主要使用以下三个工具：
+主要使用以下几个工具：
 
-- [川虎 ChatGPT](https://github.com/GaiZhenbiao/ChuanhuChatGPT)：调用 API 的网页客户端，新手也能简单配置。
+- 第三方客户端：[ChatGPT-API Demo](https://github.com/ddiu8081/chatgpt-demo)，[ChuanhuChatGPT](https://github.com/GaiZhenbiao/ChuanhuChatGPT)，都是调用 API 的网页客户端，新手也能简单配置。
 - [lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases)：可以快速插入提示词的客户端，不过 IP 严格程度与官方一样严格。
 - [Playground](https://beta.openai.com/playground) 是官方调用 OpenAI API 的网页工具，不过不如第三方好用。它可以自定义调整模型和生成参数，但它的生成效果一般要弱于 ChatGPT，仅适合深度研究用户调试使用。
 

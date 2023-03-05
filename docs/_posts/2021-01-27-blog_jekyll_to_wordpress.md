@@ -15,7 +15,7 @@ order: -35
 
 Jekyll 用着太舒服，不知不觉就过了三年。但随着文章越来越多，修改也愈加困难，甚至逐渐习惯只更新专栏，而将博客仅作初版发布。Jekyll 已经失去了知识记录参考的初衷，决定将博客从 Jekyll 迁移到 WordPress，文章的初次排版编辑依旧使用 Markdown。
 
-![](http://tc.seoipo.com/20210128124408.png?imageMogr2/thumbnail/!50p)
+![](https://tc.seoipo.com/20210128124408.png?imageMogr2/thumbnail/!50p)
 
 ## 迁移步骤
 
@@ -42,7 +42,7 @@ Jekyll 用着太舒服，不知不觉就过了三年。但随着文章越来越�
 
 5. 后台－Syndication－添加 rss 源，比如添加源 `xxx.com/feed-wp.xml`，其中 `xxx.com` 指你的博客网址。
 
-   ![](http://tc.seoipo.com/20210128120956.gif)
+   ![](https://tc.seoipo.com/20210128120956.gif)
 
 参考资料：
 

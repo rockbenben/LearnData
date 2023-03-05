@@ -32,7 +32,7 @@ scoop install ffmpeg
 
 在文件所在目录下打开终端，运行 `whisper jp.mp4` 即可执行音视频转录。测试视频名原本为日语，我改为「jp.mp4」，原因是我系统中只装了中英语言包，使用其他语言作为命令会出现 Invalid argument 报错，从而导致转录失败。Whisper 的媒体分析环节调用了 FFmpeg，所以主流音视频格式均被支持。
 
-![](http://tc.seoipo.com/2022-11-18-09-25-29.png "whisper 命令")
+![](https://tc.seoipo.com/2022-11-18-09-25-29.png "whisper 命令")
 
 视频时长 90 分钟，我使用 3080Ti 显卡转录，用时 10 分钟。转录过程中不要玩游戏，也不要进行直播等吃显存的行为，否则容易显存不足无法继续。Whisper 对设备要求不高，不过设备会决定转录时长和你能使用的转录模型。如果你使用 CPU 转录，时间会增加 5-10 倍。
 
@@ -117,7 +117,7 @@ scoop install ffmpeg
 
 除了用 Whisper 转录的字幕来看视频和视频剪辑外，还能将来管理音视频。@PlatyHsu 分享的 [ATP Podcast Search](https://marcoshuerta.com/dash/atp_search/) 启发了我，ATP 用 Whisper 转录给一个做了十年的英文播客做了可搜索的索引。那是否有应用在本地端用字幕管理视频文件？
 
-![](http://tc.seoipo.com/2022-11-18-23-21-25.png "ATP Podcast Search 搜索界面")
+![](https://tc.seoipo.com/2022-11-18-23-21-25.png "ATP Podcast Search 搜索界面")
 
 这个想法在技术上实现起来不难，甚至飞书妙记已经起到类似效果，但它是在线应用，不支持上传字幕，而且仅支持原生字幕搜索。换句话说，上传日语视频，你必须用日语搜索，即使妙记提供了中文翻译查看，你也不能中文搜索。而其他的视频笔记，只有 B 站专属的站内视频笔记和只支持 YouTube 的 [ClarityNotes](http://xlrocket.com/%e7%9c%8b%e8%bf%87%e4%b8%8d%e4%bb%a3%e8%a1%a8%e5%ad%a6%e8%bf%87%ef%bc%8c%e7%8e%b0%e5%9c%a8%e8%83%bd%e8%be%b9%e7%9c%8b%e8%a7%86%e9%a2%91%ef%bc%8c%e8%be%b9%e5%81%9a%e7%ac%94%e8%ae%b0%ef%bc%8c-%e9%9d%9e/)。
 

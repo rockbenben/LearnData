@@ -15,7 +15,7 @@ order: -12
 
 > 一键创建网站、FTP、数据库、SSL；安全管理，计划任务，文件管理，PHP 多版本共存及切换；自带 LNMP 与 LAMP
 
-![宝塔面板界面图](http://tc.seoipo.com/18-4-30/97791164.jpg)
+![宝塔面板界面图](https://tc.seoipo.com/18-4-30/97791164.jpg)
 
 宝塔安装说明：<https://www.bt.cn/bbs/thread-1186-1-1.html>
 
@@ -23,4 +23,4 @@ order: -12
 
 **LNMP** 和 **LAMP** 都是成熟的建站环境，根据自己的需求二选一即可。
 如果有定制需求，可以在左侧「软件管理」中选定要安装的环境
-![软件安装界面](http://tc.seoipo.com/18-4-30/21951434.jpg)
+![软件安装界面](https://tc.seoipo.com/18-4-30/21951434.jpg)

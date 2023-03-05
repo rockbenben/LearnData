@@ -25,7 +25,7 @@ order: -23
 
 过了几年，经济宽裕点后，下单网红录音话筒 Blue Yeti，幻想着 4 位数的话筒能带来完美的收音识别效果。
 
-![Blue Yeti](http://tc.seoipo.com/20181228052211.png?imageMogr2/thumbnail/!60p)
+![Blue Yeti](https://tc.seoipo.com/20181228052211.png?imageMogr2/thumbnail/!60p)
 
 但事实却是**再度被打击**。
 
@@ -49,7 +49,7 @@ order: -23
 
 选好话筒后，又配了麦克风支架和卡侬线，连上原本的外置声卡，搞定语音输出的硬件配置。
 
-![收音设备](http://tc.seoipo.com/2022-05-25-18-02-54.jpg?imageMogr2/thumbnail/!15p)
+![收音设备](https://tc.seoipo.com/2022-05-25-18-02-54.jpg?imageMogr2/thumbnail/!15p)
 
 ## 输入法之争
 
@@ -65,7 +65,7 @@ order: -23
 
 语音输入则转用开源的 [Quick Cut](https://github.com/HaujetZhao/QuickCut)，使用阿里云、腾讯云的商用语音接口，识别率比免费的搜狗和讯飞都高。
 
-![Quick Cut 界面](http://tc.seoipo.com/2022-05-25-18-08-06.png?imageMogr2/thumbnail/!60p)
+![Quick Cut 界面](https://tc.seoipo.com/2022-05-25-18-08-06.png?imageMogr2/thumbnail/!60p)
 
 Quick Cut 的缺点：语音输入时，要一直按大写键，不适合长语音录入；触发键无法更改，大写键与我的常用脚本冲突了。因此，长时间的语音输入只能借助手机上的飞书妙记来完成转录。
 
@@ -77,7 +77,7 @@ Quick Cut 的缺点：语音输入时，要一直按大写键，不适合长语�
 
 测试后，发现微软语音输入确实是好用，甚至好用到有点恐怖。测试中，我临时有事，走到另外一个房间和家人说话，回来后发现刚刚的对话也被微软语音输入正确识别。
 
-![微软语音输入](http://tc.seoipo.com/2022-05-25-18-13-17.png)
+![微软语音输入](https://tc.seoipo.com/2022-05-25-18-13-17.png)
 
 微软语音输入非常敏感，距离远、声音低也能识别。这样我不用为语音输入而特意移动话筒，可以继续把话筒放在不遮挡视野的远角。
 

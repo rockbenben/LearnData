@@ -28,7 +28,7 @@ lucifersun 的 IPTV 直播源比电视直播**慢 15 秒**，对普通用户来�
 
 进入[上海电信 IPTV 视频流地址](https://htmlpreview.github.io/?https://raw.githubusercontent.com/lucifersun/China-Telecom-ShangHai-IPTV-list/master/IPTV.html)。点击「生成 txt 内容」，然后复制下方的**视频直播源列表**，保存为 tv.txt，并将 tv.txt 文本转为 **ANSI 编码**（避免节目名会出现中文乱码）。
 
-![](http://tc.seoipo.com/20180619170944.png)
+![](https://tc.seoipo.com/20180619170944.png)
 
 ## 电视盒子直播
 
@@ -38,7 +38,7 @@ lucifersun 的 IPTV 直播源比电视直播**慢 15 秒**，对普通用户来�
 
 3. 用与电视盒子位于同一局域网的电脑或手机访问**隐藏管理地址**，点击「我」-「上次自定义 (tv.txt)」-「上传」，上传刚保存好的 tv.txt。
 
-   ![](http://tc.seoipo.com/20180619164137.png)
+   ![](https://tc.seoipo.com/20180619164137.png)
 
 4. 将「超级直播」的播放列表切换到**自定义**，直接观看导入的电视节目。
 
@@ -48,7 +48,7 @@ lucifersun 的 IPTV 直播源比电视直播**慢 15 秒**，对普通用户来�
 
 2. 复制节目 rtsp 直播源链接，打开 Potplayer , 右键单击主界面 >「打开」>「打开剪贴板」。
 
-   ![](http://tc.seoipo.com/20180619140722.png)
+   ![](https://tc.seoipo.com/20180619140722.png)
 
 这样就可以在 PC 端看电视了。
 

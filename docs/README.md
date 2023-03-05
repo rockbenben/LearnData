@@ -7,10 +7,10 @@ icon: note
 > 开源工具、效率方法、心理学探索的自我提升笔记
 
 <a href="https://discord.gg/PZTQfJ4GjX">
-   <img src="http://tc.seoipo.com/2022-12-04-11-56-44.svg" alt="Discord">
+   <img src="https://tc.seoipo.com/2022-12-04-11-56-44.svg" alt="Discord">
 </a>  
 <a href="mailto:learndata@newzone.top">
-   <img src="http://tc.seoipo.com/2022-12-04-11-58-19.svg" alt="Mail">
+   <img src="https://tc.seoipo.com/2022-12-04-11-58-19.svg" alt="Mail">
 </a>
 
 ## ✨ 初衷
@@ -21,9 +21,9 @@ icon: note
 
 因此，我基于 VuePress 和 vuepress-theme-hope 建立了 LearnData，将所有笔记与文章重新整合，聚合到同一页面形成知识库，方便自己使用和分享。
 
-![](http://tc.seoipo.com/2022-08-22-19-28-25.png?imageMogr2/thumbnail/!80p "笔记 + 文章 = LearnData 知识库")
+![](https://tc.seoipo.com/2022-08-22-19-28-25.png?imageMogr2/thumbnail/!80p "笔记 + 文章 = LearnData 知识库")
 
-![](http://tc.seoipo.com/2022-08-24-19-14-59.png "笔记/博客自动化发布")
+![](https://tc.seoipo.com/2022-08-24-19-14-59.png "笔记/博客自动化发布")
 
 ## 🧱 笔记结构
 
@@ -41,22 +41,22 @@ icon: note
 
 1. 进入 [LearnData](https://github.com/rockbenben/LearnData) 项目页，点击「Use this template」，复制该模板文件。
 
-   ![](http://tc.seoipo.com/2022-08-10-19-32-05.png)
+   ![](https://tc.seoipo.com/2022-08-10-19-32-05.png)
 
-   ![](http://tc.seoipo.com/2022-08-10-19-34-13.png?imageMogr2/thumbnail/!60p)
+   ![](https://tc.seoipo.com/2022-08-10-19-34-13.png?imageMogr2/thumbnail/!60p)
 
 2. 复制完成后，GitHub 会自动搭建网站，大约需要 3 分钟的时间。
 3. 点击 `Setting`, 修改 `Repository name` 为 `xxx.github.io`, `xxx` 是你的 GitHub 用户名。如果该项名称已被占据，GitHub Pages 无法正常显示，则查看页面底部的常见问题。
 
-   ![](http://tc.seoipo.com/20180505202201.png)
+   ![](https://tc.seoipo.com/20180505202201.png)
 
 4. 同一页面选择「Code and automation」>「Pages」>「Build and deployment」>「Branch」, 将 gh-page branch 设为 GitHub Pages 的来源，网站运行目录默认为 `/(root)`。设置完成后，点击「Save」。如果没找到 gh-page branch，可以在 GitHub 中修改任意文件以手动触发 GitHub Action，等待其执行完成后，再重新设置 Pages 的来源。
 
-   ![](http://tc.seoipo.com/2022-08-10-19-39-15.png)
+   ![](https://tc.seoipo.com/2022-08-10-19-39-15.png)
 
 5. 设置成功后，页面会提示访问链接：`https://xxx.github.io/`，知识库搭建完毕。
 
-   如果未出现访问链接提示或不能打开 GitHub Pages，则删除 `docs/_posts` 路径下的 `2017-04-22-rss_feed43_feedex.md` 文件，GitHub Pages 有时会对这篇旧文章里的代码报错。
+   如果未出现访问链接提示或不能打开 GitHub Pages，则删除 `docs/_posts` 路径下的博客文件，GitHub Pages 有时会对旧文章里的代码报错。
 
 ## 🔣 配置 LearnData
 
@@ -140,11 +140,11 @@ Vercel 部署步骤如下：
 
 2. 输入一个你喜欢的 Vercel 项目名称，默认 private 即可，然后点击 `Create`。
 
-   ![](http://tc.seoipo.com/2022-08-24-17-24-16.png "创建 Vercel 项目")
+   ![](https://tc.seoipo.com/2022-08-24-17-24-16.png "创建 Vercel 项目")
 
 3. 接着，Vercel 会基于 LearnData 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。几十秒后，满屏的烟花会庆祝你部署成功。此时，点击 `Go to Dashboard` 跳转到应用的控制台。
 
-   ![](http://tc.seoipo.com/2022-08-24-17-21-58.png "Vercel 部署成功提示")
+   ![](https://tc.seoipo.com/2022-08-24-17-21-58.png "Vercel 部署成功提示")
 
 4. 为了让 Vercel 页面与 GitHub Pages 自动保持同步更新，你需要配置 `PERSONAL_TOKEN` 和 GitHub Actions。
 
@@ -203,7 +203,7 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 ### 本地运行 LearnData
 
 1. 安装环境 npm 和 pnpm，可参考[环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
-2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm i && pnpm up`。
+2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm i`。
 3. 完成前两步后，终端中输入 `pnpm docs:dev`，成功后会提示访问链接，默认为 `http://localhost:8080/`。
 
 运行本地服务器后，修改文件时预览页面也会同步更新。若要停止本地服务器，在终端中按下 `Ctrl + C`。

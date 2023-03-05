@@ -19,15 +19,15 @@ RSSHub 使用非常简单，但随着使用者增多，微博、知乎加大了�
 2. 安装宝塔面板，查看[官方安装教程](https://www.bt.cn/bbs/thread-19376-1-1.html)。
 3. 登陆宝塔面板，点击「软件商店」-「运行环境」，安装**PM2 管理器**。
 
-   ![](http://tc.seoipo.com/20200325120705.png)
+   ![](https://tc.seoipo.com/20200325120705.png)
 
 4. 点击 PM2 管理器右侧的设置，按图中红字添加项目路径，启动文件名称为 `lib`。
 
-   ![](http://tc.seoipo.com/20200325121639.png)
+   ![](https://tc.seoipo.com/20200325121639.png)
 
 5. 添加后，点击项目中的「映射」，输入指定域名，如 `rsshub.xxx.com`，服务器的 1200 端口将指向该域名。映射域名需解析到服务器 IP。
 
-   ![](http://tc.seoipo.com/20200325121921.png)
+   ![](https://tc.seoipo.com/20200325121921.png)
 
 程序运行时，如果遇到报错，可以直接用命令运行 pm2，如 `pm2 start /root/RSSHub/lib/index.js --name rsshub`。
 

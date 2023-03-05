@@ -32,7 +32,7 @@ order: 4
 
 [Snap Camera](https://snapcamera.snapchat.com/) 是 SnapChat 的免费增强现实应用。它可以帮助你在电脑直播/录屏时实现挡脸头套、美化滤镜等特效。如果你熟悉 3D 建模，可以使用 Lens Studio 定制属于你自己的变脸特效。但需要注意的是，当你喝水、低头或脸部被遮挡时，脸部特效会失效。
 
-![Snap Camera 效果图](http://tc.seoipo.com/SnapCamera.gif "Snap Camera 效果图")
+![Snap Camera 效果图](https://tc.seoipo.com/SnapCamera.gif "Snap Camera 效果图")
 
 如果你无法使用 Snap Camera，可以尝试 FaceRig 和 PrprLive。
 
@@ -40,7 +40,7 @@ order: 4
 
 [FaceRig](https://store.steampowered.com/app/274920/FaceRig/)（Steam 已停售）可以通过对五官的动作捕捉，让卡通脸的表情进行同步变化，但不能对头部以下的部分进行捕捉和同步。使用时，需要打开 FaceRig 中的「切换广播」，否则 OBS 窗口会显示为黑屏。
 
-![FaceRig 演示图](http://tc.seoipo.com/20210329092154.gif "FaceRig 演示图")
+![FaceRig 演示图](https://tc.seoipo.com/20210329092154.gif "FaceRig 演示图")
 
 注意：百度搜索 FaceRig 的首个结果是**虚假官网**，价格高且无保障，不要在上面进行购买。
 
@@ -52,7 +52,7 @@ order: 4
 
 为了丰富直播场景，可以使用带绿幕的视频来添加动态特效，或者借助类虚拟主播技术来实现交互。例如 [Bongo Cat Mver](https://d.appinn.com/bongo-cat-mver/)，它能实时同步键盘与鼠标状态，增加直播趣味性。如果你使用的是 Bongo Cat 全键盘同步模型，建议打乱映射规则，以防止隐私泄露。
 
-![直播间的猫咪](http://tc.seoipo.com/2022-06-30-08-29-40.png "直播间的猫咪")
+![直播间的猫咪](https://tc.seoipo.com/2022-06-30-08-29-40.png "直播间的猫咪")
 
 ## 摄像头多开
 

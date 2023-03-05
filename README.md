@@ -64,7 +64,7 @@
 
 5. 设置成功后，页面会提示访问链接：`https://xxx.github.io/`，知识库搭建完毕。
 
-   如果未出现访问链接提示或不能打开 GitHub Pages，则删除 `docs/_posts` 路径下的 `2017-04-22-rss_feed43_feedex.md` 文件，GitHub Pages 有时会对这篇旧文章里的代码报错。
+   如果未出现访问链接提示或不能打开 GitHub Pages，则删除 `docs/_posts` 路径下的博客文件，GitHub Pages 有时会对旧文章里的代码报错。
 
 ## 🔣 配置 LearnData
 
@@ -211,7 +211,7 @@ VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命
 ### 本地运行 LearnData
 
 1. 安装环境 npm 和 pnpm，可参考[环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
-2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm i && pnpm up`。
+2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm i`。
 3. 完成前两步后，终端中输入 `pnpm docs:dev`，成功后会提示访问链接，默认为 `http://localhost:8080/`。
 
 运行本地服务器后，修改文件时预览页面也会同步更新。若要停止本地服务器，在终端中按下 `Ctrl + C`。

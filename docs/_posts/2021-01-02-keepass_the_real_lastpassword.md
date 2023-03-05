@@ -41,7 +41,7 @@ KeePass 不能在一个条目填写多个匹配网址，但不同条目可以共
 
 比如 `163.com` 和 `youdao.com` 都使用网易账户，账号密码相同，根据网址建立了 2 个条目。首先，在 163 条目输入实际的账户密码，将其作为网易账户的主条目。然后，双击进入 youdao 条目，点击 Edit Entry 界面左下角的「工具」>「插入字段引用」>「在用户名/密码字段」，选中需要引用的条目。设置好后，字段旁边会出现分享符，表明这是引用字段，该字段数值会跟随主条目更新。引用字段的实际内容类似 `{REF:P@I:8CC19B988F0F9D499459B741753BEE5F}`，更改账户密码只能在主条目上进行。
 
-![](http://tc.seoipo.com/2022-10-18-11-41-15.png "引用字段设置步骤")
+![](https://tc.seoipo.com/2022-10-18-11-41-15.png "引用字段设置步骤")
 
 ## 必备插件
 
@@ -64,7 +64,7 @@ KeePass 需要配置插件，才能实现密码自动输入。下载插件并放
 
 [AutoTypeSearch](https://keepass.info/plugins.html#atsearch) 提供全局框，输入热键 `Ctrl+Shift+A` 后，搜索关键词输入密码。
 
-![](http://tc.seoipo.com/20191013083950.png "AutoTypeSearch 通用设置")
+![](https://tc.seoipo.com/20191013083950.png "AutoTypeSearch 通用设置")
 
 ### KP Entry Templates
 
@@ -103,7 +103,7 @@ KeePass 需要配置插件，才能实现密码自动输入。下载插件并放
 
 其他插件不能自动登录，只有 Kee 能做到该功能。使用 Kee 的自动登录功能后，少数页面会出现循环登录，需暂停 Kee 扩展来停止循环错误。
 
-![](http://tc.seoipo.com/2022-05-05-14-29-32.png "Kee 设置")
+![](https://tc.seoipo.com/2022-05-05-14-29-32.png "Kee 设置")
 
 ### KeePassNatMsg
 
@@ -137,6 +137,6 @@ KeePass 懒人包为绿色版，集成了常用插件，建立数据库即可使
 2. 屏幕右下角托盘处，打开 KeePass。
 3. 菜单栏上点击「文件」>「新建」，建立属于你的密码数据库。
 
-   ![](http://tc.seoipo.com/KeePass_new_kdbx.gif "KeePass 懒人包设置")
+   ![](https://tc.seoipo.com/KeePass_new_kdbx.gif "KeePass 懒人包设置")
 
 懒人包集成插件：AutoTypeSearch，Entry Templates，KeePassHttp，KeePassNatMsg，KeePassRpc，KeeTrayTOTP，KPEnhancedEntryView，SourceForgeUpdateChecker，WebAutoType。

@@ -333,6 +333,15 @@ Trigger Agent 挑选符合条件的事件。
 
 Event Formatting Agent 允许您格式化传入的事件，根据需要添加新的字段。可以用正则来替换输入中的某些元素。具体样例参考，[新京报 #5 清理版面字段格式](http://huginnio.herokuapp.com/scenarios/14/download)。
 
+```yml
+# strftime() 方法中常用的占位符
+# %Y 表示年份，%m 表示月份，%d 表示日期，%H 表示小时（24小时制），%M 表示分钟，%S 表示秒，%B 代表英文的月份，`%I` 代表小时（12小时制），`%p` 代表 AM/PM。`%e` 代表日期，不会在首位添加零。
+"created_at": "{{created_at | date:'at %I:%M %p'}}"
+
+# 将 2023-03-02 23:33:30 +0800 替换为 2023-03-02
+"created_at": "{{created_at | regex_replace: ' ', ''| regex_replace: '(([0-1]?[0-9])|([2][0-3])):([0-5]?[0-9])(:([0-5]?[0-9]))?', ''| regex_replace: '\\+0800', ''}}"
+```
+
 #### 正则重构
 
 比如生成时间规则为 `"created_at": "{{created_at}}"`，默认时间 `2022-07-06 21:09:51 +0800`，使用正则删除规则为
@@ -362,7 +371,6 @@ You may want to send this event to another Agent, for example a Twilio Agent, wh
   "subject": "{{data}}",
   "created_at": "{{created_at}}"
 }
-
 ```
 
 Names here like `conditions`, `high` and `data` refer to the corresponding values in the Event hash.

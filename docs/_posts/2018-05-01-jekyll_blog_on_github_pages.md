@@ -22,16 +22,16 @@ order: -13
 
 3. 点击 `Fork`, 将喜欢的模板复制到自己的 Github 仓库中。
 
-   ![](http://tc.seoipo.com/20180505201522.png)
+   ![](https://tc.seoipo.com/20180505201522.png)
 
 4. 点击 `Setting`, 修改 `Repository name` 为 `xxx.github.io`, `xxx` 是你的 Github 用户名。
 
-   ![](http://tc.seoipo.com/20180505202201.png)
+   ![](https://tc.seoipo.com/20180505202201.png)
 
 5. 同一页面选择「Code and automation」>「Pages」>「Build and deployment」>「Branch」, 将 master branch 设为 Github Pages 来源，网站运行目录默认为 `/(root)`。设置好后，点击「Save」。
 
-   ![](http://tc.seoipo.com/2022-08-08-11-42-16.png)
+   ![](https://tc.seoipo.com/2022-08-08-11-42-16.png)
 
 6. 最后，按页面提示访问链接 `https://xxx.github.io/`，新博客搭建完毕。
 
-   ![](http://tc.seoipo.com/20180505202859.png)
+   ![](https://tc.seoipo.com/20180505202859.png)
