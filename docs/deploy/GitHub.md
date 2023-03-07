@@ -70,6 +70,42 @@ jobs:
 
 但有时 Actions 的版本不会这么快更新，又必须使用最新版，可以将版本号改为 branch name，比如 `uses: SamKirkland/FTP-Deploy-Action@master`。
 
+## Git Commit
+
+Commit message 远比你想象得要重要，我初期的项目每次提交都是 update，这导致难以回溯。我自己也不知道更新了什么。建议新手全部依照 [Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) 来进行提交。
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+### Type
+
+Type 用于说明 git commit 的类别，只允许使用下面的标识。
+
+- feat: 新功能（feature）。
+- fix: 修复 bug。
+- docs: 文档（documentation）。
+- style: 格式（不影响代码运行的变动）。
+- refactor: 重构（即不是新增功能，也不是修改 bug 的代码变动）。
+- perf: 优化相关，比如提升性能、体验。
+- test: 增加测试。
+- chore: 构建过程或辅助工具的变动。
+- revert: 回滚到上一个版本。^[[Git Commit 规范](https://www.jianshu.com/p/6433679cd10f)]
+
+### Scope
+
+Scope 用于说明 commit 影响的范围，比如 Controller、DAO、View 等等，视项目不同而不同。如果其中包含了多个 scope，可以使用 `*` 代替。
+
+### Footer
+
+如果当前代码与上一个版本不兼容，则 Footer 部分以 BREAKING CHANGE 开头，后面是对变动的描述、以及变动理由和迁移方法。^[[Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)]
+
+如果当前 commit 针对某个 issue，那么可以在 Footer 部分使用 `Closes #265` 关闭这个 issue。也可以在任意位置输入 `#265`，将 commit 与对应问题相关联。
+
 ## 常见问题
 
 ### GitHub 忽略指定文件

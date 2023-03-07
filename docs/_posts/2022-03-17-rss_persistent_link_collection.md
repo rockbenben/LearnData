@@ -43,8 +43,6 @@ order: -42
 
 - **爱范儿|AppSolution**：`http://newzone.top/rss.php?type=AppSolution`
 
-- **效率火箭**：`http://newzone.top/rss.php?type=xlrocket`
-
 ## 奇思妙想
 
 每天吸收些稀奇古怪的知识，期待引发后续的灵机一动。
