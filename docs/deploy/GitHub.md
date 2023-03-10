@@ -72,9 +72,9 @@ jobs:
 
 ## Git Commit
 
-Commit message 远比你想象得要重要，我初期的项目每次提交都是 update，这导致难以回溯。我自己也不知道更新了什么。建议新手全部依照 [Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/) 来进行提交。
+Commit message 远比你想象中的重要，它可以帮助你自动生成 Change log。在我最初的项目中，每次提交都写 update，这导致很难回溯，我也不知道更新了什么。建议新手全部按照 [Conventional Commits](https://www.conventionalcommits.org/zh-hans/) 的规范来进行提交。
 
-```
+```shell
 <type>[optional scope]: <description>
 
 [optional body]
@@ -84,17 +84,17 @@ Commit message 远比你想象得要重要，我初期的项目每次提交都�
 
 ### Type
 
-Type 用于说明 git commit 的类别，只允许使用下面的标识。
+Type 用于说明 git commit 的类别，只允许使用下面的标识。^[[Git Commit 规范](https://www.jianshu.com/p/6433679cd10f)]
 
-- feat: 新功能（feature）。
-- fix: 修复 bug。
-- docs: 文档（documentation）。
-- style: 格式（不影响代码运行的变动）。
-- refactor: 重构（即不是新增功能，也不是修改 bug 的代码变动）。
-- perf: 优化相关，比如提升性能、体验。
-- test: 增加测试。
-- chore: 构建过程或辅助工具的变动。
-- revert: 回滚到上一个版本。^[[Git Commit 规范](https://www.jianshu.com/p/6433679cd10f)]
+- feat: 新特性或功能（feature）
+- fix: 修复 bug
+- docs: 文档更新（documentation）
+- style: 代码风格或者组件样式更新（不影响代码运行的变动）
+- refactor: 代码重构，不引入新功能和缺陷修复
+- perf: 优化相关，比如提升性能、体验
+- test: 增加测试
+- chore: 构建过程或辅助工具的变动
+- revert: 回滚到上一个版本
 
 ### Scope
 
