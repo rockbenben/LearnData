@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 10 Mar 2023 02:44:56 GMT</pubDate>
-    <lastBuildDate>Fri, 10 Mar 2023 02:44:56 GMT</lastBuildDate>
+    <pubDate>Sun, 12 Mar 2023 09:56:05 GMT</pubDate>
+    <lastBuildDate>Sun, 12 Mar 2023 09:56:05 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by 清顺</copyright>
@@ -54,6 +54,7 @@
 <p>ChatGPT 虽然非常强大，但并不是万能的。有时它会输出虚假信息。例如，当我需要将上百条信息录入到 ChatGPT Shortcut 中时，我让 ChatGPT 按指定格式转换数据。但是在转换过程中，我发现其中一些信息被 ChatGPT 误写。例如，在文本中一条标签是 <code>movie critic</code>，而 ChatGPT 将其更改为 <code>film critic</code>。尽管这在文本中不会造成什么影响，但放在代码中会报错。因此，在使用 ChatGPT 时，务必检查其输出内容。</p>
 <h3> 提示词不好用</h3>
 <p>所有提示词均来自互联网，会定期进行更新。虽然我测试过每一条提示词，但实际效果可能因需求而有所偏差。你可以参考页面和 <a href="https://platform.openai.com/examples" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Examples</a> 进行调整。如果你发现任何错误、有创意的想法或有好的提示词，欢迎<a href="https://github.com/rockbenben/ChatGPT-Shortcut/discussions/11" target="_blank" rel="noopener noreferrer">反馈和投稿</a>。</p>
+<p>此外，提示词不仅能用于工作生产，更重要的是帮助您开拓思路，发散思维，从多个角度考虑问题，并解决人们在思考时容易忽略的问题。</p>
 <h2> 为什么执着于 ChatGPT？</h2>
 <p>家人看到我每天把大量时间花在 ChatGPT，实际上并不能理解。因为这看起来跟我的工作关系不大。ChatGPT 帮我节省的时间远少于我的投入，帮我写的代码和文章都需要大幅修改，而查找的资料也基本上只是基础知识，而对于具体的问题我还需要去专业网站进行查询。那么，ChatGPT 究竟有什么用呢？等它成熟了再去使用不好吗？</p>
 <p>但是，我们需要明确的是，使用 ChatGPT 等 AI 工具可以提高我们的工作效率和解放我们的时间，让我们可以更专注于创造性的工作和创新性的思考。比如，ChatGPT 在文章修订、语气转换、语音录入、代码解释、创意思维等方面已经成为我不可或缺的工具。虽然 ChatGPT 目前的功能和表现还有待提高和改进，但它毕竟是未来工具的一部分，是我们不断提高自己和适应未来的必要工具。我相信随着时间的推移，ChatGPT 的表现会越来越优秀，让我们的工作更高效，更具有创造性。</p>
