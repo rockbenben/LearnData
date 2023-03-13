@@ -49,7 +49,7 @@ icon: note
 
    ![](https://tc.seoipo.com/2023-03-14-04-02-16.png)
 
-3. 接下来，进入菜单栏顶部的「Actions」>「最新的 workflow」，点击右上方的「Re-run jobs」>「Re-run all jobs」，重新生成网页。若部署正确，GitHub 将自动搭建 gh-page branch 页面。(如果你不需要将**文件同步到服务器**，建议删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，以避免出现报错。)
+3. 接下来，进入菜单栏顶部的「Actions」>「最新的 workflow」，点击右上方的「Re-run jobs」>「Re-run all jobs」，重新生成网页。若部署正确，GitHub 将自动搭建 gh-page branch 页面。(如果你不需要将**文件同步到服务器**，则请删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，以避免出现报错。)
 
    ![](https://tc.seoipo.com/2023-03-14-04-04-52.gif)
 
@@ -89,13 +89,13 @@ docs
 └── intro.md                # 博主个人介绍
 ```
 
-`docs/.vuepress` 路径下是网站的配置文件，我在上面添加了详细的注释。你可以参考注释和 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)来调整配置。修改 `docs/.vuepress/sidebar.ts` 中的文件夹路径，后台会自动抓取路径下的 md 文件来生成侧边栏。`docs/.vuepress/theme.ts` 中配置了[评论插件](https://newzone.top/web/Comments.html)。
+`docs/.vuepress` 路径下是网站的配置文件，我已添加了详细的注释。你可以参考注释和 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)来调整配置。请在 `docs/.vuepress/sidebar.ts` 文件中修改文件夹路径，后台会自动抓取路径下的 md 文件来生成侧边栏。`docs/.vuepress/theme.ts` 有[评论插件](https://newzone.top/web/Comments.html)的相关配置。
 
 注意：
 
-- `docs/_temp` 默认不同步到 GitHub。你需要手动在本地建立 `_temp` 文件夹，用来存放草稿。
-- VuePress2 从 beta.54 开始忽略文件夹名的前缀 `_`，比如博客路径为 `/_posts/`，转为网页后链接路径会是 `/posts/`。
-- LearnData 默认使用了 algolia 全文搜索。如果你没使用 algolia 爬虫，则删除 `docs/.vuepress/config.ts` 中 plugins 下的 docsearchPlugin 区块，网站将转用本地全文索引搜索。
+- LearnData 默认使用了 algolia 全文搜索。如果你没有使用 algolia 爬虫，则可以在 `docs/.vuepress/config.ts` 文件中删除 plugins 下的 docsearchPlugin 区块，网站将转用本地全文索引搜索。
+- `docs/_temp` 文件夹默认不同步到 GitHub 上。你可以手动在本地建立 `_temp` 文件夹，用来存放草稿。
+- 自 VuePress2 的 beta.54 版本开始，文件夹名前缀为 `_` 在生成链接时将被省略，例如文章路径为 `/_posts/`，但网页链接路径会是 `/posts/`。
 
 ### 看板娘
 
@@ -110,7 +110,7 @@ LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/l
 
 ### 读书笔记
 
-读书笔记中会有大量原文引用，这与 LearnData 将知识点精简化的初衷并不相符。为了避免增加知识点的使用难度，我们使用 docsify 来构建读书笔记，并将其放置于 `docs\reading` 目录下。该路径下的文件不会被转换为 HTML 文件，而是在静态页面生成完毕后，被自动复制到静态网站下，完成 docsify 页面构建和独立的读书笔记搜索索引。
+读书笔记中可能会有大量的原文引用，这与 LearnData 精简化知识点的初衷并不相符。因此，我们使用 docsify 来构建读书笔记，并将其放置于 `docs/reading` 目录下。在生成静态页面后，该路径下的文件不会被转换为 HTML 文件，而是将被自动复制到静态网站下，完成 docsify 页面构建和独立的读书笔记搜索索引。
 
 如果你没有部署 Waline，也不需要阅读量统计和评论区，可以删除 `docs\reading\index.html` 中的 Waline 区块。
 
@@ -123,23 +123,23 @@ waline: {
 
 ### 本地图片引用
 
-本地图片必须保存在 `docs/.vuepress/public` 目录中，否则在生成静态页面时会报错 `Rollup failed to resolve import`。假设图片名为 `1.png`，将其保存在 `docs/.vuepress/public/imgs` 中，则该图片的引用链接为 `/imgs/1.png`，或使用 Markdown 图片链接：`![](/imgs/1.png)`。
+为了避免在生成静态页面时出现 `Rollup failed to resolve import` 错误，本地图片必须保存在 `docs/.vuepress/public` 路径下。如果图片名称为 `1.png`，保存在 `docs/.vuepress/public/imgs` 路径下，则可以使用以下链接来引用该图片：`/imgs/1.png` 或使用 Markdown 图片链接：`![](/imgs/1.png)`。
 
 ## 🖥️ 网站部署
 
-LearnData 推送到 GitHub 后，会自动生成可访问的网页，但国内访问 GitHub Pages 的速度极不稳定。为了确保网站能被正常访问，建议增加国内的访问节点。
+在将 LearnData 推送到 GitHub 后，会自动生成可访问的网页。但由于国内访问 GitHub Pages 的速度不稳定，为了确保网站能够正常访问，建议增加国内的访问节点。
 
-很多人选择 Gitee Pages 作为国内节点，通过 GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，必须实名验证，免费版无法自定义域名，更别提近期的下架风波。因此，我没有选择 Gitee，而是把文档同步到国内服务器（域名需备案）或 Vercel（国外服务永远不知什么时候会断）。
+很多人选择使用 Gitee Pages 作为国内节点，通过 GitHub Actions 将新文档同步到 Gitee 上，从而生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 有很多限制，例如必须实名认证、免费版无法自定义域名，近期也发生过下架风波。因此，我没有选择 Gitee，而是将文档同步到国内服务器（域名需要备案）或 Vercel（国外服务可能会出现断网）。
 
 ### 同步到服务器
 
-项目搭建好后，出现了红色叉叉，这是 GitHub Actions 同步服务器的失败提示，需要进入 GitHub 仓库「Setting」>「Secrets」>「Action」，添加 `FTP_HOST`、`FTP_PORT`、`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。之后，GitHub Actions 在文件发生变动时，会将修改推送到服务器 FTP。
+如果你的项目已经搭建好，但出现了红色的叉叉提示，这可能是 GitHub Actions 同步到服务器时发生了错误。你需要进入项目仓库的「Setting」>「Secrets」>「Action」，并添加 `FTP_HOST`、`FTP_PORT`、`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。之后，每当文件发生变化时，GitHub Actions 就会将修改推送到服务器的 FTP 上。
 
-如果你不需要同步到服务器 FTP，建议按常见问题中的操作删除对应代码，或者按照 [GitHub 同步到 OSS](https://newzone.top/deploy/Static.html#同步到-oss) 步骤将网页部署到云存储上。
+如果你不需要将文档同步到服务器的 FTP 上，则请删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，以避免出现报错。或者根据 [GitHub 同步到 OSS](https://newzone.top/deploy/Static.html#同步到-oss) 步骤将网页部署到云存储上。
 
 ### 部署到 Vercel
 
-Vercel 的速度比 GitHub Pages 稳定些，不过「\*.vercel.app」域名已经被 DNS 污染，国内使用建议绑定自定义域名。
+Vercel 的速度比 GitHub Pages 稳定一些，不过「\*.vercel.app」域名已经被 DNS 污染。建议国内用户绑定自定义域名以获得更好的使用体验。
 
 Vercel 部署步骤如下：
 
@@ -181,32 +181,28 @@ Vercel 部署步骤如下：
 
 ### 网页显示异常
 
-网站只显示文字，不能正常显示网页，这是网站路径不正确导致的页面样式错误。
-
-如果 GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则需要将 `docs/.vuepress/config.ts` 中的 base 改为 `/yyy`，其默认值为 `/`。
+如果你的网站只显示文字而不能正常显示网页，可能是因为网站路径不正确导致的页面样式错误。比如，GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则需要将 `docs/.vuepress/config.ts` 中的 base 改为 `/yyy`，其默认值为 `/`。请按照此路径将网站的 base 设置正确，以确保你的网站能够正常显示。
 
 ### 同步服务器报错
 
-- `Error: Input required and not supplied: server` 是配置服务器错误的提示，需要按照上方的网站部署步骤配置。如果不需将文件同步到服务器，建议删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，以避免出现错误。
+- `Error: Input required and not supplied: server` 表示服务器配置错误，请按照上方的网站部署步骤检查配置。如果你不需要将**文件同步到服务器**，则请删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，以避免出现报错。
 
-- `FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，需要使用 FileZilla 来测试 FTP 的有效性。
+- `FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，可使用 FileZilla 来测试 FTP 的有效性。
 
-- `Error: Timeout (control socket)` 是指同步服务器出现超时报错。如果出现该错误，可以进入 Actions 页面，点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭服务器防火墙，检查 GitHub 服务器 IP 是否屏蔽了。
+- `Error: Timeout (control socket)` 指同步服务器出现超时报错。如果出现该错误，可以进入 Actions 页面，点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭服务器防火墙，检查 GitHub 服务器 IP 是否屏蔽了。
 
 ### ERR_MODULE
 
-生成静态网页时，如果出现 `Error [ERR_MODULE_NOT_FOUND]: Cannot find module` 的保存，可能是第三方插件或 pacakge.json 环境依赖未正确配置。该报错出现几率极低，如果遇到，可用最新版本的 `package.json` 和 `pnpm-lock.yaml` 来覆盖本地设置。如果你已经修改了环境依赖，可以删除主目录下的 `.npmrc` 文件。
+如果出现 `Error [ERR_MODULE_NOT_FOUND]: Cannot find module` 的报错，可能是第三方插件或 pacakge.json 环境依赖未正确配置。此报错出现的几率极低，如果遇到，可以使用最新版本的 `package.json` 和 `pnpm-lock.yaml` 来覆盖本地设置，或者删除主目录下的 `.npmrc` 文件。
 
 ### 静态文件名字总变
 
-VuePress 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命名，导致网站大部分的文件发生更改，即使没有更新文章，生成的静态文件也会改变。比如我的笔记网站用的 VuePress 默认配置，每次服务器部署需要 10 分钟，期间打开网站就会出错。
-
-如果不想每次构建都重命名文件，可以复制「[nohashname](https://github.com/rockbenben/LearnData/tree/nohashname)」branch。我把 nohashname 分支的打包工具换成了 Webpack，并用 chainWebpack 设置文件命名规则，避免文件不必要的重命名。
+VuePress 默认使用 Vite。在打包时，会为文件引入时间戳和 hash，并对其进行重命名。这会导致即使没有更新文章，大部分生成的静态文件也会发生更改。如果你希望减少重命名频次，可以使用「[nohashname](https://github.com/rockbenben/LearnData/tree/nohashname)」分支。该分支使用的打包工具是 Webpack，并使用 chainWebpack 设置文件命名规则，避免不必要的文件重命名。（注意：nohashname 非主分支，不作功能更新。）
 
 ### 本地运行 LearnData
 
-1. 安装环境 npm 和 pnpm，可参考[环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
-2. 下载 LearnData 项目到本地，在目录下运行终端，输入命令 `pnpm i`。
-3. 完成前两步后，终端中输入 `pnpm docs:dev`，成功后会提示访问链接，默认为 `http://localhost:8080/`。
+1. 为了本地运行，你需要安装 npm 和 pnpm 环境，可参考[环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
+2. 将 LearnData 项目下载到本地后，在项目目录下打开终端，输入命令 `pnpm i` 安装依赖。
+3. 在终端中输入命令 `pnpm docs:dev`，若成功则会提示访问链接，默认为 `http://localhost:8080/`。
 
-运行本地服务器后，修改文件时预览页面也会同步更新。若要停止本地服务器，在终端中按下 `Ctrl + C`。
+本地服务运行后，修改文件时页面会同步更新预览。若需停止本地服务器，可在终端中按下 `Ctrl + C`。
