@@ -29,9 +29,9 @@
 
 因此，我基于 VuePress 和 vuepress-theme-hope 建立了 LearnData，将所有笔记与文章重新整合，聚合到同一页面形成知识库，方便自己使用和分享。
 
-![](http://tc.seoipo.com/2022-08-22-19-28-25.png?imageMogr2/thumbnail/!80p "笔记 + 文章 = LearnData 知识库")
+![](https://tc.seoipo.com/2022-08-22-19-28-25.png?imageMogr2/thumbnail/!80p "笔记 + 文章 = LearnData 知识库")
 
-![](http://tc.seoipo.com/2022-08-24-19-14-59.png "笔记/博客自动化发布")
+![](https://tc.seoipo.com/2022-08-24-19-14-59.png "笔记/博客自动化发布")
 
 ## 🧱 笔记结构
 
@@ -47,22 +47,29 @@
 
 ## 🍥 搭建 LearnData
 
-1. 进入 [LearnData](https://github.com/rockbenben/LearnData) 项目页，点击「Use this template」，复制该模板文件。
+1. 首先，进入 [LearnData](https://github.com/rockbenben/LearnData) 项目页，点击右上方的「Use this template」>「Create a new repository」。
 
-   ![](http://tc.seoipo.com/2022-08-10-19-32-05.png)
+   ![](https://tc.seoipo.com/2022-08-10-19-32-05.png)
 
-   ![](http://tc.seoipo.com/2022-08-10-19-34-13.png?imageMogr2/thumbnail/!60p)
+   ![](https://tc.seoipo.com/2022-08-10-19-34-13.png?imageMogr2/thumbnail/!60p)
 
-2. 复制完成后，GitHub 会自动搭建网站，大约需要 3 分钟的时间。
-3. 点击 `Setting`, 修改 `Repository name` 为 `xxx.github.io`, `xxx` 是你的 GitHub 用户名。如果该项名称已被占据，GitHub Pages 无法正常显示，则查看页面底部的常见问题。
+2. 接着，进入项目仓库的「Settings」>「Actions」>「General」，选中底部 Workflow permissions 中的 `Read and write permissions`，然后点击保存即可。如果未授权，GitHub Page 部署会由于 repo 权限不足而报错 `failed with exit code 128`。
 
-   ![](http://tc.seoipo.com/20180505202201.png)
+   ![](https://tc.seoipo.com/2023-03-14-04-02-16.png)
 
-4. 同一页面选择「Code and automation」>「Pages」>「Build and deployment」>「Branch」, 将 gh-page branch 设为 GitHub Pages 的来源，网站运行目录默认为 `/(root)`。设置完成后，点击「Save」。如果没找到 gh-page branch，可以在 GitHub 中修改任意文件以手动触发 GitHub Action，等待其执行完成后，再重新设置 Pages 的来源。
+3. 接下来，进入菜单栏顶部的「Actions」>「最新的 workflow」，点击右上方的「Re-run jobs」>「Re-run all jobs」，重新生成网页。若部署正确，GitHub 将自动搭建 gh-page branch 页面。(如果你不需要将**文件同步到服务器**，建议删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，以避免出现报错。)
 
-   ![](http://tc.seoipo.com/2022-08-10-19-39-15.png)
+   ![](https://tc.seoipo.com/2023-03-14-04-04-52.gif)
 
-5. 设置成功后，页面会提示访问链接：`https://xxx.github.io/`，知识库搭建完毕。
+4. 然后点击「Settings」, 修改 `Repository name` 为 `用户名.github.io`。假设你的仓库链接是 `https://github.com/xxx/LearnData`，那么中间的 `xxx` 就是你的用户名。如果该仓库名称已被使用，GitHub Pages 将无法正常显示样式，请查看页面底部的常见问题来设置子域名。
+
+   ![](https://tc.seoipo.com/20180505202201.png)
+
+5. 在同一页面选择「Settings」>「Pages」>「Build and deployment」>「Branch」, 将 gh-page branch 设为 GitHub Pages 的来源，网站运行目录默认为 `/(root)`。设置完成后，点击「Save」。如果找不到 gh-pages 分支，可以按照上面提到的第三步进行操作，或在 GitHub 中修改任意文件以手动触发 GitHub Action，等待其执行完成后，再重新设置 Pages 的来源。
+
+   ![](https://tc.seoipo.com/2022-08-10-19-39-15.png)
+
+6. 设置成功后，页面会提示访问链接：`https://xxx.github.io/`，知识库搭建完毕。
 
    如果未出现访问链接提示或不能打开 GitHub Pages，则删除 `docs/_posts` 路径下的博客文件，GitHub Pages 有时会对旧文章里的代码报错。
 
@@ -148,11 +155,11 @@ Vercel 部署步骤如下：
 
 2. 输入一个你喜欢的 Vercel 项目名称，默认 private 即可，然后点击 `Create`。
 
-   ![](http://tc.seoipo.com/2022-08-24-17-24-16.png "创建 Vercel 项目")
+   ![](https://tc.seoipo.com/2022-08-24-17-24-16.png "创建 Vercel 项目")
 
 3. 接着，Vercel 会基于 LearnData 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。几十秒后，满屏的烟花会庆祝你部署成功。此时，点击 `Go to Dashboard` 跳转到应用的控制台。
 
-   ![](http://tc.seoipo.com/2022-08-24-17-21-58.png "Vercel 部署成功提示")
+   ![](https://tc.seoipo.com/2022-08-24-17-21-58.png "Vercel 部署成功提示")
 
 4. 为了让 Vercel 页面与 GitHub Pages 自动保持同步更新，你需要配置 `PERSONAL_TOKEN` 和 GitHub Actions。
 
@@ -179,10 +186,6 @@ Vercel 部署步骤如下：
    ```
 
 ## 🤔 常见问题
-
-### failed with exit code 128
-
-GitHub Page 部署报错 `failed with exit code 128`，这是由于 repo 权限不足导致的。进入项目仓库的「Settings」>「Code and automation」>「Actions」>「General」，选中底部 Workflow permissions 中的 `Read and write permissions`，点击保存后重新部署即可。
 
 ### 网页显示异常
 
