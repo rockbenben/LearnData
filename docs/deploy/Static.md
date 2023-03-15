@@ -7,12 +7,12 @@ order: 1
 
 ## 静态托管
 
-如果国内静态资源库没有你要的静态包，推荐用 `npm i` 命令将静态包下载到本地，并部署到阿里云/七牛云的国内服务器上，避免网页受 UNPKG 和 jsDelivr 屏蔽影响而出现偏差。
+如果在国内静态资源库找不到所需的静态包，建议使用 `npm i` 命令将其下载到本地，然后部署到阿里云/七牛云的国内服务器上，以避免因 UNPKG 和 jsDelivr 等静态节点被屏蔽而导致网页样式显示出错。
 
 静态资源库：
 
-- [字节 CDN](https://cdn.bytedance.com/)：国内测速表现最佳，缓存过期时间最长设置一年。
-- [Staticfile CDN](https://www.staticfile.org/)：CDN 加速由七牛云提供。
+- [Staticfile CDN](https://www.staticfile.org/)：国内维护最稳定的 CDN。
+- [字节 CDN](https://cdn.bytedance.com/)：测速表现不错，缓存过期时间最长设置一年，而自 2022 年 3 月起，静态资源已不再更新。
 
 emoji 等可以使用静态资源库上的项目，比如 twemoji，上面有集成 png 图片。
 
@@ -28,7 +28,7 @@ emoji 等可以使用静态资源库上的项目，比如 twemoji，上面有集
   - ~~[Statically](https://statically.io/)：jsDeliver 的替代品，在中国大陆所有地区连接异常。~~
   - ~~jsDelivr（已墙）：速度最快，原本是最稳的，但域名暴雷后，经常断开，2022.06.01 彻底打不开。配合 Github action，更新后自动访问 jsdelivr CDN 缓存刷新链接，保持页面常新。刷新命令参考 `curl https://purge.jsdelivr.net/gh/username/project/file`。~~
 
-第三方托管过于不稳定，最终我转为自托管 oss.newzone.top。
+由于第三方托管过于不稳定，目前我使用自托管 oss.newzone.top。
 
 ### 部署平台
 
@@ -52,7 +52,7 @@ cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管」>「cloudf
 
 对于文件较少且链接有效的域名，可按 [Cloudflare IPFS](https://www.cloudflare.com/zh-cn/distributed-web-gateway/) 页面说明来设置 DNS，提交 IPFS 域名 30 分钟后，即可获取 SSL 证书。
 
-1. 添加 CNAME 记录，将你的 IPFS 域名 (xxx.example.com) 指向 `cloudflare-ipfs.com`。
+1. 添加 CNAME 记录，将你的 IPFS 域名 `xxx.example.com` 指向 `cloudflare-ipfs.com`。
 2. `_dnslink.xxx.example.com` 设置为 `dnslink=/ipfs/<your_ipfs_hash_here>`。
 
 ## GitHub 同步到 VPS
@@ -79,7 +79,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ${{ secrets.ftp_host }}
         username: ${{ secrets.ftp_username }}
@@ -95,7 +95,37 @@ jobs:
 
 ### SSH 同步
 
-如果你拥有服务器所有权限，可以使用 [web-deploy](https://github.com/SamKirkland/web-deploy) 以 SSH 同步方式发布页面。但与 FTP 同步方式相比，是否安全性、速度、时间有区别，我还没测试过，仅做记录，
+如果你有服务器的 SSH 权限，可以使用 [web-deploy](https://github.com/SamKirkland/web-deploy) 以 SSH 同步方式发布页面。但与 FTP 相比，不确定安全性、速度、时间是否会区别。我尝试连接一直报错 `Permission denied (publickey,password)`。（有可能是服务器需要非 root 用户，adduser 一直加不上。）
+
+```shell
+on: push
+name: Publish Website
+jobs:
+  web-deploy:
+    name: 🚀 Deploy Website Every Commit
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get Latest Code
+      uses: actions/checkout@v3
+
+    - name: 📂 Sync Files
+      uses: SamKirkland/web-deploy@v1
+      with:
+        source-path: docs/.vuepress/dist/
+        target-server: ${{ secrets.host }}
+        remote-user: ${{ secrets.ssh_username }}
+        private-ssh-key: ${{ secrets.SSH_KEY }}
+        destination-path: ${{ secrets.destination_folder }}
+        ssh-port: ${{ secrets.ssh_port }} # 建议更改默认的 22 端口
+```
+
+如果出现报错 `error in libcrypto`，说明 SSH 密钥错误，需要登陆服务器终端，运行以下命令。
+
+```shell
+ssh-keygen -m PEM -t rsa -b 4096
+cat id_rsa.pub >> authorized_keys
+cat id_rsa
+```
 
 ### 同步到 oss
 
