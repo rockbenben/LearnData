@@ -37,7 +37,7 @@ LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/g
 
 ## Webpack 打包
 
-VuePress v2 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命名，导致网站大部分的文件发生更改。即使你并没有更新文章，生成的静态文件也会改变。比如我的笔记网站用的 VuePress 默认配置，每次服务器部署需要 10 分钟，期间打开网站就会出错。可这是我知识记录的阵地，一天要最少更新 3 次。
+VuePress v2 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命名，导致网站大部分的文件发生更改。即使你并没有更新文章，生成的静态文件也会改变。比如我的笔记网站用的 VuePress 默认配置，每次服务器部署需要 5-15 分钟。
 
 如果不想每次架构都重命名文件，可以复制「[nohashname](https://github.com/rockbenben/LearnData/tree/nohashname)」branch。我把 nohashname 分支的打包工具换成了 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)，并用 chainWebpack 设置文件命名规则，避免文件非必要重命名。
 
@@ -86,13 +86,13 @@ VuePress v2 默认使用 Vite，打包时会引入时间戳和 hash 对文件重
    });
    ```
 
-   在找到 chainWebpack 配置前，我依照 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 添加了 `filenameHashing: false`，但 VuePress 并未停止 hashname。
+   在查找 chainWebpack 配置前，我依照 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 的指引添加了 `filenameHashing: false`，但是 VuePress 并未停止 hashname。事实上，我理解错了。根据 @Mister-Hope 的说明，「这里的 filenameHasing 是 vue-cli 自己加的一个属性。拿到这里当例子很奇怪。就好比你按照 iOS 使用手册去设置 Android 结果无效，本不应该有效。另外本身为了防止应用程序出错，你也从不应该移除 hash。」
 
 ## 关闭 prefetch
 
 preload 是一种声明式的资源获取请求方式，用于提前加载一些需要的依赖，并且不会影响页面的 onload 事件。prefetch 是一种利用浏览器的空闲时间加载页面将来可能用到的资源的一种机制；通常可以用于加载非首页的其他页面所需要的资源，以便加快后续页面的首屏速度。preload 主要用于预加载当前页面需要的资源；而 prefetch 主要用于加载将来页面可能需要的资源。
 
-VuePress [Build 配置项](https://vuepress.github.io/zh/reference/config.html#build-%E9%85%8D%E7%BD%AE%E9%A1%B9) 默认开启了 preload 和 prefetch。但是，开启了 prefetch，所有其它页面所需的文件都会被预拉取。页面较多或服务器宽带后付费的话，建议关闭 prefetch。
+VuePress [Build 配置项](https://vuepress.github.io/zh/reference/config.html#build-%E9%85%8D%E7%BD%AE%E9%A1%B9)默认开启了 preload 和 prefetch。但是，开启了 prefetch，所有其它页面所需的文件都会被预拉取。页面较多或服务器宽带后付费的话，建议关闭 prefetch。
 
 `docs\.vuepress` 路径下的 config.ts 配置中插入 `shouldPrefetch: false,`，即可关闭 prefetch。
 
@@ -100,7 +100,7 @@ VuePress [Build 配置项](https://vuepress.github.io/zh/reference/config.html#b
 
 VuePress 页面生成规则基于主题模板，如果修改全站 html 内容，最简单的方式就是修改模板。
 
-我的主题是 `@vuepress-theme-hope/templates/index.build.html`，将其下载到本地后，修改为你想要的样式，放入 .vuepress 文件夹内。最后在 config.ts 中添加代码，即可启用修改模板。
+我的主题模板文件是 `@vuepress-theme-hope/templates/index.build.html`，将其下载到本地后，修改为你想要的样式，放入 .vuepress 文件夹内。最后在 config.ts 中添加代码，即可启用修改模板。
 
 ```ts
 import { path } from "@vuepress/utils";
@@ -135,7 +135,7 @@ head: [
 
 ## 时间参数
 
-[vuepress-plugin-seo2](https://vuepress-theme-hope.github.io/v2/seo/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。打开 config.ts，使用 vuepress-plugin-seo2 的 ogp 参数对 meta 重新设置，删除不想要的参数。不过这会导致博客的自动摘要功能失效，而且 git 后参数并没发生变化。在 theme.ts 设置 ogp 直接为无效。
+[vuepress-plugin-seo2](https://plugin-seo2.vuejs.press/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。`theme.ts` 中无法设置 ogp。你需要打开 config.ts，使用 vuepress-plugin-seo2 的 ogp 参数重新设置 meta，并删除你不想要的参数。根据 @Mister-Hope 的说明:「API 的设计很容易理解，就是给你个自动生成的对象然后等你返回。所以你只需要在原对象上把属性删掉，返回这个对象就是了。」
 
 ```ts
 import { seoPlugin } from "vuepress-plugin-seo2";
