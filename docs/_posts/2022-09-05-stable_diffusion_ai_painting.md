@@ -52,6 +52,10 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 按平台选 [Docker Desktop](https://docs.docker.com/get-docker/) 版本，安装后点击左侧的 Add Extensions，推荐安装 Disk usage 扩展，这将便于管理 Docker 的存储空间。
 
+::: warning
+Docker Desktop 4.17.1 存在 bug，可能会导致 `Attaching to webui-docker-auto-1` 报错。建议使用 Docker Desktop 4.17.0 或更早版本。
+:::
+
 ### 下载 WebUI Docker
 
 下载 [Stable Diffusion WebUI Docker 配置包](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)或[阿里云盘聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)（定期更新），然后将其解压到指定路径。聚合版包括相关依赖和模型，因此文件较大。如果需要更新 Stable Diffusion WebUI Docker，你可以按照上述步骤重新构建容器。

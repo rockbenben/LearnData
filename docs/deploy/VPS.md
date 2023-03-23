@@ -63,7 +63,7 @@ anywhere -p 8081
 
 ## 服务器 ECS
 
-服务器系统为 Debian 11。
+服务器系统为 Debian 11，配置包管理器 nodejs 和 yarn。^[[通过包管理器方式安装 Node.js](https://nodejs.org/zh-cn/download/package-manager#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages)]
 
 ```shell
 apt-get update   # 从数据源更新软件包的列表，运行产生软件包数据库
@@ -76,6 +76,11 @@ apt-get upgrade  # 更新所有软件包（慎用，不要用！）之前 CentOS
 adduser xxx
 # 为新用户设置密码
 passwd xxx
+
+# 安装 Node.js 18 和 yarn
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+apt-get install -y nodejs
+sudo apt-get install yarn
 ```
 
 ### 网站重定向
