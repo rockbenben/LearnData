@@ -83,6 +83,8 @@ apt-get install -y nodejs
 sudo apt-get install yarn
 ```
 
+如果服务器的 Node.js 安装遇到问题，可以用宝塔面板的 Node.js 版本管理器来进行部署。
+
 ### 网站重定向
 
 更改 nginx 配置后，nginx 重载配置后实现网站重定向。`$1` 表示第一个 `()` 内的正则匹配内容，`$2` 为第二个。^[[Nginx rewrite 设置](https://www.w3cschool.cn/nginxsysc/nginxsysc-rewrite.html)]
