@@ -5,7 +5,7 @@ icon: creative
 order: 2
 ---
 
-ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对话聊天，还能在专业领域提供有效的建议。为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 [ChatGPT Shortcut](https://newzone.top/chatgpt/) 页面。即使是初学者，你只需复制提示词，稍加修改后发送给 ChatGPT，就能获得指定输出，让你的生产力加倍！
+ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对话聊天，还能在专业领域提供有效的建议。为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 [ChatGPT Shortcut](https://ai.newzone.top/) 页面。即使是初学者，你只需复制提示词，稍加修改后发送给 ChatGPT，就能获得指定输出，让你的生产力加倍！
 
 ## ChatGPT 客户端
 
@@ -43,7 +43,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
   - Self-Consistency（自我一致性）产生多个思维链而不仅仅是一个，然后以多数回答作为最终答案。
 
 ::: info
-下方内容为 [ChatGPT Shortcut](https://newzone.top/chatgpt/) 的初始版本，由于目录过长不方便使用，因此将不再更新，仅留作参考。
+下方内容为 [ChatGPT Shortcut](https://ai.newzone.top/) 的初始版本，由于目录过长不方便使用，因此将不再更新，仅留作参考。
 :::
 
 ## 文字

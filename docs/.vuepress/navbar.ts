@@ -25,7 +25,7 @@ export default navbar([
     prefix: "/",
     children: [
       "apps/Applist",
-      { text: "ChatGPT", icon: "creative", link: "https://newzone.top/chatgpt/" },
+      { text: "ChatGPT SC", icon: "creative", link: "https://ai.newzone.top/" },
       { text: "直播手册", icon: "quote", link: "apps/livestreaming/1_obs_basic" },
       {
         text: "服务/系统",
