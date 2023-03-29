@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 24 Mar 2023 12:27:53 GMT</pubDate>
-    <lastBuildDate>Fri, 24 Mar 2023 12:27:53 GMT</lastBuildDate>
+    <pubDate>Wed, 29 Mar 2023 14:31:32 GMT</pubDate>
+    <lastBuildDate>Wed, 29 Mar 2023 14:31:32 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by 清顺</copyright>
@@ -27,23 +27,23 @@
       <pubDate>Mon, 27 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>最近，关于 ChatGPT 的讨论越来越多，但大多数人仅仅将其视为一款聊天机器人，并从猎奇的角度去测试其人工智能的回答。然而，ChatGPT 不仅仅是一个猎奇的 AI 玩具，未来它将会成为必备生产工具。ChatGPT 之类的 AI 工具将用它巨大的语言知识库，为我们创造更多的价值。</p>
 <p>ChatGPT 的回复质量取决于提示词（即 Prompt）。这通常是用户提供的问题或文本，以激活模型生成回复。简单来说，prompt 就是用户想要询问的内容，作为输入送到 ChatGPT 中，ChatGPT 会尝试理解这个输入，然后输出合适的回答或响应。通过优化提示词，可以使 ChatGPT 生成更加准确、有用的回复。为了能让 ChatGPT 成为生产力工具，我花大量时间逐个研究提示词的规则和范例，如 <a href="https://platform.openai.com/examples" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Examples</a>、<a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener noreferrer">Awesome ChatGPT Prompts</a>、<a href="https://learnprompting.org/" target="_blank" rel="noopener noreferrer">Learn Prompting</a> 等。我筛选出了 163 个 Prompts（提示词），仅记录它们的功能而非内容，这就让我的笔记超过了 5000 字。提示词目录也变得越来越长，即使将浏览器全屏，也无法完整显示。起初，我制作提示词目录是为了方便自己，但每次需要查找提示词时，我不得不依靠记忆。这些笔记反而成为了负担，拖累 ChatGPT 的工作效率。</p>
-<p>为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需<strong>打开 <a href="https://newzone.top/chatgpt/" target="_blank" rel="noopener noreferrer">ChatGPT Shortcut</a>，复制提示词，稍加修改后发送给 ChatGPT</strong>，就能获得指定输出，让你的生产力加倍！</p>
+<p>为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需<strong>打开 <a href="https:/ai.newzone.top">ChatGPT Shortcut</a>，复制提示词，稍加修改后发送给 ChatGPT</strong>，就能获得指定输出，让你的生产力加倍！</p>
 <h2> 使用说明</h2>
 <p>ChatGPT Shortcut 页面默认显示全部的提示词，页面分为标签区、搜索区和提示词展示区。</p>
-<figure><img src="https://tc.seoipo.com/2023-02-28-10-30-20.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://tc.seoipo.com/2023-02-28-10-30-20.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 标签筛选</h3>
 <p>标签区按提示词的领域和功能进行划分，可根据不同场景和需求进行选择。与标签区右上方的「标签筛选规则切换」按钮配合使用，可进行多标签筛选。默认状态为 OR，即选中标签下的所有提示词。切换到 AND 后，将筛选出具备已选中的多个标签的提示词。</p>
-<figure><img src="https://tc.seoipo.com/2023-02-28-10-31-01.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://tc.seoipo.com/2023-02-28-10-31-01.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 关键词搜索</h3>
 <p>关键词搜索范围包括提示词的标题、简介、内容和中文翻译。输入关键词后，提示词展示区将立即展示筛选出的内容。如果已选中标签，则关键词搜索仅限于标签筛选范围内。对于 PC 端，搜索框内容变化后，新的搜索结果会在 800 毫秒后显示。移动端则为即时刷新。</p>
-<figure><img src="https://tc.seoipo.com/2023-02-28-10-31-10.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://tc.seoipo.com/2023-02-28-10-31-10.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 展示区复制</h3>
 <p>通过标签筛选和关键词搜索，点击卡片右上方的「复制」按钮即可获取提示词，将其粘贴到 ChatGPT 中，参考中文提示调整需求文本，即可得到指定领域的回复。如果提示词中的中文备注没有解释清楚，可以点击提示词的绿色标题查看来源网页。</p>
-<figure><img src="https://tc.seoipo.com/2023-02-28-10-31-19.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://tc.seoipo.com/2023-02-28-10-31-19.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 语言切换</h3>
 <p>默认情况下，提示词内容会显示为英文。如果你想查看中文释义，可以点击提示词内容将其切换到中文，再次点击即可切回英文。请注意，语言切换只在文字上点击有效，点击空白区域无效。中文释义为机器翻译，仅供参考。</p>
 <figure><img src="https://tc.seoipo.com/chatgptshortcut_encn.gif" alt="中英文切换" tabindex="0" loading="lazy"><figcaption>中英文切换</figcaption></figure>
-<p>如果想让提示词默认显示为中文，你可以点击导航栏右侧的 <code>CN</code> 按钮。需要注意的是，即使切换到中文翻译，复制按钮也仅针对英文提示词复制。下方会有解释原因。</p>
+<p>如果想让提示词默认显示为中文，你可以点击标签区右上方的 <code>CN</code> 按钮。需要注意的是，即使切换到中文翻译，复制按钮也仅针对英文提示词复制。下方会有解释原因。</p>
 <h2> 常见问题</h2>
 <h3> 为什么提示词用英文？</h3>
 <p>ChatGPT Shortcut 是为方便中文母语人士使用 ChatGPT 而创建的，但是提示词却全部是英文。这是因为相较于中文，ChatGPT 对英文的理解更为出色。即使是国内第一个对话式大型语言模型 MOSS，也承认 MOSS 的英文回答水平比中文高，建议使用英文。（MOSS 已不对外开放）</p>
@@ -63,7 +63,7 @@
 <p>目前，ChatGPT 已经有 1 亿用户，但这仅仅是 80 亿人口中很小的一部分。无论你身处哪个行业，你使用 ChatGPT 都代表着你在行业前沿。尽管你可能认为这看起来似乎与你的行业无关，但使用它就代表着你比别人更早地迈出了这一步，可以探索更多的可能性。</p>
 <p>我并不期待 ChatGPT Shortcut 成为完美的工具，而是希望它能为大家推开使用 AI 的一道门缝。我希望让更多人了解和使用 ChatGPT，摆脱对其聊天机器人的刻板印象，以提高工作效率。因为我相信，在未来，ChatGPT 和其他 AI 工具将扮演越来越重要的角色，成为我们生产力的强大工具。</p>
 ]]></content:encoded>
-      <enclosure url="https://tc.seoipo.com/2023-02-28-10-30-20.png" type="image/png"/>
+      <enclosure url="https://tc.seoipo.com/2023-02-28-10-30-20.png?imageMogr2/format/webp" type="image/"/>
     </item>
     <item>
       <title>我用白板墙贴，记录日常生活</title>
@@ -82,7 +82,7 @@
 <p>在中学时，我没有电脑和手机，就曾把最初的 GTD 记录在玻璃桌面上，若记录失效或不再需要，只需擦掉即可。白板墙贴与当时的玻璃桌面效果类似，只是换到墙上了。我在书房和走廊各贴了一块白板，书房的墙贴用来提醒当天要做什么，走廊的墙贴用来提醒日常生活仪式。无论走到哪里，都不会错过重要提醒。特别是在不确定下一步该做什么时，我只要转身，就能看到工作清单，非常直观和便捷。</p>
 <figure><img src="https://tc.seoipo.com/2023-01-26-12-28-36.png" alt="" tabindex="0" loading="lazy"><figcaption>透明/白色静电墙贴</figcaption></figure>
 <p>与电子记录相比，白板没有软件框架限制。它可以用于绘制思维导图，帮助人们更清晰地组织思路；也可以用多种颜色的记号笔随意书写和涂鸦，以原始的方式表达自己的想法。因此，白板是记录、展示信息和思考的极佳工具。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-25-19-21-12.png" alt="Scrum board" tabindex="0" loading="lazy"><figcaption>Scrum board</figcaption></figure>
+<figure><img src="https://tc.seoipo.com/2023-01-25-19-21-12.png?imageMogr2/format/webp" alt="Scrum board" tabindex="0" loading="lazy"><figcaption>Scrum board</figcaption></figure>
 <h2> 白板类型</h2>
 <p>白板墙贴源自 @chen 在群里分享的一个很棒的主意：使用静电墙贴作为白板，可以随时记录。在尝试的过程中，我更换了三种材质：透明静电墙贴、白色静电墙贴和 PVC 墙贴（吸磁软白板贴）。</p>
 <table>
