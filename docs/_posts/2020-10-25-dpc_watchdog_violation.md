@@ -17,11 +17,11 @@ Windows 蓝屏的原因众多，你在网上搜到的解决方案，大多与你
 2. 启动 WinDbg Preview，软件会自动检测到最新的蓝屏日志，点击 Yes 即可载入。如果想分析其他文件，可以打开文件夹 `C:\Windows\Minidump`，导出日志 `*.dmp`。
 3. 载入日志过程中，WinDbg Preview 会自动下载所需文件，无需额外操作。载入完成后，点击 `!analyze -v`，分析具体日志。
 
-   ![](https://tc.seoipo.com/20201025223307.png)
+   ![](https://tc.seoipo.com/20201025223307.png?imageMogr2/format/webp)
 
 4. 分析日志：日志前半部分可以忽略，蓝屏原因多在日志末尾几行。通过分析末尾日志，可以找出引发蓝屏的进程。注意不要强制删除未知文件。
 
-   ![](https://tc.seoipo.com/20201025224308.png)
+   ![](https://tc.seoipo.com/20201025224308.png?imageMogr2/format/webp)
 
 ## 上传社区分析
 

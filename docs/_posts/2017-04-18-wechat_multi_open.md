@@ -16,11 +16,11 @@ order: -1
 
 打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装 `微信 For Windows`。
 
-![](https://tc.seoipo.com/2022-05-06-04-21-30.png)
+![](https://tc.seoipo.com/2022-05-06-04-21-30.png?imageMogr2/format/webp)
 
 安装好后，就能与微信 PC 版一齐启动，互不干扰。
 
-![](https://tc.seoipo.com/2022-05-06-04-21-40.png)
+![](https://tc.seoipo.com/2022-05-06-04-21-40.png?imageMogr2/format/webp)
 
 ## 开机启动两个微信
 
@@ -28,7 +28,7 @@ order: -1
 
 将微信 for windows 10 的快捷方式放到「启动」文件夹里。
 
-![](https://tc.seoipo.com/2022-05-06-04-23-49.png)
+![](https://tc.seoipo.com/2022-05-06-04-23-49.png?imageMogr2/format/webp)
 
 三开的话，可以在 Microsoft Store 上安装 微信 (UWP) 。
 

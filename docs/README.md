@@ -41,13 +41,13 @@ icon: note
 
 1. 首先，进入 [LearnData](https://github.com/rockbenben/LearnData) 项目页，点击右上方的「Use this template」>「Create a new repository」。
 
-   ![](https://tc.seoipo.com/2022-08-10-19-32-05.png)
+   ![](https://tc.seoipo.com/2022-08-10-19-32-05.png?imageMogr2/format/webp)
 
    ![](https://tc.seoipo.com/2022-08-10-19-34-13.png?imageMogr2/thumbnail/!60p)
 
 2. 接着，进入项目仓库的「Settings」>「Actions」>「General」，选中底部 Workflow permissions 中的 `Read and write permissions`，然后点击保存即可。如果未授权，GitHub Page 部署会由于 repo 权限不足而报错 `failed with exit code 128`。
 
-   ![](https://tc.seoipo.com/2023-03-14-04-02-16.png)
+   ![](https://tc.seoipo.com/2023-03-14-04-02-16.png?imageMogr2/format/webp)
 
 3. 接下来，进入菜单栏顶部的「Actions」>「最新的 workflow」，点击右上方的「Re-run jobs」>「Re-run all jobs」，重新生成网页。若部署正确，GitHub 将自动搭建 gh-page branch 页面。(如果你不需要将**文件同步到服务器**，则请删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，以避免出现报错。)
 
@@ -55,11 +55,11 @@ icon: note
 
 4. 然后点击「Settings」, 修改 `Repository name` 为 `用户名.github.io`。假设你的仓库链接是 `https://github.com/xxx/LearnData`，那么中间的 `xxx` 就是你的用户名。如果该仓库名称已被使用，GitHub Pages 将无法正常显示样式，请查看页面底部的常见问题来设置子域名。
 
-   ![](https://tc.seoipo.com/20180505202201.png)
+   ![](https://tc.seoipo.com/20180505202201.png?imageMogr2/format/webp)
 
 5. 在同一页面选择「Settings」>「Pages」>「Build and deployment」>「Branch」, 将 gh-page branch 设为 GitHub Pages 的来源，网站运行目录默认为 `/(root)`。设置完成后，点击「Save」。如果找不到 gh-pages 分支，可以按照上面提到的第三步进行操作，或在 GitHub 中修改任意文件以手动触发 GitHub Action，等待其执行完成后，再重新设置 Pages 的来源。
 
-   ![](https://tc.seoipo.com/2022-08-10-19-39-15.png)
+   ![](https://tc.seoipo.com/2022-08-10-19-39-15.png?imageMogr2/format/webp)
 
 6. 设置成功后，页面会提示访问链接：`https://xxx.github.io/`，知识库搭建完毕。
 
@@ -183,7 +183,7 @@ Vercel 部署步骤如下：
 
 如果你的网站只显示文字而不能正常显示网页，可能是因为网站路径不正确导致的页面样式错误。比如，GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则需要将 `docs/.vuepress/config.ts` 中的 base 改为 `/yyy`，其默认值为 `/`。请按照此路径将网站的 base 设置正确，以确保你的网站能够正常显示。
 
-![](https://tc.seoipo.com/2023-03-14-06-11-10.png)
+![](https://tc.seoipo.com/2023-03-14-06-11-10.png?imageMogr2/format/webp)
 
 ### 同步服务器报错
 

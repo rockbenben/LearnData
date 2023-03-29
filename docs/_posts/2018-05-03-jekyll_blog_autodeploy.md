@@ -29,11 +29,11 @@ Travis CI 对于开源项目完全免费，并且能自动感知到 Github 的 c
 
 先用 Github 登录 Travis CI，然后点击最右侧的头像，开启想要使用 Travis CI 的项目
 
-![](https://tc.seoipo.com/20180504135244.png)
+![](https://tc.seoipo.com/20180504135244.png?imageMogr2/format/webp)
 
 点击设置按钮，进入项目设置
 
-![](https://tc.seoipo.com/20180504135541.png)
+![](https://tc.seoipo.com/20180504135541.png?imageMogr2/format/webp)
 
 ## 静态文件更新
 
@@ -52,11 +52,11 @@ after_success:
 
 `$DEPLOY_TOKEN` 是从 Github 授权得到的，「setting」>「Developer settings」>「Personal access tokens」>「Generate new token」, 然后给于相应权限即可，`admin:public_key, admin:repo_hook, repo`。
 
-![](https://tc.seoipo.com/20180504153729.png)
+![](https://tc.seoipo.com/20180504153729.png?imageMogr2/format/webp)
 
 进入 Travis 的 repo 项目，「More options」>「Settings」>「Environment Variables」, 新建一个变量`DEPLOY_TOKEN`，把 Github 的授权 token 保存在里面。
 
-![](https://tc.seoipo.com/20180504154229.png)
+![](https://tc.seoipo.com/20180504154229.png?imageMogr2/format/webp)
 
 Travis CI 提供了存放加密文件的方式，参考 [官方文档](https://docs.travis-ci.com/user/encrypting-files/)。
 
@@ -99,11 +99,11 @@ WORKDIR /usr/share/nginx/html
 
 建立 Automated Build 镜像后，进入 `Build Seeting`, 点击 Trigger，建立第一个 Docker 镜像。
 
-![](https://tc.seoipo.com/20180504161016.png)
+![](https://tc.seoipo.com/20180504161016.png?imageMogr2/format/webp)
 
 然后在「Building Settings」>「Build Triggers」>「Activate Triggers」，复制 Trigger URL。
 
-![](https://tc.seoipo.com/20180504161245.png)
+![](https://tc.seoipo.com/20180504161245.png?imageMogr2/format/webp)
 
 然后在服务器上执行下列代码，拉取并**启动 Docker 镜像**。
 
@@ -230,13 +230,13 @@ Commit all changes to your .travis.yml.
 
 - 将 `.travis.yml` 中的 `openssl aes-256-cbc -K $encrypted_5c280379e96c_key -iv $encrypted_5c280379e96c_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d` 放入最终的 `.travis.yml` 文件中。
 
-  ![](https://tc.seoipo.com/20180504184508.png)
+  ![](https://tc.seoipo.com/20180504184508.png?imageMogr2/format/webp)
 
 ## travis.yml 配置
 
 当项目内存在 `.travis.yml` 文件时，Travis CI 会按照其定义完成自动 build 过程，所以开启了上述配置以后还要在 Github 的 Jekyll 源文件项目下创建 `.travis.yml` 配置文件。
 
-![](https://tc.seoipo.com/20180504141827.png)
+![](https://tc.seoipo.com/20180504141827.png?imageMogr2/format/webp)
 
 `.travis.yml` 配置文件内容样例如下：
 

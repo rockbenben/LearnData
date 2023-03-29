@@ -26,15 +26,15 @@ order: -38
 1. NAS 管理后台－套件中心－搜索并安装「Docker」，然后在 Docker 容器中安装所需服务。
 2. Docker－注册表，搜索对应镜像，选中最高星的项目，点击下载。
 
-   ![](https://tc.seoipo.com/2022-05-05-14-40-43.png)
+   ![](https://tc.seoipo.com/2022-05-05-14-40-43.png?imageMogr2/format/webp)
 
 3. 镜像下载完成后，进入「映像」，选中刚下载好的镜像，点击启动。
 
-   ![](https://tc.seoipo.com/2022-05-05-14-41-01.png)
+   ![](https://tc.seoipo.com/2022-05-05-14-41-01.png?imageMogr2/format/webp)
 
 4. 高级设置－端口设置，将本地端口从自动改为一个固定的端口，方便后期做端口映射。避免 NAS 重启后，本地端口发生变化。
 
-   ![](https://tc.seoipo.com/2022-05-05-14-41-15.png)
+   ![](https://tc.seoipo.com/2022-05-05-14-41-15.png?imageMogr2/format/webp)
 
 ## 域名绑定
 
@@ -47,7 +47,7 @@ order: -38
    - cloudflare 动态 DNS 配置 ([教程](https://p3terx.com/archives/openwrt-cloudflare-ddns.html))：系统－软件包，搜索「cloudflare」，安装 ddns-scripts_cloudflare.com-v4，然后重启路由器。
    - 服务－动态 DNS，cloudflare 登录密码为 [cloudflare API](https://dash.cloudflare.com/profile/api-tokens) 中的 Glodbal API Key。阿里云用户可在 RAM 访问控制中创建专门的 AccessKey。
 
-     ![](https://tc.seoipo.com/2022-05-05-14-41-31.png)
+     ![](https://tc.seoipo.com/2022-05-05-14-41-31.png?imageMogr2/format/webp)
 
 4. 如果没有宽带为内网，不能提供公网 ip，可借助花生壳等内网穿透工具达到类似效果。
 

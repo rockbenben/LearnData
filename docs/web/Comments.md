@@ -53,7 +53,13 @@ Vercel 项目中选择「Overview」>「Settings」>「Environment Variables」�
    forever stop app.js  #关闭应用
    forever restartall  #重启所有应用
 
-   #最终
+   # 持久化运行 Waline
+   forever start /www/wwwroot/waline/node_modules/@waline/vercel/vanilla.js
+
+   # 版本升级并重启
+   forever stop /www/wwwroot/waline/node_modules/@waline/vercel/vanilla.js
+   cd /www/wwwroot/waline
+   npm install @waline/vercel
    forever start /www/wwwroot/waline/node_modules/@waline/vercel/vanilla.js
    ```
 
@@ -69,11 +75,13 @@ Vercel 项目中选择「Overview」>「Settings」>「Environment Variables」�
 2. 提取数据中的 Comment、Counter 和 Users，格式为 `[{},{}……,{}]`，依次复制到 [json2sql](https://www.convertjson.com/json-to-sql.htm#) 进行操作。
 3. 在 json2sql 页面中，点击按钮「Format JSON」，然后按截图勾选「Still not happy」「Enclose field names」「Backtick (`name`)」，取消勾选第一个值的 key。同时，取消勾选 objectId 的「Include」，该项将不会导入数据库。
 
-    ![](https://tc.seoipo.com/2023-03-24-16-52-57.png)
+   ![](https://tc.seoipo.com/2023-03-24-16-52-57.png?imageMogr2/format/webp)
 
-4. 将「Schema.Table or View Name」依次设为「wl_Comment」「wl_Counter」「wl_Users」，取消勾选「Create Table/View」。
+4. 将「Schema.Table or View Name」依次设为「\`wl_Comment\`」「\`wl_Counter\`」「\`wl_Users\`」，取消勾选「Create Table/View」。
 5. 在 Step 3: Generate output 下点击按钮「JSON TO SQL Insert」，然后点击复制按钮。
 6. 进入 phpMyAdmin 数据库后台，选中要操作的表（如 wl_Comment），点击右侧的 SQL 按钮运行 SQL 查询，将复制的内容粘贴到此，并点击执行。若无报错，则说明数据导入正常。
+
+处理后时间可以正常导入，但由于 id 结构不同，旧的评论回复将失去联系。
 
 ## Gitalk
 

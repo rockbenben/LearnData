@@ -22,11 +22,11 @@ order: -39
 
 首次使用[微信红包封面开放平台](https://cover.weixin.qq.com/)，需要注册并实名认证。如果使用个人身份认证，注册中无付费环节。
 
-![](https://tc.seoipo.com/2022-05-05-16-09-39.png)
+![](https://tc.seoipo.com/2022-05-05-16-09-39.png?imageMogr2/format/webp)
 
 个人认证环节需要有 100 粉丝以上的视频号或公众号。
 
-![](https://tc.seoipo.com/2022-05-05-16-09-52.png)
+![](https://tc.seoipo.com/2022-05-05-16-09-52.png?imageMogr2/format/webp)
 
 如果没有红包封面额度，可以自行购买。封面费用为 1 元/个，购买 n 个，则 n 个用户可以使用此款红包封面，有效期为半年。微信用户领取后，可在 3 个月内无限次使用该封面。
 
@@ -52,4 +52,4 @@ order: -39
 
 微信红包封面的肖像需要授权，不过我提交的**全家福红包通过了**。尽量不要使用网络上的图片作为红包封面，容易因版权问题而被驳回。
 
-![](https://tc.seoipo.com/2022-05-05-16-10-58.png)
+![](https://tc.seoipo.com/2022-05-05-16-10-58.png?imageMogr2/format/webp)

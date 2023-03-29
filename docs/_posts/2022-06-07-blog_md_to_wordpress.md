@@ -86,7 +86,7 @@ order: -47
 - 文章后缀必须为「.md」，不支持「.markdown」或其他后缀格式。
 - 进入 repo 页面中的 `Actions`，检查最近一次的 update 是否正确。根据报错代码，寻找错误原因。
 
-  ![](https://tc.seoipo.com/2022-05-26-20-36-56.png)
+  ![](https://tc.seoipo.com/2022-05-26-20-36-56.png?imageMogr2/format/webp)
 
 ### Error: git denied to github-actions[bot]
 
@@ -166,7 +166,7 @@ Markdown 转 WordPRess 文章时，默认规则无法识别缩进级别。多层
 
 docsify 使用简单，如果使用了前文我修改过的[发布工具](https://github.com/rockbenben/Blog_WP)，则无需配置。在发布工具文件夹内的空白区域，右键打开终端，执行命令`docsify serve`即可生成全文检索网页，默认管理链接为 `http://localhost:3000/`。
 
-![docsify 本地运行](https://tc.seoipo.com/2022-05-30-20-03-19.png)
+![docsify 本地运行](https://tc.seoipo.com/2022-05-30-20-03-19.png?imageMogr2/format/webp)
 
 如果你设置了 Github Pages，项目会默认启动在线 docsify 网页，页面链接取决于 Github 的设置。比如我的用户名是 rockbenben，项目名是 Blog_WP，所以 docsify 管理页面就是 <https://rockbenben.github.io/Blog_WP/>。
 

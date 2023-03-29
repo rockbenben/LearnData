@@ -13,31 +13,31 @@ order: -53
 
 ChatGPT 的回复质量取决于提示词（即 Prompt）。这通常是用户提供的问题或文本，以激活模型生成回复。简单来说，prompt 就是用户想要询问的内容，作为输入送到 ChatGPT 中，ChatGPT 会尝试理解这个输入，然后输出合适的回答或响应。通过优化提示词，可以使 ChatGPT 生成更加准确、有用的回复。为了能让 ChatGPT 成为生产力工具，我花大量时间逐个研究提示词的规则和范例，如 [ChatGPT Prompt Examples](https://platform.openai.com/examples)、[Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)、[Learn Prompting](https://learnprompting.org/) 等。我筛选出了 163 个 Prompts（提示词），仅记录它们的功能而非内容，这就让我的笔记超过了 5000 字。提示词目录也变得越来越长，即使将浏览器全屏，也无法完整显示。起初，我制作提示词目录是为了方便自己，但每次需要查找提示词时，我不得不依靠记忆。这些笔记反而成为了负担，拖累 ChatGPT 的工作效率。
 
-为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需**打开 [ChatGPT Shortcut](https://newzone.top/chatgpt/)，复制提示词，稍加修改后发送给 ChatGPT**，就能获得指定输出，让你的生产力加倍！
+为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需**打开 [ChatGPT Shortcut](https:/ai.newzone.top)，复制提示词，稍加修改后发送给 ChatGPT**，就能获得指定输出，让你的生产力加倍！
 
 ## 使用说明
 
 ChatGPT Shortcut 页面默认显示全部的提示词，页面分为标签区、搜索区和提示词展示区。
 
-![](https://tc.seoipo.com/2023-02-28-10-30-20.png)
+![](https://tc.seoipo.com/2023-02-28-10-30-20.png?imageMogr2/format/webp)
 
 ### 标签筛选
 
 标签区按提示词的领域和功能进行划分，可根据不同场景和需求进行选择。与标签区右上方的「标签筛选规则切换」按钮配合使用，可进行多标签筛选。默认状态为 OR，即选中标签下的所有提示词。切换到 AND 后，将筛选出具备已选中的多个标签的提示词。
 
-![](https://tc.seoipo.com/2023-02-28-10-31-01.png)
+![](https://tc.seoipo.com/2023-02-28-10-31-01.png?imageMogr2/format/webp)
 
 ### 关键词搜索
 
 关键词搜索范围包括提示词的标题、简介、内容和中文翻译。输入关键词后，提示词展示区将立即展示筛选出的内容。如果已选中标签，则关键词搜索仅限于标签筛选范围内。对于 PC 端，搜索框内容变化后，新的搜索结果会在 800 毫秒后显示。移动端则为即时刷新。
 
-![](https://tc.seoipo.com/2023-02-28-10-31-10.png)
+![](https://tc.seoipo.com/2023-02-28-10-31-10.png?imageMogr2/format/webp)
 
 ### 展示区复制
 
 通过标签筛选和关键词搜索，点击卡片右上方的「复制」按钮即可获取提示词，将其粘贴到 ChatGPT 中，参考中文提示调整需求文本，即可得到指定领域的回复。如果提示词中的中文备注没有解释清楚，可以点击提示词的绿色标题查看来源网页。
 
-![](https://tc.seoipo.com/2023-02-28-10-31-19.png)
+![](https://tc.seoipo.com/2023-02-28-10-31-19.png?imageMogr2/format/webp)
 
 ### 语言切换
 
@@ -45,7 +45,7 @@ ChatGPT Shortcut 页面默认显示全部的提示词，页面分为标签区、
 
 ![中英文切换](https://tc.seoipo.com/chatgptshortcut_encn.gif)
 
-如果想让提示词默认显示为中文，你可以点击导航栏右侧的 `CN` 按钮。需要注意的是，即使切换到中文翻译，复制按钮也仅针对英文提示词复制。下方会有解释原因。
+如果想让提示词默认显示为中文，你可以点击标签区右上方的 `CN` 按钮。需要注意的是，即使切换到中文翻译，复制按钮也仅针对英文提示词复制。下方会有解释原因。
 
 ## 常见问题
 

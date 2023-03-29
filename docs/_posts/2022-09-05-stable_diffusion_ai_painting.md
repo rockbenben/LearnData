@@ -82,7 +82,7 @@ docker compose --profile sygil up --build
 # auto 是功能最多的分支，可以选择 auto | auto-cpu | invoke | sygil | sygil-sl
 ```
 
-![](https://tc.seoipo.com/2022-09-04-18-32-31.png)
+![](https://tc.seoipo.com/2022-09-04-18-32-31.png?imageMogr2/format/webp)
 
 等待构建完成后，在终端中会提示访问 `http://localhost:7860/`，你就可以在本地电脑上用 AI 生成图片了。^[[Setup Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup)]
 

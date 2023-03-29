@@ -20,7 +20,7 @@ order: -27
 
 **协和维生素 e 乳**是网红大爆款，同名但不同厂家的超过五款，包装类似的更是不下二十款，完全分不清李鬼还是李逵。
 
-![](https://tc.seoipo.com/2022-05-05-14-02-27.png)
+![](https://tc.seoipo.com/2022-05-05-14-02-27.png?imageMogr2/format/webp)
 
 ## 精心
 
@@ -28,7 +28,7 @@ order: -27
 
 使用精心产品后，个人评价一般，并没感受到医院的科技加成。
 
-![](https://tc.seoipo.com/20191004143812.png)
+![](https://tc.seoipo.com/20191004143812.png?imageMogr2/format/webp)
 
 ## 爱心 301
 
@@ -43,7 +43,7 @@ order: -27
 
 打着「中国医学科学院整形外科医院」的名号，但被医院发声明说是冒用。
 
-![](https://tc.seoipo.com/2022-05-05-14-02-49.png)
+![](https://tc.seoipo.com/2022-05-05-14-02-49.png?imageMogr2/format/webp)
 
 ~~声明链接（已删除）：<http://www.zhengxing.com.cn/ArticleShow4145.aspx>~~
 
@@ -53,7 +53,7 @@ order: -27
 
 京卫本草背后公司为「北京华风时代化妆品有限公司」，股东都为自然人，无医院或单位股东。国家食品药品监督管理总局上用京卫本草都无法搜索到相关产品备案。京卫本草官网上甚至带有 Windows 未激活水印。
 
-![](https://tc.seoipo.com/20191004135719.png)
+![](https://tc.seoipo.com/20191004135719.png?imageMogr2/format/webp)
 
 ## 总结
 

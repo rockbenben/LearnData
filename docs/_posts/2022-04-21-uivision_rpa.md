@@ -20,7 +20,7 @@ Python 被认为是次时代必学语言，也就成为贩卖知识焦虑最好�
 
 请把你的时间花在更重要的事情上，克服知识焦虑。**学一百种热门语言，不如熟练掌握一个好的工具。**
 
-![](https://tc.seoipo.com/2022-05-05-14-45-43.png)
+![](https://tc.seoipo.com/2022-05-05-14-45-43.png?imageMogr2/format/webp)
 
 以下内容只适合不想学 Python，不懂编程，又想使用自动化和爬虫的小白，高手可以关闭页面了。
 
@@ -38,7 +38,7 @@ UI.Vision RPA 的主体是浏览器插件，只需去应用商店即可完成安
 
 UI.Vision RPA 的运行脚本叫做「宏」。界面很简单，左侧是宏的范例库和本地文件，右侧是宏的运行和反馈区。
 
-![UI.Vision 应用界面](https://tc.seoipo.com/2022-04-21-16-52-29.png)
+![UI.Vision 应用界面](https://tc.seoipo.com/2022-04-21-16-52-29.png?imageMogr2/format/webp)
 
 打开 UI.Vision 插件，点击右上角按钮「Record」，插件会把你的操作录制为宏脚本。
 
@@ -56,7 +56,7 @@ UI.Vision RPA 的运行脚本叫做「宏」。界面很简单，左侧是宏的
 
 - 第 5-8 步使用「click」命令，依次点击指定按钮。
 
-  ![UI.Vision 点击命令](https://tc.seoipo.com/2022-04-21-17-15-59.png)
+  ![UI.Vision 点击命令](https://tc.seoipo.com/2022-04-21-17-15-59.png?imageMogr2/format/webp)
 
 - 第 9 步使用「pause」命令，延时 500 毫秒。
 

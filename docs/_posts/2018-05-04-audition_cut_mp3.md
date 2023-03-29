@@ -15,19 +15,19 @@ order: -16
 
 1. 在 Audition 中打开音频文件。
 
-   ![](https://tc.seoipo.com/20180504152233.png)
+   ![](https://tc.seoipo.com/20180504152233.png?imageMogr2/format/webp)
 
 2. 选定要删除的音频部分：左键按住在**删除音频起点**，然后拉动到**删除音频重点**，放开左键。
 
-   ![](https://tc.seoipo.com/20180504151226.png)
+   ![](https://tc.seoipo.com/20180504151226.png?imageMogr2/format/webp)
 
 3. 点击右键，选择**删除**。刚才选择的音频就被删除了。
 
-   ![](https://tc.seoipo.com/20180504151306.png)
+   ![](https://tc.seoipo.com/20180504151306.png?imageMogr2/format/webp)
 
 4. 在混音器中点击，用**鼠标滚轮**放大音频的可选间距，重复上面 3 步，继续剪切音频。
 
-   ![](https://tc.seoipo.com/20180504151816.png)
+   ![](https://tc.seoipo.com/20180504151816.png?imageMogr2/format/webp)
 
 5. 精修完后，点击「文件」>「另存为」，就可以保存我们的音频文件了。
 
