@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 29 Mar 2023 21:33:02 GMT</pubDate>
-    <lastBuildDate>Wed, 29 Mar 2023 21:33:02 GMT</lastBuildDate>
+    <pubDate>Fri, 31 Mar 2023 01:19:48 GMT</pubDate>
+    <lastBuildDate>Fri, 31 Mar 2023 01:19:48 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by 清顺</copyright>
@@ -16,7 +16,90 @@
       <url>https://newzone.top/logo.svg</url>
       <link>https://newzone.top/</link>
     </image>
+    <category>头脑驿站</category>
     <category>工具</category>
+    <item>
+      <title>从失眠到高效早晨：我的 5AM Club 计划分享</title>
+      <link>https://newzone.top/posts/2023-03-31-efficient_morning_5am_club.html</link>
+      <guid>https://newzone.top/posts/2023-03-31-efficient_morning_5am_club.html</guid>
+      <source url="https://newzone.top/rss.xml">从失眠到高效早晨：我的 5AM Club 计划分享</source>
+      <description>失眠问题已经困扰了我十年，尝试过各种方案，包括固定睡眠时间、冥想、食疗等，但均以失败告终。夜间生物钟变得越来越晚，甚至到了凌晨 1-2 点才有睡意。偶然看到 Robin Sharma 的《The 5 AM Club》，我的第一反应是「疯了」。晚上 10 点睡觉对严重失眠的我来说已经是天方夜谭，更何况是在 5 点起床？即使实现了 5 点起床，我的状态又如何保证？能高效地学习和工作吗？但当时的我正处于效率低谷，一件事情还没完成就会被另一件事情干扰，作息时间完全被打乱。迷信理论的我，只能去相信它。因此，我结合心流理论制定了自己的 5AM Club 计划。 5AM Club 计划：</description>
+      <category>头脑驿站</category>
+      <pubDate>Fri, 31 Mar 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>失眠问题已经困扰了我十年，尝试过各种方案，包括固定睡眠时间、冥想、食疗等，但均以失败告终。夜间生物钟变得越来越晚，甚至到了凌晨 1-2 点才有睡意。偶然看到 Robin Sharma 的《The 5 AM Club》，我的第一反应是「疯了」。晚上 10 点睡觉对严重失眠的我来说已经是天方夜谭，更何况是在 5 点起床？即使实现了 5 点起床，我的状态又如何保证？能高效地学习和工作吗？但当时的我正处于效率低谷，一件事情还没完成就会被另一件事情干扰，作息时间完全被打乱。迷信理论的我，只能去相信它。因此，我结合心流理论制定了自己的 5AM Club 计划。</p>
+<p>5AM Club 计划：</p>
+<ol>
+<li>早上 5 点起床，使用手环震动闹钟。</li>
+<li>泡杯咖啡，准备早餐，开始第一个工作番茄。</li>
+<li>工作 25 分钟休息 5 分钟，休息期间完成每日必须：拍照打卡发 SNS，吃早餐。</li>
+<li>每天最低完成 8 个番茄，之后可进入长休息区间，进行家务打扫、健身、娱乐。</li>
+<li>晚上 10 点睡觉，保证充足的睡眠时间。</li>
+</ol>
+<p>执行计划一个月后，我在早晨完成了以下事项：读完了 6 本书；推出开源项目 ChatGPT Shortcut，整合了 200 个 prompts 并将 ChatGPT 融入我的日常工作中；从零开始熟悉了 Docusaurus，对 10 个页面组件进行了魔改，并顺利将三个工作网站迁移到了 Docusaurus 上。而几年前，我使用国内一个商用模板花费整整一个月的时间才建成了公司官网。</p>
+<p>5AM Club 对我的效率带来了显著提升。接下来，我将分享 5AM Club 的部分理论以及我的个人心得。</p>
+<h2> 5 点的奥秘</h2>
+<h3> 5 点起，身体受得了吗？</h3>
+<p>5AM Club 最大的误解，可能是睡眠时间被减少了。5 点起床可能确实减少了睡眠时间，但它也会强迫我们早睡从而提高睡眠质量。</p>
+<p>充足的睡眠对于 5AM Club 至关重要，否则谈何高效率工作。睡眠时间至少要保证 6 小时以上。为了能在早上 5 点起床，晚上 9 点半就需要上床，10 点入睡。初开始，生物钟可能无法立即调整到 10 点入睡，可以以半小时为单位逐渐调整。或者提前上床，我刚开始实行 5AM Club 时通常晚上 8 点就上床做准备，强迫自己提早入睡。晚八点入睡会让你在凌晨三点左右醒来，但依旧比晚睡早起要好。当你养成了早睡的习惯后，最后再把就寝时间调整到 10 点则容易得多。</p>
+<blockquote>
+<p>研究人员发现学生的平均睡眠时间是 6.5 小时。研究人员还发现，睡眠不足 6 小时的学生成绩明显下降，每减少一小时睡眠期末 GPA 分数降 0.07。研究人员称，睡眠不足的负面影响是难以消除的，它会持续存在，五到九周后睡眠不足可能会影响学生在课堂上的学习能力。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1">
+</a></blockquote><a class="footnote-anchor" id="footnote-ref1">
+<p>之前，我睡眠时间为凌晨一点到早上九点，总共有八个小时。然而，我的睡眠质量并不高，手环得分只有 75-85 分。后来，我改变了睡眠作息时间，每晚十点准时睡觉，睡眠时间减少到七个小时，而手环得分始终保持在 90 分以上。</p>
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 为什么 5 点起？做什么？</h3>
+<p>虽然名字是 5AM Club，但我一般都早于 5 点起床，具体时间根据自身情况自由调节。有时候如果比较疲劳，我晚上 8 点就上床睡觉，早上 2、3 点醒来，然后开始进入当天的工作。偶尔一两次睡眠不足并不会对身体造成多大的影响，不用过于焦虑。</p>
+<p>早上 5 点到 8 点是我留给自己的完全属于自己的时间块，用来处理那些对自己来说重要且长期能产生重大影响的任务。我选择将它安排在早上 5 点是因为这时的精力最佳，也没有其他人的干扰，能让我在一天开始之前拥有完全属于自己的时间。相比之下，晚上的效率较低。</p>
+<p>当天早上要做的事要提前计划并做好准备，这样能够持续不断地、不受干扰地进行工作。最重要的是，要把精力集中在你负责的最重要的工作上。可以专注于个人项目，例如阅读、写作、考证和你特别想做的事情。早起时间不应该用于处理邮件和微信等日常性任务。这类任务虽然占用时间短，但却占用心力。</p>
+<p>最近 Facebook 进行了第二轮大裁员，扎克伯格表示：「自从我们去年裁员以来，一个令人惊讶的结果是许多事情进展得更快了。」员工减少了，项目反而进展更快了？他的解释是，裁员使公司取消了许多低优先级的项目，集中资源于最重要的事情上。不做日常任务的原因也类似于此，不要将自己的宝贵精力浪费在日常任务上。如果你在 5AM Club 的时间内处理日常性任务，那么早起也就没有什么必要了。此外，如果你已经有属于自己的整块时间，也没有必要特意早起。</p>
+<h2> 进入状态前的准备</h2>
+<h3> 大脑唤醒</h3>
+<p>根据《心流管理魔方》的介绍，血压、血糖和血氧是保持心流的基础。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2"> 开始晨间的高效学习/工作前，可以做以下准备：</a></p><a class="footnote-anchor" id="footnote-ref2">
+<ul>
+<li>
+<p>血压：1-2 分钟 HIIT（高强度间歇性运动），让心率达到 130。或是在工作番茄的间隙，进行俯卧撑、拉伸等轻量运动。</p>
+</li>
+<li>
+<p>血糖：早上起床后，优先吃早餐，预防性进食以补充能量。工作过程中每隔 2 个小时加餐一次，比如酸奶、坚果、水果等。</p>
+</li>
+<li>
+<p>血氧：大脑的高效运转同样需要充足的氧气。我在书桌旁放了一支瓶装氧气，起床后吸一大口氧气，让自己进入清醒状态。（非必须）</p>
+</li>
+<li>
+<p>口算：心流开始前，可通过口算、思考进行大脑热身。下方是我用 AutoHotkey 编写的随机口算题。</p>
+<div class="language-autohotkey line-numbers-mode" data-ext="autohotkey"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ul>
+</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> 打卡监督</h3>
+<p>朋友圈打卡是为了增加自我监督。这就跟自习直播和自我监控视频一样，都是为了增加自己行为的透明度，让外界了解自己的行动。此外，通过照片数量来统计打卡频次，可以方便进行事后总结，同时也能增加自身的成就感。我不喜欢打卡应用，通过应用来打卡是一件很累的事情，因为它们会不断提醒你的错过，这会给你带来压力。我之前买过 Habitity，但现在已经不用了。</p>
+<p>为了减轻负担，我通常只拍书房外街道的照片进行日常打卡，并且没有加上文字。由于每天都是类似的照片，经常会有人问我「你为什么总是发一张照片？」对此，我只能尽量改变拍摄角度，让它看起来不完全一样。此外，每隔一段时间，我会对最近的学习和工作成果进行阶段性总结，并在打卡中进行展示。</p>
+<p>如果你不喜欢发朋友圈，那么可以将照片仅用作自我记录，不要因为打卡而给自己增加负担。</p>
+<h2> 工作时间安排</h2>
+<p>我使用番茄工作法来安排时间。将任务分解成 25 分钟的小任务，并在每个任务之间休息 5 分钟，这种工作方式可以让你更专注于手头的任务，并在短时间内保持高效的工作状态。工作 25 分钟后休息 5 分钟，工作时间可以适当延长，但不要超过 1 小时。根据统计，大部分强脑力工作者的专注时间平均为 53 分钟。过于追求长时间工作会降低工作效率。</p>
+<p>刚开始 5AM Club 时，我一连工作几个小时，到了下午就会变得极度疲惫，没精力继续工作。现在，我工作 25 分钟，就会强制自己休息 5 分钟。这样一天的精力都得到了很好的保持。</p>
+<p>不是所有工作都是紧急的。放下工作休息一会儿，不会对工作有多大的影响。你想想，很多情况下，是你自己给自己施加了过多的压力吧？</p>
+<p>工作很重要，但休息同样重要。虽然有时需要处理紧急工作，但不是每项工作都需要立即处理。对身体来说，一整天都紧绷着高效运转，也许一两个月还能勉强支撑，但如果长期坚持高强度工作，身体肯定会受不了，精力也会下降。工作间隙让自己休息几分钟，会让你的精力得到良好的补充。通常我早上工作后和下午会进行半小时的小憩，用按摩椅和按摩眼罩来缓解身体的疲劳。</p>
+<h2> 休息清单</h2>
+<p>为了让你始终保持放松，无需费心思考休息时要做什么，你可以参考下面的列表，制定一份适合自己的间隙清单，并将其打印并放在桌边。需要休息时，从清单中挑选 2-3 个事项执行即可。如果你使用了先前介绍的白板方案，建议将清单记录在白板上。</p>
+<div class="language-txt line-numbers-mode" data-ext="txt"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 下午的疲劳</h2>
+<p>高效的学习工作也会带来较大的精神消耗。就像 @Dsmileyi 曾问我的：「会不会因为起来的早并且已经工作了一段时间，导致白天工作的时候感到疲惫，降低效率？」与早晨相比，下午的精力会减少不少。因此，我将 90% 的工作时间放在早上。</p>
+<p>在过去，我工作时间超过 8 小时，从早上 9 点一直工作到晚上 9 点，但期间不断受到干扰，导致工作成果不多。现在，每天只有 4-6 小时的全力工作时间，但工作成果相当于之前三天的量。虽然下午效率降低了，但整体而言，这是值得的。</p>
+<p>值得一提的是，在新的作息时间中，休息和娱乐不再让我感到愧疚。到了下午，我会放松一下，可以做家务、锻炼或者娱乐，想做什么就做什么。而以前，如果我在白天工作时间内偷懒摸鱼，我会感到内疚，然后把这种负面情绪带到工作中，给自己的心理造成负担。</p>
+<h2> 晚上十点睡觉</h2>
+<p>如何在晚上十点入睡？这对于很多人来说是一个奢望，尤其是当你已经出现了失眠症状后，更加难以实现。一开始，为了能早睡，我得强迫自己在晚上八点上床，这样才能在晚上十点入睡。然而，绝大多数人都有着自己的工作，很难控制自己的上床时间。</p>
+<p>在执行 5AM Club 计划的过程中，我们无需过于强求精准的作息时间，也不要担心偶尔的早起失败。关键在于逐步养成这个习惯，从而提高生活质量和工作效率。如果你认为自己暂时做不到在晚上十点前入睡，那就将早上五点起床顺延到六点或七点，逐步调整你的生活习惯，直到养成早起的习惯。</p>
+<h2> 最后</h2>
+<p>本文的心流部分设计参考了少数派的《心流管理魔方》栏目，而时间管理部分则受到了《吃掉那只青蛙》的启发。如果你感兴趣，建议完整阅读它们。</p>
+<p>我实施 5AM Club 计划一个月以来，生活和工作效率得到了显著提高。通过早起，我得到了宝贵的属于自己的时间块，用来处理那些对自己来说重要且长期能产生重大影响的任务。同时，我调整了作息时间，优化了睡眠质量。在工作时间安排上，采用番茄工作法，让我保持高效工作状态的同时，确保了充足的休息。</p>
+<p>虽然 5AM Club 并非人人都适用，但它确实帮助我从失眠问题中走出来，提高了工作和学习效率。我相信，只要你能找到适合自己的方法和节奏，你也可以通过早起和合理安排时间，实现从失眠到高效早晨的转变。希望我的 5AM Club 计划分享对你有所启发，祝你早晨愉快、充满活力！</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p><a href="https://www.solidot.org/story?sid=74167" target="_blank" rel="noopener noreferrer">研究发现睡眠时间低于六小时会影响学习成绩</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p><a href="https://sspai.com/post/77435" target="_blank" rel="noopener noreferrer">04 保持心流 - 心流管理魔方</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
     <item>
       <title>为了帮你用好 ChatGPT，我做了一个「咒语库]</title>
       <link>https://newzone.top/posts/2023-02-27-chatgpt_shortcuts.html</link>
@@ -661,121 +744,6 @@
 <p>开播前把脸部肌肉活动开。嘴张到最大，舌顶上颚 60 秒；嘴张到最大，尽量伸舌 30 秒。说话时，让嘴唇用力。</p>
 <h2> 总结</h2>
 <p>经过两年的直播，我深知直播的硬件、软件和技巧只是锦上添花。若要体验直播，不想深入研究，只需拿出手机开播即可。开始直播时，可能会有很多疑问和顾虑，效果也不一定很好。但只有勇敢尝试新事物，不断开拓，我们的人生才会有更多可能性。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>找不到字幕？Whisper 让不懂外语的你也能看懂日剧</title>
-      <link>https://newzone.top/posts/2022-11-18-whisper_ai_subtitles.html</link>
-      <guid>https://newzone.top/posts/2022-11-18-whisper_ai_subtitles.html</guid>
-      <source url="https://newzone.top/rss.xml">找不到字幕？Whisper 让不懂外语的你也能看懂日剧</source>
-      <description>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。 Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是支持 99 种语言 AI 字幕工具。</description>
-      <category>工具</category>
-      <pubDate>Fri, 18 Nov 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。</p>
-<p>Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是<strong>支持 99 种语言 AI 字幕工具</strong>。</p>
-<p>虽然与 Stable Diffusion 同样归属 AI 工具，但 Whisper 安装非常简单，终端执行两行代码安装 Whisper 和 FFmpeg 即可使用。如果你不清楚如何安装 FFmpeg，可参考<a href="https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html#%E9%85%8D%E7%BD%AE-ffmpeg" target="_blank" rel="noopener noreferrer">FFmpeg 配置步骤</a>。这部分我不多做赘述，具体可以看<a href="https://github.com/openai/whisper" target="_blank" rel="noopener noreferrer">Whisper 官方文档</a>。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>接下来，我会分享如何使用 Whisper 为外语视频自动生成字幕，以日本综艺节目「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」为例。</p>
-<h2> 音视频转录</h2>
-<p>在文件所在目录下打开终端，运行 <code>whisper jp.mp4</code> 即可执行音视频转录。测试视频名原本为日语，我改为「jp.mp4」，原因是我系统中只装了中英语言包，使用其他语言作为命令会出现 Invalid argument 报错，从而导致转录失败。Whisper 的媒体分析环节调用了 FFmpeg，所以主流音视频格式均被支持。</p>
-<figure><img src="https://tc.seoipo.com/2022-11-18-09-25-29.png" alt="" tabindex="0" loading="lazy"><figcaption>whisper 命令</figcaption></figure>
-<p>视频时长 90 分钟，我使用 3080Ti 显卡转录，用时 10 分钟。转录过程中不要玩游戏，也不要进行直播等吃显存的行为，否则容易显存不足无法继续。Whisper 对设备要求不高，不过设备会决定转录时长和你能使用的转录模型。如果你使用 CPU 转录，时间会增加 5-10 倍。</p>
-<p>转录完成后，Whisper 将生成原生字幕文件，日语视频会被转录为日语字幕，西班牙语视频会得到西班牙语字幕。</p>
-<h2> 字幕翻译</h2>
-<p>通过 Whisper 获得原生字幕后，接着要将其翻译为中文。这一步需借助 SubtitleEdit Online，它支持免费在线翻译字幕，可使用 Google 和 Yandex 两种翻译引擎。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1">
-</a><ol><a class="footnote-anchor" id="footnote-ref1">
-</a><li><a class="footnote-anchor" id="footnote-ref1">打开 </a><a href="https://www.nikse.dk/subtitleedit/online" target="_blank" rel="noopener noreferrer">SubtitleEdit Online</a>，点击「Subtitle」&gt;「Open...」，选择要导入的字幕文件。</li>
-<li>点击「Auto-translate」，选择翻译引擎，然后在弹出窗口中选择字幕要翻译的语言，并<strong>将页面拖动到最下方</strong>（非常重要），确定所有文字都被翻译后点击 OK 按钮。</li>
-<li>点击「Subtitle」&gt;「Save/download...」，即可保存翻译好的字幕文件。</li>
-</ol>
-<p>除了网页翻译字幕，本地端的神经机器翻译也是种好选择。macOS 用户推荐使用 <a href="https://github.com/argosopentech/argos-translate" target="_blank" rel="noopener noreferrer">Argos Translate</a>，这是基于 OpenNMT 的开源神经机器翻译。如果你的动手能力较强，可以尝试 <a href="https://github.com/Helsinki-NLP/Opus-MT" target="_blank" rel="noopener noreferrer">Opus-MT</a>。不管用哪种方式，都是将字幕以文本方式导出，复制到翻译引擎中翻译，即可得到不同于 Google Translate 的翻译结果。</p>
-<h2> Whisper 进阶命令</h2>
-<h3> task</h3>
-<p><code>--task</code> 分为 transcribe（语音转录）和 translate。Whisper 默认使用 <code>--task transcribe</code> 模式，将语音转录为对应的语言字幕。<code>--task translate</code> 是所有语言翻译为英文，目前尚未支持翻译为其他语言。</p>
-<h3> language</h3>
-<p><code>--language</code> 是设置语音转录的语种，支持语种范围查看 <a href="https://github.com/openai/whisper/blob/main/whisper/tokenizer.py" target="_blank" rel="noopener noreferrer">tokenizer.py</a>，比如指定日语 <code>--language japanese</code>。如果你没指定语种，Whisper 会截取音频的前 30 秒来判断语种。</p>
-<p>如果指定语种与文件中的语种并不相同，Whisper 会强制翻译，但 10 分钟以上的音视频会出现大量的重复无意义字幕。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2"> 假设你把日语视频的转录语言设为汉语，前 8 分钟 Whisper 会正确转录到中文，但 8 分钟后的转录字幕会一直重复，并与实际片段无关。</a></p><a class="footnote-anchor" id="footnote-ref2">
-</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> model</h3>
-<p><code>--model</code> 指 Whisper 的转录模型，转录效果为 tiny &lt; base &lt; small &lt; medium &lt; large，默认使用 small。添加参数 <code>--model medium</code> 或 <code>--model large</code> 可以切换到更大的模型，但转录时间也会变长。如果你是对英文视频进行转录，则在模型参数上添加后缀 <code>.en</code>，能提升转录速度。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">模型</th>
-<th style="text-align:center">大小</th>
-<th style="text-align:center">单英语模型</th>
-<th style="text-align:center">多语言模型</th>
-<th style="text-align:center">最低显存</th>
-<th style="text-align:center">转录速率</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">tiny</td>
-<td style="text-align:center">39 M</td>
-<td style="text-align:center"><code>tiny.en</code></td>
-<td style="text-align:center"><code>tiny</code></td>
-<td style="text-align:center">~1 GB</td>
-<td style="text-align:center">~32x</td>
-</tr>
-<tr>
-<td style="text-align:center">base</td>
-<td style="text-align:center">74 M</td>
-<td style="text-align:center"><code>base.en</code></td>
-<td style="text-align:center"><code>base</code></td>
-<td style="text-align:center">~1 GB</td>
-<td style="text-align:center">~16x</td>
-</tr>
-<tr>
-<td style="text-align:center">small</td>
-<td style="text-align:center">244 M</td>
-<td style="text-align:center"><code>small.en</code></td>
-<td style="text-align:center"><code>small</code></td>
-<td style="text-align:center">~2 GB</td>
-<td style="text-align:center">~6x</td>
-</tr>
-<tr>
-<td style="text-align:center">medium</td>
-<td style="text-align:center">769 M</td>
-<td style="text-align:center"><code>medium.en</code></td>
-<td style="text-align:center"><code>medium</code></td>
-<td style="text-align:center">~5 GB</td>
-<td style="text-align:center">~2x</td>
-</tr>
-<tr>
-<td style="text-align:center">large</td>
-<td style="text-align:center">1550 M</td>
-<td style="text-align:center">N/A</td>
-<td style="text-align:center"><code>large</code></td>
-<td style="text-align:center">~10 GB</td>
-<td style="text-align:center">1x</td>
-</tr>
-</tbody>
-</table>
-<p>上方表格是 Whisper 官方提供信息，但目前模型实际增大 50%-100%，要求也增加了，仅作参考。</p>
-<h3> 辅助参数</h3>
-<ul>
-<li><code>--device</code> 指 whisper 运行算法所用的硬件，默认为 cuda 即显存，或者指定 <code>--device cpu</code> 。特别当你显存不够，又想使用较大模型时，推荐指定 CPU 转录。</li>
-<li><code>--temperature</code> temperature 决定了生成模型的贪婪程度，默认为 0。如果 temperature 低，概率最高的词将远高于其他低概率，模型将可能输出最正确的文本，变化很小。如果 temperature 较高，该模型会输出概率较高的其他单词，而不是概率最高的单词，生成的文本将更加多样化，但有更高的可能性出现语法错误和生成无意义的文本。</li>
-<li><code>--temperature_increment_on_fallback</code> 当解码失败时，回推时要增加的 temperature，默认为 0.2。</li>
-<li><code>--best_of</code> temperature 不为零时的侯选个数，默认为 5。</li>
-<li><code>--beam_size</code> temperature 为零时，number of beams in beam search，默认为 5。beam 直译是光束，但没理解具体意思，我简单理解其为侯选数。</li>
-<li><code>--patience</code> 用于 beam decoding 的 patience value, as in <a href="https://arxiv.org/abs/2204.05424" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2204.05424</a>, the default (1.0) is equivalent to conventional beam search (default: None) simple length normalization by default (default: None)</li>
-<li><code>--length_penalty</code> optional token length penalty coefficient (alpha) as in <a href="https://arxiv.org/abs/1609.08144" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/1609.08144</a>, uses simple length normalization by default (default: None)</li>
-<li><code>--suppress_tokens</code> 逗号分隔的标记 ID 列表，以便在采样过程中进行抑制; 默认为 -1，这会抑制除常见标点符号外的大多数特殊字符的出现。</li>
-<li><code>--initial_prompt</code> 可选的文本提示，在命令首行出现，默认为空。</li>
-<li><code>--condition_on_previous_text</code> 默认为 True，为下一个窗口提供模型之前的输出作为提示；禁用可能会使不同窗口的文本不一致，但模型变得不容易陷入失败循环。</li>
-<li><code>--fp16</code> 是否启用半精度 fp16 进行推理运算，默认为 True，否则为单精度 fp32，运行时间延长。</li>
-<li><code>--threads</code> 指定 CPU 运算的线程数，会取代 MKL_NUM_THREADS/OMP_NUM_THREADS (默认：0)</li>
-</ul>
-<h3> 幻听参数</h3>
-<p>非英语视频的转录有时会出现幻听，即静默片段被识别出语音，或是转录结果与该片段无关。这些问题是由语气停顿参数引起的。幻听的解决方案是引入 <a href="https://github.com/snakers4/silero-vad" target="_blank" rel="noopener noreferrer">VAD</a>，但 VAD 对动手能力要求较高。如果你的视频转录出现了严重幻听，建议先尝试调节参数阈值。</p>
-<ul>
-<li><code>--no_speech_threshold</code> 无声识别的阈值，默认为 0.6。当 no_speech_threshold 高于阈值且 logprob_threshold 低于预设时，该片段将被标记为静默。对于非英语长视频来说，建议将其调低，否则经常出现大段的重复识别。</li>
-<li><code>--logprob_threshold</code> 转录频次的阈值，默认为 -1.0。当 logprob_threshold 低于预设时，将不对该片段进行转录。建议修改为 None 或更低的值。</li>
-<li><code>--compression_ratio_threshold</code> 压缩比的阈值，默认为 2.4。当 compression_ratio_threshold 高于预设时，将不对该片段进行转录。</li>
-</ul>
-<p><code>--no_speech_threshold 0.5 --logprob_threshold None --compression_ratio_threshold 2.2</code> 是我常用的参数，你可以按视频情况来调节，幻听参数放在转录命令后面。</p>
-<h2> 转录成果</h2>
-<p>「夜のヒットスタジオ・スペシャル」：</p>
 ]]></content:encoded>
     </item>
   </channel>
