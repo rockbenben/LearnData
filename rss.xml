@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 31 Mar 2023 07:13:53 GMT</pubDate>
-    <lastBuildDate>Fri, 31 Mar 2023 07:13:53 GMT</lastBuildDate>
+    <pubDate>Sat, 01 Apr 2023 08:19:21 GMT</pubDate>
+    <lastBuildDate>Sat, 01 Apr 2023 08:19:21 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by 清顺</copyright>
@@ -45,7 +45,7 @@
 <p>研究人员发现学生的平均睡眠时间是 6.5 小时。研究人员还发现，睡眠不足 6 小时的学生成绩明显下降，每减少一小时睡眠期末 GPA 分数降 0.07。研究人员称，睡眠不足的负面影响是难以消除的，它会持续存在，五到九周后睡眠不足可能会影响学生在课堂上的学习能力。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1">
 </a></blockquote><a class="footnote-anchor" id="footnote-ref1">
 <p>之前，我睡眠时间为凌晨一点到早上九点，总共有八个小时。然而，我的睡眠质量并不高，手环得分只有 75-85 分。后来，我改变了睡眠作息时间，每晚十点准时睡觉，睡眠时间减少到七个小时，而手环得分始终保持在 90 分以上。</p>
-<figure><img src="https://tc.seoipo.com/2023-03-31-11-23-57.png?imageMogr2/thumbnail/!80p" alt="" tabindex="0" loading="lazy"><figcaption>睡眠时间对比</figcaption></figure>
+<figure><img src="https://tc.seoipo.com/2023-03-31-11-23-57.png?imageMogr2/thumbnail/500x" alt="" tabindex="0" loading="lazy"><figcaption>睡眠时间对比</figcaption></figure>
 </a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 为什么 5 点起？做什么？</h3>
 <p>虽然名字是 5AM Club，但我一般都早于 5 点起床，具体时间根据自身情况自由调节。有时候如果比较疲劳，我晚上 8 点就上床睡觉，早上 2、3 点醒来，然后开始进入当天的工作。偶尔一两次睡眠不足并不会对身体造成多大的影响，不用过于焦虑。</p>
 <p>早上 5 点到 8 点是我留给自己的完全属于自己的时间块，用来处理那些对自己来说重要且长期能产生重大影响的任务。我选择将它安排在早上 5 点是因为这时的精力最佳，也没有其他人的干扰，能让我在一天开始之前拥有完全属于自己的时间。相比之下，晚上的效率较低。</p>
@@ -70,6 +70,7 @@
 </ul>
 </a><h3><a class="footnote-anchor" id="footnote-ref2"></a> 打卡监督</h3>
 <p>朋友圈打卡是为了增加自我监督。这就跟自习直播和自我监控视频一样，都是为了增加自己行为的透明度，让外界了解自己的行动。此外，通过照片数量来统计打卡频次，可以方便进行事后总结，同时也能增加自身的成就感。我不喜欢打卡应用，通过应用来打卡是一件很累的事情，因为它们会不断提醒你的错过，这会给你带来压力。我之前买过 Habitity，但现在已经不用了。</p>
+<figure><img src="https://tc.seoipo.com/2023-03-31-16-15-42.jpg?imageMogr2/thumbnail/500x/format/webp" alt="" tabindex="0" loading="lazy"><figcaption>打卡照片，总被认为是同一张</figcaption></figure>
 <p>为了减轻负担，我通常只拍书房外街道的照片进行日常打卡，并且没有加上文字。由于每天都是类似的照片，经常会有人问我「你为什么总是发一张照片？」对此，我只能尽量改变拍摄角度，让它看起来不完全一样。此外，每隔一段时间，我会对最近的学习和工作成果进行阶段性总结，并在打卡中进行展示。</p>
 <p>如果你不喜欢发朋友圈，那么可以将照片仅用作自我记录，不要因为打卡而给自己增加负担。</p>
 <h2> 工作时间安排</h2>
@@ -111,7 +112,7 @@
       <pubDate>Mon, 27 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>最近，关于 ChatGPT 的讨论越来越多，但大多数人仅仅将其视为一款聊天机器人，并从猎奇的角度去测试其人工智能的回答。然而，ChatGPT 不仅仅是一个猎奇的 AI 玩具，未来它将会成为必备生产工具。ChatGPT 之类的 AI 工具将用它巨大的语言知识库，为我们创造更多的价值。</p>
 <p>ChatGPT 的回复质量取决于提示词（即 Prompt）。这通常是用户提供的问题或文本，以激活模型生成回复。简单来说，prompt 就是用户想要询问的内容，作为输入送到 ChatGPT 中，ChatGPT 会尝试理解这个输入，然后输出合适的回答或响应。通过优化提示词，可以使 ChatGPT 生成更加准确、有用的回复。为了能让 ChatGPT 成为生产力工具，我花大量时间逐个研究提示词的规则和范例，如 <a href="https://platform.openai.com/examples" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Examples</a>、<a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener noreferrer">Awesome ChatGPT Prompts</a>、<a href="https://learnprompting.org/" target="_blank" rel="noopener noreferrer">Learn Prompting</a> 等。我筛选出了 163 个 Prompts（提示词），仅记录它们的功能而非内容，这就让我的笔记超过了 5000 字。提示词目录也变得越来越长，即使将浏览器全屏，也无法完整显示。起初，我制作提示词目录是为了方便自己，但每次需要查找提示词时，我不得不依靠记忆。这些笔记反而成为了负担，拖累 ChatGPT 的工作效率。</p>
-<p>为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需<strong>打开 <a href="https:/ai.newzone.top">ChatGPT Shortcut</a>，复制提示词，稍加修改后发送给 ChatGPT</strong>，就能获得指定输出，让你的生产力加倍！</p>
+<p>为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需<strong>打开 <a href="https://ai.newzone.top" target="_blank" rel="noopener noreferrer">ChatGPT Shortcut</a>，复制提示词，稍加修改后发送给 ChatGPT</strong>，就能获得指定输出，让你的生产力加倍！</p>
 <h2> 使用说明</h2>
 <p>ChatGPT Shortcut 页面默认显示全部的提示词，页面分为标签区、搜索区和提示词展示区。</p>
 <figure><img src="https://tc.seoipo.com/2023-02-28-10-30-20.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
