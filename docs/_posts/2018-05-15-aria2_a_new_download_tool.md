@@ -87,7 +87,7 @@ Aria2 真·懒人包无需配置，下载即可使用，适合不想折腾的人
 
 5. Aira2 没有原生应用界面，可以输入网址 `http://aria2c.com` 使用第三方下载界面。该页面会自动与本地的 aira2c 程序关联，实现下载管理，建议把其收藏到书签，以便日后使用。^[[aria2 懒人安装教程](https://www.appinn.com/aria2-in-windows-setup/)]
 
-如果出现「Aria2 RPC 服务器错误」，请检查 JSON-RPC Path 是否为 `http://localhost:6800/jsonrpc`。如果依然报错，则说明 aria2.conf 配置有误，建议下载 [真·懒人包](https://www.seoipo.com/software/Aria2/)。
+如果出现「Aria2 RPC 服务器错误」，请检查 JSON-RPC Path 是否为 `http://localhost:6800/jsonrpc`。注意，页面**链接须为 http 而非 https**。如果依然报错，则说明 aria2.conf 配置有误，建议下载 [真·懒人包](https://www.seoipo.com/software/Aria2/)。
 
 ## Aria2 进阶
 
