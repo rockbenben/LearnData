@@ -42,4 +42,5 @@ export default navbar([
     children: ["Diet", "Shoppinglist", "Coupon"],
   },
   { text: "工具收藏", icon: "tool", link: "https://nav.newzone.top/" },
+  { text: "", icon: "/discord.svg", link: "https://discord.gg/PZTQfJ4GjX" },
 ]);
