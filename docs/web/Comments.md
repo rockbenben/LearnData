@@ -59,7 +59,7 @@ Vercel 项目中选择「Overview」>「Settings」>「Environment Variables」�
    # 版本升级并重启
    forever stop /www/wwwroot/waline/node_modules/@waline/vercel/vanilla.js
    cd /www/wwwroot/waline
-   npm install @waline/vercel
+   npm update @waline/vercel
    forever start /www/wwwroot/waline/node_modules/@waline/vercel/vanilla.js
    ```
 
