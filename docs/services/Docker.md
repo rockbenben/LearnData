@@ -18,6 +18,7 @@ Docker 使用查看 [Docker — 从入门到实践](https://yeasy.gitbook.io/doc
 - 删除指定容器：`sudo docker rm <CONTAINER ID/NAME>`，删除前需先停止容器。
 - 清理容器（慎重）：`sudo docker system prune -a`，用于清理磁盘，删除关闭的容器、无用的数据卷和网络，以及无 tag 和没使用的镜像。
 - 清理数据卷（慎重）：`sudo docker volume prune`，关闭的容器数据卷会被删除，有可能破坏有用数据，需极度谨慎。
+- 导出容器中的 mysql 数据库 `sudo docker exec <container_id> mysqldump -u root -p<your_mysql_root_password> your_database_name > <output_file>`。将 <container_id> 替换为实际的容器 ID，将 <output_file> 替换为你想要保存导出文件的路径和文件名。请将 <your_mysql_root_password> 替换为你的 MySQL root 用户密码。完成后，你将得到一个 MySQL 数据库备份文件。比如导出 Huginn 数据库，`sudo docker exec 3de3058e4468 mysqldump -u root -p<your_mysql_root_password> huginn_production > /volume1/docker/huginn/backup.sql`。
 
 ## 定制 Docker 镜像
 
