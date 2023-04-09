@@ -43,16 +43,26 @@ sudo docker commit \
 
 ### Windows Docker
 
-Windows 使用 [Docker Desktop](https://www.runoob.com/docker/windows-docker-install.html) 来管理容器，方式参考 [Windows Docker 环境配置](https://newzone.top/posts/2022-09-05-stable_diffusion_ai_painting.html#docker-环境配置)。
+在 Windows 系统上，可以使用 [Docker Desktop](https://www.runoob.com/docker/windows-docker-install.html) 来管理容器，配置方法可参考 [Windows Docker 环境配置](https://newzone.top/posts/2022-09-05-stable_diffusion_ai_painting.html#docker-环境配置)。
 
-WSL 本地路径为 `\\wsl.localhost\`。Windows 本地磁盘挂载在 Linux 的 mnt 目录下，因此 WSL 调用 Windows 文件需先添加 `/mnt/` 前缀，然后把磁盘符号改为小写，并将反斜扛 `\` 替换为 `/`。假设 Windows 文件位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」，转换为 Linux 路径则是「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。
+Windows 本地磁盘被挂载到 Linux 的 mnt 目录下，因此，如果需要在 WSL 中访问 Windows 文件，需要在路径前添加 `/mnt/` 前缀，并将磁盘符号改为小写字母，将反斜杠 `\` 替换为正斜杠 `/`。例如，如果 Windows 文件位于「D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker」目录下，则其在 Linux 中的路径为「/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker」。Windows 上的 WSL 本地路径为 `\\wsl.localhost\`。
 
-注意：WSL 上的 Linux 环境与其他不同，须查看[在适用于 Linux 的 Windows 子系统 (WSL2) 上安装 Node.js](https://learn.microsoft.com/zh-cn/windows/dev-environment/javascript/nodejs-on-wsl)。
+请注意：WSL 上的 Linux 环境与其他环境有所不同，须查看[在适用于 Linux 的 Windows 子系统 (WSL2) 上安装 Node.js](https://learn.microsoft.com/zh-cn/windows/dev-environment/javascript/nodejs-on-wsl)。
 
 ### 宝塔镜像
 
-如果要在 Docker 上部署网站，推荐宝塔官方的集成镜像，其基于 CentOS 7.9，解决了 Docker 内部链接问题，还可以用计划任务将数据库定时备份到本地，配置参考[宝塔面板定制 docker 镜像发布 - 集成 LN/AMP 支持](https://www.bt.cn/bbs/thread-79499-1-1.html)和 [Docker 安装宝塔环境](http://blog.huangyuqiang.cn/index.php/2022/11/02/docker%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E7%8E%AF%E5%A2%83/)。不过该镜像不适合 Huginn 部署，Huginn 不支持 CentOS，将安装命令从 apt-get 替换为 yum，依然无法部署。
+如果要在 Docker 上部署网站，推荐使用宝塔官方的集成镜像。它基于 CentOS 7.9，解决了 Docker 内部链接问题，还支持将数据库定时备份到本地。有关配置信息，请参考[宝塔面板定制 docker 镜像发布 - 集成 LN/AMP 支持](https://www.bt.cn/bbs/thread-79499-1-1.html)和 [Docker 安装宝塔环境](http://blog.huangyuqiang.cn/index.php/2022/11/02/docker%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E7%8E%AF%E5%A2%83/)。但是，该镜像不适用于 Huginn 的部署，因为 Huginn 不支持 CentOS。我曾尝试将安装命令从 apt-get 替换为 yum，但仍然无法部署。当我尝试在 Docker 中直接安装宝塔而不使用官方集成镜像时，遇到了无法启动数据库的问题。
 
-测试过不用官方镜像，直接在 Docker 中安装宝塔，出现数据库不启动的问题。
+```bash
+# 按需求修改映射端口和目录，1024 以下的端口不能给普通用户用
+sudo docker run -d --restart unless-stopped --name baota -p 8889:8888 -p 1033:22 -p 1044:443 -p 1081:80 -p 1889:888 -v /volume1/docker/btpanel/website_data:/www/wwwroot -v /volume1/docker/btpanel/mysql_data:/www/server/data -v /volume1/docker/btpanel/vhost:/www/server/panel/vhost btpanel/baota:lnmp
+```
 
-如果宝塔镜像只是测试环境，可以用 `rm -f /www/server/panel/data/admin_path.pl` 关闭面板入口。
+在站点设置中，绑定你的本地域名 home.xx.com 和内部地址 192.168.x.x，这样你就可以通过访问 home.xx.com:1081 来访问该站点。
+
+- 默认地址 `http://192.168.x.x:8889/btpanel` 上的宝塔面板。
+- 默认用户：btpanel
+- 默认密码：btpaneldocker
+- 镜像默认 SSH 密码：btpaneldocker
+
+如果宝塔镜像仅用于测试环境，可以使用 `rm -f /www/server/panel/data/admin_path.pl` 命令来关闭面板入口。如果你关闭了 NAS 的 SSH 功能，宝塔面板也将停止，但不会影响已运行的网站。

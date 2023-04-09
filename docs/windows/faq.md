@@ -30,7 +30,7 @@ Windows 遇到不懂的问题，可以在 [Microsoft 支持社区](https://answe
 
 ## 网址快捷方式
 
-右键单击桌面 >「新建」>「快捷方式」，插入浏览器路径，然后空格并输入要打开的网址链接，比如 `"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" https://newzone.top/`。
+右键单击桌面，选择「新建」>「快捷方式」，输入浏览器运行路径、空格和要访问的网址链接，例如：`"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" https://newzone.top/`。
 
 如果需要一次打开多个网址，则在参数后继续添加「空格 链接」。
 
@@ -75,16 +75,16 @@ Windows 遇到不懂的问题，可以在 [Microsoft 支持社区](https://answe
 
 ### 无法切换中英文
 
-按键示例、无法切换中英文，大部分原因都与输入法无关，而是硬件出了问题。
+突然出现中英文无法切换，大部分情况是因为硬件出了问题，与输入法无关。
 
 - 检查方法：安装并启动 AutoHotkey，点击「view」>「Key history and script info」。窗口会显示最近的按键历史，当发现一个键在疯狂重复时，很有可能就是出问题的按键。
-- 修复方法：键盘上重复按下该按键，看看是否能修复。不行的话，拔下键盘 USB，单独使用软键盘，测试按键是否正常。如果软键盘正常，键盘配件又无法修复，可以通过 Powertoys 或 AutoHotkey 禁用这个按键。
+- 修复方法：键盘上重复按下该按键，看看是否能修复。如果不能修复，可以拔下键盘 USB，单独使用软键盘，测试按键是否正常。如果软键盘正常，键盘配件又无法修复，可以通过 Powertoys 或 AutoHotkey 禁用这个按键。
 
-### 使用中，禁止系统自动更新重启
+### 禁止系统自动更新重启
 
-Win11 注册表中进入「计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU」，新建 DWORD（32 位）值，重命名为「NoAutoRebootWithLoggedOnUsers」，键值改为 1。
+Win11 中，在注册表中进入「计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU」，新建 DWORD（32 位）值，将其重命名为「NoAutoRebootWithLoggedOnUsers」，并将键值改为 1。
 
-Win10 没找到类似注册表，直接关闭自动更新。
+Win10 中，没有找到类似的注册表，可以直接关闭自动更新。
 
 ### WPS 没有宏
 
@@ -95,7 +95,7 @@ Win10 没找到类似注册表，直接关闭自动更新。
 
 Microsoft Store 安装的应用没有固定位置，一更新就会换位置，无法建立快捷方式。虽然这些应用能被设为开机启动，但经常启动不成功。
 
-右键 Microsoft Store 应用，将其固定在任务栏。通过 `Win+数字键` 的来启动应用。比如应用在任务栏的第 7 位，则使用热键 `Win+7`。
+解决方法是：右键 Microsoft Store 应用，将其固定在任务栏。之后可使用 `Win+数字键` 来启动应用。例如，若应用在任务栏的第 7 位，则使用热键 `Win+7`。
 
 ### 无法安装应用
 
