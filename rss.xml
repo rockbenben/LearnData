@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 09 Apr 2023 13:43:05 GMT</pubDate>
-    <lastBuildDate>Sun, 09 Apr 2023 13:43:05 GMT</lastBuildDate>
+    <pubDate>Mon, 10 Apr 2023 12:31:26 GMT</pubDate>
+    <lastBuildDate>Mon, 10 Apr 2023 12:31:26 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>头脑驿站</category>
@@ -29,7 +29,7 @@
 <li>每天最低完成 8 个番茄，之后可进入长休息区间，进行家务打扫、健身、娱乐。</li>
 <li>晚上 10 点睡觉，保证充足的睡眠时间。</li>
 </ol>
-<figure><img src="https://tc.seoipo.com/2023-04-07-17-19-27.png?imageMogr2/thumbnail/500x" alt="" tabindex="0" loading="lazy"><figcaption>图源：Storyset</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-04-07-17-19-27.png?imageMogr2/thumbnail/500x" alt="" tabindex="0" loading="lazy"><figcaption>图源：Storyset</figcaption></figure>
 <p>执行计划一个月后，我在早晨完成了以下事项：读完了 6 本书；推出开源项目 ChatGPT Shortcut，整合了 200 个 prompts 并将 ChatGPT 融入我的日常工作中；从零开始熟悉了 Docusaurus，对 10 个页面组件进行了魔改，并顺利将三个工作网站迁移到了 Docusaurus 上。而几年前，我使用国内一个商用模板花费整整一个月的时间才建成了公司官网。</p>
 <p><strong>5AM Club 给我的效率带来了显著提升</strong>。接下来，我将分享 5AM Club 的理论以及我的个人心得。</p>
 <h2> 5 点的奥秘</h2>
@@ -40,12 +40,12 @@
 <p>研究人员发现学生的平均睡眠时间是 6.5 小时。研究人员还发现，睡眠不足 6 小时的学生成绩明显下降，每减少一小时睡眠期末 GPA 分数降 0.07。研究人员称，睡眠不足的负面影响是难以消除的，它会持续存在，五到九周后睡眠不足可能会影响学生在课堂上的学习能力。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1">
 </a></blockquote><a class="footnote-anchor" id="footnote-ref1">
 <p>之前，我睡眠时间为凌晨一点到早上九点，总共有八个小时。然而，我的睡眠质量并不高，手环得分只有 75-85 分。后来，我改变了睡眠作息时间，每晚十点准时睡觉，睡眠时间减少到七个小时，而手环得分始终保持在 90 分以上。</p>
-<figure><img src="https://tc.seoipo.com/2023-03-31-11-23-57.png?imageMogr2/thumbnail/500x" alt="" tabindex="0" loading="lazy"><figcaption>睡眠时间对比</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-03-31-11-23-57.png?imageMogr2/thumbnail/500x" alt="" tabindex="0" loading="lazy"><figcaption>睡眠时间对比</figcaption></figure>
 </a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 为什么 5 点起？做什么？</h3>
 <p>虽然名字是 5AM Club，但我一般都早于 5 点起床，具体时间根据自身情况自由调节。有时候如果比较疲劳，我晚上 8 点就上床睡觉，早上 2、3 点醒来，然后开始进入当天的工作。偶尔一两次睡眠不足并不会对身体造成多大的影响，不用过于焦虑。</p>
 <p>早上 5 点到 8 点是我留给自己的<strong>完全属于自己的时间块</strong>，用来处理那些对自己来说重要且长期能产生重大影响的任务。我选择将它安排在早上 5 点是因为这时的精力最佳，也没有其他人的干扰，能让我在一天开始之前拥有完全属于自己的时间。相比之下，晚上的效率较低。</p>
 <p>当天早上要做的事要提前计划并做好准备，这样能够持续不断地、不受干扰地进行工作。最重要的是，要把精力集中在你负责的最重要的工作上。可以专注于个人项目，例如阅读、写作、考证和你特别想做的事情。早起时间不应该用于处理邮件和微信等日常性任务。这类任务虽然占用时间短，但却占用心力。</p>
-<figure><img src="https://tc.seoipo.com/2023-04-07-17-20-19.png?imageMogr2/thumbnail/500x" alt="" tabindex="0" loading="lazy"><figcaption>图源：Storyset</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-04-07-17-20-19.png?imageMogr2/thumbnail/500x" alt="" tabindex="0" loading="lazy"><figcaption>图源：Storyset</figcaption></figure>
 <p>最近 Facebook 进行了第二轮大裁员，扎克伯格表示：「自从我们去年裁员以来，一个令人惊讶的结果是许多事情进展得更快了。」员工减少了，项目反而进展更快了？他的解释是，裁员使公司取消了许多低优先级的项目，集中资源于最重要的事情上。不做日常任务的原因也类似于此，不要将自己的宝贵精力浪费在日常任务上。如果你在 5AM Club 的时间内处理日常性任务，那么早起也就没有什么必要了。此外，如果你已经有属于自己的整块时间，也没有必要特意早起。</p>
 <h2> 工作前的准备</h2>
 <h3> 大脑唤醒</h3>
@@ -66,7 +66,7 @@
 </ul>
 </a><h3><a class="footnote-anchor" id="footnote-ref2"></a> 打卡监督</h3>
 <p>朋友圈打卡是为了增加自我监督。这就跟自习直播和自我监控视频一样，都是为了增加自己行为的透明度，让外界了解自己的行动。此外，通过照片数量来统计打卡频次，可以方便进行事后总结，同时也能增加自身的成就感。我不喜欢打卡应用，通过应用来打卡是一件很累的事情，因为它们会不断提醒你的错过，这会给你带来压力。我之前买过 Habitity，但现在已经不用了。</p>
-<figure><img src="https://tc.seoipo.com/2023-03-31-16-15-42.jpg?imageMogr2/thumbnail/500x/format/webp" alt="" tabindex="0" loading="lazy"><figcaption>打卡照片，总被认为是同一张</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-03-31-16-15-42.jpg?imageMogr2/thumbnail/500x/format/webp" alt="" tabindex="0" loading="lazy"><figcaption>打卡照片，总被认为是同一张</figcaption></figure>
 <p>为了减轻负担，我通常只拍书房外街道的照片进行日常打卡，并且没有加上文字。由于每天都是类似的照片，经常会有人问我「你为什么总是发一张照片？」对此，我只能尽量改变拍摄角度，让它看起来不完全一样。此外，每隔一段时间，我会对最近的学习和工作成果进行阶段性总结，并在打卡中进行展示。</p>
 <p>如果你不喜欢发朋友圈，那么可以将照片仅用作自我记录，不要因为打卡而给自己增加负担。</p>
 <h2> 工作时间安排</h2>
@@ -80,7 +80,7 @@
 <p>高效的学习工作也会带来较大的精神消耗。就像 @Dsmileyi 曾问我的：「会不会因为起来的早并且已经工作了一段时间，导致白天工作的时候感到疲惫，降低效率？」与早晨相比，下午的精力会减少不少。因此，我将 <strong>90% 的工作时间放在早上</strong>。</p>
 <p>在过去，我工作时间超过 8 小时，从早上 9 点一直工作到晚上 9 点，但期间不断受到干扰，导致工作成果不多。现在，每天只有 4-6 小时的全力工作时间，但工作成果相当于之前三天的量。虽然下午效率降低了，但整体而言，这是值得的。</p>
 <p>值得一提的是，在新的作息时间中，休息和娱乐不再让我感到愧疚。到了下午，我会放松一下，可以做家务、锻炼或者娱乐，想做什么就做什么。而以前，如果我在白天工作时间内偷懒摸鱼，我会感到内疚，然后把这种负面情绪带到工作中，给自己的心理造成负担。</p>
-<figure><img src="https://tc.seoipo.com/2023-04-07-17-20-58.png?imageMogr2/thumbnail/500x" alt="" tabindex="0" loading="lazy"><figcaption>图源：Storyset</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-04-07-17-20-58.png?imageMogr2/thumbnail/500x" alt="" tabindex="0" loading="lazy"><figcaption>图源：Storyset</figcaption></figure>
 <h2> 晚上十点睡觉</h2>
 <p>如何在晚上十点入睡？这对于很多人来说是一个奢望，尤其是当你已经出现了失眠症状后，更加难以实现。一开始，为了能早睡，我得强迫自己在晚上八点上床，这样才能在晚上十点入睡。然而，绝大多数人都有着自己的工作，很难控制自己的上床时间。</p>
 <p>在执行 5AM Club 计划的过程中，我们无需过于强求精准的作息时间，也不要担心偶尔的早起失败。关键在于逐步养成这个习惯，从而提高生活质量和工作效率。如果你认为自己暂时做不到在晚上十点前入睡，那就将早上五点起床顺延到六点或七点，逐步调整你的生活习惯，直到养成早起的习惯。</p>
@@ -109,22 +109,22 @@
       <pubDate>Mon, 27 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>最近，关于 ChatGPT 的讨论越来越多，但大多数人仅仅将其视为一款聊天机器人，并从猎奇的角度去测试其人工智能的回答。然而，ChatGPT 不仅仅是一个猎奇的 AI 玩具，未来它将会成为必备生产工具。ChatGPT 之类的 AI 工具将用它巨大的语言知识库，为我们创造更多的价值。</p>
 <p>ChatGPT 的回复质量取决于提示词（即 Prompt）。这通常是用户提供的问题或文本，以激活模型生成回复。简单来说，prompt 就是用户想要询问的内容，作为输入送到 ChatGPT 中，ChatGPT 会尝试理解这个输入，然后输出合适的回答或响应。通过优化提示词，可以使 ChatGPT 生成更加准确、有用的回复。为了能让 ChatGPT 成为生产力工具，我花大量时间逐个研究提示词的规则和范例，如 <a href="https://platform.openai.com/examples" target="_blank" rel="noopener noreferrer">ChatGPT Prompt Examples</a>、<a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener noreferrer">Awesome ChatGPT Prompts</a>、<a href="https://learnprompting.org/" target="_blank" rel="noopener noreferrer">Learn Prompting</a> 等。我筛选出了 163 个 Prompts（提示词），仅记录它们的功能而非内容，这就让我的笔记超过了 5000 字。提示词目录也变得越来越长，即使将浏览器全屏，也无法完整显示。起初，我制作提示词目录是为了方便自己，但每次需要查找提示词时，我不得不依靠记忆。这些笔记反而成为了负担，拖累 ChatGPT 的工作效率。</p>
-<p>为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需<strong>打开 <a href="https://ai.newzone.top" target="_blank" rel="noopener noreferrer">ChatGPT Shortcut</a>，复制提示词，稍加修改后发送给 ChatGPT</strong>，就能获得指定输出，让你的生产力加倍！</p>
+<p>为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需<strong>打开 <a href="https://www.aishort.top" target="_blank" rel="noopener noreferrer">ChatGPT Shortcut</a>，复制提示词，稍加修改后发送给 ChatGPT</strong>，就能获得指定输出，让你的生产力加倍！</p>
 <h2> 使用说明</h2>
 <p>ChatGPT Shortcut 页面默认显示全部的提示词，页面分为标签区、搜索区和提示词展示区。</p>
-<figure><img src="https://tc.seoipo.com/2023-02-28-10-30-20.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-02-28-10-30-20.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 标签筛选</h3>
 <p>标签区按提示词的领域和功能进行划分，可根据不同场景和需求进行选择。与标签区右上方的「标签筛选规则切换」按钮配合使用，可进行多标签筛选。默认状态为 OR，即选中标签下的所有提示词。切换到 AND 后，将筛选出具备已选中的多个标签的提示词。</p>
-<figure><img src="https://tc.seoipo.com/2023-02-28-10-31-01.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-02-28-10-31-01.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 关键词搜索</h3>
 <p>关键词搜索范围包括提示词的标题、简介、内容和中文翻译。输入关键词后，提示词展示区将立即展示筛选出的内容。如果已选中标签，则关键词搜索仅限于标签筛选范围内。对于 PC 端，搜索框内容变化后，新的搜索结果会在 800 毫秒后显示。移动端则为即时刷新。</p>
-<figure><img src="https://tc.seoipo.com/2023-02-28-10-31-10.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-02-28-10-31-10.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 展示区复制</h3>
 <p>通过标签筛选和关键词搜索，点击卡片右上方的「复制」按钮即可获取提示词，将其粘贴到 ChatGPT 中，参考中文提示调整需求文本，即可得到指定领域的回复。如果提示词中的中文备注没有解释清楚，可以点击提示词的绿色标题查看来源网页。</p>
-<figure><img src="https://tc.seoipo.com/2023-02-28-10-31-19.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-02-28-10-31-19.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 语言切换</h3>
 <p>默认情况下，提示词内容会显示为英文。如果你想查看中文释义，可以点击提示词内容将其切换到中文，再次点击即可切回英文。请注意，语言切换只在文字上点击有效，点击空白区域无效。中文释义为机器翻译，仅供参考。</p>
-<figure><img src="https://tc.seoipo.com/chatgptshortcut_encn.gif" alt="中英文切换" tabindex="0" loading="lazy"><figcaption>中英文切换</figcaption></figure>
+<figure><img src="https://img.newzone.top/chatgptshortcut_encn.gif" alt="中英文切换" tabindex="0" loading="lazy"><figcaption>中英文切换</figcaption></figure>
 <p>如果想让提示词默认显示为中文，你可以点击标签区右上方的 <code>CN</code> 按钮。需要注意的是，即使切换到中文翻译，复制按钮也仅针对英文提示词复制。下方会有解释原因。</p>
 <h2> 常见问题</h2>
 <h3> 为什么提示词用英文？</h3>
@@ -145,7 +145,7 @@
 <p>目前，ChatGPT 已经有 1 亿用户，但这仅仅是 80 亿人口中很小的一部分。无论你身处哪个行业，你使用 ChatGPT 都代表着你在行业前沿。尽管你可能认为这看起来似乎与你的行业无关，但使用它就代表着你比别人更早地迈出了这一步，可以探索更多的可能性。</p>
 <p>我并不期待 ChatGPT Shortcut 成为完美的工具，而是希望它能为大家推开使用 AI 的一道门缝。我希望让更多人了解和使用 ChatGPT，摆脱对其聊天机器人的刻板印象，以提高工作效率。因为我相信，在未来，ChatGPT 和其他 AI 工具将扮演越来越重要的角色，成为我们生产力的强大工具。</p>
 ]]></content:encoded>
-      <enclosure url="https://tc.seoipo.com/2023-02-28-10-30-20.png?imageMogr2/format/webp" type="image/"/>
+      <enclosure url="https://img.newzone.top/2023-02-28-10-30-20.png?imageMogr2/format/webp" type="image/"/>
     </item>
     <item>
       <title>我用白板墙贴，记录日常生活</title>
@@ -159,12 +159,12 @@
 <p>摆脱数字性遗忘：白板墙贴的生活/工作清单，适用于居家办公的 GTD 补充记录方案。</p>
 </blockquote>
 <p>在数字化和网络化的时代，日常记录从纸质转移到电子存储，它带来了无限的容量和随时随地使用的便利。然而，这也带来了新的问题：如果没有打开应用程序，记录就无法提醒，容易忘记重要事情。即使设置了定时提醒，提醒时间也不一定是最佳处理时间，因此可能会延迟或取消，从而导致遗忘。为了解决这个问题，我使用白板墙贴来记录生活/工作清单。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-27-05-13-50.png" alt="Website Creator Cartoon" tabindex="0" loading="lazy"><figcaption>源图：Storyset</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-27-05-13-50.png" alt="Website Creator Cartoon" tabindex="0" loading="lazy"><figcaption>源图：Storyset</figcaption></figure>
 <h2> 为什么是白板？</h2>
 <p>在中学时，我没有电脑和手机，就曾把最初的 GTD 记录在玻璃桌面上，若记录失效或不再需要，只需擦掉即可。白板墙贴与当时的玻璃桌面效果类似，只是换到墙上了。我在书房和走廊各贴了一块白板，书房的墙贴用来提醒当天要做什么，走廊的墙贴用来提醒日常生活仪式。无论走到哪里，都不会错过重要提醒。特别是在不确定下一步该做什么时，我只要转身，就能看到工作清单，非常直观和便捷。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-26-12-28-36.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption>透明/白色静电墙贴</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-26-12-28-36.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption>透明/白色静电墙贴</figcaption></figure>
 <p>与电子记录相比，白板没有软件框架限制。它可以用于绘制思维导图，帮助人们更清晰地组织思路；也可以用多种颜色的记号笔随意书写和涂鸦，以原始的方式表达自己的想法。因此，白板是记录、展示信息和思考的极佳工具。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-25-19-21-12.png?imageMogr2/format/webp" alt="Scrum board" tabindex="0" loading="lazy"><figcaption>Scrum board</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-25-19-21-12.png?imageMogr2/format/webp" alt="Scrum board" tabindex="0" loading="lazy"><figcaption>Scrum board</figcaption></figure>
 <h2> 白板类型</h2>
 <p>白板墙贴源自 @chen 在群里分享的一个很棒的主意：使用静电墙贴作为白板，可以随时记录。在尝试的过程中，我更换了三种材质：透明静电墙贴、白色静电墙贴和 PVC 墙贴（吸磁软白板贴）。</p>
 <table>
@@ -195,15 +195,15 @@
 </tbody></table>
 <h2> 我的方案</h2>
 <p>在我的方案中，记录的想法分为日常仪式和生活/工作两类。日常仪式记录在走廊白板上，生活/工作记录则输出在书房白板上。下面我将简要介绍白板内容和思路。</p>
-<figure><img src="https://tc.seoipo.com/2023-02-03-20-58-05.png" alt="" tabindex="0" loading="lazy"><figcaption>记录输入流</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-02-03-20-58-05.png" alt="" tabindex="0" loading="lazy"><figcaption>记录输入流</figcaption></figure>
 <h3> 书房白板</h3>
 <p>我最常待的地方是书房，所以把日常记录都放在书房白板上，用来记录当日清单、锻炼进度、思维导图、项目跟进和临时安排。书房白板使用率较高，因此建议使用易写易擦的 PVC 墙贴（吸磁软白板贴）。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-23-20-58-00.png" alt="" tabindex="0" loading="lazy"><figcaption>书房白板</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-23-20-58-00.png" alt="" tabindex="0" loading="lazy"><figcaption>书房白板</figcaption></figure>
 <p>在白板上半部分，我放置了经常查看的目标，这也是视线的第一触达点；而下半部分则用于日常书写和记录，以便转身就能记录即时想法。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-28-10-42-47.png" alt="" tabindex="0" loading="lazy"><figcaption>PVC 墙贴（非静电）</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-28-10-42-47.png" alt="" tabindex="0" loading="lazy"><figcaption>PVC 墙贴（非静电）</figcaption></figure>
 <h3> 走廊白板</h3>
 <p>走廊白板是对书房白板的补充，可以在书房之外的区域提醒生活仪式等内容，例如：每天早上喝杯热水自测体脂，晚上进行当日回顾和睡前准备。走廊白板擦写频率较低，可以使用便宜的静电墙贴。如果需要修改走廊白板的提示，可以用纸巾沾水擦拭。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-23-20-53-36.png" alt="" tabindex="0" loading="lazy"><figcaption>走廊白板</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-23-20-53-36.png" alt="" tabindex="0" loading="lazy"><figcaption>走廊白板</figcaption></figure>
 <h3> 电子记录</h3>
 <p>使用白板墙贴记录 GTD 并不意味着放弃数字化记录。相反，我可以将白板墙贴与电子记录结合起来，使用电子记录来存储详细信息，而使用白板墙贴来提醒重要事项。在「当日检视」的环节中，我会同步书房白板和电子 GTD，以确保两者的内容保持一致。这样，我就可以在保持良好的效率和组织性的同时，还可以提高记录的可靠性和可追溯性。</p>
 <h2> 更多</h2>
@@ -272,49 +272,49 @@
       <content:encoded><![CDATA[<p><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">Open Broadcaster Software</a>（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件都是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。本文将从基础开始，为新手介绍 OBS 的界面、设置和直播使用方法。</p>
 <h2> 主界面</h2>
 <p>OBS 界面看起来有些复杂，但可以分为菜单栏、预览区、主按钮区和运行状态四个区块。日常使用中，我们只需要接触主按钮区，它包括场景、来源、混音器、转场特效和控制按钮。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-05-20-47-16.png" alt="" tabindex="0" loading="lazy"><figcaption>OBS 主界面</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-05-20-47-16.png" alt="" tabindex="0" loading="lazy"><figcaption>OBS 主界面</figcaption></figure>
 <h3> 场景</h3>
 <p>场景（Scenes）是指直播中不同的场面。不同的场景可以用于不同的领域或场合，例如自习室场景、街拍场景、个人访问、卖货直播。</p>
 <p>场景有四个按钮，从左到右依次为：添加场景，删除场景，向上移动场景，向下移动场景。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-05-21-16-34.png" alt="" tabindex="0" loading="lazy"><figcaption>场景按钮</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-05-21-16-34.png" alt="" tabindex="0" loading="lazy"><figcaption>场景按钮</figcaption></figure>
 <h3> 来源</h3>
 <p>来源（Source）是指场景中的素材，比如摄像头画面、图像、音频等。来源区有 7 个按钮，上方两个为源属性和滤镜，下方 5 个按钮依次为：添加来源，删除来源，源属性，向上移动源，向下移动源。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-05-22-47-14.png" alt="" tabindex="0" loading="lazy"><figcaption>来源按钮</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-05-22-47-14.png" alt="" tabindex="0" loading="lazy"><figcaption>来源按钮</figcaption></figure>
 <h3> 混音器</h3>
 <p>混音器（Audio Mixer）是直播的音频控制器。点击混音器左下角的齿轮按钮，进入「高级音频属性」，可管理所有的音频设备。</p>
 <p>混音器设置中，「音频监听」最为重要。默认为「关闭监听」，指音频仅对直播间观众播放，主播听不到。「仅监听 (输出静音)」表示观众听不到，但主播能听到，观众可通过主播话筒的收音听到声音。「监听并输出」表示主播和观众都能听到。「监听并输出」模式中，建议主播使用耳麦，而不是话筒，否则观众容易听不清主播说话的声音，话筒声音会被输出音频盖住。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-06-01-22-30.png" alt="" tabindex="0" loading="lazy"><figcaption>直播高级音频属性</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-06-01-22-30.png" alt="" tabindex="0" loading="lazy"><figcaption>直播高级音频属性</figcaption></figure>
 <h3> 转场特效</h3>
 <p>转场特效（Scene Transitions）指的是在两个场景或素材之间，采用渐变、移动、滑入滑出等技巧，实现场景或情节之间平滑过渡的效果。</p>
 <h3> 控制按钮</h3>
 <p>控制按钮（Controls）区域集成了 OBS 的核心功能，按钮分别为「开始直播」「开始录制」「启动虚拟摄像机」「工作室模式」。</p>
 <p>「启动虚拟摄像机」是将 OBS 场景作为摄像头画面对外输出，适合将画面输出到不支持 OBS 推流的平台或软件。例如，抖音直播要求粉丝在一万以上才能使用 OBS 推流，而启用虚拟摄像头后，将直播摄像头设为「OBS-Camera」即可达到类似推流效果。</p>
 <p>「工作室模式」下，显示区域会分为两块：左侧为预览区，右侧为输出区。点击中间按钮「转场特效」，即可将左侧预览区输出到直播画面。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-06-01-38-21.png" alt="" tabindex="0" loading="lazy"><figcaption>工作室模式</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-06-01-38-21.png" alt="" tabindex="0" loading="lazy"><figcaption>工作室模式</figcaption></figure>
 <h2> 设置</h2>
 <p>在使用 OBS 直播前，请先点击右上角菜单栏中的「文件」&gt;「设置」，调整 OBS 的设置。</p>
 <h3> 直播</h3>
 <p>点击「设置」&gt;「直播」，将「服务」调整为自定义，服务器和推流码则按平台要求输入。</p>
-<figure><img src="https://tc.seoipo.com/2022-06-30-14-33-34.png" alt="" tabindex="0" loading="lazy"><figcaption>推流服务器设置</figcaption></figure>
+<figure><img src="https://img.newzone.top/2022-06-30-14-33-34.png" alt="" tabindex="0" loading="lazy"><figcaption>推流服务器设置</figcaption></figure>
 <h3> 输出</h3>
 <p>点击「设置」&gt;「输出」，将「输出模式」设为高级，其他设置参考下方样例。</p>
 <ul>
 <li>「直播设置」&gt;「编码器」中，如果你的显卡配置不错，尽量选硬件编码，如 <code>NVIDIA NVENC H.264</code>。</li>
 <li>「编码器设置」&gt;「比特率」用来设置直播的清晰度，推荐 4000-6000 Kbps。注意：直播并非越清晰越好，它对网络稳定性要求较高，过高的清晰度可能导致直播卡顿。我的自习室直播间只有 2500 Kbps。</li>
 </ul>
-<figure><img src="https://tc.seoipo.com/2023-01-05-20-06-39.png" alt="" tabindex="0" loading="lazy"><figcaption>直播输出设置</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-05-20-06-39.png" alt="" tabindex="0" loading="lazy"><figcaption>直播输出设置</figcaption></figure>
 <h3> 音频</h3>
 <p>点击「设置」&gt;「音频」&gt;「通用」，将声道设为单声道。除非你是歌唱主播，否则无需使用立体声。</p>
 <h3> 视频</h3>
 <p>点击「设置」&gt;「视频」，按需设置直播分辨率，通常为 <code>1920x1080</code> 或 <code>1280x720</code>。如果你是做电商直播，需要进行<strong>竖屏直播</strong>，就将分辨率反过来设置，比如 <code>1080x1920</code> 或 <code>720x1280</code>。「输出（画布）分辨率」与「基础（缩放）分辨率」建议设为相同数值，避免出现缩放问题。</p>
 <p>「常用帧率」在日常直播中只需要 30，游戏直播建议调整到 60。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-05-20-22-29.png" alt="" tabindex="0" loading="lazy"><figcaption>直播分辨率设置</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-05-20-22-29.png" alt="" tabindex="0" loading="lazy"><figcaption>直播分辨率设置</figcaption></figure>
 <h3> 高级</h3>
 <p>点击「设置」&gt;「高级」，将「进程优先级」设为高，以降低电脑卡顿的概率。然后，启用「直播延迟」和「自动重连」功能，以避免直播事故的发生。「直播延迟」启用后，观众看到的直播画面会比实时要慢，延迟时间一般为 3~20 秒。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-05-21-09-13.png" alt="" tabindex="0" loading="lazy"><figcaption>OBS 高级设置</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-05-21-09-13.png" alt="" tabindex="0" loading="lazy"><figcaption>OBS 高级设置</figcaption></figure>
 <h2> 直播来源</h2>
 <p>了解 OBS 界面和设置后，我们回到主按钮区的「来源」，深入了解来源种类和滤镜。直播来源种类繁多，可以分为四类：静态来源、音频来源、视频来源和组合来源。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-06-02-10-05.png" alt="" tabindex="0" loading="lazy"><figcaption>直播来源</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-06-02-10-05.png" alt="" tabindex="0" loading="lazy"><figcaption>直播来源</figcaption></figure>
 <h3> 静态来源</h3>
 <ul>
 <li>文本（GDI+）：添加文字，并可设置背景和移动效果。</li>
@@ -355,14 +355,14 @@
 </ul>
 <h3> 色度键（抠图）</h3>
 <p>「色度键」属于效果滤镜，能将指定颜色变为透明，多用于绿幕实时抠图，可以在直播时把绿幕替换为其他场景。</p>
-<figure><img src="https://tc.seoipo.com/20210328235013.gif" alt="色度键滤镜一键抠图" tabindex="0" loading="lazy"><figcaption>色度键滤镜一键抠图</figcaption></figure>
+<figure><img src="https://img.newzone.top/20210328235013.gif?imageMogr2/format/webp" alt="色度键滤镜一键抠图" tabindex="0" loading="lazy"><figcaption>色度键滤镜一键抠图</figcaption></figure>
 <h3> 模糊</h3>
 <p>「模糊」属于效果滤镜，可将指定区域模糊化以维护隐私。推荐设置：类型设为「Dual Filtering（双重过滤）」，大小为 4，应用蒙版后可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求更低。要使用模糊滤镜，需要安装插件 <a href="https://github.com/Xaymar/obs-StreamFX/releases" target="_blank" rel="noopener noreferrer">StreamFX</a>。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-08-06-49-05.png" alt="" tabindex="0" loading="lazy"><figcaption>右侧为模糊效果</figcaption></figure>
-<figure><img src="https://tc.seoipo.com/2023-01-06-02-51-10.png" alt="" tabindex="0" loading="lazy"><figcaption>模糊滤镜设置</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-08-06-49-05.png" alt="" tabindex="0" loading="lazy"><figcaption>右侧为模糊效果</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-06-02-51-10.png" alt="" tabindex="0" loading="lazy"><figcaption>模糊滤镜设置</figcaption></figure>
 <h3> 色彩校正</h3>
 <p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Color-Grade" target="_blank" rel="noopener noreferrer">色彩校正</a>（Color Grading）是使用伽玛、对比度、亮度、饱和度、色调偏移、不透明度、颜色叠加、添加颜色来改变或校正最终画面的颜色和亮度的过程。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-08-07-01-17.png" alt="" tabindex="0" loading="lazy"><figcaption>色彩校正</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-08-07-01-17.png" alt="" tabindex="0" loading="lazy"><figcaption>色彩校正</figcaption></figure>
 <h3> 应用 LUT</h3>
 <p>「应用 LUT」属于效果滤镜。它使用 LUT 对画面进行色彩调整，相当于手机修图用的风格滤镜，能够大大提升画面效果。初期可以使用我的 <a href="https://wwva.lanzoue.com/iEyOs0k8kj3g" target="_blank" rel="noopener noreferrer">LUT 设置</a>，「路径」指向解压后的 png 文件。</p>
 <p>自制 LUT 文件参照下列步骤：</p>
@@ -392,80 +392,80 @@
 <h2> 安装 StreamFX</h2>
 <p>在 <a href="https://github.com/Xaymar/obs-StreamFX/releases" target="_blank" rel="noopener noreferrer">StreamFX 发布页</a>上按平台选择安装包。StreamFX for OBS 29 处于测试阶段，在升级此插件前，请按照<a href="https://github.com/Xaymar/obs-StreamFX/wiki/Uninstallation" target="_blank" rel="noopener noreferrer">卸载教程</a>执行旧版清理。</p>
 <p>安装成功后，StreamFX 会出现在 OBS 上方的菜单栏上。下文中，我将使用不同滤镜处理样图，并提供对比图。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-23-27-34.png" alt="" tabindex="0" loading="lazy"><figcaption>样例原图</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-23-27-34.png" alt="" tabindex="0" loading="lazy"><figcaption>样例原图</figcaption></figure>
 <h2> 来源镜像</h2>
 <p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Source-Mirror" target="_blank" rel="noopener noreferrer">来源镜像</a>（Source Mirror）是一种来源，而不是滤镜。它可以克隆任何源或场景，并将其应用于当前场景。对来源镜像叠加滤镜和任意效果，都不会对原始来源造成影响。</p>
 <h2> 3D 转换</h2>
 <p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-3D-Transform" target="_blank" rel="noopener noreferrer">3D 转换</a>（3D Transform）可以将 2D 图片的坐标系转换为三维，从而可以自由旋转、移动和缩放，形成类似星球大战中的字幕特效。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-23-27-01.png" alt="" tabindex="0" loading="lazy"><figcaption>3D 转换</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-23-27-01.png" alt="" tabindex="0" loading="lazy"><figcaption>3D 转换</figcaption></figure>
 <h2> 模糊</h2>
 <p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur" target="_blank" rel="noopener noreferrer">模糊</a>（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Liner 和 Dual-Filtering。一般来说，建议将类型设置为「Dual Filtering（双重过滤）」，大小为 4，应用蒙版后可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求也更低。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-08-06-49-05.png" alt="" tabindex="0" loading="lazy"><figcaption>右侧为模糊效果</figcaption></figure>
-<figure><img src="https://tc.seoipo.com/2023-01-06-02-51-10.png" alt="" tabindex="0" loading="lazy"><figcaption>模糊滤镜设置</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-08-06-49-05.png" alt="" tabindex="0" loading="lazy"><figcaption>右侧为模糊效果</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-06-02-51-10.png" alt="" tabindex="0" loading="lazy"><figcaption>模糊滤镜设置</figcaption></figure>
 <h2> 动态蒙版</h2>
 <p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Dynamic-Mask" target="_blank" rel="noopener noreferrer">动态蒙版</a>（Dynamic Mask）允许叠加任意来源或场景，并使用红色、绿色、蓝色和 alpha 通道建立画面蒙版。下图展示了使用红色通道叠加雨滴来源的效果。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-08-07-05-42.png" alt="" tabindex="0" loading="lazy"><figcaption>动态蒙版</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-08-07-05-42.png" alt="" tabindex="0" loading="lazy"><figcaption>动态蒙版</figcaption></figure>
 <h2> SDF 特效</h2>
 <p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-SDF-Effects" target="_blank" rel="noopener noreferrer">SDF 特效</a>（Shader Signed Distance Field Effects）仅对拥有透明图层的画面有效，比如被移除背景后的摄像头画面。SDF 特效会对外观轮廓进行发光处理，并占用大量显存性能。![<a href="https://jishuin.proginn.com/p/763bfbd5a086" target="_blank" rel="noopener noreferrer">什么是 SDF？</a>] ![<a href="https://github.com/Xaymar/obs-StreamFX/issues/512" target="_blank" rel="noopener noreferrer">"SDF Effects" filter is undocumented</a>]</p>
-<figure><img src="https://tc.seoipo.com/2023-01-09-18-56-14.webp" alt="" tabindex="0" loading="lazy"><figcaption>SDF 特效-外发光+变形</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-09-18-56-14.webp" alt="" tabindex="0" loading="lazy"><figcaption>SDF 特效-外发光+变形</figcaption></figure>
 <h2> 着色器</h2>
 <p>着色器滤镜位于 <code>%ProgramFiles%/obs-studio/data/obs-plugins/StreamFX/examples/shaders/filter</code>，后缀均为 <code>.effect</code>。切换着色器文件后，需点击「刷新选项和参数」。</p>
 <h3> 色彩滤镜</h3>
 <ul>
 <li>
 <p>colorize：对画面重新着色，效果与色彩校正滤镜相似。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-23-11-16.png" alt="" tabindex="0" loading="lazy"><figcaption>colorize</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-23-11-16.png" alt="" tabindex="0" loading="lazy"><figcaption>colorize</figcaption></figure>
 </li>
 <li>
 <p>posterize：向上下周围放入像素值。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-46-26.png" alt="" tabindex="0" loading="lazy"><figcaption>posterize</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-46-26.png" alt="" tabindex="0" loading="lazy"><figcaption>posterize</figcaption></figure>
 </li>
 <li>
 <p>smaa：将画面的轮廓线条化。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-03-18.png" alt="" tabindex="0" loading="lazy"><figcaption>smaa</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-03-18.png" alt="" tabindex="0" loading="lazy"><figcaption>smaa</figcaption></figure>
 </li>
 </ul>
 <h3> 位移变换</h3>
 <ul>
 <li>
 <p>bulge_pinch：挤压滤镜，使图像的中心产生凸起或凹下的效果，可生成循环凸凹的动画。</p>
-<p><img src="https://tc.seoipo.com/2023-01-07-23-14-10.png" alt="" title="bulge_pinch 凸起效果" loading="lazy">
-<img src="https://tc.seoipo.com/2023-01-07-23-14-47.png" alt="" title="bulge_pinch 凹下的效果" loading="lazy"></p>
+<p><img src="https://img.newzone.top/2023-01-07-23-14-10.png" alt="" title="bulge_pinch 凸起效果" loading="lazy">
+<img src="https://img.newzone.top/2023-01-07-23-14-47.png" alt="" title="bulge_pinch 凹下的效果" loading="lazy"></p>
 </li>
 <li>
 <p>displace：置换滤镜，可以产生弯曲，碎裂的图像效果。置换滤镜比较特殊的是设置完毕后，还需要选择一个图像文件作为位移图，滤镜根据位移图上的颜色值移动图像像素。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-23-02-59.png" alt="" tabindex="0" loading="lazy"><figcaption>displace</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-23-02-59.png" alt="" tabindex="0" loading="lazy"><figcaption>displace</figcaption></figure>
 </li>
 <li>
 <p>drunk：画面随机晃动</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-57-18.gif" alt="" tabindex="0" loading="lazy"><figcaption>drunk</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-57-18.gif?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption>drunk</figcaption></figure>
 </li>
 <li>
 <p>swirl：漩涡打旋效果，可调整旋涡位置和大小，并可呈现漩涡的正反转动态效果。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-06-45.png" alt="" tabindex="0" loading="lazy"><figcaption>swirl</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-06-45.png" alt="" tabindex="0" loading="lazy"><figcaption>swirl</figcaption></figure>
 </li>
 <li>
 <p>wave：波浪滤镜是通过坐标变换来模拟水波效果，使图像呈现出水波的扭曲特效。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-12-23.png" alt="" tabindex="0" loading="lazy"><figcaption>wave</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-12-23.png" alt="" tabindex="0" loading="lazy"><figcaption>wave</figcaption></figure>
 </li>
 <li>
 <p>zigzag：使图像产生同心圆状的波纹效果。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-30-25.png" alt="" tabindex="0" loading="lazy"><figcaption>zigzag</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-30-25.png" alt="" tabindex="0" loading="lazy"><figcaption>zigzag</figcaption></figure>
 </li>
 </ul>
 <h3> 画面遮盖</h3>
 <ul>
 <li>
 <p>pixelation：像素化滤镜，可选择滤镜范围。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-48-41.png" alt="" tabindex="0" loading="lazy"><figcaption>pixelation</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-48-41.png" alt="" tabindex="0" loading="lazy"><figcaption>pixelation</figcaption></figure>
 </li>
 <li>
 <p>hexagonize：用六角形状元素重构画面，可调节蜂窝元素的大小。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-50-21.png" alt="" tabindex="0" loading="lazy"><figcaption>hexagonize</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-50-21.png" alt="" tabindex="0" loading="lazy"><figcaption>hexagonize</figcaption></figure>
 </li>
 <li>
 <p>semiline：百叶窗栅格形滤镜，让画面像被一个关闭中的百叶窗遮盖。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-32-17.png" alt="" tabindex="0" loading="lazy"><figcaption>semiline</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-32-17.png" alt="" tabindex="0" loading="lazy"><figcaption>semiline</figcaption></figure>
 </li>
 <li>
 <p>blur-gaussian：模糊滤镜效果（高斯），对硬件配置要求高。</p>
@@ -475,23 +475,23 @@
 <ul>
 <li>
 <p>vignette：晕影/虚光照，用以增强镜头感，突出拍摄主体，营造画面的意境氛围。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-10-30.png" alt="" tabindex="0" loading="lazy"><figcaption>vignette</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-10-30.png" alt="" tabindex="0" loading="lazy"><figcaption>vignette</figcaption></figure>
 </li>
 <li>
 <p>rounded-rect：圆角矩形渲染</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-43-07.png" alt="" tabindex="0" loading="lazy"><figcaption>rounded-rect</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-43-07.png" alt="" tabindex="0" loading="lazy"><figcaption>rounded-rect</figcaption></figure>
 </li>
 <li>
 <p>crt-curvature：将画面放置于 CRT 电视中，可调整画面曲率和四周的光晕颜色。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-23-09-05.png" alt="" tabindex="0" loading="lazy"><figcaption>crt-curvature</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-23-09-05.png" alt="" tabindex="0" loading="lazy"><figcaption>crt-curvature</figcaption></figure>
 </li>
 <li>
 <p>crt-scanlines：仿 CRT 扫描线效果。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-23-06-17.gif" alt="" tabindex="0" loading="lazy"><figcaption>crt-scanlines</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-23-06-17.gif?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption>crt-scanlines</figcaption></figure>
 </li>
 <li>
 <p>repeat：将画面复制排列，例图是 3x3 复制画面。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-22-44-59.png" alt="" tabindex="0" loading="lazy"><figcaption>repeat</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-22-44-59.png" alt="" tabindex="0" loading="lazy"><figcaption>repeat</figcaption></figure>
 </li>
 <li>
 <p>fxaa：快速近似抗锯齿，是一种「比较廉价」的抗锯齿技术，多用于游戏直播/录制，适用于性能不高的电脑配置。</p>
@@ -511,7 +511,7 @@
 </li>
 <li>
 <p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Virtual-Greenscreen" target="_blank" rel="noopener noreferrer">英伟达背景移除</a>（Virtual Greenscreen）：无需绿幕也能帮你移除人像背景，移除效果略逊色于 NVIDIA Broadcast。样图是用的是漫画，如果是真人画面，移除效果会好很多。</p>
-<figure><img src="https://tc.seoipo.com/2023-01-07-23-19-50.png" alt="" tabindex="0" loading="lazy"><figcaption>人像背景移除</figcaption></figure>
+<figure><img src="https://img.newzone.top/2023-01-07-23-19-50.png" alt="" tabindex="0" loading="lazy"><figcaption>人像背景移除</figcaption></figure>
 </li>
 </ul>
 ]]></content:encoded>
@@ -592,17 +592,17 @@
 <p>如果不想录脸直播，可以配合软件使用虚拟形象直播。此类换脸软件会占用较高的 CPU，需要使用三年内的主流配置。</p>
 <h3> Snap Camera</h3>
 <p><a href="https://snapcamera.snapchat.com/" target="_blank" rel="noopener noreferrer">Snap Camera</a> 是 SnapChat 的免费增强现实应用。它可以帮助你在电脑直播/录屏时实现挡脸头套、美化滤镜等特效。如果你熟悉 3D 建模，可以使用 Lens Studio 定制属于你自己的变脸特效。但需要注意的是，当你喝水、低头或脸部被遮挡时，脸部特效会失效。</p>
-<figure><img src="https://tc.seoipo.com/SnapCamera.gif" alt="Snap Camera 效果图" tabindex="0" loading="lazy"><figcaption>Snap Camera 效果图</figcaption></figure>
+<figure><img src="https://img.newzone.top/SnapCamera.gif?imageMogr2/format/webp" alt="Snap Camera 效果图" tabindex="0" loading="lazy"><figcaption>Snap Camera 效果图</figcaption></figure>
 <p>如果你无法使用 Snap Camera，可以尝试 FaceRig 和 PrprLive。</p>
 <h3> FaceRig</h3>
 <p><a href="https://store.steampowered.com/app/274920/FaceRig/" target="_blank" rel="noopener noreferrer">FaceRig</a>（Steam 已停售）可以通过对五官的动作捕捉，让卡通脸的表情进行同步变化，但不能对头部以下的部分进行捕捉和同步。使用时，需要打开 FaceRig 中的「切换广播」，否则 OBS 窗口会显示为黑屏。</p>
-<figure><img src="https://tc.seoipo.com/20210329092154.gif" alt="FaceRig 演示图" tabindex="0" loading="lazy"><figcaption>FaceRig 演示图</figcaption></figure>
+<figure><img src="https://img.newzone.top/20210329092154.gif?imageMogr2/format/webp" alt="FaceRig 演示图" tabindex="0" loading="lazy"><figcaption>FaceRig 演示图</figcaption></figure>
 <p>注意：百度搜索 FaceRig 的首个结果是<strong>虚假官网</strong>，价格高且无保障，不要在上面进行购买。</p>
 <h3> PrprLive</h3>
 <p><a href="https://store.steampowered.com/app/1279610/PrprLive/" target="_blank" rel="noopener noreferrer">PrprLive</a> 是国内的变脸软件，基础版免费，同样在 Steam 销售，付费前先试试基础版。</p>
 <h2> 动态素材</h2>
 <p>为了丰富直播场景，可以使用带绿幕的视频来添加动态特效，或者借助类虚拟主播技术来实现交互。例如 <a href="https://d.appinn.com/bongo-cat-mver/" target="_blank" rel="noopener noreferrer">Bongo Cat Mver</a>，它能实时同步键盘与鼠标状态，增加直播趣味性。如果你使用的是 Bongo Cat 全键盘同步模型，建议打乱映射规则，以防止隐私泄露。</p>
-<figure><img src="https://tc.seoipo.com/2022-06-30-08-29-40.png" alt="直播间的猫咪" tabindex="0" loading="lazy"><figcaption>直播间的猫咪</figcaption></figure>
+<figure><img src="https://img.newzone.top/2022-06-30-08-29-40.png" alt="直播间的猫咪" tabindex="0" loading="lazy"><figcaption>直播间的猫咪</figcaption></figure>
 <h2> 摄像头多开</h2>
 <p>摄像头默认只能被一个应用调用。借助 <a href="https://splitcam.com/" target="_blank" rel="noopener noreferrer">SplitCam</a>，你能在摄像头画面上叠加元素，使用镜像、高亮滤镜微调画面，还能让摄像头画面同步给多个应用。</p>
 <p>例如，摄像头可以同时用于 OBS 直播和 Capture 录屏，在不同用途上可以叠加不同滤镜和特效，呈现出不同的画面。</p>
@@ -633,7 +633,7 @@
 <ol>
 <li>
 <p>下载<a href="https://market.m.taobao.com/app/mtb/live-portal/download/index.html" target="_blank" rel="noopener noreferrer">淘宝直播客户端</a>，打开后点击「我要开播」，进入直播间界面。</p>
-<figure><img src="https://tc.seoipo.com/2022-06-29-22-23-26.png" alt="" tabindex="0" loading="lazy"><figcaption>淘宝直播设置</figcaption></figure>
+<figure><img src="https://img.newzone.top/2022-06-29-22-23-26.png" alt="" tabindex="0" loading="lazy"><figcaption>淘宝直播设置</figcaption></figure>
 </li>
 <li>
 <p>在左侧点击「添加元素」&gt;「摄像头」，选择「OBS-Camera」，即可同步 OBS 直播画面。淘宝直播客户端也是基于 OBS，但不支持推流直播，只能通过虚拟摄像头同步画面。</p>
@@ -647,7 +647,7 @@
 </li>
 <li>
 <p>在左侧点击「添加元素」&gt;「采集」，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道。</p>
-<figure><img src="https://tc.seoipo.com/2022-06-29-23-59-02.png" alt="" tabindex="0" loading="lazy"><figcaption>抖音直播设置</figcaption></figure>
+<figure><img src="https://img.newzone.top/2022-06-29-23-59-02.png" alt="" tabindex="0" loading="lazy"><figcaption>抖音直播设置</figcaption></figure>
 </li>
 </ol>
 <p>以上为抖音新手的电脑直播步骤，如果你的抖音粉丝在一万以上，可以使用 <a href="http://streamingtool.douyin.com/docs/guide/96319/" target="_blank" rel="noopener noreferrer">OBS 模式推流</a>。</p>
