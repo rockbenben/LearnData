@@ -80,7 +80,7 @@ export default hopeTheme({
         "https://sspai.com/u/zqj05i4v/posts",
         path.resolve(__dirname, "icons/sspai.svg"),
       ],
-      Wechat: "https://tc.seoipo.com/wechat.svg",
+      Wechat: "https://img.newzone.top/wechat.svg",
       Email: "mailto:learndata@newzone.top",
       Discord: "https://discord.gg/PZTQfJ4GjX",
       RSS: "https://newzone.top/rss.xml",

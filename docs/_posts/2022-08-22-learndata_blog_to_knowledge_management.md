@@ -16,15 +16,15 @@ order: -48
 
 另一方面，我们在使用知识管理软件的美观界面和强大功能的同时，也被这些软件所限制，无法完全按照自己的想法输出笔记。比如，你有了一双翅膀，**Markdown 文本是自由的天地，而进入 Notion 则被隔成一个个小房间**，你在房间里待着很舒服，可一旦想去其他房间，就必须脱离 block，不比 Markdown 可以自由飞翔。
 
-![](https://tc.seoipo.com/2022-08-22-18-02-07.png "Markdown VS Notion")
+![](https://img.newzone.top/2022-08-22-18-02-07.png "Markdown VS Notion")
 
 突破迷思后，我基于 VuePress 和 vuepress-theme-hope 建立了 [LearnData](https://github.com/rockbenben/LearnData) 项目，将知识笔记、生活记录、博客和任何认为有价值的记录转换为 Markdown 文本，然后推送到 GitHub 生成 Pages 静态页面，并同步到国内云服务器，形成 [LearnData - 开源笔记](https://newzone.top/)。
 
-![](https://tc.seoipo.com/2022-08-24-19-14-59.png "笔记/博客自动化发布")
+![](https://img.newzone.top/2022-08-24-19-14-59.png "笔记/博客自动化发布")
 
 LearnData 的笔记和文章格式是 Markdown，输出不受到应用的局限。LearnData 看起来像由文章组成的博客，但它的笔记是独立的知识点，是所有知识的终点站，是整理后的知识库。通过 LearnData 可以搜索和整理知识，不再需要来回翻找。把博客转为知识库后，我明显感到学习和知识使用的效率得到提高，开始摆脱「工具奴隶」和「效率中毒」陷阱。
 
-![](https://tc.seoipo.com/2022-08-22-19-28-25.png "笔记 + 文章 = LearnData 知识库")
+![](https://img.newzone.top/2022-08-22-19-28-25.png "笔记 + 文章 = LearnData 知识库")
 
 ## 为什么用网页管理笔记
 
@@ -42,7 +42,7 @@ LearnData 的笔记和文章格式是 Markdown，输出不受到应用的局限�
 
 其次，网页形式使笔记更容易分享。除了效率工具的心得，我还在 LearnData 上放置了生活技巧、购物评价和说明书。当家人或朋友需要帮助时，可以直接访问网页，无需安装应用程序或折腾账户分享，比如我经常分享的[通马桶技巧](https://newzone.top/family/Maintenance.html#通马桶) 和疏通器说明书。
 
-![](https://tc.seoipo.com/2022-08-19-22-52-29.png "生活知识页面样例")
+![](https://img.newzone.top/2022-08-19-22-52-29.png "生活知识页面样例")
 
 ### 被动消化知识
 
@@ -58,7 +58,7 @@ LearnData 的笔记和文章格式是 Markdown，输出不受到应用的局限�
 
 知识管理/笔记软件将 Markdown 文件作为一个个区块，而网页可以将其视为一体。LearnData 支持多级侧边栏和目录，让阅读和查找变得更加简单。
 
-![](https://tc.seoipo.com/2022-08-19-22-42-03.png "LearnData 页面布局")
+![](https://img.newzone.top/2022-08-19-22-42-03.png "LearnData 页面布局")
 
 ## 为什么不用 Obsidian
 
@@ -66,7 +66,7 @@ LearnData 的笔记和文章格式是 Markdown，输出不受到应用的局限�
 
 Obsidian 等双链笔记的设计初衷很好，可以让我们自由地在不同知识点间切换，节省搜索和关联的时间。但是，知识点的联系是靠人工打标签来建立的，而不是根据关键词自动建立图谱关系，这与 URL 链接有什么区别？因此，我认为**双链笔记并不适合知识库**（如果对双链笔记理解有误，欢迎纠正）。
 
-![](https://tc.seoipo.com/2022-08-19-21-39-41.png?imageMogr2/thumbnail/!60p "我的 Obsidian 图谱，只有右下角简悦抓取的素材有相同标签而聚作一团")
+![](https://img.newzone.top/2022-08-19-21-39-41.png?imageMogr2/thumbnail/500x "我的 Obsidian 图谱，只有右下角简悦抓取的素材有相同标签而聚作一团")
 
 建立知识点联系后，双链笔记可以轻松处理成千上万个文档，按条件整合文本，便于阅读。但是，大多数人常用的知识范围不会超过一百。如果你的个人笔记超过千篇，要么你是科研大佬，要么你没有消化这些笔记，只是在记笔记。
 
@@ -80,7 +80,7 @@ Obsidian 等双链笔记的设计初衷很好，可以让我们自由地在不�
 
 对我来说，知识软件是功能清晰的素材库。我会不断清空素材库，将小的知识点融入 LearnData 笔记区，成体系内容则写成博客，以确保 LearnData 成为知识库的终点。
 
-![](https://tc.seoipo.com/2022-08-21-21-38-47.png "知识类素材库")
+![](https://img.newzone.top/2022-08-21-21-38-47.png "知识类素材库")
 
 - Logseq 将信息节点化，能按日期整合文本，因此我用它来记录笔记，并定期生成周报和月报回顾。
 - 飞书文档自带侧边目录栏，对长文档优化很好，因此我用它记录工作心得，定期形成工作流程并在公司分享。

@@ -19,31 +19,31 @@ ChatGPT 的回复质量取决于提示词（即 Prompt）。这通常是用户�
 
 ChatGPT Shortcut 页面默认显示全部的提示词，页面分为标签区、搜索区和提示词展示区。
 
-![](https://tc.seoipo.com/2023-02-28-10-30-20.png?imageMogr2/format/webp)
+![](https://img.newzone.top/2023-02-28-10-30-20.png?imageMogr2/format/webp)
 
 ### 标签筛选
 
 标签区按提示词的领域和功能进行划分，可根据不同场景和需求进行选择。与标签区右上方的「标签筛选规则切换」按钮配合使用，可进行多标签筛选。默认状态为 OR，即选中标签下的所有提示词。切换到 AND 后，将筛选出具备已选中的多个标签的提示词。
 
-![](https://tc.seoipo.com/2023-02-28-10-31-01.png?imageMogr2/format/webp)
+![](https://img.newzone.top/2023-02-28-10-31-01.png?imageMogr2/format/webp)
 
 ### 关键词搜索
 
 关键词搜索范围包括提示词的标题、简介、内容和中文翻译。输入关键词后，提示词展示区将立即展示筛选出的内容。如果已选中标签，则关键词搜索仅限于标签筛选范围内。对于 PC 端，搜索框内容变化后，新的搜索结果会在 800 毫秒后显示。移动端则为即时刷新。
 
-![](https://tc.seoipo.com/2023-02-28-10-31-10.png?imageMogr2/format/webp)
+![](https://img.newzone.top/2023-02-28-10-31-10.png?imageMogr2/format/webp)
 
 ### 展示区复制
 
 通过标签筛选和关键词搜索，点击卡片右上方的「复制」按钮即可获取提示词，将其粘贴到 ChatGPT 中，参考中文提示调整需求文本，即可得到指定领域的回复。如果提示词中的中文备注没有解释清楚，可以点击提示词的绿色标题查看来源网页。
 
-![](https://tc.seoipo.com/2023-02-28-10-31-19.png?imageMogr2/format/webp)
+![](https://img.newzone.top/2023-02-28-10-31-19.png?imageMogr2/format/webp)
 
 ### 语言切换
 
 默认情况下，提示词内容会显示为英文。如果你想查看中文释义，可以点击提示词内容将其切换到中文，再次点击即可切回英文。请注意，语言切换只在文字上点击有效，点击空白区域无效。中文释义为机器翻译，仅供参考。
 
-![中英文切换](https://tc.seoipo.com/chatgptshortcut_encn.gif)
+![中英文切换](https://img.newzone.top/chatgptshortcut_encn.gif)
 
 如果想让提示词默认显示为中文，你可以点击标签区右上方的 `CN` 按钮。需要注意的是，即使切换到中文翻译，复制按钮也仅针对英文提示词复制。下方会有解释原因。
 

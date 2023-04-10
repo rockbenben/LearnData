@@ -12,7 +12,7 @@ order: -49
 
 我从小特别羡慕会画画的伙伴。他们能够将心中的想法画出来，而我最高水平的肖像画是丁老头。但在接触 Stable Diffusion 之后，我感觉自己脱胎换骨，给自己贴上了「会画画」的新标签。
 
-![](https://tc.seoipo.com/2022-09-04-11-53-20.png "丁老头进化旅程")
+![](https://img.newzone.top/2022-09-04-11-53-20.png "丁老头进化旅程")
 
 Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯一一款开源且能部署在家用电脑（对硬件要求不高）上的 AI 绘图工具。使用 Stable Diffusion，你可以在拥有 6GB 显存显卡，16GB 内存或只依赖 CPU 的电脑上生成图像，并且仅需几秒钟的时间，无需进行预处理或后处理。
 
@@ -20,7 +20,7 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 如果你需要生成大量的 AI 图片，可以通过 Docker Desktop 将 [Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) 部署到家用电脑上，从而实现免费的 AI 文字绘画，并摆脱在线工具的限制。对于 Mac 用户，推荐选择 Stable Diffusion 的 invoke 分支，如果在部署过程中出现错误，你可以参考 [InvokeAI 文档](https://github.com/invoke-ai/InvokeAI/blob/main/docs/installation/INSTALL_MAC.md#doesnt-work-anymore)进行排查。对于 M1/M2 Mac 用户，推荐使用更简便的 [CHARL-E](https://www.charl-e.com/) 或 [DiffusionBee](https://sspai.com/post/75682)。
 
-![](https://tc.seoipo.com/2022-09-05-16-22-45.png "Stable Diffusion 部署流程")
+![](https://img.newzone.top/2022-09-05-16-22-45.png "Stable Diffusion 部署流程")
 
 以 Windows 平台为例，本文将依次介绍 Docker 环境配置、Stable Diffusion 安装及基本使用方法。
 
@@ -82,7 +82,7 @@ docker compose --profile sygil up --build
 # auto 是功能最多的分支，可以选择 auto | auto-cpu | invoke | sygil | sygil-sl
 ```
 
-![](https://tc.seoipo.com/2022-09-04-18-32-31.png?imageMogr2/format/webp)
+![](https://img.newzone.top/2022-09-04-18-32-31.png?imageMogr2/format/webp)
 
 等待构建完成后，在终端中会提示访问 `http://localhost:7860/`，你就可以在本地电脑上用 AI 生成图片了。^[[Setup Stable Diffusion WebUI Docker](https://github.com/AbdBarho/stable-diffusion-webui-docker/wiki/Setup)]
 
@@ -96,13 +96,13 @@ docker compose --profile sygil up --build
 2. 在 Containers 中选中分支容器，点击启动。
 3. 浏览器中访问 `http://localhost:7860/`。
 
-![](https://tc.seoipo.com/2022-09-04-17-06-27.png "Docker Desktop 界面")
+![](https://img.newzone.top/2022-09-04-17-06-27.png "Docker Desktop 界面")
 
 ### Text-to-Image
 
 Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像的方法。对于崇尚空间结构的画作类型，如风景、创意画等，推荐使用竖图或横图。对于人像类画作，推荐使用 1:1 的方形图像，否则可能会出现多个人脸叠加的情况。生成的图片分辨率受到一定限制，你可以使用 Upscale 对结果图片进行放大处理。
 
-![](https://tc.seoipo.com/2022-09-05-08-28-23.png "Text-to-Image 界面")
+![](https://img.newzone.top/2022-09-05-08-28-23.png "Text-to-Image 界面")
 
 默认情况下使用的是 Simple 简单模式。如果你想要使用更多的功能，你可以点击右侧的 Advanced 按钮，进入进阶选项。在进阶选项中，你可以使用场景矩阵、面部修复和分辨率放大等多种高级功能。
 
@@ -110,11 +110,11 @@ Text-to-Image 是 Stable Diffusion 依据文字描述来生成图像的方法。
 
 Image-to-Image 是依据文字描述和输入源图来生成相关图像。如果输入源图是 Text-to-Image、素描或结构画，该模式可充分填充图像细节。而如果输入源图是细节充分的照片，生成的结果与原图差异较大。此外，你还可以限定区域来生成图像，这非常适合进行图像修改。
 
-![](https://tc.seoipo.com/2022-09-04-15-39-00.png "Image-to-Image 界面")
+![](https://img.newzone.top/2022-09-04-15-39-00.png "Image-to-Image 界面")
 
 CLIP interrogator 会根据图像来生成文字描述。Denoising Strength 指与原图的差异度，建议设置在 0.75-0.9 之间。若要魔改图片，可将 Denoising Strength 设为 0.5 或以下。下图中的 Denoising Strength 只有 0.44，整体图片结构及要素未变，但结果如何，你看到了。
 
-![](https://tc.seoipo.com/2022-09-04-15-40-26.png "超级魔改图片")
+![](https://img.newzone.top/2022-09-04-15-40-26.png "超级魔改图片")
 
 Image-to-Image 还可以用来移除、替换或修复图像，甚至可以将源图作为结果图的一部分，利用 Stable Diffusion 扩展绘画。
 
@@ -124,7 +124,7 @@ Image Lab 有批量修正面孔和放大图片分辨率的功能。
 
 Fix Faces 是通过 GFPGAN 模型来改善图片中的面孔，Effect strength 滑块可以控制效果的强度。但实际效果别报太高期许，下图右侧开启了 Fix Faces，只能说勉强有了五官。
 
-![](https://tc.seoipo.com/2022-09-04-15-47-14.png "A woman flying in the air laughing")
+![](https://img.newzone.top/2022-09-04-15-47-14.png "A woman flying in the air laughing")
 
 Upscale 可以通过 RealESRGAN、GoBIG、Latent Diffusion Super Resolution 和 GoLatent 四种模型来放大图片分辨率。其中，RealESRGAN 有普通和卡通两种模式，你可以根据需要进行选择。放大图片主要消耗 CPU 和内存资源。
 
@@ -164,7 +164,7 @@ Stable Diffusion 通过英文文字内容来描述场景或物体，以此来决
 3. **画家/画风**：建议混合多个画家的风格，比如 `Studio Ghibli, Van Gogh, Monet`，或描述风格种类，比如 `very coherent symmetrical artwork`，将作品结构设为「连贯且对称」。
 4. **色调**：yellow color scheme 指整个画面的主色调为黄色。
 5. **参考平台**：Trending on ArtStation，也可以替换为「Facebook」「Pixiv」「Pixbay」等。
-   ![](https://tc.seoipo.com/2022-09-16-22-33-26.png "相同参数下，不同平台生成的图片")
+   ![](https://img.newzone.top/2022-09-16-22-33-26.png "相同参数下，不同平台生成的图片")
 
 ### 特征描述
 

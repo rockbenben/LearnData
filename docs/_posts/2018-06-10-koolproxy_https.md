@@ -20,7 +20,7 @@ koolproxy 是可以运行在路由器上的广告屏蔽软件，跟其他最大�
 
 进入路由器后台，一般设置-Tools-Run Cmd ,运行命令 `iptables -t nat -I PREROUTING -d 110.110.110.110 -p tcp --dport 80 -j REDIRECT --to 3000`。重启后，该命令失效。
 
-![](https://tc.seoipo.com/20180610143928.png?imageMogr2/format/webp)
+![](https://img.newzone.top/20180610143928.png?imageMogr2/format/webp)
 
 运行命令后，就可以下载 https 证书，之后的设置参考 [Merlin 版 Koolproxy3.1.x 使用教程](http://koolshare.cn/thread-80430-1-1.html)。
 

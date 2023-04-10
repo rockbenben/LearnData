@@ -53,7 +53,7 @@ cd D:\Libraries\Desktop\scrcpy-win64-v2.0
 .\scrcpy --tcpip=192.168.2.20 -w -m 1024
 ```
 
-![](https://tc.seoipo.com/20190829093407.png "scrcpy 命令行截图")
+![](https://img.newzone.top/20190829093407.png "scrcpy 命令行截图")
 
 ## 屏幕录制
 
@@ -100,6 +100,6 @@ cd D:\Libraries\Desktop\scrcpy-win64-v2.0
 
 如果屏幕设置了缩放比例，投屏界面会变得模糊。右键单击 scrcpy.exe，点击「属性」>「兼容性」>「更改高 DPI 设置」，然后勾选「替代高 DPI 缩放行为」，应用该设置后投屏恢复正常。
 
-![](https://tc.seoipo.com/20190829095640.png "解决 scrcpy 投屏模糊")
+![](https://img.newzone.top/20190829095640.png "解决 scrcpy 投屏模糊")
 
 更多问题报错的解决方法，可以查看 [scrcpy FAQ](https://github.com/Genymobile/scrcpy/blob/master/FAQ.md)。

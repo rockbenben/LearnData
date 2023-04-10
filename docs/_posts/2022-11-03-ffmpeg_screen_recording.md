@@ -42,7 +42,7 @@ FFmpeg 是处理多媒体内容 (如音频、视频、字幕和相关元数据) 
 
 以我在 Windows 上的桌面录制方案为例，从多屏幕中指定一个 2K 区域进行录制，并在画面右下角添加 360P 的摄像头录制角度，然后以帧率 0.02 输出监控视频。按 `q` 则停止录制。
 
-![](https://tc.seoipo.com/2022-11-03-13-16-44.png "输出画面如图例")
+![](https://img.newzone.top/2022-11-03-13-16-44.png "输出画面如图例")
 
 ## 录屏准备
 
@@ -53,11 +53,11 @@ FFmpeg 是处理多媒体内容 (如音频、视频、字幕和相关元数据) 
 3. 开始栏搜索「编辑系统环境变量」，点击进入「环境变量」。
 4. 新建用户变量 `FFMPEG_HOME`，变量值设为刚才的解压路径 `D:\Backup\Libraries\Documents\ffmpeg`。
 
-   ![](https://tc.seoipo.com/2022-11-01-18-13-49.png "FFmpeg 全局变量设置")
+   ![](https://img.newzone.top/2022-11-01-18-13-49.png "FFmpeg 全局变量设置")
 
 配置完成后，在终端输入 ffmpeg 即可启动。
 
-![](https://tc.seoipo.com/2022-11-01-18-17-13.png "FFmpeg 配置成功")
+![](https://img.newzone.top/2022-11-01-18-17-13.png "FFmpeg 配置成功")
 
 ### 配置视频/音频设备
 
@@ -65,7 +65,7 @@ FFmpeg 的录制命令 gdigrab 不支持音频录制，也不支持直接调用�
 
 通过命令 `ffmpeg -list_devices true -f dshow -i dummy` 查看支持的 Windows DirectShow 输入设备，采集视频和音频设备，包含设备名称，设备类型等信息。^[[ffmpeg 录屏命令](https://blog.csdn.net/m0_60352504/article/details/126762161)] 这里得到了视频设备「USB2.0 PC CAMERA」和音频设备「Analogue 1/2 (Audient iD4)」，之后会用到。
 
-![](https://tc.seoipo.com/2022-11-03-10-33-52.png "查看视频/音频设备列表")
+![](https://img.newzone.top/2022-11-03-10-33-52.png "查看视频/音频设备列表")
 
 ## 录制屏幕
 

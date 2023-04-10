@@ -13,7 +13,7 @@ order: 5
 
 1. 下载[淘宝直播客户端](https://market.m.taobao.com/app/mtb/live-portal/download/index.html)，打开后点击「我要开播」，进入直播间界面。
 
-   ![](https://tc.seoipo.com/2022-06-29-22-23-26.png "淘宝直播设置")
+   ![](https://img.newzone.top/2022-06-29-22-23-26.png "淘宝直播设置")
 
 2. 在左侧点击「添加元素」>「摄像头」，选择「OBS-Camera」，即可同步 OBS 直播画面。淘宝直播客户端也是基于 OBS，但不支持推流直播，只能通过虚拟摄像头同步画面。
 
@@ -24,7 +24,7 @@ order: 5
 1. 下载[直播伴侣电脑端](https://www.douyin.com/falcon/webcast_openpc/pages/streamingtool_download/index.html)，它可以适配西瓜视频、抖音、抖音火山版的直播。
 2. 在左侧点击「添加元素」>「采集」，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道。
 
-   ![](https://tc.seoipo.com/2022-06-29-23-59-02.png "抖音直播设置")
+   ![](https://img.newzone.top/2022-06-29-23-59-02.png "抖音直播设置")
 
 以上为抖音新手的电脑直播步骤，如果你的抖音粉丝在一万以上，可以使用 [OBS 模式推流](http://streamingtool.douyin.com/docs/guide/96319/)。
 

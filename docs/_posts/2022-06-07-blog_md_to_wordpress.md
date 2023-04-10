@@ -21,7 +21,7 @@ order: -47
 
 我的文章都是工具教程类，要随着工具的更新而修改，有时甚至要对几年前发布的文章进行更新。因此，针对少量平台更新的策略，带来了文章版本混乱，让博客偏离了知识记录的初衷。为了保证文章版本统一，我把博客从 Jekyll 迁移到 WordPress，准备以 WordPress 作为统一版。
 
-![Jekyll 博客](https://tc.seoipo.com/20210128124408.png?imageMogr2/thumbnail/!40p)
+![Jekyll 博客](https://img.newzone.top/20210128124408.png?imageMogr2/thumbnail/400x)
 
 然而，WordPress 方案很快就被放弃了。原因除了 WordPress 糟糕的编辑体验，更重要的是，我遇到了 Notion。其界面美观，编辑方便，支持对外展示，能导出为 Markdown、HTML 文件。​
 
@@ -64,7 +64,7 @@ order: -47
 
 - 文章聚合页：主路径添加 `.nojekyll`、`index.html` 和 `_sidebar.md` 三个文件，引入了文档生成工具 docsify，使得博客文章能聚合在一个页面，方便快速定位和位置管理。示例：<https://rockbenben.github.io/Blog_WP/>。
 
-  ![](https://tc.seoipo.com/2022-05-26-20-12-56.png "docsify 页面效果")
+  ![](https://img.newzone.top/2022-05-26-20-12-56.png "docsify 页面效果")
 
 ### 使用流程
 
@@ -86,7 +86,7 @@ order: -47
 - 文章后缀必须为「.md」，不支持「.markdown」或其他后缀格式。
 - 进入 repo 页面中的 `Actions`，检查最近一次的 update 是否正确。根据报错代码，寻找错误原因。
 
-  ![](https://tc.seoipo.com/2022-05-26-20-36-56.png?imageMogr2/format/webp)
+  ![](https://img.newzone.top/2022-05-26-20-36-56.png?imageMogr2/format/webp)
 
 ### Error: git denied to github-actions[bot]
 
@@ -133,7 +133,7 @@ Markdown 转 WordPRess 文章时，默认规则无法识别缩进级别。多层
 - Markdown 文件名称不能展示关键信息，较难定位文档。文章越多，管理越困难。
 - 无法对文章内容进行本地检索，只能通过文件名称猜测内容。
 
-![](https://tc.seoipo.com/2022-05-30-19-00-15.png "难以管理的本地文档")
+![](https://img.newzone.top/2022-05-30-19-00-15.png "难以管理的本地文档")
 
 为解决这些问题，我借助飞书表格、RunAny 和 docsify 重构本地文章管理方案。
 
@@ -143,9 +143,9 @@ Markdown 转 WordPRess 文章时，默认规则无法识别缩进级别。多层
 
 打开飞书多维表格，填入本地 Markdown 文章的标题、本地位置、链接、标签和封面，即可聚合本地文章的关键信息。将表格视图切换为「画册视图」，文档管理界面更达到 90% 的 Notion 视觉效果。
 
-![](https://tc.seoipo.com/2022-05-06-12-43-36.png "飞书表格视图")
+![](https://img.newzone.top/2022-05-06-12-43-36.png "飞书表格视图")
 
-![](https://tc.seoipo.com/2022-05-06-12-28-41.png "飞书画册视图")
+![](https://img.newzone.top/2022-05-06-12-28-41.png "飞书画册视图")
 
 ### RunAny 文档直达 ​
 
@@ -166,7 +166,7 @@ Markdown 转 WordPRess 文章时，默认规则无法识别缩进级别。多层
 
 docsify 使用简单，如果使用了前文我修改过的[发布工具](https://github.com/rockbenben/Blog_WP)，则无需配置。在发布工具文件夹内的空白区域，右键打开终端，执行命令`docsify serve`即可生成全文检索网页，默认管理链接为 `http://localhost:3000/`。
 
-![docsify 本地运行](https://tc.seoipo.com/2022-05-30-20-03-19.png?imageMogr2/format/webp)
+![docsify 本地运行](https://img.newzone.top/2022-05-30-20-03-19.png?imageMogr2/format/webp)
 
 如果你设置了 Github Pages，项目会默认启动在线 docsify 网页，页面链接取决于 Github 的设置。比如我的用户名是 rockbenben，项目名是 Blog_WP，所以 docsify 管理页面就是 <https://rockbenben.github.io/Blog_WP/>。
 

@@ -15,7 +15,7 @@ order: 3
 
 不过，Excalidraw 没有中文手写字体，需手动修改，比如 [Excalidraw 官方版添加中文手写字体](https://blog.csdn.net/qq_34802028/article/details/127927960)，[Obsidian 中文手写体设置](https://blog.csdn.net/qq_26176515/article/details/126005295)，[网页端中文手写字体配置](https://zhuanlan.zhihu.com/p/577420136)。
 
-![](https://tc.seoipo.com/2023-01-23-20-53-36.png "手绘样例")
+![](https://img.newzone.top/2023-01-23-20-53-36.png "手绘样例")
 
 ### Canvas
 

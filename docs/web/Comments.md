@@ -75,7 +75,7 @@ Vercel 项目中选择「Overview」>「Settings」>「Environment Variables」�
 2. 提取数据中的 Comment、Counter 和 Users，格式为 `[{},{}……,{}]`，依次复制到 [json2sql](https://www.convertjson.com/json-to-sql.htm#) 进行操作。
 3. 在 json2sql 页面中，点击按钮「Format JSON」，然后按截图勾选「Still not happy」「Enclose field names」「Backtick (`name`)」，取消勾选第一个值的 key。同时，取消勾选 objectId 的「Include」，该项将不会导入数据库。
 
-   ![](https://tc.seoipo.com/2023-03-24-16-52-57.png?imageMogr2/format/webp)
+   ![](https://img.newzone.top/2023-03-24-16-52-57.png?imageMogr2/format/webp)
 
 4. 将「Schema.Table or View Name」依次设为「\`wl_Comment\`」「\`wl_Counter\`」「\`wl_Users\`」，取消勾选「Create Table/View」。
 5. 在 Step 3: Generate output 下点击按钮「JSON TO SQL Insert」，然后点击复制按钮。

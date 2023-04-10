@@ -7,7 +7,7 @@ title: 互联网小白
 #heroImage: /logo.svg
 heroText: 互联网小白
 tagline: 盛年不重来，一日难再晨
-bgImage: https://tc.seoipo.com/home-bg-1.jpg
+bgImage: https://img.newzone.top/home-bg-1.jpg
 heroFullScreen: false
 #projects:
 #  - icon: project

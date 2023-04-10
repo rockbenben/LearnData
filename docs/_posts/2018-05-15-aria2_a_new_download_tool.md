@@ -47,7 +47,7 @@ Aria2 真·懒人包无需配置，下载即可使用，适合不想折腾的人
 
 2. 官网下载 [Aria2 程序](https://github.com/aria2/aria2/releases)（Windows 选择 [aria2-1.36.0-win-64bit-build1.zip](https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0-win-64bit-build1.zip)），然后解压到快速设置包的存放文件夹中，替代其中的 `aria2c.exe` 程序。
 
-   ![](https://tc.seoipo.com/20191210232831.png "GitHub 官方仓库下载 Aria2")
+   ![](https://img.newzone.top/20191210232831.png "GitHub 官方仓库下载 Aria2")
 
 3. 点击 `aria2.exe` 启动 aria2，系统托盘区会同步出现应用图标。
 
@@ -95,7 +95,7 @@ Aria2 真·懒人包无需配置，下载即可使用，适合不想折腾的人
 
 [AriaNg](https://github.com/mayswind/AriaNg) 的界面类似传统的下载软件，使用简单。
 
-![](https://tc.seoipo.com/20180516104758.png "AriaNg 界面")
+![](https://img.newzone.top/20180516104758.png "AriaNg 界面")
 
 使用方法：下载并解压 [AriaNg](https://github.com/mayswind/AriaNg-DailyBuild/archive/master.zip)，运行目录下的 index.html，打开 Aria2 WebUI 界面，将页面链接收藏到书签以便后续使用 Aria2。
 

@@ -17,7 +17,7 @@ order: -24
 
 梅林路由器进入「高级设置」→「外部网络（WAN）」→「DDNS」，将路由器指向准备好的子域名。
 
-![](https://tc.seoipo.com/20190331203233.png?imageMogr2/format/webp)
+![](https://img.newzone.top/20190331203233.png?imageMogr2/format/webp)
 
 电信分配的公网 IP 经常会更换，每次都需要重定向子域名。在路由器 koolshare - 软件中心中安装 Aliddns，帮助更新家的公网 IP。插件中输入定向子域名和阿里云的 appkey，配置就完成了。如果没有自动在阿里云解析，可以先手动解析设置。
 
@@ -27,12 +27,12 @@ order: -24
 
 内网穿透完成后，开始 OpenVPN 配置。梅林路由器进入「高级设置」→「VPN」→「虚拟专用网（VPN）服务器」，开启路由器自带的 OpenVPN。
 
-![](https://tc.seoipo.com/20190331200921.png?imageMogr2/format/webp)
+![](https://img.newzone.top/20190331200921.png?imageMogr2/format/webp)
 
 高级配置红色的部分有修改，特别是**VPN 子网必须修改为与路由器不同的号段**，如 192.168.3.0。如果使用默认子网，会无法顺利翻墙。
 
 应用设置后，点击「一般设置」，并导出 .ovpn 文件。打开该配置文件，将远程端口改为光猫上虚拟服务器映射的端口。
 
-![](https://tc.seoipo.com/20190331202017.png?imageMogr2/format/webp)
+![](https://img.newzone.top/20190331202017.png?imageMogr2/format/webp)
 
 最后，手机导入 `.ovpn` 设置文件，就可以上网回家了！

@@ -21,9 +21,9 @@ order: 5
 
 如果使用下方的疏通器，也在疏通头上绑好塑料袋，在气口位置撕开个小口，最后按通气开关。
 
-![疏通器说明 1](https://tc.seoipo.com/2022-06-10-14-55-01.png?imageMogr2/format/webp)
+![疏通器说明 1](https://img.newzone.top/2022-06-10-14-55-01.png?imageMogr2/format/webp)
 
-![疏通器说明 2](https://tc.seoipo.com/2022-06-10-14-55-14.png?imageMogr2/format/webp)
+![疏通器说明 2](https://img.newzone.top/2022-06-10-14-55-14.png?imageMogr2/format/webp)
 
 ## 林内锅炉
 
@@ -53,6 +53,6 @@ order: 5
 
 ## 地暖温控器
 
-![地暖温控器 1](https://tc.seoipo.com/2022-06-10-14-58-21.png?imageMogr2/format/webp)
+![地暖温控器 1](https://img.newzone.top/2022-06-10-14-58-21.png?imageMogr2/format/webp)
 
-![地暖温控器 2](https://tc.seoipo.com/2022-06-10-14-58-32.png?imageMogr2/format/webp)
+![地暖温控器 2](https://img.newzone.top/2022-06-10-14-58-32.png?imageMogr2/format/webp)
