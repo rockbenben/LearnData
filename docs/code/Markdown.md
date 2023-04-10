@@ -27,7 +27,7 @@ md 格式调整图片尺寸，在不同编辑器中显示效果不同，不一�
 ![name](https://docsify.js.org/_media/icon.svg "图片说明")
 ```
 
-七牛云图床：使用[七牛云接口](https://developer.qiniu.com/dora/kb/1627/flow-optimization-compression-of-images)改变图片分辨率、大小、格式，具体参数看[七牛云图片高级处理](https://developer.qiniu.com/dora/8255/the-zoom)。
+七牛云图床提供[图片流量优化压缩策略](https://developer.qiniu.com/dora/kb/1627/flow-optimization-compression-of-images)，可用于调整图片的分辨率、大小和格式，具体参数请参考[七牛云图片高级处理](https://developer.qiniu.com/dora/8255/the-zoom)。此外，我还会定期使用 PP 鸭对图床中的图片进行重新压缩。
 
 ```html
 <!-- 按图片尺寸的 60% 等比缩小 -->
