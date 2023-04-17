@@ -25,7 +25,6 @@ export default navbar([
     prefix: "/",
     children: [
       "apps/Applist",
-      { text: "ChatGPT SC", icon: "creative", link: "https://www.aishort.top/" },
       { text: "直播手册", icon: "quote", link: "apps/livestreaming/1_obs_basic" },
       {
         text: "服务/系统",
@@ -42,6 +41,16 @@ export default navbar([
     children: ["Diet", "Shoppinglist", "Coupon"],
   },
   {
+    text: "工具",
+    icon: "tool",
+    children: [
+      { text: "ChatGPT SC", icon: "creative", link: "https://www.aishort.top/" },
+      { text: "IMGPrompt", icon: "pic", link: "https://prompt.newzone.top/" },
+      { text: "文字处理", icon: "others", link: "https://tools.newzone.top/" },
+      { text: "工具收藏", icon: "categoryselected", link: "https://nav.newzone.top/" },
+    ],
+  },
+  {
     text: "Contact",
     icon: "advance",
     children: [
@@ -50,5 +59,4 @@ export default navbar([
       { text: "RSS", icon: "rss", link: "https://newzone.top/rss.xml" },
     ],
   },
-  { text: "工具收藏", icon: "tool", link: "https://nav.newzone.top/" },
 ]);

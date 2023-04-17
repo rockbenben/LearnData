@@ -53,7 +53,7 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 按平台选 [Docker Desktop](https://docs.docker.com/get-docker/) 版本，安装后点击左侧的 Add Extensions，推荐安装 Disk usage 扩展，这将便于管理 Docker 的存储空间。
 
 ::: warning
-Docker Desktop 4.17.1 存在 bug，可能会导致 `Attaching to webui-docker-auto-1` 报错。建议使用 Docker Desktop 4.17.0 或更早版本。
+Docker Desktop 4.17.1 存在 bug，可能会导致 `Attaching to webui-docker-auto-1` 报错。建议升级 Docker Desktop 4.18.0 或降级到更早版本。
 :::
 
 ### 下载 WebUI Docker
@@ -157,6 +157,8 @@ Stable Diffusion 通过英文文字内容来描述场景或物体，以此来决
 
 样例：`A beautiful painting {画作种类} of a singular lighthouse, shining its light across a tumultuous sea of blood {画面描述} by greg rutkowski and thomas kinkade {画家/画风}, Trending on artstation {参考平台}, yellow color scheme {配色}`。^[[外网爆火的 4 款「你说我画」自动作画工具，我们测了下，有 1 款的确超强](https://www.ifanr.com/app/1484403)]
 
+描述图像需要多种描述，因此我开发了一个开源工具 [IMGPrompt](https://prompt.newzone.top/)，以便生成图像提示词。
+
 ### 常规描述
 
 1. 输入图像的对象、主体，比如一只熊猫、一个持剑的战士，**不要描述动作、情绪和事件**；^[[最时髦的 AI 画画，一文包教包会](https://www.guokr.com/article/462587/)]
@@ -173,9 +175,9 @@ Stable Diffusion 通过英文文字内容来描述场景或物体，以此来决
 - 次要元素：物体不要太多，两到三个就好。若要特别强调某个元素，可以加很多括号或者惊叹号，比如 `beautiful forest background, desert!!, (((sunset)))` 中会优先体现「desert」和「sunset」元素。
 - 人物特征：`detailed gorgeous face, delicate features, elegant, Googly Eyes, Bone, big tits, silver hair, olive skin, Mini smile`；
 - 特定润色：`insanely detailed and intricate, gorgeous, surrealism, smooth, sharp focus, Painting, Digital Art, Concept Art, Illustration, Artstation, in a symbolic and meaningful style, 8K`；
-- 光线描述：`Natural Lighting, Studio lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight`，或逼真光照 `Unreal Engine`；
+- 光线描述：`Natural Lighting, Studio Lighting, Cinematic Lighting, Crepuscular Rays, X-Ray, Backlight`；
 - 镜头视角：`Cinematic, Magazine, Golden Hour, F/22, Depth of Field, Side-View`，虚化背景 `Bokeh`；
-- 画面质量：`professional, award winning, breathtaking, groundbreaking, superb, outstanding`；
+- 画面质量：`professional, award winning, breathtaking, groundbreaking, superb, outstanding`，或虚幻引擎 `Unreal Engine`；
 - 其他描述：细节和纹理、物体占据画面的大小、年代、渲染 / 建模工具等，比如 Vivid Colors（艳丽色彩）。
 
 ### prompt 权重
