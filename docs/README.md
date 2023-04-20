@@ -7,10 +7,7 @@ icon: note
 > 开源工具、效率方法、心理学探索的自我提升笔记
 
 <a href="https://discord.gg/PZTQfJ4GjX">
-   <img src="https://img.newzone.top/2022-12-04-11-56-44.svg" alt="Discord">
-</a>  
-<a href="mailto:learndata@newzone.top">
-   <img src="https://img.newzone.top/2022-12-04-11-58-19.svg" alt="Mail">
+   <img src="https://img.shields.io/discord/1048780149899939881?color=%2385c8c8&label=Discord&logo=discord&style=for-the-badge" alt="chat on Discord">
 </a>
 
 ## ✨ 初衷

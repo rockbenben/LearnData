@@ -11,6 +11,7 @@ ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对�
 
 主要使用以下几个工具：
 
+- [KeepChatGPT](https://github.com/xcanwin/KeepChatGPT/)：油猴脚本，ChatGPT 畅聊插件，让你不再遇到网络报错，不再需要刷新网页。
 - [ChatBox](https://github.com/Bin-Huang/chatbox)：一个 OpenAI API 的跨平台桌面客户端，有多标签对话，可修改 system prompt。
 - [ChatGPT-API Demo](https://github.com/ddiu8081/chatgpt-demo)：调用 API 的网页客户端，新手也能简单配置。
 - [lenxc/ChatGPT](https://github.com/lencx/ChatGPT/releases)：可以快速插入提示词的客户端，不过 IP 严格程度与官方一样严格。
