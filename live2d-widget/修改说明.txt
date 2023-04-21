@@ -1,1 +1,0 @@
-虽然waifu-tips.js是自动生成的，但是其中的打飞机js在国内无法加载。我使用使用自己的JS文件来替代，https://oss.newzone.top/asteroids.min.js
