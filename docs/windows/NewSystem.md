@@ -14,7 +14,7 @@ order: 2
 
 ## 安装系统
 
-系统重装/维修前，在 **exFAT** 格式的 U 盘上安装[微 PE 工具箱](https://www.wepe.com.cn/)。Windows 10/11 镜像超过 4GB，已经不再支持 FAT32 格式的 U 盘。
+系统重装/维修前，在 **NTFS/exFAT** 格式的 U 盘上安装[优启通](https://www.itsk.com/thread-428078-1-1.html)或[微 PE 工具箱](https://www.wepe.com.cn/)。Windows 10/11 镜像超过 4GB，已经不再支持 FAT32 格式的 U 盘。
 
 使用 U 盘引导安装系统：
 

@@ -35,7 +35,7 @@ order: 2
 
 ## Huginn 部署
 
-Huginn 任务有时会被卡住，后续任务都无法进行。原本使用官方 Docker 镜像，但重启容器无法解决任务卡住的问题。因此，改为手动部署 Huginn，定期使用重置命令防止任务卡住。
+Huginn 的任务有时会卡住，导致后续任务无法进行，重启容器也无法恢复正常。因此，我改为手动部署 Huginn，并定期使用重置命令以防止任务卡住。
 
 ```bash
 cd /home/huginn/huginn
@@ -43,20 +43,38 @@ sudo bundle exec rake production:force_stop
 sudo bundle exec rake production:export
 ```
 
-部署步骤记录在下方，但还有 3 个**待解决问题**：
+服务器重启后，需执行以下命令：
 
-- 定期导出数据库到本地。
-- 测试任务卡住后，rake production:export 是否有效。
-- 开机启动 Huginn 服务，可在 Docker 容器终端机中执行。`production:export` 步骤会提示 `unable to lock supervise/lock: temporary failure`，但此报错似乎不影响 Huginn 的运行，等有时间看看是否有相关报错。
+```bash
+sudo service mysql restart
+sudo service mysql start
+sudo service nginx restart
+cd /home/huginn/huginn
+git config --global --add safe.directory /home/huginn/huginn
+sudo runsvdir /etc/service &
+sudo bundle exec rake production:export
+```
 
-  ```bash
-  sudo service mysql restart
-  sudo service nginx restart
-  cd /home/huginn/huginn
-  git config --global --add safe.directory /home/huginn/huginn
-  sudo runsvdir /etc/service &
-  sudo bundle exec rake production:export
-  ```
+Huginn 经常用到的位置包括 `/home/huginn/huginn`（`env` 环境设置）和 `/var/lib/mysql`（数据库）。为了使这些位置能够在外部存储上工作，需要将外部存储位置的权限设置为 `everyone`，否则会出现错误。
+
+需要注意的是，内部数据库默认情况下不会被外部识别。为了使其能够与外部进行连接，需要进行以下操作：
+
+1. 使用 `sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf` 命令找到 `bind-address` 行，并注释掉（在行的前面添加 #）：`#bind-address = 127.0.0.1`。同时，将 `max_allowed_packet` 设置为 `200M`。
+2. 根据连接反馈获取连接 IP 并授权，同时开放 process 权限，方便后期数据库备份。数据库备用可使用 backup_script.sh 脚本，定期将 sql 文件导出到外部存储。
+
+   ```bash
+   mysql -u root -p
+   GRANT ALL PRIVILEGES ON *.* TO 'huginn'@'172.17.0.1' IDENTIFIED BY 'YourPassword';
+   GRANT PROCESS ON *.* TO 'huginn'@'localhost';
+   FLUSH PRIVILEGES;
+   \q
+   sudo service mysql restart
+   ```
+
+2 个疑问：
+
+- 测试当任务卡住时，`rake production:export` 是否有效。（优化后，一直没出现卡住问题？）
+- 部署时 `production:export` 步骤会提示 `unable to lock supervise/lock: temporary failure`，但此报错似乎不影响 Huginn 的运行，等有时间看看是否有相关报错。
 
 ### Ubuntu 手动部署
 
@@ -72,6 +90,7 @@ sudo docker exec -it huginn bash
 # run as root!
 apt-get update -y
 apt-get upgrade -y
+
 apt-get install sudo -y
 
 # Install vim and set as default editor
@@ -111,7 +130,7 @@ sudo mysql_secure_installation
 # 用上方设置的密码登陆数据库
 mysql -u root -p
 
-# 逐行输入代码到数据库命令行 `mysql>`，需将 `$password` 替换为你要设置的密码
+# ⚠️逐行输入代码到数据库命令行 `mysql>`，需将 `$password` 替换为你要设置的密码
 CREATE USER 'huginn'@'localhost' IDENTIFIED BY '$password';
 SET default_storage_engine=INNODB;
 GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, LOCK TABLES ON `huginn_production`.* TO 'huginn'@'localhost';
@@ -174,9 +193,20 @@ RAILS_ENV=production  # 修改点
 
 USE_GRAPHVIZ_DOT=dot # 取消注释，启用 GRAPHVIZ 来生成 diagram
 
+TIMEZONE="Beijing" # bundle exec rake time:zones:local，时区需按指定格式填写，否则会报错 runsv not running
+
 DEFAULT_HTTP_USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" # 浏览器访问
 
-TIMEZONE="CST (China Standard Time)" # 时区需按指定格式填写，否则会报错 runsv not running
+# 邮件发送设置
+SMTP_DOMAIN=your-domain-here.com
+SMTP_USER_NAME=you@gmail.com
+SMTP_PASSWORD=somepassword
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SMTP_AUTHENTICATION=plain
+SMTP_ENABLE_STARTTLS_AUTO=true
+SMTP_SSL=false
+SEND_EMAIL_IN_DEVELOPMENT=true
 ```
 
 Install Gems 前用子账户重新设置运行目录权限 `sudo chown -R huginn:huginn /home/huginn`，防止报错 `Your user account isn't allowed to install to the system RubyGems`。
@@ -184,7 +214,7 @@ Install Gems 前用子账户重新设置运行目录权限 `sudo chown -R huginn
 ```bash
 # 注意看黄字警告
 gem install bundler
-# Docker 环境中，时区容易丢失
+# Docker 环境中，时区容易丢失(6-70)
 apt-get install tzdata
 # Install Gems
 sudo -u huginn -H bundle config set deployment 'true'
@@ -202,7 +232,7 @@ sudo -u huginn -H bundle exec rake db:create RAILS_ENV=production
 # Migrate to the latest version
 sudo -u huginn -H bundle exec rake db:migrate RAILS_ENV=production
 
-# 设置登陆账户密码，Create admin user and example agents using the default admin/password login
+# ⚠️设置登陆账户密码，Create admin user and example agents using the default admin/password login
 sudo -u huginn -H bundle exec rake db:seed RAILS_ENV=production SEED_USERNAME=admin SEED_PASSWORD=password
 
 # Compile Assets
@@ -263,11 +293,11 @@ sudo nginx -t
 sudo rm /etc/nginx/sites-enabled/default
 ```
 
-以上完成了 Huginn 的所有部署。
+以上完成了 Huginn 的所有部署，执行 `sudo service nginx restart` 即可访问网站。
 
 ### Huginn Docker
 
-Huginn [multi-process](https://github.com/huginn/huginn/tree/master/docker/multi-process) 镜像基于 Ubuntu 18.04，没有 root 权限。如果不导出卷，或者使用单独的数据库容器，则无法在不丢失数据的情况下更新 Huginn。
+Huginn [multi-process](https://github.com/huginn/huginn/tree/master/docker/multi-process) 镜像基于 Ubuntu 18.04，没有 root 权限。如果不导出卷，或者使用单独的数据库容器，则无法在不丢失数据的情况下更新 Huginn。可以手动设置数据库对外端口和外部存储路径。
 
 此外，官方镜像路径与手动版不同，不支持 force_stop 命令。官方建议 Docker 中使用下方命令删除数据库中卡住的任务。这个命令实测是有效的，但我有次碰到了未知 bug，卡住的任务被删除，后续任务却没继续。
 
