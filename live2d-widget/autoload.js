@@ -36,7 +36,8 @@ if (screen.width >= 768) {
 			waifuPath: live2d_path + "waifu-tips.json",
 			// apiPath: "https://live2d.fghrsh.net/api/",
 			// cdnPath: "https://live2d-api.aishort.top/",
-			// apiPath 和 cdnPath 二选一。在这里，我们默认使用本地 cdn。如果你选择自建 api，需注释掉 cdnPath。如果需要第三方的 cdnpath，可考虑使用 Vercel + Cloudflare。
+			// apiPath 和 cdnPath 二选一。API 部署复杂，不过性能更佳，能设定模型，切换衣服方便。
+			// 在这里，我们默认使用本地 cdn。如果你选择自建 api，需注释掉 cdnPath。如果需要第三方的 cdnpath，可考虑使用 Vercel + Cloudflare。
 			cdnPath: live2d_path + "live2d_api/",
 			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
 		});
