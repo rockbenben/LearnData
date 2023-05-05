@@ -46,9 +46,24 @@ icon: note
 
    ![](https://img.newzone.top/2023-03-14-04-02-16.png?imageMogr2/format/webp)
 
-3. 接下来，进入菜单栏顶部的「Actions」>「最新的 workflow」，点击右上方的「Re-run jobs」>「Re-run all jobs」，重新生成网页。若部署正确，GitHub 将自动搭建 gh-page branch 页面。(如果你不需要将**文件同步到服务器**，则请删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，以避免出现报错。)
+3. 接下来，请进入菜单栏顶部的「Actions」>「最新的 workflow」，并点击右上方的「Re-run jobs」>「Re-run all jobs」，以重新生成网页。若部署正确，GitHub 将自动搭建 gh-page 分支页面。需要注意的是：如果你不需要将网页部署同步到个人服务器，**请删除 `.github/workflows/main.yml` 中 Sync files 区块的代码**，否则会出现报错 `Error: Input required and not supplied: server`。
 
    ![](https://img.newzone.top/2023-03-14-04-04-52.gif?imageMogr2/format/webp)
+
+   ```yaml
+      ### 没有服务器的话，请删除本区块代码，防止报错 ###
+      # 将页面推送到服务器，timeout 时间从默认的 1 分钟调整到 10 分钟。
+      - name: 📂 Sync files
+         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+         with:
+            local-dir: docs/.vuepress/dist/
+            server: ${{ secrets.ftp_host }}
+            username: ${{ secrets.ftp_username }}
+            password: ${{ secrets.ftp_password }}
+            port: ${{ secrets.ftp_port }} # 建议更改默认的 21 端口
+            timeout: 600000
+      ### 没有服务器的话，请删除本区块代码，防止报错 ###
+   ```
 
 4. 然后点击「Settings」, 修改 `Repository name` 为 `用户名.github.io`。假设你的仓库链接是 `https://github.com/xxx/LearnData`，那么中间的 `xxx` 就是你的用户名。如果该仓库名称已被使用，GitHub Pages 将无法正常显示样式，请查看页面底部的常见问题来设置子域名。
 
@@ -61,6 +76,10 @@ icon: note
 6. 设置成功后，页面会提示访问链接：`https://xxx.github.io/`，知识库搭建完毕。
 
    如果未出现访问链接提示或不能打开 GitHub Pages，则删除 `docs/_posts` 路径下的博客文件，GitHub Pages 有时会对旧文章里的代码报错。
+
+注意：如果出现报错 `Error: Input required and not supplied: server`，请删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，以避免出现报错。
+
+
 
 ## 🔣 配置 LearnData
 
