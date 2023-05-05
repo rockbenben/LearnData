@@ -22,8 +22,10 @@ order: 2
 - Liquid Output Agent 自定义格式数据输出，可以用它创建 HTML 页面，json 数据等
 
 - Webhook Agent
+- Trigger Agent 监测敏感事件，然后可以用来发送邮件等提醒。
 - Javascript Agent 允许执行自定义的 JS 代码，可以用于个性化操作
 - Digest Agent 汇总节点，收集所有收到的事件再作为一个事件发送出去
+- Email Agent 用邮箱发送最新接收到的讯息
 - Post Agent 可以由其他节点触发，根据固定模板合并事件信息，并以 POST 或 GET 方式向指定的 URL 发起请求
 - Delay Agent 可以作为事件或者副本的暂存器或者缓冲区，统一触发发布
 - Scheduler Agent 定时器节点
@@ -901,25 +903,23 @@ Include the `dropbox-api` and `omniauth-dropbox` gems in your `Gemfile` and set 
 
 ---
 
-### Email Agent - 邮件触发器？
+### Email Agent
 
-`Receives events`
+Email Agent 将刚收到的信息 `Receives events`，以邮件形式发送通知。
 
-Email Agent 收到任何内容后，会立即发送邮件通知。
+你可以通过提供`subject`选项来指定邮件的主题行，该选项可以包含[Liquid](https://github.com/huginn/huginn/wiki/Formatting-Events-using-Liquid)的格式。例如，你可以提供`"Huginn email"`来设置一个简单的主题，或者`{{subject}}`来使用传入事件中的`subject`键。
 
-You can specify the email’s subject line by providing a `subject` option, which can contain [Liquid](https://github.com/huginn/huginn/wiki/Formatting-Events-using-Liquid) formatting. E.g., you could provide `"Huginn email"` to set a simple subject, or `{{subject}}` to use the `subject` key from the incoming Event.
+默认情况下，邮件正文将包含一个可选的 "标题"，然后是事件的键的列表。
 
-By default, the email body will contain an optional `headline`, followed by a listing of the Events’ keys.
+你可以通过加入可选的`body`参数来定制邮件正文。像`subject`一样，`body`可以是一个简单的信息或一个液体模板。你可以只发送事件的`some_text`字段，`body`设置为`{{ some_text }}`。身体可以包含简单的 HTML，并将被净化。注意，当使用`body`时，它将被`<html>`和`<body>`标签包裹，所以你不需要自己添加这些。
 
-You can customize the email body by including the optional `body` param. Like the `subject`, the `body` can be a simple message or a Liquid template. You could send only the Event's `some_text` field with a `body` set to `{{ some_text }}`. The body can contain simple HTML and will be sanitized. Note that when using `body`, it will be wrapped with `<html>` and `<body>` tags, so you do not need to add these yourself.
+你可以为邮件指定一个或多个 "收件人"，或者跳过这个选项，以便将邮件发送到你的账户的默认邮件地址。
 
-You can specify one or more `recipients` for the email, or skip the option in order to send the email to your account's default email address.
+你可以为邮件提供一个`from`地址，或者留空，默认为`EMAIL_FROM_ADDRESS` (``) 的值。
 
-You can provide a `from` address for the email, or leave it blank to default to the value of `EMAIL_FROM_ADDRESS` (``).
+你可以为邮件提供一个`content_type`，并指定发送`text/plain`或`text/html`。如果你不指定`content_type`，那么收件人的邮件服务器将决定正确的渲染方式。
 
-You can provide a `content_type` for the email and specify `text/plain` or `text/html` to be sent. If you do not specify `content_type`, then the recipient email server will determine the correct rendering.
-
-Set `expected_receive_period_in_days` to the maximum amount of time that you'd expect to pass between Events being received by this Agent.
+设置`expected_receive_period_in_days`为您希望该代理收到事件之间的最大时间。
 
 ---
 
