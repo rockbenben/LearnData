@@ -46,9 +46,11 @@ icon: note
 
    ![](https://img.newzone.top/2023-03-14-04-02-16.png?imageMogr2/format/webp)
 
-3. 接下来，请进入菜单栏顶部的「Actions」>「最新的 workflow」，并点击右上方的「Re-run jobs」>「Re-run all jobs」，以重新生成网页。若部署正确，GitHub 将自动搭建 gh-page 分支页面。需要注意的是：如果你不需要将网页部署同步到个人服务器，**请删除 `.github/workflows/main.yml` 中 Sync files 区块的代码**，否则会出现报错 `Error: Input required and not supplied: server`。
+3. 接下来，请进入菜单栏顶部的「Actions」>「最新的 workflow」，并点击右上方的「Re-run jobs」>「Re-run all jobs」，以重新生成网页。若部署正确，GitHub 将自动搭建 gh-page 分支页面。
 
    ![](https://img.newzone.top/2023-03-14-04-04-52.gif?imageMogr2/format/webp)
+
+   需要注意的是：如果你不需要将网页部署同步到个人服务器，**请删除 `.github/workflows/main.yml` 中 Sync files 区块的代码**，否则会出现报错 `Error: Input required and not supplied: server`。
 
    ```yaml
       ### 没有服务器的话，请删除本区块代码，防止报错 ###
