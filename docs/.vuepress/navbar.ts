@@ -55,6 +55,7 @@ export default navbar([
     icon: "advance",
     children: [
       { text: "微信", icon: "wechat", link: "https://img.newzone.top/wechat.svg" },
+      { text: "Email", icon: "alias", link: "mailto:learndata@newzone.top" },
       { text: "Discord", icon: "group", link: "https://discord.gg/PZTQfJ4GjX" },
       { text: "RSS", icon: "rss", link: "https://newzone.top/rss.xml" },
     ],
