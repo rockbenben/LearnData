@@ -15,6 +15,8 @@ ChatGPT 的回复质量取决于提示词（即 Prompt）。这通常是用户�
 
 为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 ChatGPT Shortcut 项目。即使是初学者，你只需**打开 [ChatGPT Shortcut](https://www.aishort.top)，复制提示词，稍加修改后发送给 ChatGPT**，就能获得指定输出，让你的生产力加倍！
 
+<BiliBili bvid="BV1os4y137WH" />
+
 ## 使用说明
 
 ChatGPT Shortcut 页面默认显示全部的提示词，页面分为标签区、搜索区和提示词展示区。
