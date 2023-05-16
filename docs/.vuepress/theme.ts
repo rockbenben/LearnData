@@ -1,18 +1,21 @@
-import { path } from "@vuepress/utils";
+import { getDirname, path } from "@vuepress/utils";
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
 
+const __dirname = getDirname(import.meta.url);
+
 export default hopeTheme({
   // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
   hostname: "https://newzone.top",
+
+  iconAssets: "iconfont",
 
   author: {
     name: "清顺",
     url: "https://newzone.top",
   },
 
-  iconAssets: "iconfont",
   logo: "/logo.svg",
 
   // 是否全局启用路径导航
@@ -25,13 +28,7 @@ export default hopeTheme({
 
   // 深色模式配置
   darkmode: "switch",
-
-  themeColor: {
-    blue: "#2196f3",
-    red: "#f26d6d",
-    green: "#3eaf7c",
-    orange: "#fb9b5f",
-  },
+  // 全屏按钮
   fullscreen: true,
 
   // 默认为 GitHub. 同时也可以是一个完整的 URL
@@ -76,7 +73,7 @@ export default hopeTheme({
     medias: {
       GitHub: "https://github.com/rockbenben",
       Zhihu: "https://www.zhihu.com/people/qingwhat",
-      '少数派': [
+      少数派: [
         "https://sspai.com/u/zqj05i4v/posts",
         path.resolve(__dirname, "icons/sspai.svg"),
       ],
@@ -86,14 +83,12 @@ export default hopeTheme({
       RSS: "https://newzone.top/rss.xml",
     },
   },
-  // 开发模式下是否启动热更新，显示所有更改并重新渲染
-  hotReload: true,
+
   // 隐藏打印按钮
-  print: false,
+  // print: false,
+
   plugins: {
-    blog: {
-      excerpt: true,
-    },
+    blog: true,
 
     // 评论配置（仅做样例，记得更换）
     comment: {
@@ -177,4 +172,7 @@ export default hopeTheme({
       count: 10,
     },
   },
+
+  // 开发模式下是否启动热更新，显示所有更改并重新渲染
+  hotReload: true,
 });
