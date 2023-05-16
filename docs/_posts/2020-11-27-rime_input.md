@@ -19,7 +19,7 @@ Rime 小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/re
 
 安装小狼毫时，不要修改用户文件夹位置，否则后续输入法定制容易出错。安装完成后，右键单击任务栏的小狼毫图标，点击「输入法设定」，勾选输入法（推荐「朙月拼音·简化字」），点击「中」，选择皮肤后即可使用小狼毫输入法。^[[30 分钟搞定 自由输入法 RIME 简明配置指南](https://www.jianshu.com/p/296bba666604)]^[[Rime 输入法—鼠须管 (Squirrel) 词库添加及配置](https://www.jianshu.com/p/cffc0ea094a7)]
 
-小狼毫不推荐使用[四叶草](https://github.com/fkxxyz/rime-cloverpinyin)等集成方案，建议参考 [Squirrel 鼠须管配置](https://github.com/ssnhd/rime)和[小狼毫 [rime_win][眀月拼音] 简单配置方法](https://blog.csdn.net/qq_42204675/article/details/86422450) 以「朙月拼音·简化字」为基础定制自己的输入法，最大限度提升输入法效率。小狼毫的魅力在于可自定义，让输入法按你的想法输出，定制流程参考下面的进阶指南。
+小狼毫不推荐使用[四叶草](https://github.com/fkxxyz/rime-cloverpinyin)等集成方案，建议参考 [Squirrel 鼠须管配置](https://github.com/ssnhd/rime)和[小狼毫 \[rime_win\]\[眀月拼音\] 简单配置方法](https://blog.csdn.net/qq_42204675/article/details/86422450) 以「朙月拼音·简化字」为基础定制自己的输入法，最大限度提升输入法效率。小狼毫的魅力在于可自定义，让输入法按你的想法输出，定制流程参考下面的进阶指南。
 
 ## 扩充词库
 
