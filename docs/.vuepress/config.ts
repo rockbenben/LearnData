@@ -1,11 +1,10 @@
-import { defineUserConfig } from "vuepress";
-// import { webpackBundler } from "@vuepress/bundler-webpack";
-// import { defineUserConfig } from "@vuepress/cli";
-import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { path } from "@vuepress/utils";
-import theme from "./theme";
+import { defineUserConfig } from "vuepress";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
+
+import theme from "./theme.js";
 
 export default defineUserConfig({
   // 网站语言，默认为中文
@@ -37,20 +36,23 @@ export default defineUserConfig({
   ],
 
   plugins: [
-    // algolia 全文搜索：没设置爬虫的话，需删除 docsearchPlugin 区块以使用节点搜索
+    // 谷歌分析
+    googleAnalyticsPlugin({
+      // 需要设置自己的 ID
+      id: "G-RWKZTY2P9R",
+    }),
+
+    // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
     docsearchPlugin({
       indexName: "newzone",
       appId: "M4EXXEZIEG",
       apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
     }),
-    // 本地搜索，删除上方 docsearchPlugin 区块后生效
-    searchProPlugin({
-      // 索引全部内容
-      indexContent: true,
-    }),
-    // 谷歌分析 ID
-    googleAnalyticsPlugin({
-      id: "G-RWKZTY2P9R",
-    }),
+
+    // // 本地搜索，和上方二选一
+    // searchProPlugin({
+    //   // 索引全部内容
+    //   indexContent: true,
+    // }),
   ],
 });

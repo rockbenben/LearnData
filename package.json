@@ -8,16 +8,19 @@
     "docs:build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache"
   },
+  "packageManager": "pnpm@8.5.1",
+  "engines": {
+    "node": ">=16.14.0"
+  },
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.61",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.61",
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.61",
-    "@vuepress/utils": "2.0.0-beta.61",
+    "@vuepress/client": "2.0.0-beta.62",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.62",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.62",
+    "@vuepress/utils": "2.0.0-beta.62",
     "cpx2": "^4.2.3",
-    "pnpm": "^8.1.1",
-    "vue": "^3.2.47",
-    "vuepress": "2.0.0-beta.61",
-    "vuepress-plugin-search-pro": "2.0.0-beta.201",
-    "vuepress-theme-hope": "2.0.0-beta.201"
+    "vue": "^3.3.2",
+    "vuepress": "2.0.0-beta.62",
+    "vuepress-plugin-search-pro": "2.0.0-beta.211",
+    "vuepress-theme-hope": "2.0.0-beta.211"
   }
 }
