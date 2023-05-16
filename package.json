@@ -6,7 +6,11 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:clean-dev": "vuepress dev docs --clean-cache"
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --check --write .",
+    "lint:markdown": "markdownlint docs",
+    "lint:markdown-fix": "markdownlint docs --fix"
   },
   "dependencies": {
     "@vuepress/client": "2.0.0-beta.61",
@@ -14,7 +18,9 @@
     "@vuepress/plugin-google-analytics": "2.0.0-beta.61",
     "@vuepress/utils": "2.0.0-beta.61",
     "cpx2": "^4.2.3",
+    "markdownlint-cli": "^0.34.0",
     "pnpm": "^8.1.1",
+    "prettier": "^2.8.8",
     "vue": "^3.2.47",
     "vuepress": "2.0.0-beta.61",
     "vuepress-plugin-search-pro": "2.0.0-beta.201",

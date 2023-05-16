@@ -32,7 +32,7 @@ order: -39
 
 ## 红包封面设计
 
-完成注册环节后，即可定制红包封面。微信提供了 PSD 和  Sketch 的红包封面模板，红包设计可参考[微信红包封面官方文档](https://cover.weixin.qq.com/cgi-bin/mmcover-bin/readtemplate?t=page/index#/doc?page=design&index=-1)。
+完成注册环节后，即可定制红包封面。微信提供了 PSD 和 Sketch 的红包封面模板，红包设计可参考[微信红包封面官方文档](https://cover.weixin.qq.com/cgi-bin/mmcover-bin/readtemplate?t=page/index#/doc?page=design&index=-1)。
 
 整个流程非常简单，即使不懂设计模板也能轻松上手。零基础用户可以使用小画家，有图层概念的用户可以使用 Figma。无论使用什么工具，只要上传喜欢的图片，就可以完成红包设计。
 

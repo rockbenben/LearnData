@@ -84,7 +84,7 @@ order: -2
 
 ## 5. 获取 RSS 地址
 
-点击 Feed URL 可得 RSS 地址，样例是 https://www.feed43.com/dianji.xml。
+点击 Feed URL 可得 RSS 地址，样例是 <https://www.feed43.com/dianji.xml>。
 
 ![](https://pic1.zhimg.com/v2-f3b00e876d8df136f7d354b4fc22f900_r.jpg)
 
@@ -96,7 +96,7 @@ order: -2
 
 FEED43 导出的条目需要点击链接才能查看内容。要在 RSS 中展示全文，需要通过 FeedEx 再转换一次。注意：FEED43 免费用户过多，需要在浏览器中打开一次才能获得真实链接（一般为 `http://node2.feed43.com`）。FeedEx 需要使用真实链接，一般 3 分钟内转换完毕。
 
-FeedEx: https://feedex.net/
+FeedEx: <https://feedex.net/>
 
 ![](https://pic4.zhimg.com/v2-8e3701adffa1d6fb4ea10dda2704988b_r.jpg)
 

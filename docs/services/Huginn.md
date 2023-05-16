@@ -484,7 +484,7 @@ Adioso Agent 可以查询两个城市间，在指定时间内的最低飞机票�
 Aftership agent 帮助你追踪你的快递，并实时更新包裹动态。为了能够使用 Aftership API，您需要生成一个 `API Key`。这需要付费才能使用其跟踪功能。
 
 操作说明：
-Provide the `path` for the API endpoint that you’d like to hit. For example, for all active packages, enter `trackings` (see https://www.aftership.com/docs/api/4/trackings), for a specific package, use `trackings/SLUG/TRACKING_NUMBER` and replace `SLUG` with a courier code and `TRACKING_NUMBER` with the tracking number. You can request last checkpoint of a package by providing `last_checkpoint/SLUG/TRACKING_NUMBER` instead.
+Provide the `path` for the API endpoint that you’d like to hit. For example, for all active packages, enter `trackings` (see <https://www.aftership.com/docs/api/4/trackings>), for a specific package, use `trackings/SLUG/TRACKING_NUMBER` and replace `SLUG` with a courier code and `TRACKING_NUMBER` with the tracking number. You can request last checkpoint of a package by providing `last_checkpoint/SLUG/TRACKING_NUMBER` instead.
 
 You can get a list of courier information here `https://www.aftership.com/courier`
 
@@ -827,7 +827,7 @@ For instance, say `retained_events` is set to 3 and the Agent has received Event
 
 ### Dkt Clustering Agent - 数据挖掘算法？
 
-`Creates events` `Receives events` `Consumes file pointer` `Dry runs `
+`Creates events` `Receives events` `Consumes file pointer` `Dry runs`
 [huginn_dkt_curation_agents](http://huginnio.herokuapp.com/agent_gems#huginn_dkt_curation_agents) 使用 DKT APIs，其中含有多个 agents，具体查看上方链接。
 
 The `DktClusteringAgent` clusters the input document collection. The document collection first has to be converted to a set of vectors.
@@ -841,7 +841,7 @@ All Agent configuration options are interpolated using [Liquid](https://github.c
 
 `url` allows to customize the endpoint of the API when hosting the DKT services elswhere.
 
-`body` use [Liquid](https://github.com/cantino/huginn/wiki/Formatting-Events-using-Liquid) templating to specify the input .arff file. See http://www.cs.waikato.ac.nz/ml/weka/arff.html for an explanation of this format.
+`body` use [Liquid](https://github.com/cantino/huginn/wiki/Formatting-Events-using-Liquid) templating to specify the input .arff file. See <http://www.cs.waikato.ac.nz/ml/weka/arff.html> for an explanation of this format.
 
 `language` language of the source data
 

@@ -6,9 +6,7 @@ icon: note
 
 > 开源工具、效率方法、心理学探索的自我提升笔记
 
-<a href="https://discord.gg/PZTQfJ4GjX">
-   <img src="https://img.shields.io/discord/1048780149899939881?color=%2385c8c8&label=Discord&logo=discord&style=for-the-badge" alt="chat on Discord">
-</a>
+[![Chat on Discord](https://img.shields.io/discord/1048780149899939881?color=%2385c8c8&label=Discord&logo=discord&style=for-the-badge)](https://discord.gg/PZTQfJ4GjX)
 
 ## ✨ 初衷
 
@@ -80,8 +78,6 @@ icon: note
    如果未出现访问链接提示或不能打开 GitHub Pages，则删除 `docs/_posts` 路径下的博客文件，GitHub Pages 有时会对旧文章里的代码报错。
 
 注意：如果出现报错 `Error: Input required and not supplied: server`，请删除 `.github/workflows/main.yml` 中 Sync files 区块的代码，以避免出现报错。
-
-
 
 ## 🔣 配置 LearnData
 

@@ -1,0 +1,15 @@
+# Vuepress Cache
+**/.vuepress/.cache/**
+# Vuepress Temp
+**/.vuepress/.temp/**
+# Vuepress Output
+**/.vuepress/dist/**
+
+# live2d
+docs/.vuepress/public/live2d-widget/**
+
+# Node modules
+node_modules/
+
+# pnpm lock file
+pnpm-lock.yaml

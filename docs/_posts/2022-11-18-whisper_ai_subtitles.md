@@ -81,8 +81,8 @@ scoop install ffmpeg
 - `--temperature_increment_on_fallback` 当解码失败时，回推时要增加的 temperature，默认为 0.2。
 - `--best_of` temperature 不为零时的侯选个数，默认为 5。
 - `--beam_size` temperature 为零时，number of beams in beam search，默认为 5。beam 直译是光束，但没理解具体意思，我简单理解其为侯选数。
-- `--patience` 用于 beam decoding 的 patience value，as in https://arxiv.org/abs/2204.05424, 其默认值为 1.0，相当于 conventional beam search（default: None）默认的 simple length normalization（default: None）。
-- `--length_penalty` optional token length penalty coefficient (alpha) as in https://arxiv.org/abs/1609.08144, 默认使用 simple length normalization (default: None)
+- `--patience` 用于 beam decoding 的 patience value，as in <https://arxiv.org/abs/2204.05424>, 其默认值为 1.0，相当于 conventional beam search（default: None）默认的 simple length normalization（default: None）。
+- `--length_penalty` optional token length penalty coefficient (alpha) as in <https://arxiv.org/abs/1609.08144>, 默认使用 simple length normalization (default: None)
 - `--suppress_tokens` 逗号分隔的标记 ID 列表，以便在采样过程中进行抑制; 默认为 -1，这会抑制除常见标点符号外的大多数特殊字符的出现。
 - `--initial_prompt` 可选的文本提示，在命令首行出现，默认为空。
 - `--condition_on_previous_text` 默认为 True，为下一个窗口提供模型之前的输出作为提示；禁用可能会使不同窗口的文本不一致，但模型变得不容易陷入失败循环。

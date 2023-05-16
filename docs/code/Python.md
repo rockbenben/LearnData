@@ -189,7 +189,7 @@ while count:  # 0 为 False，其他为 True
         print("密码正确，进入程序")
         break
     elif "*" in passwd:
-		# end=" "为后缀，可空，默认为换行符
+  # end=" "为后缀，可空，默认为换行符
         print("密码不能含有“*”，你还有",count,"次机会", end=" ")
         continue
     else:

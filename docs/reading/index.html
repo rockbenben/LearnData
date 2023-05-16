@@ -1,215 +1,229 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>LearnData - 读书笔记</title>
-  <meta name="description" content="读书笔记" />
-  <meta name="keywords" content="读书笔记,阅读笔记" />
-  <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/themes/vue.css">
-  <link rel="stylesheet" href="https://oss.newzone.top/docsify/docsify-toc/dist/toc.css">
-  <!-- <link rel="stylesheet" href="https://oss.newzone.top/docsify/docsify-gifcontrol/dist/docsify-gifcontrol.css"> -->
-  <!-- docsify waline -->
-  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
-  <style>
-    .anchor {
-      font-weight: bold;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
-    }
-
-    .app-name {
-      width: 150px;
-    }
-
-    section.cover h1 {
-      margin: 1.5rem 0 1.5rem;
-    }
-
-    section.cover p {
-      text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
-    }
-
-    .app-sub-sidebar li:before {
-      content: "○";
-    }
-
-    /* toc 距离顶端的距离 */
-    .page_toc {
-      top: 12rem;
-    }
-
-    /* 宽度大于 1300px 才会显示 TOC */
-    @media screen and (max-width: 1300px) {
-      .nav {
-        display: none;
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>LearnData - 读书笔记</title>
+    <meta name="description" content="读书笔记" />
+    <meta name="keywords" content="读书笔记,阅读笔记" />
+    <link
+      rel="stylesheet"
+      href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/themes/vue.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://oss.newzone.top/docsify/docsify-toc/dist/toc.css"
+    />
+    <!-- <link rel="stylesheet" href="https://oss.newzone.top/docsify/docsify-gifcontrol/dist/docsify-gifcontrol.css"> -->
+    <!-- docsify waline -->
+    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+    />
+    <style>
+      .anchor {
+        font-weight: bold;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
       }
-    }
 
-    /* 宽度小于 1300px 则隐藏 waline 评论框，避免异常 */
-    @media screen and (min-width: 1300px) {
-      #waline {
-        display: none;
+      .app-name {
+        width: 150px;
       }
-    }
-  </style>
-  <!-- Matomo 此区块为统计代码，请删除-->
-  <script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function () {
-      var u = "https://piwik.seoipo.com/";
-      _paq.push(['setTrackerUrl', u + 'matomo.php']);
-      _paq.push(['setSiteId', '7']);
-      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-      g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
-    })();
-  </script>
-  <!-- End Matomo Code 此区块为统计代码，请删除-->
-</head>
 
-<body class="body--ready">
-  <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
-  <script>
-    window.$docsify = {
-      name: '<p>🌈 读书笔记</p>', // 文档标题，会显示在侧边栏顶部
-      nameLink: 'https://newzone.top/', // 点击文档标题后跳转的链接地址。
-      // repo: 'https://github.com/rockbenben/LearnData',
-      // logo: '/_media/icon.svg', // 在侧边栏中出现的网站图标，你可以使用 CSS 来更改大小
-      // homepage: 'README.md', // 设置首页文件加载路径。适合不想将 README.md 作为入口文件渲染，或者是文档存放在其他位置的情况使用。
-      // coverpage: true, // 启用封面页。开启后是加载 _coverpage.md 文件，也可以自定义文件名。
-      // onlyCover: true, // 只在访问主页时加载封面。
-      notFoundPage: 'README.md', // 404 时返回主页，也可以自定义加载的文件名。
-      auto2top: true, // 切换页面后是否自动跳转到页面顶部
-      // routerMode: 'history', // 设置路由模式，浏览器链接里不会出现 #
-      // relativePath: true, //默认为绝对路径，为 true 则链接会使用相对路径。
+      section.cover h1 {
+        margin: 1.5rem 0 1.5rem;
+      }
 
-      loadNavbar: true,   // 加载自定义导航栏。设置为 true 后会加载 _navbar.md 文件，也可以自定义加载的文件名。
-      mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏。
-      topMargin: 40, // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用固定页头布局时这个选项很有用，可以让你的锚点对齐标题栏。
+      section.cover p {
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+      }
 
-      loadSidebar: true,  // 加载自定义侧边栏。设置为 true 后会加载 _sidebar.md 文件，也可以自定义加载的文件名。
-      // autoHeader: true, // 同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题
+      .app-sub-sidebar li:before {
+        content: "○";
+      }
 
-      maxLevel: 4,//默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
-      subMaxLevel: 2,//自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
+      /* toc 距离顶端的距离 */
+      .page_toc {
+        top: 12rem;
+      }
 
-      // 我们可以通过 {docsify-updated} 变量显示文档更新日期。并且通过 formatUpdated 配置日期格式。参考 https://github.com/lukeed/tinydate#patterns
-      // formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}', 
+      /* 宽度大于 1300px 才会显示 TOC */
+      @media screen and (max-width: 1300px) {
+        .nav {
+          display: none;
+        }
+      }
 
-      // 全文搜索插件会根据当前页面上的超链接获取文档内容，在 localStorage 内建立文档索引。
-      search: 'auto', // 默认值
-      // 搜索完整配置参数
-      search: {
-        maxAge: 86400000, // 缓存过期时间，单位毫秒，默认一天
-        paths: 'auto',
-        placeholder: '🔍 搜索',
-        noData: '😒 找不到结果，请缩短搜索词',
+      /* 宽度小于 1300px 则隐藏 waline 评论框，避免异常 */
+      @media screen and (min-width: 1300px) {
+        #waline {
+          display: none;
+        }
+      }
+    </style>
+    <!-- Matomo 此区块为统计代码，请删除-->
+    <script>
+      var _paq = (window._paq = window._paq || []);
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "https://piwik.seoipo.com/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "7"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = u + "matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <!-- End Matomo Code 此区块为统计代码，请删除-->
+  </head>
 
-        // 搜索标题的最大层级，1 - 6
-        depth: 2,
+  <body class="body--ready">
+    <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
+    <script>
+      window.$docsify = {
+        name: "<p>🌈 读书笔记</p>", // 文档标题，会显示在侧边栏顶部
+        nameLink: "https://newzone.top/", // 点击文档标题后跳转的链接地址。
+        // repo: 'https://github.com/rockbenben/LearnData',
+        // logo: '/_media/icon.svg', // 在侧边栏中出现的网站图标，你可以使用 CSS 来更改大小
+        // homepage: 'README.md', // 设置首页文件加载路径。适合不想将 README.md 作为入口文件渲染，或者是文档存放在其他位置的情况使用。
+        // coverpage: true, // 启用封面页。开启后是加载 _coverpage.md 文件，也可以自定义文件名。
+        // onlyCover: true, // 只在访问主页时加载封面。
+        notFoundPage: "README.md", // 404 时返回主页，也可以自定义加载的文件名。
+        auto2top: true, // 切换页面后是否自动跳转到页面顶部
+        // routerMode: 'history', // 设置路由模式，浏览器链接里不会出现 #
+        // relativePath: true, //默认为绝对路径，为 true 则链接会使用相对路径。
 
-        hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
-      },
+        loadNavbar: true, // 加载自定义导航栏。设置为 true 后会加载 _navbar.md 文件，也可以自定义加载的文件名。
+        mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏。
+        topMargin: 40, // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用固定页头布局时这个选项很有用，可以让你的锚点对齐标题栏。
 
-      // 定义路由别名，可以更自由的定义路由规则。支持正则。
-      alias: {
-        '/foo/(.*)': '/bar/$1', // supports regexp
-        '/zh-cn/changelog': '/changelog',
-        '/.*/_sidebar.md': '/_sidebar.md', // See #301
-      },
+        loadSidebar: true, // 加载自定义侧边栏。设置为 true 后会加载 _sidebar.md 文件，也可以自定义加载的文件名。
+        // autoHeader: true, // 同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题
 
-      // 添加页脚
-      footer: {
-        copy: '盛年不重来，一日难再晨。 —— ',
-        auth: '🏷️ <a href="https://newzone.top/" target="_blank">LearnData</a><br/><br/><span id="sitetime"></span>',
-        //pre: '<hr/>',
-        style: 'text-align: left;',
-        //class: 'className',
-      },
+        maxLevel: 4, //默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
+        subMaxLevel: 2, //自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
 
-      toc: {
-        scope: '.markdown-section',
-        headings: 'h2, h3, h4, h5, h6',
-        title: '',
-      },
-      pagination: {
-        previousText: 'PREVIOUS',
-        nextText: 'NEXT',
-        crossChapter: true
-      },
-      //gifcontrol: {
-      //mode: 'click'
-      //},
+        // 我们可以通过 {docsify-updated} 变量显示文档更新日期。并且通过 formatUpdated 配置日期格式。参考 https://github.com/lukeed/tinydate#patterns
+        // formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}',
 
-      // docsify-waline 计算数字和评论支持
-      count: {
-        language: "chinese", // default:english|chinese
-      },
-      // 部署 Waline：https://waline.js.org/guide/get-started.html
-      // 阅读量统计与评论，不需要可删除本区块
-      waline: {
-        serverURL: "https://waline.newzone.top",
-        pageview: true, // 浏览量统计
-        // Waline 等级标签
-        walineLocales: {
-          "/": {
-            admin: "盛年不重来，一日难再晨",
-            level0: "锻体",
-            level1: "炼气",
-            level2: "筑基",
-            level3: "金丹",
-            level4: "元婴",
-            level5: "化神",
+        // 全文搜索插件会根据当前页面上的超链接获取文档内容，在 localStorage 内建立文档索引。
+        search: "auto", // 默认值
+        // 搜索完整配置参数
+        search: {
+          maxAge: 86400000, // 缓存过期时间，单位毫秒，默认一天
+          paths: "auto",
+          placeholder: "🔍 搜索",
+          noData: "😒 找不到结果，请缩短搜索词",
+
+          // 搜索标题的最大层级，1 - 6
+          depth: 2,
+
+          hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+        },
+
+        // 定义路由别名，可以更自由的定义路由规则。支持正则。
+        alias: {
+          "/foo/(.*)": "/bar/$1", // supports regexp
+          "/zh-cn/changelog": "/changelog",
+          "/.*/_sidebar.md": "/_sidebar.md", // See #301
+        },
+
+        // 添加页脚
+        footer: {
+          copy: "盛年不重来，一日难再晨。 —— ",
+          auth: '🏷️ <a href="https://newzone.top/" target="_blank">LearnData</a><br/><br/><span id="sitetime"></span>',
+          //pre: '<hr/>',
+          style: "text-align: left;",
+          //class: 'className',
+        },
+
+        toc: {
+          scope: ".markdown-section",
+          headings: "h2, h3, h4, h5, h6",
+          title: "",
+        },
+        pagination: {
+          previousText: "PREVIOUS",
+          nextText: "NEXT",
+          crossChapter: true,
+        },
+        //gifcontrol: {
+        //mode: 'click'
+        //},
+
+        // docsify-waline 计算数字和评论支持
+        count: {
+          language: "chinese", // default:english|chinese
+        },
+        // 部署 Waline：https://waline.js.org/guide/get-started.html
+        // 阅读量统计与评论，不需要可删除本区块
+        waline: {
+          serverURL: "https://waline.newzone.top",
+          pageview: true, // 浏览量统计
+          // Waline 等级标签
+          walineLocales: {
+            "/": {
+              admin: "盛年不重来，一日难再晨",
+              level0: "锻体",
+              level1: "炼气",
+              level2: "筑基",
+              level3: "金丹",
+              level4: "元婴",
+              level5: "化神",
+            },
           },
         },
-      },
-    }
-  </script>
+      };
+    </script>
 
-  <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/docsify.min.js"></script>
-  <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/plugins/search.min.js"></script>
-  <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/plugins/zoom-image.min.js"></script>
-  <script src="https://oss.newzone.top/docsify/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="https://oss.newzone.top/docsify/docsify-toc/dist/toc.js"></script>
-  <script src="https://oss.newzone.top/docsify/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
-  <!-- 
-  <script src="https://oss.newzone.top/docsify/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script>
-  -->
+    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/docsify.min.js"></script>
+    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/plugins/search.min.js"></script>
+    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/docsify/4.12.2/plugins/zoom-image.min.js"></script>
+    <script src="https://oss.newzone.top/docsify/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="https://oss.newzone.top/docsify/docsify-toc/dist/toc.js"></script>
+    <script src="https://oss.newzone.top/docsify/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+    <!-- 
+    <script src="https://oss.newzone.top/docsify/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script>
+    -->
 
-  <!-- 使用 Gitter 实现一个 IM 即时通讯聊天室功能 
-  <script>
-    ((window.gitter = {}).chat = {}).options = {
-      room: 'usthe/sureness'
-    };
-  </script>
-  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-  -->
+    <!-- 使用 Gitter 实现一个 IM 即时通讯聊天室功能 
+    <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'usthe/sureness'
+      };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+    -->
 
-  <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/instant.page/5.1.0/instantpage.min.js"></script>
-  <!-- 添加网站运行时间统计 -->
-  <script language=javascript>
-    function siteTime() {
-      window.setTimeout("siteTime()", 1000);
-      var seconds = 1000;
-      var minutes = seconds * 60;
-      var hours = minutes * 60;
-      var days = hours * 24;
-      var years = days * 365;
-      var today = new Date();
-      var todayYear = today.getFullYear();
-      var todayMonth = today.getMonth() + 1;
-      var todayDate = today.getDate();
-      var todayHour = today.getHours();
-      var todayMinute = today.getMinutes();
-      var todaySecond = today.getSeconds();
-      /* Date.UTC() -- 返回 date 对象距世界标准时间 (UTC)1970 年 1 月 1 日午夜之间的毫秒数 (时间戳)
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/instant.page/5.1.0/instantpage.min.js"></script>
+    <!-- 添加网站运行时间统计 -->
+    <script language="javascript">
+      function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回 date 对象距世界标准时间 (UTC)1970 年 1 月 1 日午夜之间的毫秒数 (时间戳)
       year - 作为 date 对象的年份，为 4 位年份值
       month - 0-11 之间的整数，做为 date 对象的月份
       day - 1-31 之间的整数，做为 date 对象的天数
@@ -217,25 +231,61 @@
       minutes - 0-59 之间的整数，做为 date 对象的分钟数
       seconds - 0-59 之间的整数，做为 date 对象的秒数
       microseconds - 0-999 之间的整数，做为 date 对象的毫秒数 */
-      var t1 = Date.UTC(2022, 07, 23, 22, 22, 22); //北京时间 2022-07-23 22:22:22 //LearnData 首个 commit 时间，该为你自己值得纪念的日子吧
-      var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-      var diff = t2 - t1;
-      var diffYears = Math.floor(diff / years);
-      var diffDays = Math.floor((diff / days) - diffYears * 365);
-      var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-      var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-      var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-      if (diffYears > 0) {
-        document.getElementById("sitetime").innerHTML = " 已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒 ";
-      } else {
-        document.getElementById("sitetime").innerHTML = " 已运行 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒 ";
+        var t1 = Date.UTC(2022, 07, 23, 22, 22, 22); //北京时间 2022-07-23 22:22:22 //LearnData 首个 commit 时间，该为你自己值得纪念的日子吧
+        var t2 = Date.UTC(
+          todayYear,
+          todayMonth,
+          todayDate,
+          todayHour,
+          todayMinute,
+          todaySecond
+        );
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor(diff / days - diffYears * 365);
+        var diffHours = Math.floor(
+          (diff - (diffYears * 365 + diffDays) * days) / hours
+        );
+        var diffMinutes = Math.floor(
+          (diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+            minutes
+        );
+        var diffSeconds = Math.floor(
+          (diff -
+            (diffYears * 365 + diffDays) * days -
+            diffHours * hours -
+            diffMinutes * minutes) /
+            seconds
+        );
+        if (diffYears > 0) {
+          document.getElementById("sitetime").innerHTML =
+            " 已运行 " +
+            diffYears +
+            " 年 " +
+            diffDays +
+            " 天 " +
+            diffHours +
+            " 小时 " +
+            diffMinutes +
+            " 分 " +
+            diffSeconds +
+            " 秒 ";
+        } else {
+          document.getElementById("sitetime").innerHTML =
+            " 已运行 " +
+            diffDays +
+            " 天 " +
+            diffHours +
+            " 小时 " +
+            diffMinutes +
+            " 分 " +
+            diffSeconds +
+            " 秒 ";
+        }
       }
-    }
-    siteTime();
-  </script>
-  <script src="https://oss.newzone.top/docsify/docsify-count/dist/countable.min.js"></script>
-  <script src="https://oss.newzone.top/docsify/docsify-waline/docsify-waline.min.js"></script>
-
-</body>
-
+      siteTime();
+    </script>
+    <script src="https://oss.newzone.top/docsify/docsify-count/dist/countable.min.js"></script>
+    <script src="https://oss.newzone.top/docsify/docsify-waline/docsify-waline.min.js"></script>
+  </body>
 </html>
