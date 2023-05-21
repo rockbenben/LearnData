@@ -48,6 +48,7 @@ sudo bundle exec rake production:export
 服务器重启后，需执行以下命令：
 
 ```bash
+sudo docker exec -it huginn bash
 sudo service mysql restart
 sudo service mysql start
 sudo service nginx restart
@@ -92,7 +93,6 @@ sudo docker exec -it huginn bash
 # run as root!
 apt-get update -y
 apt-get upgrade -y
-
 apt-get install sudo -y
 
 # Install vim and set as default editor
@@ -100,7 +100,7 @@ sudo apt-get install -y vim
 sudo update-alternatives --set editor /usr/bin/vim.basic
 
 # Install the required packages
-sudo apt-get install -y runit build-essential git zlib1g-dev libyaml-dev libssl-dev libgdbm-dev libreadline-dev libncurses5-dev libffi-dev curl openssh-server checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libicu-dev logrotate python-docutils pkg-config cmake nodejs graphviz jq shared-mime-info
+sudo apt-get install -y runit build-essential git zlib1g-dev libyaml-dev libssl-dev libgdbm-dev libreadline-dev libncurses5-dev libffi-dev curl openssh-server checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libicu-dev logrotate pkg-config cmake nodejs graphviz jq shared-mime-info
 
 # Ubuntu 18.04 Bionic
 sudo apt-get install -y runit-systemd
@@ -112,6 +112,9 @@ cd ruby-2.7.7
 ./configure --disable-install-rdoc
 make -j`nproc`
 sudo make install
+
+# curl -L --progress-bar https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.2.tar.xz | tar xJ
+# cd ruby-3.2.2
 
 sudo gem update --system --no-document
 sudo gem install foreman --no-document
@@ -146,8 +149,9 @@ FLUSH PRIVILEGES;
 # We'll install Huginn into the home directory of the user "huginn"
 cd /home/huginn
 
-# Clone Huginn repository
-sudo -u huginn -H git clone https://github.com/huginn/huginn.git -b master huginn
+# Clone Huginn repository，不能直接使用 master，避免 ruby 3.2 问题
+# sudo -u huginn -H git clone https://github.com/huginn/huginn.git -b master huginn
+sudo -u huginn -H git clone https://github.com/huginn/huginn.git -b latest_rubygems huginn
 
 # Go to Huginn installation folder
 cd /home/huginn/huginn
@@ -169,6 +173,7 @@ sudo -u huginn -H chmod o-rwx .env
 
 # Copy the example Unicorn config
 sudo -u huginn -H cp config/unicorn.rb.example config/unicorn.rb
+
 ```
 
 `sudo -u huginn -H editor .env` 设置 huginn 环境依赖，更多选项查看 [.env 设置案例](https://github.com/huginn/huginn/blob/master/.env.example)。编辑器为上面安装的 vim，`i` 在光标所在的位置插入，`esc` 退出编辑，`:wq` 保存并退出。
@@ -197,17 +202,17 @@ USE_GRAPHVIZ_DOT=dot # 取消注释，启用 GRAPHVIZ 来生成 diagram
 
 TIMEZONE="Beijing" # bundle exec rake time:zones:local，时区需按指定格式填写，否则会报错 runsv not running
 
-DEFAULT_HTTP_USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" # 浏览器访问
+DEFAULT_HTTP_USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" # 浏览器访问
 
 # 邮件发送设置
-SMTP_DOMAIN=your-domain-here.com
-SMTP_USER_NAME=you@gmail.com
+SMTP_DOMAIN=newzone.top
+SMTP_USER_NAME=benson@newzone.top
 SMTP_PASSWORD=somepassword
-SMTP_SERVER=smtp.gmail.com
-SMTP_PORT=587
+SMTP_SERVER=smtp.feishu.cn
+SMTP_PORT=465
 SMTP_AUTHENTICATION=plain
 SMTP_ENABLE_STARTTLS_AUTO=true
-SMTP_SSL=false
+SMTP_SSL=true
 SEND_EMAIL_IN_DEVELOPMENT=true
 ```
 
@@ -241,7 +246,7 @@ sudo -u huginn -H bundle exec rake db:seed RAILS_ENV=production SEED_USERNAME=ad
 sudo -u huginn -H bundle exec rake assets:precompile RAILS_ENV=production
 ```
 
-`sudo -u huginn -H editor Procfile` 修改 huginn 设置。
+`sudo -u huginn -H editor Procfile` 修改 huginn 设置。如果需多现成运行，可移除 Multiple DelayedJob workers 部分的注释。
 
 ```bash
 # 在下两行前，添加符号「#」
