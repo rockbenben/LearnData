@@ -85,20 +85,20 @@ order: 5
 
 ## 实用工具
 
-- [Vimium C](https://github.com/gdh1995/vimium-c/blob/master/README-zh.md)：全键盘操作浏览器，建议开启 `chrome://flags/#extensions-on-chrome-urls`。
+- [Tango](https://chrome.google.com/webstore/detail/tango/lggdbpblkekjjbobadliahffoaobaknh/)：将页面操作转化为逐步指导的流程指南。每一步都自动植入截图，并可以通过链接、HTML、Markdown 来分享。
 
-- [SingleFile](https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle/)：完整的网页保存到单个文件中，可以对文件名、HTML 内容、样式、图片、字体等进行调整。
+- [SingleFile](https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle/)：将完整网页保存到单个文件中，可对文件名、HTML 内容、样式、图片、字体等进行调整。
+
+- [Vimium C](https://github.com/gdh1995/vimium-c/blob/master/README-zh.md)：全键盘操作浏览器，建议启用 `chrome://flags/#extensions-on-chrome-urls`。
 
 - [SelectorGadget](https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb)：轻松获取网页元素的 CSS Path 或 XPath。
 
-- [Copy as Markdown](https://chrome.google.com/webstore/detail/copy-as-markdown/nlaionblcaejecbkcillglodmmfhjhfi/)：将网页文字转为 markdown 格式文本。
+- [Copy as Markdown](https://chrome.google.com/webstore/detail/copy-as-markdown/nlaionblcaejecbkcillglodmmfhjhfi/)：将网页文字转为 Markdown 格式文本。
 
-- [Get Favicon](https://chrome.google.com/webstore/detail/get-favicon/gpipahagclehninhhjkhbkliinfofnhe)：快速获取当前网站图标。
+- [Get Favicon](https://chrome.google.com/webstore/detail/get-favicon/gpipahagclehninhhjkhbkliinfofnhe)：快速获取当前网站的图标。
 
-- [Tango](https://chrome.google.com/webstore/detail/tango/lggdbpblkekjjbobadliahffoaobaknh/)：快速制作带截图的流程指南，不过较为简单，可以分享为链接，只适合临时分享的网页操作流程。
+- [Similar Sites](https://chrome.google.com/webstore/detail/similar-sites-discover-re/necpbmbhhdiplmfhmjicabdeighkndkn)：发现与当前浏览的网站相似的其他网站。
 
-- [Similar Sites](https://chrome.google.com/webstore/detail/similar-sites-discover-re/necpbmbhhdiplmfhmjicabdeighkndkn)：发现与您当前正在浏览的网站类似的网站。
+- [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg/)：查看竞争对手网站使用了哪些技术、工具和第三方服务。
 
-- [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg/)：查看竞争对手网站使用哪些技术、工具和第三方服务。
-
-- [Link to Text Fragment](https://chrome.google.com/webstore/detail/link-to-text-fragment/pbcodcjpfjdpcineamnnmbkkmkdpajjg)：分享网页并将高亮你选中文本 (仅支持 chrome 浏览器)。
+- [Link to Text Fragment](https://chrome.google.com/webstore/detail/link-to-text-fragment/pbcodcjpfjdpcineamnnmbkkmkdpajjg)：在 Chrome 浏览器中分享网页并突出显示所选文本。

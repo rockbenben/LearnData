@@ -53,21 +53,22 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 按平台选 [Docker Desktop](https://docs.docker.com/get-docker/) 版本，安装后点击左侧的 Add Extensions，推荐安装 Disk usage 扩展，这将便于管理 Docker 的存储空间。
 
 ::: warning
-Docker Desktop 4.17.1 存在 bug，可能会导致 `Attaching to webui-docker-auto-1` 报错。建议升级 Docker Desktop 4.18.0 或降级到更早版本。
+Docker Desktop 4.17.1 存在 bug，可能会导致 `Attaching to webui-docker-auto-1` 报错。建议升级 Docker Desktop 4.18.0 或以上版本。
 :::
 
 ### 下载 WebUI Docker
 
-下载 [Stable Diffusion WebUI Docker 配置包](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)或[阿里云盘聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)（定期更新），然后将其解压到指定路径。聚合版包括相关依赖和模型，因此文件较大。如果需要更新 Stable Diffusion WebUI Docker，你可以按照上述步骤重新构建容器。
+下载 [Stable Diffusion WebUI Docker 配置包](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)或[阿里云盘聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)（2023.06.06 更新），然后将其解压到指定路径。聚合版包括相关依赖和模型，因此文件较大。如果需要更新 Stable Diffusion WebUI Docker，你可以按照上述步骤重新构建容器。
 
 ### 分支介绍
 
-目前，Stable Diffusion 有 sygil、auto、auto-cpu 和 invoke 四个分支。如果需要更换分支，可以修改镜像构建命令 `docker compose --profile [ui] up --build` 中的 `[ui]`，将其替换为所需的镜像名即可。原先的 `hlky` 分支已经更名为 `sygil`，`lstein` 分支更名为 `invoke`。
+目前，Stable Diffusion Docker 支持 AUTOMATIC1111、InvokeAI、ComfyUI 三种分支。如果需要更换分支，可以修改镜像构建命令 `docker compose --profile [ui] up --build` 中的 `[ui]`，将其替换为所需的镜像名即可。
 
-- **sygil**：界面直观，最高分辨率为 1024x1024，镜像构建命令为 `docker compose --profile sygil up --build`。
 - **auto**（推荐）：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 `docker compose --profile auto up --build`。默认使用 6GB 以上的显存，如果你的显卡内存较低，则将配置中的 `--medvram` 改为 `--lowvram`。A 卡用户注意修改[显卡设置](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker)。
-- **auto-cpu**：唯一不依赖显卡的分支。如果没有符合要求的显卡，可以使用 CPU 模式，内存配置需满足 16G 以上，构建镜像的命令为 `docker compose --profile auto-cpu up --build`。
-- **invoke**：cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 `docker compose --profile invoke up --build`。
+- **auto-cpu**：不依赖显卡的 auto 分支。如果没有符合要求的显卡，可以使用 CPU 模式，内存配置需满足 16G 以上，构建镜像的命令为 `docker compose --profile auto-cpu up --build`。
+- **invoke**：原名为 `lstein`，其 cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 `docker compose --profile invoke up --build`。
+- **comfy**：基于图形的工作流 UI，非常强大，镜像构建命令为 `docker compose --profile comfy up --build`。comfy 也有不依赖显卡的分支，构建镜像的命令为 `docker compose --profile comfy-cpu up --build`。
+- ~~sygil(已停更)：即原本的 hlky, 界面直观，最高分辨率为 1024x1024，镜像构建命令为 `docker compose --profile sygil up --build`。~~
 
 ### 构建 Stable Diffusion
 
@@ -78,8 +79,8 @@ Docker Desktop 4.17.1 存在 bug，可能会导致 `Attaching to webui-docker-au
 docker compose --profile download up --build
 # 上方命令需要 20 分钟或更长，完成后执行镜像构建命令
 
-docker compose --profile sygil up --build
-# auto 是功能最多的分支，可以选择 auto | auto-cpu | invoke | sygil | sygil-sl
+docker compose --profile auto up --build
+# auto 是功能最多的分支，可以选择 auto | auto-cpu | invoke | comfy | comfy-cpu
 ```
 
 ![](https://img.newzone.top/2022-09-04-18-32-31.png?imageMogr2/format/webp)
@@ -88,7 +89,7 @@ docker compose --profile sygil up --build
 
 ## 使用说明
 
-以下示例以 sygil 分支为例，其他分支的主题界面略有不同，但在功能上并没有根本性的差异。
+以下示例以 auto 分支为例，其他分支的主题界面略有不同，但在功能上并没有根本性的差异。
 
 ### 启动 Stable Diffusion
 
@@ -204,7 +205,7 @@ auto/auto-cpu 分支中可以设置 Negative prompt（否定提示），以避�
 
 ## Prompt matrix
 
-Prompt matrix 是 sygil 分支的功能，可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。^[[stable-diffusion Prompt matrix](https://github.com/sygil/stable-diffusion#prompt-matrix)] 此时，批次数量的设置会被忽略。如果你对将图像转化为视频有兴趣，可以尝试使用 [Deforum Stable Diffusion Local Version](https://github.com/HelixNGC7293/DeforumStableDiffusionLocal)。
+Prompt matrix 可以按不同条件组合生成多张相关但不同的画面，适合用于制作视频素材。^[[stable-diffusion Prompt matrix](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-matrix)] 此时，批次数量的设置会被忽略。如果你对将图像转化为视频有兴趣，可以尝试使用 [Deforum Stable Diffusion Local Version](https://github.com/HelixNGC7293/DeforumStableDiffusionLocal)。
 
 <BiliBili bvid="BV1YP411V7vV" />
 

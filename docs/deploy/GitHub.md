@@ -72,7 +72,7 @@ jobs:
 
 ## Git Commit
 
-Commit message 远比你想象中的重要，它可以帮助你自动生成 Change log。在我最初的项目中，每次提交都写 update，这导致很难回溯，我也不知道更新了什么。建议新手全部按照 [Conventional Commits](https://www.conventionalcommits.org/zh-hans/) 的规范来进行提交。
+标准化的 Commit message 可以提供清晰、易读的历史记录，使我们更容易理解每个提交的目的和内容，这有助于追踪和审查代码变更。通过 [conventional-changelog-cli](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli) 可以自动生成 CHANGELOG.md。建议都按照 [Conventional Commits](https://www.conventionalcommits.org/zh-hans/) 的规范来进行提交。
 
 ```shell
 <type>[optional scope]: <description>
