@@ -13,7 +13,7 @@ order: -32
 
 之后，我尝试了各种输入法：百度、讯飞、手心等依旧是键盘记录器；影子输入法开源但不稳定；谷歌拼音停止更新；微软拼音词库收录慢且难以转移；只有小狼毫开源、稳定，而且又能多设备同步词库。
 
-Rime 小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/releases/download/0.14.3/weasel-0.14.3.0-installer.exe)，[国内搬运](https://wwi.lanzoui.com/iDyF4pdzmni)。
+Rime 小狼毫输入法下载：[官方渠道](https://github.com/rime/weasel/releases/download/0.15.0/weasel-0.15.0.0-installer.exe)，[国内搬运](https://wwva.lanzoum.com/iTAcP0ynxmfi)。
 
 ## 基础设置
 

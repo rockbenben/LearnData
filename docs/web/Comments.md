@@ -67,7 +67,44 @@ Vercel 项目中选择「Overview」>「Settings」>「Environment Variables」�
 
 新手可以使用宝塔面板的 Node.js 版本管理器来部署 Node.js。安装后，受限更新版本列表，然后选择要使用的 Node 版本，将其设置为命令行版本，接着配置服务器的环境变量。虽然宝塔可以管理 Node 项目，但容易出现错误。处理流程为进入「网站」>「Node 项目」>「添加 Node 项目」，将启动选项设置为模块内的 vanilla.js 文件，将项目端口设置为 8360，并设置绑定域名。
 
-注意：如果你选择手动部署反向代理服务器，请务必使用 Waline 官方提供的 Nginx 配置文件，否则可能会导致无法登录后台的问题。
+注意：如果你选择手动部署反向代理服务器，请务必使用 Waline 官方提供的 Nginx 配置文件，否则可能会导致**无法登录后台**，或是**版本升级后仍然提示升级**等问题。
+
+```shell
+server
+{
+  listen 80;
+  listen 443 ssl http2;
+  server_name waline.newzone.top;
+  root /www/wwwroot/waline;
+  if ($server_port !~ 443){
+    rewrite ^(/.*)$ https://$host$1 permanent;
+  }
+
+  # SSL setting
+  ssl_certificate    /www/server/panel/vhost/cert/waline/fullchain.pem;
+  ssl_certificate_key    /www/server/panel/vhost/cert/waline/privkey.pem;
+  ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
+  ssl_ciphers EECDH+CHACHA20:EECDH+CHACHA20-draft:EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5;
+  ssl_prefer_server_ciphers on;
+  ssl_session_cache shared:SSL:10m;
+  ssl_session_timeout 10m;
+  add_header Strict-Transport-Security "max-age=31536000";
+
+  # proxy to 8360
+  location / {
+    proxy_pass http://127.0.0.1:8360;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header REMOTE-HOST $remote_addr;
+    add_header X-Cache $upstream_cache_status;
+    # cache
+    add_header Cache-Control no-cache;
+    expires 12h;
+  }
+}
+```
 
 ## 导入时间处理
 
