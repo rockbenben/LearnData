@@ -17,16 +17,16 @@
     "node": ">=16.14.0"
   },
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.63",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.63",
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.63",
-    "@vuepress/utils": "2.0.0-beta.63",
+    "@vuepress/client": "2.0.0-beta.64",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.64",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.64",
+    "@vuepress/utils": "2.0.0-beta.64",
     "cpx2": "^4.2.3",
     "markdownlint-cli": "^0.34.0",
     "prettier": "^2.8.8",
     "vue": "^3.3.4",
-    "vuepress": "2.0.0-beta.63",
-    "vuepress-plugin-search-pro": "2.0.0-beta.229",
-    "vuepress-theme-hope": "2.0.0-beta.229"
+    "vuepress": "2.0.0-beta.64",
+    "vuepress-plugin-search-pro": "2.0.0-beta.230",
+    "vuepress-theme-hope": "2.0.0-beta.230"
   }
 }
