@@ -18,6 +18,14 @@
       body {
         background: var(--bg-color);
       }
+      .wwads-cn * {
+        color: var(--text-color) !important;
+      }
+      @media screen and (max-width: 1300px) {
+        .wwads-cn {
+          display: none;
+        }
+      }
     </style>
     <script>
       const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
@@ -26,7 +34,7 @@
         window.matchMedia("(prefers-color-scheme: dark)").matches;
 
       if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
-        document.querySelector("html").setAttribute("data-theme", "dark");
+        document.documentElement.setAttribute("data-theme", "dark");
       }
     </script>
     <!--vuepress-ssr-styles-->
@@ -51,9 +59,9 @@
     <!-- End Matomo Code 此区块为统计代码，请删除-->
   </head>
   <body>
+    <div class="wwads-cn wwads-vertical wwads-sticky" data-id="255" data-sticky-position="left" style="max-width:180px; background-color:var(--bg-color);"></div>
     <div id="app"><!--vuepress-ssr-app--></div>
     <!--vuepress-ssr-scripts-->
-    <div class="wwads-cn wwads-vertical wwads-sticky" data-id="255" style="max-width:180px"></div>
     <!-- 看板娘区块 -->
     <script src="/live2d-widget/autoload.js"></script>
     <!-- End 看板娘区块 -->
