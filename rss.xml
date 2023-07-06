@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 25 Jun 2023 09:23:19 GMT</pubDate>
-    <lastBuildDate>Sun, 25 Jun 2023 09:23:19 GMT</lastBuildDate>
+    <pubDate>Thu, 06 Jul 2023 07:49:07 GMT</pubDate>
+    <lastBuildDate>Thu, 06 Jul 2023 07:49:07 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>头脑驿站</category>
@@ -401,7 +401,7 @@
 <ul>
 <li>
 <p>bulge_pinch：挤压滤镜，使图像的中心产生凸起或凹下的效果，可生成循环凸凹的动画。</p>
-<p><img src="https://img.newzone.top/2023-01-07-23-14-10.png" alt="" title="bulge_pinch 凸起效果" loading="lazy">
+<p><img src="https://img.newzone.top/2023-01-07-23-14-10.png" alt="" title="bulge_pinch 凸起效果" loading="lazy"><br>
 <img src="https://img.newzone.top/2023-01-07-23-14-47.png" alt="" title="bulge_pinch 凹下的效果" loading="lazy"></p>
 </li>
 <li>
