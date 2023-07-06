@@ -1,6 +1,6 @@
 {
   "name": "learn-data",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -12,21 +12,21 @@
     "lint:markdown": "markdownlint docs",
     "lint:markdown-fix": "markdownlint docs --fix"
   },
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.6.6",
   "engines": {
     "node": ">=16.14.0"
   },
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.62",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.62",
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.62",
-    "@vuepress/utils": "2.0.0-beta.62",
+    "@vuepress/client": "2.0.0-beta.63",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.63",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.63",
+    "@vuepress/utils": "2.0.0-beta.63",
     "cpx2": "^4.2.3",
     "markdownlint-cli": "^0.34.0",
     "prettier": "^2.8.8",
-    "vue": "^3.3.2",
-    "vuepress": "2.0.0-beta.62",
-    "vuepress-plugin-search-pro": "2.0.0-beta.211",
-    "vuepress-theme-hope": "2.0.0-beta.211"
+    "vue": "^3.3.4",
+    "vuepress": "2.0.0-beta.63",
+    "vuepress-plugin-search-pro": "2.0.0-beta.229",
+    "vuepress-theme-hope": "2.0.0-beta.229"
   }
 }
