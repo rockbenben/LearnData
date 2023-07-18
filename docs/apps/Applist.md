@@ -19,7 +19,7 @@ Windows 自用软件，以开源软件为主。
 
 文本编辑：Visual Studio Code & Notepad++ & HbuilderX & WPS & office tab ~~& [MarkText](https://github.com/marktext/marktext) & Slide & 方方格子 & Typora & Yu Writer & UltraEdit~~
 
-文字识别：白描 & 天若 OCR ~~& ABBYY Screenshot Reader OCR~~
+文字识别：[TTime](https://github.com/inkTimeRecord/TTime) & 白描 ~~& 天若 OCR & ABBYY Screenshot Reader OCR~~
 
 ## 平面设计
 

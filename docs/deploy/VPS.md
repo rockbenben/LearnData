@@ -200,6 +200,8 @@ if ($server_port !~ 443){
 /www/server/panel/vhost/ssl
 ```
 
+如果同一网站部署了多个域名，并且都需要部署 SSL，则需要在 `/www/server/panel/vhost/cert` 目录下为每个域名创建独立的证书文件夹。同时，在网站的配置文件中创建两个独立的`server`配置，确保它们之间有换行。请注意，宝塔面板中的网站配置在重启 Nginx 后有时会被重置，所以请务必进行检查和确认配置的正确性。^[[针对宝塔面板一个站点多个域名使用 SSL 证书的解决方案](https://cloud.tencent.com/developer/article/2220049?areaSource=102001.7&traceId=SwSyuKeYOHVCQ_bcIFnkh)]
+
 ### CORS 跨域
 
 POST 表单等操作需要涉及第三方 API，需要添加扩域域名，避免 CORS 报错。
