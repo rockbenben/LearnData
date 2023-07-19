@@ -57,7 +57,8 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 - [reader](https://github.com/hectorqin/reader)：阅读 3 的服务器版，摆脱客户端，网页版即可查看。自定义替换进入文章页面左侧的「设置」-「过滤规则管理」。
 - [Tale Book](https://github.com/talebook/talebook)：基于 Calibre 的简单的个人图书管理系统，支持在线阅读，但阅读体验不强且 Bug 较多，个人更喜欢直接用 PC 端查看。
 - [Bilibili_Danmuji](https://github.com/zzcabc/Docker_Buildx_Danmuji)：B 站直播礼物答谢、定时广告、关注感谢，自动回复工具，房管工具，自动打卡，Bilibili 直播弹幕姬 (使用 websocket 协议)，java 版 B 站弹幕姬。部署 Docker 时需更新 jdr release 文件。
-- [无名杀](https://registry.hub.docker.com/r/makedie/noname_kill)：部署在 NAS 上的三国杀游戏。
+- [无名杀](https://hub.docker.com/r/makedie/noname_kill)：部署在 NAS 上的三国杀游戏。
+- [GSWXY - 魔兽世界单机服务端](https://hub.docker.com/r/gswxy/gswxy)：需要 2G 内存和 20G 硬盘空间。你也可以直接使用[耳语海岸 RP 服](https://www.gswxy.com/?p=67)。
 
 ### 自动化
 

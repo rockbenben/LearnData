@@ -14,7 +14,7 @@ order: -26
 
 市面上主流的多屏协同软件大多都是基于 scrcpy 开发的套壳产品，而且 bug 也没有得到修复，因此建议直接使用官方的 scrcpy。
 
-本文以 Windows 投屏为例，可以前往官方站点下载 [scrcpy-win64-v2.0.zip](https://github.com/Genymobile/scrcpy/releases/download/v2.0/scrcpy-win64-v2.0.zip)，或者使用[国内搬运链接](https://wwva.lanzoum.com/iz9HT0qni1od)。
+本文以 Windows 投屏为例，可以前往官方站点下载 [scrcpy-win64-v2.1.1.zip](https://github.com/Genymobile/scrcpy/releases/download/v2.1.1/scrcpy-win64-v2.1.1.zip)，或者使用[国内搬运链接](https://wwva.lanzouq.com/iB9Og12xug9c)。
 
 ## 有线投屏
 
@@ -31,7 +31,7 @@ order: -26
 
 ```shell
 # a.将命令目录切换到 scrcpy 文件夹。如果使用的是 Windows 11，在 scrcpy 文件夹中右键点击「在终端中打开」，会自动切换到当前路径。
-cd D:\Libraries\Desktop\scrcpy-win64-v2.0
+cd D:\Libraries\Desktop\scrcpy-win64-v2.1.1
 ​
 # b.在手机端开启「开发者选项」和「USB 调试」，然后使用数据线将手机和电脑连接，并允许 USB 调试，开启手机端口。
 .\adb tcpip 5555
@@ -61,7 +61,7 @@ cd D:\Libraries\Desktop\scrcpy-win64-v2.0
 
 ```shell
 # 将命令目录切换到 scrcpy 文件夹。
-cd D:\Libraries\Desktop\scrcpy-win64-v2.0
+cd D:\Libraries\Desktop\scrcpy-win64-v2.1.1
 ​
 # 开始录制，录屏文件会自动保存在当前文件夹内，文件名为指定的文件名。
 .\scrcpy -r filename.mp4
