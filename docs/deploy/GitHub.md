@@ -2,7 +2,7 @@
 article: false
 title: GitHub
 icon: github
-order: 3
+order: 4
 ---
 
 ## GitHub Actions
@@ -113,3 +113,14 @@ Scope 用于说明 commit 影响的范围，比如 Controller、DAO、View 等�
 项目路径新建一个命名为 .gitignore 的文件，将想要忽略的文件夹和文件写入 .gitignore 文件，换行分隔。
 
 比如要忽略 node_modules 文件夹，就直接在文件中输入 node_modules。
+
+### 添加 Github 源作为依赖
+
+一般情况下，依赖包会使用 npm 进行管理。但有时开发者可能并不会立即更新到 npm 上，这时我们可以选择使用 GitHub 源作为备用方案。
+
+另外，在国内服务器连接不上 GitHub 的情况下，可以先使用 npm 安装依赖包，然后手动替换 node_modules 目录中对应的源为下载好的文件。
+
+```shell
+yarn add strapi-google-auth
+yarn add https://github.com/arjusmoon860/strapi-google-auth.git
+```

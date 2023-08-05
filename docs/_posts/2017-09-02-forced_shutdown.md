@@ -8,25 +8,59 @@ tag:
 order: -5
 ---
 
-电脑晚上明明按下关机键，第二天早上却发现电脑开了一晚上？
+晚上明明按下电脑的关机键，第二天早上却发现电脑开了一晚上？这是因为后台和 GUI 应用程序在阻止或取消关机，使得系统无法正常关机。为解决此问题，可以按照以下方法授予系统自动关机权限。
 
-这是因为后台应用程序和 GUI 应用程序在阻止或取消关机，系统未能按正常关机。按下列方法授予系统自动关机权限，就能让系统正常关机。
-
-**方法如下：**
+## 手工操作
 
 1. 点击「开始菜单」，搜索「Regedit」，进入注册表编辑器。
-2. 打开窗口后，在注册表上方菜单中输入 `计算机\HKEY_CURRENT_USER\Control Panel\Desktop`。
-3. 在右侧窗格中找到 `AutoEndTasks` 键值，如果没有，则新建一个名为 `AutoEndTasks` 的「字符串值」，并将键值的数值设为 `1`。AutoEndTasks 表示自动结束失去响应的程序任务，0 为 false，是默认值，表示不自动结束失去响应的程序；1 为 true，则表示电脑会自动结束失去响应的程序。
+2. 打开窗口后，向注册表上方菜单输入路径 `计算机\HKEY_CURRENT_USER\Control Panel\Desktop`。
+3. 在右侧窗格中找到 `AutoEndTasks` 键值。若不存在，则新建一个名为 `AutoEndTasks` 的「字符串值」，并将键值的数值设为 `1`。AutoEndTasks 表示自动结束失去响应的程序任务。`0` 表示 false（默认值），而 `1` 表示 true，电脑会自动结束失去响应的程序。
 
    ![](https://pic3.zhimg.com/v2-c643b9737b35f9dd9a8382c5653e3d3e_r.jpg)
 
-4. 查找或创建字符串值 `WaitToKillAppTimeout`，将数值设为 `2000`。2000 是毫秒，就是当有没有响应的程序时，等待 2 秒后会自动结束相应程序。
+4. 查找或创建 `WaitToKillAppTimeout` 字符串值，并设定其数值为 2000。2000 以毫秒计，表示在程序失去响应后，系统将等待 2 秒后自动结束相应程序。
 
-操作下，让电脑默认强制关机吧！
+按照以上步骤操作，即可设置电脑默认为强制关机。
+
+## 通过脚本修改
+
+如果你不愿手动修改注册表，可以选择以下三种脚本之一进行操作。
+
+### 注册表脚本修改
+
+复制下列命令并粘贴至文本编辑器（如记事本）中，保存文件，扩展名为 `.reg`，如 settings.reg。双击该文件即可将修改应用到注册表中。（脚本由 @daxixi 提供）
+
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"AutoEndTasks"="1"
+"WaitToKillAppTimeout"="2000"
+```
+
+### cmd 修改
+
+以管理员权限运行 cmd（命令提示符），输入以下命令：
+
+```cmd
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v AutoEndTasks /t REG_SZ /d 1 /f
+
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v WaitToKillAppTimeout /t REG_SZ /d 2000 /f
+```
+
+### PowerShell 修改
+
+以管理员权限运行 PowerShell，输入以下命令：
+
+```powershell
+cmd /c reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v AutoEndTasks /t REG_SZ /d 1 /f
+
+cmd /c reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v WaitToKillAppTimeout /t REG_SZ /d 2000 /f
+```
 
 ——————————
 
-网上流行一种修改「gpedit.msc」来达到快速关机的方法，但试验无效，**不能强制关机**。
+网上流行一种通过修改「gpedit.msc」达到快速关机的方法，但实际测试结果表明，这种方法并**不能实现强制关机**。以下为这种方法的操作流程记录，仅供参考：
 
 1. 点击桌面左下角“windows”图标，选择“运行”选项；
 2. 进入运行窗口，输入“gpedit.msc”命令，按下回车键确定；
@@ -38,4 +72,4 @@ order: -5
 
    ![](https://pic4.zhimg.com/v2-46fafee0cb6e212e793fc80268ab0917_r.jpg)
 
-修改“gpedit.msc”可以关闭程序的关机权限，但没授予关机对程序的关闭权限，**不能使用**！
+修改“gpedit.msc”虽然可以撤销程序阻止关机的权限，但它并没有赋予关机进程对程序的关闭权限，因此并不能达到强制关机的效果。

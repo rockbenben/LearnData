@@ -64,7 +64,3 @@ GitHub Copilot，CodeGeeX，Tabnine，aiXcoder 插件均可以辅助补全代码
 [CodePen](https://codepen.io/pen/)：CodePen 是一个在线的 HTML、CSS 和 JavaScript 代码编辑器，能够编写代码并即时预览效果，便于项目分享预览。CodePen 也一个庞大的前端社区，上面有来自全球开发者分享的各种各样炫酷的效果，并且这些代码都是开源和共享的。
 
 [CodeSandbox](https://codesandbox.io/s/)：CodeSandbox 编辑体验与 VSCode 类似，并支持 GitHub 导出、静态文件托管、本地项目导入等。缺点：不能直接导入 GitHub 项目。
-
-## MySQL
-
-在 Windows 平台上，需要先设置 [MySQL Server](https://downloads.mysql.com/archives/installer/)，然后使用数据库软件进行连接。如果使用本地数据库且未将 MySQL Server 设为自动启动，每次开机后需要手动启动。启动流程为：右键点击菜单栏最左侧，选择「计算机管理」>「服务和应用程序」>「服务」>「MYSQL57」，双击启动即可。

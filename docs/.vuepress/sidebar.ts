@@ -43,7 +43,17 @@ export default sidebar([
     prefix: "/deploy/",
     link: "",
     collapsible: true,
-    children: "structure",
+    children: [
+      "Static.md",
+      "CloudServices.md",
+      "VPS.md",
+      {
+        text: "部署工具",
+        icon: "emmet",
+        collapsible: true,
+        children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
+      },
+    ],
   },
   {
     text: "🚀 代码学习",

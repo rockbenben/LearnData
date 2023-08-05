@@ -2,7 +2,7 @@
 article: false
 title: 域名 DNS 托管
 icon: sitemap
-order: 5
+order: 6
 ---
 
 国内访问为主的话，域名建议备案后托管在国内厂商。之前试过 Cloudflare，光域名解析就用了 500 ms，换回阿里云后速度稳定许多。

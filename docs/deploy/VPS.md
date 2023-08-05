@@ -2,7 +2,7 @@
 article: false
 title: 服务器 VPS
 icon: IO
-order: 2
+order: 3
 ---
 
 ## 环境部署
@@ -145,14 +145,6 @@ location = / {
 4. 对旧服务器先建立云盘快照，然后更换操作系统，进行全新部署。
 5. 对比新旧服务器，确认配置正常。
 
-### 服务器网络
-
-服务器网络早期是按量付费，但随着访客数量增加，带宽压力变大，将宽带切换为固定流量，网站的打开速度明显变慢。为了减少服务器的带宽压力，可以使用 CDN 全站加速，让用户就近访问。
-
-使用 CDN 后，网站流量变得特别大，不清楚是不确定是网速响应带来的，还是由其他因素造成的。先使用一段时间来测试效果。
-
-配置说明：一个 CDN 只能为一个域名进行加速，加速的域名即为目标域名。
-
 ## 网站设计
 
 ### 网站字体
@@ -213,12 +205,6 @@ POST 表单等操作需要涉及第三方 API，需要添加扩域域名，避�
     add_header Access-Control-Allow-Headers "DNT,web-token,app-token,Authorization,Accept,Origin,Keep-Alive,User-Agent,X-Mx-ReqToken,X-Data-Type,X-Auth-Token,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range";
     add_header Access-Control-Expose-Headers "Content-Length,Content-Range";
 ```
-
-### 数据库出错解决
-
-1. mysql 配置中 `mysqld` 在一行添加 `innodb_force_recovery=4`，数值可以 0-6，数值越大对数据库损害越大。正常启动 mysql 后，备份所有数据库和管理密码，并下载到本地。
-2. 在宝塔的「数据库」中删除所有数据库，卸载并重装 mysql。
-3. 重新导入数据库。
 
 ### piwik 手动升级
 
