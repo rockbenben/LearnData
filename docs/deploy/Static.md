@@ -36,7 +36,7 @@ emoji 等可以使用静态资源库上的项目，比如 twemoji，上面有集
   - [Workers](../deploy/Cloudflare.html#反向代理)：复制镜像网站，可直接访问，但反向代理稳定性成疑。
   - Pages：部署简单，外网速度很快，但国内速度不稳，而且 page.dev 域名有时会被墙，可购买便宜的临时域名（一年）来解决该问题。
 - Netlify：国内速度慢点，图片容易卡死，但还算稳定。
-- Vercel：推荐使用 GitHub 账户登录，有可能需要绑定国外手机号（不支持 Voice）。2022.08.26，「\*.vercel.app」域名被 DNS 污染，需要绑定自定义域名。
+- Vercel：推荐使用 GitHub 账户登录，需绑定手机号（不支持 Voice），支持国内手机号。2022.08.26，「\*.vercel.app」域名被 DNS 污染，需要绑定自定义域名。
 - AWS: 邮箱注册，不过需要信用卡认证。
 - 国内平台：Gitee、WuliHub、CODING，都需要实名认证。
 
@@ -61,7 +61,8 @@ cloudflare 接管 pinata 后，ipfs 域名需通过「pinata 托管」>「cloudf
 
 很多人选择 Gitee Pages 作为国内节点，GitHub Actions 将新文档同步到 Gitee，生成位于国内的静态页面 Gitee Pages。但是，Gitee Pages 的限制非常多，免费版无法自定义域名，必须实名验证，更别提近期的下架风波。因此，我没选 Gitee，而是把文档同步到国内服务器（域名需备案）。
 
-!> 注意：文件夹不要有大写字母，否则同步时容易出错。
+::: tip 文件夹名称请勿使用大写字母，否则在同步时容易产生错误。
+:::
 
 ### 同步到 FTP
 

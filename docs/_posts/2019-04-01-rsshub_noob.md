@@ -9,25 +9,25 @@ tag:
 order: -25
 ---
 
-RSS 使用已经介绍了 feed43 和 Huginn，但这些工具或需要学习，或需要硬件。与之相比，RSSHub 有着成熟的配置，可以直接使用。
+RSS 使用中曾介绍了 feed43 和 Huginn，但这些工具要么需要学习，要么需要硬件。相较之下，RSSHub 拥有成熟的配置，可供直接使用。
 
-**RSSHub** 是个开源项目，对微博、知乎、豆瓣、bilibili、Youtube 等主流网站进行 RSS 转化。我们只要访问 [RSSHub 官网](https://docs.rsshub.app/)，上面定期更新了主流媒体的 rss 项目。
+**RSSHub** 是一个开源项目，可将微博、知乎、豆瓣、bilibili、Youtube 等主流网站转化为 RSS。只需访问 [RSSHub 官网](https://docs.rsshub.app/)，便可定期获取主流媒体的 RSS 项目更新。
 
 ![](https://img.newzone.top/20190331012441.png?imageMogr2/format/webp)
 
-## 抓取示例：bilibili 番剧
+## bilibili 番剧抓取示例
 
-1. 打开 [RSSHub bilibili 专区](https://docs.rsshub.app/social-media.html#bilibili) ，上面能根据番剧、UP 主等定制 rss。
+1. 打开 [RSSHub bilibili 专区](https://docs.rsshub.app/social-media.html#bilibili)，在此可根据番剧、UP 主等定制 RSS。
 
    ![](https://img.newzone.top/20190406131343.png?imageMogr2/format/webp)
 
-2. 准备抓取番剧《盾之勇者成名录》的更新，番剧主页链接为 `https://www.bilibili.com/bangumi/media/md4316482/` ，mediaid 为 `4316482`。
+2. 准备抓取番剧《盾之勇者成名录》的更新，番剧主页链接为 `https://www.bilibili.com/bangumi/media/md4316482/`，mediaid 为 `4316482`。
 
-3. 按照路由参数修改 rss 链接 `https://rsshub.app/bilibili/bangumi/media/4316482`，并在 rss 阅读器中打开。
+3. 按照路由参数，修改 RSS 链接 `https://rsshub.app/bilibili/bangumi/media/4316482`，然后在 RSS 阅读器中打开。
 
    ![](https://img.newzone.top/20190406134022.png?imageMogr2/format/webp)
 
-p.s. RSSHub 使用非常简单，但现在已经太过流行，微博、知乎已经开始反爬限制，动手能力强建议走 Huginn。
+附注：虽然 RSSHub 使用非常简单，但由于现已过于流行，微博、知乎等已开始反爬限制。若动手能力强，建议按下方教程自行部署或选择 Huginn。
 
 ## RSS 合集
 

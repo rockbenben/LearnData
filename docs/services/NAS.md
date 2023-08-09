@@ -10,10 +10,16 @@ NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面�
 - 选择「控制面板」>「文件服务」>「SMB」>「高级设置」，将最小 SMB 协议 设为 SMB1，避免部分应用发现了 NAS 但无法打开共享文件。
 - 选择「控制面板」>「任务计划」>「新增」>「计划的任务」>「用户定义的脚本」，给 NAS 建立定时任务脚本。
 - SSD 缓存对家用的 NAS 性能提升不大，没必要加。
-- DS/Transmission 套件：用于 PT 下载 (禁用 DHT，半小时停止做种)。
-- Synology Drive Server 套件：电脑文件备份。
-- Hyper Backup：本地多硬盘备份，防止一个硬盘丢失后重要文件损坏，比如 docker 容器的本地配置文件夹。
 - 群晖系统分布在所有硬盘，拔出一个不影响使用。但应用会有影响？
+
+## NAS 套件
+
+除了官方套件源，我会加上 [DSM6.x 矿神 SPK 套件源](https://spk.imnks.com/)。
+
+- DS/Transmission：用于 PT 下载 (禁用 DHT，半小时停止做种)。
+- Synology Drive Server：电脑文件备份。
+- Hyper Backup：本地多硬盘备份，防止一个硬盘丢失后重要文件损坏，比如 docker 容器的本地配置文件夹。
+- Surveillance Station：管理 IP 摄像机以保护您的家庭和办公环境。借助 Surveillance Station，您可以透过网络浏览器，VisualStation 或移动设备观看和记录实时视频，设置定时记录，回放记录的视频，从而实现远程监控。发生重要事件时，您也会收到通知。注意，摄像头需支持 **ONVIF 协议**。
 
 ## NAS Docker
 
@@ -68,6 +74,7 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 - [Monica](https://github.com/monicahq/monica)：Monica 允许人们记录所有关于朋友和家人的重要事情。喜欢和他们一起的活动。你最后一次打电话给某人的时候，你们谈了些什么。它会帮助你记住他们孩子的名字和年龄。它还能提醒你打电话给一个很久没联系的人。Monica 的容器设置查看 [Monica Docker](https://github.com/monicahq/docker)。`Me as a contact` 是它常年的一个 bug，可以通过指定数据库中的 users.me_contact_id 来解决。
 - [supermanito/Helloworld](https://supermanito.github.io/Helloworld/#/)：京东签到等脚本，功能很强大，没怎么研究。
 - [ubuntu-desktop-lxde-vnc](https://registry.hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc)：能在 Docker 上运行的 Ubuntu 桌面版，适合挂载要长期运行的程序。测试 OBS 时，对内存要求不高，但 CPU 直冲 100%，fps 只有 7。
+- [RustDesk](https://rustdesk.com/zh/)：自建远程桌面，平替 TeamViewer 的开源软件。矿神源有套件，可直接部署中继服务器。
 
 ### 待了解
 
