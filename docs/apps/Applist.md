@@ -43,7 +43,7 @@ Windows 自用软件，以开源软件为主。
 
 字幕工具：[ChineseSubtitleConversionTool](https://github.com/xiaoxinpro/ChineseSubtitleConversionTool)（繁简转换）& Arctime Pro & [VideoSrt](https://github.com/wxbool/video-srt-windows) & 人人译视界
 
-视频下载：[youtube-dl](https://github.com/ytdl-org/youtube-dl) & [哔哩下载姬](https://github.com/leiurayer/downkyi)
+视频下载：[youtube-dl](https://github.com/ytdl-org/youtube-dl) & [哔哩下载姬](https://github.com/leiurayer/downkyi) & [BBDown](https://github.com/nilaoda/BBDown)（命令行式哔哩哔哩下载器）
 
 影视管理：tinyMediaManager（刮削），易影视（本地管理）
 
@@ -85,11 +85,11 @@ Windows 自用软件，以开源软件为主。
 
 文件归档：[Dropit](http://www.dropitproject.com/)(自动文件归档) & GoodSync(文件同步) & [DropPoint](https://www.appinn.com/droppoint/)(复制中转框)
 
-网盘同步：坚果云 & 百度网盘 & 115 ([转存脚本](https://gist.github.com/Nerver4Ever/953447c9ecd330ffc0861d4cbb839369)) ~~& 亿方云 & 金山快盘 & 微云~~
+网盘同步：坚果云 & 阿里云盘 & 百度网盘 & 115 ([转存脚本](https://gist.github.com/Nerver4Ever/953447c9ecd330ffc0861d4cbb839369)) ~~& 亿方云 & 金山快盘 & 微云~~
 
 ## 系统日常
 
-资源管理器：[One Commander](https://www.onecommander.com/) & [Q-Dir](https://www.softwareok.com/?seite=Freeware/Q-Dir) & QTTabBar（Win10） ~~& 360 文件夹 & Clover（UI 不好看）~~
+资源管理器：[One Commander](https://www.onecommander.com/) & [Q-Dir](https://www.softwareok.com/?seite=Freeware/Q-Dir) & FreeCommander & QTTabBar（Win10） ~~& 360 文件夹 & Clover（UI 不好看）~~
 
 浏览器：Chrome & Firefox(资源) & Brave(工具/书签) & Edge(移动端) & Tor ~~& Vivaldi & Tor & 猎豹 & 360 & 搜狗 & Maxthon & 百度~~
 
@@ -111,7 +111,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 ## 低频工具
 
-编程工具：FileZilla（FTP）、PuTTY（SSH）、GitHubDesktop、DBeaver([数据库](https://kalacloud.com/blog/best-mysql-gui-tools/))、Postman、Fiddler(手机抓包)、Regex Match Tracer
+编程工具：FileZilla（FTP）、PuTTY（SSH）、MobaXTerm（SSH）、GitHubDesktop、DBeaver([数据库](https://kalacloud.com/blog/best-mysql-gui-tools/))、Postman、Fiddler(手机抓包)、Regex Match Tracer
 
 翻译词典：DeepL ~~& GoldenDict & 欧陆词典 & 有道词典 & QTranslate & Lingoes~~
 
@@ -119,7 +119,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 虚拟机：VMware & VirtualBox
 
-远程管理：ToDesk ~~& AnyDesk & Teamviewer & Remote Utilities & XT800~~
+远程管理：RustDesk & ToDesk ~~& AnyDesk & Teamviewer & Remote Utilities & XT800~~
 
 卸载清理：IObit Uninstaller & Glary Utilities(注册表清理) ~~& Geek Uninstaller~~
 
@@ -164,3 +164,5 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 - 客服：飞豆客服聊天助手 & [mirai(qq 机器人)](https://github.com/mamoe/mirai) & 酷 Q(已关)
 - 其他：按键精灵、DisplayCal（屏幕）、One Quik(虚拟桌面切换)、Auslogics Disk Defrag(磁盘整理)、Reflector 3(手机投屏)、VoiceBot(声控游戏)
 - [DockIt](http://dogbean.ysepan.com/)：主显示屏中，非全屏状态下，快速将窗口局部化。如何默认不全屏；应用不自动吸边？
+
+部分应用推荐来自 @vector090。

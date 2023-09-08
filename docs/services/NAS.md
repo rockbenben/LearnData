@@ -14,7 +14,7 @@ NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面�
 
 ## NAS 套件
 
-除了官方套件源，我会加上 [DSM6.x 矿神 SPK 套件源](https://spk.imnks.com/)。
+除了官方套件源，我会加上 [DSM7.x 矿神 SPK 套件源](https://spk7.imnks.com/)。
 
 - DS/Transmission：用于 PT 下载 (禁用 DHT，半小时停止做种)。
 - Synology Drive Server：电脑文件备份。
@@ -34,15 +34,17 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 3. 通过终端在同目录下运行 `sudo docker-compose up -d` 后等待部署完成。
 4. 关闭 SSH 功能。
 
-注意：root 用户需在命令前添加 `sudo`，否则会提示 `Permission denied`。
+注意：root 用户需在命令前添加 `sudo`，否则会提示 `Permission denied`。或通过 `sudo -i` 获取 root 权限。
 
 ## Docker 容器
 
 ### 常用
 
 - [qbittorrent](https://registry.hub.docker.com/r/linuxserver/qbittorrent/)：需修改所有默认端口，否则容易报错。PT 下载关闭 `BitTorrent - DHT` 和其他隐私选项，半小时停止做种，将下载文件添加 Everyone 权限，其他设置参考[群晖使用 qbittorrent](https://blog.csdn.net/weixin_45120915/article/details/114691473)。
-- [PhotoPrism](https://docs.photoprism.app/)：基于 ai 私有化部署的个人相册。如果部署时出错，则尝试删除数据库文件夹下的内容。地点标记功能非常强大，类似本地版 Google Photos。
 - [qiandao](https://github.com/AragonSnow/qiandao)：自动签到开源框架，需搭配浏览器扩展 [get-cookies](https://github.com/ckx000/get-cookies) 使用，可导出配置。
+- [MT Photos](https://mtmt.tech/)：支持自动整理、分类您的照片，比如：时间、地点、人物、照片类型。需要 99 元买断服务，每周连线检查授权状态。比较喜欢的是，支持网页分享特定图片影集，适合将宝宝照片批量分享给家人。
+- [PhotoPrism](https://docs.photoprism.app/)：基于 ai 私有化部署的个人相册，但实际很多照片无法识别，无法对外分享。如果部署时出错，则尝试删除数据库文件夹下的内容。地点标记功能非常强大，类似本地版 Google Photos。
+- [Immich](https://github.com/immich-app/immich): 相册备份、浏览，提供 web 端、移动端 app。但不支持扫描已有文件。
 - [watchtower](https://containrrr.dev/watchtower/)：监控并更新 Docker 容器。
   - 监控指定名称的镜像：`docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once nginx redis`。本案例只更新名为「nginx」和「redis」的容器，其他容器将被忽略。
   - 指定容器的 compose 命令中添加 lable `com.centurylinklabs.watchtower.enable=false`，可禁止该容器的监控和更新。
@@ -78,6 +80,7 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 
 ### 待了解
 
+- Nextcloud: 私有云盘，完成 PC 端文件同步、版本控制，提供 web 端、移动端 app。
 - [兰空图床](https://github.com/lsky-org/lsky-pro)：图床已经部署在七牛云，用 Picgo 上传，没感觉有必要用它。
 - [AutoBangumi](https://github.com/EstrellaXD/Auto_Bangumi)：自动追番器，用以替代自我审查的 Bilibili。
 - [nas-tools](https://github.com/jxxghp/nas-tools/wiki/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B)：号称能自动整理文件，但测试识别中很容易出错，暂不考虑。
