@@ -1,5 +1,5 @@
 ---
-title: scrcpy - 手机无线投屏到电脑
+title: 投屏不再是难题！如何用免费开源软件 scrcpy 完美体验安卓投屏
 date: 2019-08-26
 category:
   - 工具
@@ -18,10 +18,12 @@ order: -26
 
 ## 有线投屏
 
-1. 下载并解压 scrcpy。
+1. 下载 scrcpy 并进行解压。
 2. 手机端开启 `开发者选项` 和 `USB 调试`。开发者选项默认处于隐藏状态，手机上选择「设置」>「关于手机」，然后点击版本号七次，返回上一屏幕，即可在底部找到开发者选项。
-3. 使用数据线将手机和电脑连接，此时手机上会弹出授权提示，点击「允许 USB 调试」。
-4. 双击解压得到的 scrcpy.exe 文件，即可进行有线投屏。
+3. 用数据线连接手机和电脑。手机上会出现授权请求，选择「允许 USB 调试」。
+4. 双击已解压的 `scrcpy.exe` 文件，即可实现有线投屏。
+
+若需在手机黑屏时继续投屏，请按以下步骤操作：当手机屏幕亮起并解锁后，连接至电脑，然后输入命令 `.\scrcpy --turn-screen-off`。此操作会关闭手机屏幕，但投屏功能继续正常运行。
 
 ## 无线投屏
 
@@ -79,6 +81,10 @@ cd D:\Libraries\Desktop\scrcpy-win64-v2.1.1
 - 检查手机的「本机 IP」是否正确；
 - 核对有线连接步骤，选择「开启 USB 调试」>「连接手机与电脑」>「启动 scrcpy」。
 
+### Could not find any ADB device
+
+出现 `ERROR: Could not find any ADB device` 报错意味着你的手机未被电脑识别。可能是因为电脑上缺少相应的 USB 驱动程序。你可以点击此 [OEM 驱动程序链接](https://developer.android.com/studio/run/oem-usb?hl=zh-cn#Drivers) 进行下载。如果列表中没有你的手机品牌，请前往手机官网查找。例如，vivo 的驱动链接为：<http://zs.vivo.com.cn/download.php?sel_type=2>。
+
 ### ERROR: Exception on thread
 
 报错 `ERROR: Exception on thread Thread[main,5,main]`，通常是因为手机不兼容 scrcpy 默认的分辨率设置。解决方法是，修改 scrcpy 启动代码，使用较低的分辨率。
@@ -96,10 +102,24 @@ cd D:\Libraries\Desktop\scrcpy-win64-v2.1.1
 
 解决方案来自 @残荷听雨：「进工程模式，把 usb 调成开发模式，先打开“在充电模式下允许 ADB 调试”，再打开 usb 调试。这样操作后，再拔掉数据线，它就不会自动关闭 usb 调试了。副作用是，“在充电模式下允许 ADB 调试”会自动常开，在网吧等公共区域，仅用数据线充电时就需要手动关掉 usb 调试，防止被黑。」
 
+### 投屏没声音
+
+Android 11 及以上版本支持将音频投屏至电脑。若你的系统版本已满足此要求，但仍未输出声音，建议更换音频解码方式尝试。
+
+```shell
+.\scrcpy --audio-codec=opus  # default
+.\scrcpy --audio-codec=aac
+.\scrcpy --audio-codec=raw
+```
+
+### 输入法问题
+
+英文输入法及主流中文输入法均可正常使用。如中文输入出现问题，建议复制后再粘贴。
+
 ### 投屏模糊
 
-如果屏幕设置了缩放比例，投屏界面会变得模糊。右键单击 scrcpy.exe，点击「属性」>「兼容性」>「更改高 DPI 设置」，然后勾选「替代高 DPI 缩放行为」，应用该设置后投屏恢复正常。
+如果屏幕设置了缩放比例，可能导致投屏界面模糊。为解决此问题，请右键单击 scrcpy.exe，选择「属性」>「兼容性」>「更改高 DPI 设置」，并勾选「替代高 DPI 缩放行为」选项。应用此设置后，投屏效果即可恢复正常。
 
 ![](https://img.newzone.top/20190829095640.png "解决 scrcpy 投屏模糊")
 
-更多问题报错的解决方法，可以查看 [scrcpy FAQ](https://github.com/Genymobile/scrcpy/blob/master/FAQ.md)。
+如遇其他问题或错误，请参考 [scrcpy 常见问题解答](https://github.com/Genymobile/scrcpy/blob/master/FAQ.md)。

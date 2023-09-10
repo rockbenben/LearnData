@@ -33,7 +33,7 @@ Windows 自用软件，以开源软件为主。
 
 ## 音频视频
 
-音频播放：foobar2000（[MKing 皮肤](http://tieba.baidu.com/p/4434445880)）& [163MusicLyrics](https://github.com/jitwxs/163MusicLyrics)（云歌词下载，支持日文转罗马音）& Listen1 & [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop) & Moon FM(播客) ~~& 百度音乐 & AIMP3 & 酷我 K 歌 & Airplay~~
+音频播放：foobar2000（[MKing 皮肤](http://tieba.baidu.com/p/4434445880)）& [MusicTag](https://www.cnblogs.com/vinlxc/p/11347744.html) & [163MusicLyrics](https://github.com/jitwxs/163MusicLyrics)（云歌词下载，支持日文转罗马音）& Listen1 & [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop) & Moon FM(播客) ~~& 百度音乐 & AIMP3 & 酷我 K 歌 & Airplay~~
 
 音频处理：[Reaper+ Ultraschall](https://sspai.com/post/76677) & [Audacity](https://github.com/audacity/audacity/releases) & iZotope rx9 ~~& Audition & 神舌变声器 & Goldwave~~
 
