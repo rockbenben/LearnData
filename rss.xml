@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 08 Sep 2023 03:34:59 GMT</pubDate>
-    <lastBuildDate>Fri, 08 Sep 2023 03:34:59 GMT</lastBuildDate>
+    <pubDate>Sun, 10 Sep 2023 13:55:07 GMT</pubDate>
+    <lastBuildDate>Sun, 10 Sep 2023 13:55:07 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -154,10 +154,10 @@
       <enclosure url="https://img.newzone.top/2023-02-28-10-30-20.png?imageMogr2/format/webp" type="image/"/>
     </item>
     <item>
-      <title>我用白板墙贴，记录日常生活</title>
+      <title>为什么我把日常任务放回墙上，而不是手机里？</title>
       <link>https://newzone.top/posts/2023-01-26-whiteboard_gtd.html</link>
       <guid>https://newzone.top/posts/2023-01-26-whiteboard_gtd.html</guid>
-      <source url="https://newzone.top/rss.xml">我用白板墙贴，记录日常生活</source>
+      <source url="https://newzone.top/rss.xml">为什么我把日常任务放回墙上，而不是手机里？</source>
       <description>摆脱数字性遗忘：白板墙贴的生活/工作清单，适用于居家办公的 GTD 补充记录方案。 在数字化和网络化的时代，日常记录从纸质转移到电子存储，它带来了无限的容量和随时随地使用的便利。然而，这也带来了新的问题：如果没有打开应用程序，记录就无法提醒，容易忘记重要事情。即使设置了定时提醒，提醒时间也不一定是最佳处理时间，因此可能会延迟或取消，从而导致遗忘。为了解决这个问题，我使用白板墙贴来记录生活/工作清单。 源图：Storyset</description>
       <category>工具</category>
       <pubDate>Sun, 22 Jan 2023 00:00:00 GMT</pubDate>
