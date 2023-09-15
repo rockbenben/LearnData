@@ -163,6 +163,7 @@ export default hopeTheme({
 
 ## 自定义主题
 
+- [x] 创建独立的笔记区，便于整理生活感悟与专题文章。尽管仍使用同一侧边栏，但可设定为仅展示个别领域，适应文章数量众多的场景。
 - [x] ~~插入 Bilibili 或第三方视频，可使用专用 [组件库](https://vuepress-theme-hope.github.io/v2/components/zh/guide/)，配置参考 [组件案例 config.ts](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/demo/components/src/.vuepress/config.ts).~~
 - [x] ~~插件[docsearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html)：将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。~~
 - [x] ~~README 页面如何隐藏，使用 index: false，参考[主题设置](https://theme-hope.vuejs.press/zh/guide/layout/sidebar.html#%E9%80%9A%E8%BF%87%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90)~~

@@ -1,5 +1,5 @@
 ---
-title: 电脑上实现微信双开，无需网页版或第三方软件
+title: 跳过第三方软件，一步到位实现微信双开的秘密
 date: 2017-04-18
 category:
   - 工具
@@ -30,14 +30,14 @@ order: -1
 
 ![](https://img.newzone.top/2022-05-06-04-23-49.png?imageMogr2/format/webp)
 
-三开的话，可以在 Microsoft Store 上安装 微信 (UWP) 。
+## 其他方法
 
-如果还需要继续多开微信，可以参考 @刘舒怡 的方法：
+如果还需要继续多开微信，可以**按住回车键，然后左键点击微信图标**，需要开启几个就点击几次。
+
+也可以尝试 @刘舒怡 提到的办法：
 
 > 只要在 2 秒内快速连续双击打开软件，就能弹出很多登录界面，你想登多少个就登多少个
 
-另外，有人专门开发了微信/QQ 多开的补丁，需要四开以上的可以试试 [RevokeMsgPatcher](https://github.com/huiyadanli/RevokeMsgPatcher)。
+此外，已有开发者专门为微信和 QQ 制作了多开补丁。若需同时打开四个或更多窗口，可以试用 [RevokeMsgPatcher](https://github.com/huiyadanli/RevokeMsgPatcher)，国内下载链接：[RevokeMsgPatcher.v1.6.zip](https://wwva.lanzouq.com/irUIX187hz3c)。
 
-但多开补丁风险未知，我只用了其中的防撤回功能，需谨慎使用多开补丁。
-
-国内搬运地址：[RevokeMsgPatcher.v1.5.zip](https://wwz.lanzouf.com/ij0oz05ns3di)
+然而，使用多开补丁存在一定风险。我仅尝试过其中的防撤回功能，建议在使用多开补丁时务必小心。

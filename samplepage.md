@@ -9,6 +9,14 @@ icon: page
 order: 1
 # 是否为长文章，会被放置于博客页
 article: false
+
+# 不希望页面被侧边栏收录时
+index: false
+# 禁用指定页面的侧边栏
+sidebar: false
+# 右侧目录栏会自动地显示由当前页面的标题 (headers) 组成的链接，默认提取 h2 和 h3。设置成 0 将会禁用标题 (headers) 链接。
+headerDepth: 2
+
 # 设置作者
 author: LearnData
 # 设置写作时间
@@ -24,6 +32,7 @@ tag:
 sticky: true
 # 此页面会出现在文章收藏中
 star: true
+
 # 你可以自定义页脚
 footer: 这是测试显示的页脚
 # 你可以自定义版权信息

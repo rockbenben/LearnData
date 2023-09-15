@@ -126,7 +126,9 @@ LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/l
 
 读书笔记中可能会有大量的原文引用，这与 LearnData 精简化知识点的初衷并不相符。因此，我们使用 docsify 来构建读书笔记，并将其放置于 `docs/reading` 目录下。在生成静态页面后，该路径下的文件不会被转换为 HTML 文件，而是将被自动复制到静态网站下，完成 docsify 页面构建和独立的读书笔记搜索索引。
 
-如果你没有部署 Waline，也不需要阅读量统计和评论区，可以删除 `docs\reading\index.html` 中的 Waline 区块。
+由于读书笔记架构更换到 docsify，不能使用相对链接。请调整 `docs\.vuepress\sidebar.ts` 的 `{ text: "读书笔记", icon: "read", link: "https://newzone.top/reading/" }`，将 `newzone.top` 替换为你的博客域名。
+
+如果你没有部署 Waline，或不需统计阅读量和评论功能，可移除 `docs\reading\index.html` 中的 Waline 代码块。
 
 ```javascript
 waline: {
