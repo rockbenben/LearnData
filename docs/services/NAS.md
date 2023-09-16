@@ -11,6 +11,8 @@ NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面�
 - 选择「控制面板」>「任务计划」>「新增」>「计划的任务」>「用户定义的脚本」，给 NAS 建立定时任务脚本。
 - SSD 缓存对家用的 NAS 性能提升不大，没必要加。
 - 群晖系统分布在所有硬盘，拔出一个不影响使用。但应用会有影响？
+- NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变，重启不会不影响 docker 配置。
+- 升级容器镜像，不影响内部数据库。群晖的「Docker 导出」只会导出安装镜像和配置，但不包括容器内部使用的数据库，用处不大。
 
 ## NAS 套件
 
@@ -20,21 +22,6 @@ NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面�
 - Synology Drive Server：电脑文件备份。
 - Hyper Backup：本地多硬盘备份，防止一个硬盘丢失后重要文件损坏，比如 docker 容器的本地配置文件夹。
 - Surveillance Station：管理 IP 摄像机以保护您的家庭和办公环境。借助 Surveillance Station，您可以透过网络浏览器，VisualStation 或移动设备观看和记录实时视频，设置定时记录，回放记录的视频，从而实现远程监控。发生重要事件时，您也会收到通知。注意，摄像头需支持 **ONVIF 协议**。
-
-## NAS Docker
-
-NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变，重启不会不影响 docker 配置。升级容器镜像，不影响内部数据库。群晖的「Docker 导出」只会导出安装镜像和配置，但不包括容器内部使用的数据库，用处不大。
-
-**Docker 容器安装**：
-
-推荐用 `docker-compose.yml` 安装 Docker，镜像会自动同步到 NAS 的容器列表中。docker-compose 使用参考 [TTRSS docker-compose](http://ttrss.henry.wang/zh/#%E9%80%9A%E8%BF%87-docker-compose-%E9%83%A8%E7%BD%B2)。
-
-1. 选择「控制面板」>「终端机和 SNMP」，启动 SSH 功能。
-2. putty 连接群晖 SSH，进入 `docker-compose.yml` 所在路径，比如 `cd /volume3/storage`。
-3. 通过终端在同目录下运行 `sudo docker-compose up -d` 后等待部署完成。
-4. 关闭 SSH 功能。
-
-注意：root 用户需在命令前添加 `sudo`，否则会提示 `Permission denied`。或通过 `sudo -i` 获取 root 权限。
 
 ## Docker 容器
 
@@ -61,6 +48,7 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 
 - [AList](https://github.com/alist-org/alist)：开源的网盘管理工具，还支持对象存储，本地存储，FTP 等等。
 - [Navidrome](https://www.navidrome.org/docs/installation/docker/)：NAS 上的私人专属在线音乐库。
+- Emby/Plex：这两者都是热门的视频流媒体解决方案。终身会员的价格为119美元。Jellyfin 作为一个开源免费的选择，同样是一个不错的考虑。
 - [LANraragi](https://github.com/Difegue/LANraragi)：免费开源的漫画管理器，支持 zip/rar/targz/lzma/7z/xz/cbz/cbr/pdf 多种格式，可从网页和 [第三方客户端](https://github.com/Difegue/LANraragi/blob/32cc991e8c5bae3bbd57d163278048c50159ae9f/tools/Documentation/advanced-usage/external-readers.md) 浏览。
 - [Tachiyomi](https://github.com/Suwayomi/docker-tachidesk)：开源的漫画阅读应用，通过安装扩展插件，可以方便地订阅并聚合漫画源。使用前，需进入 Extensions，点右上角的 Enabled Languages 按钮，设置为中文源，然后会在页面底部发现中文漫画源。安装源后，进入 Souces 中点击进入对应源。
 - [reader](https://github.com/hectorqin/reader)：阅读 3 的服务器版，摆脱客户端，网页版即可查看。自定义替换进入文章页面左侧的「设置」-「过滤规则管理」。
@@ -85,7 +73,6 @@ NAS Docker 建议指定本地端口，否则重启容器会让端口发生改变
 - [兰空图床](https://github.com/lsky-org/lsky-pro)：图床已经部署在七牛云，用 Picgo 上传，没感觉有必要用它。
 - [AutoBangumi](https://github.com/EstrellaXD/Auto_Bangumi)：自动追番器，用以替代自我审查的 Bilibili。
 - [nas-tools](https://github.com/jxxghp/nas-tools/wiki/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B)：号称能自动整理文件，但测试识别中很容易出错，暂不考虑。
-- Emby、Plex：流媒体方案，暂不考虑。
 - Clash：代理服务器。
 
 ## 影视整理

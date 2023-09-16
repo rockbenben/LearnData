@@ -2,7 +2,7 @@
 article: false
 title: Tiny Tiny RSS
 icon: rss
-order: 3
+order: 4
 ---
 
 Tiny Tiny RSS 推荐用 [Awesome TTRSS](http://ttrss.henry.wang/zh/) 的 Docker 镜像，搭建步骤参考 [NAS 上搭建 Docker](../services/NAS.html#nas-docker)。Awesome TTRSS 镜像不含插件「no_title_counters」，导致 TTRSS 网页标题会显示未读 RSS 数量。

@@ -2,7 +2,7 @@
 article: false
 title: Huginn
 icon: customize
-order: 2
+order: 3
 ---
 
 - Huginn 部署：查看 [deploy Huginn inside of Docker](https://github.com/huginn/huginn/blob/master/doc/docker/install.md) 和 [.env 设置](https://github.com/huginn/huginn/blob/master/.env.example)，或按下方的教程手动部署到服务器上，轻量使用推荐部署到 Docker。
