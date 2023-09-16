@@ -4,37 +4,32 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   { text: "博客", icon: "blog", link: "/blog" },
   {
-    text: "代码",
-    icon: "code",
-    prefix: "/",
-    children: [
-      "code/Markdown",
-      "code/AutoHotkey",
-      "code/Electron",
-      {
-        text: "页面开发",
-        icon: "vue",
-        prefix: "",
-        children: ["web/VuePress", "web/docsify", "deploy/VPS"],
-      },
-    ],
-  },
-  {
     text: "应用",
     icon: "app",
     prefix: "/",
     children: [
       "apps/Applist",
       {
-        text: "直播手册",
-        icon: "quote",
-        link: "apps/livestreaming/1_obs_basic",
+        text: "常用扩展",
+        icon: "chrome",
+        link: "apps/Chrome",
       },
       {
-        text: "服务/系统",
+        text: "服务/专题",
         icon: "any",
         prefix: "",
-        children: ["services/NAS", "windows/faq"],
+        children: [
+          {
+            text: "直播手册",
+            icon: "quote",
+            link: "apps/livestreaming/1_obs_basic",
+          },
+          {
+            text: "NAS 应用",
+            icon: "process",
+            link: "services/dockers-on-nas",
+          },
+        ],
       },
     ],
   },
@@ -42,7 +37,7 @@ export default navbar([
     text: "生活",
     icon: "emmet",
     prefix: "/family/",
-    children: ["Diet", "Shoppinglist", "Coupon"],
+    children: ["Diet", "Shoppinglist", "Coupon", "baby"],
   },
   {
     text: "工具",

@@ -1,7 +1,8 @@
 import { sidebar } from "vuepress-theme-hope";
 
 // 精选图标：https://theme-hope.vuejs.press/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87
-export default sidebar([
+export default sidebar({
+  "": [
   "/DailyRoutine",
   "/Fitness",
   // 读书笔记架构更换到 docsify，不能使用相对链接
@@ -15,9 +16,9 @@ export default sidebar([
     collapsible: true,
     children: [
       "Applist.md",
-      "ChatGPT.md",
-      "design.md",
       "AppNotes.md",
+      "design.md",
+      "ChatGPT.md",
       "Chrome.md",
       {
         text: "直播手册",
@@ -30,55 +31,7 @@ export default sidebar([
     ],
   },
   {
-    text: "🌐 页面开发",
-    icon: "",
-    prefix: "/web/",
-    link: "",
-    collapsible: true,
-    children: "structure",
-  },
-  {
-    text: "🏗️ 网站部署",
-    icon: "",
-    prefix: "/deploy/",
-    link: "",
-    collapsible: true,
-    children: [
-      "Static.md",
-      "CloudServices.md",
-      "VPS.md",
-      {
-        text: "部署工具",
-        icon: "emmet",
-        collapsible: true,
-        children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
-      },
-    ],
-  },
-  {
-    text: "🚀 代码学习",
-    icon: "",
-    prefix: "/code/",
-    link: "",
-    collapsible: true,
-    children: [
-      "README.md",
-      {
-        text: "Basic",
-        icon: "emmet",
-        collapsible: true,
-        children: ["Markdown.md", "Electron.md", "AutoHotkey.md", "Regex.md"],
-      },
-      {
-        text: "FrondEnd",
-        icon: "app",
-        collapsible: true,
-        children: ["Vue.md", "HTML.md", "JavaScript.md", "Python.md"],
-      },
-    ],
-  },
-  {
-    text: "🐋 Linux 服务",
+    text: "🐋 Docker 服务",
     icon: "",
     prefix: "/services/",
     link: "",
@@ -92,6 +45,60 @@ export default sidebar([
     link: "",
     collapsible: true,
     children: "structure",
+  },
+  {
+    text: "🔡 代码编程",
+    icon: "",
+    prefix: "",
+    link: "",
+    collapsible: true,
+    children: [
+      {
+        text: "页面开发",
+        icon: "",
+        prefix: "/web/",
+        collapsible: true,
+        children: "structure",
+      },
+      {
+        text: "网站部署",
+        icon: "",
+        prefix: "/deploy/",
+        collapsible: true,
+        children: [
+          "Static.md",
+          "CloudServices.md",
+          "VPS.md",
+          {
+            text: "部署工具",
+            icon: "emmet",
+            collapsible: true,
+            children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
+          },
+        ],
+      },
+      {
+        text: "代码学习",
+        icon: "",
+        prefix: "/code/",
+        collapsible: true,
+        children: [
+          "README.md",
+          {
+            text: "Basic",
+            icon: "emmet",
+            collapsible: true,
+            children: ["Markdown.md", "Electron.md", "AutoHotkey.md", "Regex.md"],
+          },
+          {
+            text: "FrondEnd",
+            icon: "app",
+            collapsible: true,
+            children: ["Vue.md", "HTML.md", "JavaScript.md", "Python.md"],
+          },
+        ],
+      },
+    ],
   },
   {
     text: "🛖 生活记录",
@@ -108,5 +115,8 @@ export default sidebar([
     link: "/blog",
     collapsible: true,
     children: "structure",
-  },
-]);
+  }],
+  // 独立功能区
+  "/services/dockers-on-nas/": "structure",
+  "/family/baby/": "structure"
+});
