@@ -22,7 +22,7 @@ Docker 使用查看 [Docker — 从入门到实践](https://yeasy.gitbook.io/doc
 
 ## 定制 Docker 镜像
 
-官方镜像并不总是符合我们的需求。因此，我们可以使用 docker commit 命令按需定制自己的镜像，具体操作见[使用 docker commit 将修改后的容器保存为镜像及其使用注意事项](https://blog.csdn.net/a772304419/article/details/123199579)。
+有时官方镜像可能不满足我们的需求。这时，我们可以使用 docker commit 命令定制自己的镜像。如何使用，可以查看[如何保存修改后的容器为镜像](https://blog.csdn.net/a772304419/article/details/123199579)。
 
 例如：
 
@@ -33,7 +33,7 @@ sudo docker commit \
     huginnxubuntu:1.0
 ```
 
-我们也可以使用 Dockerfile 来构建镜像，例如：
+另外，可以使用 Dockerfile 来构建镜像，如：
 
 ```bash
     build:
@@ -41,11 +41,20 @@ sudo docker commit \
       dockerfile: Dockerfile
 ```
 
-## 管理 Docker 数据库
+如何将镜像推送到 DockerHub：
 
-Docker 中的数据库可以指向外部，并且可以永久保存。但是外部保存的数据是各种小文件，而不是完整的 MySQL 文件，因此不能直接作为数据库进行读取。在实际管理中，我们不需要关心外部存储文件，而应该直接使用正在运行的数据库。
+```bash
+echo "您的密码" | docker login --username=您的用户名 --password-stdin
 
-首先，我们需要将 Docker 的数据库端口对外开放。例如，MySQL 的默认端口是 3306，我们可以将其指向 Docker 外的 3307 端口。然后，我们可以使用数据库应用程序连接数据库地址 192.168.3.3:3307。操作流程类似于 phpMyAdmin，非常简单，可以轻松地查看、修改和导出 Docker 中的数据库。如果你的数据库连接仍然被拒绝，可以参考 Huginn 中的内部数据库连接，将当前外部连接 IP 设置为允许。
+docker build -t rockben/cors-anywhere:0.4.4 .
+docker push rockben/cors-anywhere:0.4.4
+```
+
+## Docker 数据库管理
+
+在 Docker 中，数据库可以引用外部资源并被永久保留。但保存的外部数据是多个小文件而不是完整的 MySQL 文件。在实际操作中，我们应关注正在运行的数据库，而非外部存储文件。
+
+首先，应将 Docker 数据库的端口暴露给外部，如将 MySQL 的默认端口 3306 映射到外部的 3307 端口。随后，使用数据库工具连接到 `192.168.3.3:3307`。这类似于使用 phpMyAdmin，可以轻松查看、编辑和导出 Docker 内的数据库。如果数据库连接遭到拒绝，可以参照 Huginn 的内部数据库连接设置，确保当前外部连接 IP 是允许的。
 
 ## 其他使用
 

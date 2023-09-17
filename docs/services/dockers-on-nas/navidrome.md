@@ -1,6 +1,6 @@
 ---
 article: false
-title: Navidrome：开源音乐服务器的新选择
+title: Navidrome：开源音乐服务器
 order: 1
 ---
 
