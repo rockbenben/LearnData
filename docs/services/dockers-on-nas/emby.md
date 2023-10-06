@@ -27,6 +27,7 @@ services:
       - /volume3/Anime:/data/anime
       - /volume4/Documentary:/data/documentary
       - /volume4/Music/MV:/data/MV
+      - /volume4/Music/Audio:/data/Audio
       #- /opt/vc/lib:/opt/vc/lib #optional
     ports:
       - 49172:8096

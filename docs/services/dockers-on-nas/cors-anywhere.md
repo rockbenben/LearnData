@@ -18,7 +18,7 @@ services:
     image: rockben/cors-anywhere:0.4.4
     container_name: cors-anywhere
     ports:
-      - "8086:8080"
+      - "8186:8080"
     restart: unless-stopped
 ```
 
