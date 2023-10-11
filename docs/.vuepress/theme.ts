@@ -135,7 +135,7 @@ export default hopeTheme({
 
     // 组件库
     components: {
-      components: ["Badge", "BiliBili", "VideoPlayer", "YouTube"],
+      components: ["Badge", "BiliBili", "AudioPlayer", "VideoPlayer", "YouTube"],
     },
 
     // 禁用不需要的配置

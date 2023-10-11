@@ -83,9 +83,7 @@ order: -56
 
 ### 语音克隆的「口音」问题
 
-> 每个人的声音都是独一无二的，克隆自己的声音可以用于制作高度个性化的内容。
-
-示例音频：<AudioPlayer src="https://oss.newzone.top/audio/clonevoice01.wav" title="克隆音频实例 2" />
+<AudioPlayer src="https://oss.newzone.top/audio/clonevoice01.wav" title="克隆音频实例 2" />
 
 这个示例是使用 8 分钟 B 站视频和 CJE 模型训练出的。但你可能注意到了明显的断调口音问题，仿佛一个日本人在说中文。正如 @zachx121 指出的，「CJE 用的时候 romaji 的注音，就好比说用汉语拼音去标注英文单词的发音一样会有“口音”」。为了避免这个问题，可以使用纯中文设计的 C 模式进行训练和生成，以确保音频的自然和准确性。增加训练次数也有助于改善口音问题。
 
