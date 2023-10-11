@@ -118,9 +118,9 @@ scoop install ffmpeg
 
 如果你的电脑配置不足，但又想翻译非英语（如日语）的长视频，可以使用 Google Colab 的免费 GPU 运行 [N46Whisper](https://colab.research.google.com/github/Ayanaminn/N46Whisper/blob/main/N46Whisper.ipynb) 来在线转录字幕。转录出的字幕可以在 N46Whisper 中使用 ChatGPT API 进行翻译，也可以通过上文的机器翻译方式进行免费翻译。需要注意的是，在处理日语长视频时可以开启 `is_vad_filter`，减少幻听的出现。
 
-如果你对命令行工具不熟悉，也可以利用 [Subs AI](https://github.com/abdeladim-s/subsai)、[Buzz](https://github.com/chidiwilliams/buzz) 来进行 Whisper 转录。
+[faster-whisper](https://github.com/guillaumekln/faster-whisper) 和 [whisperX](https://github.com/m-bain/whisperX) 内置了 VAD，并拥有更快的处理速度。如果你对命令行工具不熟悉，也可以利用 [Subs AI](https://github.com/abdeladim-s/subsai)、[Buzz](https://github.com/chidiwilliams/buzz) 来进行 Whisper 转录。
 
-不过，目前第三方套壳工具存在各种问题。如果你只是想批量转录，可以使用 whisper+音视频绝对路径的方式，来将多个文件按序批量转录出字幕文件。注意，命令行的最后一行需要换行，否则最后一个文件不会自动转录。
+不过，目前第三方套壳工具存在各种问题。如果你只是想批量转录，可以使用「whisper + 音视频绝对路径」的方式，来将多个文件按序批量转录出字幕文件。注意，命令行的最后一行需要换行，否则最后一个文件不会自动转录。
 
 ## 更多
 

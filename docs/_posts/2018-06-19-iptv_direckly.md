@@ -1,5 +1,5 @@
 ---
-title: 客厅、书房、卧室，任意收看 IPTV 直播！（上海电信）
+title: 客厅、书房、卧室，任意收看 IPTV 直播！
 date: 2018-06-19
 category:
   - 网络
@@ -8,21 +8,15 @@ tag:
 order: -21
 ---
 
-**回放服务器已屏蔽公网 IP 的访问，仅限 vlan85 的 B 平面专网 IP 访问，本文章已失效！**
+随着电视、机顶盒、以及 IPTV 盒的增多，家中的遥控器也变得越来越多。为了摆脱众多的遥控器，开始直接使用直播源来播放电视。
 
-参考：[电信公网疑似已屏蔽回放源 IP · Issue #28](https://github.com/lucifersun/China-Telecom-ShangHai-IPTV-list/issues/28)
-
----
-
-电视 + 机顶盒 + IPTV 盒，家里的遥控器越来越多。为了摆脱众多的遥控器，开始使用 lucifersun 的直播源（原理上**仅限上海电信**）。
-
-lucifersun 抓取了[上海电信 IPTV 视频回放源](https://github.com/lucifersun/China-Telecom-ShangHai-IPTV-list)。借助直播源地址，我们可以在 PC、电视、手机上直接看电视直播。
+如果你有上海电信的 IPTV，可以使用 lucifersun 抓取的[上海电信 IPTV 视频回放源](https://github.com/lucifersun/China-Telecom-ShangHai-IPTV-list)（原理上**仅限上海电信**）。借助直播源地址，我们可以在 PC、电视、手机上直接看电视直播。这个 IPTV 直播源比电视直播**慢 15 秒**，对普通用户来说已经足够了。回放服务器已屏蔽公网 IP 的访问，仅限 vlan85 的 B 平面专网 IP 访问，参考：[电信公网疑似已屏蔽回放源 IP · Issue #28](https://github.com/lucifersun/China-Telecom-ShangHai-IPTV-list/issues/28)
 
 > 这个播放列表使用 IPTV 的频道 回放 功能。IPTV 直播用的是专网组播，无法直接通过 Internet 播放。
 > 因为不是所有频道都支持回放，所以这个列表里的频道 必然少于 IPTV 的直播频道。
 > 还有部分频道的回放地址播放错误，所以也没有收录。
 
-lucifersun 的 IPTV 直播源比电视直播**慢 15 秒**，对普通用户来说已经足够了。
+如果你没有 IPTV，推荐使用 fanmingming 的 [live](https://github.com/fanmingming/live) 项目，这是一个国内可直连的直播源分享项目，直播源支持 IPv4/IPv6 双栈访问。
 
 ## 提取直播源列表
 
