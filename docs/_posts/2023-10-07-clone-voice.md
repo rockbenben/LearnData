@@ -71,21 +71,29 @@ order: -56
 
   ![](https://img.newzone.top/2023-10-10-05-01-08.png?imageMogr2/format/webp)
 
-## 语音生成
+## 文字生成语音
 
 微调完成后，你可以下载微调好的模型和语音生成工具 [inference](https://github.com/Plachtaa/VITS-fast-fine-tuning/releases)，在本地环境下生成个性化的语音内容。
 
 ![](https://img.newzone.top/2023-10-09-09-08-31.png?imageMogr2/format/webp)
 
-在这个阶段，特别注意中文模型（即 languages C）的 `finetune_speaker.json` 格式问题。确保「speaks」部分被修改为字典格式，否则在运行 inference 时，你可能会遇到 `File "inference.py", line 99` 的报错。为方便，你可以直接点击[这里](https://wwva.lanzouq.com/iIy5m1b4bosf)下载我调整好的 json 文件。
+在这个阶段，特别注意中文模型（即 languages C）的 `finetune_speaker.json` 格式问题。确保「speaks」部分被修改为字典格式，否则在运行 inference 时，你可能会遇到 `File "inference.py", line 99` 的报错。为方便，你可以直接点击[这里](https://wwva.lanzouq.com/iIy5m1b4bosf)下载我调整好的 json 文件。如果你不需要二次元声音，可以直接使用 OUTPUT_MODEL 下的 `config.json` 替代 `finetune_speaker.json`。
 
-## 常见问题
+## 声音微调
+
+### 生成声音与原声无关
+
+在检查语料转写文本时，避免对 short_character_anno.txt 和 long_character_anno.txt 文件做过多的修改，因为这可能导致生成的声音与原声音产生较大差异。
+
+例如：因个人语调的不同，我读的是「假语村言」，但 whisper 将其识别为「甲乙寸言」。如果我保留 whisper 的识别结果不做修改，最终生成的声音与我本人的声音非常接近。但当我将 whisper 识别结果修改为原文本后，生成的声音产生了显著变化，几乎听不出与原声音的相似性。我们只需要对那些发音明显错误的部分做出修改。例如，「假」和「甲」的发音相同，无需更改；「语」和「乙」之间的差异较大，但由于是个人发音的特点，也无需更改；对于「村」和「寸」这样声调不同的词汇，可以在检查录音后做出相应更改。
 
 ### 语音克隆的「口音」问题
 
 <AudioPlayer src="https://oss.newzone.top/audio/clonevoice01.wav" title="克隆音频实例 2" />
 
 这个示例是使用 8 分钟 B 站视频和 CJE 模型训练出的。但你可能注意到了明显的断调口音问题，仿佛一个日本人在说中文。正如 @zachx121 指出的，「CJE 用的时候 romaji 的注音，就好比说用汉语拼音去标注英文单词的发音一样会有“口音”」。为了避免这个问题，可以使用纯中文设计的 C 模式进行训练和生成，以确保音频的自然和准确性。增加训练次数也有助于改善口音问题。
+
+## 常见问题
 
 ### 无法启动 inference
 
@@ -98,7 +106,3 @@ order: -56
 ### 录音中出现 zh
 
 在使用纯中文模式调试时，音频前后可能会标注当前语言，例如，中文语言中出现 ZH 标注。为去除这些不必要的语言标注，可以将生成语言设置为 `Mix`模式。
-
-## 最后
-
-声音不仅仅是交流的工具，它还代表了个人品牌的一部分。AI 和声音克隆技术的联合运用，让你能快速、高效地生成具有个性特色的音频内容，拥有更多未来的可能。
