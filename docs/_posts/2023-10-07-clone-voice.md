@@ -47,8 +47,8 @@ order: -56
 - 第 0 步：预先确认本地环境的 Python 版本为 3.8，并且已经安装了 [Microsoft C++ 生成工具](https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/) 和 ffmpeg。这样可以预防潜在错误。在启动本地运行之前，执行 `pip install --upgrade numpy` 来更新 numpy 版本。
 - 第 6 步：鉴于 wget 下载命令在 Windows 中可能不起作用，建议手动下载 [sampled_audio4ft_v2.zip](https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/sampled_audio4ft_v2.zip)，随后将文件解压至运行路径。
 - 第 7 步 (下载模型与配置)：
-  - C 模型（纯中文）：下载 HuggingFace 平台上的 [D_0.pth](https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/D_0.pth)、[G_0.pth](https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/G_0.pth) 和 [config.json](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/config.json)。
-  - CJ 模型（中日）：下载 [D_0-p.pth](https://huggingface.co/spaces/zomehwh/vits-uma-genshin-honkai/resolve/main/model/D_0-p.pth)、[G_0-p.pth](https://huggingface.co/spaces/zomehwh/vits-uma-genshin-honkai/resolve/main/model/G_0-p.pth) 和 [config.json](https://huggingface.co/spaces/zomehwh/vits-uma-genshin-honkai/resolve/main/model/config.json)。
+  - C 模型（纯中文）：下载 HuggingFace 平台上的 [D_0.pth](https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/D_0.pth)、[G_0.pth](https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/G_0.pth) 和 [config.json](https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/config.json)。
+  - CJ 模型（中日）：下载 [D_0-p.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/D_0-p.pth)、[G_0-p.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/G_0-p.pth) 和 [config.json](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/config.json)。
   - CJE 模型（中日英）：下载 [D_trilingual.pth](https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer/resolve/main/pretrained_models/D_trilingual.pth)、[G_trilingual.pth](https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer/resolve/main/pretrained_models/G_trilingual.pth) 和 [uma_trilingual.json](https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer/resolve/main/configs/uma_trilingual.json)。
   - 选择上方一种模型进行下载。完成下载后，将 G 模型重命名为 `G_0.pth`，将 D 模型重命名为 `D_0.pth`，并将配置文件 .json 重命名为 `finetune_speaker.json`。特别注意，要保证 json 文件是直接下载而非复制粘贴，以防后续步骤中打开 inference 出现问题。
 - 第 8 步：由于 LOCAL.md 教程中未包含在线视频，所以需要将相关视频文件下载到本地。
@@ -106,3 +106,7 @@ order: -56
 ### 录音中出现 zh
 
 在使用纯中文模式调试时，音频前后可能会标注当前语言，例如，中文语言中出现 ZH 标注。为去除这些不必要的语言标注，可以将生成语言设置为 `Mix`模式。
+
+### 长句读音含糊
+
+用短句生成了一段 6 秒的清晰音频，但当将两个相同的短句重复形成长句时，生成的语音时长仅为 9 秒，发音特别含糊。可能是因为语料文本过度修改，一些语音没有被 Whisper 识别，但已经标注。这与训练次数无关，出现此问题后，需重新检查语料。

@@ -48,28 +48,22 @@ Windows 遇到不懂的问题，可以在 [Microsoft 支持社区](https://answe
 
 ### Chrome App
 
-使用 Chrome 浏览器来给我们的网页生成一个「桌面应用」。
+使用 Chrome 浏览器将网页创建为「桌面应用」。
 
-1. 用 Chrome 浏览器打开想要转换为「桌面客户端」的网页，将登录后正常使用状态的网页 URL 收藏到书签栏。
-2. 打开 Chrome App 页面：`chrome://apps`，将刚刚收藏的标签页项目拖拽到下面的空白处，在应用图标上右键，勾选「在窗口中打开」，然后点击创建快捷方式。
-
-图标转换： [ConvertICO](https://convertico.com/) 将 png 图片转化为 ico 文件，从而自定义图标。
+1. 打开 Google Chrome 浏览器，并访问你希望生成「桌面客户端」的网页。
+2. 单击右上角的菜单按钮，然后选择「更多工具」>「创建快捷方式」。
+3. 在弹出的对话框中，ni 可以进行应用名称的修改，同时勾选「在窗口中打开」。
+4. 打开 Chrome App 页面：`chrome://apps`，以管理已经创建的应用程序。
 
 ### Pake
 
-[Pake](https://github.com/tw93/Pake) 用 Rust 打包网页生成很小的桌面 App，支持 Mac / Windows / Linux 系统，并提供热门网页的大包文件。
-
-### Nativefier
-
-利用开源的 [Nativefier](https://github.com/jiahaog/nativefier/) 能将网页转制成为一个 **可安装的** 桌面应用，支持 macOS 10.9+ / Windows / Linux 系统。其原理就是将网页利用 Electron 技术将网页内容封装起来，成为一个可执行、可安装的应用程序。
-
-然而这样的方式需要一些比较复杂的安装配置。由于 Nativefier 是 `Node.js` 编写的，所以不仅需要安装 `Node.js` 环境，还要安装 `npm` 包管理器，才可以通过 `npm install nativefier -g` 安装 Nativefier。安装之后 Nativefier 也只有命令行的交互方式，没有图形化界面。
+[Pake](https://github.com/tw93/Pake) 是一个使用 Rust 编写的工具，用于轻松构建跨平台的轻量级桌面应用，支持 Mac、Windows 和 Linux 操作系统，并提供了 YouTube、flomo、小红书等热门网页的打包文件。
 
 ### Web2Desk
 
-[Web2Desk](https://desktop.appmaker.xyz/) 让我们可以直接输入网页链接、应用名称和应用图标，然后经过其在服务器上面的构建，直接给我们提供 Windows、macOS 和 Linux 的原生安装程序的下载。
+[Web2Desk](https://desktop.appmaker.xyz/) 允许我们输入网页链接、应用名称和应用图标，然后通过其服务器构建，直接提供 Windows、macOS 和 Linux 的本机安装程序下载。然而，在测试中，使用 Web2Desk 将滴答清单 Web 转换为应用时，未能保存登录状态，因此实用性有限。
 
-但测试中，用 Web2Desk 转换滴答清单 Web, 无法记录登陆状态，实用性较低。
+图标转换：[ConvertICO](https://convertico.com/) 可将 PNG 图像转换为 ICO 文件，以自定义图标。
 
 ## 常见问题
 
@@ -101,7 +95,7 @@ Microsoft Store 安装的应用没有固定位置，一更新就会换位置，�
 
 安装应用却被提示「您的安全设置不允许将此应用程序安装到您的计算机上」时，新建记事本并输入下方代码，修改记事本的后缀名为.reg，然后右键以管理员身份运行，合并到注册表就可以了。^[[Unable to Install ClickOnce Application due to Security Settings](https://superuser.com/questions/1252575/unable-to-install-clickonce-application-due-to-security-settings-windows-10)]
 
-```bash
+```shell
 Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\Security\\TrustManager\\PromptingLevel]
 "MyComputer"="Enabled"

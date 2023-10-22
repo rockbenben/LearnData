@@ -23,8 +23,8 @@ services:
       - /volume3/Pictures/photos:/photos
     environment:
       - TZ=Asia/Shanghai
-      - SSL_NAME=home.newzone.top
+      - SSL_NAME=xxx.newzone.top
       - MT_SERVER_SSL_PORT=8163
 ```
 
-我在使用 MT Photos 时发现，视频播放可能需要全屏模式才能正常播放，尽管其他用户反馈视频播放功能正常。
+我在使用 MT Photos 时发现，视频播放可能需要全屏模式才能正常播放。开发者说后续会解决这个问题。
