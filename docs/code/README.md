@@ -23,6 +23,7 @@ icon: code
   - 提交规范：[Commitizen](http://commitizen.github.io/cz-cli/) + [Commitlint](https://commitlint.js.org/#/)
   - 单元测试：[vue-test-utils](https://next.vue-test-utils.vuejs.org/) + [jest](https://jestjs.io/) + [vue-jest](https://github.com/vuejs/vue-jest) + [ts-jest](https://kulshekhar.github.io/ts-jest/)
   - 自动部署：[GitHub Actions](https://docs.github.com/cn/actions/learn-github-actions)
+  - [Documate](https://documate.site/)：用于在文档网站中嵌入人工智能聊天对话框，根据内容回答用户问题。中间会调用 OpenAI API 用于回答问题。
 
 ## Visual Studio Code
 

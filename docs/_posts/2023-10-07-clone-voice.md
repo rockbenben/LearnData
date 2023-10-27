@@ -50,7 +50,7 @@ order: -56
   - C 模型（纯中文）：下载 HuggingFace 平台上的 [D_0.pth](https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/D_0.pth)、[G_0.pth](https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/G_0.pth) 和 [config.json](https://huggingface.co/datasets/Plachta/sampled_audio4ft/resolve/main/VITS-Chinese/config.json)。
   - CJ 模型（中日）：下载 [D_0-p.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/D_0-p.pth)、[G_0-p.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/G_0-p.pth) 和 [config.json](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/config.json)。
   - CJE 模型（中日英）：下载 [D_trilingual.pth](https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer/resolve/main/pretrained_models/D_trilingual.pth)、[G_trilingual.pth](https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer/resolve/main/pretrained_models/G_trilingual.pth) 和 [uma_trilingual.json](https://huggingface.co/spaces/Plachta/VITS-Umamusume-voice-synthesizer/resolve/main/configs/uma_trilingual.json)。
-  - 选择上方一种模型进行下载。完成下载后，将 G 模型重命名为 `G_0.pth`，将 D 模型重命名为 `D_0.pth`，并将配置文件 .json 重命名为 `finetune_speaker.json`。特别注意，要保证 json 文件是直接下载而非复制粘贴，以防后续步骤中打开 inference 出现问题。
+  - 选择上方一种模型进行下载。完成下载后，将 G 模型重命名为 `G_0.pth`，将 D 模型重命名为 `D_0.pth`，并将配置文件 .json 重命名为 `finetune_speaker.json`。`G_0.pth` 和 `D_0.pth` 放入 pretrained_models 目录，`finetune_speaker.json` 放入 config 目录。特别注意，要保证 json 文件是直接下载而非复制粘贴，以防后续步骤中打开 inference 出现问题。
 - 第 8 步：由于 LOCAL.md 教程中未包含在线视频，所以需要将相关视频文件下载到本地。
 - 第 9 步：运行以下命令：
 
@@ -73,7 +73,7 @@ order: -56
 
 ## 文字生成语音
 
-微调完成后，你可以下载微调好的模型和语音生成工具 [inference](https://github.com/Plachtaa/VITS-fast-fine-tuning/releases)，在本地环境下生成个性化的语音内容。
+微调完成后，将 `OUTPUT_MODEL` 下的模型文件和 config 文件放在语音生成工具 [inference](https://github.com/Plachtaa/VITS-fast-fine-tuning/releases) 解压文件夹下，其文件名分别为 `G_latest.pth` 和 `finetune_speaker.json`。一切准备就绪后，运行 inference.exe, 浏览器会自动弹出窗口，即可在本地环境下生成个性化的语音内容。注意其所在路径不能有中文字符或者空格。
 
 ![](https://img.newzone.top/2023-10-09-09-08-31.png?imageMogr2/format/webp)
 
@@ -83,7 +83,7 @@ order: -56
 
 ### 生成声音与原声无关
 
-在检查语料转写文本时，避免对 short_character_anno.txt 和 long_character_anno.txt 文件做过多的修改，因为这可能导致生成的声音与原声音产生较大差异。
+在检查语料转写文本时，尽量减少对 `short_character_anno.txt` 和 `long_character_anno.txt` 文件的非必要修改。过多的修改可能会导致生成的声音与原始声音产生明显差异。最初的训练中，可以将 `max_epochs` 设置为 200。在确生成声音符合预期后，再进行后续的训练。
 
 例如：因个人语调的不同，我读的是「假语村言」，但 whisper 将其识别为「甲乙寸言」。如果我保留 whisper 的识别结果不做修改，最终生成的声音与我本人的声音非常接近。但当我将 whisper 识别结果修改为原文本后，生成的声音产生了显著变化，几乎听不出与原声音的相似性。我们只需要对那些发音明显错误的部分做出修改。例如，「假」和「甲」的发音相同，无需更改；「语」和「乙」之间的差异较大，但由于是个人发音的特点，也无需更改；对于「村」和「寸」这样声调不同的词汇，可以在检查录音后做出相应更改。
 
@@ -105,7 +105,7 @@ order: -56
 
 ### 录音中出现 zh
 
-在使用纯中文模式调试时，音频前后可能会标注当前语言，例如，中文语言中出现 ZH 标注。为去除这些不必要的语言标注，可以将生成语言设置为 `Mix`模式。
+在使用纯中文模式调试时，音频前后可能会标注当前语言，例如，中文语言中出现 ZH 标注。为去除这些不必要的语言标注，可以将生成语言设置为 `Mix` 模式。
 
 ### 长句读音含糊
 
