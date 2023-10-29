@@ -6,12 +6,85 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 27 Oct 2023 19:14:02 GMT</pubDate>
-    <lastBuildDate>Fri, 27 Oct 2023 19:14:02 GMT</lastBuildDate>
+    <pubDate>Sun, 29 Oct 2023 02:46:24 GMT</pubDate>
+    <lastBuildDate>Sun, 29 Oct 2023 02:46:24 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
     <category>头脑驿站</category>
+    <item>
+      <title>Switch 升级记录与资源汇编</title>
+      <link>https://newzone.top/posts/2023-10-29-switch-firmware-updates.html</link>
+      <guid>https://newzone.top/posts/2023-10-29-switch-firmware-updates.html</guid>
+      <source url="https://newzone.top/rss.xml">Switch 升级记录与资源汇编</source>
+      <description>家里有一台多年前购买的港版软破大气层 Nintendo Switch，已经闲置了相当长时间。最近，我想用 Switch 来恢复运动，就重新翻出了它，但面临一些问题。 注入器、大气层以及系统版本都相当陈旧，而之前的卖家也无法联系上。因此，我不得不自行研究如何进行升级，同时寻找游戏下载渠道。闲置 Switch 系统版本停留在 10，而我的目标是将它升级到最新的版本，也就是 17。 以下是我进行升级的步骤： 更新注入器 首先，我需要更新注入器，我使用的是 ns-ATMOSPHERE 注入器，它看起来像一个白色的 USB 设备。由于注入器的版本低于 Hekate 4.2，所以我需要更新 payload。</description>
+      <category>工具</category>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>家里有一台多年前购买的港版软破大气层 Nintendo Switch，已经闲置了相当长时间。最近，我想用 Switch 来恢复运动，就重新翻出了它，但面临一些问题。</p>
+<p>注入器、大气层以及系统版本都相当陈旧，而之前的卖家也无法联系上。因此，我不得不自行研究如何进行升级，同时寻找游戏下载渠道。闲置 Switch 系统版本停留在 10，而我的目标是将它升级到最新的版本，也就是 17。</p>
+<p>以下是我进行升级的步骤：</p>
+<h2> 更新注入器</h2>
+<p>首先，我需要更新注入器，我使用的是 ns-ATMOSPHERE 注入器，它看起来像一个白色的 USB 设备。由于注入器的版本低于 Hekate 4.2，所以我需要更新 payload。</p>
+<ol>
+<li>
+<p>在 Windows 系统上安装 NS-Atmosphere Programmer。由于该应用的开发商已经跑路，我在 GBATEMP 论坛上找到两个版本，可以自行选择：<a href="https://www.mediafire.com/file/av2yur8zse5h016/Setup+NS-Atmosphere+programmer+v0.3.exe/file" target="_blank" rel="noopener noreferrer">0.3 STEUP</a>，<a href="https://gbatemp.net/attachments/ns-atmosphere-v0-4-rar.274028/" target="_blank" rel="noopener noreferrer">0.4 Protable</a>。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">(</a><a href="https://gbatemp.net/threads/ns-atmosphere-software-mirror.571116/" target="_blank" rel="noopener noreferrer">https://gbatemp.net/threads/ns-atmosphere-software-mirror.571116/</a>)</p>
+</li>
+<li>
+<p>打开 ns-ATMOSPHERE 的 ON 按钮，双击 RST 按钮，然后使用 USB 连接到 PC 端。此时 ns-ATMOSPHERE 将亮起粉灯。如果未出现粉灯，表示未被识别，可以尝试更换 USB 端口或重新尝试之前的操作。</p>
+</li>
+<li>
+<p>打开下载好的 NS-Atmosphere Programmer，点击 Refresh 来识别端口，然后点击 Browse 选择需要注入的 payload bin。在这里使用的是 <a href="https://github.com/CTCaer/hekate/releases" target="_blank" rel="noopener noreferrer">hekate</a>，从其发布页面下载最新版本的 <code>hekate_ctcaer_6.0.7_Nyx_1.5.6.zip</code>，然后解压得到 <code>hekate_ctcaer_6.0.7.bin</code>，这就是要注入的 bin。</p>
+</li>
+</ol>
+<p>如果有不清楚的地方，你可以观看 <a href="https://www.twitch.tv/videos/346892592" target="_blank" rel="noopener noreferrer">NS Atmosphere Dongle Tutorial!</a>这个视频教程，或者查看这篇更详细的<a href="https://www.cnblogs.com/letleon/p/NS_Atmosphere_payload_Programmer_aliyundrive_backup.html" target="_blank" rel="noopener noreferrer">注入器更新教程</a>。</p>
+<h2> 大气层&amp;主机升级</h2>
+<h3> 固件准备</h3>
+<p>接下来，我需要准备大气层和主机的升级。我使用了 <a href="https://github.com/Yuanbanba/Atmosphere/releases" target="_blank" rel="noopener noreferrer">Yuanbanba/Atmosphere</a>这个整合包，其中包含了大气层的迷你版本、Tesla 插件包以及相册 NRO 软件包，非常适合懒人使用。</p>
+<p>至于 Switch 最新的离线升级固件，我在 <a href="https://darthsternie.net/switch-firmwares/" target="_blank" rel="noopener noreferrer">Switch Firmwares</a> 上找到了。需要注意的是，这些固件分为全球版和国行版，建议选择全球版。</p>
+<h3> 升级流程</h3>
+<ol>
+<li>关机后，取出后盖板上的 SD 卡，并将其连接到计算机。</li>
+<li>在 SD 卡的根目录保留可能存在的 emuMMC 和 nintendo 文件夹，其他文件全部删除。（如果你有补丁或金手指，请务必自行备份。）</li>
+<li>复制大气层文件和离线升级固件到 SD 卡的根目录。</li>
+<li>最后，如果你有 emuMMC 文件夹，则选择启动<code>虚拟（破解）系统</code>；如果没有，则选择自动识别。进入系统后，打开「相册」，启动 daybreak 插件，然后选择安装离线固件包。随后全部选择右侧的选项并按下 A，安装完成后重启系统即完成升级。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">(</a><a href="https://www.bilibili.com/read/cv24458439/" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/read/cv24458439/</a>)</li>
+</ol>
+<p>在测试过程中，由于我的大气层版本较旧，没有 emuMMC 文件夹。本来应该选择自动识别来进入系统，但我参考了 <a href="https://switch.homebrew.guide/emummc/emummc.html" target="_blank" rel="noopener noreferrer">Create an emuMMC</a> 教程，创建了 emuMMC 虚拟系统，导致 SD 卡内容被清空并重新分区。这一步骤可能是多余的。</p>
+<h2> 进入大气层系统</h2>
+<ol>
+<li>在关机状态下，拆下右侧手柄（红色手柄）。如果已经开机，长按电源键约 8 秒，选择关闭电源。</li>
+<li>将短接器插入右侧手柄的空槽中，确保插到底。</li>
+<li>打开注入器的开关，等到灯亮起后插入 ns 的充电口。</li>
+<li>按住音量键 <code>+</code>，然后按下电源键，稍等片刻，大气层界面将会出现，此时可以拔下盒子和短接器，然后接上右手柄。</li>
+<li>大气层系统中点击「启动」，选择第二个选项 - 虚拟（破解）系统。</li>
+</ol>
+<h2> 安装游戏</h2>
+<h3> DBI</h3>
+<p>关于大气层安装游戏和 DLC 的方法，请参考 <a href="https://nswtl.info/switch-eng/games.html" target="_blank" rel="noopener noreferrer">Installation of games, DLC, updates</a>：</p>
+<ol>
+<li>使用 USB 将 Switch 连接到 PC。</li>
+<li>进入「相册」，启动 DBI，并运行 <code>Run MTP Responder</code>。此时，PC 端将出现 Switch 设备。</li>
+<li>打开 PC 上出现的 Switch 设备，根据你想安装游戏的位置，将游戏复制到 <code>SD Card install</code> 或 <code>NAND install</code>。</li>
+<li>安装结束后，按 <code>B</code> 停止 MTP 服务器并卸载 MTP 设备，然后按 <code>+</code> 关闭 DBI。</li>
+</ol>
+<p>DBI 是大气层增强包的内置插件，你也可以手动安装，参考 <a href="https://github.com/rashevskyv/dbi/blob/main/README_ENG.md" target="_blank" rel="noopener noreferrer">DBI 安装及使用说明</a>。</p>
+<h3> NS-USBloader</h3>
+<p>如果你不喜欢 DBI 的界面，也可以使用 Awoo Installer 通过 <a href="https://github.com/developersu/ns-usbloader" target="_blank" rel="noopener noreferrer">NS-USBloader</a> 来安装 Switch 游戏。</p>
+<p>然而，在安装游戏前，你需要在 NS-USBloader 的左侧，点击设置按钮，然后选择右侧的「下载并安装驱动程序」。如果不执行此步，Switch 可能会提示 USB 设备不兼容。</p>
+<h2> 游戏资源</h2>
+<p>游戏资源可在 <a href="https://nswtl.info/" target="_blank" rel="noopener noreferrer">SWITCH TORRENT LIBRARY</a> 上获取。这是最大且免费的游戏库，适用于 Nintendo Switch 和其他平台。在测试中，我找到了所有需要的游戏。</p>
+<p>点击页面上的标题区域，将跳转至 Telegram Bot。向机器人发送游戏的英文名称，机器人将回复游戏的种子文件和版本说明。</p>
+<p>我个人已安装的游戏包括：Just Dance，Fitness Boxing 2，Nintendo Switch Sports，Ring Fit Adventure，The Legend of Zelda - Breath of the Wild。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>NS Atmosphere Software Mirror <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p>switch 大气层更新升级通用详细教程，不管你现在是 16.0.3 还是以后 17.0 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
     <item>
       <title>别再被同质化的内容淹没！用 AI 克隆技术打造你独特的声音品牌！</title>
       <link>https://newzone.top/posts/2023-10-07-clone-voice.html</link>
@@ -594,57 +667,6 @@
 </ul>
 <h2> 更多</h2>
 <p>如果你在上文中没有找到你需要的功能功能，可以访问 <a href="https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/" target="_blank" rel="noopener noreferrer">OBS 插件库</a>进行搜索。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>直播入门攻略四 | 特效篇：美颜、变声、多开、虚拟主播</title>
-      <link>https://newzone.top/apps/livestreaming/4_live_effects.html</link>
-      <guid>https://newzone.top/apps/livestreaming/4_live_effects.html</guid>
-      <source url="https://newzone.top/rss.xml">直播入门攻略四 | 特效篇：美颜、变声、多开、虚拟主播</source>
-      <description>虽然 OBS 的功能已经非常强大，但通过第三方软件可以更简单地给我们带来美颜、变声、虚拟主播等特效。 美颜 推荐使用 YY 开播来实现直播美颜功能。 打开 YY 开播，调用摄像头摄像，开启美颜功能。然后，在 OBS 中调用 YY 开播，如果有绿幕，可以添加「色度值」滤镜进行视频抠图。一旦配置好，下次启动 OBS 时，软件会自动调用 YY 开播开启美颜，无需重复配置。但是，「美颜 + 直播」对电脑配置的要求较高，如果直播画面出现明显卡顿，建议关闭 YY 开播。</description>
-      <category>工具</category>
-      <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
-      <content:encoded><![CDATA[<p>虽然 OBS 的功能已经非常强大，但通过第三方软件可以更简单地给我们带来美颜、变声、虚拟主播等特效。</p>
-<h2> 美颜</h2>
-<p>推荐使用 <a href="https://v.yy.com/" target="_blank" rel="noopener noreferrer">YY 开播</a>来实现直播美颜功能。</p>
-<p>打开 YY 开播，调用摄像头摄像，开启美颜功能。然后，在 OBS 中调用 YY 开播，如果有绿幕，可以添加「色度值」滤镜进行视频抠图。一旦配置好，下次启动 OBS 时，软件会自动调用 YY 开播开启美颜，无需重复配置。但是，「美颜 + 直播」对电脑配置的要求较高，如果直播画面出现明显卡顿，建议关闭 YY 开播。</p>
-<p><strong>使用注意</strong>：</p>
-<ul>
-<li>剧烈运动时，不要开美颜直播，否则容易卡顿。</li>
-<li>不要开启 YY 直播中除美颜外的功能，如虚拟背景、虚拟形象等，否则直播中的画面背景无法透明化。</li>
-</ul>
-<h2> 变声</h2>
-<p>直播变声可以通过硬件和软件两种方式实现。软件变声器，如 MorphVOX Pro 和神舌，对使用者的语气要求较高。我在淘宝找人进行了声音精调，但效果仍然无法仿真。店家发的语气教程也没有太多参考价值，初学者很难入门。硬件变声器的效果更加糟糕，强烈不推荐。</p>
-<h2> 虚拟主播</h2>
-<p>如果不想录脸直播，可以配合软件使用虚拟形象直播。此类换脸软件会占用较高的 CPU，需要使用三年内的主流配置。</p>
-<h3> Snap Camera</h3>
-<p><a href="https://snapcamera.snapchat.com/" target="_blank" rel="noopener noreferrer">Snap Camera</a> 是 SnapChat 的免费增强现实应用。它可以帮助你在电脑直播/录屏时实现挡脸头套、美化滤镜等特效。如果你熟悉 3D 建模，可以使用 Lens Studio 定制属于你自己的变脸特效。但需要注意的是，当你喝水、低头或脸部被遮挡时，脸部特效会失效。</p>
-<figure><img src="https://img.newzone.top/SnapCamera.gif?imageMogr2/format/webp" alt="Snap Camera 效果图" tabindex="0" loading="lazy"><figcaption>Snap Camera 效果图</figcaption></figure>
-<p>如果你无法使用 Snap Camera，可以尝试 FaceRig 和 PrprLive。</p>
-<h3> FaceRig</h3>
-<p><a href="https://store.steampowered.com/app/274920/FaceRig/" target="_blank" rel="noopener noreferrer">FaceRig</a>（Steam 已停售）可以通过对五官的动作捕捉，让卡通脸的表情进行同步变化，但不能对头部以下的部分进行捕捉和同步。使用时，需要打开 FaceRig 中的「切换广播」，否则 OBS 窗口会显示为黑屏。</p>
-<figure><img src="https://img.newzone.top/20210329092154.gif?imageMogr2/format/webp" alt="FaceRig 演示图" tabindex="0" loading="lazy"><figcaption>FaceRig 演示图</figcaption></figure>
-<p>注意：百度搜索 FaceRig 的首个结果是<strong>虚假官网</strong>，价格高且无保障，不要在上面进行购买。</p>
-<h3> PrprLive</h3>
-<p><a href="https://store.steampowered.com/app/1279610/PrprLive/" target="_blank" rel="noopener noreferrer">PrprLive</a> 是国内的变脸软件，基础版免费，同样在 Steam 销售，付费前先试试基础版。</p>
-<h2> 动态素材</h2>
-<p>为了丰富直播场景，可以使用带绿幕的视频来添加动态特效，或者借助类虚拟主播技术来实现交互。例如 <a href="https://d.appinn.com/bongo-cat-mver/" target="_blank" rel="noopener noreferrer">Bongo Cat Mver</a>，它能实时同步键盘与鼠标状态，增加直播趣味性。如果你使用的是 Bongo Cat 全键盘同步模型，建议打乱映射规则，以防止隐私泄露。</p>
-<figure><img src="https://img.newzone.top/2022-06-30-08-29-40.png" alt="直播间的猫咪" tabindex="0" loading="lazy"><figcaption>直播间的猫咪</figcaption></figure>
-<h2> 摄像头多开</h2>
-<p>摄像头默认只能被一个应用调用。借助 <a href="https://splitcam.com/" target="_blank" rel="noopener noreferrer">SplitCam</a>，你能在摄像头画面上叠加元素，使用镜像、高亮滤镜微调画面，还能让摄像头画面同步给多个应用。</p>
-<p>例如，摄像头可以同时用于 OBS 直播和 Capture 录屏，在不同用途上可以叠加不同滤镜和特效，呈现出不同的画面。</p>
-<p><strong>使用流程</strong>：</p>
-<ol>
-<li>打开 SplitCam，选择默认摄像头。</li>
-<li>Snap Camera、Capture 等第三方调用摄像头时，选择「SplitCam Video Driver」。</li>
-</ol>
-<h2> 其他应用</h2>
-<h3> NVIDIA BROADCAST</h3>
-<p>如果你使用的是 NVIDIA 显卡，强烈推荐安装 <a href="https://www.nvidia.cn/geforce/guides/broadcast-app-setup-guide/" target="_blank" rel="noopener noreferrer">NVIDIA Broadcast</a>。它利用 AI 的强大功能将标准网络摄像头和麦克风升级为高端智能设备，通过麦克风去噪、房间回声消除、虚拟背景、网络摄像头人像跟踪和视频降噪等 AI 功能，提高直播的视频和音频质量。通过 NVIDIA RTX GPU 上搭载的名为 Tensor Core 的专用 AI 处理器，AI 网络能够实时运行高质量的效果。</p>
-<h3> 小葫芦弹幕助手</h3>
-<p><a href="https://zs.xiaohulu.com/danmu/" target="_blank" rel="noopener noreferrer">小葫芦弹幕助手</a>可实时显示网友的互动和打赏，尤其适合游戏直播。但是，由于弹幕答谢、自动定时弹幕、手动弹幕等功能已暂停，不建议新手充值会员。</p>
-<p>如果不需要在直播界面中显示弹幕，不要安装小葫芦弹幕插件。安装后，会影响 OBS 窗口捕获功能，无法抓取基于 Electron 的应用界面，从而导致窗口捕捉黑屏。解决方法是删除 <code>C:\Program Files\obs-studio\obs-plugins\64bit</code> 目录内的 <code>CalabashDanmuPlugin.dll</code>、<code>CalabashWinCapture.dll</code>、<code>ObssDanmuInfo.dll</code>，重启 OBS 即可恢复，但下次使用弹幕助手时，这三个文件会自动安装，黑屏问题复现，只能重新删除指定文件。</p>
-<p>小葫芦直播助手集成了 OBS 和弹幕助手的功能，但为了直播的扩展性，仍然建议从 OBS 入门。</p>
 ]]></content:encoded>
     </item>
   </channel>
