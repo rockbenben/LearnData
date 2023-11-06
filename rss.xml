@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 29 Oct 2023 02:46:24 GMT</pubDate>
-    <lastBuildDate>Sun, 29 Oct 2023 02:46:24 GMT</lastBuildDate>
+    <pubDate>Mon, 06 Nov 2023 02:44:11 GMT</pubDate>
+    <lastBuildDate>Mon, 06 Nov 2023 02:44:11 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -27,13 +27,13 @@
 <p>首先，我需要更新注入器，我使用的是 ns-ATMOSPHERE 注入器，它看起来像一个白色的 USB 设备。由于注入器的版本低于 Hekate 4.2，所以我需要更新 payload。</p>
 <ol>
 <li>
-<p>在 Windows 系统上安装 NS-Atmosphere Programmer。由于该应用的开发商已经跑路，我在 GBATEMP 论坛上找到两个版本，可以自行选择：<a href="https://www.mediafire.com/file/av2yur8zse5h016/Setup+NS-Atmosphere+programmer+v0.3.exe/file" target="_blank" rel="noopener noreferrer">0.3 STEUP</a>，<a href="https://gbatemp.net/attachments/ns-atmosphere-v0-4-rar.274028/" target="_blank" rel="noopener noreferrer">0.4 Protable</a>。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">(</a><a href="https://gbatemp.net/threads/ns-atmosphere-software-mirror.571116/" target="_blank" rel="noopener noreferrer">https://gbatemp.net/threads/ns-atmosphere-software-mirror.571116/</a>)</p>
-</li>
+<p>在 Windows 系统上安装 NS-Atmosphere Programmer。由于该应用的开发商已经跑路，我在 GBATEMP 论坛上找到两个版本，可以自行选择：<a href="https://www.mediafire.com/file/av2yur8zse5h016/Setup+NS-Atmosphere+programmer+v0.3.exe/file" target="_blank" rel="noopener noreferrer">0.3 STEUP</a>，<a href="https://gbatemp.net/attachments/ns-atmosphere-v0-4-rar.274028/" target="_blank" rel="noopener noreferrer">0.4 Protable</a>。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1">
+</a></li><a class="footnote-anchor" id="footnote-ref1">
 <li>
 <p>打开 ns-ATMOSPHERE 的 ON 按钮，双击 RST 按钮，然后使用 USB 连接到 PC 端。此时 ns-ATMOSPHERE 将亮起粉灯。如果未出现粉灯，表示未被识别，可以尝试更换 USB 端口或重新尝试之前的操作。</p>
 </li>
-<li>
-<p>打开下载好的 NS-Atmosphere Programmer，点击 Refresh 来识别端口，然后点击 Browse 选择需要注入的 payload bin。在这里使用的是 <a href="https://github.com/CTCaer/hekate/releases" target="_blank" rel="noopener noreferrer">hekate</a>，从其发布页面下载最新版本的 <code>hekate_ctcaer_6.0.7_Nyx_1.5.6.zip</code>，然后解压得到 <code>hekate_ctcaer_6.0.7.bin</code>，这就是要注入的 bin。</p>
+</a><li><a class="footnote-anchor" id="footnote-ref1">
+</a><p><a class="footnote-anchor" id="footnote-ref1">打开下载好的 NS-Atmosphere Programmer，点击 Refresh 来识别端口，然后点击 Browse 选择需要注入的 payload bin。在这里使用的是 </a><a href="https://github.com/CTCaer/hekate/releases" target="_blank" rel="noopener noreferrer">hekate</a>，从其发布页面下载最新版本的 <code>hekate_ctcaer_6.0.7_Nyx_1.5.6.zip</code>，然后解压得到 <code>hekate_ctcaer_6.0.7.bin</code>，这就是要注入的 bin。</p>
 </li>
 </ol>
 <p>如果有不清楚的地方，你可以观看 <a href="https://www.twitch.tv/videos/346892592" target="_blank" rel="noopener noreferrer">NS Atmosphere Dongle Tutorial!</a>这个视频教程，或者查看这篇更详细的<a href="https://www.cnblogs.com/letleon/p/NS_Atmosphere_payload_Programmer_aliyundrive_backup.html" target="_blank" rel="noopener noreferrer">注入器更新教程</a>。</p>
@@ -62,22 +62,24 @@
 <p>关于大气层安装游戏和 DLC 的方法，请参考 <a href="https://nswtl.info/switch-eng/games.html" target="_blank" rel="noopener noreferrer">Installation of games, DLC, updates</a>：</p>
 <ol>
 <li>使用 USB 将 Switch 连接到 PC。</li>
-<li>进入「相册」，启动 DBI，并运行 <code>Run MTP Responder</code>。此时，PC 端将出现 Switch 设备。</li>
-<li>打开 PC 上出现的 Switch 设备，根据你想安装游戏的位置，将游戏复制到 <code>SD Card install</code> 或 <code>NAND install</code>。</li>
-<li>安装结束后，按 <code>B</code> 停止 MTP 服务器并卸载 MTP 设备，然后按 <code>+</code> 关闭 DBI。</li>
+<li>进入「相册」，启动 DBI，按 <code>X</code> 来运行 <code>Run MTP Responder</code>。此时，PC 端将出现 Switch 设备。</li>
+<li>打开 PC 上出现的 Switch 设备，根据你想安装游戏的位置，将游戏复制到 <code>5: SD Card install</code> 或 <code>6: NAND install</code>。</li>
+<li>安装结束后，按 <code>B</code> 停止 MTP 服务器并卸载 MTP 设备，然后再按 <code>B</code> 关闭 DBI。</li>
 </ol>
-<p>DBI 是大气层增强包的内置插件，你也可以手动安装，参考 <a href="https://github.com/rashevskyv/dbi/blob/main/README_ENG.md" target="_blank" rel="noopener noreferrer">DBI 安装及使用说明</a>。</p>
+<p>如果你安装的是需要网络登录的游戏，例如《Just Dance 2023》，请确保按照游戏包中提供的离线激活提示进行操作。在安装前，需将离线激活和 Mod 文件移出安装包，以避免出现 <code>not acceptable</code> 的错误提示。</p>
+<p>DBI 是大气层增强包的内置插件。如果不使用增强包，你也可以手动安装 DBI，具体流程请参考 <a href="https://github.com/rashevskyv/dbi/blob/main/README_ENG.md" target="_blank" rel="noopener noreferrer">DBI 安装及使用说明</a>。</p>
 <h3> NS-USBloader</h3>
 <p>如果你不喜欢 DBI 的界面，也可以使用 Awoo Installer 通过 <a href="https://github.com/developersu/ns-usbloader" target="_blank" rel="noopener noreferrer">NS-USBloader</a> 来安装 Switch 游戏。</p>
 <p>然而，在安装游戏前，你需要在 NS-USBloader 的左侧，点击设置按钮，然后选择右侧的「下载并安装驱动程序」。如果不执行此步，Switch 可能会提示 USB 设备不兼容。</p>
 <h2> 游戏资源</h2>
 <p>游戏资源可在 <a href="https://nswtl.info/" target="_blank" rel="noopener noreferrer">SWITCH TORRENT LIBRARY</a> 上获取。这是最大且免费的游戏库，适用于 Nintendo Switch 和其他平台。在测试中，我找到了所有需要的游戏。</p>
-<p>点击页面上的标题区域，将跳转至 Telegram Bot。向机器人发送游戏的英文名称，机器人将回复游戏的种子文件和版本说明。</p>
+<p>点击页面上的标题区域，将跳转至 Telegram Bot。向机器人发送游戏的英文名称，机器人将回复游戏的种子文件和版本说明。游戏的英文名称可以在 <a href="https://www.3dmgame.com/games/ns_all_1/" target="_blank" rel="noopener noreferrer">3DMGAME Switch 专区</a>中查找。</p>
+<p>如果需要金手指，可以在 DBI 游戏安装的第三步将金手指文件复制到 <code>1: SD Card\atmosphere\contents</code> 文件夹中。然后，打开游戏，按住 L 键再按向下键，即可激活金手指菜单。金手指资源见 <a href="https://www.gamer520.com/jinshouzhi" target="_blank" rel="noopener noreferrer">Switch520</a>。</p>
 <p>我个人已安装的游戏包括：Just Dance，Fitness Boxing 2，Nintendo Switch Sports，Ring Fit Adventure，The Legend of Zelda - Breath of the Wild。</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>NS Atmosphere Software Mirror <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+<li id="footnote1" class="footnote-item"><p><a href="https://gbatemp.net/threads/ns-atmosphere-software-mirror.571116/" target="_blank" rel="noopener noreferrer">NS Atmosphere Software Mirror</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="footnote2" class="footnote-item"><p>switch 大气层更新升级通用详细教程，不管你现在是 16.0.3 还是以后 17.0 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
@@ -347,15 +349,16 @@
 <h3> NDI</h3>
 <p>NDI 是最稳定的，可自由调节拍摄参数。打开 NDI 应用后，需等待 NDI 界面周边出现绿框或红框，OBS 才可以识别到摄像头。不过 NDI 是收费应用，安卓用户可使用 <a href="https://wwe.lanzoup.com/iQCMh00b946b" target="_blank" rel="noopener noreferrer">NDI 调试 APK</a>。</p>
 <h3> IP Webcam</h3>
-<p>IP Webcam 的推流稳定性一般，容易掉帧，但 <a href="https://wwz.lanzouf.com/iT6pH01tj7yb" target="_blank" rel="noopener noreferrer">IP Webcam 免费版</a>足够个人使用。</p>
-<p>下文为 IP Webcam 基础设置：</p>
-<ul>
-<li>进入 IP Webcam 设置页面，将流质量调整至 90%，视频分辨率设为 720p，可有效减少卡顿。IP camera 耗电低，适合手机长时间直播，支持视频与浏览器等方式。</li>
-<li>在 OBS 中，选择「场景」&gt;「来源」&gt;「媒体源」，取消勾选本地文件，「输入」项中填入 IP Webcam 视频地址，例如 <code>http://192.168.2.234:8080/video</code>。</li>
-<li>OBS 中选择「场景」&gt;「来源」&gt;「浏览器」，「URL」项中填入 IP Webcam 浏览器全屏地址，例如 <code>http://192.168.2.234:8080/jsfs.html</code>。注意：浏览器推流容易出现闪屏。</li>
-</ul>
+<p><a href="https://play.google.com/store/apps/details?id=com.pas.webcam" target="_blank" rel="noopener noreferrer">IP Webcam</a> 在推流稳定性方面表现一般，偶尔出现丢帧，但对于个人直播使用来说，免费版本已经足够。你可以在 Google Play 上安装它，或使用<a href="https://wwva.lanzouq.com/iQAFF1dic4qf" target="_blank" rel="noopener noreferrer">国内的备用下载链接</a>。</p>
+<p>以下是 IP Webcam 的基本设置步骤：</p>
+<ol>
+<li>滑动至应用底部，点击「开启服务器」，即可开始使用手机摄像头进行推流。</li>
+<li>画面下方会显示一些类似 <code>http://192.168.2.234:8080</code> 的地址，请在局域网浏览器中打开此地址。</li>
+<li>在浏览器中，你可以调整 IP 摄像头的推流设置。将流畅度设置为 90%，视频分辨率设为 720p，这可以有效减少卡顿。IP Webcam 的耗电量较低，适合长时间手机直播，并支持多种方式，包括视频和浏览器等。</li>
+<li>在 OBS 中，选择「场景」&gt;「来源」&gt;「媒体源」，取消勾选本地文件，然后在「输入」中输入 IP 摄像头的视频地址，例如 <code>http://192.168.2.234:8080/video</code>。或者使用浏览器推流模式，在 OBS 中，选择「场景」&gt;「来源」&gt;「浏览器」，在「URL」中输入 IP 摄像头的全屏浏览器地址，例如 <code>http://192.168.2.234:8080/jsfs.html</code>。请注意：浏览器推流可能会导致闪烁。</li>
+</ol>
 <h3> 其他</h3>
-<p>如果出现闪退等问题，可尝试 iriun webcam、DroidCam 和 ivcam。</p>
+<p>如果出现闪退等问题，可尝试使用 iriun webcam、DroidCam 和 ivcam。</p>
 <p>不推荐使用无他伴侣，尽管国内有大量教程介绍它，但使用中会出现很多问题，例如：摄影角度很难控制；无法使用 FaceRig 等变脸应用；直播 10 分钟后，摄像头经常自动与 OBS 断开连接；直播 2 小时后，OBS 无法检测到无他伴侣。</p>
 ]]></content:encoded>
     </item>
