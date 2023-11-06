@@ -14,14 +14,14 @@ order: -26
 
 市面上主流的多屏协同软件大多都是基于 scrcpy 开发的套壳产品，而且 bug 也没有得到修复，因此建议直接使用官方的 scrcpy。
 
-本文以 Windows 投屏为例，可以前往官方站点下载 [scrcpy-win64-v2.1.1.zip](https://github.com/Genymobile/scrcpy/releases/download/v2.1.1/scrcpy-win64-v2.1.1.zip)，或者使用[国内搬运链接](https://wwva.lanzouq.com/iB9Og12xug9c)。
+本文以 Windows 投屏为例，可以前往官方站点下载 [scrcpy-win64-v2.2.zip](https://github.com/Genymobile/scrcpy/releases/download/v2.2/scrcpy-win64-v2.2.zip)，或者使用[国内搬运链接](https://wwva.lanzouq.com/iEdcP1dhfduf)。
 
 ## 有线投屏
 
-1. 下载 scrcpy 并进行解压。
-2. 手机端开启 `开发者选项` 和 `USB 调试`。开发者选项默认处于隐藏状态，手机上选择「设置/系统」>「关于手机」，然后点击版本号七次，返回上一屏幕，即可在底部找到开发者选项。
-3. 用数据线连接手机和电脑。手机上会出现授权请求，选择「允许 USB 调试」。
-4. 双击已解压的 `scrcpy.exe` 文件，即可实现有线投屏。
+1. 下载并解压 scrcpy。
+2. 在手机上启用 `开发者选项` 和 `USB 调试`。要开启开发者选项，通常需要点击手机上的「设置/系统」>「关于手机」，然后连续点击版本号七次。返回上一屏幕后，你将在底部找到开发者选项。
+3. 使用数据线连接手机和电脑。手机上会弹出一个授权请求，请选择「允许 USB 调试」。
+4. 双击已解压的 `scrcpy.exe` 文件，即可开始有线投屏。
 
 若需在手机黑屏时继续投屏，请按以下步骤操作：当手机屏幕亮起并解锁后，连接至电脑，然后输入命令 `.\scrcpy --turn-screen-off`。此操作会关闭手机屏幕，但投屏功能继续正常运行。
 
@@ -33,7 +33,7 @@ order: -26
 
 ```shell
 # a.将命令目录切换到 scrcpy 文件夹。如果使用的是 Windows 11，在 scrcpy 文件夹中右键点击「在终端中打开」，会自动切换到当前路径。
-cd D:\Libraries\Desktop\scrcpy-win64-v2.1.1
+cd D:\Libraries\Desktop\scrcpy-win64-v2.2
 ​
 # b.在手机端开启「开发者选项」和「USB 调试」，然后使用数据线将手机和电脑连接，并允许 USB 调试，开启手机端口。
 .\adb tcpip 5555
@@ -53,6 +53,9 @@ cd D:\Libraries\Desktop\scrcpy-win64-v2.1.1
 .\scrcpy -e -m 1024
 # 简化操作：合并步骤 c 和 d，保持屏幕常亮，指定 1024 分辨率。
 .\scrcpy --tcpip=192.168.2.20 -w -m 1024
+
+# Android 12 以上的设备可使用相机投屏
+.\scrcpy --video-source=camera
 ```
 
 ![](https://img.newzone.top/20190829093407.png "scrcpy 命令行截图")
@@ -63,7 +66,7 @@ cd D:\Libraries\Desktop\scrcpy-win64-v2.1.1
 
 ```shell
 # 将命令目录切换到 scrcpy 文件夹。
-cd D:\Libraries\Desktop\scrcpy-win64-v2.1.1
+cd D:\Libraries\Desktop\scrcpy-win64-v2.2
 ​
 # 开始录制，录屏文件会自动保存在当前文件夹内，文件名为指定的文件名。
 .\scrcpy -r filename.mp4
@@ -96,9 +99,15 @@ cd D:\Libraries\Desktop\scrcpy-win64-v2.1.1
 .\scrcpy -m 800
 ```
 
-### 华为不能投屏
+### 小米投屏设置
 
-华为/荣耀设备切换为无线投屏时，拔掉数据线，系统会关闭 USB 调试，导致投屏终止。
+小米手机的投屏设置与其他手机不同。你需要进入「我的设备」>「全部参数与信息」，然后连续点击多次「OS 版本」，随后返回到「设置」>「更多设置」，才能进入开发者模式。
+
+在开发者选项中，需要同时启用 `USB 调试` 和 `USB 调试 (安全设置)`，然后重新启动手机，才能使用 scrcpy 进行投屏。否则，scrcpy 将出现各种报错命令，并无法正常进行投屏操作。
+
+### 华为投屏断开
+
+在华为/荣耀设备上，当切换到无线投屏时，拔掉数据线会导致系统关闭 USB 调试，从而终止投屏。
 
 解决方案来自 @残荷听雨：「进工程模式，把 usb 调成开发模式，先打开“在充电模式下允许 ADB 调试”，再打开 usb 调试。这样操作后，再拔掉数据线，它就不会自动关闭 usb 调试了。副作用是，“在充电模式下允许 ADB 调试”会自动常开，在网吧等公共区域，仅用数据线充电时就需要手动关掉 usb 调试，防止被黑。」
 

@@ -83,7 +83,7 @@ Windows 自用软件，以开源软件为主。
 
 局域网传输：[FastCopy](http://fastcopy.jp/) & [Snapdrop](https://meta.appinn.net/t/topic/31209/1) & [LocalSend](https://www.appinn.com/localsend/) ~~& 局域网通讯 (酷安) & Send Anywhere & Pushbullet~~
 
-文件归档：[Dropit](http://www.dropitproject.com/)(自动文件归档) & GoodSync(文件同步) & [DropPoint](https://www.appinn.com/droppoint/)(复制中转框)
+文件归档：Syncthing(异地同步) & GoodSync(同设备同步) & [Dropit](http://www.dropitproject.com/)(自动文件归档) & [DropPoint](https://www.appinn.com/droppoint/)(复制中转框)
 
 网盘同步：坚果云 & 阿里云盘 & 百度网盘 & 115 ([转存脚本](https://gist.github.com/Nerver4Ever/953447c9ecd330ffc0861d4cbb839369)) ~~& 亿方云 & 金山快盘 & 微云~~
 
@@ -143,7 +143,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 ## Android
 
-- [KODI](https://kodi.tv/download/android)：安卓 TV 的最强播放器。
+- [GKD](https://github.com/gkd-kit/gkd):手机端去广告的开源利器，可以点击跳过任意开屏广告/点击关闭应用内部任意弹窗广告，如关闭百度贴吧帖子广告卡片/知乎回答底部推荐广告卡片。
 - [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 YouTube。
 - [WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
 - [AutoX](https://github.com/kkevsekk1/AutoX)：开源版的 Auto.js，没有包名屏蔽。相关信息可以参考 [快人一步：使用 Tasker+AutoX 一键直达健康码](https://sspai.com/post/65863)。

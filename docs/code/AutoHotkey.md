@@ -107,6 +107,7 @@ RunAs  ; 恢复为普通权限
 Run, %A_WorkingDir%\xx.lnk ;启用当前目录中的文件
 Run, chrome.exe https://newzone.top/ ;指定浏览器打开链接。
 Run, %A_ProgramFiles%\Some Application\App.exe, %A_ProgramFiles%\Some Application ;有些程序需要在它们自己的目录下运行。
+Run, "%A_ProgramFiles%\Google\Chrome\Application\chrome_proxy.exe --profile-directory=Default --app-id=xxxxxxxx" ;打开 Chrome 浏览器的内部应用，修改 app-id 即可
 
 ;Msgbox：显示带两个按钮的对话框 (是 和 否) 对话框中可加内容
 Msgbox，你好吗？ ;显示「你好吗？」的对话框

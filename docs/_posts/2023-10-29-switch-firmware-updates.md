@@ -18,7 +18,7 @@ order: -0.03
 
 首先，我需要更新注入器，我使用的是 ns-ATMOSPHERE 注入器，它看起来像一个白色的 USB 设备。由于注入器的版本低于 Hekate 4.2，所以我需要更新 payload。
 
-1. 在 Windows 系统上安装 NS-Atmosphere Programmer。由于该应用的开发商已经跑路，我在 GBATEMP 论坛上找到两个版本，可以自行选择：[0.3 STEUP](https://www.mediafire.com/file/av2yur8zse5h016/Setup+NS-Atmosphere+programmer+v0.3.exe/file)，[0.4 Protable](https://gbatemp.net/attachments/ns-atmosphere-v0-4-rar.274028/)。^[NS Atmosphere Software Mirror](https://gbatemp.net/threads/ns-atmosphere-software-mirror.571116/)
+1. 在 Windows 系统上安装 NS-Atmosphere Programmer。由于该应用的开发商已经跑路，我在 GBATEMP 论坛上找到两个版本，可以自行选择：[0.3 STEUP](https://www.mediafire.com/file/av2yur8zse5h016/Setup+NS-Atmosphere+programmer+v0.3.exe/file)，[0.4 Protable](https://gbatemp.net/attachments/ns-atmosphere-v0-4-rar.274028/)。^[[NS Atmosphere Software Mirror](https://gbatemp.net/threads/ns-atmosphere-software-mirror.571116/)]
 
 2. 打开 ns-ATMOSPHERE 的 ON 按钮，双击 RST 按钮，然后使用 USB 连接到 PC 端。此时 ns-ATMOSPHERE 将亮起粉灯。如果未出现粉灯，表示未被识别，可以尝试更换 USB 端口或重新尝试之前的操作。
 
@@ -58,11 +58,13 @@ order: -0.03
 关于大气层安装游戏和 DLC 的方法，请参考 [Installation of games, DLC, updates](https://nswtl.info/switch-eng/games.html)：
 
 1. 使用 USB 将 Switch 连接到 PC。
-2. 进入「相册」，启动 DBI，并运行 `Run MTP Responder`。此时，PC 端将出现 Switch 设备。
-3. 打开 PC 上出现的 Switch 设备，根据你想安装游戏的位置，将游戏复制到 `SD Card install` 或 `NAND install`。
-4. 安装结束后，按 `B` 停止 MTP 服务器并卸载 MTP 设备，然后按 `+` 关闭 DBI。
+2. 进入「相册」，启动 DBI，按 `X` 来运行 `Run MTP Responder`。此时，PC 端将出现 Switch 设备。
+3. 打开 PC 上出现的 Switch 设备，根据你想安装游戏的位置，将游戏复制到 `5: SD Card install` 或 `6: NAND install`。
+4. 安装结束后，按 `B` 停止 MTP 服务器并卸载 MTP 设备，然后再按 `B` 关闭 DBI。
 
-DBI 是大气层增强包的内置插件，你也可以手动安装，参考 [DBI 安装及使用说明](https://github.com/rashevskyv/dbi/blob/main/README_ENG.md)。
+如果你安装的是需要网络登录的游戏，例如《Just Dance 2023》，请确保按照游戏包中提供的离线激活提示进行操作。在安装前，需将离线激活和 Mod 文件移出安装包，以避免出现 `not acceptable` 的错误提示。
+
+DBI 是大气层增强包的内置插件。如果不使用增强包，你也可以手动安装 DBI，具体流程请参考 [DBI 安装及使用说明](https://github.com/rashevskyv/dbi/blob/main/README_ENG.md)。
 
 ### NS-USBloader
 
@@ -74,6 +76,8 @@ DBI 是大气层增强包的内置插件，你也可以手动安装，参考 [DB
 
 游戏资源可在 [SWITCH TORRENT LIBRARY](https://nswtl.info/) 上获取。这是最大且免费的游戏库，适用于 Nintendo Switch 和其他平台。在测试中，我找到了所有需要的游戏。
 
-点击页面上的标题区域，将跳转至 Telegram Bot。向机器人发送游戏的英文名称，机器人将回复游戏的种子文件和版本说明。
+点击页面上的标题区域，将跳转至 Telegram Bot。向机器人发送游戏的英文名称，机器人将回复游戏的种子文件和版本说明。游戏的英文名称可以在 [3DMGAME Switch 专区](https://www.3dmgame.com/games/ns_all_1/)中查找。
+
+如果需要金手指，可以在 DBI 游戏安装的第三步将金手指文件复制到 `1: SD Card\atmosphere\contents` 文件夹中。然后，打开游戏，按住 L 键再按向下键，即可激活金手指菜单。金手指资源见 [Switch520](https://www.gamer520.com/jinshouzhi)。
 
 我个人已安装的游戏包括：Just Dance，Fitness Boxing 2，Nintendo Switch Sports，Ring Fit Adventure，The Legend of Zelda - Breath of the Wild。

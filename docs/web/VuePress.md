@@ -14,14 +14,14 @@ LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/g
 ## 初始配置
 
 1. 环境配置：安装 pnpm，也支持 npm 和 yarn，可参考[环境部署教程](../deploy/VPS.html#环境部署)。
-2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope@next docs`。vuepress-theme-hope 主题的样例文件会存储在该路径下。有时因版本问题，样例运行会报错，此时须用固定版本号来安装依赖环境，终端中输入 `pnpm add vuepress@2.0.0-beta.64 @vuepress/client@2.0.0-beta.64 vuepress-theme-hope@2.0.0-beta.230 && pnpm docs:dev`。
+2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope docs`。vuepress-theme-hope 主题的样例文件会存储在该路径下。有时因版本问题，样例运行会报错，此时须用固定版本号来安装依赖环境，终端中输入 `pnpm add vuepress@2.0.0-beta.64 @vuepress/client@2.0.0-beta.64 vuepress-theme-hope@2.0.0-beta.230 && pnpm docs:dev`。
 3. 执行命令 `pnpm docs:dev` 启动样例网站。
 4. `docs\.vuepress` 路径下的 config.ts，navbar.ts，sidebar.ts，theme.ts 可以修改页面属性，设置方法参考 [官方案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
    - config.ts：配置网站环境依赖和网站属性。
    - sidebar.ts：侧边栏，集合所有文档的目录。
    - navbar.ts：导航栏，放最常用的文档链接。
    - theme.ts：对主题和插件进行设置。
-5. 如果遇到报错，执行命令 `pnpm add vuepress@next vuepress-theme-hope@next && pnpm i && pnpm up` 修复并升级相关依赖包。如果依然有问题，则删除 node_modules 和 lock 文件，执行 `pnpm install && pnpm i && pnpm up` 重置依赖包文件。
+5. 如果遇到报错，执行命令 `pnpm add vuepress@next vuepress-theme-hope && pnpm i && pnpm up` 修复并升级相关依赖包。如果依然有问题，则删除 node_modules 和 lock 文件，执行 `pnpm install && pnpm i && pnpm up` 重置依赖包文件。
 
 如果遇到错误 `[ERR_MODULE_NOT_FOUND]: Cannot find package`，则将 package.json 放在 demo project 中生成 lock 文件，比对 lock 文件是否为正确生成依赖树，将正确的 lock 文件复制到项目下。
 
@@ -47,7 +47,7 @@ VuePress v2 默认使用 Vite，打包时会引入时间戳和 hash 对文件重
 
    ```bash
    #组合命令，打包使用 Webpack
-   pnpm add vuepress@next vuepress-theme-hope@next && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader && pnpm i && pnpm up
+   pnpm add vuepress@next vuepress-theme-hope && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader && pnpm i && pnpm up
 
    #运行在本地服务器
    yarn docs:dev
@@ -57,7 +57,7 @@ VuePress v2 默认使用 Vite，打包时会引入时间戳和 hash 对文件重
 
    ```bash
    #确保你正在使用最新的 vuepress 和 vuepress-theme-hope 版本
-   pnpm add vuepress@next vuepress-theme-hope@next
+   pnpm add vuepress@next vuepress-theme-hope
 
    #更换打包工具，Webpack 需手动下载 sass-loader
    pnpm remove vuepress
