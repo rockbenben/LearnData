@@ -24,13 +24,13 @@ order: -0.03
 
 3. 打开下载好的 NS-Atmosphere Programmer，点击 Refresh 来识别端口，然后点击 Browse 选择需要注入的 payload bin。在这里使用的是 [hekate](https://github.com/CTCaer/hekate/releases)，从其发布页面下载最新版本的 `hekate_ctcaer_6.0.7_Nyx_1.5.6.zip`，然后解压得到 `hekate_ctcaer_6.0.7.bin`，这就是要注入的 bin。
 
-如果有不清楚的地方，你可以观看 [NS Atmosphere Dongle Tutorial!](https://www.twitch.tv/videos/346892592)这个视频教程，或者查看这篇更详细的[注入器更新教程](https://www.cnblogs.com/letleon/p/NS_Atmosphere_payload_Programmer_aliyundrive_backup.html)。
+如果有不清楚的地方，你可以观看 [NS Atmosphere Dongle Tutorial!](https://www.twitch.tv/videos/346892592) 这个视频教程，或者查看这篇更详细的[注入器更新教程](https://www.cnblogs.com/letleon/p/NS_Atmosphere_payload_Programmer_aliyundrive_backup.html)。
 
 ## 大气层&主机升级
 
 ### 固件准备
 
-接下来，我需要准备大气层和主机的升级。我使用了 [Yuanbanba/Atmosphere](https://github.com/Yuanbanba/Atmosphere/releases)这个整合包，其中包含了大气层的迷你版本、Tesla 插件包以及相册 NRO 软件包，非常适合懒人使用。
+接下来，我需要准备大气层和主机的升级。我使用了 [Yuanbanba/Atmosphere](https://github.com/Yuanbanba/Atmosphere/releases) 这个整合包，其中包含了大气层的迷你版本、Tesla 插件包以及相册 NRO 软件包，非常适合懒人使用。
 
 至于 Switch 最新的离线升级固件，我在 [Switch Firmwares](https://darthsternie.net/switch-firmwares/) 上找到了。需要注意的是，这些固件分为全球版和国行版，建议选择全球版。
 
@@ -38,10 +38,9 @@ order: -0.03
 
 1. 关机后，取出后盖板上的 SD 卡，并将其连接到计算机。
 2. 在 SD 卡的根目录保留可能存在的 emuMMC 和 nintendo 文件夹，其他文件全部删除。（如果你有补丁或金手指，请务必自行备份。）
-3. 复制大气层文件和离线升级固件到 SD 卡的根目录。
-4. 最后，如果你有 emuMMC 文件夹，则选择启动`虚拟（破解）系统`；如果没有，则选择自动识别。进入系统后，打开「相册」，启动 daybreak 插件，然后选择安装离线固件包。随后全部选择右侧的选项并按下 A，安装完成后重启系统即完成升级。^[switch 大气层更新升级通用详细教程，不管你现在是 16.0.3 还是以后 17.0](https://www.bilibili.com/read/cv24458439/)
-
-在测试过程中，由于我的大气层版本较旧，没有 emuMMC 文件夹。本来应该选择自动识别来进入系统，但我参考了 [Create an emuMMC](https://switch.homebrew.guide/emummc/emummc.html) 教程，创建了 emuMMC 虚拟系统，导致 SD 卡内容被清空并重新分区。这一步骤可能是多余的。
+3. 复制大气层文件和解压后的离线升级固件到 SD 卡的根目录。
+4. 如果你有 emuMMC 文件夹，则选择启动 `虚拟（破解）系统`；如果没有，则参考 [Create an emuMMC](https://switch.homebrew.guide/emummc/emummc.html) 教程创建 emuMMC 虚拟系统。请注意，创建 emuMMC 虚拟系统将占据 SD 卡 29G 的空间，并清空和重新分区 SD 卡，创建后需重新复制大气层文件和固件。
+5. 最后，进入系统后，打开「相册」，启动 daybreak 插件，然后选择安装离线固件包。随后全部选择右侧的选项并按下 A，安装完成后重启系统即完成升级。
 
 ## 进入大气层系统
 
@@ -78,6 +77,14 @@ DBI 是大气层增强包的内置插件。如果不使用增强包，你也可�
 
 点击页面上的标题区域，将跳转至 Telegram Bot。向机器人发送游戏的英文名称，机器人将回复游戏的种子文件和版本说明。游戏的英文名称可以在 [3DMGAME Switch 专区](https://www.3dmgame.com/games/ns_all_1/)中查找。
 
-如果需要金手指，可以在 DBI 游戏安装的第三步将金手指文件复制到 `1: SD Card\atmosphere\contents` 文件夹中。然后，打开游戏，按住 L 键再按向下键，即可激活金手指菜单。金手指资源见 [Switch520](https://www.gamer520.com/jinshouzhi)。
+如果需要金手指，可以在 DBI 游戏安装的第三步将金手指文件复制到 `1: SD Card\atmosphere\contents` 文件夹中。然后，进入相册，打开 Edizon，按下 `L` 键进入系统模块管理，开启 Tesla 插件。在需要开启金手指的游戏中，按住 `L` 键再按向下方向键，即可激活金手指菜单。金手指资源见 [Switch520](https://www.gamer520.com/jinshouzhi)。
 
-我个人已安装的游戏包括：Just Dance，Fitness Boxing 2，Nintendo Switch Sports，Ring Fit Adventure，The Legend of Zelda - Breath of the Wild。
+部分游戏列表：
+
+- 健身游戏：舞力全开（Just Dance），有氧拳击 2（Fitness Boxing 2），健身拳击：北斗神拳（Fitness Boxing - Fist of the North Star），健身环大冒险（Ring Fit Adventure），健身巡游（Fitness Circuit），Nintendo Switch Sports。
+- Mario 系列：超级马里奥兄弟：惊奇（Super Mario Bros. Wonder），马里奥派对：超级巨星（Mario Party Superstars），马里奥和疯狂兔子：星耀之愿（Mario plus Rabbids - Sparks of Hope）。
+- 休闲游戏：世界游戏大全 51（Clubhouse Games 51 Worldwide Classics），太鼓达人（Taiko no Tatsujin），胡闹厨房（Overcooked），大富翁 11。
+- 动作冒险：双人成行（It Takes Two），荒野大镖客：救赎（Red Dead: Redemption），塞尔达传说：旷野之息（The Legend of Zelda - Breath of the Wild），女神异闻录 5（Persona 5 Royal），十三机兵防卫圈（13 Sentinels Aegis Rim），AI 梦境档案（AI The Somnium Files）。
+- 格斗游戏：真人快打 1（Mortal Kombat 1），IGS 经典街机合集（IGS Classic Arcade Collection）。
+- 竞技游戏：FIFA 23，NBA 2K24，曼岛 TT 赛：边缘竞速 3（TT Isle Of Man: Ride on the Edge 3）。
+- 真人影视互动：春逝百年抄（The Centennial Case: a Shijima Story），十个约会（Ten Dates）。

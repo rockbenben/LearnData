@@ -86,7 +86,7 @@ cd D:\Libraries\Desktop\scrcpy-win64-v2.2
 
 ### Could not find any ADB device
 
-出现 `ERROR: Could not find any ADB device` 报错意味着你的手机未被电脑识别。可能是因为电脑上缺少相应的 USB 驱动程序。你可以点击此 [OEM 驱动程序链接](https://developer.android.com/studio/run/oem-usb?hl=zh-cn#Drivers) 进行下载。如果列表中没有你的手机品牌，请前往手机官网查找。例如，vivo 的驱动链接为：<http://zs.vivo.com.cn/download.php?sel_type=2>。
+如果出现 `ERROR: Could not find any ADB device` 报错意味着你的手机未被电脑识别。可能是因为电脑上缺少相应的 USB 驱动程序。你可以点击此 [OEM 驱动程序链接](https://developer.android.com/studio/run/oem-usb?hl=zh-cn#Drivers) 进行下载。如果列表中没有你的手机品牌，请前往手机官网查找。例如，vivo 的驱动是 [vivo_usb_driver.exe](http://zs.vivo.com.cn/download.php?sel_type=2)；小米则需要下载[小米解锁工具包](http://www.miui.com/unlock/download.html)，里面包含官方驱动安装程序 MiUsbDriver.exe。
 
 ### ERROR: Exception on thread
 

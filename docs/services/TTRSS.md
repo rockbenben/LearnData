@@ -10,6 +10,7 @@ Tiny Tiny RSS 推荐用 [Awesome TTRSS](http://ttrss.henry.wang/zh/) 的 Docker 
 - 主题：[feedly-sepia.css](https://github.com/levito/tt-rss-feedly-theme)
 - 常见问题：[Tiny Tiny RSS – FAQ](https://tt-rss.org/wiki/FAQ)
 - 定期备份：选择「偏好设置」>「订阅源」导出订阅源和 tt-rss 设置。
+- 移动端：[Tiny Tiny RSS for Android](https://gitlab.tt-rss.org/tt-rss/tt-rss-android/-/releases)。由于 Google Play 的折腾，作者已经放弃在 Play 上更新本应用，改为通过 CI/CD 自动构建并取消了收费。
 
 ## 手动部署
 

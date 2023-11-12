@@ -25,8 +25,9 @@ services:
       - /volume3/Pictures/photos:/photos
     environment:
       - TZ=Asia/Shanghai
-      - SSL_NAME=xxx.newzone.top
-      - MT_SERVER_SSL_PORT=8163
+      # 是否启用内部 SSL
+      #- SSL_NAME=xxx.newzone.top
+      #- MT_SERVER_SSL_PORT=8163
       #- RAW_SUPPORT=open
   # 智能识别 API 容器，用于文本识别、以文搜图、场景识别。不需要的话，可删除本部分。
   mtphotosai:

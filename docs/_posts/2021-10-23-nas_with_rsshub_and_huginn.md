@@ -44,23 +44,25 @@ order: -38
 
 3. **动态 DNS(DDNS) 设置**，以下以 OpenWrt+Cloudflare 为例。
 
-   - cloudflare 动态 DNS 配置 ([教程](https://p3terx.com/archives/openwrt-cloudflare-ddns.html))：进入系统 - 软件包，搜索「cloudflare」，安装 ddns-scripts_cloudflare.com-v4，然后重启路由器。
-   - 进入服务 - 动态 DNS，Cloudflare 登录密码为 [cloudflare API](https://dash.cloudflare.com/profile/api-tokens) 中的 Glodbal API Key。对于阿里云用户，可以在 RAM 访问控制中创建专门的 AccessKey。
+   - Cloudflare 动态 DNS 配置 ([教程](https://p3terx.com/archives/openwrt-cloudflare-ddns.html))：进入系统 - 软件包，搜索「cloudflare」，安装 `ddns-scripts_cloudflare.com-v4`，然后重启路由器。
+   - 进入服务 - 动态 DNS，Cloudflare 登录密码为 [Cloudflare API](https://dash.cloudflare.com/profile/api-tokens) 中的 Global API Key。如果你的域名托管在阿里云上，可以在 [RAM 访问控制](https://ram.console.aliyun.com/users) 中创建拥有 AliyunDNSFullAccess 权限的 AccessKey。动态 DNS 的用户名和密码分别可以使用 AccessKey ID 和 AccessKey Secret。
 
-     ![](https://img.newzone.top/2022-05-05-14-41-31.png?imageMogr2/format/webp)
+   ![](https://img.newzone.top/2022-05-05-14-41-31.png?imageMogr2/format/webp)
 
-4. 如果宽带是内网，无法提供公网 IP，可以使用花生壳等内网穿透工具来达到类似的效果。
+如果你使用的是内网宽带，无法提供公网 IP，可以使用花生壳等内网穿透工具来达到类似的效果。
 
 ## RSS 转码
 
-由于运营商禁用了家庭宽带的 80 和 443 端口，使得无法隐藏 NAS 服务端口，只能采用 `home.xxx.com:34567` 这样的链接。同时，绝大多数主流 RSS 阅读器都无法支持带有端口号的 RSS 源配置，即便通过 DNS 设置域名隐式跳转，端口链接依然会被识别。这一问题使得部署在 NAS 上的 RSS 源无法直接被读取。例如，在使用 Tiny Tiny RSS 订阅 NAS 的 RSS 源时，常会出现报错，无法准确读取带有端口或 HTTPS 的 RSS 源。
+由于国内运营商禁用了家庭宽带的 80 和 443 端口，使得无法隐藏 NAS 服务端口，只能采用 `home.xxx.com:34567` 这样的链接。同时，绝大多数主流 RSS 阅读器都无法支持带有端口号的 RSS 源配置，即便通过 DNS 设置域名隐式跳转，端口链接依然会被识别。这一问题使得部署在 NAS 上的 RSS 源无法直接被读取。例如，在使用 Tiny Tiny RSS 订阅 NAS 的 RSS 源时，常会出现报错，无法准确读取带有端口或 HTTPS 的 RSS 源。
 
-为了顺利读取 NAS 的 RSS 源，我采用 PHP 制作了一个转录链接 `https://rss.aishort.top/?type=yyy`。该 PHP 文件整合了所有 RSS 源，并通过链接参数进行区分。通过 PHP 将 NAS 上的 Huginn 和 RSSHub 的 RSS 内容抓取到服务器，从而实现与各类阅读器的兼容。虽然需要在另一台服务器上部署 PHP 转录，但与购买用于抓取 RSS 所需的高配服务器相比，这一方案的性价比更高。如果你已有服务器，可按照我的方式直接部署。
+为了顺利读取 NAS 的 RSS 源内容，我使用 PHP 制作了一个转录链接 `https://rss.aishort.top/?type=yyy`。该 PHP 文件整合了所有 RSS 源，并通过链接参数进行区分。通过 PHP 将 NAS 上的 Huginn 和 RSSHub 的 RSS 内容聚合到服务器，PHP 根据链接参数获取并输出对应的 XML，从而实现与各类阅读器的兼容。而且 PHP 具有私密性，不会泄漏 NAS 域名和端口；输出链接可替换，方便后续更新维护。
+
+虽然需要在另一台服务器上部署 PHP 转录，但与购买用于抓取 RSS 所需的高配服务器相比，这一方案的性价比更高。如果你已有服务器，可按照我的方式直接部署。
 
 ```php
 ## 网站目录新建 rss.php 文件，然后放入如下代码
-## yyy 为链接参数，方便区分不同 rss 源，qqq 为内部 rss 源路径
-## 注意：如果链接参数 yyy 中有中文，可用 UrlEncode 编码，避免 rss 阅读器报错。
+## yyy 代表链接参数，方便区分不同 rss 源，qqq 代表内部 rss 源路径
+## 注意：如果链接参数 yyy 参数中有中文，可用 UrlEncode 编码，避免 rss 阅读器报错。
 <?php
     if($_GET['type']=="yyy"){
         echo file_get_contents("http://home.xxx.com:34567/qqq");
