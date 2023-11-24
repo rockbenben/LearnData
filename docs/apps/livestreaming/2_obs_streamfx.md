@@ -12,9 +12,11 @@ StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果�
 
 ## 安装 StreamFX
 
-在 [StreamFX 发布页](https://github.com/Xaymar/obs-StreamFX/releases)上按平台选择安装包。StreamFX for OBS 29 处于测试阶段，在升级此插件前，请按照[卸载教程](https://github.com/Xaymar/obs-StreamFX/wiki/Uninstallation)执行旧版清理。
+访问 [StreamFX 发布页](https://github.com/Xaymar/obs-StreamFX/releases)，选择相应平台的安装包进行下载。如果你的 OBS 版本大于 28，则需按照 [obs-StreamFX/BUILDING.md](https://github.com/Xaymar/obs-StreamFX/blob/root/BUILDING.md) 中的说明手动构建测试版 StreamFX 插件，或者使用第三方构建包 [MonoLogueChi/obs-StreamFX-build](https://github.com/MonoLogueChi/obs-StreamFX-build)。
 
-安装成功后，StreamFX 会出现在 OBS 上方的菜单栏上。下文中，我将使用不同滤镜处理样图，并提供对比图。
+在升级插件前，请按照[卸载教程](https://github.com/Xaymar/obs-StreamFX/wiki/Uninstallation)执行旧版的清理操作。
+
+安装完成后，StreamFX 将出现在 OBS 软件上方的菜单栏中。接下来，我将使用不同的滤镜处理示例图，并提供对比图。
 
 ![](https://img.newzone.top/2023-01-07-23-27-34.png "样例原图")
 
@@ -30,7 +32,7 @@ StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果�
 
 ## 模糊
 
-[模糊](https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur)（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Liner 和 Dual-Filtering。一般来说，建议将类型设置为「Dual Filtering（双重过滤）」，大小为 4，应用蒙版后可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求也更低。
+[模糊](https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur)（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Linear 和 Dual Filtering。建议将类型设置为「Dual Filtering（双重过滤）」，大小设为 4。应用蒙版后，可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求更低。如果只需要对部分区域进行模糊，勾选「应用蒙版」并适量设置「羽化区域」（如 10），以避免模糊边缘显得过于突出。
 
 ![](https://img.newzone.top/2023-01-08-06-49-05.png "右侧为模糊效果")
 

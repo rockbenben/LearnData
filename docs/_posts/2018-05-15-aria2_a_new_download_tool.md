@@ -33,7 +33,7 @@ Aria2 真·懒人包无需配置，下载即可使用，适合不想折腾的人
 
 将懒人包解压到 `D:\Aria2`，点击 `AriaNg 启动器.exe` 即可开始下载。两个启动器任选其一，都集成了后端服务和前端 UI，无需启动其他程序。包内均为开源绿色软件，不涉及任何隐私和安装，AutoHotkey 插件容易被误报。
 
-2023.05.14 重构启动器，更新 Aria2 1.36.0，AriaNG 1.3.5，并增加 bt-tracker 至 124 个，以便 BT 和磁力链接提速。
+2023.11.23 更新 Aria2 1.37.0，AriaNG 1.3.6，重构启动器，并增加 bt-tracker 至 108 个，以便 BT 和磁力链接提速。
 
 新增功能：任务开始、完成和出错时，会推送系统通知，可在 aria2.conf 的特别功能区块中设置通知的开启与关闭，此功能由 @我真的爱发明 提出。
 
@@ -45,7 +45,7 @@ Aria2 真·懒人包无需配置，下载即可使用，适合不想折腾的人
 
 1. 下载 [Aria2 快速设置包](https://aria2c.com/archiver/aria2.zip)或[备用链接](https://wwz.lanzouf.com/iROZE0eai3xe)，将其解压到存放文件夹，例如 `D:\Aria2`。
 
-2. 官网下载 [Aria2 程序](https://github.com/aria2/aria2/releases)（Windows 选择 [aria2-1.36.0-win-64bit-build1.zip](https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0-win-64bit-build1.zip)），然后解压到快速设置包的存放文件夹中，替代其中的 `aria2c.exe` 程序。
+2. 官网下载 [Aria2 程序](https://github.com/aria2/aria2/releases)（Windows 选择 [aria2-1.37.0-win-64bit-build1.zip](https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0-win-64bit-build1.zip)），然后解压到快速设置包的存放文件夹中，替代其中的 `aria2c.exe` 程序。
 
    ![](https://img.newzone.top/20191210232831.png "GitHub 官方仓库下载 Aria2")
 
