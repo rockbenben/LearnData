@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 12 Nov 2023 02:09:06 GMT</pubDate>
-    <lastBuildDate>Sun, 12 Nov 2023 02:09:06 GMT</lastBuildDate>
+    <pubDate>Fri, 24 Nov 2023 21:47:24 GMT</pubDate>
+    <lastBuildDate>Fri, 24 Nov 2023 21:47:24 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -370,10 +370,10 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>直播入门攻略一 | OBS 篇：OBS 29 新手指南</title>
+      <title>直播入门攻略一 | OBS 篇：OBS 30 新手指南</title>
       <link>https://newzone.top/apps/livestreaming/1_obs_basic.html</link>
       <guid>https://newzone.top/apps/livestreaming/1_obs_basic.html</guid>
-      <source url="https://newzone.top/rss.xml">直播入门攻略一 | OBS 篇：OBS 29 新手指南</source>
+      <source url="https://newzone.top/rss.xml">直播入门攻略一 | OBS 篇：OBS 30 新手指南</source>
       <description>Open Broadcaster Software（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件都是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。本文将从基础开始，为新手介绍 OBS 的界面、设置和直播使用方法。 主界面 OBS 界面看起来有些复杂，但可以分为菜单栏、预览区、主按钮区和运行状态四个区块。日常使用中，我们只需要接触主按钮区，它包括场景、来源、混音器、转场特效和控制按钮。</description>
       <category>工具</category>
       <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
@@ -418,7 +418,7 @@
 <p>「常用帧率」在日常直播中只需要 30，游戏直播建议调整到 60。</p>
 <figure><img src="https://img.newzone.top/2023-01-05-20-22-29.png" alt="" tabindex="0" loading="lazy"><figcaption>直播分辨率设置</figcaption></figure>
 <h3> 高级</h3>
-<p>点击「设置」&gt;「高级」，将「进程优先级」设为高，以降低电脑卡顿的概率。然后，启用「直播延迟」和「自动重连」功能，以避免直播事故的发生。「直播延迟」启用后，观众看到的直播画面会比实时要慢，延迟时间一般为 3~20 秒。</p>
+<p>点击「设置」&gt;「高级」，将「进程优先级」设为高，以降低电脑卡顿的概率。然后，启用「直播延迟」和「自动重连」功能，以避免直播事故的发生。「直播延迟」启用后，观众看到的直播画面会比实时要慢，延迟时间一般为 3~20 秒。在带货聊天直播中，延迟可以设置短一些，而在非互动直播中则可以设置长一些。</p>
 <figure><img src="https://img.newzone.top/2023-01-05-21-09-13.png" alt="" tabindex="0" loading="lazy"><figcaption>OBS 高级设置</figcaption></figure>
 <h2> 直播来源</h2>
 <p>了解 OBS 界面和设置后，我们回到主按钮区的「来源」，深入了解来源种类和滤镜。直播来源种类繁多，可以分为四类：静态来源、音频来源、视频来源和组合来源。</p>
@@ -495,13 +495,14 @@
       <link>https://newzone.top/apps/livestreaming/2_obs_streamfx.html</link>
       <guid>https://newzone.top/apps/livestreaming/2_obs_streamfx.html</guid>
       <source url="https://newzone.top/rss.xml">直播入门攻略二 | StreamFX 篇：最强大的 OBS 插件</source>
-      <description>StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果，是 OBS 必装的效果插件。本文将介绍 StreamFX 的 28 种滤镜效果。 安装 StreamFX 在 StreamFX 发布页上按平台选择安装包。StreamFX for OBS 29 处于测试阶段，在升级此插件前，请按照卸载教程执行旧版清理。</description>
+      <description>StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果，是 OBS 必装的效果插件。本文将介绍 StreamFX 的 28 种滤镜效果。 安装 StreamFX 访问 StreamFX 发布页，选择相应平台的安装包进行下载。如果你的 OBS 版本大于 28，则需按照 obs-StreamFX/BUILDING.md 中的说明手动构建测试版 StreamFX 插件，或者使用第三方构建包 MonoLogueChi/obs-StreamFX-build。</description>
       <category>工具</category>
       <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
       <content:encoded><![CDATA[<p>StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果，是 OBS 必装的效果插件。本文将介绍 StreamFX 的 28 种滤镜效果。</p>
 <h2> 安装 StreamFX</h2>
-<p>在 <a href="https://github.com/Xaymar/obs-StreamFX/releases" target="_blank" rel="noopener noreferrer">StreamFX 发布页</a>上按平台选择安装包。StreamFX for OBS 29 处于测试阶段，在升级此插件前，请按照<a href="https://github.com/Xaymar/obs-StreamFX/wiki/Uninstallation" target="_blank" rel="noopener noreferrer">卸载教程</a>执行旧版清理。</p>
-<p>安装成功后，StreamFX 会出现在 OBS 上方的菜单栏上。下文中，我将使用不同滤镜处理样图，并提供对比图。</p>
+<p>访问 <a href="https://github.com/Xaymar/obs-StreamFX/releases" target="_blank" rel="noopener noreferrer">StreamFX 发布页</a>，选择相应平台的安装包进行下载。如果你的 OBS 版本大于 28，则需按照 <a href="https://github.com/Xaymar/obs-StreamFX/blob/root/BUILDING.md" target="_blank" rel="noopener noreferrer">obs-StreamFX/BUILDING.md</a> 中的说明手动构建测试版 StreamFX 插件，或者使用第三方构建包 <a href="https://github.com/MonoLogueChi/obs-StreamFX-build" target="_blank" rel="noopener noreferrer">MonoLogueChi/obs-StreamFX-build</a>。</p>
+<p>在升级插件前，请按照<a href="https://github.com/Xaymar/obs-StreamFX/wiki/Uninstallation" target="_blank" rel="noopener noreferrer">卸载教程</a>执行旧版的清理操作。</p>
+<p>安装完成后，StreamFX 将出现在 OBS 软件上方的菜单栏中。接下来，我将使用不同的滤镜处理示例图，并提供对比图。</p>
 <figure><img src="https://img.newzone.top/2023-01-07-23-27-34.png" alt="" tabindex="0" loading="lazy"><figcaption>样例原图</figcaption></figure>
 <h2> 来源镜像</h2>
 <p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Source-Mirror" target="_blank" rel="noopener noreferrer">来源镜像</a>（Source Mirror）是一种来源，而不是滤镜。它可以克隆任何源或场景，并将其应用于当前场景。对来源镜像叠加滤镜和任意效果，都不会对原始来源造成影响。</p>
@@ -509,7 +510,7 @@
 <p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-3D-Transform" target="_blank" rel="noopener noreferrer">3D 转换</a>（3D Transform）可以将 2D 图片的坐标系转换为三维，从而可以自由旋转、移动和缩放，形成类似星球大战中的字幕特效。</p>
 <figure><img src="https://img.newzone.top/2023-01-07-23-27-01.png" alt="" tabindex="0" loading="lazy"><figcaption>3D 转换</figcaption></figure>
 <h2> 模糊</h2>
-<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur" target="_blank" rel="noopener noreferrer">模糊</a>（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Liner 和 Dual-Filtering。一般来说，建议将类型设置为「Dual Filtering（双重过滤）」，大小为 4，应用蒙版后可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求也更低。</p>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur" target="_blank" rel="noopener noreferrer">模糊</a>（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Linear 和 Dual Filtering。建议将类型设置为「Dual Filtering（双重过滤）」，大小设为 4。应用蒙版后，可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求更低。如果只需要对部分区域进行模糊，勾选「应用蒙版」并适量设置「羽化区域」（如 10），以避免模糊边缘显得过于突出。</p>
 <figure><img src="https://img.newzone.top/2023-01-08-06-49-05.png" alt="" tabindex="0" loading="lazy"><figcaption>右侧为模糊效果</figcaption></figure>
 <figure><img src="https://img.newzone.top/2023-01-06-02-51-10.png" alt="" tabindex="0" loading="lazy"><figcaption>模糊滤镜设置</figcaption></figure>
 <h2> 动态蒙版</h2>
