@@ -42,7 +42,7 @@ UI.Vision RPA 的运行脚本叫做「宏」。界面很简单，左侧是宏的
 
 打开 UI.Vision 插件，点击右上角按钮「Record」，插件会把你的操作录制为宏脚本。
 
-执行时，选中左侧保存的宏，然后点击右上角的按钮「Play Macro」，即可回放指定宏。点击「Play Loop」，则可让宏循环运行。
+执行时，选中左侧保存的宏，然后点击右上角的按钮「Play Macro」，即可回放指定宏。点击「Play Loop」，则可让宏循环运行。循环次数 `${!LOOP}` 可作为变量使用。
 
 ![自动化运行 GIF](https://img.newzone.top/2022-04-21-20-25-31.gif?imageMogr2/format/webp)
 

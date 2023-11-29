@@ -45,7 +45,7 @@ sudo bundle exec rake production:force_stop
 sudo bundle exec rake production:export
 ```
 
-服务器重启后，需执行以下命令：
+服务器重启后，需分行执行以下命令：
 
 ```bash
 sudo docker exec -it huginn bash

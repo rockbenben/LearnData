@@ -18,7 +18,7 @@ services:
     image: rockben/cors-anywhere:0.4.4
     container_name: cors-anywhere
     ports:
-      - "8186:8080"
+      - "49152:8080"
     restart: unless-stopped
 ```
 
@@ -27,7 +27,7 @@ services:
 若想在 JavaScript 中利用 CORS Anywhere，以下是一个简单的调用示例：
 
 ```javascript
-var corsAnywhereUrl = "http://192.168.2.3:8086/";
+var corsAnywhereUrl = "http://192.168.2.3:49152/";
 var targetUrl = "http://example.com/";
 $.ajax({
   type: "get",
@@ -79,5 +79,5 @@ CMD ["node", "server.js"]
 sudo docker build -t cors-anywhere .
 
 # 运行 Docker 容器
-sudo docker run -d --name cors-anywhere -p 8086:8080 cors-anywhere
+sudo docker run -d --name cors-anywhere -p 49152:8080 cors-anywhere
 ```

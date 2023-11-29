@@ -121,7 +121,7 @@ KeePass 需要配置插件，才能实现密码自动输入。下载插件并放
 
 ### 多账户排序
 
-同一网址有多个账户密码时，无将其中一个账户密码默认置顶。通过插件 KeePassHttp 和 KeePassNatMsg，能按 username 或 title 对账户进行排序。
+同一网址有多个账户密码时，无法将其中一个账户密码默认置顶。通过插件 KeePassHttp 和 KeePassNatMsg，能按 username 或 title 对账户进行排序。
 
 ### 为什么不选 KeepassXC
 

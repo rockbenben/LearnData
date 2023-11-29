@@ -5,7 +5,7 @@ title: NAS 应用集合
 icon: process
 ---
 
-网络附加存储（NAS）日益重要，它提供了一个平台，可以部署各种 Docker 服务，进而完成个人的自动化工作流程。而使用 `docker-compose.yml` 文件进行 Docker 部署无疑是其中最为便捷的方法。具体如何使用 docker-compose，可以参考 [TTRSS docker-compose 的教程](http://ttrss.henry.wang/zh/#%E9%80%9A%E8%BF%87-docker-compose-%E9%83%A8%E7%BD%B2)。
+网络附加存储（NAS）日益重要，它提供了一个平台，可以部署各种 Docker 服务，进而完成个人的自动化工作流程。[awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)可查看多种自部署服务。而使用 `docker-compose.yml` 文件进行 Docker 部署无疑是其中最为便捷的方法。具体如何使用 docker-compose，可以参考 [TTRSS docker-compose 的教程](http://ttrss.henry.wang/zh/#%E9%80%9A%E8%BF%87-docker-compose-%E9%83%A8%E7%BD%B2)。
 
 操作步骤如下：
 

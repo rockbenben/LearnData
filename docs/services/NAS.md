@@ -27,7 +27,7 @@ NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面�
 
 ### 常用
 
-- [qbittorrent](https://registry.hub.docker.com/r/linuxserver/qbittorrent/)：需修改所有默认端口，否则容易报错。PT 下载关闭 `BitTorrent - DHT` 和其他隐私选项，半小时停止做种，将下载文件添加 Everyone 权限，其他设置参考[群晖使用 qbittorrent](https://blog.csdn.net/weixin_45120915/article/details/114691473)。
+- [qBittorrent](https://registry.hub.docker.com/r/linuxserver/qbittorrent/)：请修改所有默认端口，以避免可能的错误。对于 PT 下载，请关闭 `BitTorrent - DHT` 和其他隐私选项，将做种时间缩短至一小时，并为下载文件添加 Everyone 权限。有关其他设置，请参考[群晖使用 qbittorrent](https://blog.csdn.net/weixin_45120915/article/details/114691473)。为了解决登录和密码问题，请先停止容器，并将 `config/qBittorrent/qBittorrent.conf` 文件中的 `WebUI\AuthSubnetWhitelist` 设置为 `0.0.0.0/0`，这样即可无需密码登录 qBittorrent WebUI。
 - [qiandao](https://github.com/AragonSnow/qiandao)：自动签到开源框架，需搭配浏览器扩展 [get-cookies](https://github.com/ckx000/get-cookies) 使用，可导出配置。
 - [MT Photos](/services/dockers-on-nas/mt-photos)：支持自动整理、分类您的照片，比如：时间、地点、人物、照片类型。需要 99 元买断服务，每周连线检查授权状态。比较喜欢的是，支持网页分享特定图片影集，适合将宝宝照片批量分享给家人。
 - [PhotoPrism](https://docs.photoprism.app/)：基于 ai 私有化部署的个人相册，但实际很多照片无法识别，无法对外分享。如果部署时出错，则尝试删除数据库文件夹下的内容。地点标记功能非常强大，类似本地版 Google Photos。

@@ -32,7 +32,7 @@ StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果�
 
 ## 模糊
 
-[模糊](https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur)（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Linear 和 Dual Filtering。建议将类型设置为「Dual Filtering（双重过滤）」，大小设为 4。应用蒙版后，可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求更低。如果只需要对部分区域进行模糊，勾选「应用蒙版」并适量设置「羽化区域」（如 10），以避免模糊边缘显得过于突出。
+[模糊](https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur)（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Linear 和 Dual Filtering。建议将类型设置为「Dual Filtering（双重过滤）」，大小设为 5。应用蒙版后，可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求更低。如果只需要对部分区域进行模糊，勾选「应用蒙版」并适量设置「羽化区域」（如 10），以避免模糊边缘显得过于突出。
 
 ![](https://img.newzone.top/2023-01-08-06-49-05.png "右侧为模糊效果")
 

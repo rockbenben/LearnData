@@ -37,7 +37,7 @@ Windows 自用软件，以开源软件为主。
 
 音频处理：[Reaper+ Ultraschall](https://sspai.com/post/76677) & [Audacity](https://github.com/audacity/audacity/releases) & iZotope rx9 ~~& Audition & 神舌变声器 & Goldwave~~
 
-视频播放：[Potplayer](https://zhuanlan.zhihu.com/p/35757176) & [LAVFilters](https://github.com/Nevcairiel/LAVFilters/releases) & [madVR](http://www.madvr.com/) & XySubFilter & VLC ~~& 恒星播放器 & QQ 影音 & 暴风影音 & 射手~~，播放器设置参考 [Potplayer + LAVFilters + madVR 配置教程](https://www.likecs.com/show-204327094.html)
+视频播放：[Potplayer](https://zhuanlan.zhihu.com/p/35757176) & [ZY Player](https://github.com/Hiram-Wong/ZyPlayer/releases)（直播&在线资源） & [LAVFilters](https://github.com/Nevcairiel/LAVFilters/releases) & [madVR](http://www.madvr.com/) & XySubFilter & VLC ~~& 恒星播放器 & QQ 影音 & 暴风影音 & 射手~~，播放器设置参考 [Potplayer + LAVFilters + madVR 配置教程](https://www.likecs.com/show-204327094.html)
 
 视频剪辑：剪映 & LosslessCut(音频提取·视频切割合并) & [ShanaEncoder](https://shana.pe.kr/shanaencoder_download/)(视频压缩) & [Quick Cut](https://github.com/HaujetZhao/QuickCut) (自动剪辑) & HandBrake(视频转换) & Premiere ~~& Shotcut & 500th Video Converter & 小丸工具箱~~
 
@@ -143,12 +143,16 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 ## Android
 
-- [GKD](https://github.com/gkd-kit/gkd):手机端去广告的开源利器，可以点击跳过任意开屏广告/点击关闭应用内部任意弹窗广告，如关闭百度贴吧帖子广告卡片/知乎回答底部推荐广告卡片。
+- [GKD](https://github.com/gkd-kit/gkd)：手机端去广告的开源利器，可以点击跳过任意开屏广告/点击关闭应用内部任意弹窗广告，如关闭百度贴吧帖子广告卡片/知乎回答底部推荐广告卡片。
 - [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 YouTube。
 - [WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
 - [AutoX](https://github.com/kkevsekk1/AutoX)：开源版的 Auto.js，没有包名屏蔽。相关信息可以参考 [快人一步：使用 Tasker+AutoX 一键直达健康码](https://sspai.com/post/65863)。
 
 ---
+
+## 小玩意
+
+- [Animated Drawings](https://www.appinn.com/animated-drawings/)：自动将绘画转换为动画。
 
 ## 已弃
 
@@ -164,5 +168,6 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 - 客服：飞豆客服聊天助手 & [mirai(qq 机器人)](https://github.com/mamoe/mirai) & 酷 Q(已关)
 - 其他：按键精灵、DisplayCal（屏幕）、One Quik(虚拟桌面切换)、Auslogics Disk Defrag(磁盘整理)、Reflector 3(手机投屏)、VoiceBot(声控游戏)
 - [DockIt](http://dogbean.ysepan.com/)：主显示屏中，非全屏状态下，快速将窗口局部化。如何默认不全屏；应用不自动吸边？
+- TheBrain：可以把知识无限扩充，都连接在一起。但将工作流导图放入 TheBrain 后发现并不合适，比较适合更细化的内容？介绍参考[善用佳软张玉新老师 · TheBrain ≠ 思维导图——运用 TheBrain 的三个阶段](https://www.bilibili.com/video/BV19a411578T)。
 
 部分应用推荐来自 @vector090。
