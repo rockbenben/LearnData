@@ -16,10 +16,17 @@ export default sidebar({
     collapsible: true,
     children: [
       "Applist.md",
-      "AppNotes.md",
       "design.md",
       "ChatGPT.md",
       "Chrome.md",
+      {
+        text: "工具笔记",
+        icon: "plugin",
+        prefix: "tutorials/",
+        link: "",
+        collapsible: true,
+        children: "structure",
+      },
       {
         text: "直播手册",
         icon: "load",
