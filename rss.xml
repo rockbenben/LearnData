@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 24 Nov 2023 21:47:24 GMT</pubDate>
-    <lastBuildDate>Fri, 24 Nov 2023 21:47:24 GMT</lastBuildDate>
+    <pubDate>Wed, 29 Nov 2023 02:00:20 GMT</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2023 02:00:20 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -510,7 +510,7 @@
 <p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-3D-Transform" target="_blank" rel="noopener noreferrer">3D 转换</a>（3D Transform）可以将 2D 图片的坐标系转换为三维，从而可以自由旋转、移动和缩放，形成类似星球大战中的字幕特效。</p>
 <figure><img src="https://img.newzone.top/2023-01-07-23-27-01.png" alt="" tabindex="0" loading="lazy"><figcaption>3D 转换</figcaption></figure>
 <h2> 模糊</h2>
-<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur" target="_blank" rel="noopener noreferrer">模糊</a>（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Linear 和 Dual Filtering。建议将类型设置为「Dual Filtering（双重过滤）」，大小设为 4。应用蒙版后，可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求更低。如果只需要对部分区域进行模糊，勾选「应用蒙版」并适量设置「羽化区域」（如 10），以避免模糊边缘显得过于突出。</p>
+<p><a href="https://github.com/Xaymar/obs-StreamFX/wiki/Filter-Blur" target="_blank" rel="noopener noreferrer">模糊</a>（Blur Filter）提供五种模糊类型：Box、Box Linear、Gaussian、Gaussian Linear 和 Dual Filtering。建议将类型设置为「Dual Filtering（双重过滤）」，大小设为 5。应用蒙版后，可以选择模糊区域。与 Gaussian 类型相比，Dual Filtering 生成模糊效果最快，对配置要求更低。如果只需要对部分区域进行模糊，勾选「应用蒙版」并适量设置「羽化区域」（如 10），以避免模糊边缘显得过于突出。</p>
 <figure><img src="https://img.newzone.top/2023-01-08-06-49-05.png" alt="" tabindex="0" loading="lazy"><figcaption>右侧为模糊效果</figcaption></figure>
 <figure><img src="https://img.newzone.top/2023-01-06-02-51-10.png" alt="" tabindex="0" loading="lazy"><figcaption>模糊滤镜设置</figcaption></figure>
 <h2> 动态蒙版</h2>
