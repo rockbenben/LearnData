@@ -135,7 +135,7 @@ export default hopeTheme({
 
     // 组件库
     components: {
-      components: ["Badge", "BiliBili", "AudioPlayer", "VideoPlayer", "YouTube"],
+      components: ["Badge", "BiliBili", "VidStack"],
     },
 
     // 禁用不需要的配置
@@ -144,7 +144,7 @@ export default hopeTheme({
       attrs: true, // 使用特殊标记为 Markdown 元素添加属性
       // chart: true,
       // codetabs: true, // 代码块分组
-      container: true,
+      hint: true, //提示容器
       // demo: true, //代码演示
       // echarts: true,
       // flowchart: true,
