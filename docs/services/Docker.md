@@ -26,7 +26,7 @@ Docker 使用查看 [Docker — 从入门到实践](https://yeasy.gitbook.io/doc
 
 例如：
 
-```bash
+```shell
 sudo docker commit \
     --message "基于 Ubuntu 18.04 构建的 Huginn" \
     ubuntu \
@@ -35,7 +35,7 @@ sudo docker commit \
 
 另外，可以使用 Dockerfile 来构建镜像，如：
 
-```bash
+```shell
     build:
       context: /volume1/docker/danmuji
       dockerfile: Dockerfile
@@ -43,11 +43,26 @@ sudo docker commit \
 
 如何将镜像推送到 DockerHub：
 
-```bash
+```shell
 echo "您的密码" | docker login --username=您的用户名 --password-stdin
 
 docker build -t rockben/cors-anywhere:0.4.4 .
 docker push rockben/cors-anywhere:0.4.4
+```
+
+如果你的 Dockerfile 有后缀，则可以用 -f 指定 Dockerfile 文件路径
+
+```shell
+# 构建容器 gramps-api-dev
+cd D:\Backup\Libraries\Desktop\Gramps.js-main\dev
+docker build -t rockben/gramps-api-dev -f ./Dockerfile.api .
+docker push rockben/gramps-api-dev
+
+# 构建容器 gramps-frontend-dev
+# 将 ./dev/Dockerfile.frontend 复制到解压路径
+cd D:\Backup\Libraries\Desktop\Gramps.js-main
+docker build -t rockben/gramps-frontend-dev -f ./dev/Dockerfile.frontend .
+docker push rockben/gramps-frontend-dev
 ```
 
 ## Docker 数据库管理
@@ -70,7 +85,7 @@ Windows 本地磁盘被挂载到 Linux 的 mnt 目录下，因此，如果需要
 
 如果要在 Docker 上部署网站，推荐使用宝塔官方的集成镜像。它基于 CentOS 7.9，解决了 Docker 内部链接问题，还支持将数据库定时备份到本地。有关配置信息，请参考[宝塔面板定制 docker 镜像发布 - 集成 LN/AMP 支持](https://www.bt.cn/bbs/thread-79499-1-1.html)和 [Docker 安装宝塔环境](http://blog.huangyuqiang.cn/index.php/2022/11/02/docker%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E7%8E%AF%E5%A2%83/)。但是，该镜像不适用于 Huginn 的部署，因为 Huginn 不支持 CentOS。我曾尝试将安装命令从 apt-get 替换为 yum，但仍然无法部署。当我尝试在 Docker 中直接安装宝塔而不使用官方集成镜像时，遇到了无法启动数据库的问题。
 
-```bash
+```shell
 # 按需求修改映射端口和目录，1024 以下的端口不能给普通用户用
 sudo docker run -d --restart unless-stopped --name baota -p 8889:8888 -p 1033:22 -p 1044:443 -p 1081:80 -p 1889:888 -v /volume1/docker/btpanel/website_data:/www/wwwroot -v /volume1/docker/btpanel/mysql_data:/www/server/data -v /volume1/docker/btpanel/vhost:/www/server/panel/vhost btpanel/baota:lnmp
 ```

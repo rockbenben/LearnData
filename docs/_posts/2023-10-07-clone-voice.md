@@ -16,7 +16,7 @@ order: -56
 
 艾什莉的播客就是一个典型例子，她利用 AI 生成了根据当日新闻热点定制的讲稿，再用 AI 克隆的自己的声音进行朗读，配上背景音乐，既经济又高效。
 
-<AudioPlayer src="https://oss.newzone.top/audio/clonevoice00.wav" title="克隆音频实例"/>
+<VidStack src="https://oss.newzone.top/audio/clonevoice00.wav" title="克隆音频实例" />
 
 我使用了 [VITS-fast-fine-tuning](https://github.com/Plachtaa/VITS-fast-fine-tuning) 来克隆我的声音。这款工具能从短音频、长音频或视频中克隆特定角色的声音，只需几小时即可完成预训练的 VITS 模型的微调。微调后的模型不仅能进行声线转换，还能完成中、日、英三种语言的文本到语音的转换。
 
@@ -89,7 +89,7 @@ order: -56
 
 ### 语音克隆的「口音」问题
 
-<AudioPlayer src="https://oss.newzone.top/audio/clonevoice01.wav" title="克隆音频实例 2" />
+<VidStack src="https://oss.newzone.top/audio/clonevoice01.wav" title="克隆音频实例 2" />
 
 这个示例是使用 8 分钟 B 站视频和 CJE 模型训练出的。但你可能注意到了明显的断调口音问题，仿佛一个日本人在说中文。正如 @zachx121 指出的，「CJE 用的时候 romaji 的注音，就好比说用汉语拼音去标注英文单词的发音一样会有“口音”」。为了避免这个问题，可以使用纯中文设计的 C 模式进行训练和生成，以确保音频的自然和准确性。增加训练次数也有助于改善口音问题。
 

@@ -169,5 +169,8 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 - 其他：按键精灵、DisplayCal（屏幕）、One Quik(虚拟桌面切换)、Auslogics Disk Defrag(磁盘整理)、Reflector 3(手机投屏)、VoiceBot(声控游戏)
 - [DockIt](http://dogbean.ysepan.com/)：主显示屏中，非全屏状态下，快速将窗口局部化。如何默认不全屏；应用不自动吸边？
 - TheBrain：可以把知识无限扩充，都连接在一起。但将工作流导图放入 TheBrain 后发现并不合适，比较适合更细化的内容？介绍参考[善用佳软张玉新老师 · TheBrain ≠ 思维导图——运用 TheBrain 的三个阶段](https://www.bilibili.com/video/BV19a411578T)。
+- Markdown 批量翻译：
+  - [GT4T](https://www.gt4t.cn/)（不推荐）：可进行批量文件翻译，支持 Markdown。将文件夹拖入 GT4T 文件翻译器，即可翻译该文件下及子文件夹下的所有所选类型的文件。但似乎只能商用，添加自己的 API，依然提示付费。
+  - [Markdown Docs Translator](https://github.com/ilyachch/md_docs-trans-app)：开源免费，但使用网页版接口进行翻译，速度较慢，且很容易出现问题而中断。
 
 部分应用推荐来自 @vector090。
