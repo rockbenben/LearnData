@@ -14,6 +14,18 @@ GitHub Actions 是一个持续集成和持续交付 (CI/CD) 平台，可用于�
 
 如果 GitHub Actions 命令中有涉及密码等私密信息，则进入项目仓库的「Settings」>「Secrets and variables」>「Actions」，添加密钥进行加密处理。比如新建密钥 PERSONAL_TOKEN，Actions 命令中使用 `${{ secrets.PERSONAL_TOKEN }}` 来指代该密钥。
 
+### Dependabot
+
+Dependabot 是 GitHub 提供的官方自动化工具，可监视项目中使用的依赖项中的漏洞，并确保这些依赖项保持最新。你可以使用[常用 Dependabot 自动化](https://docs.github.com/zh/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions#common-dependabot-automations) 中的 GitHub Actions 命令，使 Dependabot 自动完成依赖的标记、批准拉取请求以及合并操作。如果仍有疑问，可以参考 tools-by-ai 中的 [.github](https://github.com/rockbenben/tools-by-ai/tree/main/.github) 配置。
+
+完成上述配置后，Actions 可能会报错 `failed to create review: GraphQL: GitHub Actions is not permitted`。这是由于 Actions 权限未开启的原因。我们需要继续进行以下设置：
+
+1. 进入项目仓库的「Settings」。
+2. 选择「General」>「Pull Requests」，勾选 `Allow auto-merge`，以赋予 Actions 合并操作权限。
+3. 在同一界面，选择「Code and automation」>「Actions」>「General」>「Workflow permissions」，选中 `Read and write permissions`，并勾选 `Allow GitHub Actions to create and approve pull requests`，然后点击保存。这样可以授予 Actions 批准拉取请求的权限。
+
+注意：GitHub Free 账户只支持在公共仓库中使用自动标记、批准拉取请求以及合并操作。
+
 ### 不同仓库间复制
 
 复制文件到目的地，文档没变化则不会执行。案例为将当前仓库 main 分支下 docs 的 README.md 文件复制到另一个仓库 rockbenben/LearnData/ 路径下，如果目标路径存在相同文件，则将覆盖。如果让 `clean: true` 生效，Actions 会将目标路径情况，然后执行复制。

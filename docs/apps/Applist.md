@@ -97,7 +97,7 @@ Windows 自用软件，以开源软件为主。
 
 通讯：TIM & 微信 & 飞书 & Telegram & Discord & [腾讯防撤回补丁](https://github.com/huiyadanli/RevokeMsgPatcher) ~~& Slack & 钉耙 & 千牛 & 阿里旺旺~~
 
-下载：[Aria2](https://newzone.top/posts/2018-05-15-aria2_a_new_download_tool.html) & IDM & [Kinhdown](https://baidu.kinh.cc/)(百度云解析) ~~& FDM(不支持 ed2k、磁力) & 迅雷~~
+下载：[Aria2](https://newzone.top/posts/2018-05-15-aria2_a_new_download_tool.html) & IDM & Kinhdown ~~& FDM(不支持 ed2k、磁力) & 迅雷~~
 
 杀毒：火绒 ~~& 360 & 金山卫士~~
 
