@@ -1,0 +1,1 @@
+import{an as i,ao as t}from"./vidstack-Q8NlvF8c-5YvUhBho.js";class n{constructor(s){this.hh=s}Ja(){i(this.ud)&&this.Yh()}Ma(){t(this.ud)&&window.cancelAnimationFrame(this.ud),this.ud=void 0}Yh(){this.ud=window.requestAnimationFrame(()=>{i(this.ud)||(this.hh(),this.Yh())})}}export{n as R};
