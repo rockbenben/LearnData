@@ -118,6 +118,12 @@ Scope 用于说明 commit 影响的范围，比如 Controller、DAO、View 等�
 
 如果当前 commit 针对某个 issue，那么可以在 Footer 部分使用 `Closes #265` 关闭这个 issue。也可以在任意位置输入 `#265`，将 commit 与对应问题相关联。
 
+## Pull Requests
+
+在 GitHub 中，有三种常见的 Pull Request（PR）合并方式：Create a merge commit（创建合并提交），Squash and merge（压缩合并）和 Rebase and merge（变基合并）。
+
+一般情况下，推荐使用 Squash and merge。在项目仓库的「Settings」中，选择「General」>「Pull Requests」，取消勾选 `Allow merge commits` 和 `Allow rebase merging`，即可默认显示 Squash and merge。
+
 ## 常见问题
 
 ### GitHub 忽略指定文件

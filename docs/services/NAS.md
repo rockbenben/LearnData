@@ -64,6 +64,7 @@ NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面�
 - [Home Assistant](https://www.home-assistant.io/)：开源家庭自动化平台，可自定义集中管理各品牌的智能家居设备。米家设备需使用 hacs 下的集成 [Xiaomi Miot Auto](../family/HomeAutomation.html#home-assistant)。
 - [Monica](https://github.com/monicahq/monica)：Monica 允许人们记录所有关于朋友和家人的重要事情。喜欢和他们一起的活动。你最后一次打电话给某人的时候，你们谈了些什么。它会帮助你记住他们孩子的名字和年龄。它还能提醒你打电话给一个很久没联系的人。Monica 的容器设置查看 [Monica Docker](https://github.com/monicahq/docker)。`Me as a contact` 是它常年的一个 bug，可以通过指定数据库中的 users.me_contact_id 来解决。
 - [supermanito/Helloworld](https://supermanito.github.io/Helloworld/#/)：京东签到等脚本，功能很强大，没怎么研究。
+- [MoviePilot](https://github.com/jxxghp/MoviePilot) 是 NAStool 作者重新推出的 NAS 媒体库自动化管理工具，使用说明参考 [MoviePilot-Help](https://github.com/Putarku/MoviePilot-Help)。个人使用并不习惯使用，可能是我设置错了，使用后反而把媒体结构弄乱了。
 - [ubuntu-desktop-lxde-vnc](https://registry.hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc)：能在 Docker 上运行的 Ubuntu 桌面版，适合挂载要长期运行的程序。测试 OBS 时，对内存要求不高，但 CPU 直冲 100%，fps 只有 7。
 - [RustDesk](https://rustdesk.com/zh/)：自建远程桌面，平替 TeamViewer 的开源软件。矿神源有套件，可直接部署中继服务器。
 
@@ -72,7 +73,6 @@ NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面�
 - Nextcloud: 私有云盘，完成 PC 端文件同步、版本控制，提供 web 端、移动端 app。
 - [兰空图床](https://github.com/lsky-org/lsky-pro)：图床已经部署在七牛云，用 Picgo 上传，没感觉有必要用它。
 - [AutoBangumi](https://github.com/EstrellaXD/Auto_Bangumi)：自动追番器，用以替代自我审查的 Bilibili。
-- [nas-tools](https://github.com/jxxghp/nas-tools/wiki/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B)：号称能自动整理文件，但测试识别中很容易出错，暂不考虑。
 - Clash：代理服务器。
 
 ## 影视整理

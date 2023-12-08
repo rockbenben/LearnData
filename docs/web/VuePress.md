@@ -100,7 +100,7 @@ VuePress [Build 配置项](https://vuepress.github.io/zh/reference/config.html#b
 
 VuePress 页面生成规则基于主题模板，如果修改全站 html 内容，最简单的方式就是修改模板。
 
-我的主题模板文件是 `@vuepress-theme-hope/templates/index.build.html`，将其下载到本地后，修改为你想要的样式，放入 .vuepress 文件夹内。最后在 config.ts 中添加代码，即可启用修改模板。
+我的主题模板文件是 [@vuepress-theme-hope/templates/index.build.html](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/packages/theme/templates/index.build.html)，将其下载到本地后，修改为你想要的样式，放入 .vuepress 文件夹内。最后在 config.ts 中添加代码，即可启用修改模板。
 
 ```ts
 import { path } from "@vuepress/utils";
