@@ -1,30 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}" data-theme="light">
+<html lang="{{ lang }}" data-theme="{{ themeMode }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <!--vuepress-ssr-head-->
     <meta name="keywords" content="自我提升,效率提升,开源工具,学习笔记" />
     <style>
-      :root {
-        --bg-color: #fff;
+      html {
+        background: var(--bg-color, #fff);
       }
 
       html[data-theme="dark"] {
-        --bg-color: #252232;
+        background: var(--bg-color, #252232);
       }
 
-      html,
       body {
         background: var(--bg-color);
-      }
-      .wwads-cn * {
-        color: var(--text-color) !important;
-      }
-      @media screen and (max-width: 1300px) {
-        .wwads-cn {
-          display: none;
-        }
       }
     </style>
     <script>
@@ -37,11 +27,10 @@
         document.documentElement.setAttribute("data-theme", "dark");
       }
     </script>
+    <!--vuepress-ssr-head-->
     <!--vuepress-ssr-styles-->
-    <!--vuepress-ssr-resources-->
-    <!-- <script type="text/javascript" charset="UTF-8" src="https://cdn.wwads.cn/js/makemoney.js" async></script> -->
-	  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7585955822109216"
-     crossorigin="anonymous"></script> -->
+    <!--vuepress-ssr-preload-->
+    <!--vuepress-ssr-prefetch-->
     <!-- Matomo 此区块为统计代码，请删除-->
     <script>
       var _paq = window._paq = window._paq || [];
@@ -59,8 +48,7 @@
     <!-- End Matomo Code 此区块为统计代码，请删除-->
   </head>
   <body>
-    <!-- <div class="wwads-cn wwads-vertical wwads-sticky" data-id="255" data-sticky-position="left" style="max-width:180px; background-color:var(--bg-color);"></div> -->
-    <div id="app"><!--vuepress-ssr-app--></div>
+    <div id="app"><!--vuepress-ssr-content--></div>
     <!--vuepress-ssr-scripts-->
     <!-- 看板娘区块 -->
     <script src="/live2d-widget/autoload.js"></script>
