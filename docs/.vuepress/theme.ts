@@ -56,8 +56,11 @@ export default hopeTheme({
   // 侧边栏排序规则
   // sidebarSorter: ['readme', 'order', 'title'],
 
-  // footer: "默认页脚",
-  // displayFooter: true,
+  // 页脚，支持使用 HTMLString 以显示备案信息等
+  footer: `Copyright © 2023-present <a href="https://newzone.top/" target="_blank" rel="noopener noreferrer">LearnData 开源笔记</a>`,
+  displayFooter: true,
+  // copyright 默认为 Copyright © <作者>，设置为禁用以自定义设置页脚
+  copyright: false,
 
   // 页面布局 Frontmatter 配置：https://theme-hope.vuejs.press/zh/config/frontmatter/layout.html#pageinfo
   pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
