@@ -10,9 +10,11 @@ order: 15
 
 ## 部署 n8n
 
-执行 `git clone https://github.com/n8n-io/n8n.git` 命令下载 n8n 仓库文件，然后切换到路径 `n8n/docker/compose/withPostgres`，运行 `sudo docker-compose up -d` 命令进行部署。
+1. 执行 `git clone https://github.com/n8n-io/n8n.git` 命令下载 n8n 仓库文件。
+2. 切换路径 `cd /volume3/storage/n8n/docker/compose/withPostgres`。
+3. 运行 `sudo docker-compose up -d` 命令进行部署。
 
-初次部署时，可能会出现 `for n8n  Container "5a6edd16e779" is unhealthy.` 的提示。请忽略该提示，然后再次运行 `sudo docker-compose up -d` 命令即可解决问题。如果你更新了 git 仓库文件，重新部署时可能会提示无需更新。在这种情况下，你可以首先删除容器，然后重新部署。
+初次部署时，可能会出现 `for n8n Container "5a6edd16e779" is unhealthy.` 的提示。请忽略该提示，然后再次运行 `sudo docker-compose up -d` 命令即可解决问题。如果你更新了 git 仓库文件，重新部署时可能会提示无需更新。在这种情况下，你可以首先删除容器，然后重新部署。
 
 ```yml
 # https://github.com/n8n-io/n8n/tree/master/docker/compose/withPostgres

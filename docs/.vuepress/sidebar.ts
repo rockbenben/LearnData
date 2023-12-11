@@ -16,8 +16,7 @@ export default sidebar({
     collapsible: true,
     children: [
       "Applist.md",
-      "design.md",
-      "ChatGPT.md",
+      "toolbox.md",
       "Chrome.md",
       {
         text: "工具笔记",
@@ -34,6 +33,12 @@ export default sidebar({
         link: "",
         collapsible: true,
         children: "structure",
+      },
+      {
+        text: "其他",
+        icon: "emmet",
+        collapsible: true,
+        children: ["design.md", "ChatGPT.md"],
       },
     ],
   },

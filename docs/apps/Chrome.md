@@ -2,7 +2,7 @@
 article: false
 title: Chrome 扩展
 icon: chrome
-order: 5
+order: 3
 ---
 
 常用 Chrome 扩展工具，链接多为 Chrome Web Store 项目页面。

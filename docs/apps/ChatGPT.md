@@ -2,7 +2,7 @@
 article: false
 title: ChatGPT
 icon: creative
-order: 2
+order: 91
 ---
 
 ChatGPT 是由 OpenAI 发布的聊天机器人模型，它不仅可以用于对话聊天，还能在专业领域提供有效的建议。为了更好地使用 ChatGPT，我将精选的提示词编入索引，根据领域和功能对其进行分类，添加针对提示词的标签筛选、关键词搜索、一键复制和中英文切换功能，创建了 [ChatGPT Shortcut](https://www.aishort.top/) 页面。即使是初学者，你只需复制提示词，稍加修改后发送给 ChatGPT，就能获得指定输出，让你的生产力加倍！

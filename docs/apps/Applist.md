@@ -129,18 +129,6 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 飞书妙记：倍速、跳过空白片段、字幕搜索定位视频，将视频（最长 4 小时）转为文字大纲，了解视频梗概，建立基础认知。等到自己上手实操的时候，遇到问题直接搜索文字定位到相关内容，再看文字对应的视频截图确定配置细节。如果视频过大，可以提取音频来上传。^[[视频课程学习留档](https://sspai.com/post/70960)]
 
-## 开源工具
-
-- [Whipser](https://github.com/openai/whisper)：自动语音识别应用，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。或通过 Clipchamp 识别各种字幕。
-- [Whisper Desktop](https://github.com/Const-me/Whisper)：Windows 本地音频转录的开源工具，支持音视频转录字幕，并且能够从麦克风捕获、转录或翻译实时音频。
-- [CodeFormer](https://github.com/sczhou/CodeFormer)：使用 AI 算法修复图像和视频中的人脸。注意：路径与文件名不能出现中文。
-- [AutoCut](https://github.com/mli/autocut)：通过字幕来剪切视频
-  - [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)：CUDA 的工具安装包，将 N 卡用于 AI 模型相关应用。
-  - [PyTorch](https://pytorch.org/get-started/locally/)：开源的 Python 机器学习库，用于自然语言处理等应用程序。
-- [style2paints](https://github.com/lllyasviel/style2paints)：一款给线稿上色的 AI 辅助工具。能够帮助用户给没有上色的图片，快速完成上色的 AI 工具，上色效果广受好评，完全免费开箱即用。
-- [uncle-novel](https://github.com/uncle-novel/uncle-novel)：一个全网小说下载器及阅读器，可部署在 PC 和安卓上，目录解析与书源结合，支持有声小说与文本小说，可下载 mobi、epub、txt 格式文本小说。
-- [VoceChat](https://doc.voce.chat/zh-cn/)：可以部署在网页的轻型客服系统？是否有其他开源选项。
-
 ## Android
 
 - [GKD](https://github.com/gkd-kit/gkd)：手机端去广告的开源利器，可以点击跳过任意开屏广告/点击关闭应用内部任意弹窗广告，如关闭百度贴吧帖子广告卡片/知乎回答底部推荐广告卡片。

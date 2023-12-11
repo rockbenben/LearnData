@@ -23,6 +23,14 @@ NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面�
 - Hyper Backup：本地多硬盘备份，防止一个硬盘丢失后重要文件损坏，比如 docker 容器的本地配置文件夹。
 - Surveillance Station：管理 IP 摄像机以保护您的家庭和办公环境。借助 Surveillance Station，您可以透过网络浏览器，VisualStation 或移动设备观看和记录实时视频，设置定时记录，回放记录的视频，从而实现远程监控。发生重要事件时，您也会收到通知。注意，摄像头需支持 **ONVIF 协议**。
 
+## Docker API
+
+如果你想跨设备、网络来管理 Docker，就需要开通 Docker API，它可以让你远程管理 Docker 容器和镜像。以下以群晖 NAS 为例：
+
+1. 使用 SSH 修改文件 `sudo vi /var/packages/Docker/etc/dockerd.json`。
+2. 在其中加入一行 `"hosts" : [ "tcp://0.0.0.0:2375", "unix:///var/run/docker.sock" ],`。建议将 tcp 的 ip 改为 nas 在本地的 ip，监听端口也不要使用默认的 2375。
+3. 重启 docker 服务。群晖里没找到重启命令，我这是手动停止 Docker 套件，再启动。
+
 ## Docker 容器
 
 ### 常用

@@ -12,6 +12,14 @@ Logseq 劣势，所有页面建立在 pages 下，但可以手动修改位置。
 
 我会把远期不安排的任务，往 later 清单中放，随时可以查看提醒，但又不需要每天重复调整时间。
 
+## 标签使用
+
+在之前，我习惯按笔记领域中使用各种标签，例如 `#tool`、`#docker`，但这反而使管理变得繁琐。
+
+现在，除了常见的标签外，我开始使用工具或项目的名称作为标记，例如 `#learndata`、`#logseq`。这样能更直观地找到相关的笔记。
+
+![](https://img.newzone.top/2023-12-11-15-22-31.png?imageMogr2/format/webp?imageMogr2/format/webp/thumbnail/600x)
+
 ## 快速使用
 
 - `[[]]` 可快速新建页面，`All pages` 中可删除空页面

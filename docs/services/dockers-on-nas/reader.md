@@ -8,6 +8,14 @@ order: 4
 
 reader 提供了书源管理、书架布局定制、强大的搜索功能、书海浏览、阅读体验的优化，支持移动端适配、换源、多种翻页方式和手势支持。用户可以自定义主题和样式，进行 WebDAV 同步，实施文字替换过滤，甚至听书功能（部分浏览器支持）。此外，它支持书籍的导入和分组，包括本地 TXT、EPUB、UMD 和 PDF 格式，以及 RSS 订阅。reader 还提供定时书架更新、并发搜书功能，以及本地书仓，同时支持 Kindle 阅读，满足多样化的阅读需求。
 
+## 异常监测
+
+我设置了数千条书源，导致容器经常报错，几乎每隔几天就会出现提示「点击设置后端接口前缀」。这不仅使 reader 无法正常使用，还会导致 NAS 的 CPU 被疯狂占用，必须重启容器才能恢复正常。
+
+因此，我使用 Uptime Kuma 监测 reader 后端 `http://localhost:8080/reader3/getUserInfo` 的运行状态，当异常时就触发 Docker API 执行指定容器的重启命令。
+
+## 部署命令
+
 ```yml
 # https://github.com/hectorqin/reader/blob/master/docker-compose.yml
 version: '3.1'
@@ -47,5 +55,16 @@ services:
     # volumes:
     #  reader:
     #  readerwebview:
+```
 
+原本我在 compose 命令中添加 healthcheck，希望当容器 unhealth 时自动重启。但实现起来更加复杂，需要另外使用容器，因此改用 Uptime Kuma 方案。
+
+```yml
+    # ↓健康检查：当书源较多时，可能隔几天就会出现后端崩溃，会提示「点击设置后端接口前缀」↓
+    # ↓此时可通过健康检查重启后端，以解决此问题，如不需要可注释或删除↓
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-S", "http://localhost:8080/reader3/getUserInfo"] # 需要检查的健康状态的 URL
+      interval: 10m # 健康检查的间隔时间
+      timeout: 30s # 健康检查的超时时间
+      retries: 3 # 健康检查失败后的重试次数
 ```
