@@ -6,12 +6,60 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 08 Dec 2023 04:14:01 GMT</pubDate>
-    <lastBuildDate>Fri, 08 Dec 2023 04:14:01 GMT</lastBuildDate>
+    <pubDate>Mon, 11 Dec 2023 07:27:31 GMT</pubDate>
+    <lastBuildDate>Mon, 11 Dec 2023 07:27:31 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
     <category>头脑驿站</category>
+    <item>
+      <title>飞书迁移记录</title>
+      <link>https://newzone.top/apps/tutorials/feishu.html</link>
+      <guid>https://newzone.top/apps/tutorials/feishu.html</guid>
+      <source url="https://newzone.top/rss.xml">飞书迁移记录</source>
+      <description>飞书曾经展现出极大的开放性，然而在一次改版后，它取消了对免费用户的支持，限制越来越多，促使我将各项内容从飞书迁移出来。以下是我的飞书迁移记录和替代方案。 飞书文档 知识库 我的早期笔记都保存在为知笔记，而随着飞书的出现，我将大多数存档性资料迁移到飞书知识库。尽管我原本计划完全弃用飞书，但由于时间和精力的有限，我并没有再次进行一次全面的迁移。幸运的是，我并没有将重要知识点笔记存放在飞书上，所以剩余的说明书等次要文档将继续保留在这个平台上。</description>
+      <category>工具</category>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>飞书曾经展现出极大的开放性，然而在一次改版后，它取消了对免费用户的支持，限制越来越多，促使我将各项内容从飞书迁移出来。以下是我的飞书迁移记录和替代方案。</p>
+<h2> 飞书文档</h2>
+<h3> 知识库</h3>
+<p>我的早期笔记都保存在为知笔记，而随着飞书的出现，我将大多数存档性资料迁移到飞书知识库。尽管我原本计划完全弃用飞书，但由于时间和精力的有限，我并没有再次进行一次全面的迁移。幸运的是，我并没有将重要知识点笔记存放在飞书上，所以剩余的说明书等次要文档将继续保留在这个平台上。</p>
+<figure><img src="https://img.newzone.top/2023-12-11-10-56-52.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<h3> 表格</h3>
+<p>相较于 Excel，飞书表格更加方便实用，同时在线文档编辑也更为便捷。例如，我的作息时间表就采用了飞书表格，并不时地进行更新。</p>
+<figure><img src="https://img.newzone.top/2023-12-11-10-52-56.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<h3> 收集表</h3>
+<p>在数据收集方面，飞书多维表格非常方便，而且支持嵌入网页，每月还提供 200 次的自定义推送通知。我打算继续在飞书上使用这一功能，不过机器人通知会转移到 Discord 客户端。</p>
+<figure><img src="https://img.newzone.top/2023-12-11-10-55-18.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<h2> 飞书邮箱</h2>
+<p>飞书邮箱简单易用且功能强大，支持设置多个别名邮箱，还能为第三方邮箱客户端生成专用密码，并统计创建和最后使用的时间。</p>
+<figure><img src="https://img.newzone.top/2023-12-10-15-45-44.png?imageMogr2/format/webp" alt="飞书邮箱设置" tabindex="0" loading="lazy"><figcaption>飞书邮箱设置</figcaption></figure>
+<p>目前，我的飞书邮箱是博客和自托管服务的联系邮箱。因为这部分的使用频率较低，我设置了邮件自动转发到主力邮箱，避免需要登录查看。需要注意的是，自动转发功能需要在管理后台进行设置开启，否则该选项将不可见。</p>
+<p>如果你的域名邮箱不需要大量发送邮件，我仍然推荐使用飞书邮箱。毕竟，大多数国外域名邮箱需要付费，而国内其他邮箱的体验也相当一般。</p>
+<h2> 飞书捷径</h2>
+<p>打开飞书捷径，却发现名称显示「飞书机器人助手」，不清楚两者到底是什么关系。改版后，飞书捷径不再支持海外链接，同时对第三方服务的支持也减少了。</p>
+<figure><img src="https://img.newzone.top/2023-12-11-14-10-37.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>不过，飞书捷径仍然支持个人免费使用。与之前的流程不同的是，你需要先建立机器人应用并发布，然后才能创建机器人指令。务必确保应用已发布，否则相关指令将无法触发。</p>
+<p>原计划中，我打算通过飞书捷径将国内服务的通知转发到 Discord，以实现统一的通知管理。然而，在测试中发现，飞书捷径机器人无法将群消息作为触发节点。虽然飞书群组机器人能接收通知，但捷径机器人却无法读取这些通知，从而无法继续转发。</p>
+<p>目前，我只能将飞书捷径用于轻量表格记录，例如，在接收通知消息后，通过触发飞书捷径的 webhook，将消息添加到飞书表格中。然而，添加这个功能时发现，只有企业版才能修改表格内容，并需要企业版管理员开通“飞书机器人助手”应用。但飞书捷径的名称不是显示为“飞书机器人助手”吗？对于个人用户来说，这个逻辑相当奇怪。</p>
+<figure><img src="https://img.newzone.top/2023-12-11-14-03-25.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption>未开通机器人助手会提示错误</figcaption></figure>
+<h2> Webhook 通知</h2>
+<p>我之前的 Webhook 通知是通过飞书群组机器人实现的。替代方法非常简单，只需将飞书的 webhook 替换为其他服务的链接即可。大多数通知机器人都支持 webhook，如 Telegram、Slack、Discord 等。</p>
+<p>以 Discord 通知为例，只需将链接 <code>https://open.feishu.cn/open-apis/bot/v2/hook/*******</code> 替换为 <code>https://discord.com/api/webhooks/***/******</code>。</p>
+<p>如果你的服务器或容器不支持发送海外链接，可以使用部署在海外服务器上的 <a href="https://newzone.top/services/dockers-on-nas/n8n.html" target="_blank" rel="noopener noreferrer">n8n</a> 来转接 webhook 消息。</p>
+<figure><img src="https://img.newzone.top/2023-12-10-15-11-15.png?imageMogr2/format/webp?imageMogr2/format/webp/thumbnail/400x" alt="n8n 转接 webhook 消息" tabindex="0" loading="lazy"><figcaption>n8n 转接 webhook 消息</figcaption></figure>
+<h2> 其他</h2>
+<ul>
+<li>飞书 OKR：由于我之前使用较少，直接放弃。</li>
+<li>飞书妙记：妙计用于音视频转文字，而妙记在桌面端已经被 Whisper 替代，我偶尔还会在手机端使用它进行语音转文字。</li>
+</ul>
+<h2> 更多</h2>
+<p>飞书在产品设计和体验方面表现相当不错。然而，飞书的改版使其产品逻辑全面向企业用户，要求所有接口都由企业管理员授权，导致免费和轻度企业用户流失严重。</p>
+<p>飞书初期是以免费和轻度企业用户的口碑打响了名声，很难说改版会大幅改良它的营收状况。我最初完全投入飞书，是从少数派社群开始的。然而，社群停止后，我对飞书的使用频率也在下降。</p>
+<p>当然，个人认为少数派飞书社群的关闭是一个双输。虽然飞书节省了免费用户的开销，但流失了大量早期用户和口碑。而自从少数派迁移到内部社群后，少数派的会员对我来说变得不那么重要，会员社区的访问也大大减少了。少数派会员的价值只剩每周一次的会员社区通讯。</p>
+]]></content:encoded>
+      <enclosure url="https://img.newzone.top/2023-12-11-10-56-52.png?imageMogr2/format/webp" type="image/"/>
+    </item>
     <item>
       <title>Switch 升级记录与资源汇编</title>
       <link>https://newzone.top/posts/2023-10-29-switch-firmware-updates.html</link>
@@ -625,59 +673,6 @@
 <figure><img src="https://img.newzone.top/2023-01-07-23-19-50.png" alt="" tabindex="0" loading="lazy"><figcaption>人像背景移除</figcaption></figure>
 </li>
 </ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>直播入门攻略三 | 插件篇：OBS 进阶插件</title>
-      <link>https://newzone.top/apps/livestreaming/3_obs_plugins.html</link>
-      <guid>https://newzone.top/apps/livestreaming/3_obs_plugins.html</guid>
-      <source url="https://newzone.top/rss.xml">直播入门攻略三 | 插件篇：OBS 进阶插件</source>
-      <description>OBS 与其他直播/录制应用最大的区别在于 OBS 社区，它给 OBS 带来了强大的扩展性。下文中我会介绍除 StreamFX 外的 15 款流行插件。（本文未完成，待填充） 插件安装与卸载 OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）两种。便携模式的插件配置可以复制到其他电脑上使用。 若要卸载 Windows 下的 OBS 便携模式插件，可以进入 %ProgramFiles%\obs-studio\data\obs-plugins 和 %ProgramFiles%\obs-studio\obs-plugins\64bit，搜索插件名，然后删除相关文件。</description>
-      <category>工具</category>
-      <pubDate>Thu, 12 Jan 2023 16:55:27 GMT</pubDate>
-      <content:encoded><![CDATA[<p>OBS 与其他直播/录制应用最大的区别在于 OBS 社区，它给 OBS 带来了强大的扩展性。下文中我会介绍除 StreamFX 外的 15 款流行插件。（本文未完成，待填充）</p>
-<h2> 插件安装与卸载</h2>
-<p>OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）两种。便携模式的插件配置可以复制到其他电脑上使用。</p>
-<p>若要卸载 Windows 下的 OBS 便携模式插件，可以进入 <code>%ProgramFiles%\obs-studio\data\obs-plugins</code> 和 <code>%ProgramFiles%\obs-studio\obs-plugins\64bit</code>，搜索插件名，然后删除相关文件。</p>
-<h2> 多平台直播：multi-rtmp</h2>
-<p><a href="https://github.com/sorayuki/obs-multi-rtmp" target="_blank" rel="noopener noreferrer">multi-rtmp</a> 使得 OBS 支持多地址推流，以为着同时在多个平台上进行直播。</p>
-<p>开启多地址推流前，你需要点击控制按钮「开始直播」，然后再点「停止直播」。</p>
-<h2> 自动切换场景</h2>
-<p><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/" target="_blank" rel="noopener noreferrer">Advanced Scene Switcher</a>：使用「宏」来自动完成各种任务，按条件切换场景、来源。比如，电脑闲置 10 分钟后，让摄像头来源变为不可见。</p>
-<h2> Move transition</h2>
-<p><a href="https://obsproject.com/forum/resources/move-transition.913/" target="_blank" rel="noopener noreferrer">Move transition</a>：记录来源的位置变化，生成元素移动的动画效果。比如，视频演讲时，将摄像头位置从屏幕右下移动到中央。</p>
-<h2> Transition Table</h2>
-<p><a href="https://obsproject.com/forum/resources/transition-table.1174/" target="_blank" rel="noopener noreferrer">Transition Table</a>：场景切换效果，设定不同场景间的切换规则。</p>
-<h2> Source Dock</h2>
-<p><a href="https://obsproject.com/forum/resources/source-dock.1317/" target="_blank" rel="noopener noreferrer">Source Dock</a>：为单独场景或来源建立控制栏，使用小窗口预览场景。</p>
-<h2> Source Copy</h2>
-<p><a href="https://obsproject.com/forum/resources/source-copy.1261/" target="_blank" rel="noopener noreferrer">Source Copy</a>：更方便地复制、保存场景设置。</p>
-<h2> 其他</h2>
-<ul>
-<li><a href="https://obsproject.com/forum/resources/scene-collection-manager.1434/" target="_blank" rel="noopener noreferrer">Scene Collection Manager</a>：自动备份场景，防止误操作。</li>
-<li><a href="https://obsproject.com/forum/resources/audio-monitor.1186/" target="_blank" rel="noopener noreferrer">Audio Monitor</a>：将来源声音输出给指定设备播放，方便单独调节音量，能让主播与观众听到不同的音频效果。</li>
-<li><a href="https://obsproject.com/forum/resources/downstream-keyer.1254/" target="_blank" rel="noopener noreferrer">Downstream Keyer</a>：切换场景时，置顶指定场景。</li>
-<li><a href="https://github.com/norihiro/obs-multisource-effect" target="_blank" rel="noopener noreferrer">Multi Source Effect</a>：滤镜效果</li>
-<li><a href="https://github.com/fzwoch/obs-teleport" target="_blank" rel="noopener noreferrer">Teleport</a>：NDI 替代品，局域网设备推流到直播。</li>
-<li><a href="https://github.com/univrsal/spectralizer" target="_blank" rel="noopener noreferrer">spectralizer</a>：音频频谱，用滤镜「图像掩码」的「混合图层」给频谱遮罩滤镜。</li>
-<li><a href="https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/" target="_blank" rel="noopener noreferrer">NDI</a>: 局域网视频无线传输技术 NDI 插件。</li>
-<li><a href="https://obsproject.com/forum/resources/scrab.845/" target="_blank" rel="noopener noreferrer">scrab</a>：屏幕截图。添加了一个可配置的热键快速选择一个屏幕区域，并添加它作为一个图像源到当前场景。有人反馈 OBS 28 后有 bug，暂未修复。</li>
-<li><a href="https://obsproject.com/forum/resources/lower-thirds-in-html-css.928/" target="_blank" rel="noopener noreferrer">Lower thirds in HTML/CSS</a>：文字运动特效，适合展示 logo 和标题。</li>
-<li><a href="https://obsproject.com/forum/resources/input-overlay.552/" target="_blank" rel="noopener noreferrer">Input Overlay</a>：同步显示键盘、鼠标和游戏板上的输入。</li>
-</ul>
-<h2> 美化插件</h2>
-<p>第三方的直播美化插件提供了时钟、榜单、弹幕、游戏等互动来源，用于美化直播间，新手可参考使用。美化插件免费版一般足够用了，比如 <a href="https://yun.miebo.cn/" target="_blank" rel="noopener noreferrer">咩播</a>、<a href="http://zbmate.com/" target="_blank" rel="noopener noreferrer">智播</a>。</p>
-<h2> 弃用插件</h2>
-<p>以下插件已弃用，仅作记录：</p>
-<ul>
-<li><a href="https://obsproject.com/forum/resources/virtual-cam-filter.1142/" target="_blank" rel="noopener noreferrer">Virtual Cam Filter</a>：能让来源单独输出虚拟摄像头，OBS 28 已内置此功能。</li>
-<li><a href="https://obsproject.com/forum/resources/obs-websocket-remote-control-obs-studio-from-websockets.466/" target="_blank" rel="noopener noreferrer">obs-websocket</a>：远程控制插件，OBS 28 已内置此功能。</li>
-<li><a href="https://obsproject.com/forum/resources/animated-captions-with-obs-controller-and-a-preview-function.1407/" target="_blank" rel="noopener noreferrer">Animated captions</a>：自定义弹幕功能，无漂浮弹幕，适用较少，仅用于 OBS 27。</li>
-<li><a href="https://obsproject.com/forum/threads/shaderfilter-went-away.155555/#post-571174" target="_blank" rel="noopener noreferrer">OBS Shaderfilter</a>：文字图片特效滤镜。此插件已被从社区删除，下载使用 <a href="https://github.com/Oncorporation/obs-shaderfilter/releases/" target="_blank" rel="noopener noreferrer">GitHub 备份</a>，其功能已被 StreamFX 取代。</li>
-<li><a href="https://obsproject.com/forum/resources/asynchronous-source-duplication.1483/" target="_blank" rel="noopener noreferrer">Asynchronous Source Duplication</a>：复制来源可以同时展示在多个场景，复制源会有延迟。其功能已被 StreamFX 的来源镜像取代。</li>
-</ul>
-<h2> 更多</h2>
-<p>如果你在上文中没有找到你需要的功能功能，可以访问 <a href="https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/" target="_blank" rel="noopener noreferrer">OBS 插件库</a>进行搜索。</p>
 ]]></content:encoded>
     </item>
   </channel>
