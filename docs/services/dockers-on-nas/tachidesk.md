@@ -11,7 +11,7 @@ order: 8
 如果你仅使用 Android 设备，可以选择使用开源漫画阅读器 [Tachiyomi](https://github.com/tachiyomiorg/tachiyomi)。如果你需要访问一些老旧漫画作品，还可以考虑使用 [Cimoc](https://github.com/Haleydu/Cimoc)。
 
 ```yml
-version: '3.7'
+version: "3.7"
 services:
   tachidesk-docker:
     image: ghcr.io/suwayomi/tachidesk:latest

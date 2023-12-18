@@ -20,26 +20,26 @@ services:
     container_name: grampsweb
     restart: always
     ports:
-      - "23300:5000"  # host:docker
+      - "23300:5000" # host:docker
     environment:
-      GRAMPSWEB_TREE: "Gramps Web"  # will create a new tree if not exists
+      GRAMPSWEB_TREE: "Gramps Web" # will create a new tree if not exists
       GRAMPSWEB_CELERY_CONFIG__broker_url: "redis://grampsweb_redis:6379/0"
       GRAMPSWEB_CELERY_CONFIG__result_backend: "redis://grampsweb_redis:6379/0"
       GRAMPSWEB_RATELIMIT_STORAGE_URI: redis://grampsweb_redis:6379/1
     depends_on:
       - grampsweb_redis
     volumes:
-      - /volume1/docker/grampsjs/users:/app/users  # persist user database
-      - /volume1/docker/grampsjs/index:/app/indexdir  # persist search index
-      - /volume1/docker/grampsjs/thumb_cache:/app/thumbnail_cache  # persist thumbnails
-      - /volume1/docker/grampsjs/cache:/app/cache  # persist export and report caches
-      - /volume1/docker/grampsjs/secret:/app/secret  # persist flask secret
-      - /volume1/docker/grampsjs/db:/root/.gramps/grampsdb  # persist Gramps database
-      - /volume1/docker/grampsjs/media:/app/media  # persist media files
+      - /volume1/docker/grampsjs/users:/app/users # persist user database
+      - /volume1/docker/grampsjs/index:/app/indexdir # persist search index
+      - /volume1/docker/grampsjs/thumb_cache:/app/thumbnail_cache # persist thumbnails
+      - /volume1/docker/grampsjs/cache:/app/cache # persist export and report caches
+      - /volume1/docker/grampsjs/secret:/app/secret # persist flask secret
+      - /volume1/docker/grampsjs/db:/root/.gramps/grampsdb # persist Gramps database
+      - /volume1/docker/grampsjs/media:/app/media # persist media files
       - /volume1/docker/grampsjs/tmp:/tmp
 
   grampsweb_celery:
-    <<: *grampsweb  # YAML merge key copying the entire grampsweb service config
+    <<: *grampsweb # YAML merge key copying the entire grampsweb service config
     ports: []
     container_name: grampsweb_celery
     depends_on:

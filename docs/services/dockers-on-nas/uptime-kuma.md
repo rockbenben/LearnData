@@ -11,7 +11,7 @@ order: 80
 ## 部署命令
 
 ```yml
-version: '3.8'
+version: "3.8"
 
 services:
   uptime-kuma:
@@ -22,6 +22,6 @@ services:
       # 用于 Docker 容器监控
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - "3001:3001"  # <Host Port>:<Container Port>
+      - "3001:3001" # <Host Port>:<Container Port>
     restart: always
 ```

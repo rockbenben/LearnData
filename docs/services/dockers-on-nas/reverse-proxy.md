@@ -11,16 +11,16 @@ order: 99
 [Nginx Proxy Manager](https://github.com/jlesage/docker-nginx-proxy-manager) 具备图形用户界面，其 SSL 证书有效期为 3 个月，到期时会自动续期。由于国内家用宽带不支持 80 和 443 端口，因此这里未采用 Nginx Proxy Manager 官方容器，同时由于端口原因也不建议使用 Caddy。如果你对 Nginx Proxy Manager 不熟悉，也可以尝试国内开发的[nginxWebUI](https://www.nginxwebui.cn/product.html)，它同样集成了图形化配置、SSL 证书申请、自动续签 SSL 证书等功能。
 
 ```yml
-version: '3.8'
+version: "3.8"
 services:
   app:
-    image: 'jlesage/nginx-proxy-manager:latest'
+    image: "jlesage/nginx-proxy-manager:latest"
     container_name: nginx-proxy-manager
     restart: unless-stopped
     ports:
-      - '9001:8080'
-      - '9002:8181'
-      - '9003:4443'
+      - "9001:8080"
+      - "9002:8181"
+      - "9003:4443"
     volumes:
       - /volume1/docker/nginx-proxy-manager/config:/config
 ```

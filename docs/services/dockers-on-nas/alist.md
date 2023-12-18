@@ -9,7 +9,7 @@ order: 12
 原本我的文件保存在蓝奏云上，但免费用户有 100M 的限制，因此我将一些要分享的大文件放在 Alist，作为私人轻量网盘分享应用和文件。
 
 ```yml
-version: '3.3'
+version: "3.3"
 services:
   alist:
     image: xhofe/alist:latest

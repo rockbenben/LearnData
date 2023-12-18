@@ -11,7 +11,7 @@ SRS 是一个免费开源的实时视频服务器应用，通过 [SRS Stack](htt
 目前，我将电脑上的 OBS 推流到 NAS 上的 SRS Stack，然后在 NAS 上进行多平台统一转播。这样一来，我能够节省上行带宽，同时避免客户端推送多路流。然而，需要注意的是，SRS Stack 目前仅支持最多同时进行三个平台的转播。如果你需要更多平台，可以运行多个实例。
 
 ```yml
-version: '3'
+version: "3"
 services:
   srs-stack:
     image: registry.cn-hangzhou.aliyuncs.com/ossrs/srs-stack:5
@@ -26,4 +26,3 @@ services:
       - 10080:10080/udp
     restart: always
 ```
-

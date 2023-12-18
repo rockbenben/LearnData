@@ -8,21 +8,21 @@ order: 81
 
 ```yml
 # https://github.com/whyour/qinglong/blob/develop/docker/docker-compose.yml
-version: '2'
+version: "2"
 services:
   web:
     # alpine 基础镜像版本
     image: whyour/qinglong:latest
     container_name: qinglong
     # debian-slim 基础镜像版本
-    # image: whyour/qinglong:debian  
+    # image: whyour/qinglong:debian
     volumes:
       - /volume1/docker/qinglong/data:/ql/data
     ports:
       - "5700:5700"
     environment:
       # 部署路径非必须，以斜杠开头和结尾，比如 /test/
-      QlBaseUrl: '/'
+      QlBaseUrl: "/"
     restart: unless-stopped
 ```
 

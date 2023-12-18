@@ -11,7 +11,7 @@ order: 100
 下面是一个 Docker 部署的示例配置：
 
 ```yml
-version: '3'
+version: "3"
 
 services:
   cors-anywhere:
@@ -36,7 +36,7 @@ $.ajax({
   success: function (data) {
     // 展示从资源获取的数据
     $("#rawid").val(data);
-  }
+  },
 });
 ```
 

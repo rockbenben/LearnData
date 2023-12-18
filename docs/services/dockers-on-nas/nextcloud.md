@@ -42,7 +42,7 @@ $output->setOutput($fileContents);
 以下是集成了 ONLYOFFICE 的 Nextcloud 部署命令：
 
 ```yml
-version: '2'
+version: "2"
 
 services:
   nextcloud_db:

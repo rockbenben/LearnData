@@ -66,7 +66,7 @@ sudo docker build -t strapiauth .
 sudo docker run -d -p 1337:1337 --name strapiauth strapiauth
 
 # tunnel
-sudo docker run --name cloudflaretunnel cloudflare/cloudflared:latest tunnel --no-autoupdate run --token 
+sudo docker run --name cloudflaretunnel cloudflare/cloudflared:latest tunnel --no-autoupdate run --token
 ```
 
 ### 腾讯云境外

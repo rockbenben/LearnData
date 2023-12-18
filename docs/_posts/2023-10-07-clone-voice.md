@@ -66,6 +66,7 @@ order: -56
 
 - 第 10 步：执行 `python preprocess_v2.py --add_auxiliary_data True --languages C`。
 - 第 11 步：
+
   - 开始训练：`python finetune_speaker_v2.py -m ./OUTPUT_MODEL --max_epochs 5000 --drop_speaker_embed True`。
   - 如果训练过程中断，要继续训练，执行 `python finetune_speaker_v2.py -m ./OUTPUT_MODEL --max_epochs 10000 --drop_speaker_embed False --cont True`。
 

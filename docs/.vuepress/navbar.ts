@@ -1,7 +1,7 @@
 import { navbar } from "vuepress-theme-hope";
 
 // 精选图标：https://theme-hope.vuejs.press/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87
-  //专题话题的路径需在尾部添加 /，否则有可能出现链接错误。比如下方「生活」中的 baby/
+//专题话题的路径需在尾部添加 /，否则有可能出现链接错误。比如下方「生活」中的 baby/
 export default navbar([
   { text: "博客", icon: "blog", link: "/blog" },
   {

@@ -69,14 +69,14 @@ async function fetchAndApply(request) {
       "Access denied: WorkersProxy is not available in your region yet.",
       {
         status: 403,
-      }
+      },
     );
   } else if (blocked_ip_address.includes(ip_address)) {
     response = new Response(
       "Access denied: Your IP address is blocked by WorkersProxy.",
       {
         status: 403,
-      }
+      },
     );
   } else {
     let method = request.method;
@@ -108,7 +108,7 @@ async function fetchAndApply(request) {
       original_text = await replace_response_text(
         original_response_clone,
         upstream_domain,
-        url_host
+        url_host,
       );
     } else {
       original_text = original_response_clone.body;
@@ -232,14 +232,14 @@ async function fetchAndApply(request) {
       "Access denied: WorkersProxy is not available in your region yet.",
       {
         status: 403,
-      }
+      },
     );
   } else if (blocked_ip_address.includes(ip_address)) {
     response = new Response(
       "Access denied: Your IP address is blocked by WorkersProxy.",
       {
         status: 403,
-      }
+      },
     );
   } else {
     let method = request.method;
@@ -271,7 +271,7 @@ async function fetchAndApply(request) {
       original_text = await replace_response_text(
         original_response_clone,
         upstream_domain,
-        url_hostname
+        url_hostname,
       );
     } else {
       original_text = original_response_clone.body;
@@ -427,14 +427,14 @@ async function fetchAndApply(request) {
       "Access denied: WorkersProxy is not available in your region yet.",
       {
         status: 403,
-      }
+      },
     );
   } else if (blocked_ip_address.includes(ip_address)) {
     response = new Response(
       "Access denied: Your IP address is blocked by WorkersProxy.",
       {
         status: 403,
-      }
+      },
     );
   } else {
     let method = request.method;
@@ -466,7 +466,7 @@ async function fetchAndApply(request) {
       original_text = await replace_response_text(
         original_response_clone,
         upstream_domain,
-        url_host
+        url_host,
       );
     } else {
       original_text = original_response_clone.body;
@@ -490,7 +490,7 @@ addEventListener("fetch", (event) => {
           "Content-Type": "application/json",
         },
       });
-    })
+    }),
   );
 });
 
