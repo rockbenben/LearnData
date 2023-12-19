@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
@@ -28,7 +28,9 @@
     <style>
       .anchor {
         font-weight: bold;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+        text-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.4),
+          0 0 30px rgba(0, 0, 0, 0.075);
       }
 
       .app-name {
@@ -40,7 +42,9 @@
       }
 
       section.cover p {
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+        text-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.4),
+          0 0 30px rgba(0, 0, 0, 0.075);
       }
 
       .app-sub-sidebar li:before {
@@ -238,24 +242,24 @@
           todayDate,
           todayHour,
           todayMinute,
-          todaySecond
+          todaySecond,
         );
         var diff = t2 - t1;
         var diffYears = Math.floor(diff / years);
         var diffDays = Math.floor(diff / days - diffYears * 365);
         var diffHours = Math.floor(
-          (diff - (diffYears * 365 + diffDays) * days) / hours
+          (diff - (diffYears * 365 + diffDays) * days) / hours,
         );
         var diffMinutes = Math.floor(
           (diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-            minutes
+            minutes,
         );
         var diffSeconds = Math.floor(
           (diff -
             (diffYears * 365 + diffDays) * days -
             diffHours * hours -
             diffMinutes * minutes) /
-            seconds
+            seconds,
         );
         if (diffYears > 0) {
           document.getElementById("sitetime").innerHTML =
