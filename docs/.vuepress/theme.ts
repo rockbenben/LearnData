@@ -83,7 +83,7 @@ export default hopeTheme({
       Wechat: "https://img.newzone.top/wechat.svg",
       Email: "mailto:learndata@newzone.top",
       Discord: "https://discord.gg/PZTQfJ4GjX",
-      RSS: "https://newzone.top/rss.xml",
+      RSS: "/rss.xml",
     },
   },
 
@@ -142,31 +142,26 @@ export default hopeTheme({
     },
 
     // 禁用不需要的配置
+    // https://plugin-md-enhance.vuejs.press/zh/guide/
     mdEnhance: {
-      align: true,
-      attrs: true, // 使用特殊标记为 Markdown 元素添加属性
-      // chart: true,
-      // codetabs: true, // 代码块分组
-      hint: true, //提示容器
-      // demo: true, //代码演示
-      // echarts: true,
-      // flowchart: true,
-      gfm: true,
-      imgLazyload: true,
-      // imgMark: true,
-      imgSize: true,
-      figure: true,
-      include: true, //导入文件
-      // katex: true,
-      mark: true,
-      // mermaid: true,
-      footnote: true,
-      tasklist: true,
       sub: true, // 上下角标
       sup: true,
+      tasklist: true, // 任务列表
+      figure: true, // 启用 figure
+      imgLazyload: true, // 启用图片懒加载
+      // imgMark: true, // 启用图片标记
+      imgSize: true, // 启用图片大小
+      include: true, //导入文件
+      component: true, // 使用 component 代码块来在 Markdown 中添加组件
+      footnote: true,
       // tabs: true, // 选项卡
-      // vpre: true,
-      // vuePlayground: true, // Vue 交互演示
+      alert: true, // GFM 警告
+      attrs: true, // 使用特殊标记为 Markdown 元素添加属性
+      hint: true, // 提示容器
+      mark: true, // 使用 == == 进行标记。请注意两边需要有空格。
+      align: true, // 启用自定义对齐
+      // codetabs: true, // 代码块分组
+      // demo: true, //代码演示
     },
 
     // rss 属性

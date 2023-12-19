@@ -22,6 +22,7 @@ NAS 主要用于 Docker 服务、影视管理和文件存储备用这三方面�
 - Synology Drive Server：电脑文件备份。
 - Hyper Backup：本地多硬盘备份，防止一个硬盘丢失后重要文件损坏，比如 docker 容器的本地配置文件夹。
 - Surveillance Station：管理 IP 摄像机以保护您的家庭和办公环境。借助 Surveillance Station，您可以透过网络浏览器，VisualStation 或移动设备观看和记录实时视频，设置定时记录，回放记录的视频，从而实现远程监控。发生重要事件时，您也会收到通知。注意，摄像头需支持 **ONVIF 协议**。
+- [CloudDrive2](https://www.clouddrive2.com)：可以将网盘挂载在本地。安装套件后，需 SSH 终端运行 `sudo sed -i 's/package/root/g' /var/packages/CloudDrive2/conf/privilege`。
 
 ## Docker API
 

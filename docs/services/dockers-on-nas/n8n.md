@@ -19,7 +19,7 @@ order: 15
 ```yml
 # https://github.com/n8n-io/n8n/tree/master/docker/compose/withPostgres
 # https://docs.n8n.io/hosting/installation/server-setups/docker-compose/#5-create-docker-compose-file
-version: '3.8'
+version: "3.8"
 
 services:
   n8n-postgres:
@@ -36,7 +36,11 @@ services:
       - /volume1/docker/n8n/db:/var/lib/postgresql/data
       - ./init-data.sh:/docker-entrypoint-initdb.d/init-data.sh
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -h localhost -U ${POSTGRES_USER} -d ${POSTGRES_DB}']
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -h localhost -U ${POSTGRES_USER} -d ${POSTGRES_DB}",
+        ]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -88,6 +92,34 @@ POSTGRES_NON_ROOT_PASSWORD=changePassword
 ```
 
 `N8N_HOST` 和 `N8N_EDITOR_BASE_URL` 用于第三方 API 的回调访问。如果你启用了外网调用 n8n 的访问权限，建议开启 Two-factor authentication (2FA)，以防止 API 信息泄露。不建议将 `N8N_HOST` 设为内部域名，否则在后续设置中可能会出现 `Bad Request: bad webhook: An HTTPS URL must be provided for webhook` 错误。
+
+## 节点
+
+### HTTP Request
+
+[HTTP Request](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) 是使用 REST API 发出 HTTP 请求以查询来自任何应用程序或服务的数据。
+
+网页端有时可能经常容易连不上，如果你不希望卡住，注意在节点设置的 On Error 选择为 Continue，并在 Options 中添加超时选项 Timeout 10000 ms。
+
+### IF
+
+[IF](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.if/) 是根据比较操作有条件地分割工作流。请注意，Boolean 判断的 true、false 需要使用双重花括号框中。
+
+![](https://img.newzone.top/2023-12-12-22-43-08.png?imageMogr2/format/webp?imageMogr2/format/webp/thumbnail/400x)
+
+### Github Trigger
+
+Github Trigger 通过在 Github 上建立 Webhook 来获取推送。
+
+有时，节点的设置可能出错，导致以下错误提示：`Workflow could not be activated: A webhook with the identical URL probably exists already. Please delete it manually on Github!`。这是因为在仓库中存在多个相同的 Webhook 地址所致。请进入 repo 仓库，选择 `Settings > Code and automation > Webhooks`，手动删除重复的 Webhook 地址，即可使其正常运行。
+
+## 使用 Tips
+
+### 变量路径
+
+对于一些复杂的输入变量，你可以直接使用 n8n 自带的工具复制路径。在 INPUT 区域选择 JSON，然后点击要选择的参数，接着点击 INPUT 右上角的复制按钮，选择 `Copy Parameter Path`。
+
+![](https://img.newzone.top/2023-12-14-12-37-36.png?imageMogr2/format/webp)
 
 ## 其他操作记录
 

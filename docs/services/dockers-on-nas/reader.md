@@ -12,19 +12,19 @@ reader 提供了书源管理、书架布局定制、强大的搜索功能、书�
 
 我设置了数千条书源，导致容器经常报错，几乎每隔几天就会出现提示「点击设置后端接口前缀」。这不仅使 reader 无法正常使用，还会导致 NAS 的 CPU 被疯狂占用，必须重启容器才能恢复正常。
 
-因此，我使用 Uptime Kuma 监测 reader 后端 `http://localhost:8080/reader3/getUserInfo` 的运行状态，当异常时就触发 Docker API 执行指定容器的重启命令。
+因此，我使用 Uptime Kuma 监测 reader 后端 `http://localhost:8080/reader3/getUserInfo` 的运行状态，当异常时就触发 Docker API 执行指定容器的重启命令。值得注意的是，Uptime Kuma 在恢复时也会触发通知，意味着可能会两次重启 reader 容器。如果不希望发生多次重启，可以考虑使用 n8n 来判断状态。
 
 ## 部署命令
 
 ```yml
 # https://github.com/hectorqin/reader/blob/master/docker-compose.yml
-version: '3.1'
+version: "3.1"
 services:
-# reader 在线阅读
-# 公开服务器(服务器位于日本)：[https://reader.nxnow.top](https://reader.nxnow.top) 测试账号/密码分别为 guest/guest123，也可自行创建账号添加书源，不定期删除长期未登录账号 (2 周)
-# 书源集合 : [https://legado.aoaostar.com/](https://legado.aoaostar.com/) 点击打开连接，添加远程书源即可
-# 公众号汇总 : [https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MzMyMDgyMA==&action=getalbum&album_id=2397535253763801090#wechat_redirect](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MzMyMDgyMA==&action=getalbum&album_id=2397535253763801090#wechat_redirect)
-# 手动更新方式 : docker-compose pull && docker-compose up -d
+  # reader 在线阅读
+  # 公开服务器(服务器位于日本)：[https://reader.nxnow.top](https://reader.nxnow.top) 测试账号/密码分别为 guest/guest123，也可自行创建账号添加书源，不定期删除长期未登录账号 (2 周)
+  # 书源集合 : [https://legado.aoaostar.com/](https://legado.aoaostar.com/) 点击打开连接，添加远程书源即可
+  # 公众号汇总 : [https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MzMyMDgyMA==&action=getalbum&album_id=2397535253763801090#wechat_redirect](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MzMyMDgyMA==&action=getalbum&album_id=2397535253763801090#wechat_redirect)
+  # 手动更新方式 : docker-compose pull && docker-compose up -d
   reader:
     image: hectorqin/reader
     #image: hectorqin/reader:openj9-latest #docker 镜像，arm64 架构或小内存机器优先使用此镜像。启用需删除上一行
@@ -60,11 +60,17 @@ services:
 原本我在 compose 命令中添加 healthcheck，希望当容器 unhealth 时自动重启。但实现起来更加复杂，需要另外使用容器，因此改用 Uptime Kuma 方案。
 
 ```yml
-    # ↓健康检查：当书源较多时，可能隔几天就会出现后端崩溃，会提示「点击设置后端接口前缀」↓
-    # ↓此时可通过健康检查重启后端，以解决此问题，如不需要可注释或删除↓
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-S", "http://localhost:8080/reader3/getUserInfo"] # 需要检查的健康状态的 URL
-      interval: 10m # 健康检查的间隔时间
-      timeout: 30s # 健康检查的超时时间
-      retries: 3 # 健康检查失败后的重试次数
+# ↓健康检查：当书源较多时，可能隔几天就会出现后端崩溃，会提示「点击设置后端接口前缀」↓
+# ↓此时可通过健康检查重启后端，以解决此问题，如不需要可注释或删除↓
+healthcheck:
+  test: [
+      "CMD",
+      "wget",
+      "--spider",
+      "-S",
+      "http://localhost:8080/reader3/getUserInfo",
+    ] # 需要检查的健康状态的 URL
+  interval: 10m # 健康检查的间隔时间
+  timeout: 30s # 健康检查的超时时间
+  retries: 3 # 健康检查失败后的重试次数
 ```

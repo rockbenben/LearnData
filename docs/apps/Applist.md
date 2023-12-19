@@ -33,7 +33,7 @@ Windows 自用软件，以开源软件为主。
 
 ## 音频视频
 
-音频播放：foobar2000（[MKing 皮肤](http://tieba.baidu.com/p/4434445880)）& [MusicTag](https://www.cnblogs.com/vinlxc/p/11347744.html) & [163MusicLyrics](https://github.com/jitwxs/163MusicLyrics)（云歌词下载，支持日文转罗马音）& Listen1 & [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop) & Moon FM(播客) ~~& 百度音乐 & AIMP3 & 酷我 K 歌 & Airplay~~
+音频播放：[MusicFree](https://github.com/maotoumao/MusicFree) & foobar2000（[MKing 皮肤](http://tieba.baidu.com/p/4434445880)）& [MusicTag](https://www.cnblogs.com/vinlxc/p/11347744.html) & [163MusicLyrics](https://github.com/jitwxs/163MusicLyrics)（云歌词下载，支持日文转罗马音）& Listen1& Moon FM(播客) & [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop)（失效）~~& 百度音乐 & AIMP3 & 酷我 K 歌 & Airplay~~
 
 音频处理：[Reaper+ Ultraschall](https://sspai.com/post/76677) & [Audacity](https://github.com/audacity/audacity/releases) & iZotope rx9 ~~& Audition & 神舌变声器 & Goldwave~~
 
@@ -45,7 +45,7 @@ Windows 自用软件，以开源软件为主。
 
 视频下载：[youtube-dl](https://github.com/ytdl-org/youtube-dl) & [哔哩下载姬](https://github.com/leiurayer/downkyi) & [BBDown](https://github.com/nilaoda/BBDown)（命令行式哔哩哔哩下载器）
 
-影视管理：tinyMediaManager（刮削），易影视（本地管理）
+影视管理：[tinyMediaManager](https://xiaoyaliu.notion.site/dc28a32c807d418691b83519fa523306)（刮削），易影视（本地管理）
 
 ## 屏幕录制
 
@@ -132,7 +132,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 ## Android
 
 - [GKD](https://github.com/gkd-kit/gkd)：手机端去广告的开源利器，可以点击跳过任意开屏广告/点击关闭应用内部任意弹窗广告，如关闭百度贴吧帖子广告卡片/知乎回答底部推荐广告卡片。
-- [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext)：电视盒子上的去广告版 YouTube。
+- [SmartTube](https://github.com/yuliskov/SmartTube)：电视盒子上的去广告版 YouTube。
 - [WechatExporter](https://github.com/BlueMatthew/WechatExporter)：微信记录导出，仅限 iOS 手机。安卓和 PC 端微信都加密，无法导出查看。
 - [AutoX](https://github.com/kkevsekk1/AutoX)：开源版的 Auto.js，没有包名屏蔽。相关信息可以参考 [快人一步：使用 Tasker+AutoX 一键直达健康码](https://sspai.com/post/65863)。
 
