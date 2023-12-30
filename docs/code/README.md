@@ -6,16 +6,16 @@ icon: code
 
 代码编程的学习路径：
 
-- 基础知识：ES6, MySQL，HTML，Markdown，正则表达式
+- 编程语言：[TypeScript](https://www.typescriptlang.org/zh/)，[JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+- 相关基础知识：HTML，Markdown，MySQL，正则表达式
 - 脚本/开发工具：AutoHotkey，Electron
-- 编程语言：[TypeScript 4.x](https://www.typescriptlang.org/zh/) + [JavaScript](https://www.javascript.com/)
-- 前端框架：[Vue 3.x](https://cn.vuejs.org/)
-  - 构建工具：[Vite 2.x](https://cn.vitejs.dev/)
-  - 路由工具：[Vue Router 4.x](https://router.vuejs.org/zh/index.html)
-  - 状态管理：[Vuex 4.x](https://next.vuex.vuejs.org/)
-- UI 框架：[Element Plus](https://element-plus.gitee.io/zh-CN/guide/quickstart.html)
+
+- 前端框架：[Vue.js](https://cn.vuejs.org/)，[React](https://zh-hans.react.dev/)
+- UI 框架：[Ant Design](https://ant-design.antgroup.com/index-cn)，[Element Plus](https://element-plus.gitee.io/zh-CN/guide/quickstart.html)
   - CSS 预编译：[Stylus](https://stylus-lang.com/) / [Sass](https://sass.bootcss.com/documentation) / [Less](http://lesscss.cn/)
   - CSS 后处理器：PostCSS，[tailwindcss](https://www.tailwindcss.cn/docs)
+- 网站生成工具：[VuePress](https://v2.vuepress.vuejs.org/zh/guide/getting-started.html)，[Docusaurus](https://docusaurus.io/zh-CN/docs)，[Next.js](https://nextjs.org/docs)
+
 - Node.js 框架：[Midway](https://www.midwayjs.org/docs/intro)
 - HTTP 工具：[Axios](https://axios-http.com/)
   - Git Hook 工具：[husky](https://typicode.github.io/husky/#/) + [lint-staged](https://github.com/okonet/lint-staged)
@@ -23,7 +23,6 @@ icon: code
   - 提交规范：[Commitizen](http://commitizen.github.io/cz-cli/) + [Commitlint](https://commitlint.js.org/#/)
   - 单元测试：[vue-test-utils](https://next.vue-test-utils.vuejs.org/) + [jest](https://jestjs.io/) + [vue-jest](https://github.com/vuejs/vue-jest) + [ts-jest](https://kulshekhar.github.io/ts-jest/)
   - 自动部署：[GitHub Actions](https://docs.github.com/cn/actions/learn-github-actions)
-  - [Documate](https://documate.site/)：用于在文档网站中嵌入人工智能聊天对话框，根据内容回答用户问题。中间会调用 OpenAI API 用于回答问题。
 
 ## Visual Studio Code
 

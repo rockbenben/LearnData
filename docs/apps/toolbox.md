@@ -17,3 +17,4 @@ order: 2
 - [uncle-novel](https://github.com/uncle-novel/uncle-novel)：一个全网小说下载器及阅读器，可部署在 PC 和安卓上，目录解析与书源结合，支持有声小说与文本小说，可下载 mobi、epub、txt 格式文本小说。
 - [VoceChat](https://doc.voce.chat/zh-cn/)：可以部署在网页的轻型客服系统？是否有其他开源选项。
 - [tinyld](https://github.com/komodojp/tinyld)：一个 JS 库，用来判断一段文字是什么语言（汉语、英语、日语等等）。
+- [Documate](https://documate.site/)：用于在文档网站中嵌入人工智能聊天对话框，根据内容回答用户问题。中间会调用 OpenAI API 用于回答问题。

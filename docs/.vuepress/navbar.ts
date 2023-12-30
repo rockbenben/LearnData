@@ -50,7 +50,7 @@ export default navbar([
         link: "https://www.aishort.top/",
       },
       { text: "IMGPrompt", icon: "pic", link: "https://prompt.newzone.top/" },
-      { text: "文字处理", icon: "others", link: "https://tools.newzone.top/" },
+      { text: "文字处理", icon: "others", link: "https://tools.newzone.top/json-translate" },
       {
         text: "工具收藏",
         icon: "categoryselected",
