@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 19 Dec 2023 07:11:27 GMT</pubDate>
-    <lastBuildDate>Tue, 19 Dec 2023 07:11:27 GMT</lastBuildDate>
+    <pubDate>Sat, 30 Dec 2023 11:58:53 GMT</pubDate>
+    <lastBuildDate>Sat, 30 Dec 2023 11:58:53 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -45,7 +45,10 @@
 <p>点击「开始翻译」按钮后，翻译完成可以选择「复制结果」。</p>
 <figure><img src="https://img.newzone.top/2023-12-19-11-42-37.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption>映射翻译示例</figcaption></figure>
 <p>结果界面右侧还设有灰色按钮，用于切换翻译节点模式，包括单一键名模式和映射翻译模式。单一键名模式下，翻译的输入输出使用相同节点，而映射翻译模式则涉及不同节点的翻译。例如，节点 A 的值将翻译至节点 B，节点 C 的值翻译至节点 D。</p>
-<h2> JSON 键名及其局限性</h2>
+<h2> 使用问题</h2>
+<h3> 返回 null</h3>
+<p>使用 DeepLX 免费接口时，可能会返回 null。请等一会再使用，或使用自己的 API KEY。</p>
+<h3> JSON 键名及其局限性</h3>
 <p>JSON 数据是以键值对的形式存储的，其中“键”（也称为“名称”）是一个字符串，用于唯一标识数据记录中的特定项目或元素，是数据检索和操作的基础。JsonTranslate 正是利用了 JSON 键名的标识作用来实现精准化识别翻译。</p>
 <p>以下是对示例中的几个键名的解释：</p>
 <ul>
@@ -507,7 +510,7 @@
 </ul>
 <figure><img src="https://img.newzone.top/2023-01-05-20-06-39.png" alt="" tabindex="0" loading="lazy"><figcaption>直播输出设置</figcaption></figure>
 <h3> 音频</h3>
-<p>点击「设置」&gt;「音频」&gt;「通用」，将声道设为单声道。除非你是歌唱主播，否则无需使用立体声。</p>
+<p>点击「设置」&gt;「音频」&gt;「通用」，将声道设为单声道。除非你是歌唱主播，否则无需使用立体声。注意，如果你要使用监听或外放 OBS 声音，声道也需要使用立体声。</p>
 <h3> 视频</h3>
 <p>点击「设置」&gt;「视频」，按需设置直播分辨率，通常为 <code>1920x1080</code> 或 <code>1280x720</code>。如果你是做电商直播，需要进行<strong>竖屏直播</strong>，就将分辨率反过来设置，比如 <code>1080x1920</code> 或 <code>720x1280</code>。「输出（画布）分辨率」与「基础（缩放）分辨率」建议设为相同数值，避免出现缩放问题。</p>
 <p>「常用帧率」在日常直播中只需要 30，游戏直播建议调整到 60。</p>
