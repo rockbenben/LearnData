@@ -14,6 +14,8 @@ order: -22
 - FEED43：简单免费，六小时抓取一次，每次抓取 20 条静态页面。
 - Huginn：自由度高，能自定义**抓取频率、内容结构、js 结果、输出样式**等；需要搭建服务器，学习 Huginn 抓取规则。
 
+<BiliBili bvid="BV1k5411B7vF" />
+
 ## Huginn 准备工作
 
 - 准备 NAS 或 Debian/Ubuntu 环境的服务器；
@@ -42,7 +44,7 @@ order: -22
 
 ### 获取内容路径
 
-使用火狐浏览器打开目标页面，获取 css path 路径。
+使用火狐浏览器打开目标页面，获取 css path 路径。如果你使用的是 Xpath 路径，请将路径中的双引号替换为单引号，或者用反义符 `\` 注释掉路径中的双引号。
 
 1. 按下 `F12`, 然后点击 _Developer Tools_ 左上角的*检查指针*。
 
@@ -64,6 +66,7 @@ order: -22
 
 - 有些路径中的**节点带空格**，如 `<div class="packery-item article">`,路径中的空格由 `.` 代替，截取为 `.packery-item.article`。
 - 当抓取**多种 css path 规则**时，用逗号分割，比如 `"css": ".focus-title .current a , .stress h2 a",`。
+- 有时节点路径输入正确，但输出为空。此时，将路径更改为 `html`，检查源码中是否含有你需要的内容。动态页面直接获取会为空，你需要使用 PhantomJs Cloud 来缓存页面。
 
 ### 导出 RSS
 
@@ -78,6 +81,45 @@ order: -22
 [点击网盘下载](https://pan.baidu.com/s/1JdsFkLN9kczR9C92tKi83A)国内应急新闻的详细设置，导入到 Huginn 即可使用。其他问题参考 [PhantomJs Cloud 英文攻略](https://github.com/huginn/huginn/wiki/Browser-Emulation-Using-PhantomJs-Cloud)。
 
 微信的屏蔽措施非常之多，公众号抓取可以尝试 [wechat-feeds](https://wechat.privacyhide.com/)。
+
+## 跳转链接处理示例
+
+要获取跳转链接的真实地址，可以使用WebsiteAgent直接读取原网页的HTML代码，并检查其中的跳转代码。
+
+<BiliBili bvid="BV1ae411v7Qg" />
+
+跳转代码通常位于`<script>`标签内。由于`<script>`标签内的内容是文本，而非HTML属性，我们不能使用属性选择器（如@href）。相反，我们应使用XPath的`string()`函数来提取整个`<script>`标签的文本内容。之后，可以利用EventFormattingAgent的正则表达式从这些文本中提取URL。
+
+```json
+# WebsiteAgent
+{
+  "expected_update_period_in_days": "2",
+  "url": "https://www.chncpa.org/ycxm/202308/t20230817_254985.html",
+  "type": "html",
+  "mode": "on_change",
+  "extract": {
+    "url": {
+      "xpath": "//script",
+      "value": "string(.)"
+    }
+  }
+}
+
+# EventFormattingAgent
+{
+  "instructions": {
+    "jumpurl": "{{real_url.1}}"
+  },
+  "matchers": [
+    {
+      "path": "{{url}}",
+      "regexp": "window\\.location\\.href\\s*=\\s*\\\\?[\"']([^\"']+?)(?:\\\\?[\"']);",
+      "to": "real_url"
+    }
+  ],
+  "mode": "clean"
+}
+```
 
 ## RSS 合集
 

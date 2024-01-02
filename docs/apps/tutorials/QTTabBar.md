@@ -2,7 +2,7 @@
 article: false
 title: QTTabBar
 icon: tab
-order: 3
+order: 100
 ---
 
 QTTabBar 让你在 Windows 资源管理器中使用 Tab 多标签功能。这款应用存在两个版本，一个是日本作者 @Quizo 的[原版 QTTabBar](http://qttabbar.wikidot.com/)（闭源，更新慢），另一个是国内反编译出的[开源 QTTabBar](https://github.com/indiff/qttabbar)。

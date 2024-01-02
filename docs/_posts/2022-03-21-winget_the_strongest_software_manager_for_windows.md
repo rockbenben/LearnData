@@ -9,15 +9,15 @@ tag:
 order: -43
 ---
 
-矿难、WIN11、DDR5、40 代显卡纷至沓来，更换电脑的高峰期马上来临。可惜我的生产力工具等不了，只能 49 年入国军，隔离期间装配上 i7+3080Ti 主机。硬件配好了，软件又成了个大问题。常用软件超过 60 个，之前每个软件，都去对应官网寻找最新版，然后单独进行设置安装，需要耗费大量的时间精力。
+矿难、Win11、DDR5、40 显卡接踵而至，电脑更换的高峰期即将来临。可惜我的生产力工具等不了了，不得不 49 年入国军，隔离期间装配上 i7+3080Ti 主机。硬件配置完毕后，软件安装成为新的挑战。我常用的软件超过60个，以往需要逐一访问官网下载最新版本并单独安装，这既耗时又费力。
 
-曾经一度尝试过国内的软件管理器，能批量下载软件，但依旧免不了单独安装设置。另外，让 360、金山、腾讯来管理你的软件系统，你真的放心？相较而言，Windows 原生程序管理工具 winget 和 WebGUI winstall 使用更简单，**应用均为官方来源下载，一键批量静默安装应用，是快速部署程序的绝佳方案**。
+我尝试过国内的软件管理器，它们支持批量下载，但安装和设置仍需逐个进行。此外，把软件系统的管理交给360、金山或腾讯，你真的放心？相比之下，Windows 原生程序管理工具 winget 和 WebGUI winstall 使用更简单，**它们直接从官方来源下载应用，并支持一键批量静默安装，是快速部署程序的理想选择**。
 
 ## 原生程序管理-winget
 
-[winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/) 是 Windows 程序包管理器的命令行工具。在 Windows 10 和 Windows 11 计算机上，使用 winget 命令行工具来发现、安装、升级、删除和配置应用程序。早期版本的 Windows 不支持 winget，需在 [winget 官方](https://github.com/microsoft/winget-cli/releases)或[国内搬运](https://wwz.lanzouf.com/ixZL701smc4d) 下载后缀为 `.msixbundle` 的应用安装程序。
+[winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/)是Windows的命令行程序包管理器。在Windows 10和Windows 11上，可以用winget来发现、安装、升级、删除和配置应用程序。早期版本的Windows不支持winget，需要在[winget官方网站](https://github.com/microsoft/winget-cli/releases)下载以`.msixbundle`为后缀的安装程序。而在Win11上，则可[通过Microsoft Store获取应用安装程序](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab)。
 
-安装应用安装程序后，可以通过在命令提示符 (cmd) 下键入「winget」来运行程序命令。
+安装应用安装程序后，可在命令提示符(cmd)中输入「winget」来运行程序命令。若要使用PowerShell命令，请注意修改PowerShell的执行策略。重要的是更改ps1文件的运行权限，而非win11自带的ps5。以管理员权限运行PowerShell，执行`Set-ExecutionPolicy RemoteSigned`命令。
 
 ### winget install appName
 
@@ -65,7 +65,7 @@ winstall 的应用搜索继承了 winget 的问题，部分国产软件不支持
 
 ![winstall 搜索](https://img.newzone.top/2022-05-05-17-15-37.png?imageMogr2/format/webp)
 
-winstall 页面选好程序后，导出自动生成的批量安装命令，并在命令提示符 (cmd) 中执行，系统将自动下载并静默配置程序。
+winstall 页面选好程序后，导出自动生成的批量安装命令，并在命令提示符 (cmd) 中执行，系统将自动下载并静默配置程序。注意保存批量安装命令，winstall 网站服务并不稳定，有可能你后面想用，它却无法导出命令。
 
 ![](https://img.newzone.top/2022-05-05-17-15-55.png?imageMogr2/format/webp)
 

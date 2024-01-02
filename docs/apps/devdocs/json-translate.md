@@ -15,6 +15,8 @@ order: 1
 
 与传统的全站自动化翻译工具相比，JsonTranslate 更加注重根据用户需求进行精确翻译。用户可以方便地粘贴需要翻译的文本，甚至指定单个新增节点，从而简化多语言翻译流程，使得翻译工作更为高效和精确。
 
+<BiliBili bvid="BV11c411b7Np" />
+
 ## 使用说明
 
 ![](https://img.newzone.top/2023-12-18-16-09-04.gif?imageMogr2/format/webp "JsonTranslate 使用示例")

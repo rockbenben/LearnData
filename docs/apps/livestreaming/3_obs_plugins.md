@@ -34,13 +34,13 @@ OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）�
 
 [Transition Table](https://obsproject.com/forum/resources/transition-table.1174/)：转场特效，设定不同场景间的动态切换效果。如果没有使用本场景，不同插件切换是特别生硬的直切，但现在可以使用延时、从左到右等切换滤镜。
 
-## Source Copy
+## Scene as Transition
 
-[Source Copy](https://obsproject.com/forum/resources/source-copy.1261/)：更方便地复制、保存场景设置。
+[Scene as Transition](https://obsproject.com/forum/resources/scene-as-transition.1704/)：使用场景作为过渡。
 
-## Source Dock
+## Source Clone
 
-[Source Dock](https://obsproject.com/forum/resources/source-dock.1317/)：为单独场景或来源建立控制栏，使用小窗口预览场景。
+[Source Clone](https://obsproject.com/forum/resources/source-clone.1632/)：将源添加到 OBS，以便您克隆源以允许与原始源不同的过滤器。
 
 ## Aitum Vertical
 
@@ -74,12 +74,15 @@ OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）�
 - 压缩器（Compressor）：降低高音量部分的音量，有助于控制音频中的峰值，使整体声音更加均衡和一致。
 - 限幅（Limiter）：限制音频信号的最大音量，确保它不会超过设定的阈值。这通常用于防止音频削峰或失真，尤其是在音量非常高的情况下。默认阈值是 -6dB。
 - [Own3d Pro plugin for OBS](https://api.own3d.pro/v1/downloads/obs-plugin/windows/latest?qt_version=6)：调整声音的高中低频，改变音色。
+- [Audio Monitor](https://obsproject.com/forum/resources/audio-monitor.1186/)：将来源声音输出给指定设备播放，方便单独调节音量，能让主播与观众听到不同的音频效果。
 
 ## 其他
 
 - [Scene Collection Manager](https://obsproject.com/forum/resources/scene-collection-manager.1434/)：自动备份场景，防止误操作。
-- [Audio Monitor](https://obsproject.com/forum/resources/audio-monitor.1186/)：将来源声音输出给指定设备播放，方便单独调节音量，能让主播与观众听到不同的音频效果。
+- [Source Copy](https://obsproject.com/forum/resources/source-copy.1261/)：更方便地复制、保存场景设置。
+- [Source Dock](https://obsproject.com/forum/resources/source-dock.1317/)：为单独场景或来源建立控制栏，使用小窗口预览场景。
 - [Downstream Keyer](https://obsproject.com/forum/resources/downstream-keyer.1254/)：切换场景时，置顶指定场景。
+
 - [Multi Source Effect](https://github.com/norihiro/obs-multisource-effect)：滤镜效果
 - [Teleport](https://github.com/fzwoch/obs-teleport)：NDI 替代品，局域网设备推流到直播。
 - [spectralizer](https://github.com/univrsal/spectralizer)：音频频谱，用滤镜「图像掩码」的「混合图层」给频谱遮罩滤镜。

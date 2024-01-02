@@ -7,7 +7,7 @@ order: 2
 
 ## 重装准备
 
-- 备份[必备应用](https://newzone.top/apps/Applist.html)，油猴脚本，输入法配置，UMP 版微信聊天记录 `C:\Users\Benson\AppData\Local\Packages\TencentWeChatLimited.forWindows10_sdtnhv12zgd7a\LocalCache\Roaming\Tencent\WeChatAppStore`。
+- 备份[必备应用](https://newzone.top/apps/Applist.html)，VSCode 配置、油猴脚本、输入法配置，UMP 版微信聊天记录 `C:\Users\Benson\AppData\Local\Packages\TencentWeChatLimited.forWindows10_sdtnhv12zgd7a\LocalCache\Roaming\Tencent\WeChatAppStore`。
 - 核对群晖已同步到最新备份。
 - 反激活已购软件，如：Eagle、MoneyWiz、妙笔。
 - 更新[原版镜像](https://www.microsoft.com/zh-cn/software-download/windows11)。
@@ -23,7 +23,7 @@ order: 2
 
 ## 系统配置
 
-- 将电脑调整到高性能/卓越模式。
+- 将电脑调整到最佳性能模式。
 - 将 Documents、Desktop 转移到 D 盘。
 - 任务栏：在任务栏底部右键单击，选择「任务栏设置」>「通知区域」>「选择哪些图标显示在任务栏上」；在同页面的「多显示器设置」中，取消「在所有显示器上显示任务栏」。
 - [清理导航栏](https://zhuanlan.zhihu.com/p/25942015)。
@@ -32,17 +32,15 @@ order: 2
   - win+r，regedit 打开注册表，打开路径 `HKEY_CLASSES_ROOT\Directory\Background\shell`。
   - 新建项，命名随意（即右键菜单显示的文字）-「Everything 搜索当前路径」。
   - 右键再次新建项，命名 Command，打开修改右侧默认值为 `"D:\Everything\Everything.exe" -path "."`。
-- 显示屏参数：屏幕换线或换主机，参数可能会变动。
-  - 左侧：自定义颜色，红 70 绿 75 蓝 50；亮度 66，对比 75。
-  - 右侧 0020：自定义颜色，红 70 绿 75 蓝 50；亮度 50，对比 80。
+- 显示屏校色：屏幕换线或换主机，参数可能会变动。在颜色管理部分还原显示器设置。
 
 ## 安装应用
 
-- [winstall](https://newzone.top/posts/2022-03-21-winget_the_strongest_software_manager_for_windows.html) 批量安装应用；
+- [winstall](https://newzone.top/posts/2022-03-21-winget_the_strongest_software_manager_for_windows.html) 批量安装应用，并提前更改 ps1 的运行权限；
 - 电脑运行 Android 手机应用，[Win11 安卓子系统](https://www.iplaysoft.com/win11-wsa.html) (WSA) 安装；
 - Synology Drive：设置 NAS 本地备份；
-- Mircrosoft Store：Snipaste、微信 For Windows；
-- 绿色开机：Keepass、Ditto、RunAny、天若 OCR；WPS 安装宏；
+- Mircrosoft Store：Snipaste、Ditto、Powertoys、思源笔记、微信 For Windows；
+- 绿色开机：Keepass、开机脚本、Ditto；WPS 安装宏；
 - 配置：Eagle、RIME、Picgo、wonderpen；
 - firefox-about:config 修改原值 18 的 `ui.key.menuAccessKey` 为 0，以屏蔽 alt 防止热键冲突；选择「options」>「Network Settings」，取消勾选「DNS over HTTPS」；
 - 火绒－安全设置－高级防护－导入隐私规则，增加[腾讯屏蔽规则](https://github.com/tutugreen/Huorong-Rules/tree/main/Tencent)。
