@@ -8,36 +8,43 @@ tag:
 order: -1
 ---
 
-由于工作原因，有时候我们需要在电脑上登录多个微信。但微信限制一个客户端只能登陆一个账号，PC 端 + 网页版就成了通用方案，操作效率下降许多。
+由于工作需要，我经常在电脑上同时登录多个微信账号。然而，微信规定一个客户端仅能登录一个账号，这导致我不得不同时使用 PC 端和网页版，显著降低了操作效率。随着「微信 For Windows」和「微信 UWP」版本的停用，我们曾依赖的多客户端策略变得几乎无效了。如果你之前安装了旧版的微信 UWP，好好珍惜吧。
 
-其实我们还有更好的办法。在微信 PC 版之余，同时安装微信 For Windows，就能实现客户端双开！
+要在不使用第三方软件的情况下实现微信的多开，现在只能依赖微信自身的一个小漏洞。通过快速双击微信图标，可以实现多开。
 
-## 微信 For Windows 安装
+## 双击多开
 
-打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装 `微信 For Windows`。
-
-![](https://img.newzone.top/2022-05-06-04-21-30.png?imageMogr2/format/webp)
-
-安装好后，就能与微信 PC 版一齐启动，互不干扰。
-
-![](https://img.newzone.top/2022-05-06-04-21-40.png?imageMogr2/format/webp)
-
-## 开机启动两个微信
-
-找到系统启动文件夹，文件夹路径为：`%AppData%\Microsoft\Windows\Start Menu\Programs\Startup`。或者打开「运行」对话框，输入命令「shell:startup」，回车即可打开「启动文件夹」。
-
-将微信 for windows 10 的快捷方式放到「启动」文件夹里。
-
-![](https://img.newzone.top/2022-05-06-04-23-49.png?imageMogr2/format/webp)
-
-## 其他方法
-
-如果还需要继续多开微信，可以**按住回车键，然后左键点击微信图标**，需要开启几个就点击几次。
-
-也可以尝试 @刘舒怡 提到的办法：
+要开启多个微信，只需**按住回车键，同时左键点击微信图标**，点击次数决定了开启的微信数量。这个小技巧是@刘舒怡分享的：
 
 > 只要在 2 秒内快速连续双击打开软件，就能弹出很多登录界面，你想登多少个就登多少个
 
-此外，已有开发者专门为微信和 QQ 制作了多开补丁。若需同时打开四个或更多窗口，可以试用 [RevokeMsgPatcher](https://github.com/huiyadanli/RevokeMsgPatcher)，国内下载链接：[RevokeMsgPatcher.v1.6.zip](https://wwva.lanzouq.com/irUIX187hz3c)。
+如果你不喜欢手动点击，可以使用以下脚本，保存为 `start_wechat.bat` 文件。这个脚本将启动三个微信，你可以根据需要复制更多的 start 行。
 
-然而，使用多开补丁存在一定风险。我仅尝试过其中的防撤回功能，建议在使用多开补丁时务必小心。
+```shell
+@echo off
+start "WeChat" "C:\Program Files\Tencent\WeChat\WeChat.exe"
+```
+
+有开发者为微信和 QQ 制作了多开补丁 [RevokeMsgPatcher](https://github.com/huiyadanli/RevokeMsgPatcher)，可以从国内链接下载：[RevokeMsgPatcher.v1.6.zip](https://wwva.lanzouq.com/irUIX187hz3c)。使用这个补丁后，每次点击应用图标都会打开新的登录窗口，这取决于个人需求。我更喜欢直接通过 `.bat` 脚本来实现多开。
+
+## 开机多开微信
+
+如果你希望电脑开机时自动多开微信，可以把上述脚本的快捷方式放入 Windows 的开机「启动」文件夹。通常这个文件夹路径为 `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup`。或者，打开「运行」对话框，输入 `shell:startup`，回车即可。
+
+![开机多开微信](https://img.newzone.top/2022-05-06-04-23-49.png?imageMogr2/format/webp)
+
+## 多客户端（已失效）
+
+> 从 2024 年开始，「微信 For Windows」和「微信 UWP」均已下架，新版的微信 Store 版也无法与微信 PC 版同时安装。因此，这一方案仅供记录，已不再有效。
+
+打开「运行」对话框，输入并启动「应用商店」或「Microsoft Store」，搜索并安装「微信 For Windows」「微信 UWP」。
+
+![安装微信客户端](https://img.newzone.top/2022-05-06-04-21-30.png?imageMogr2/format/webp)
+
+安装后，你可以同时启动微信 PC 版和这两个版本，互不干扰。如果你希望开机时自动启动这两个微信，可以把它们的快捷方式放在开机启动文件夹内。
+
+![多客户端微信](https://img.newzone.top/2022-05-06-04-21-40.png?imageMogr2/format/webp)
+
+## 总结
+
+应用多开似乎越来越不受欢迎，比如新版 QQ 已经移除了多账户登录选项。但实际上，用户是怎样想的呢？这又有谁在乎呢？

@@ -9,15 +9,15 @@ tag:
 order: -43
 ---
 
-矿难、Win11、DDR5、40 显卡接踵而至，电脑更换的高峰期即将来临。可惜我的生产力工具等不了了，不得不 49 年入国军，隔离期间装配上 i7+3080Ti 主机。硬件配置完毕后，软件安装成为新的挑战。我常用的软件超过60个，以往需要逐一访问官网下载最新版本并单独安装，这既耗时又费力。
+矿难、Win11、DDR5、40 显卡接踵而至，电脑更换的高峰期即将来临。可惜我的生产力工具等不了了，不得不 49 年入国军，隔离期间装配上 i7+3080Ti 主机。硬件配置完毕后，软件安装成为新的挑战。我常用的软件超过 60 个，以往需要逐一访问官网下载最新版本并单独安装，这既耗时又费力。
 
-我尝试过国内的软件管理器，它们支持批量下载，但安装和设置仍需逐个进行。此外，把软件系统的管理交给360、金山或腾讯，你真的放心？相比之下，Windows 原生程序管理工具 winget 和 WebGUI winstall 使用更简单，**它们直接从官方来源下载应用，并支持一键批量静默安装，是快速部署程序的理想选择**。
+我尝试过国内的软件管理器，它们支持批量下载，但安装和设置仍需逐个进行。此外，把软件系统的管理交给 360、金山或腾讯，你真的放心？相比之下，Windows 原生程序管理工具 winget 和 WebGUI winstall 使用更简单，**它们直接从官方来源下载应用，并支持一键批量静默安装，是快速部署程序的理想选择**。
 
 ## 原生程序管理-winget
 
-[winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/)是Windows的命令行程序包管理器。在Windows 10和Windows 11上，可以用winget来发现、安装、升级、删除和配置应用程序。早期版本的Windows不支持winget，需要在[winget官方网站](https://github.com/microsoft/winget-cli/releases)下载以`.msixbundle`为后缀的安装程序。而在Win11上，则可[通过Microsoft Store获取应用安装程序](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab)。
+[winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/) 是 Windows 的命令行程序包管理器。在 Windows 10 和 Windows 11 上，可以用 winget 来发现、安装、升级、删除和配置应用程序。早期版本的 Windows 不支持 winget，需要在 [winget 官方网站](https://github.com/microsoft/winget-cli/releases) 下载以`.msixbundle`为后缀的安装程序。而在 Win11 上，则可 [通过 Microsoft Store 获取应用安装程序](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab)。
 
-安装应用安装程序后，可在命令提示符(cmd)中输入「winget」来运行程序命令。若要使用PowerShell命令，请注意修改PowerShell的执行策略。重要的是更改ps1文件的运行权限，而非win11自带的ps5。以管理员权限运行PowerShell，执行`Set-ExecutionPolicy RemoteSigned`命令。
+安装应用安装程序后，可在命令提示符 (cmd) 中输入「winget」来运行程序命令。若要使用 PowerShell 命令，请注意修改 PowerShell 的执行策略。重要的是更改 ps1 文件的运行权限，而非 win11 自带的 ps5。以管理员权限运行 PowerShell，执行`Set-ExecutionPolicy RemoteSigned`命令。
 
 ### winget install appName
 
@@ -47,7 +47,7 @@ winget 安装 Microsoft Store 应用前，需要 `winget search` 命令找到应
 
 ![](https://img.newzone.top/2022-05-05-17-14-23.png?imageMogr2/format/webp)
 
-安装中会要求接受协议，点 Y 确认即可。
+安装中会要求接受协议，点 `Y` 确认即可。
 
 ![](https://img.newzone.top/2022-05-05-17-14-35.png?imageMogr2/format/webp)
 
@@ -73,11 +73,13 @@ winstall 页面选好程序后，导出自动生成的批量安装命令，并�
 
 ### 尝试更新源时失败
 
-国内使用 winget 容易出现问题「尝试更新源时失败」，下载 [winget 官方最新包](https://github.com/microsoft/winget-cli/releases)可解决问题。
+国内使用 winget 容易出现问题「尝试更新源时失败」，下载 [winget 官方最新包](https://github.com/microsoft/winget-cli/releases) 可解决问题。
 
 另一个可能是 Internet 选项的 TLS 版本设置过低，开启 TLS 1.2 即可恢复，具体操作查看 [Windows 应用商店 (Microsoft store) 打不开？](https://newzone.top/posts/2022-02-19-microsoft_store_fixed.html#解决方法)。
 
-### 其他问题
+### 已解决问题
+
+以下问题是早起版本的 bug，新测试中都解决了。
 
 - 批量安装应用中，winstall 不定期出现崩溃，原因未知。
 - winget install 不能检测当前版本软件是否安装，容易造成重复安装应用，拖慢部署时间。
@@ -85,6 +87,6 @@ winstall 页面选好程序后，导出自动生成的批量安装命令，并�
 
 ## 总结
 
-在我的常用软件列表中有 50 个应用支持 winget 批量静默安装，剩余 10 个需手工安装，覆盖率在 80% 以上，足够满足大部分人的需求。
+在我的常用软件列表中有 50 个应用支持 winget 批量静默安装，剩余 10 个需手工安装，覆盖率在 80% 以上，足够满足大部分人的需求。winget 用一个命令行能静默安装上百个软件，节省了大量装机时间。对于系统重装、批量装机、快速设置新工作环境，winget 和 winstall 是必不可少的装机神器。
 
-winget 用一个命令行能静默安装上百个软件，节省了大量装机时间。对于系统重装、批量装机、快速设置新工作环境，winget 和 winstall 是必不可少的装机神器。
+这篇文章主要介绍了 winget 的使用原理和方法。如果想直接上手，可以查看我的 [系统重装](https://newzone.top/windows/NewSystem.html) 过程记录。

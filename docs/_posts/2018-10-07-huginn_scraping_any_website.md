@@ -84,11 +84,11 @@ order: -22
 
 ## 跳转链接处理示例
 
-要获取跳转链接的真实地址，可以使用WebsiteAgent直接读取原网页的HTML代码，并检查其中的跳转代码。
+要获取跳转链接的真实地址，可以使用 WebsiteAgent 直接读取原网页的 HTML 代码，并检查其中的跳转代码。
 
 <BiliBili bvid="BV1ae411v7Qg" />
 
-跳转代码通常位于`<script>`标签内。由于`<script>`标签内的内容是文本，而非HTML属性，我们不能使用属性选择器（如@href）。相反，我们应使用XPath的`string()`函数来提取整个`<script>`标签的文本内容。之后，可以利用EventFormattingAgent的正则表达式从这些文本中提取URL。
+跳转代码通常位于`<script>`标签内。由于`<script>`标签内的内容是文本，而非 HTML 属性，我们不能使用属性选择器（如@href）。相反，我们应使用 XPath 的`string()`函数来提取整个`<script>`标签的文本内容。之后，可以利用 EventFormattingAgent 的正则表达式从这些文本中提取 URL。
 
 ```json
 # WebsiteAgent
