@@ -16,16 +16,6 @@ OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）�
 
 若要卸载 Windows 下的 OBS 便携模式插件，可以进入 `%ProgramFiles%\obs-studio\data\obs-plugins` 和 `%ProgramFiles%\obs-studio\obs-plugins\64bit`，搜索插件名，然后删除相关文件。
 
-## 多平台直播
-
-[multi-rtmp](https://github.com/sorayuki/obs-multi-rtmp) 使得 OBS 支持多地址推流，以为着同时在多个平台上进行直播。
-
-开启多地址推流前，你需要点击控制按钮「开始直播」，然后再点「停止直播」。
-
-## 自动切换场景
-
-[Advanced Scene Switcher](https://obsproject.com/forum/resources/advanced-scene-switcher.395/)：使用「宏」来自动完成各种任务，按条件切换场景、来源。比如，电脑闲置 10 分钟后，让摄像头来源变为不可见。
-
 ## Move
 
 [Move](https://obsproject.com/forum/resources/move.913/)：原名 Move transition，用来记录来源的位置和尺寸变化，生成元素移动的动画效果。比如，视频演讲时，将摄像头位置从屏幕中央移动到右下，并放大摄像头。
@@ -33,6 +23,10 @@ OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）�
 ## Transition Table
 
 [Transition Table](https://obsproject.com/forum/resources/transition-table.1174/)：转场特效，设定不同场景间的动态切换效果。如果没有使用本场景，不同插件切换是特别生硬的直切，但现在可以使用延时、从左到右等切换滤镜。
+
+## 自动切换场景
+
+[Advanced Scene Switcher](https://obsproject.com/forum/resources/advanced-scene-switcher.395/)：使用「宏」来自动完成各种任务，按条件切换场景、来源。比如，电脑闲置 10 分钟后，让摄像头来源变为不可见。
 
 ## Scene as Transition
 
@@ -45,6 +39,12 @@ OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）�
 ## Aitum Vertical
 
 [Aitum Vertical](https://obsproject.com/forum/resources/aitum-vertical.1715/)：将直播垂直化。
+
+## 多平台直播
+
+[multi-rtmp](https://github.com/sorayuki/obs-multi-rtmp) 使得 OBS 支持多地址推流，以为着同时在多个平台上进行直播。
+
+开启多地址推流前，你需要点击控制按钮「开始直播」，然后再点「停止直播」。
 
 ## StreamUP OBS Plugin
 
@@ -79,6 +79,7 @@ OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）�
 ## 其他
 
 - [Scene Collection Manager](https://obsproject.com/forum/resources/scene-collection-manager.1434/)：自动备份场景，防止误操作。
+- [Scene Tree](https://obsproject.com/forum/resources/scene-tree-folder-plugin-for-obs-studio.1500/)：将场景组织到文件夹结构中。
 - [Source Copy](https://obsproject.com/forum/resources/source-copy.1261/)：更方便地复制、保存场景设置。
 - [Source Dock](https://obsproject.com/forum/resources/source-dock.1317/)：为单独场景或来源建立控制栏，使用小窗口预览场景。
 - [Downstream Keyer](https://obsproject.com/forum/resources/downstream-keyer.1254/)：切换场景时，置顶指定场景。

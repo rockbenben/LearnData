@@ -26,7 +26,7 @@ order: -22
 
 ## PhantomJs 网页抓取
 
-新建 Huginn 任务组 Scenario「国内应急新闻」，样例抓取链接为 `http://www.cneb.gov.cn/guoneinews/`。
+新建 Huginn 任务组 Scenario「国内应急新闻」，样例抓取链接为 `http://www.cneb.gov.cn/guoneinews/`。注意，某些链接，特别是小城市的地方网站，即使缓存后也可能无法打开。这通常是由于数据通过第三方链接注入造成的。你可以利用网页浏览器工具定位到真正的数据链接再进行抓取。
 
 ![](https://img.newzone.top/20181008131549.png?imageMogr2/format/webp)
 

@@ -28,14 +28,6 @@ order: 4
 
 如果不想录脸直播，可以配合软件使用虚拟形象直播。此类换脸软件会占用较高的 CPU，需要使用三年内的主流配置。
 
-### Snap Camera
-
-[Snap Camera](https://snapcamera.snapchat.com/) 是 SnapChat 的免费增强现实应用。它可以帮助你在电脑直播/录屏时实现挡脸头套、美化滤镜等特效。如果你熟悉 3D 建模，可以使用 Lens Studio 定制属于你自己的变脸特效。但需要注意的是，当你喝水、低头或脸部被遮挡时，脸部特效会失效。
-
-![Snap Camera 效果图](https://img.newzone.top/SnapCamera.gif?imageMogr2/format/webp "Snap Camera 效果图")
-
-如果你无法使用 Snap Camera，可以尝试 FaceRig 和 PrprLive。
-
 ### FaceRig
 
 [FaceRig](https://store.steampowered.com/app/274920/FaceRig/)（Steam 已停售）可以通过对五官的动作捕捉，让卡通脸的表情进行同步变化，但不能对头部以下的部分进行捕捉和同步。使用时，需要打开 FaceRig 中的「切换广播」，否则 OBS 窗口会显示为黑屏。
@@ -47,6 +39,14 @@ order: 4
 ### PrprLive
 
 [PrprLive](https://store.steampowered.com/app/1279610/PrprLive/) 是国内的变脸软件，基础版免费，同样在 Steam 销售，付费前先试试基础版。
+
+### Snap Camera（已下架）
+
+[Snap Camera](https://snapcamera.snapchat.com/) 是 SnapChat 的免费增强现实应用。它可以帮助你在电脑直播/录屏时实现挡脸头套、美化滤镜等特效。如果你熟悉 3D 建模，可以使用 Lens Studio 定制属于你自己的变脸特效。但需要注意的是，当你喝水、低头或脸部被遮挡时，脸部特效会失效。
+
+![Snap Camera 效果图](https://img.newzone.top/SnapCamera.gif?imageMogr2/format/webp "Snap Camera 效果图")
+
+Snap Camera 不知为何已经被 Snap 从产品线中移除了，只能用 FaceRig、PrprLive 或其他插件。
 
 ## 动态素材
 
@@ -73,8 +73,12 @@ order: 4
 
 ### 小葫芦弹幕助手
 
-[小葫芦弹幕助手](https://zs.xiaohulu.com/danmu/)可实时显示网友的互动和打赏，尤其适合游戏直播。但是，由于弹幕答谢、自动定时弹幕、手动弹幕等功能已暂停，不建议新手充值会员。
+[小葫芦弹幕助手](https://www.obsworks.com/danmupro/) 可实时显示网友的互动和打赏，尤其适合游戏直播。但是，由于弹幕答谢、自动定时弹幕、手动弹幕等功能已暂停，不建议新手充值会员。
 
 如果不需要在直播界面中显示弹幕，不要安装小葫芦弹幕插件。安装后，会影响 OBS 窗口捕获功能，无法抓取基于 Electron 的应用界面，从而导致窗口捕捉黑屏。解决方法是删除 `C:\Program Files\obs-studio\obs-plugins\64bit` 目录内的 `CalabashDanmuPlugin.dll`、`CalabashWinCapture.dll`、`ObssDanmuInfo.dll`，重启 OBS 即可恢复，但下次使用弹幕助手时，这三个文件会自动安装，黑屏问题复现，只能重新删除指定文件。
 
-小葫芦直播助手集成了 OBS 和弹幕助手的功能，但为了直播的扩展性，仍然建议从 OBS 入门。
+小葫芦直播助手集成了 OBS 和弹幕助手的功能，但为了直播的扩展性，仍然建议从 OBS 入门。另外，小葫芦软件似乎都已下架，目前是使用第三方链接。
+
+### 咩播云插件
+
+[咩播](https://yun.miebo.cn/) 不仅能美化软件，现在还支持弹幕展示。该云插件仅支持 B 站、斗鱼和虎牙平台。如果在其他平台直播，则需要使用咩播应用版。

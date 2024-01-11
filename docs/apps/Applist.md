@@ -95,7 +95,7 @@ Windows 自用软件，以开源软件为主。
 
 输入法：小狼毫 & `Win+H`（系统语音输入）~~& QuickCut & 讯飞语记 & 微软输入法 & 影子输入法 & 搜狗输入法 & 讯飞输入法 & 百度输入法~~
 
-通讯：TIM & 微信 & 飞书 & Telegram & Discord & [腾讯防撤回补丁](https://github.com/huiyadanli/RevokeMsgPatcher) ~~& Slack & 钉耙 & 千牛 & 阿里旺旺~~
+通讯：微信 & TIM & Telegram & Discord & Thunderbird(邮箱) ~~& 飞书 & Slack & 钉耙 & 千牛 & 阿里旺旺~~
 
 下载：[Aria2](https://newzone.top/posts/2018-05-15-aria2_a_new_download_tool.html) & IDM & Kinhdown ~~& FDM(不支持 ed2k、磁力) & 迅雷~~
 
@@ -107,7 +107,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 硬件驱动：360 驱动大师 & [Open Hardware Monitor](https://openhardwaremonitor.org/downloads/)（旧电脑风扇转速） & [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards)（显卡风扇转速） & [图吧硬件工具箱](http://www.tbtool.cn/) & AIDA64 ~~& SDI Snappy & 驱动精灵 & 鲁大师~~
 
-系统优化：[PowerToys](https://github.com/microsoft/PowerToys/releases/latest)、[RBTray](https://github.com/benbuck/rbtray)（最小化到托盘）、[ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)(右键管理，遇过 bug，推荐火绒右键)、WizTree（磁盘空间分析）、优效日历、StartIsBack++、[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)、Dism++、[Windows Update Blocker](https://www.sordum.org/downloads/?st-windows-update-blocker)（禁止更新）
+系统优化：[PowerToys](https://github.com/microsoft/PowerToys/releases/latest)、[RBTray](https://github.com/benbuck/rbtray)（最小化到托盘）、[ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)(右键管理，遇过 bug，推荐火绒右键)、WizTree（磁盘空间分析）、优效日历、StartIsBack++、[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)、Dism++、[Windows Update Blocker](https://www.sordum.org/downloads/?st-windows-update-blocker)（阻止系统更新）
 
 ## 低频工具
 
@@ -128,6 +128,8 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 偶尔使用：VeraCrypt(本地加密)、Recuva(文件恢复)、[12306Bypass](http://www.12306bypass.com/)、爱思助手、Bluestacks(安卓模拟器)、[Ventoy](https://www.ventoy.net/cn/index.html)（制作可启动 U 盘）、微 PE 工具箱、[傲梅分区](https://www.disktool.cn/)
 
 飞书妙记：倍速、跳过空白片段、字幕搜索定位视频，将视频（最长 4 小时）转为文字大纲，了解视频梗概，建立基础认知。等到自己上手实操的时候，遇到问题直接搜索文字定位到相关内容，再看文字对应的视频截图确定配置细节。如果视频过大，可以提取音频来上传。^[[视频课程学习留档](https://sspai.com/post/70960)]
+
+[LittleBigMouse](https://github.com/mgth/LittleBigMouse)：实现 Windows 多显示器鼠标平滑移动。
 
 ## Android
 

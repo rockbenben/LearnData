@@ -101,13 +101,15 @@ Aria2 真·懒人包无需配置，下载即可使用，适合不想折腾的人
 
 ### 更换 Aria2 界面
 
-[AriaNg](https://github.com/mayswind/AriaNg) 的界面类似传统的下载软件，使用简单。
+[AriaNg](https://github.com/mayswind/AriaNg) 提供了类似传统下载软件的界面，简便易用。
 
 ![](https://img.newzone.top/20180516104758.png "AriaNg 界面")
 
-使用方法：下载并解压 [AriaNg](https://github.com/mayswind/AriaNg-DailyBuild/archive/master.zip)，运行目录下的 index.html，打开 Aria2 WebUI 界面，将页面链接收藏到书签以便后续使用 Aria2。
+使用方法：下载并解压 [AriaNg](https://github.com/mayswind/AriaNg/releases) AllInOne，运行目录下的 index.html，打开 Aria2 WebUI 界面，将页面链接收藏到书签以便后续使用 Aria2。注意，本地运行要用 AllInOne 版本，否则会出现 `cannot get language resources, and will display in default language`。
 
-如果 AriaNg 页面出现报错，则从页面左侧选择「AriaNg 设置」>「RPC」，检查 RPC 地址，默认地址为 `localhost:6800`。
+操作步骤如下：首先，下载并解压 [AriaNg](https://github.com/mayswind/AriaNg/releases) AllInOne 版本。然后，运行目录中的 index.html 文件，以打开 Aria2 WebUI 界面。为方便后续使用，建议将页面链接添加至书签。需注意，本地运行需使用 AllInOne 版本，否则可能会出现 `cannot get language resources, and will display in default language` 的错误提示。
+
+如果 AriaNg 页面未连接的错误信息，则在页面左侧选择「AriaNg 设置」>「RPC」，检查 RPC 地址是否正确。默认地址应为 `localhost:6800`。
 
 ### Aira2 下载预热
 

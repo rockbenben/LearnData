@@ -47,8 +47,8 @@ Eagle 导入流程：搜索文件夹中的 ZIP/RAR 文件，确认全部解压�
 
 以下是我常用的几种字体：
 
-- [阿里巴巴普惠体 2.0](https://fonts.alibabagroup.com/#/font)：简称「Alibaba PuHuiTi 2.0」，免费可商用，覆盖中英文。
-- [阿里妈妈数黑体](https://fonts.alibabagroup.com/#/more)：简称「Alimama ShuHeiTi」，数黑体为中文简体字库，适用于电商、广告、品牌形象、推广物料等场景。
+- [阿里巴巴普惠体](https://www.alibabafonts.com/#/font)：简称「Alibaba PuHuiTi 3.0」，免费可商用，覆盖包括中英文等 178 个语种。
+- [阿里妈妈数黑体](https://fonts.alibabagroup.com/#/more)：简称「Alimama ShuHeiTi」，数黑体为中文简体字库，适用于电商、广告、品牌形象、推广物料等场景。另外，阿里妈妈东方大楷的字体非常漂亮，适合 PPT 标题。
 - [思源字体](https://github.com/adobe-fonts/source-han-sans/)：简称「Source Han Sans」，这是比较规规矩矩的一款字体，谷歌出品。用在商务风 PPT，或者是用在正文中，阅读效果都很赞。
 - [FOT-MatissePro](https://www.mianfeiziti.com/fonts-fotmatisseprom)：原本为 EVA 的常用日语字体，也支持大部分的繁体。
 - [优设标题黑](https://www.fonts.net.cn/font-38213257557.html)：简称「YouSheBiaoTiHei-2」，以黑体字型为基础，整体字形沉稳，同时采用较大字面和粗壮的笔画来强化力量感。每个字体水平倾斜 8° 的设计，赋予了字体极强的速度感，为了让字体倾斜后也能保持稳固，设计师将整体字身设定宽扁。而起笔和弯钩上独具匠心的尖角设计，不仅突显了设计的几何感，而且方便后期修改。

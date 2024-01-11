@@ -1,7 +1,7 @@
 ---
 article: false
 title: 显示屏
-icon: screen
+icon: compare
 order: 3
 ---
 

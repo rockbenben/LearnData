@@ -23,6 +23,8 @@ order: -1
 ```shell
 @echo off
 start "WeChat" "C:\Program Files\Tencent\WeChat\WeChat.exe"
+start "WeChat" "C:\Program Files\Tencent\WeChat\WeChat.exe"
+start "WeChat" "C:\Program Files\Tencent\WeChat\WeChat.exe"
 ```
 
 有开发者为微信和 QQ 制作了多开补丁 [RevokeMsgPatcher](https://github.com/huiyadanli/RevokeMsgPatcher)，可以从国内链接下载：[RevokeMsgPatcher.v1.6.zip](https://wwva.lanzouq.com/irUIX187hz3c)。使用这个补丁后，每次点击应用图标都会打开新的登录窗口，这取决于个人需求。我更喜欢直接通过 `.bat` 脚本来实现多开。

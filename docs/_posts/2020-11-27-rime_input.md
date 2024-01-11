@@ -56,7 +56,18 @@ Rime 的官方文档非常详细，涵盖几乎所有的进阶需求，比如[�
 
 打字习惯会保存在 `<词典名>.userdb.txt` 或 `<词典名>.userdb.kct.snapshot` 中。要还原个人输入习惯，则点击「用户词典管理」>「导入文本码表」来恢复词频记录。
 
-小狼毫主版本已多年未更新，可以用 rime 核心库 [librime](https://github.com/rime/librime/releases) 替换小狼毫程序文件夹中的 rime.dll 来更新输入法。如果输入法中使用了 `Rime.lua` 的动态输出功能，可能会与核心库发生冲突，不要更换 rime.dll。
+小狼毫主版本更新频率较低，可以用 rime 核心库 [librime](https://github.com/rime/librime/releases) 替换小狼毫程序文件夹中的 rime.dll 来更新输入法。如果输入法中使用了 `Rime.lua` 的动态输出功能，可能会与核心库发生冲突，不要更换 rime.dll。
+
+### 繁体字修正
+
+繁体的异体字较多，比如 `什麼 甚麼`，建议用 [dzing_variants.txt](https://github.com/Sleeplest/texts/blob/master/dzing_variants.txt) 来替换。
+
+替换方案参考：<https://github.com/rime-aca/customize>
+
+1. 将 `dzing.ini` 與 `dzing_variants.txt` 放入程序文件夾内，比如 `C:\Program Files (x86)\Rime\weasel-0.15.0\data\opencc`。
+2. 修改用户文件夹（即 `%appdata%\rime`）中的方案
+
+其他解读：<https://github.com/imfuxiao/Hamster/issues/72>
 
 ## 常见问题
 

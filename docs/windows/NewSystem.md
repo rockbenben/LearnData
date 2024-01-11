@@ -23,16 +23,17 @@ order: 2
 
 ## 系统配置
 
-- 台机的电源模式调整到最佳性能模式。
 - 将 Documents、Desktop 转移到 D 盘。
+- 环境包安装：`npm i -g npm@latest; npm i -g pnpm; npm i -g yarn; npm i -g docsify-cli`。
 - 显示屏校色：屏幕换线或换主机，参数可能会变动。在颜色管理部分还原显示器设置。
 - 任务栏：在任务栏底部右键单击，选择「任务栏设置」>「通知区域」>「选择哪些图标显示在任务栏上」；在同页面的「多显示器设置」中，取消「在所有显示器上显示任务栏」。
 - [清理导航栏](https://zhuanlan.zhihu.com/p/25942015)
 - [设置系统强制关机](https://newzone.top/posts/2017-09-02-forced_shutdown.html)，防止系统关机不成功。
+- 台机的电源模式调整到最佳性能模式。
 - Everything 注册右键搜索当前路径；右键清除。
-- win+r, regedit 打开注册表，打开路径 `HKEY_CLASSES_ROOT\Directory\Background\shell`。
-- 新建项，命名随意 ( 即右键菜单显示的文字 ) -「Everything 搜索当前路径」。
-- 右键再次新建项，命名 Command，打开修改右侧默认值为 `"D: \Everything\Everything.exe" -path "."`。
+  - win+r, regedit 打开注册表，打开路径 `HKEY_CLASSES_ROOT\Directory\Background\shell`。
+  - 新建项，命名随意 ( 即右键菜单显示的文字 ) -「Everything 搜索当前路径」。
+  - 右键再次新建项，命名 Command，打开修改右侧默认值为 `"D: \Everything\Everything.exe" -path "."`。
 
 ## 安装应用
 
@@ -40,7 +41,7 @@ order: 2
 
 ### Mircrosoft Store
 
-微软应用商店里能自动更新应用，因此我有一些应用是通过它来安装。Snipaste、Ditto、PowerToys、One Commander、思源笔记、微信 For Windows，下方为依照前后顺序的一键安装命令：
+微软应用商店里能自动更新应用，因此我有一些应用是通过它来安装。Snipaste、Ditto、PowerToys、One Commander、思源笔记，下方为依照前后顺序的一键安装命令：
 
 ```shell
 winget install 9P1WXPKB68KX -s msstore  ;  winget install 9NBLGGH3ZBJQ -s msstore  ;  winget install XP89DCGQ3K6VLD -s msstore  ;  winget install 9NBLGGH4S79B -s msstore  ;  winget install 9P7HPMXP73K4 -s msstore
@@ -67,8 +68,8 @@ winget install --id=Mozilla.Firefox -e  ; winget install --id=Google.Chrome -e  
 - firefox-about: config 修改原值 18 的 `ui.key.menuAccessKey` 为 0，以屏蔽 alt 防止热键冲突；选择「options」>「Network Settings」，取消勾选「DNS over HTTPS」。
 - 火绒－安全设置－高级防护－导入隐私规则，增加 [腾讯屏蔽规则](https://github.com/tutugreen/Huorong-Rules/tree/main/Tencent)。
 - 按键更改：
-- Powertoys：将 insert 键改为 backspace。
-- Logitech.Options：将键盘的计算器改为「上一个桌面」；右键菜单改为「下一个桌面」。
+  - Powertoys：将 insert 键改为 backspace。
+  - Logitech.Options：将键盘的计算器改为「上一个桌面」；右键菜单改为「下一个桌面」。
 
 ## 常见问题
 
