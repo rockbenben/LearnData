@@ -76,10 +76,7 @@ export default hopeTheme({
     medias: {
       GitHub: "https://github.com/rockbenben",
       Zhihu: "https://www.zhihu.com/people/qingwhat",
-      少数派: [
-        "https://sspai.com/u/zqj05i4v/posts",
-        path.resolve(__dirname, "icons/sspai.svg"),
-      ],
+      少数派: ["https://sspai.com/u/zqj05i4v/posts", path.resolve(__dirname, "./icons/sspai.svg")],
       Wechat: "https://img.newzone.top/wechat.svg",
       Email: "mailto:learndata@newzone.top",
       Discord: "https://discord.gg/PZTQfJ4GjX",
@@ -169,6 +166,19 @@ export default hopeTheme({
       rss: true,
       count: 10,
     },
+
+    // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
+    docsearch: {
+      indexName: "newzone",
+      appId: "M4EXXEZIEG",
+      apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
+    },
+
+    // 本地搜索，和上方二选一
+    /* searchPro: {
+      // 索引全部内容
+      indexContent: true,
+    }, */
   },
 
   // 开发模式下是否启动热更新，显示所有更改并重新渲染
