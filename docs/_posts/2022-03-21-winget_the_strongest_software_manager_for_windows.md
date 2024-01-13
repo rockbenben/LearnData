@@ -15,9 +15,9 @@ order: -43
 
 ## 原生程序管理-winget
 
-[winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/) 是 Windows 的命令行程序包管理器。在 Windows 10 和 Windows 11 上，可以用 winget 来发现、安装、升级、删除和配置应用程序。早期版本的 Windows 不支持 winget，需要在 [winget 官方网站](https://github.com/microsoft/winget-cli/releases) 下载以`.msixbundle`为后缀的安装程序。而在 Win11 上，则可 [通过 Microsoft Store 获取应用安装程序](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab)。
+[winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/) 是 Windows 的命令行程序包管理器。在 Windows 10 和 Windows 11 上，可以用 winget 来发现、安装、升级、删除和配置应用程序。早期版本的 Windows 不支持 winget，需要在 [winget 官方网站](https://github.com/microsoft/winget-cli/releases) 下载以 `.msixbundle` 为后缀的安装程序。而在 Win11 上，则可 [通过 Microsoft Store 获取应用安装程序](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab)。
 
-安装应用安装程序后，可在命令提示符 (cmd) 中输入「winget」来运行程序命令。若要使用 PowerShell 命令，请注意修改 PowerShell 的执行策略。重要的是更改 ps1 文件的运行权限，而非 win11 自带的 ps5。以管理员权限运行 PowerShell，执行`Set-ExecutionPolicy RemoteSigned`命令。
+安装应用安装程序后，可在命令提示符 (cmd) 中输入「winget」来运行程序命令。若要使用 PowerShell 命令，请注意修改 PowerShell 的执行策略。重要的是更改 ps1 文件的运行权限，而非 win11 自带的 ps5。以管理员权限运行 PowerShell，执行 `Set-ExecutionPolicy RemoteSigned` 命令。
 
 ### winget install appName
 
@@ -71,11 +71,15 @@ winstall 页面选好程序后，导出自动生成的批量安装命令，并�
 
 ## 常见问题
 
-### 尝试更新源时失败
+### 尝试更新源失败
 
-国内使用 winget 容易出现问题「尝试更新源时失败」，下载 [winget 官方最新包](https://github.com/microsoft/winget-cli/releases) 可解决问题。
+在国内使用 winget 时，常遇到「更新源失败」的问题。下载 [winget 最新官方包](https://github.com/microsoft/winget-cli/releases) 可以有效解决这一问题。
 
-另一个可能是 Internet 选项的 TLS 版本设置过低，开启 TLS 1.2 即可恢复，具体操作查看 [Windows 应用商店 (Microsoft store) 打不开？](https://newzone.top/posts/2022-02-19-microsoft_store_fixed.html#解决方法)。
+另一个常见问题是网络连接失败，例如出现 `InternetOpenUrl() failed. 0x80072f7d : unknown error` 的提示。这通常是因为 Internet 选项中的 TLS 版本设置过低。启用 TLS 1.2 可以解决此问题，具体操作方法请参考 [解决 Windows 应用商店（Microsoft store）无法打开的问题](https://newzone.top/posts/2022-02-19-microsoft_store_fixed.html#解决方法)。
+
+### 下载速度慢
+
+在使用 winget 时，你可能会发现下载速度异常缓慢，例如 4M 数据需要等待十分钟。然而，这种感觉实际上是误解。慢速度通常是因为正在下载 winget 的源数据，而非软件本身。这一过程通常与网络环境无关，因此需要耐心等待。实际下载应用程序时，速度通常会快得多。
 
 ### 已解决问题
 
