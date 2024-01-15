@@ -1,7 +1,7 @@
 ---
 article: false
 title: Paperless-ngx：全文管理文档
-order: 17
+order: 32
 ---
 
 [Paperless-ngx](https://docs.paperless-ngx.com/) 是一个开源文档管理系统，可将您的物理文档转换为可搜索的在线档案。

@@ -1,12 +1,12 @@
 ---
 article: false
 title: 小雅 alist：影视资源合集
-order: 18
+order: 2
 ---
 
 [xiaoyaliu/alist](https://hub.docker.com/r/xiaoyaliu/alist) 是一个基于阿里云盘的 alist 方案，集成了众多影音资源，免去了自行搜索的麻烦。具体配置可参考[xiaoya docker 配置指南](https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f)。
 
-请注意，使用阿里云盘时可能需要定期更新 mytoken。只需访问网址 https://aliyuntoken.vercel.app/ ，并使用阿里云盘 app 扫描二维码即可获取。
+请注意，使用阿里云盘时可能需要定期更新 mytoken。只需访问网址 <https://aliyuntoken.vercel.app/> ，并使用阿里云盘 app 扫描二维码即可获取。
 
 ## Emby + 小雅
 

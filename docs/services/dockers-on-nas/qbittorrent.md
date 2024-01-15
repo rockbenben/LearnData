@@ -1,7 +1,7 @@
 ---
 article: false
 title: qBittorrent：种子&磁力下载
-order: 19
+order: 5
 ---
 
 [qBittorrent](https://registry.hub.docker.com/r/linuxserver/qbittorrent/) 是一款开源免费的种子和磁力链接下载工具。

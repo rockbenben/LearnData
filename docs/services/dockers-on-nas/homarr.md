@@ -1,7 +1,7 @@
 ---
 article: false
 title: Homarr：本地导航
-order: 19
+order: 91
 ---
 
 [Homarr](https://github.com/ajnart/homarr) 可以作为网站书签导航页工具，也可以集成各类状态仪表板，让你可以在一个方便的位置访问和控制一切。

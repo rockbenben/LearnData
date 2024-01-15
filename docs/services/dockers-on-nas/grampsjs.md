@@ -1,7 +1,7 @@
 ---
 article: false
-title: Gramps.js - 在线家谱
-order: 14
+title: Gramps.js：在线家谱
+order: 35
 ---
 
 [Gramps.js](https://github.com/gramps-project/Gramps.js) 是一款用于协作族谱编辑与展示的 Web 开源应用。它基于领开源家谱桌面应用程序 Gramps，并可与 Gramps 交互操作。不过，Gramps.js 的输入过程相对复杂，需要分别添加成员、家庭、事件、地点等元素，然后将它们组合在一起。第一次配置可能会花费一些时间，使用教程参考 [Gramps Web User guide](https://www.grampsweb.org/user-guide/)。

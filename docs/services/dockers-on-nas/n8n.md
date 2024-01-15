@@ -1,7 +1,7 @@
 ---
 article: false
-title: n8n - 工作流自动化
-order: 15
+title: n8n：工作流自动化
+order: 81
 ---
 
 [n8n](https://github.com/n8n-io/n8n) 是一款可扩展的工作流程自动化工具。n8n 可用于自行托管，并允许你添加自定义函数、逻辑和应用程序。社区有多种第三方 API 节点，可连接主流海外服务。

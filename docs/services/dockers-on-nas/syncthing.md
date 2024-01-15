@@ -1,7 +1,7 @@
 ---
 article: false
-title: Syncthing - 私人同步盘
-order: 10
+title: Syncthing：私人同步盘
+order: 21
 ---
 
 [Syncthing](https://github.com/syncthing/syncthing) 是一款开源免费的跨平台文件同步工具，基于 P2P 技术实现多设备之间的文件同步。需要注意的是，Syncthing 和微力同步都不能使本地两个文件夹同步。我之前使用免费提供的 GoodSync 来同步同一设备上的文件。

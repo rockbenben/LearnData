@@ -1,7 +1,7 @@
 ---
 article: false
 title: Uptime Kuma：轻量运维监控
-order: 80
+order: 82
 ---
 
 [Uptime Kuma](https://github.com/louislam/uptime-kuma) 是一款轻量级自动化运维监控工具，支持监控 HTTP(s)、TCP、Ping、DNS 记录、推送以及 Steam 游戏服务器的正常运行时间。对于检查特定关键词是否存在于网页中等轻量级监控是足够了。相对于 Check 酱，它的设置更为简单，非常适合用于网页监测服务。

@@ -1,7 +1,7 @@
 ---
 article: false
 title: 青龙面板：定时任务管理
-order: 81
+order: 84
 ---
 
 [青龙面板](https://github.com/whyour/qinglong) 是支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台，但现在多被用于京东薅羊毛，比如领京东、价保。安装好 Docker 后的配置流程参考 [青龙面板应用——安装依赖拉取仓库运行京东脚本（保姆级图文）](https://blog.csdn.net/u011027547/article/details/130703685)。

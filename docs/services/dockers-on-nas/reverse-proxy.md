@@ -1,7 +1,7 @@
 ---
 article: false
 title: 反向代理：Nginx Proxy Manager
-order: 99
+order: 101
 ---
 
 反向代理是一种方便的后端工具，其作用是拦截所有传入请求并进行统一的转发管理。在 Docker 容器管理领域，使用反向代理可以让你摆脱繁琐的端口号记忆，只需通过不同的域名即可访问特定的 Docker 服务。常见的反向代理工具包括 Nginx Proxy Manager、nginxWebUI、Caddy 和 Lucky。

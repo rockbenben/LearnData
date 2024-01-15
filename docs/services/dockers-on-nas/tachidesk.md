@@ -1,7 +1,7 @@
 ---
 article: false
 title: Tachidesk：漫画聚合阅读器
-order: 8
+order: 12
 ---
 
 [Tachidesk](https://github.com/Suwayomi/docker-tachidesk) 是一个免费的开源漫画阅读器，支持在各种客户端上部署，可以方便地订阅并聚合漫画源。为了实现统一的漫画阅读体验和浏览管理，建议将 Tachidesk-Server 部署在 NAS 上，并通过网页端访问以进行漫画阅读，以获得类似应用的操作习惯。

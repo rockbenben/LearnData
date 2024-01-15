@@ -1,7 +1,7 @@
 ---
 article: false
 title: DeepLX - 免费翻译接口
-order: 13
+order: 102
 ---
 
 [DeepLX](https://github.com/OwO-Network/DeepLX/) 是基于 DeepL 的免费翻译服务，可以将 DeepL Free API 转换为本地 API，以供第三方程序使用。

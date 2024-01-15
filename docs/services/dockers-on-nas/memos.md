@@ -1,7 +1,7 @@
 ---
 article: false
 title: Memos：碎片化记录
-order: 5
+order: 34
 ---
 
 [Memos](https://github.com/usememos/memos) 可视为开源版的 flomo，其界面及功能非常相似，适用于碎片化记录和灵感捕捉，同时支持小范围的分享，适用于个人微博记录。Memos 能以时间线形式回顾你选择的日期的记录，并允许通过 Telegram 机器人输入内容。此外，你还可以选择将数据保存在第三方云存储中。

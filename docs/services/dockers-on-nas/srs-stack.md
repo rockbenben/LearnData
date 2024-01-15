@@ -1,7 +1,7 @@
 ---
 article: false
-title: SRS Stack - 直播推流
-order: 16
+title: SRS Stack：直播推流
+order: 83
 ---
 
 SRS 是一个免费开源的实时视频服务器应用，通过 [SRS Stack](https://github.com/ossrs/srs-stack) 能够轻松在多平台上进行简单高效的直播同步推流部署。

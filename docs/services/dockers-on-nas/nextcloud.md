@@ -1,7 +1,7 @@
 ---
 article: false
-title: Nextcloud - 私有云盘
-order: 11
+title: Nextcloud：私有云盘
+order: 22
 ---
 
 [Nextcloud](https://github.com/nextcloud/docker) 是一款开源的云存储和协作平台。Nextcloud 不仅可以让你创建文件共享、在线编辑和备份等功能，还支持多用户协作、通讯录、日历等功能，可以完全替代你的 Google Drive 或 Dropbox 等云存储服务。

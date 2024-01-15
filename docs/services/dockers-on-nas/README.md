@@ -38,6 +38,18 @@ UID 和 GID 分别代表用户身份和组身份标识。在启动 Docker 容器
 
 ![](https://img.newzone.top/2023-09-16-08-42-22.png?imageMogr2/format/webp)
 
+## 编号规则
+
+- 1-10：影视音乐类
+- 11-20：娱乐阅读类
+- 21-30：同步网盘
+- 31-40：文档管理
+- 41-70：空位
+- 71-80：未分类（默认）
+- 81-90: 自动化
+- 91-100：导航
+- 101+：后端
+
 <!-- markdownlint-disable MD033 -->
 
 <div class="catalog-display-container">

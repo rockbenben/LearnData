@@ -39,22 +39,22 @@ order: 2
 
 ## 安装应用
 
-使用 [winstall](https://newzone.top/posts/2022-03-21-winget_the_strongest_software_manager_for_windows.html) 可以批量安装应用，但这需要你提前登录微软账户，并更改 ps1 的运行权限。如果出现`InternetOpenUrl() failed. 0x80072f7d : unknown error` 则检查 TLS 是否开启 1.2 和 1.3。（每次使用四大行网银基本需要修复次）
+使用 [winstall](https://newzone.top/posts/2022-03-21-winget_the_strongest_software_manager_for_windows.html) 可以批量安装应用，但这需要你提前登录微软账户，并更改 ps1 的运行权限。如果出现`InternetOpenUrl() failed. 0x80072f7d : unknown error` 则检查 TLS 是否开启 1.2 和 1.3。（每次使用四大行网银后，基本都需要修复次）
 
 ### Mircrosoft Store
 
-微软应用商店里能自动更新应用，因此我有一些应用是习惯通过应用商店来安装。Snipaste、Ditto、PowerToys、One Commander、思源笔记、Discord，下方为依照前后顺序的一键安装命令：
+由于微软应用商店能自动更新应用，我习惯通过它安装一些无需配置的应用。这些应用包括 Windows Terminal、Windows Notepad、Windows 闹钟和时钟、Windows 扫描、Windows 相机、Windows 录音机、Snipaste、Ditto、PowerToys、One Commander、思源笔记、Discord。以下是按顺序排列的一键安装命令：
 
 ```shell
-winget install 9P1WXPKB68KX -s msstore  ;  winget install 9NBLGGH3ZBJQ -s msstore  ;  winget install XP89DCGQ3K6VLD -s msstore  ;  winget install 9NBLGGH4S79B -s msstore  ;  winget install 9P7HPMXP73K4 -s msstore  ;  winget install XPDC2RH70K22MN -s msstor
+winget install 9N0DX20HK701 -s msstore  ;  winget install 9MSMLRH6LZF3 -s msstore  ;  winget install 9WZDNCRFJ3PR -s msstore  ;  winget install 9WZDNCRFJ3PV -s msstore  ;  winget install 9WZDNCRFJBBG -s msstore  ;  winget install 9WZDNCRFHWKN -s msstore  ;  winget install 9P1WXPKB68KX -s msstore  ;  winget install 9NBLGGH3ZBJQ -s msstore  ;  winget install XP89DCGQ3K6VLD -s msstore  ;  winget install 9NBLGGH4S79B -s msstore  ;  winget install 9P7HPMXP73K4 -s msstore  ;  winget install XPDC2RH70K22MN -s msstore
 ```
 
-### 普通应用
+### 常规应用
 
-以下为常用安装包应用的批量安装代码：
+以下是常用的非微软商店应用的批量安装命令：
 
 ```shell
-winget install --id=Mozilla.Firefox -e  ; winget install --id=Google.Chrome -e  ; winget install --id=Brave.Brave -e  ; winget install --id=Logitech.Options -e  ; winget install --id=Microsoft.WindowsTerminal -e  ; winget install --id=Tencent.WeChat -e  ; winget install --id=Tencent.TIM -e  ; winget install --id=Tencent.QQ.NT -e  ; winget install --id=Discord.Discord -e  ; winget install --id=Telegram.TelegramDesktop -e  ; winget install --id=Microsoft.VisualStudioCode -e  ; winget install --id=Notepad++.Notepad++ -e  ; winget install --id=Notion.Notion -e  ; winget install --id=Formagrid.Airtable -e  ; winget install --id=Figma.Figma -e  ; winget install --id=ogdesign.Eagle -e  ; winget install --id=PicGo.PicGo.Beta -e  ; winget install --id=Logseq.Logseq -e  ; winget install --id=Obsidian.Obsidian -e  ; winget install --id=Appest.Dida -e  ; winget install --id=Bandisoft.Honeyview -e  ; winget install --id=Alibaba.aDrive  -e  ; winget install --id=115.115Chrome -e  ; winget install --id=VideoLAN.VLC -e  ; winget install --id=ByteDance.JianyingPro -e  ; winget install --id=PuTTY.PuTTY -e  ; winget install --id=GitHub.GitHubDesktop -e  ; winget install --id=NickeManarin.ScreenToGif -e  ; winget install --id=Valve.Steam -e  ; winget install --id=Nutstore.Nutstore -e  ; winget install --id=TominLab.WonderPen -e  ; winget install --id=OBSProject.OBSStudio -e
+winget install --id=Mozilla.Firefox -e  ; winget install --id=Google.Chrome -e  ; winget install --id=Brave.Brave -e  ; winget install --id=Mozilla.Thunderbird -e  ; winget install --id=Logitech.Options -e  ; winget install --id=Microsoft.WindowsTerminal -e  ; winget install --id=Tencent.WeChat -e  ; winget install --id=Tencent.TIM -e  ; winget install --id=Tencent.QQ.NT -e  ; winget install --id=Discord.Discord -e  ; winget install --id=Telegram.TelegramDesktop -e  ; winget install --id=Microsoft.VisualStudioCode -e  ; winget install --id=Notepad++.Notepad++ -e  ; winget install --id=Notion.Notion -e  ; winget install --id=Formagrid.Airtable -e  ; winget install --id=Figma.Figma -e  ; winget install --id=ogdesign.Eagle -e  ; winget install --id=PicGo.PicGo.Beta -e  ; winget install --id=Logseq.Logseq -e  ; winget install --id=Obsidian.Obsidian -e  ; winget install --id=Appest.Dida -e  ; winget install --id=Bandisoft.Honeyview -e  ; winget install --id=Alibaba.aDrive  -e  ; winget install --id=115.115Chrome -e  ; winget install --id=VideoLAN.VLC -e  ; winget install --id=ByteDance.JianyingPro -e  ; winget install --id=GitHub.GitHubDesktop -e  ; winget install --id=Hesan.He3 -e  ; winget install --id=NickeManarin.ScreenToGif -e  ; winget install --id=Valve.Steam -e  ; winget install --id=Nutstore.Nutstore -e  ; winget install --id=TominLab.WonderPen -e  ; winget install --id=OBSProject.OBSStudio -e  ; winget install --id=mgth.LittleBigMouse -e
 ```
 
 对更新党来说，在后续应用管理可以搭配 `winget upgrade` 来检查是否有应用更新。也可以使用 `winget upgrade --all` 来静默升级所有支持 winget 的程序。

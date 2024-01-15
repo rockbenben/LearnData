@@ -1,7 +1,7 @@
 ---
 article: false
 title: CORS Anywhere：解锁跨域限制
-order: 100
+order: 201
 ---
 
 [CORS Anywhere](https://github.com/Rob--W/cors-anywhere) 是一个基于 NodeJS 的代理服务，专门用于向跨源请求中注入 CORS（跨源资源共享）头部。为了了解其背后的逻辑，需要首先理解浏览器的同源策略：当你的前端 JavaScript 代码企图从一个域访问另外一个域的内容时，浏览器默认会阻拦这样的请求，除非目的域有合适的 CORS 头部标识。但有了 CORS Anywhere，这些浏览器的安全限制就可以轻松绕过。

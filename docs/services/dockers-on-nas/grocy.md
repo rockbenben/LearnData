@@ -1,7 +1,7 @@
 ---
 article: false
 title: Grocy：家庭杂货管理
-order: 7
+order: 33
 ---
 
 [Grocy](https://grocy.info/) 是一款自助式杂货和家庭管理解决方案，可用于记录物品信息并根据个性化需求进行管理。此外，它还支持手机端的条形码扫描功能，方便您清理家庭杂物，避免使用过期物品。Grocy 支持各种客户端，包括 iOS、Android、Windows，并且还提供 Home Assistant 插件支持。

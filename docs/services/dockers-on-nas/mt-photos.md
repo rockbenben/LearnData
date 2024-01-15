@@ -1,7 +1,7 @@
 ---
 article: false
 title: MT Photos：分享家庭照片
-order: 3
+order: 4
 ---
 
 [MT Photos](https://mtmt.tech/) 是专为 NAS 用户设计的照片管理系统。它能自动整理和分类您的照片，包括按时间、地点、人物和照片类型分类。初次使用可获得一个月的免费授权，之后需要付费 99 元购买永久使用证。MT Photos 后台每周自动检查授权状态。

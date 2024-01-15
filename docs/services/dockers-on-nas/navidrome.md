@@ -1,7 +1,7 @@
 ---
 article: false
 title: Navidrome：开源音乐服务器
-order: 1
+order: 3
 ---
 
 Navidrome 为开源自托管音乐服务器，提供音频流媒体服务。

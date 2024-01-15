@@ -111,7 +111,7 @@ PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 ## 低频工具
 
-编程工具：FileZilla（FTP）、PuTTY（SSH）、MobaXTerm（SSH）、GitHubDesktop、DBeaver([数据库](https://kalacloud.com/blog/best-mysql-gui-tools/))、Postman、Fiddler(手机抓包)、Regex Match Tracer
+编程工具：[MobaXTerm](https://github.com/RipplePiam/MobaXterm-Chinese-Simplified)（SSH+FTP）、GitHubDesktop、He3 工具箱、Postman、FileZilla（FTP）、DBeaver([数据库](https://kalacloud.com/blog/best-mysql-gui-tools/))、Fiddler(手机抓包)、Regex Match Tracer
 
 翻译词典：DeepL ~~& GoldenDict & 欧陆词典 & 有道词典 & QTranslate & Lingoes~~
 

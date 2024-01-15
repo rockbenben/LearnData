@@ -1,7 +1,7 @@
 ---
 article: false
-title: Alist - 聚合网盘
-order: 12
+title: Alist：聚合网盘
+order: 23
 ---
 
 [Alist](https://alist.nn.ci/zh/guide/install/docker.html) 是支持多种存储的文件列表程序，支持本地存储、阿里云盘、OneDrive、Google Drive 等。

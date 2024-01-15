@@ -1,7 +1,7 @@
 ---
 article: false
 title: Reader：小说/书籍阅读
-order: 4
+order: 11
 ---
 
 [reader](https://github.com/hectorqin/reader) 是阅读 3 的服务器版，为阅读爱好者提供全面的功能支持。
