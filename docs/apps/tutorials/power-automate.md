@@ -1,7 +1,7 @@
 ---
 article: false
 title: Power Automate
-order: 3
+order: 10
 ---
 
 [Power Automate](https://sspai.com/series/273/list) 自动化应用，分为桌面流和[云端流](https://make.powerautomate.com/)，上手比 Quikcer 复杂，网页自动化弱于 UI. Vision RPA，适合在 Window 不同应用间切换的自动化流。**对于免费用户来说，Power Automate 都得手动执行流，个人账户与组织账户无明显区别。** 自动化操作也可以使用 Logi Options+ 的 Smart Actions。

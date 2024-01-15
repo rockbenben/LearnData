@@ -86,7 +86,7 @@ docs
 
 注意：
 
-- LearnData 默认使用了 algolia 全文搜索。如果你没有使用 algolia 爬虫，则可以在 `docs/.vuepress/config.ts` 文件中删除 plugins 下的 docsearchPlugin 区块，网站将转用本地全文索引搜索。
+- LearnData 默认采用 algolia 进行全文检索。如果你没用 algolia，可在 `docs/.vuepress/theme.ts` 文件的 plugins 部分删除 docsearch 区块，并激活 searchPro。这样，网站将转用本地全文索引来进行搜索。
 - `docs/_temp` 文件夹默认不同步到 GitHub 上。你可以手动在本地建立 `_temp` 文件夹，用来存放草稿。
 - 自 VuePress2 的 beta.54 版本开始，文件夹名前缀为 `_` 在生成链接时将被省略，例如文章路径为 `/_posts/`，但网页链接路径会是 `/posts/`。
 
