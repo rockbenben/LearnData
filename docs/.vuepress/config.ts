@@ -1,6 +1,7 @@
 import { path } from "@vuepress/utils";
 import { defineUserConfig } from "vuepress";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+import { feedPlugin } from "vuepress-plugin-feed2";
 
 import theme from "./theme.js";
 
@@ -31,6 +32,12 @@ export default defineUserConfig({
     googleAnalyticsPlugin({
       // 设置你的 Analytics ID
       id: "G-RWKZTY2P9R",
+    }),
+    // RSS
+    feedPlugin({
+      hostname: "https://newzone.top",
+      rss: true,
+      count: 10,
     }),
   ],
 });

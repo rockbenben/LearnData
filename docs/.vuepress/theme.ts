@@ -161,12 +161,6 @@ export default hopeTheme({
       // demo: true, //代码演示
     },
 
-    // rss 属性
-    feed: {
-      rss: true,
-      count: 10,
-    },
-
     // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
     docsearch: {
       indexName: "newzone",
