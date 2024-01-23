@@ -20,7 +20,7 @@ order: 3
 
 ## 界面美化
 
-- **Blockman**：能够突出显示代码中的嵌套块，增强代码的可读性。
+- **Blockman**：能够突出显示代码中的嵌套块，增强代码的可读性。如果插件会报错 `Error:invalid syntax`，则在设置中搜索 `N25`，关闭 `Blockman:N25 Analyze Tags`。^[[Bug: commented RegExp throws invalid syntax error](https://github.com/leodevbro/vscode-blockman/issues/43)]
 - **Color Highlight**：将 CSS 颜色代码直观地显示为相应的颜色。
 - **indent-rainbow**：通过使用四种不同颜色交替显示，对文本前的缩进进行可视化处理。
 - **Prettier**：使用定制规则重新格式化代码，以实现一致的代码风格。建议开启文件保存时自动格式化文本的功能。

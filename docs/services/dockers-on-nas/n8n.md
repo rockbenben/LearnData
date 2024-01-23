@@ -10,7 +10,7 @@ order: 81
 
 ## 部署 n8n
 
-1. 执行 `git clone https://github.com/n8n-io/n8n.git` 命令下载 n8n 仓库文件。
+1. 桌面执行 `git clone https://github.com/n8n-io/n8n.git` 命令下载 n8n 仓库文件，将其复制到 NAS。
 2. 切换路径 `cd /volume3/storage/n8n/docker/compose/withPostgres`。
 3. 运行 `sudo docker-compose up -d` 命令进行部署。
 

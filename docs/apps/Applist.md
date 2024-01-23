@@ -103,7 +103,7 @@ Windows 自用软件，以开源软件为主。
 
 压缩：Bandizip ~~& PeaZip & 好压~~
 
-PDF：PDFelement ~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
+PDF：Sumatra PDF & PDFelement & [PDF 补丁丁](https://github.com/wmjordan/PDFPatcher)(书签)~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
 硬件驱动：360 驱动大师 & [Open Hardware Monitor](https://openhardwaremonitor.org/downloads/)（旧电脑风扇转速） & [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards)（显卡风扇转速） & [图吧硬件工具箱](http://www.tbtool.cn/) & AIDA64 ~~& SDI Snappy & 驱动精灵 & 鲁大师~~
 

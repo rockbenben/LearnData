@@ -7,8 +7,8 @@ order: 2
 
 ## 重装准备
 
-- 备份 [必备应用](https://newzone.top/apps/Applist.html) ，油猴脚本、VSCode 配置、输入法配置。
-- 核对群晖已同步到最新备份。
+- 备份：[必备应用](https://newzone.top/apps/Applist.html)、油猴脚本、VSCode 配置、输入法配置。
+- 同步：检查 GoodSync 同步设置；核对群晖已同步到最新备份。
 - 反激活已购软件，如：Eagle、MoneyWiz、妙笔。
 - 更新 [原版镜像](https://www.microsoft.com/zh-cn/software-download/windows11)。
 
@@ -54,7 +54,7 @@ winget install 9N0DX20HK701 -s msstore  ;  winget install 9MSMLRH6LZF3 -s msstor
 以下是常用的非微软商店应用的批量安装命令：
 
 ```shell
-winget install --id=Mozilla.Firefox -e  ; winget install --id=Google.Chrome -e  ; winget install --id=Brave.Brave -e  ; winget install --id=Mozilla.Thunderbird -e  ; winget install --id=Logitech.Options -e  ; winget install --id=Microsoft.WindowsTerminal -e  ; winget install --id=Tencent.WeChat -e  ; winget install --id=Tencent.TIM -e  ; winget install --id=Tencent.QQ.NT -e  ; winget install --id=Discord.Discord -e  ; winget install --id=Telegram.TelegramDesktop -e  ; winget install --id=Microsoft.VisualStudioCode -e  ; winget install --id=Notepad++.Notepad++ -e  ; winget install --id=Notion.Notion -e  ; winget install --id=Formagrid.Airtable -e  ; winget install --id=Figma.Figma -e  ; winget install --id=ogdesign.Eagle -e  ; winget install --id=PicGo.PicGo.Beta -e  ; winget install --id=Logseq.Logseq -e  ; winget install --id=Obsidian.Obsidian -e  ; winget install --id=Appest.Dida -e  ; winget install --id=Bandisoft.Honeyview -e  ; winget install --id=Alibaba.aDrive  -e  ; winget install --id=115.115Chrome -e  ; winget install --id=VideoLAN.VLC -e  ; winget install --id=ByteDance.JianyingPro -e  ; winget install --id=GitHub.GitHubDesktop -e  ; winget install --id=Hesan.He3 -e  ; winget install --id=NickeManarin.ScreenToGif -e  ; winget install --id=Valve.Steam -e  ; winget install --id=Nutstore.Nutstore -e  ; winget install --id=TominLab.WonderPen -e  ; winget install --id=OBSProject.OBSStudio -e  ; winget install --id=mgth.LittleBigMouse -e
+winget install --id=Mozilla.Firefox -e  ; winget install --id=Google.Chrome -e  ; winget install --id=Brave.Brave -e  ; winget install --id=Mozilla.Thunderbird -e  ; winget install --id=Logitech.Options -e  ; winget install --id=Tencent.WeChat -e  ; winget install --id=Tencent.TIM -e  ; winget install --id=Tencent.QQ.NT -e  ; winget install --id=Telegram.TelegramDesktop -e  ; winget install --id=Microsoft.VisualStudioCode -e  ; winget install --id=Notepad++.Notepad++ -e  ; winget install --id=Notion.Notion -e  ; winget install --id=Formagrid.Airtable -e  ; winget install --id=Figma.Figma -e  ; winget install --id=ogdesign.Eagle -e  ; winget install --id=PicGo.PicGo.Beta -e  ; winget install --id=Logseq.Logseq -e  ; winget install --id=Obsidian.Obsidian -e  ; winget install --id=Appest.Dida -e  ; winget install --id=SumatraPDF.SumatraPDF -e  ; winget install --id=Bandisoft.Honeyview -e  ; winget install --id=Alibaba.aDrive  -e  ; winget install --id=115.115Chrome -e  ; winget install --id=VideoLAN.VLC -e  ; winget install --id=ByteDance.JianyingPro -e  ; winget install --id=Git.Git -e; winget install --id=GitHub.GitHubDesktop -e  ; winget install --id=Hesan.He3 -e  ; winget install --id=NickeManarin.ScreenToGif -e  ; winget install --id=Valve.Steam -e  ; winget install --id=Nutstore.Nutstore -e  ; winget install --id=TominLab.WonderPen -e  ; winget install --id=OBSProject.OBSStudio -e  ; winget install --id=mgth.LittleBigMouse -e
 ```
 
 对更新党来说，在后续应用管理可以搭配 `winget upgrade` 来检查是否有应用更新。也可以使用 `winget upgrade --all` 来静默升级所有支持 winget 的程序。
@@ -62,7 +62,7 @@ winget install --id=Mozilla.Firefox -e  ; winget install --id=Google.Chrome -e  
 ### 手动安装应用
 
 - [WSL](https://learn.microsoft.com/zh-cn/windows/wsl/install#install-wsl-command) ：在管理员模式下打开 PowerShell 或 Windows 命令提示符，输入 `wsl --install` 命令。如果提示错误，则按 [旧版 WSL 的手动安装步骤](https://learn.microsoft.com/zh-cn/windows/wsl/install-manual#step-1---enable-the-windows-subsystem-for-linux) 开启步骤 1 和 3 的功能。WSL 安装并重启成功后，安装 [Docker Desktop](https://docs.docker.com/get-docker/)。
-- Synology Drive：设置 NAS 本地备份。
+- 同步设置：GoodSync 保持本地不同目录间的文件同步；Synology Drive 将本地文件备份到 NAS。
 - 电脑运行 Android 手机应用， [Win11 安卓子系统](https://www.iplaysoft.com/win11-wsa.html) ( WSA ) 安装。
 
 ## 应用配置
