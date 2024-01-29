@@ -37,7 +37,9 @@ LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/g
 
 ## Webpack 打包
 
-VuePress v2 默认使用 Vite，打包时会引入时间戳和 hash 对文件重命名，导致网站大部分的文件发生更改。即使你并没有更新文章，生成的静态文件也会改变。比如我的笔记网站用的 VuePress 默认配置，每次服务器部署需要 5-15 分钟。
+从 VuePress 2.0.0-rc.2 版本起，你可以自由选择 Vite 或 Webpack 作为打包工具。使用 Vite 进行打包时，系统会引入时间戳和 hash 值对文件进行重命名。这一机制虽然保证了文件的唯一性，但同时也带来了一个问题：即使没有更新内容，网站的大部分文件在每次生成时也会发生改变。例如，在我的 VuePress 默认配置的笔记网站中，每次服务器部署都需耗费 5 至 15 分钟的宝贵时间。新版的 LearnData 已经默认采用了 Webpack 作为打包工具，因此无需手动切换。
+
+早期的 VuePress 只支持 Vite 打包。因此，我记录了手动添加 webpack 的方法，作为备用。
 
 如果不想每次架构都重命名文件，可以复制「[nohashname](https://github.com/rockbenben/LearnData/tree/nohashname)」branch。我把 nohashname 分支的打包工具换成了 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)，并用 chainWebpack 设置文件命名规则，避免文件非必要重命名。
 
@@ -70,7 +72,7 @@ VuePress v2 默认使用 Vite，打包时会引入时间戳和 hash 对文件重
    pnpm i && pnpm up
    ```
 
-3. 修改文件命名规则：打开 config.ts，使用 [webpack-chain](https://github.com/Yatoo2018/webpack-chain/tree/zh-cmn-Hans) 修改 webpack 输出文件名规则，停止对 js 文件 hashname。^[[chainWebpack 常用配置方式](https://blog.csdn.net/song854601134/article/details/121340077)] `.filename` 加路径容易报错，这里只把 chunk 文件放入子文件夹。
+3. 修改文件命名规则：打开 config.ts，使用 [webpack-chain](https://github.com/neutrinojs/webpack-chain) 修改 webpack 输出文件名规则，停止对 js 文件 hashname。^[[chainWebpack 常用配置方式](https://blog.csdn.net/song854601134/article/details/121340077)] `.filename` 加路径容易报错，这里只把 chunk 文件放入子文件夹。
 
    ```ts
    export default defineUserConfig({
@@ -163,7 +165,7 @@ export default hopeTheme({
 
 ## 自定义主题
 
-- [x] 创建独立的笔记区，便于整理生活感悟与专题文章。尽管仍使用同一侧边栏，但可设定为仅展示个别领域，适应文章数量众多的场景。
+- [x] ~~创建独立的笔记区，便于整理生活感悟与专题文章。尽管仍使用同一侧边栏，但可设定为仅展示个别领域，适应文章数量众多的场景。~~
 - [x] ~~插入 Bilibili 或第三方视频，可使用专用 [组件库](https://vuepress-theme-hope.github.io/v2/components/zh/guide/)，配置参考 [组件案例 config.ts](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/demo/components/src/.vuepress/config.ts).~~
 - [x] ~~插件[docsearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html)：将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。~~
 - [x] ~~README 页面如何隐藏，使用 index: false，参考[主题设置](https://theme-hope.vuejs.press/zh/guide/layout/sidebar.html#%E9%80%9A%E8%BF%87%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90)~~

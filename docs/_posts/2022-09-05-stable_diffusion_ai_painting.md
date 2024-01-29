@@ -40,11 +40,11 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 
 配置 WebUI Docker 要进入 Linux 环境，因此 Windows 用户需要将其路径转换为 Linux 路径。而 Mac 和 Linux 用户则可以忽略此步骤。
 
-假设容器位于 `D:\Desktop\stable-diffusion-webui-docker`：
+假设容器位于 `D:\Backup\Libraries\Desktop\stable-diffusion-webui-docker`：
 
-1. 把磁盘符号改为小写，转换为 `d:\Desktop\stable-diffusion-webui-docker`
-2. 添加 `/mnt/` 前缀，转换为 `/mnt/d:\Desktop\stable-diffusion-webui-docker`。因为 Windows 本地磁盘是挂载在 Linux 的 mnt 目录下的。
-3. 将反斜扛 `\` 替换为 `/`。最终得到 Linux 路径 `/mnt/d:/Desktop/stable-diffusion-webui-docker`。
+1. 把磁盘符号改为小写，并去除磁盘的冒号，转换为 `d\Backup\Libraries\Desktop\stable-diffusion-webui-docker`
+2. 添加 `/mnt/` 前缀，转换为 `/mnt/d\Backup\Libraries\Desktop\stable-diffusion-webui-docker`。因为 Windows 本地磁盘是挂载在 Linux 的 mnt 目录下的。
+3. 将反斜扛 `\` 替换为 `/`。最终得到 Linux 路径 `/mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`。
 
 ## 配置 Stable Diffusion
 
@@ -53,12 +53,12 @@ Stable Diffusion 是一个「文本到图像」的人工智能模型，也是唯
 按平台选 [Docker Desktop](https://docs.docker.com/get-docker/) 版本，安装后点击左侧的 Add Extensions，推荐安装 Disk usage 扩展，这将便于管理 Docker 的存储空间。
 
 ::: warning
-Docker Desktop 4.17.1 存在 bug，可能会导致 `Attaching to webui-docker-auto-1` 报错。建议升级 Docker Desktop 4.18.0 或以上版本。
+Docker Desktop 需在 4.18.0 或以上版本。Docker Desktop 4.17.1 存在 bug，可能会导致 `Attaching to webui-docker-auto-1` 报错。
 :::
 
 ### 下载 WebUI Docker
 
-下载 [Stable Diffusion WebUI Docker 配置包](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)或[阿里云盘聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)（2023.06.06 更新），然后将其解压到指定路径。聚合版包括相关依赖和模型，因此文件较大。如果需要更新 Stable Diffusion WebUI Docker，你可以按照上述步骤重新构建容器。
+下载 [Stable Diffusion WebUI Docker 配置包](https://github.com/AbdBarho/stable-diffusion-webui-docker/releases/)或[阿里云盘聚合版](https://www.aliyundrive.com/s/EKmK7MGrHdn)（2024.01.22 更新），然后将其解压到指定路径。聚合版包括相关依赖和模型，因此文件较大。如果需要更新 Stable Diffusion WebUI Docker，你可以按照上述步骤重新构建容器。
 
 ### 分支介绍
 
@@ -66,13 +66,13 @@ Docker Desktop 4.17.1 存在 bug，可能会导致 `Attaching to webui-docker-au
 
 - **auto**（推荐）：设置模块最丰富，显示绘画过程，支持随机插入艺术家、参数读取和否定描述，最高分辨率为 2048x2048（高分辨率对显存要求更高），镜像构建命令为 `docker compose --profile auto up --build`。默认使用 6GB 以上的显存，如果你的显卡内存较低，则将配置中的 `--medvram` 改为 `--lowvram`。A 卡用户注意修改[显卡设置](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#running-inside-docker)。
 - **auto-cpu**：不依赖显卡的 auto 分支。如果没有符合要求的显卡，可以使用 CPU 模式，内存配置需满足 16G 以上，构建镜像的命令为 `docker compose --profile auto-cpu up --build`。
-- **invoke**：原名为 `lstein`，其 cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 `docker compose --profile invoke up --build`。
 - **comfy**：基于图形的工作流 UI，非常强大，镜像构建命令为 `docker compose --profile comfy up --build`。comfy 也有不依赖显卡的分支，构建镜像的命令为 `docker compose --profile comfy-cpu up --build`。
+- **invoke**：原名为 `lstein`，其 cli 端非常成熟，WebUI 端参数较少，能自动读取图片记录，适合无进阶需求的新手和 Mac 用户使用，镜像构建命令为 `docker compose --profile invoke up --build`。(最新版 invoke 构建有问题，配置包尚未修复)
 - ~~sygil(已停更)：即原本的 hlky, 界面直观，最高分辨率为 1024x1024，镜像构建命令为 `docker compose --profile sygil up --build`。~~
 
 ### 构建 Stable Diffusion
 
-在启动 Docker Desktop 后，打开 WSL（Ubuntu）或 Mac 终端，输入路径切换命令 `cd /mnt/d/Desktop/stable-diffusion-webui-docker`（路径为 Stable Diffusion WebUI Docker 解压文件目录）。接着，输入以下的部署命令：
+在启动 Docker Desktop 后，打开 WSL（Ubuntu）或 Mac 终端，输入路径切换命令 `cd /mnt/d/Backup/Libraries/Desktop/stable-diffusion-webui-docker`（路径为 Stable Diffusion WebUI Docker 解压文件目录）。接着，输入以下的部署命令：
 
 ```shell
 # 自动下载采样模型和依赖包
@@ -81,6 +81,10 @@ docker compose --profile download up --build
 
 docker compose --profile auto up --build
 # auto 是功能最多的分支，可以选择 auto | auto-cpu | invoke | comfy | comfy-cpu
+docker compose --profile auto-cpu up --build
+docker compose --profile comfy up --build
+docker compose --profile comfy-cpu up --build
+docker compose --profile invoke up --build
 ```
 
 ![](https://img.newzone.top/2022-09-04-18-32-31.png?imageMogr2/format/webp)

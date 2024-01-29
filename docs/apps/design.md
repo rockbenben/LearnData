@@ -21,11 +21,13 @@ order: 90
 
 Canvas（画布）是所有 UI 组件的「容器」。一个场景中，可以允许多个 canvas 对象存在，也允许 canvas 之间进行「嵌套」使用。需要注意的是，场景中的任何一个 UI 对象，都必定是某个 canvas 对象的「子级」。我最常用的是 Obsidian 和秒笔的 Canvas 功能：
 
-- Obsidian Canvas：可以将图片、视频、文本、网页、文件和 Excalidraw 聚合在一起，并建立连接线和分组。
+- Logseq Canvas：操作最接近为原版 Excalidraw，将 Logseq 功能内嵌入 Excalidraw。唯一的缺点是没有分组功能。
+- Obsidian Canvas：可以将图片、视频、文本、网页、文件和 Excalidraw 聚合在一起，并建立连接线和分组，类似于简化版 FigJam。（个人使用足够了）
 
   ![等后续替代本图](https://obsidian.md/images/canvas/canvas-hero.png "Obsidian canvas 样例")
 
 - 秒笔白板：支持聚合图片、文本、表格、清单、看板和 Excalidraw，但根据作者回复，妙笔的连接线和分组功能会在 2023 的下半年才摆上开发计划。
+- Figma：FigJam 与其他白板类似，图样多很多，但功能差异不大，用得越来越少了。
 
 ## 获取页面 logo
 

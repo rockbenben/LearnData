@@ -19,13 +19,15 @@ order: 3
 
 ## 标签页
 
-- [iTab](https://chrome.google.com/webstore/detail/itab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/mhloojimgilafopcmlcikiidgbbnelip)：自定义你的新标签页。
+- [Custom New Tab URL](https://chromewebstore.google.com/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)：将新标签页重定向到一个特定的网址。
 
 - [zvTabs](https://chrome.google.com/webstore/detail/zvtabs%E4%B8%80%E9%94%AE%E5%85%B3%E9%97%AD%E5%B7%A6%E4%BE%A7%E6%A0%87%E7%AD%BE/aelfgfndnhaiicaahkbpmgbbnflnbejb)：一键关闭左侧标签。
 
 - [GoTo Tab](https://chrome.google.com/webstore/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi)：关键词搜索，快速定位标签页。
 
 - [Tab Wrangler](https://chrome.google.com/webstore/detail/tab-wrangler/egnjhciaieeiiohknchakcodbpgjnchh)：自动关闭不活动的标签页，并允许您轻松还原找回它们。
+
+- [iTab](https://chrome.google.com/webstore/detail/itab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/mhloojimgilafopcmlcikiidgbbnelip)：自定义你的新标签页。
 
 ## 链接批量
 
