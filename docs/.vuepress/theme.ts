@@ -1,9 +1,6 @@
-import { getDirname, path } from "@vuepress/utils";
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
-
-const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
   // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
@@ -76,7 +73,7 @@ export default hopeTheme({
     medias: {
       GitHub: "https://github.com/rockbenben",
       Zhihu: "https://www.zhihu.com/people/qingwhat",
-      少数派: ["https://sspai.com/u/zqj05i4v/posts", path.resolve(__dirname, "./icons/sspai.svg")],
+      少数派: ["https://sspai.com/u/zqj05i4v/posts", "./docs/.vuepress/icons/sspai.svg"],
       Wechat: "https://img.newzone.top/wechat.svg",
       Email: "mailto:learndata@newzone.top",
       Discord: "https://discord.gg/PZTQfJ4GjX",
