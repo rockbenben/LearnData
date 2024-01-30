@@ -4,16 +4,18 @@ title: Flare：快速导航页
 order: 93
 ---
 
-本地导航很多，但大多加载就得 2-3 秒，而 [Flare](https://github.com/soulteary/docker-flare) 只需要 0.2 秒。
+在众多本地导航工具中，[Flare](https://github.com/soulteary/docker-flare) 以其极速的加载时间和强大的功能脱颖而出。相较于其他需要 2-3 秒的加载时间，Flare 只需短短 0.2 秒即可完成加载，大幅提升了效率。
 
 **优势**：
 
-- 支持本地搜索书签。
-- 有类似于 excel 的链接编辑器。如果你需要批量导入，也可以用我写的 [Flare 书签解析工具](https://tools.newzone.top/data-parser/flare)。
+- **本地搜索书签**：Flare 支持高效的本地书签搜索功能，帮助用户迅速找到所需的信息。
+- **批量导入书签**：这一功能使得链接的编辑和管理变得异常简便。如果你需要进行批量导入，可以使用我写的 [Flare 书签解析工具](https://tools.newzone.top/data-parser/flare)。
 
-**问题**：无法打开 `chrome://extensions/` 等非标准链接。
+**存在的问题**：Flare 无法打开 `chrome://extensions/` 等非标准格式的链接。
 
 ## 部署代码
+
+使用以下的 Docker 配置文件，你可以轻松部署 Flare，享受快速而强大的本地导航体验。
 
 ```yml
 version: '3.6'

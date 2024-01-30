@@ -4,17 +4,19 @@ title: n8n：工作流自动化
 order: 81
 ---
 
-[n8n](https://github.com/n8n-io/n8n) 是一款可扩展的工作流程自动化工具。n8n 可用于自行托管，并允许你添加自定义函数、逻辑和应用程序。社区有多种第三方 API 节点，可连接主流海外服务。
+[n8n](https://github.com/n8n-io/n8n) 是一款功能强大的工作流程自动化工具，可以自行托管，并允许用户添加自定义函数、逻辑和应用程序。n8n 社区提供了丰富的第三方 API 节点，方便用户连接和使用主流的海外服务。
 
-对于初学者，建议按照[基于 n8n 的开源自动化：以滴答清单同步 Notion 为例](https://sspai.com/prime/story/automation-n8n) 教程进行操作，以熟悉 n8n 的广泛应用。有关使用案例的更多信息，请参阅[使用自动化工作流聚合信息摄入和输出](https://reorx.com/blog/sharing-my-footprints-automation/)。
+对于初学者，建议先跟随教程 [基于 n8n 的开源自动化：以滴答清单同步 Notion 为例](https://sspai.com/prime/story/automation-n8n) 来熟悉 n8n 的基本操作和广泛应用。更多关于 n8n 的使用案例和详细介绍，可以参考 [使用自动化工作流聚合信息摄入和输出](https://reorx.com/blog/sharing-my-footprints-automation/)。
 
 ## 部署 n8n
 
-1. 桌面执行 `git clone https://github.com/n8n-io/n8n.git` 命令下载 n8n 仓库文件，将其复制到 NAS。
+1. 在桌面终端运行 `git clone https://github.com/n8n-io/n8n.git` 命令，下载 n8n 的仓库文件，并将其复制到 NAS。
 2. 切换路径 `cd /volume3/storage/n8n/docker/compose/withPostgres`。
 3. 运行 `sudo docker-compose up -d` 命令进行部署。
 
-初次部署时，可能会出现 `for n8n Container "5a6edd16e779" is unhealthy.` 的提示。请忽略该提示，然后再次运行 `sudo docker-compose up -d` 命令即可解决问题。如果你更新了 git 仓库文件，重新部署时可能会提示无需更新。在这种情况下，你可以首先删除容器，然后重新部署。
+在初次部署时，你可能会遇到 `for n8n Container "5a6edd16e779" is unhealthy.` 的提示，这时只需忽略该提示，再次运行 `sudo docker-compose up -d` 命令即可解决问题。如果在更新 git 仓库文件后重新部署时遇到提示无需更新的情况，你可以先删除容器，然后重新部署。
+
+下面是部署 n8n 的 Docker 配置文件：
 
 ```yml
 # https://github.com/n8n-io/n8n/tree/master/docker/compose/withPostgres
@@ -73,11 +75,11 @@ services:
         condition: service_healthy
 ```
 
-上述文件中，我将 `/volume1/docker/n8n` 指定为 n8n 的设置目录，需要将该路径的读写权限授予 n8n，否则项目启动时可能会报错。
+在上述文件中，`/volume1/docker/n8n` 被指定为 n8n 的配置目录，你需要确保 n8n 有该路径的读写权限，否则项目可能会在启动时报错。
 
 ## 环境变量
 
-PostgreSQL 的默认数据库名称、用户和密码可以在当前目录的 `.env` 文件中更改。
+在当前目录的 `.env` 文件中，可以更改 PostgreSQL 的默认数据库名称、用户和密码。
 
 ```env
 N8N_HOST=localnas.com
@@ -93,31 +95,31 @@ POSTGRES_NON_ROOT_PASSWORD=changePassword
 
 `N8N_HOST` 和 `N8N_EDITOR_BASE_URL` 用于第三方 API 的回调访问。如果你启用了外网调用 n8n 的访问权限，建议开启 Two-factor authentication (2FA)，以防止 API 信息泄露。不建议将 `N8N_HOST` 设为内部域名，否则在后续设置中可能会出现 `Bad Request: bad webhook: An HTTPS URL must be provided for webhook` 错误。
 
-## 节点
+## 节点介绍
 
 ### HTTP Request
 
-[HTTP Request](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) 是使用 REST API 发出 HTTP 请求以查询来自任何应用程序或服务的数据。
+[HTTP Request](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) 节点允许你使用 REST API 发出 HTTP 请求，从任何应用程序或服务中查询数据。
 
-网页端有时可能经常容易连不上，如果你不希望卡住，注意在节点设置的 On Error 选择为 Continue，并在 Options 中添加超时选项 Timeout 10000 ms。
+在使用过程中，如果遇到网页端连接不稳定的问题，可以在节点设置中的 On Error 选项选择 Continue，并在 Options 中添加超时选项，例如 Timeout 10000 ms。
 
 ### IF
 
-[IF](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.if/) 是根据比较操作有条件地分割工作流。请注意，Boolean 判断的 true、false 需要使用双重花括号框中。
+[IF](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.if/) 节点允许你根据比较操作有条件地分割工作流。注意，布尔值的 true 和 false 需要使用双重花括号 `{{}}` 包围。
 
 ![](https://img.newzone.top/2023-12-12-22-43-08.png?imageMogr2/format/webp?imageMogr2/format/webp/thumbnail/400x)
 
 ### Github Trigger
 
-Github Trigger 通过在 Github 上建立 Webhook 来获取推送。
+Github Trigger 节点可以通过在 Github 上设置 Webhook 来获得推送通知。
 
-有时，节点的设置可能出错，导致以下错误提示：`Workflow could not be activated: A webhook with the identical URL probably exists already. Please delete it manually on Github!`。这是因为在仓库中存在多个相同的 Webhook 地址所致。请进入 repo 仓库，选择 `Settings > Code and automation > Webhooks`，手动删除重复的 Webhook 地址，即可使其正常运行。
+如果遇到 `Workflow could not be activated: A webhook with the identical URL probably exists already. Please delete it manually on Github!` 的错误提示，通常是因为在仓库中存在多个相同的 Webhook 地址。你可以进入 repo 仓库，选择 `Settings > Code and automation > Webhooks`，手动删除重复的 Webhook 地址来解决这个问题。
 
 ## 使用 Tips
 
 ### 变量路径
 
-对于一些复杂的输入变量，你可以直接使用 n8n 自带的工具复制路径。在 INPUT 区域选择 JSON，然后点击要选择的参数，接着点击 INPUT 右上角的复制按钮，选择 `Copy Parameter Path`。
+对于一些复杂的输入变量，你可以直接使用 n8n 自带的工具来复制路径。在 INPUT 区域选择 JSON，点击要选择的参数，然后点击 INPUT 右上角的复制按钮，选择 `Copy Parameter Path`。
 
 ![](https://img.newzone.top/2023-12-14-12-37-36.png?imageMogr2/format/webp)
 
@@ -125,8 +127,10 @@ Github Trigger 通过在 Github 上建立 Webhook 来获取推送。
 
 ### Discord OAuth2
 
-在 [Discord Applications](https://discord.com/developers/applications) 新建任意名称的应用，然后在 OAuth2>General > Redirects 中添加回调地址。
+在 [Discord Applications](https://discord.com/developers/applications) 中新建应用，然后在 OAuth2 > General > Redirects 中添加回调地址。
 
-然后将 CLIENT ID 和 CLIENT SECRET 添加到 n8n 即可。
+接着，将 CLIENT ID 和 CLIENT SECRET 添加到 n8n 中即可。
 
 - [Where can I find my User/Server/Message ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
+
+通过上述步骤，你可以灵活地使用 n8n 来构建自动化工作流，实现数据的聚合、管理和分析。希望这些信息能够帮助你高效地使用 n8n，使你的工作和生活更加自动化和便捷。如果你在使用过程中遇到任何问题或有更多的经验分享，请在评论区留言，我们可以一起讨论和解决。

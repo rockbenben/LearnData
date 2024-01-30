@@ -6,6 +6,8 @@ category:
 order: -57
 ---
 
+> 本文是 LearnData 博客的进阶篇，基础搭建流程查看 [https://newzone.top](https://newzone.top)。
+
 自从我放弃了 Notion 等传统知识管理工具，转而尝试将[博客转化为知识库](https://newzone.top/posts/2022-08-22-learndata_blog_to_knowledge_management.html)以来，我发现不仅知识的复用率得到显著提升，文章的更新频率也有所增加。从 LearnData 的 GitHub 提交记录可以看出，仅在过去三周内，就进行了 11 次提交，并涉及了 47 个文件的更新。
 
 ![](https://img.newzone.top/2023-12-12-19-00-11.png?imageMogr2/format/webp)
@@ -44,13 +46,19 @@ order: -57
 
 ## VS Code 文件排序
 
-有时，我们可能只是想编辑最新的文件。然而，VS Code 默认按文件名排序，并不支持自定义排序方式。
+有时，我们可能需要在海量文章中定位最新的文件。VS Code 虽然默认按文件名排序，不支持自定义排序，但以下方法可以帮你实现按最新修改日期排序，优化你的文件管理效率：
 
-你可以通过快捷键 `Ctrl+,` 或手动路径「文件」>「首选项」>「设置」，在设置中搜索 `Explorer: Sort Order` 并选择 `modified`，使文件按最后修改日期降序排列，这样最新修改的文章便会自动出现在列表的前列。
+1. **通过设置修改排序**：
+    - 使用快捷键 `Ctrl+,` 或通过菜单「文件」>「首选项」>「设置」进入设置。
+    - 在设置中搜索 `Explorer: Sort Order` 并选择 `modified` 选项，即可使文件按最后修改日期降序排列。
 
-![VS Code 文件排序设置](https://img.newzone.top/2024-01-23-05-29-33.png?imageMogr2/format/webp)
+    ![VS Code 文件排序设置](https://img.newzone.top/2024-01-23-05-29-33.png?imageMogr2/format/webp)
 
-关于 VS Code 的自定义排序问题，早在 2017 年的 [Explorer/Opened Editors Sorting](https://github.com/microsoft/vscode/issues/27286) 讨论中便有提及。但官方一直未能采纳社区解决方案。因此，目前 VS Code 只能选择按名称或按修改时间进行排序。
+2. **使用 VS Code 扩展**：
+    - 安装我开发的 [Explorer Sort Order](https://marketplace.visualstudio.com/items?itemName=qingshun.explorer-sort-order) 扩展。
+    - 使用热键 `Ctrl+F10` 即可在名称排序和时间排序之间快速切换。
+
+尽管社区早在 2017 年的 [Explorer/Opened Editors Sorting](https://github.com/microsoft/vscode/issues/27286) 讨论中提出了自定义排序的需求，但由于官方尚未采纳相关解决方案，我们仍需依赖这些小技巧来优化文件管理体验。
 
 ## 主题笔记的引入
 
