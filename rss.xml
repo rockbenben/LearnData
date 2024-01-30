@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 29 Jan 2024 12:29:08 GMT</pubDate>
-    <lastBuildDate>Mon, 29 Jan 2024 12:29:08 GMT</lastBuildDate>
+    <pubDate>Tue, 30 Jan 2024 12:21:19 GMT</pubDate>
+    <lastBuildDate>Tue, 30 Jan 2024 12:21:19 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>博客</category>
@@ -18,10 +18,13 @@
       <link>https://newzone.top/posts/2024-01-28-learndata-advanced.html</link>
       <guid>https://newzone.top/posts/2024-01-28-learndata-advanced.html</guid>
       <source url="https://newzone.top/rss.xml">LearnData 博客：高效知识管理和进阶应用技巧</source>
-      <description>自从我放弃了 Notion 等传统知识管理工具，转而尝试将博客转化为知识库以来，我发现不仅知识的复用率得到显著提升，文章的更新频率也有所增加。从 LearnData 的 GitHub 提交记录可以看出，仅在过去三周内，就进行了 11 次提交，并涉及了 47 个文件的更新。</description>
+      <description>本文是 LearnData 博客的进阶篇，基础搭建流程查看 https://newzone.top。 自从我放弃了 Notion 等传统知识管理工具，转而尝试将博客转化为知识库以来，我发现不仅知识的复用率得到显著提升，文章的更新频率也有所增加。从 LearnData 的 GitHub 提交记录可以看出，仅在过去三周内，就进行了 11 次提交，并涉及了 47 个文件的更新。</description>
       <category>博客</category>
       <pubDate>Sun, 28 Jan 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>自从我放弃了 Notion 等传统知识管理工具，转而尝试将<a href="https://newzone.top/posts/2022-08-22-learndata_blog_to_knowledge_management.html" target="_blank" rel="noopener noreferrer">博客转化为知识库</a>以来，我发现不仅知识的复用率得到显著提升，文章的更新频率也有所增加。从 LearnData 的 GitHub 提交记录可以看出，仅在过去三周内，就进行了 11 次提交，并涉及了 47 个文件的更新。</p>
+      <content:encoded><![CDATA[<blockquote>
+<p>本文是 LearnData 博客的进阶篇，基础搭建流程查看 <a href="https://newzone.top" target="_blank" rel="noopener noreferrer">https://newzone.top</a>。</p>
+</blockquote>
+<p>自从我放弃了 Notion 等传统知识管理工具，转而尝试将<a href="https://newzone.top/posts/2022-08-22-learndata_blog_to_knowledge_management.html" target="_blank" rel="noopener noreferrer">博客转化为知识库</a>以来，我发现不仅知识的复用率得到显著提升，文章的更新频率也有所增加。从 LearnData 的 GitHub 提交记录可以看出，仅在过去三周内，就进行了 11 次提交，并涉及了 47 个文件的更新。</p>
 <figure><img src="https://img.newzone.top/2023-12-12-19-00-11.png?imageMogr2/format/webp" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>但随着使用频率的提升，我也逐渐发现了一些效率上的问题。接下来，我将进一步介绍关于知识搜索和管理方面的 LearnData 博客进阶经验。</p>
 <h2>本地搜索与网页端搜索的权衡</h2>
@@ -44,10 +47,25 @@
 <li>为解决目录文档路径问题，将 <code>\.md</code> 替换为 <code>\README.md</code>。</li>
 </ol>
 <h2>VS Code 文件排序</h2>
-<p>有时，我们可能只是想编辑最新的文件。然而，VS Code 默认按文件名排序，并不支持自定义排序方式。</p>
-<p>你可以通过快捷键 <code>Ctrl+,</code> 或手动路径「文件」&gt;「首选项」&gt;「设置」，在设置中搜索 <code>Explorer: Sort Order</code> 并选择 <code>modified</code>，使文件按最后修改日期降序排列，这样最新修改的文章便会自动出现在列表的前列。</p>
+<p>有时，我们可能需要在海量文章中定位最新的文件。VS Code 虽然默认按文件名排序，不支持自定义排序，但以下方法可以帮你实现按最新修改日期排序，优化你的文件管理效率：</p>
+<ol>
+<li>
+<p><strong>通过设置修改排序</strong>：</p>
+<ul>
+<li>使用快捷键 <code>Ctrl+,</code> 或通过菜单「文件」&gt;「首选项」&gt;「设置」进入设置。</li>
+<li>在设置中搜索 <code>Explorer: Sort Order</code> 并选择 <code>modified</code> 选项，即可使文件按最后修改日期降序排列。</li>
+</ul>
 <figure><img src="https://img.newzone.top/2024-01-23-05-29-33.png?imageMogr2/format/webp" alt="VS Code 文件排序设置" tabindex="0" loading="lazy"><figcaption>VS Code 文件排序设置</figcaption></figure>
-<p>关于 VS Code 的自定义排序问题，早在 2017 年的 <a href="https://github.com/microsoft/vscode/issues/27286" target="_blank" rel="noopener noreferrer">Explorer/Opened Editors Sorting</a> 讨论中便有提及。但官方一直未能采纳社区解决方案。因此，目前 VS Code 只能选择按名称或按修改时间进行排序。</p>
+</li>
+<li>
+<p><strong>使用 VS Code 扩展</strong>：</p>
+<ul>
+<li>安装我开发的 <a href="https://marketplace.visualstudio.com/items?itemName=qingshun.explorer-sort-order" target="_blank" rel="noopener noreferrer">Explorer Sort Order</a> 扩展。</li>
+<li>使用热键 <code>Ctrl+F10</code> 即可在名称排序和时间排序之间快速切换。</li>
+</ul>
+</li>
+</ol>
+<p>尽管社区早在 2017 年的 <a href="https://github.com/microsoft/vscode/issues/27286" target="_blank" rel="noopener noreferrer">Explorer/Opened Editors Sorting</a> 讨论中提出了自定义排序的需求，但由于官方尚未采纳相关解决方案，我们仍需依赖这些小技巧来优化文件管理体验。</p>
 <h2>主题笔记的引入</h2>
 <p>LearnData 的另一大改变是引入了主题笔记的概念，它允许部分文章同时在博客中更新，并在特定领域的树状栏中展示，打破了传统主侧边栏的限制。</p>
 <p>以文章「飞书迁移记录」为例，它被放在 <code>apps/tutorials/feishu</code> 路径下，在侧边栏中被归类为应用笔记，而不仅仅是博客文章。通过在文章中加入 <code>article</code> 标签，文章内容既能在博客页面展示，也能出现在 RSS 订阅中。</p>
