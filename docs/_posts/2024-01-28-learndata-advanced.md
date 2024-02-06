@@ -6,7 +6,7 @@ category:
 order: -57
 ---
 
-> 本文是 LearnData 博客的进阶篇，基础搭建流程查看 [https://newzone.top](https://newzone.top)。
+> 本文是 LearnData 博客的进阶篇，基础搭建流程查看主页。
 
 自从我放弃了 Notion 等传统知识管理工具，转而尝试将[博客转化为知识库](https://newzone.top/posts/2022-08-22-learndata_blog_to_knowledge_management.html)以来，我发现不仅知识的复用率得到显著提升，文章的更新频率也有所增加。从 LearnData 的 GitHub 提交记录可以看出，仅在过去三周内，就进行了 11 次提交，并涉及了 47 个文件的更新。
 

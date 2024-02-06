@@ -39,7 +39,7 @@ order: -0.03
 1. 关机后，取出后盖板上的 SD 卡，并将其连接到计算机。
 2. 在 SD 卡的根目录保留可能存在的 emuMMC 和 nintendo 文件夹，其他文件全部删除。（如果你有补丁或金手指，请务必自行备份。）
 3. 复制大气层文件和解压后的离线升级固件到 SD 卡的根目录。
-4. 如果你有 emuMMC 文件夹，则选择启动 `虚拟（破解）系统`；如果没有，则参考 [Create an emuMMC](https://switch.homebrew.guide/emummc/emummc.html) 教程创建 emuMMC 虚拟系统。请注意，创建 emuMMC 虚拟系统将占据 SD 卡 29G 的空间，并清空和重新分区 SD 卡，创建后需重新复制大气层文件和固件。
+4. 按下方步骤进入大气层系统。如果你有 emuMMC 文件夹，则选择启动 `虚拟（破解）系统`；如果没有，则参考 [Create an emuMMC](https://switch.homebrew.guide/emummc/emummc.html) 教程创建 emuMMC 虚拟系统。请注意，创建 emuMMC 虚拟系统将占据 SD 卡 29G 的空间，并清空和重新分区 SD 卡，创建后需重新复制大气层文件和固件。
 5. 最后，进入系统后，打开「相册」，启动 daybreak 插件，然后选择安装离线固件包。随后全部选择右侧的选项并按下 A，安装完成后重启系统即完成升级。
 
 ## 进入大气层系统
@@ -81,7 +81,7 @@ DBI 是大气层增强包的内置插件。如果不使用增强包，你也可�
 
 部分游戏列表：
 
-- 健身游戏：舞力全开（Just Dance），有氧拳击 2（Fitness Boxing 2），健身拳击：北斗神拳（Fitness Boxing - Fist of the North Star），健身环大冒险（Ring Fit Adventure），健身巡游（Fitness Circuit），Nintendo Switch Sports。
+- 健身游戏：舞力全开（Just Dance），有氧拳击 2（Fitness Boxing 2），健身拳击：北斗神拳（Fitness Boxing - Fist of the North Star），健身环大冒险（Ring Fit Adventure），健身巡游（Fitness Circuit），吾家健身趣，Nintendo Switch Sports。
 - Mario 系列：超级马里奥兄弟：惊奇（Super Mario Bros. Wonder），马里奥派对：超级巨星（Mario Party Superstars），马里奥和疯狂兔子：星耀之愿（Mario plus Rabbids - Sparks of Hope）。
 - 休闲游戏：世界游戏大全 51（Clubhouse Games 51 Worldwide Classics），太鼓达人（Taiko no Tatsujin），胡闹厨房（Overcooked），大富翁 11。
 - 动作冒险：双人成行（It Takes Two），荒野大镖客：救赎（Red Dead: Redemption），塞尔达传说：旷野之息（The Legend of Zelda - Breath of the Wild），女神异闻录 5（Persona 5 Royal），十三机兵防卫圈（13 Sentinels Aegis Rim），AI 梦境档案（AI The Somnium Files）。
