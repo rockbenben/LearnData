@@ -164,6 +164,10 @@ export default hopeTheme({
       appId: "M4EXXEZIEG",
       apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
     },
+    feed: {
+      rss: true,
+      count: 10,
+    },
 
     // 本地搜索，和上方二选一
     /* searchPro: {
