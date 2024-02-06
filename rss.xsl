@@ -9,6 +9,7 @@
       <head>
         <title>RSS Feed</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
         <style>
           :root {
             --bg-color-back: #f8f8f8;
@@ -208,14 +209,13 @@
             border-collapse: collapse;
           }
 
-          tr:nth-child(2n) {
-            background: #f6f8fa;
+          tr:nth-child(odd) {
+            background: var(--bg-color-back);
           }
 
           th,
           td {
             padding: 0.6em 1em;
-            border: 1px solid var(--border-color-dark);
             border: 1px solid var(--border-color-dark);
           } div[class*="language-"] {
             position: relative;
@@ -498,7 +498,7 @@
           </xsl:for-each>
         </div>
         <footer>
-          Generatd by <a href="https://plugin-feed2.vuejs.press">vuepress-plugin-feed2</a>
+Generatd by<a href="https://ecosystem.vuejs.press/plugins/feed/">@vuepress/plugin-feed</a>
         </footer>
       </body>
     </html>
