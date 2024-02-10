@@ -53,11 +53,11 @@ export default hopeTheme({
   // 侧边栏排序规则
   // sidebarSorter: ['readme', 'order', 'title'],
 
-  // 页脚，支持使用 HTMLString 以显示备案信息等
-  footer: `Copyright © 2023-present <a href="https://newzone.top/" target="_blank" rel="noopener noreferrer">LearnData 开源笔记</a>`,
+  // copyright 默认为 Copyright © <作者>
+  copyright: `Copyright © 2023-present <a href="https://newzone.top/" target="_blank" rel="noopener noreferrer">LearnData 开源笔记</a>`,
   displayFooter: true,
-  // copyright 默认为 Copyright © <作者>，设置为禁用以自定义设置页脚
-  copyright: false,
+  // 页脚，支持使用 HTMLString 以显示备案信息等
+  // footer: `MIT Licensed`,
 
   // 页面布局 Frontmatter 配置：https://theme-hope.vuejs.press/zh/config/frontmatter/layout.html#pageinfo
   pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
@@ -164,16 +164,16 @@ export default hopeTheme({
       appId: "M4EXXEZIEG",
       apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
     },
-    feed: {
-      rss: true,
-      count: 10,
-    },
-
     // 本地搜索，和上方二选一
     /* searchPro: {
       // 索引全部内容
       indexContent: true,
     }, */
+
+    feed: {
+      rss: true,
+      count: 10,
+    },
   },
 
   // 开发模式下是否启动热更新，显示所有更改并重新渲染
