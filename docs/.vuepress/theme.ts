@@ -43,7 +43,7 @@ export default hopeTheme({
   navbarLayout: {
     start: ["Brand"],
     center: ["Links"],
-    end: ["Repo", "Outlook", "Search"],
+    end: ["SocialLink", "Repo", "Outlook", "Search"],
   },
   // 是否在向下滚动时自动隐藏导航栏
   // navbarAutoHide: "always",
