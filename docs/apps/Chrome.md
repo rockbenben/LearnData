@@ -55,9 +55,11 @@ order: 3
 
 ## 监视爬虫
 
-- [Auto Refresh Plus | Page Monitor](https://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggm)：定时刷新页面；页面监视器，找到或丢失指定文本时，弹出提示。
+- [Visualping](https://chromewebstore.google.com/detail/visualping/pemhgklkefakciniebenbfclihhmmfcd)：简单的监测扩展，不过只能在浏览器上进行通知。
 
 - [Distill Web Monitor](https://chrome.google.com/webstore/detail/distill-web-monitor/inlikjemeeknofckkjolnjbpehgadgge)：监控网页或源以获取变更，可邮件、手机提示。
+
+- [Auto Refresh Plus | Page Monitor](https://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggm)：定时刷新页面；页面监视器，找到或丢失指定文本时，弹出提示。
 
 - [Check 酱](https://github.com/easychen/checkchan-dist)：网页内容监控工具，可以监测网页内容变化，并发送异动到微信/飞书。Check 酱可以部署在 Docker 或浏览器插件。
 

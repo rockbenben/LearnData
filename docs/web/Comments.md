@@ -42,7 +42,7 @@ Vercel 项目中选择「Overview」>「Settings」>「Environment Variables」�
    cd /www/wwwroot/node/waline
 
    # 安装 waline 前端包
-   npm install @waline/vercel --save
+   yarn add @waline/vercel --dev
 
    # 运行模块内的 vanilla.js 文件
    node node_modules/@waline/vercel/vanilla.js
@@ -56,11 +56,9 @@ Vercel 项目中选择「Overview」>「Settings」>「Environment Variables」�
    # 持久化运行 Waline
    forever start /www/wwwroot/node/waline/node_modules/@waline/vercel/vanilla.js
 
-   # 版本升级并重启
+   # 更改 package.json 版本号，升级并重启
    forever stop /www/wwwroot/node/waline/node_modules/@waline/vercel/vanilla.js
-   cd /www/wwwroot/node/waline
-   npm update @waline/vercel
-   forever start /www/wwwroot/node/waline/node_modules/@waline/vercel/vanilla.js
+   cd /www/wwwroot/node/waline && yarn install && forever start /www/wwwroot/node/waline/node_modules/@waline/vercel/vanilla.js
    ```
 
 4. 打开网页管理后台，通过导入事先备份的 JSON 文件来还原数据。
