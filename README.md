@@ -200,6 +200,12 @@ Vercel 部署步骤如下：
 
 - `Error: Timeout (control socket)` 指同步服务器出现超时报错。如果出现该错误，可以进入 Actions 页面，点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭服务器防火墙，检查 GitHub 服务器 IP 是否屏蔽了。
 
+### Get counter failed with 403
+
+`Get counter failed with 403` 错误仅在本地运行 `pnpm docs:dev` 时使用**非 localhost 域名**会发生，静态构建过程中不会出现。这是由评论插件 Waline 引起的。要解决这个问题，只需在 `docs/.vuepress/theme.ts` 文件中的 plugins 部分删除 Waline 配置。
+
+![](https://img.newzone.top/2024-02-23-21-07-05.png?imageMogr2/format/webp)
+
 ### ERR_MODULE
 
 如果出现 `Error [ERR_MODULE_NOT_FOUND]: Cannot find module` 的报错，可能是第三方插件或 pacakge.json 环境依赖未正确配置。此报错出现的几率极低，如果遇到，可以使用最新版本的 `package.json` 和 `pnpm-lock.yaml` 来覆盖本地设置，或者删除主目录下的 `.npmrc` 文件。
