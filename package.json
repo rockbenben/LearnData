@@ -29,8 +29,8 @@
     "markdownlint-cli": "^0.39.0",
     "mathjax-full": "^3.2.2",
     "prettier": "^3.2.5",
-    "sass-loader": "^14.0.0",
-    "vidstack": "^1.9.8"
+    "sass-loader": "^14.1.1",
+    "vidstack": "^1.10.9"
   },
   "packageManager": "pnpm@8.15.3",
   "engines": {
