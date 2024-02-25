@@ -24,7 +24,7 @@
     "@vuepress/plugin-docsearch": "2.0.0-rc.17",
     "@vuepress/plugin-feed": "2.0.0-rc.17",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.15",
-    "@waline/client": "3.1.2",
+    "@waline/client": "3.1.3",
     "cpx2": "^7.0.1",
     "markdownlint-cli": "^0.39.0",
     "mathjax-full": "^3.2.2",
@@ -32,7 +32,7 @@
     "sass-loader": "^14.1.1",
     "vidstack": "^1.10.9"
   },
-  "packageManager": "pnpm@8.15.3",
+  "packageManager": "pnpm@8.15.4",
   "engines": {
     "node": ">=18.16.0"
   }
