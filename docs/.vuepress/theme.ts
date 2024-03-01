@@ -9,7 +9,7 @@ export default hopeTheme({
   iconAssets: "iconfont",
 
   author: {
-    name: "清顺",
+    name: "LearnData",
     url: "https://newzone.top",
   },
 
@@ -21,7 +21,7 @@ export default hopeTheme({
   // 页面元数据：贡献者，最后修改时间，编辑链接
   contributors: false,
   lastUpdated: true,
-  editLink: true,
+  editLink: false,
 
   // 深色模式配置
   darkmode: "switch",
@@ -89,6 +89,7 @@ export default hopeTheme({
 
     // 评论配置（仅做样例，记得更换）
     comment: {
+      /*
       // 在本地运行 `pnpm docs:dev` 并使用非 localhost 域名时，容易出现 403 错误，移除本部分即可解决
       provider: "Waline",
       serverURL: "https://waline.newzone.top",
@@ -120,15 +121,14 @@ export default hopeTheme({
           level5: "化神",
         },
       },
+      */
 
-      // Giscus 备用配置
-      /*
+      // Giscus
       provider: "Giscus",
       repo: "rockbenben/LearnData",
       repoId: "R_kgDOHdfk6Q",
       category: "Comments",
       categoryId: "DIC_kwDOHdfk6c4CQYNn",
-      */
     },
 
     // 组件库
@@ -160,16 +160,16 @@ export default hopeTheme({
     },
 
     // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
-    docsearch: {
+    /* docsearch: {
       indexName: "newzone",
       appId: "M4EXXEZIEG",
       apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
-    },
+    }, */
     // 本地搜索，和上方二选一
-    /* searchPro: {
+    searchPro: {
       // 索引全部内容
       indexContent: true,
-    }, */
+    },
 
     feed: {
       rss: true,

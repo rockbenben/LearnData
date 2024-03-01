@@ -11,9 +11,9 @@ export default navbar([
     children: [
       "apps/Applist",
       {
-        text: "常用扩展",
+        text: "开源工具",
         icon: "chrome",
-        link: "apps/Chrome",
+        link: "apps/toolbox",
       },
       {
         text: "服务/专题",
@@ -21,14 +21,9 @@ export default navbar([
         prefix: "",
         children: [
           {
-            text: "直播手册",
-            icon: "quote",
-            link: "apps/livestreaming/1_obs_basic",
-          },
-          {
-            text: "NAS 应用",
+            text: "专题示例",
             icon: "process",
-            link: "services/dockers-on-nas/",
+            link: "apps/topic/",
           },
         ],
       },
@@ -38,7 +33,7 @@ export default navbar([
     text: "生活",
     icon: "emmet",
     prefix: "/family/",
-    children: ["Diet", "Shoppinglist", "Coupon", "baby/"],
+    children: ["Diet", "Coupon"],
   },
   {
     text: "工具",
@@ -50,7 +45,7 @@ export default navbar([
         link: "https://www.aishort.top/",
       },
       { text: "IMGPrompt", icon: "pic", link: "https://prompt.newzone.top/" },
-      { text: "文字处理", icon: "others", link: "https://tools.newzone.top/json-translate" },
+      { text: "多语言处理", icon: "others", link: "https://tools.newzone.top/json-translate" },
       {
         text: "工具收藏",
         icon: "categoryselected",

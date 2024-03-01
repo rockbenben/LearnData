@@ -68,8 +68,6 @@
 
 6. 设置成功后，页面会提示访问链接：`https://xxx.github.io/`。此时，你的知识库就已经搭建完成了。
 
-   如果未出现访问链接提示或不能打开 GitHub Pages，则删除 `docs/_posts` 路径下的博客文章。这是因为 GitHub Pages 有时会对旧文章里的代码报错。
-
 ## 🔣 配置 LearnData
 
 ### 文档结构
