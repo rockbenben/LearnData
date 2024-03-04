@@ -50,7 +50,7 @@ jobs:
       # 如果配置了 FTP 服务器密钥，才会执行本步骤，将页面静态文件同步到服务器
       - name: 📂 Sync files
         if: env.FTP_HOST != ''
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           local-dir: docs/.vuepress/dist/
           server: ${{ secrets.ftp_host }}
