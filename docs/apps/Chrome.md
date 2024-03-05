@@ -75,8 +75,6 @@ order: 3
 
 - [FasterChrome](https://chrome.google.com/webstore/detail/fasterchrome/nmgpnfccjfjhdenioncabecepjcmdnjg)：浏览器预加载链接，提升网络流畅度。
 
-- [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)：一键破解禁止右键、破解禁止选择、破解禁止复制、破解禁止粘贴，启用复制，启用右键，启用选择，启用粘贴。
-
 - [AutoPagerize](https://chrome.google.com/webstore/detail/autopagerize/igiofjhpmpihnifddepnpngfjhkfenbp)：自动识别 next 或下一页，将网页合并为同一页。2014 年更新，很多规则已失效。
 
 - [pakku](https://chrome.google.com/webstore/detail/pakku%EF%BC%9A%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%BC%B9%E5%B9%95%E8%BF%87%E6%BB%A4%E5%99%A8/jklfcpboamajpiikgkbjcnnnnooefbhh)：合并 B 站视频中绝大多数刷屏弹幕。
@@ -86,6 +84,8 @@ order: 3
 - [Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)：优化 GitHub 代码，支持鼠标悬停、代码搜索、查看引用等。
 
 - [沉浸式翻译](https://chrome.google.com/webstore/detail/immersive-translate/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)：免费的双语对照网页翻译，[彩云小译](https://chrome.google.com/webstore/detail/lingocloud-web-translatio/jmpepeebcbihafjjadogphmbgiffiajh) 的替代品。
+
+- ~~SuperCopy：一键破解禁止右键、破解禁止选择、破解禁止复制、破解禁止粘贴，启用复制，启用右键，启用选择，启用粘贴。~~ 据 [@sloanlance](https://github.com/rockbenben/LearnData/commit/de155c0fd2cca8e87319b7d659dab12efd56d79a#r139226783) 提醒，SuperCopy 可能涉及按键记录和快捷键干扰，建议不使用。
 
 ## 实用工具
 
