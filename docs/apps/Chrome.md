@@ -1,7 +1,7 @@
 ---
 article: false
 title: Chrome 扩展
-icon: chrome
+icon: fa-brands fa-chrome
 order: 3
 ---
 

@@ -1,7 +1,7 @@
 ---
 article: false
 title: GitHub
-icon: github
+icon: fa-brands fa-github
 order: 4
 ---
 

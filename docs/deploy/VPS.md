@@ -1,7 +1,7 @@
 ---
 article: false
 title: 服务器 VPS
-icon: IO
+icon: fa-brands fa-ioxhost
 order: 3
 ---
 

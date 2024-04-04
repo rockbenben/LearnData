@@ -1,7 +1,7 @@
 ---
 article: false
 title: Electron
-icon: layout
+icon: fa-solid fa-atom
 order: 7
 ---
 

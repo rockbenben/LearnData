@@ -1,7 +1,7 @@
 ---
 article: false
 title: 开源工具
-icon: float
+icon: fa-solid fa-land-mine-on
 order: 2
 ---
 

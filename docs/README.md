@@ -1,7 +1,7 @@
 ---
 article: false
 title: LearnData 开源笔记
-icon: note
+icon: fa-solid fa-book-open-reader
 ---
 
 > 开源工具、效率方法、心理学探索的自我提升笔记
@@ -24,7 +24,7 @@ icon: note
 
 - 置顶：日常习惯、健身、阅读；
 - 软件应用：常用应用、Chrome 扩展和相关教程；
-- Docker 服务：NAS 和服务器上的后端应用，主要以 Docker 方式部署；
+- Docker 服务：NAS 和服务器上的后端应用，以 Docker 容器为主；
 - 系统问题：Windows 系统优化和相关问题；
 - 代码编程：常用代码的学习和使用笔记，页面开发攻略和网站相关的工具和知识收集；
 - 生活角落：说明书、生活记录和小技巧；
@@ -32,29 +32,29 @@ icon: note
 
 ## 🍥 搭建 LearnData
 
-1. 首先，进入 [LearnData](https://github.com/rockbenben/LearnData) 项目页，点击右上角「Use this template」后选择「Create a new repository」。
+1. 首先，访问 [LearnData 项目页面](https://github.com/rockbenben/LearnData)，然后点击页面右上角的「Use this template」按钮。在弹出的页面中选择「Create a new repository」以创建一个基于此模板的新仓库。
 
    ![](https://img.newzone.top/2022-08-10-19-32-05.png?imageMogr2/format/webp)
 
    ![](https://img.newzone.top/2022-08-10-19-34-13.png?imageMogr2/thumbnail/500x)
 
-2. 接着，进入项目仓库的「Settings」>「Actions」>「General」，选中底部 Workflow permissions 中的 `Read and write permissions`，然后点击保存即可。如果未授权，GitHub Page 部署会由于 repo 权限不足而报错 `failed with exit code 128`。
+2. 进入你的项目仓库，点击「Settings」>「Actions」>「General」，找到页面底部的 `Workflow permissions` 设置。选中 `Read and write permissions` 选项，并点击保存。这一步骤是确保 GitHub Page 在部署时能够正确访问和修改你的仓库内容，避免因权限不足导致部署失败（报错 `failed with exit code 128`）。
 
    ![](https://img.newzone.top/2023-03-14-04-02-16.png?imageMogr2/format/webp)
 
-3. 接下来，请进入菜单栏顶部的「Actions」>「最新的 workflow」，并点击右上方的「Re-run jobs」>「Re-run all jobs」，以重新生成网页。若部署正确，GitHub 将自动搭建 gh-page 分支页面。
+3. 然后，请进入菜单栏顶部的「Actions」页签，选择最新的 workflow。在页面右上方点击「Re-run jobs」>「Re-run all jobs」，这样做可以触发 GitHub 自动重新生成并部署网页。如果设置无误，GitHub 会自动创建一个名为 gh-page 的分支，并在其中部署你的页面。
 
    ![](https://img.newzone.top/2023-03-14-04-04-52.gif?imageMogr2/format/webp)
 
-4. 然后点击「Settings」, 修改 `Repository name` 为 `用户名.github.io`。假设你的仓库链接是 `https://github.com/xxx/LearnData`，那么中间的 `xxx` 就是你的用户名。如果该仓库名称已被使用，GitHub Pages 将无法正常显示样式，请查看页面底部的常见问题来设置子域名。
+4. 接下来，返回「Settings」页面，修改 `Repository name` 为 `你的用户名.github.io`。例如，如果你的仓库链接是 `https://github.com/xxx/LearnData`，那么 `xxx` 就是你的 GitHub 用户名。若该名称已被其他项目使用，系统会显示红色错误提示。此时，你可以选择任意其他名称，例如 LearnData，部署页面路径将变为 `你的用户名.github.io/LearnData`。如果页面样式显示不正常，可能需要设置子域名，具体方法可以参考页面底部的[常见问题 - 网页显示异常](#网页显示异常)。
 
    ![](https://img.newzone.top/20180505202201.png?imageMogr2/format/webp)
 
-5. 在同一页面选择「Settings」>「Pages」>「Build and deployment」>「Branch」, 将 gh-page branch 设为 GitHub Pages 的来源，网站运行目录默认为 `/(root)`。设置完成后，点击「Save」。如果找不到 gh-pages 分支，可以按照上面提到的第三步进行操作，或在 GitHub 中修改任意文件以手动触发 GitHub Action，等待其执行完成后，再重新设置 Pages 的来源。
+5. 在「Settings」>「Pages」>「Build and deployment」>「Branch」中，将 gh-page 分支设置为 GitHub Pages 的源。大部分情况下，网站运行目录保持默认的 `/(root)` 即可。完成设置后，不要忘记点击「Save」保存。如果在此步骤中未找到 gh-pages 分支，请回到第三步重新触发一次 workflow，或尝试修改仓库中的任意文件以手动启动 GitHub Action。
 
    ![](https://img.newzone.top/2022-08-10-19-39-15.png?imageMogr2/format/webp)
 
-6. 设置成功后，页面会提示访问链接：`https://xxx.github.io/`。此时，你的知识库就已经搭建完成了。
+6. 设置完成后，稍等几分钟再刷新页面，你将看到一个新的访问链接提示：`https://你的用户名.github.io/`。此时，你的个人知识库已经成功搭建，并且可以通过此链接访问了。
 
 ## 🔣 配置 LearnData
 
@@ -107,7 +107,7 @@ LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/l
 
 如果你没有部署 Waline，或不需统计阅读量和评论功能，可移除 `docs\reading\index.html` 中的 Waline 代码块。
 
-```javascript
+```typescript
 waline: {
    serverURL: "https://waline.newzone.top",
    ...
@@ -146,37 +146,30 @@ Vercel 部署步骤如下：
 
    ![](https://img.newzone.top/2022-08-24-17-21-58.png "Vercel 部署成功提示")
 
-4. 为了让 Vercel 页面与 GitHub Pages 自动保持同步更新，你需要配置 `PERSONAL_TOKEN` 和 GitHub Actions。
-
-   - 新建 [Personal access tokens](https://github.com/settings/tokens)，勾选权限「repo (Full control of private repositories)」，生成后复制 token 值。
-   - 在项目仓库中选择「setting」>「Secrets」>「Action」，新建密钥 PERSONAL_TOKEN，并填入刚复制的 token 值。
-   - 将下方代码编辑到 `.github/workflows/main.yml` 文件末尾，注意修改 `dst_owner` 和 `dst_repo_name`。
-
-   ```yml
-   # 将页面更新到 Vercel
-   - name: Copy file to Vercel
-     if: always()
-     uses: andstor/copycat-action@v3
-     with:
-       personal_token: ${{ secrets.PERSONAL_TOKEN }}
-       src_path: /.
-       dst_path: /
-       # 你的用户名
-       dst_owner: rockbenben
-       # 与 Vercel 链接的仓库名，也就是 Vercel 部署时新建的仓库
-       dst_repo_name: LearnData-Vercel
-       dst_branch: main
-       src_branch: gh-pages
-       clean: true
-   ```
-
 ## 🤔 常见问题
 
 ### 网页显示异常
 
-如果你的网站只显示文字而不能正常显示网页，可能是因为网站路径不正确导致的页面样式错误。比如，GitHub Page 提示访问链接 `https://xxx.github.io/yyy`，则需要将 `docs/.vuepress/config.ts` 中的 base 改为 `/yyy`，其默认值为 `/`。请按照此路径将网站的 base 设置正确，以确保你的网站能够正常显示。
+如果你的网站仅显示文本而不正常加载样式和脚本，可能是因为网站路径设置错误。这通常发生在将仓库作为子路径部署时，例如 `https://xxx.github.io/LearnData/`。
 
 ![](https://img.newzone.top/2023-03-14-06-11-10.png?imageMogr2/format/webp)
+
+解决步骤如下：
+
+1. **找到配置文件**：在你的项目中，打开 `docs/.vuepress/config.ts`。
+2. **修改 `base` 设置**：将 `base` 配置项的值更改为你的子路径 `/LearnData/`。
+
+   ```typescript
+   export default defineUserConfig({
+     base: '/LearnData/',
+     // 其他配置...
+   });
+   ```
+
+3. 提交并推送更改。等待 GitHub Actions 自动重新部署网站。
+4. 部署后，刷新网站应能正常显示。
+
+通过正确配置 `base` 路径，你的网站将能够加载所有必要的资源文件，从而正确显示样式和功能。如果你的网站是部署在根路径（如 `https://xxx.github.io/`），那么 `base` 应保留默认值 `/`。
 
 ### 同步服务器报错
 

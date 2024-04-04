@@ -1,7 +1,7 @@
 ---
 article: false
 title: 数据库管理
-icon: mysql
+icon: fa-solid fa-database
 order: 3
 ---
 

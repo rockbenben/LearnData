@@ -1,4 +1,4 @@
-import SocialLink from "./components/SocialLink.js";
+import SocialLink from "./components/SocialLink";
 import { defineClientConfig } from "vuepress/client";
 
 export default defineClientConfig({

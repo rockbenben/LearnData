@@ -1,7 +1,7 @@
 ---
 article: false
 title: 健身计划
-icon: strong
+icon: fa-solid fa-dumbbell
 ---
 
 早餐必吃，午餐吃饱，晚餐少吃且不吃主食。

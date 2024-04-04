@@ -1,7 +1,7 @@
 ---
 article: false
 title: AutoHotkey
-icon: linter
+icon: fa-brands fa-autoprefixer
 order: 4
 ---
 

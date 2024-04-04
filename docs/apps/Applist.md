@@ -1,7 +1,7 @@
 ---
 article: false
 title: 必备应用
-icon: list
+icon: fa-solid fa-list
 order: 1
 ---
 
@@ -13,7 +13,7 @@ Windows 自用软件，以开源软件为主。
 
 在线笔记：Notion & 飞书 & flomo & Airtable & 简悦
 
-清单日历：滴答清单 & Trello & Habitify & 桌面日历 ~~& Workflowy~~
+清单日历：滴答清单 & [Super Productivity](https://github.com/johannesjo/super-productivity) & Trello & Habitify & 桌面日历 ~~& Workflowy~~
 
 记忆复习：思源笔记 ~~& [SuperMemo](https://github.com/L-M-Sherlock/sm18-lazy-package/releases/tag/1.1.3) & [kopia](https://github.com/kopia/kopia)(备份) & Anki~~
 
@@ -29,21 +29,21 @@ Windows 自用软件，以开源软件为主。
 
 图像管理：Honeyview & Eagle & PicGo 图床 ~~& imageglass(界面好，但不支持全图拖拽和压缩包预览图片) & Google 相册 & 看图王 & 呱呱看图~~
 
-图像处理：PP 鸭（免费版单次 10 张）& gifski（动图）& [RIOT](http://luci.criosweb.ro/riot/)(压缩) & Inpaint(去水印) & PhotoZoom(无损放大) ~~& 智图~~
+图像处理：PP 鸭（免费版单次 10 张）& gifski（动图）& [RIOT](https://riot-optimizer.com/)(压缩) & Inpaint(去水印) & PhotoZoom(无损放大) ~~& 智图~~
 
 ## 音频视频
 
-音频播放：[MusicFree](https://github.com/maotoumao/MusicFree) & foobar2000（[MKing 皮肤](http://tieba.baidu.com/p/4434445880)）& [MusicTag](https://www.cnblogs.com/vinlxc/p/11347744.html) & [163MusicLyrics](https://github.com/jitwxs/163MusicLyrics)（云歌词下载，支持日文转罗马音）& Listen1& Moon FM(播客) & [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop)（失效）~~& 百度音乐 & AIMP3 & 酷我 K 歌 & Airplay~~
+音频播放：[MusicFree](https://github.com/maotoumao/MusicFree) & foobar2000（[MKing 皮肤](https://tieba.baidu.com/p/4434445880)）& [MusicTag](https://www.cnblogs.com/vinlxc/p/11347744.html) & [163MusicLyrics](https://github.com/jitwxs/163MusicLyrics)（云歌词下载，支持日文转罗马音）& Listen1& Moon FM(播客) & [洛雪音乐助手](https://github.com/lyswhut/lx-music-desktop)（失效）~~& 百度音乐 & AIMP3 & 酷我 K 歌 & Airplay~~
 
 音频处理：[Reaper+ Ultraschall](https://sspai.com/post/76677) & [Audacity](https://github.com/audacity/audacity/releases) & iZotope rx9 ~~& Audition & 神舌变声器 & Goldwave~~
 
-视频播放：[Potplayer](https://zhuanlan.zhihu.com/p/35757176) & [ZY Player](https://github.com/Hiram-Wong/ZyPlayer/releases)（直播&在线资源） & [LAVFilters](https://github.com/Nevcairiel/LAVFilters/releases) & [madVR](http://www.madvr.com/) & XySubFilter & VLC ~~& 恒星播放器 & QQ 影音 & 暴风影音 & 射手~~，播放器设置参考 [Potplayer + LAVFilters + madVR 配置教程](https://www.likecs.com/show-204327094.html)
+视频播放：[Potplayer](https://zhuanlan.zhihu.com/p/35757176) & [ZY Player](https://github.com/Hiram-Wong/ZyPlayer/releases)（直播&在线资源） & [LAVFilters](https://github.com/Nevcairiel/LAVFilters/releases) & XySubFilter & VLC ~~& 恒星播放器 & QQ 影音 & 暴风影音 & 射手~~，播放器设置参考 [Potplayer + LAVFilters + madVR 配置教程](https://www.likecs.com/show-204327094.html)
 
 视频剪辑：剪映 & LosslessCut(音频提取·视频切割合并) & [ShanaEncoder](https://shana.pe.kr/shanaencoder_download/)(视频压缩) & [Quick Cut](https://github.com/HaujetZhao/QuickCut) (自动剪辑) & HandBrake(视频转换) & Premiere ~~& Shotcut & 500th Video Converter & 小丸工具箱~~
 
 字幕工具：[ChineseSubtitleConversionTool](https://github.com/xiaoxinpro/ChineseSubtitleConversionTool)（繁简转换）& Arctime Pro & [VideoSrt](https://github.com/wxbool/video-srt-windows) & 人人译视界
 
-视频下载：[youtube-dl](https://github.com/ytdl-org/youtube-dl) & [哔哩下载姬](https://github.com/leiurayer/downkyi) & [BBDown](https://github.com/nilaoda/BBDown)（命令行式哔哩哔哩下载器）
+视频下载：[JDownloader](https://jdownloader.org/download/index)（支持 YouTube playlist） & [youtube-dl](https://github.com/ytdl-org/youtube-dl) & [哔哩下载姬](https://github.com/leiurayer/downkyi) & [BBDown](https://github.com/nilaoda/BBDown)（命令行式哔哩哔哩下载器）
 
 影视管理：[tinyMediaManager](https://xiaoyaliu.notion.site/dc28a32c807d418691b83519fa523306)（刮削），易影视（本地管理）
 
@@ -81,7 +81,7 @@ Windows 自用软件，以开源软件为主。
 
 文本比较：Beyond Compare & [WinMerge](https://github.com/WinMerge/winmerge)(开源)
 
-局域网传输：[FastCopy](http://fastcopy.jp/) & [Snapdrop](https://meta.appinn.net/t/topic/31209/1) & [LocalSend](https://www.appinn.com/localsend/) ~~& 局域网通讯 (酷安) & Send Anywhere & Pushbullet~~
+局域网传输：[FastCopy](https://fastcopy.jp/) & [Snapdrop](https://meta.appinn.net/t/topic/31209/1) & [LocalSend](https://www.appinn.com/localsend/) ~~& 局域网通讯 (酷安) & Send Anywhere & Pushbullet~~
 
 文件归档：Syncthing(异地同步) & GoodSync(同设备同步) & [Dropit](http://www.dropitproject.com/)(自动文件归档) & [DropPoint](https://www.appinn.com/droppoint/)(复制中转框)
 
@@ -93,7 +93,7 @@ Windows 自用软件，以开源软件为主。
 
 浏览器：Chrome & Firefox(资源) & Brave(工具/书签) & Edge(移动端) & Tor ~~& Vivaldi & Tor & 猎豹 & 360 & 搜狗 & Maxthon & 百度~~
 
-输入法：小狼毫 & `Win+H`（系统语音输入）~~& QuickCut & 讯飞语记 & 微软输入法 & 影子输入法 & 搜狗输入法 & 讯飞输入法 & 百度输入法~~
+输入法：小狼毫 & `Win+H`（系统语音输入）& [CapsWriter-Offline](https://github.com/HaujetZhao/CapsWriter-Offline) ~~& QuickCut & 讯飞语记 & 微软输入法 & 影子输入法 & 搜狗输入法 & 讯飞输入法 & 百度输入法~~
 
 通讯：微信 & TIM & Telegram & Discord & Thunderbird(邮箱) ~~& 飞书 & Slack & 钉耙 & 千牛 & 阿里旺旺~~
 
@@ -105,7 +105,7 @@ Windows 自用软件，以开源软件为主。
 
 PDF：Sumatra PDF & PDFelement & [PDF 补丁丁](https://github.com/wmjordan/PDFPatcher)(书签)~~& 文电通 & foxit 领鲜版（轻量编辑 PDF）~~
 
-硬件驱动：360 驱动大师 & [Open Hardware Monitor](https://openhardwaremonitor.org/downloads/)（旧电脑风扇转速） & [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards)（显卡风扇转速） & [图吧硬件工具箱](http://www.tbtool.cn/) & AIDA64 ~~& SDI Snappy & 驱动精灵 & 鲁大师~~
+硬件驱动：360 驱动大师 & [Open Hardware Monitor](https://openhardwaremonitor.org/downloads/)（旧电脑风扇转速） & [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards)（显卡风扇转速） & [图吧硬件工具箱](https://www.tbtool.cn/) & AIDA64 ~~& SDI Snappy & 驱动精灵 & 鲁大师~~
 
 系统优化：[PowerToys](https://github.com/microsoft/PowerToys/releases/latest)、[RBTray](https://github.com/benbuck/rbtray)（最小化到托盘）、[ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)(右键管理，遇过 bug，推荐火绒右键)、WizTree（磁盘空间分析）、优效日历、StartIsBack++、[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)、Dism++、[Windows Update Blocker](https://www.sordum.org/downloads/?st-windows-update-blocker)（阻止系统更新）
 
@@ -125,7 +125,7 @@ PDF：Sumatra PDF & PDFelement & [PDF 补丁丁](https://github.com/wmjordan/PDF
 
 护眼健康：[Stretchly](https://hovancik.net/stretchly/downloads/) ~~& EyeLoveU & iris & f.luxS~~
 
-偶尔使用：VeraCrypt(本地加密)、Recuva(文件恢复)、[12306Bypass](http://www.12306bypass.com/)、爱思助手、Bluestacks(安卓模拟器)、[Ventoy](https://www.ventoy.net/cn/index.html)（制作可启动 U 盘）、微 PE 工具箱、[傲梅分区](https://www.disktool.cn/)
+偶尔使用：VeraCrypt(本地加密)、Recuva(文件恢复)、[12306Bypass](https://www.bypass.cn/)、爱思助手、Bluestacks(安卓模拟器)、[Ventoy](https://www.ventoy.net/cn/index.html)（制作可启动 U 盘）、微 PE 工具箱、[傲梅分区](https://www.disktool.cn/)
 
 飞书妙记：倍速、跳过空白片段、字幕搜索定位视频，将视频（最长 4 小时）转为文字大纲，了解视频梗概，建立基础认知。等到自己上手实操的时候，遇到问题直接搜索文字定位到相关内容，再看文字对应的视频截图确定配置细节。如果视频过大，可以提取音频来上传。^[[视频课程学习留档](https://sspai.com/post/70960)]
 

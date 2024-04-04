@@ -1,7 +1,7 @@
 ---
 article: false
 title: 生活窍门
-icon: creative
+icon: fa-solid fa-star-of-life
 order: 6
 ---
 

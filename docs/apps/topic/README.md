@@ -2,7 +2,7 @@
 article: false
 index: false
 title: 专题示例
-icon: emoji
+icon: fa-solid fa-icons
 ---
 
 如果想形成专题文章，并想使用独立侧边栏，则参考本目录使用专题文章。

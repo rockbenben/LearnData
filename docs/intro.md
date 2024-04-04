@@ -1,7 +1,7 @@
 ---
 article: false
 title: 个人介绍
-icon: any
+icon: fa-solid fa-circle-nodes
 ---
 
 互联网广告人，

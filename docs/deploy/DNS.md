@@ -1,7 +1,7 @@
 ---
 article: false
 title: 域名 DNS 托管
-icon: sitemap
+icon: fa-solid fa-sitemap
 order: 6
 ---
 

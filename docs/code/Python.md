@@ -1,7 +1,7 @@
 ---
 article: false
 title: Python
-icon: python
+icon: fa-brands fa-python
 order: 3
 ---
 
@@ -9,8 +9,8 @@ Python 很久没用了，暂时只做记录作用。
 
 ## 入门文档
 
-- [Python3 语法](http://www.runoob.com/python3/python3-basic-syntax.html)
-- [Scrapy 入门](http://scrapy-chs.readthedocs.io/zh_CN/latest/intro/tutorial.html#intro-tutorial)
+- [Python3 语法](https://www.runoob.com/python3/python3-basic-syntax.html)
+- [Scrapy 入门](https://scrapy-chs.readthedocs.io/zh-cn/latest/intro/tutorial.html#intro-tutorial)
   浮点数：1.23x109 就是 1.23e9，或者 12.3e8，0.000012 可以写成 1.2e-5
 - [requests](https://requests.readthedocs.io/zh_CN/latest/) 模块 - 获取数据
 - [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/) 模块 - 解析 HTML

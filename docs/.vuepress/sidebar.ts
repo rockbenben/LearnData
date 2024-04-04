@@ -1,12 +1,13 @@
 import { sidebar } from "vuepress-theme-hope";
 
-// 精选图标：https://theme-hope.vuejs.press/zh/guide/interface/icon.html#iconfont-%E7%B2%BE%E9%80%89%E5%9B%BE%E6%A0%87
+// 图标：https://theme-hope.vuejs.press/zh/guide/interface/icon.html#%E8%AE%BE%E7%BD%AE%E5%9B%BE%E6%A0%87
+// https://fontawesome.com/search?m=free&o=r
 export default sidebar({
   "": [
     "/DailyRoutine",
     "/Fitness",
     // 读书笔记架构更换到 docsify，不能使用相对链接
-    { text: "读书笔记", icon: "read", link: "https://newzone.top/reading/" },
+    { text: "读书笔记", icon: "fa-brands fa-readme", link: "https://newzone.top/reading/" },
     // 指定显示页面
     {
       text: "🧰 应用手册",
@@ -19,7 +20,7 @@ export default sidebar({
         "toolbox.md",
         {
           text: "其他",
-          icon: "emmet",
+          icon: "fa-solid fa-code-compare",
           collapsible: true,
           children: ["design.md"],
         },
@@ -37,6 +38,7 @@ export default sidebar({
       text: "🏗️ 网站部署",
       icon: "",
       prefix: "/deploy/",
+      link: "",
       collapsible: true,
       children: [
         "Static.md",
@@ -44,7 +46,7 @@ export default sidebar({
         "VPS.md",
         {
           text: "部署工具",
-          icon: "emmet",
+          icon: "fa-brands fa-windows",
           collapsible: true,
           children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
         },
@@ -59,13 +61,13 @@ export default sidebar({
         "README.md",
         {
           text: "Basic",
-          icon: "emmet",
+          icon: "fa-solid fa-cube",
           collapsible: true,
           children: ["Markdown.md", "Electron.md", "AutoHotkey.md", "Regex.md"],
         },
         {
           text: "FrondEnd",
-          icon: "app",
+          icon: "fa-solid fa-object-group",
           collapsible: true,
           children: ["Vue.md", "HTML.md", "Javascript.md", "Python.md"],
         },
@@ -75,19 +77,18 @@ export default sidebar({
       text: "🛖 生活记录",
       icon: "",
       prefix: "/family/",
-      link: "",
       collapsible: true,
       children: "structure",
     },
     {
       text: "博客文章",
-      icon: "blog",
+      icon: "fa-solid fa-blog",
       prefix: "/_posts/",
       link: "/blog",
       collapsible: true,
       children: "structure",
     },
   ],
-  // 专题区
+  // 专题区（独立侧边栏）
   "/apps/topic/": "structure",
 });

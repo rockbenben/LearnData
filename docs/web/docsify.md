@@ -1,7 +1,7 @@
 ---
 article: false
 title: docsify
-icon: edit
+icon: fa-solid fa-edit
 order: 2
 ---
 

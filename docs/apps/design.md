@@ -1,7 +1,7 @@
 ---
 article: false
 title: 平面设计
-icon: pic
+icon: fa-solid fa-image
 order: 90
 ---
 
@@ -33,7 +33,7 @@ Canvas（画布）是所有 UI 组件的「容器」。一个场景中，可以�
 
 一些页面图标路径是隐藏的，无法在前端获取，可以使用 [ImageAssistant](https://chrome.google.com/webstore/detail/imageassistant-batch-imag/dbjbempljhcmhlfpfacalomonjpalpko) 扩展提取页面所有图片，或者通过搜索引擎搜索，获取网站提交给搜索引擎的 logo 图片。
 
-如果获取的图标较小，可以使用 [waifu2x](http://waifu2x.udp.jp/index.zh-CN.html) 进行最大降噪，然后多次放大 logo。其他放大算法会令 logo 变化，而 waifu2x 不会改变原图。
+如果获取的图标较小，可以使用 [waifu2x](https://www.waifu2x.net/index.zh-CN.html) 进行最大降噪，然后多次放大 logo。其他放大算法会令 logo 变化，而 waifu2x 不会改变原图。
 
 如果图标 svg 不符合要求，可以使用 [SVG-edit](https://svgedit.netlify.app/editor/index.html) 进行简单编辑。
 

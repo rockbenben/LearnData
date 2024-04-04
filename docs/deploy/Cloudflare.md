@@ -1,7 +1,7 @@
 ---
 article: false
 title: Cloudflare
-icon: proxy
+icon: fa-brands fa-cloudflare
 order: 5
 ---
 
