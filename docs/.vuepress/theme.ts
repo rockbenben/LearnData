@@ -5,15 +5,26 @@ import sidebar from "./sidebar";
 export default hopeTheme({
   // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
   hostname: "https://newzone.top",
-
-  iconAssets: "iconfont",
-
+  iconAssets: ["fontawesome", "fontawesome-with-brands"],
   author: {
     name: "LearnData",
     url: "https://newzone.top",
   },
 
+  favicon: "/favicon.ico",
   logo: "/logo.svg",
+
+  // 网站文章的版权声明
+  license: "CC BY-NC-ND 4.0",
+
+  // copyright 默认为 Copyright © <作者>
+  copyright: `
+  版权声明：自由转载 - 非商用 - 非衍生 - 保持署名<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">（创意共享 4.0 许可证）</a>|
+  Copyright © 2023-present LearnData</a>
+  `,
+  displayFooter: true,
+  // 页脚，支持使用 HTMLString 以显示备案信息等
+  // footer: `CC BY-NC-ND 4.0 Licensed`,
 
   // 是否全局启用路径导航
   breadcrumb: false,
@@ -52,12 +63,6 @@ export default hopeTheme({
   sidebar: sidebar,
   // 侧边栏排序规则
   // sidebarSorter: ['readme', 'order', 'title'],
-
-  // copyright 默认为 Copyright © <作者>
-  copyright: `Copyright © 2023-present <a href="https://newzone.top/" target="_blank" rel="noopener noreferrer">LearnData 开源笔记</a>`,
-  displayFooter: true,
-  // 页脚，支持使用 HTMLString 以显示备案信息等
-  // footer: `MIT Licensed`,
 
   // 页面布局 Frontmatter 配置：https://theme-hope.vuejs.press/zh/config/frontmatter/layout.html#pageinfo
   pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
@@ -160,11 +165,14 @@ export default hopeTheme({
     },
 
     // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
-    /* docsearch: {
+    /* 
+    docsearch: {
       indexName: "newzone",
       appId: "M4EXXEZIEG",
       apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
-    }, */
+    },
+    */
+
     // 本地搜索，和上方二选一
     searchPro: {
       // 索引全部内容
