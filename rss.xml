@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <atom:link href="https://newzone.top/rss.xml" rel="self" type="application/rss+xml"/>
-    <title>LearnData-开源笔记</title>
+    <title>LearnData 开源笔记</title>
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 26 Mar 2024 04:20:33 GMT</pubDate>
-    <lastBuildDate>Tue, 26 Mar 2024 04:20:33 GMT</lastBuildDate>
+    <pubDate>Thu, 04 Apr 2024 02:01:21 GMT</pubDate>
+    <lastBuildDate>Thu, 04 Apr 2024 02:01:21 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>使用指南</category>
@@ -17,7 +17,7 @@
       <link>https://newzone.top/posts/2024-03-01-blog_example.html</link>
       <guid>https://newzone.top/posts/2024-03-01-blog_example.html</guid>
       <source url="https://newzone.top/rss.xml">博客文章样例</source>
-      <description>博客文章内容，支持 Markdown 和 HTML 语言。 </description>
+      <description>博客文章内容，支持 Markdown 和 HTML 语言。</description>
       <category>使用指南</category>
       <pubDate>Fri, 01 Mar 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
@@ -28,7 +28,7 @@
       <link>https://newzone.top/posts/2024-03-02-blog_example2.html</link>
       <guid>https://newzone.top/posts/2024-03-02-blog_example2.html</guid>
       <source url="https://newzone.top/rss.xml">博客文章样例2</source>
-      <description>博客文章内容，支持 Markdown 和 HTML 语言。 </description>
+      <description>博客文章内容，支持 Markdown 和 HTML 语言。</description>
       <category>工具</category>
       <pubDate>Sat, 02 Mar 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
