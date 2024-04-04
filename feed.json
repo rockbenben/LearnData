@@ -1,0 +1,36 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "LearnData 开源笔记",
+  "home_page_url": "https://newzone.top/",
+  "feed_url": "https://newzone.top/feed.json",
+  "description": "开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。",
+  "favicon": "https://newzone.top/favicon.ico",
+  "items": [
+    {
+      "title": "博客文章样例2",
+      "url": "https://newzone.top/posts/2024-03-02-blog_example2.html",
+      "id": "https://newzone.top/posts/2024-03-02-blog_example2.html",
+      "summary": "博客文章内容，支持 Markdown 和 HTML 语言。",
+      "content_html": "<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>\n",
+      "date_published": "2024-03-02T00:00:00.000Z",
+      "date_modified": "2024-03-01T23:27:17.000Z",
+      "authors": [],
+      "tags": [
+        "工具"
+      ]
+    },
+    {
+      "title": "博客文章样例",
+      "url": "https://newzone.top/posts/2024-03-01-blog_example.html",
+      "id": "https://newzone.top/posts/2024-03-01-blog_example.html",
+      "summary": "博客文章内容，支持 Markdown 和 HTML 语言。",
+      "content_html": "<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>\n",
+      "date_published": "2024-03-01T00:00:00.000Z",
+      "date_modified": "2024-03-01T23:27:17.000Z",
+      "authors": [],
+      "tags": [
+        "使用指南"
+      ]
+    }
+  ]
+}
