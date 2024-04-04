@@ -180,8 +180,11 @@ export default hopeTheme({
     },
 
     feed: {
+      atom: true,
+      json: true,
       rss: true,
       count: 10,
+      sorter: (a, b) => b.frontmatter.date - a.frontmatter.date,
     },
   },
 
