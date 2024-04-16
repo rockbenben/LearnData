@@ -82,7 +82,7 @@ export default sidebar({
     },
     {
       text: "博客文章",
-      icon: "fa-solid fa-blog",
+      icon: "fa-solid fa-feather-pointed",
       prefix: "/_posts/",
       link: "/blog",
       collapsible: true,

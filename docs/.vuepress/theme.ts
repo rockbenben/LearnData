@@ -1,6 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import navbar from "./navbar";
-import sidebar from "./sidebar";
+import navbar from "./navbar.js";
+import sidebar from "./sidebar.js";
 
 export default hopeTheme({
   // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
@@ -184,7 +184,7 @@ export default hopeTheme({
       json: true,
       rss: true,
       count: 10,
-      sorter: (a, b) => b.frontmatter.date - a.frontmatter.date,
+      sorter: (a, b) => Number(b.frontmatter.date) - Number(a.frontmatter.date),
     },
   },
 
