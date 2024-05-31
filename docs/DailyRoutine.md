@@ -67,7 +67,7 @@ icon: fa-solid fa-check-to-slot
 
 2. 晚上 10 点执行关机程序：静音、关闭护眼提醒、关闭录屏终端，并使用 dvr-scan 删除视频中的静止帧。这些步骤可以通过 AutoHotkey 命令自动完成。
 
-   ```autohotkey
+   ```bash
    Send, {Volume_Mute}
    Process, Close, Stretchly.exe
    Process, Close, pwsh.exe

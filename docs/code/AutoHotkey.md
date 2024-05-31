@@ -57,7 +57,7 @@ Run, powershell.exe -NoExit -Command &{npm version patch}, D:\Backup
 
 `WinExist` 只能查看签订程序，对于后台或托盘程序，可以用 Process 命令来检查是否存在指定程序的 PID。
 
-```autohotkey
+```bash
 ;晚上8点停止录屏，并精简视频
 if (A_Hour == 20 && Stop_Record ==0){ ;如果小时等于20点
     Stop_Record:=1 ;设置停止录屏变量为1
@@ -91,7 +91,7 @@ if (A_Hour == 20 && Stop_Record ==0){ ;如果小时等于20点
 
 如果**管理员有设密码**，则可使用下列命令，用管理员权限打开脚本。
 
-```autohotkey
+```bash
 RunAs, Administrator, PassWD
 Run, %A_ScriptDir%\1.ahk
 RunAs  ; 恢复为普通权限
@@ -101,7 +101,7 @@ RunAs  ; 恢复为普通权限
 
 ### 命令：run, msgbox, send
 
-```autohotkey
+```bash
 ;run 运行程序或者文档或其他
 !n::run notepad ;便捷呼出程序，「notepad」是「运行」对话框中的命令之一，所以不用完整路径
 Run, %A_WorkingDir%\xx.lnk ;启用当前目录中的文件
@@ -119,7 +119,7 @@ send how are you？ ;在当前窗口输入 how are you？
 
 注意：同样**不区分大小写**。比如 ifwinactive 等等。
 
-```autohotkey
+```bash
 ;#IFwinactive（指定窗口）（热键或热字串）
 #IFwinactive 新建文本文档.txt - 记事本 ; 在*新建文本文档.txt - 记事本*这个指定窗口下，窗口标题的前半段符合即可
 #q:: ;按下 win 键和 q 键
@@ -133,7 +133,7 @@ return
 
 当按下特定的按键，或者按键顺序，或者按键组合时，激活某个或者某系列动作。
 
-```autohotkey
+```bash
 #q:: ;按下 win 键和 q 键时激活运行记事本这个动作。
 run Notepad ;run 为 AHK 中一个命令，相当于 C 语言中的关键字或者说是函数。还有 msgbox 等等。
 return ;return 为返回值，在存在多个热键时需使用，不然热键中会起冲突。
@@ -149,7 +149,7 @@ return
 
 自动替换：
 
-```autohotkey
+```bash
 ::hay::how are you? ;当输入 hay 时自动替换为 how are you？
 ::nh::你好 ;当输入 nh 时自动替换为你好
 ::/mail::gmail@gmail.com ;键入/mail 后，再加空格、或 tab、或回车，就可以触发缩写
@@ -158,7 +158,7 @@ return
 
 热字串映射脚本：
 
-```autohotkey
+```bash
 ::np::
 run Notepad ;当输入 np 加空格时激活运行记事本这个动作。
 return
@@ -182,7 +182,7 @@ return
 
 `Win+C`激活 Chrome 状态切换：Chrome 没打开时 --> 打开；打开没激活状态时候 --> 激活；打开处在激活状态时候 --> 隐藏。^[[Win 下最爱效率利器:AutoHotKey](https://segmentfault.com/a/1190000004611125)]
 
-```autohotkey
+```bash
 #c::
 IfWinNotExist ahk_class Chrome_WidgetWin_1
 {
@@ -204,7 +204,7 @@ Return
 
 按 F2 一键运行/关闭脚本的循环，空格可暂停/继续脚本。
 
-```autohotkey
+```bash
 #maxThreadsPerHotkey, 2 ;让热键能同时有运行/关闭作用，否则键击会被忽略
 ;setKeyDelay, 50, 50 ;键击默认休眠
 ;setMouseDelay, 50 ;键击默认休眠
@@ -238,7 +238,7 @@ return
 
 监测应用是否有运行，如果没运行则执行启动热键。
 
-```autohotkey
+```bash
 Process, Exist, PicGo.exe
 NewPID := ErrorLevel  ; 由于 ErrorLevel 会经常发生改变，所以要立即保存值。
 if not NewPID
@@ -256,7 +256,7 @@ return
 
 在脚本中，调用函数`SendText()`输出文字，不受输入法状态。
 
-```autohotkey
+```bash
 ;;;;;;;新版独立小程序，可以避免输入法状态影响中文或英文字符的热键输出;;;;;;;
 ;来源链接：<https://segmentfault.com/a/1190000017029464>
 SendText(var_string){
@@ -268,7 +268,7 @@ SendText(var_string){
 
 ### 大写键改为 Enter
 
-```autohotkey
+```bash
 ;replace CapsLock to LeftEnter; CapsLock = Alt CapsLock
 $CapsLock::Enter
 LAlt & Capslock::SetCapsLockState, % GetKeyState("CapsLock", "T") ? "Off" : "On"
