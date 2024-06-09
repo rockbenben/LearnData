@@ -5,7 +5,7 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
   hostname: "https://newzone.top",
-  iconAssets: ["fontawesome", "fontawesome-with-brands"],
+  iconAssets: ["https://cdn.staticfile.net/font-awesome/6.5.1/js/all.min.js"],
   author: {
     name: "LearnData",
     url: "https://newzone.top",
