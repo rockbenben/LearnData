@@ -5,7 +5,8 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
   hostname: "https://newzone.top",
-  iconAssets: ["https://cdn.staticfile.net/font-awesome/6.5.1/js/all.min.js"],
+  // 建议替换为自建 CDN，否则部分浏览器可能无法正确显示图标。2024.07 开始，uBlock Origin 将拦截公有 CDN 的 js 请求。
+  iconAssets: ["https://cdn.staticfile.net/font-awesome/6.5.2/js/all.min.js"],
   author: {
     name: "LearnData",
     url: "https://newzone.top",
