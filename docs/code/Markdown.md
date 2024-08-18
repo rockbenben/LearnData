@@ -1,7 +1,7 @@
 ---
 article: false
 title: Markdown
-icon: fa-brands fa-markdown
+icon: fa6-brands:markdown
 order: 5
 ---
 

@@ -1,7 +1,7 @@
 ---
 article: false
 title: 静态部署
-icon: fa-solid fa-circle-nodes
+icon: fa6-solid:circle-nodes
 order: 1
 ---
 

@@ -1,7 +1,7 @@
 ---
 article: false
 title: 云计算服务
-icon: fa-solid fa-cloud-arrow-up
+icon: fa6-solid:cloud-arrow-up
 order: 2
 ---
 

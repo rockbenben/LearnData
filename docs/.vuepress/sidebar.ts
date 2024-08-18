@@ -7,7 +7,7 @@ export default sidebar({
     "/DailyRoutine",
     "/Fitness",
     // 读书笔记架构更换到 docsify，不能使用相对链接
-    { text: "读书笔记", icon: "fa-brands fa-readme", link: "https://newzone.top/reading/" },
+    { text: "读书笔记", icon: "fa6-brands:readme", link: "https://newzone.top/reading/" },
     // 指定显示页面
     {
       text: "🧰 应用手册",
@@ -20,7 +20,7 @@ export default sidebar({
         "toolbox.md",
         {
           text: "其他",
-          icon: "fa-solid fa-code-compare",
+          icon: "fa6-solid:code-compare",
           collapsible: true,
           children: ["design.md"],
         },
@@ -46,7 +46,7 @@ export default sidebar({
         "VPS.md",
         {
           text: "部署工具",
-          icon: "fa-brands fa-windows",
+          icon: "fa6-brands:windows",
           collapsible: true,
           children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
         },
@@ -61,13 +61,13 @@ export default sidebar({
         "README.md",
         {
           text: "Basic",
-          icon: "fa-solid fa-cube",
+          icon: "fa6-solid:cube",
           collapsible: true,
           children: ["Markdown.md", "Electron.md", "AutoHotkey.md", "Regex.md"],
         },
         {
           text: "FrondEnd",
-          icon: "fa-solid fa-object-group",
+          icon: "fa6-solid:object-group",
           collapsible: true,
           children: ["Vue.md", "HTML.md", "Javascript.md", "Python.md"],
         },
@@ -82,7 +82,7 @@ export default sidebar({
     },
     {
       text: "博客文章",
-      icon: "fa-solid fa-feather-pointed",
+      icon: "fa6-solid:feather-pointed",
       prefix: "/_posts/",
       link: "/blog",
       collapsible: true,

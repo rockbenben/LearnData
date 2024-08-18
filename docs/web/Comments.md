@@ -1,7 +1,7 @@
 ---
 article: false
 title: 评论插件
-icon: fa-solid fa-comment-dots
+icon: fa6-solid:comment-dots
 order: 3
 ---
 

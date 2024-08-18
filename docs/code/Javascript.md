@@ -1,7 +1,7 @@
 ---
 article: false
 title: JavaScript
-icon: fa-brands fa-js
+icon: fa6-brands:js
 order: 2
 ---
 

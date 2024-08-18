@@ -1,7 +1,7 @@
 ---
 article: false
 title: 正则表达式
-icon: fa-solid fa-repeat
+icon: fa6-solid:repeat
 order: 6
 ---
 

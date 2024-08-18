@@ -1,7 +1,7 @@
 ---
 article: false
 title: LearnData 开源笔记
-icon: fa-solid fa-book-open-reader
+icon: fa6-solid:book-open-reader
 ---
 
 > 开源工具、效率方法、心理学探索的自我提升笔记

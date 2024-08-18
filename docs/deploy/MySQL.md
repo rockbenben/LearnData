@@ -1,7 +1,7 @@
 ---
 article: false
 title: 数据库管理
-icon: fa-solid fa-database
+icon: fa6-solid:database
 order: 3
 ---
 

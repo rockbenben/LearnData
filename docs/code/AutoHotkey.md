@@ -1,7 +1,7 @@
 ---
 article: false
 title: AutoHotkey
-icon: fa-brands fa-autoprefixer
+icon: fa6-brands:autoprefixer
 order: 4
 ---
 

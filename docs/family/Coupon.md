@@ -1,7 +1,7 @@
 ---
 article: false
 title: 网购攻略
-icon: fa-solid fa-cart-shopping
+icon: fa6-solid:cart-shopping
 order: 3
 ---
 

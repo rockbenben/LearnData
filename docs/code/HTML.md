@@ -1,7 +1,7 @@
 ---
 article: false
 title: HTML
-icon: fa-brands fa-html5
+icon: fa6-brands:html5
 order: 1
 ---
 

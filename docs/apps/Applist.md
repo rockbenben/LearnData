@@ -1,7 +1,7 @@
 ---
 article: false
 title: 必备应用
-icon: fa-solid fa-list
+icon: fa6-solid:list
 order: 1
 ---
 

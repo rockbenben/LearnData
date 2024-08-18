@@ -1,7 +1,7 @@
 ---
 article: false
 title: Coding
-icon: fa-solid fa-code
+icon: fa6-solid:code
 ---
 
 ## 编程学习路径

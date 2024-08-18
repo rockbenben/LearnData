@@ -1,7 +1,7 @@
 ---
 article: false
 title: 平面设计
-icon: fa-solid fa-image
+icon: fa6-solid:image
 order: 90
 ---
 

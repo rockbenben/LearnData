@@ -4,16 +4,16 @@ import { navbar } from "vuepress-theme-hope";
 // https://fontawesome.com/search?m=free&o=r
 // 专题话题的路径需在尾部添加 /，否则有可能出现链接错误。比如下方「生活」中的 baby/
 export default navbar([
-  { text: "博客", icon: "fa-solid fa-blog", link: "/blog" },
+  { text: "博客", icon: "fa6-solid:blog", link: "/blog" },
   {
     text: "应用",
-    icon: "fa-solid fa-bars-staggered",
+    icon: "fa6-solid:bars-staggered",
     prefix: "/",
     children: [
       "apps/Applist",
       {
         text: "常用扩展",
-        icon: "fa-brands fa-chrome",
+        icon: "fa6-brands:chrome",
         link: "apps/Chrome",
       },
       {
@@ -23,7 +23,7 @@ export default navbar([
         children: [
           {
             text: "专题示例",
-            icon: "fa-solid fa-dice-d20",
+            icon: "fa6-solid:dice-d20",
             link: "apps/topic/",
           },
         ],
@@ -32,24 +32,24 @@ export default navbar([
   },
   {
     text: "生活",
-    icon: "fa-solid fa-bed-pulse",
+    icon: "fa6-solid:bed-pulse",
     prefix: "/family/",
     children: ["Diet", "Coupon"],
   },
   {
     text: "工具",
-    icon: "fa-solid fa-toolbox",
+    icon: "fa6-solid:toolbox",
     children: [
       {
         text: "ChatGPT SC",
-        icon: "fa-solid fa-bolt",
+        icon: "fa6-solid:bolt",
         link: "https://www.aishort.top/",
       },
-      { text: "IMGPrompt", icon: "fa-solid fa-image", link: "https://prompt.newzone.top/" },
-      { text: "多语言翻译", icon: "fa-solid fa-language", link: "https://tools.newzone.top/json-translate" },
+      { text: "IMGPrompt", icon: "fa6-solid:image", link: "https://prompt.newzone.top/" },
+      { text: "多语言翻译", icon: "fa6-solid:language", link: "https://tools.newzone.top/json-translate" },
       {
         text: "工具收藏",
-        icon: "fa-solid fa-bars",
+        icon: "fa6-solid:bars",
         link: "https://nav.newzone.top/",
       },
     ],

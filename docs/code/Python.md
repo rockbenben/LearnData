@@ -1,7 +1,7 @@
 ---
 article: false
 title: Python
-icon: fa-brands fa-python
+icon: fa6-brands:python
 order: 3
 ---
 

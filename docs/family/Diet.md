@@ -1,7 +1,7 @@
 ---
 article: false
 title: 健康饮食
-icon: fa-solid fa-wheat-awn-circle-exclamation
+icon: fa6-solid:wheat-awn-circle-exclamation
 order: 1
 ---
 

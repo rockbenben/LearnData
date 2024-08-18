@@ -1,7 +1,7 @@
 ---
 article: false
 title: Cloudflare
-icon: fa-brands fa-cloudflare
+icon: fa6-brands:cloudflare
 order: 5
 ---
 
