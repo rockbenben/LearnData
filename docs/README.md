@@ -136,15 +136,27 @@ Vercel 的速度相对 GitHub Pages 更快，但 `*.vercel.app` 域名已受 DNS
 
 Vercel 部署步骤如下：
 
-1. 点击 [![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frockbenben%2FLearnData%2Ftree%2Fgh-pages) 或将 `https://vercel.com/new/clone?repository-url=https://github.com/rockbenben/LearnData/tree/gh-pages` 中的 `rockbenben/LearnData` 改为 `你的用户名/仓库名`，然后会跳转至 Vercel 进行网页部署。如果你未登录，Vercel 提示你注册或登录，请使用 GitHub 账户进行快捷登录。
+1. 点击 [![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frockbenben%2FLearnData%2Ftree%2Fgh-pages) 或将 `https://vercel.com/new/clone?repository-url=https://github.com/rockbenben/LearnData/tree/gh-pages` 中的 `rockbenben/LearnData` 改为 `你的用户名/仓库名`，然后会跳转至 Vercel 进行网页部署。如果你未登录，Vercel 提示你注册或登录，建议使用 GitHub 账户进行快捷登录。
 
-2. 输入一个你喜欢的 Vercel 项目名称，默认 private 即可，然后点击 `Create`。
+2. 输入任意 Vercel 项目名称，默认 private 即可，然后点击 `Create`。
 
-   ![](https://img.newzone.top/2022-08-24-17-24-16.png "创建 Vercel 项目")
+   ![](https://img.newzone.top/2022-08-24-17-24-16.png?imageMogr2/format/webp "创建 Vercel 项目")
 
-3. 接着，Vercel 会基于 LearnData 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。几十秒后，满屏的烟花会庆祝你部署成功。此时，点击 `Go to Dashboard` 跳转到应用的控制台。
+3. 接着，Vercel 会基于 LearnData 模板帮助你新建并初始化仓库。几十秒后，满屏的烟花会庆祝你部署成功。此时，点击 `Go to Dashboard` 跳转到应用的控制台。
 
-   ![](https://img.newzone.top/2022-08-24-17-21-58.png "Vercel 部署成功提示")
+   ![](https://img.newzone.top/2022-08-24-17-21-58.png?imageMogr2/format/webp "Vercel 部署成功提示")
+
+4. 当前的 Vercel 页面仅用于演示，并不会随项目自动更新。请依次选择「Project Settings」>「Git」>「Connected Git Repository」，点击「Disconnect」，然后点击 GitHub 图标，选择第一步中的「你的用户名/仓库名」，并点击其右侧的「Connect」按钮。
+
+   ![](https://img.newzone.top/2024-08-22-14-05-07.png?imageMogr2/format/webp "移除演示项目")
+
+   ![](https://img.newzone.top/2024-08-22-14-07-13.png?imageMogr2/format/webp "链接同步项目")
+
+5. 在「Production Branch」中，将分支名从 main 改为 `gh-pages`。保存设置后，页面将随项目同步更新。
+
+   ![](https://img.newzone.top/2024-08-22-14-09-31.png?imageMogr2/format/webp "切换 Vercel 分支")
+
+如果部署过程中遇到错误，请检查 Vercel 项目设置中的 `Node.js Version` 是否设置为 `20.x`。
 
 ## 🤔 常见问题
 
