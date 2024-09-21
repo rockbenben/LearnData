@@ -90,14 +90,14 @@ docs
 
 ### 看板娘
 
-LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)，支持随机对话、切换人物服饰和玩打飞机游戏，能提升网站美观度和趣味性。如果不需要看板娘，可以删除 `docs\.vuepress\public` 下的 live2d-widget 文件夹。
+LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)，支持随机对话、切换人物服饰和玩打飞机游戏，能提升网站美观度和趣味性。如果不需要看板娘，可删除 `docs\.vuepress\public` 下的 live2d-widget 文件夹。
 
-如果网站部署在子页面 `https://xxx.github.io/yyy`，则需将子页面路径 yyy 加入到以下两个文件：
+如果网站部署在子页面（例如 `https://xxx.github.io/yyy`），则需要将子页面路径 yyy 加入到以下两个文件：
 
 - 将 `docs\.vuepress\public\live2d-widget\autoload.js` 文件第三行的 `const live2d_path = "/live2d-widget/"` 修改为 `const live2d_path = "/yyy/live2d-widget/"`。
 - 将 `docs\.vuepress\templateBuild.html` 文件中看板娘区块代码 `<script src="/live2d-widget/autoload.js">` 修改为 `<script src="/yyy/live2d-widget/autoload.js">`。
 
-如果你想要修改看板娘模型，请参考 `docs\.vuepress\public\live2d-widget` 路径下的 README 和修改说明。如果你想在服务器上自建 [live2d api](https://github.com/fghrsh/live2d_api)，请注意添加跨域配置，否则可能会出现只显示文字而不显示看板娘图片的情况。
+如需调整看板娘模型，请参照 `docs\.vuepress\public\live2d-widget` 目录下的 README 和修改说明。若在服务器上自建 [live2d api](https://github.com/fghrsh/live2d_api)，请注意添加跨域配置，以避免仅显示文本而没有看板娘图片的情况。或者，可以使用我提供的看板娘 CDN，修改 `docs\.vuepress\public\live2d-widget\autoload.js` 中 initWidget 的 cdnPath，将 `cdnPath: live2d_path + "live2d_api/"` 更改为 `cdnPath: "https://live2d-api.aishort.top/"`。
 
 ### 读书笔记
 
@@ -126,7 +126,7 @@ waline: {
 
 ### 同步到服务器
 
-如果你的项目已经搭建好，但出现了红色的叉叉提示，这可能是 GitHub Actions 同步到服务器时发生了错误。你需要进入项目仓库的「Setting」>「Secrets」>「Action」，并添加 `FTP_HOST`、`FTP_PORT`、`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。之后，每当文件发生变化时，GitHub Actions 就会将修改推送到服务器的 FTP 上。
+如果你的项目已经搭建好，但出现了红色的叉叉提示，这可能是 GitHub Actions 同步到服务器时发生了错误。你需要进入项目仓库的「Setting」>「Secrets and variables」>「Action」，并添加 `FTP_HOST`、`FTP_PORT`、`FTP_USERNAME` 和 `FTP_PASSWORD` 的密钥。之后，每当文件发生变化时，GitHub Actions 就会将修改推送到服务器的 FTP 上。
 
 你也可以参考文章 [GitHub 同步到 OSS](https://newzone.top/deploy/Static.html#同步到-oss)，将网页部署到云存储上。
 
@@ -203,7 +203,7 @@ Vercel 部署步骤如下：
 
 ### 本地运行 LearnData
 
-1. 为了本地运行，你需要安装 npm 和 pnpm 环境，可参考[环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
+1. 为了本地运行，你需要安装 npm 和 pnpm 环境，可参考[环境部署教程](https://newzone.top/deploy/vps/#环境部署)。
 2. 将 LearnData 项目下载到本地后，在项目目录下打开终端，输入命令 `pnpm i` 安装依赖。
 3. 在终端中输入命令 `pnpm docs:dev`，若成功则会提示访问链接，默认为 `http://localhost:8080/`。
 

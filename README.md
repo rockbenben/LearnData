@@ -215,7 +215,7 @@ Vercel 部署步骤如下：
 
 ### 本地运行 LearnData
 
-1. 为了本地运行，你需要安装 npm 和 pnpm 环境，可参考[环境部署教程](https://newzone.top/deploy/VPS.html#环境部署)。
+1. 为了本地运行，你需要安装 npm 和 pnpm 环境，可参考[环境部署教程](https://newzone.top/deploy/vps/#环境部署)。
 2. 将 LearnData 项目下载到本地后，在项目目录下打开终端，输入命令 `pnpm i` 安装依赖。
 3. 在终端中输入命令 `pnpm docs:dev`，若成功则会提示访问链接，默认为 `http://localhost:8080/`。
 
@@ -223,7 +223,7 @@ Vercel 部署步骤如下：
 
 ## 🆙 版本升级
 
-通常情况下，你不需要升级 LearnData，除非出现依赖报错或需要使用新功能。版本升级时，除了 docs 目录外，所有内容都应使用最新版本的 LearnData 进行覆盖升级，`docs/.vuepress` 中的 `config.ts` 和 `theme.ts` 需要与新版文件进行比对，选择性更新。
+通常情况下，你不需要升级 LearnData，除非出现依赖报错或需要使用新功能。版本升级时，除了 docs 目录外，所有内容都应使用最新版本的 LearnData 进行覆盖升级，`docs/.vuepress` 中的 `config.ts` 和 `theme.ts` 需要与新版文件进行比对，选择性更新。升级日志请查看 [CHANGELOG.md](./CHANGELOG.md)。
 
 以下是升级目录的说明：
 
