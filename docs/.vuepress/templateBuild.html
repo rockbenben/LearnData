@@ -1,27 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ lang }}" data-theme="{{ themeMode }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="keywords" content="自我提升,效率提升,开源工具,学习笔记" />
     <style>
-      html {
-        background: var(--bg-color, #fff);
+      :root {
+        --vp-c-bg: #fff;
       }
 
-      html[data-theme="dark"] {
-        background: var(--bg-color, #252232);
+      [data-theme="dark"] {
+        --vp-c-bg: #252232;
       }
 
+      html,
       body {
-        background: var(--bg-color);
+        background: var(--vp-c-bg);
       }
     </style>
     <script>
       const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
-      const systemDarkMode =
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const systemDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 
       if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
         document.documentElement.setAttribute("data-theme", "dark");
