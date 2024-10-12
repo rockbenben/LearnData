@@ -1,5 +1,5 @@
 ---
-title: 博客文章样例2
+title: 博客文章样例 2
 date: 2024-03-02
 category:
   - 工具

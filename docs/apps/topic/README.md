@@ -11,8 +11,6 @@ icon: fa6-solid:icons
 
 <!-- markdownlint-disable MD033 -->
 
-<div class="catalog-display-container">
-  <AutoCatalog base='/apps/topic/' />
-</div>
+<Catalog base='/apps/topic/' />
 
 <!-- markdownlint-enable MD033 -->
