@@ -131,10 +131,10 @@ export default hopeTheme({
 
       // Giscus
       provider: "Giscus",
-      repo: "rockbenben/LearnData",
-      repoId: "R_kgDOHdfk6Q",
+      repo: "rockbenben/giscus-comment",
+      repoId: "R_kgDOM_MPJA",
       category: "Comments",
-      categoryId: "DIC_kwDOHdfk6c4CQYNn",
+      categoryId: "DIC_kwDOM_MPJM4CjS0P",
     },
 
     // 组件库
