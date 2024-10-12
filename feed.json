@@ -7,13 +7,13 @@
   "favicon": "https://newzone.top/favicon.ico",
   "items": [
     {
-      "title": "博客文章样例2",
+      "title": "博客文章样例 2",
       "url": "https://newzone.top/posts/2024-03-02-blog_example2.html",
       "id": "https://newzone.top/posts/2024-03-02-blog_example2.html",
       "summary": "博客文章内容，支持 Markdown 和 HTML 语言。",
       "content_html": "<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>\n",
       "date_published": "2024-03-02T00:00:00.000Z",
-      "date_modified": "2024-03-01T23:27:17.000Z",
+      "date_modified": "2024-10-12T10:33:40.000Z",
       "authors": [],
       "tags": [
         "工具"
