@@ -4,17 +4,11 @@ https://moonvy.com/blog/post/2022/diffusion-accelerates-diffusion/#%E7%BB%98%E7%
 代码来源：https://theme-hope.vuejs.press/zh/config/style.html
 */
 
-$vp-c-text: (
-  light: rgb(60 60 67),
-  dark: rgb(235 235 245 / 70%),
-);
+// 将主题颜色设置为红色
+// 注：为保持一致，你还应该设置其他主题颜色变量
+// $vp-c-accent: #6ac195;
 
-$vp-navbar: (
-  light: #fff,
-  dark: #252232,
-);
-
-// content
+// background
 $vp-c-bg: (
   light: #fff,
   dark: #252232,
@@ -22,15 +16,21 @@ $vp-c-bg: (
 
 $vp-c-bg-alt: (
   light: #f6f6f7,
-  dark: #2c293d,
+  dark: #1f1e2a,
 );
 
 $vp-c-bg-elv: (
   light: #fff,
-  dark: #252232,
+  dark: #2a2740,
 );
 
-// 边框
+// text
+$vp-c-text: (
+  light: rgb(60 60 67),
+  dark: rgb(235 235 245 / 70%),
+);
+
+// border
 $vp-c-border: (
   light: #c2c2c4,
   dark: #302d28,
