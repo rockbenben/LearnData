@@ -18,6 +18,7 @@ export default sidebar({
       children: [
         "Applist.md",
         "toolbox.md",
+        "encrypt03.md",
         {
           text: "其他",
           icon: "fa6-solid:code-compare",
@@ -77,6 +78,13 @@ export default sidebar({
       text: "🛖 生活记录",
       icon: "",
       prefix: "/family/",
+      collapsible: true,
+      children: "structure",
+    },
+    {
+      text: "加密目录",
+      icon: "material-symbols:encrypted",
+      prefix: "/encrypt/",
       collapsible: true,
       children: "structure",
     },
