@@ -2,6 +2,13 @@
 
 为了便于后续版本的维护与升级，我会定期发布 Learndata 的新版本，并在此记录所有破坏性更新及其他重要改动。
 
+## 1.3.7 (2025-01-24)
+
+- 主题配置 `docs/.vuepress/theme.ts`：
+  - 更新 icon assets 配置：将 iconAssets 改为 plugins.icon.assets ([1cc3dc5](https://github.com/rockbenben/LearnData/commit/1cc3dc5c5a0a8b7443196e4e3f8b1034627bc4be))
+  - 加密配置：对整个 encrypt 目录和指定页面加密的示例配置 ([38fc81f](https://github.com/rockbenben/LearnData/commit/38fc81f6c224f0cc2ae752d672e96c1fd15a9567))
+- 常规依赖升级 `package.json` ([fae924a](https://github.com/rockbenben/LearnData/commit/fae924a740419fb2b44fe909eacd7d01522ff1ed))
+
 ## 1.3.6 (2024-12-09)
 
 - 主题配置 `docs/.vuepress/theme.ts`：

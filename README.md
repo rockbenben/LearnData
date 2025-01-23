@@ -28,9 +28,9 @@
 
 为此，我基于 VuePress 和 vuepress-theme-hope 构建了 LearnData 开源笔记，将我所有的笔记与文章聚合到同一页面形成知识库，便于集中管理和分享。
 
-![](https://img.newzone.top/2022-08-22-19-28-25.png?imageMogr2/thumbnail/600x "笔记 + 文章 = LearnData 知识库")
+![](https://img.newzone.top/2022-08-22-19-28-25.png?imageMogr2/format/webp/thumbnail/600x "笔记 + 文章 = LearnData 知识库")
 
-![](https://img.newzone.top/2022-08-24-19-14-59.png "笔记/博客自动化发布")
+![](https://img.newzone.top/2022-08-24-19-14-59.png?imageMogr2/format/webp "笔记/博客自动化发布")
 
 ## 🧱 笔记结构
 
@@ -87,6 +87,7 @@ docs
 |── _posts                  # 博客文章目录
 ├── _temp                   # 草稿箱
 ├── reading                 # 读书笔记
+├── encrypt                 # 加密目录（可指定其他目录）
 ├── anyname                 # 自定义笔记
 ├── blog.md                 # 博客页面
 └── intro.md                # 博主个人介绍
@@ -106,25 +107,25 @@ LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/l
 
 如果网站部署在子页面 `https://xxx.github.io/yyy`，则需将子页面路径 yyy 加入到以下两个文件：
 
-- 将 `docs\.vuepress\public\live2d-widget\autoload.js` 文件第三行的 `const live2d_path = "/live2d-widget/"` 修改为 `const live2d_path = "/yyy/live2d-widget/"`。
-- 将 `docs\.vuepress\templateBuild.html` 文件中看板娘区块代码 `<script src="/live2d-widget/autoload.js">` 修改为 `<script src="/yyy/live2d-widget/autoload.js">`。
+- 将 `docs/.vuepress/public/live2d-widget/autoload.js` 文件第三行的 `const live2d_path = "/live2d-widget/"` 修改为 `const live2d_path = "/yyy/live2d-widget/"`。
+- 将 `docs/.vuepress/templateBuild.html` 文件中看板娘区块代码 `<script src="/live2d-widget/autoload.js">` 修改为 `<script src="/yyy/live2d-widget/autoload.js">`。
 
-如果你想要修改看板娘模型，请参考 `docs\.vuepress\public\live2d-widget` 路径下的 README 和修改说明。如果你想在服务器上自建 [live2d api](https://github.com/fghrsh/live2d_api)，请注意添加跨域配置，否则可能会出现只显示文字而不显示看板娘图片的情况。
+如需调整看板娘模型，请参照 `docs/.vuepress/public/live2d-widget` 目录下的 README 和修改说明。若在服务器上自建 [live2d api](https://github.com/fghrsh/live2d_api)，请注意添加跨域配置，以避免仅显示文本而没有看板娘图片的情况。或者，可以使用我提供的看板娘 CDN，修改 `docs/.vuepress/public/live2d-widget/autoload.js` 中 initWidget 的 cdnPath，将 `cdnPath: live2d_path + "live2d_api/"` 更改为 `cdnPath: "https://live2d-api.aishort.top/"`。
 
 ### 读书笔记
 
-读书笔记中可能会有大量的原文引用，这与 LearnData 精简化知识点的初衷并不相符。因此，我们使用 docsify 来构建读书笔记，并将其放置于 `docs/reading` 目录下。在生成静态页面后，该路径下的文件不会被转换为 HTML 文件，而是将被自动复制到静态网站下，完成 docsify 页面构建和独立的读书笔记搜索索引。
+由于读书笔记中可能包含大量原文引用，这与 LearnData 精简化知识点的初衷不符。我们选择使用 docsify 来构建读书笔记，这样读书笔记将与 LearnData 页面互不干扰，形成两个独立的搜索系统。
 
-由于读书笔记架构更换到 docsify，不能使用相对链接。请调整 `docs\.vuepress\sidebar.ts` 的 `{ text: "读书笔记", icon: "read", link: "https://newzone.top/reading/" }`，将 `newzone.top` 替换为你的博客域名。
+- **读书目录**：读书笔记存放在 `docs/reading` 目录下。该路径下的文件不会被转换为 HTML 文件，而是会自动复制到静态网站下，完成 docsify 页面构建和独立的读书笔记搜索索引。
+- 由于使用 docsify 架构，不能在 LearnData 网站内使用相对链接。请在 `docs/.vuepress/sidebar.ts` 中，将 `{ text: "读书笔记", icon: "read", link: "https://newzone.top/reading/" }` 中的 `newzone.top` 替换为你自己的博客域名，以确保链接正确。
+- **移除阅读统计**：如果你没有部署 Waline，或不需要统计阅读量和评论功能，可以移除 `docs/reading/index.html` 中的 Waline 配置代码块：
 
-如果你没有部署 Waline，或不需统计阅读量和评论功能，可移除 `docs\reading\index.html` 中的 Waline 代码块。
-
-```typescript
-waline: {
-   serverURL: "https://waline.newzone.top",
-   ...
-}
-```
+   ```javascript
+   waline: {
+      serverURL: "https://waline.newzone.top",
+      ...
+   }
+   ```
 
 ### 本地图片引用
 
