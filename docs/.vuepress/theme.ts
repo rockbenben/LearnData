@@ -6,9 +6,6 @@ export default hopeTheme(
   {
     // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
     hostname: "https://newzone.top",
-    // 公用 CDN 在部分浏览器中可能无法正确显示图标。2024.07 开始，uBlock Origin 将拦截公有 CDN 的 js 请求。
-    // https://icon-sets.iconify.design/
-    iconAssets: "iconify",
     author: {
       name: "LearnData",
       url: "https://newzone.top",
@@ -112,6 +109,13 @@ export default hopeTheme(
 
     plugins: {
       blog: true,
+
+      icon: {
+        // https://theme-hope.vuejs.press/zh/guide/interface/icon.html
+        // 公用 CDN 在部分浏览器中可能无法正确显示图标。2024.07 开始，uBlock Origin 将拦截公有 CDN 的 js 请求。
+        // https://icon-sets.iconify.design/
+        assets: "iconify",
+      },
 
       // 评论配置（仅做样例，记得更换）
       comment: {
