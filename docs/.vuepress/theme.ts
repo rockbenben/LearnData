@@ -189,6 +189,22 @@ export default hopeTheme(
         sorter: (a, b) => Number(b.frontmatter.date) - Number(a.frontmatter.date),
       },
     },
+    // https://theme-hope.vuejs.press/zh/guide/feature/encrypt.html
+    // 加密配置样例（不需要可删除）注意，受到 VuePress 的限制，在未解密前，文章内容仅仅被隐藏，访问者仍可以从源码中获取文章的内容。
+    encrypt: {
+      config: {
+        // 这会加密整个 encrypt 目录，并且两个密码都是可用的
+        "/encrypt/": {
+          password: ["1234", "5678"],
+          hint: "从 xxx 获取密码",
+        },
+        // 这只会加密 /apps/encrypt03.html 页面
+        "/apps/encrypt03.html": {
+          password: "1234",
+          hint: "从 xxx 获取密码",
+        },
+      },
+    },
 
     // 开发模式下是否启动热更新，显示所有更改并重新渲染
     hotReload: true,
