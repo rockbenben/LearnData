@@ -110,6 +110,9 @@ export default hopeTheme(
     plugins: {
       blog: true,
 
+      // 设置为 { global: true, disableCopy: false } 则在复制 100 字符以上时显示版权，设置为 { global: true, disableCopy: true } 则是禁用复制
+      //copyright: { global: true, disableCopy: false },
+
       icon: {
         // https://theme-hope.vuejs.press/zh/guide/interface/icon.html
         // 公用 CDN 在部分浏览器中可能无法正确显示图标。2024.07 开始，uBlock Origin 将拦截公有 CDN 的 js 请求。
