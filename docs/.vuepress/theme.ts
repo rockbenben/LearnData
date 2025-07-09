@@ -166,7 +166,7 @@ export default hopeTheme(
 
       // 组件库
       components: {
-        components: ["Badge", "BiliBili"],
+        components: ["Badge", "BiliBili", "VidStack"],
       },
 
       // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
