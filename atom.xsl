@@ -44,10 +44,6 @@
             background: var(--c-bg);
           }
 
-          html {
-            font-size: 16px;
-          }
-
           body {
             min-height: 100vh;
             color: var(--c-text);
@@ -254,7 +250,7 @@
             margin: 0.5rem auto;
             border: 1px solid #fff;
             border-collapse: collapse;
-            border-radius: 8px;
+            border-radius: 0.5rem;
 
             text-align: start;
           }
@@ -334,13 +330,13 @@
           }
 
           .atom-info {
-            margin-top: 4px;
-            font-size: 14px;
+            margin-top: 0.25rem;
+            font-size: 0.875rem;
           }
 
           .atom-info > span {
             display: inline-block;
-            margin: 4px 8px 4px 0;
+            margin: 0.25em 0.5em 0.25em 0;
           }
 
           .atom-info > span:last-child {
@@ -353,14 +349,14 @@
           }
 
           .atom-body {
-            padding: 4px 16px;
+            padding: 0.25rem 1rem;
           }
 
           .atom-footer {
             display: flex;
             justify-content: space-between;
-            padding: 8px 16px;
-            font-size: 14px;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
           }
 
           .atom-footer label {
@@ -370,20 +366,20 @@
           .atom-link {
             display: inline-block;
 
-            padding: 6px 12px;
-            border-radius: 8px;
+            padding: 0.375em 0.75em;
+            border-radius: 0.5em;
 
             background: var(--c-accent);
             color: var(--c-bg-elv);
           }
 
           footer {
-            margin-top: 10px;
-            padding: 4px;
+            margin-top: 0.75rem;
+            padding: 0.25rem;
 
             color: #888;
 
-            font-size: 12px;
+            font-size: 0.75rem;
             text-align: center;
           }
         </style>
