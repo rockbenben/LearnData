@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="https://oss.newzone.top/docsify/main/4.13.1/themes/vue.css" />
     <link rel="stylesheet" href="https://oss.newzone.top/docsify/docsify-toc/dist/toc.css" />
     <!-- <link rel="stylesheet" href="https://oss.newzone.top/docsify/docsify-gifcontrol/dist/docsify-gifcontrol.css"> -->
-    <!-- docsify waline -->
-    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
     <style>
       .anchor {
         font-weight: bold;
@@ -58,25 +55,6 @@
         }
       }
     </style>
-    <!-- Matomo 此区块为统计代码，请删除-->
-    <script>
-      var _paq = (window._paq = window._paq || []);
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-      (function () {
-        var u = "https://piwik.seoipo.com/";
-        _paq.push(["setTrackerUrl", u + "matomo.php"]);
-        _paq.push(["setSiteId", "7"]);
-        var d = document,
-          g = d.createElement("script"),
-          s = d.getElementsByTagName("script")[0];
-        g.async = true;
-        g.src = u + "matomo.js";
-        s.parentNode.insertBefore(g, s);
-      })();
-    </script>
-    <!-- End Matomo Code 此区块为统计代码，请删除-->
   </head>
 
   <body class="body--ready">
@@ -130,15 +108,6 @@
           "/.*/_sidebar.md": "/_sidebar.md", // See #301
         },
 
-        // 添加页脚
-        footer: {
-          copy: "盛年不重来，一日难再晨。 —— ",
-          auth: '🏷️ <a href="https://newzone.top/" target="_blank">LearnData</a><br/><br/><span id="sitetime"></span>',
-          //pre: '<hr/>',
-          style: "text-align: left;",
-          //class: 'className',
-        },
-
         toc: {
           scope: ".markdown-section",
           headings: "h2, h3, h4, h5, h6",
@@ -157,23 +126,15 @@
         count: {
           language: "chinese", // default:english|chinese
         },
-        // 部署 Waline：https://waline.js.org/guide/get-started.html
-        // 阅读量统计与评论，不需要可删除本区块
-        waline: {
-          serverURL: "https://waline.newzone.top",
-          pageview: true, // 浏览量统计
-          // Waline 等级标签
-          walineLocales: {
-            "/": {
-              admin: "盛年不重来，一日难再晨",
-              level0: "锻体",
-              level1: "炼气",
-              level2: "筑基",
-              level3: "金丹",
-              level4: "元婴",
-              level5: "化神",
-            },
-          },
+        // 如有 Waline 后端，可添加阅读量统计：https://waline.js.org/guide/get-started.html
+
+        // 添加页脚
+        footer: {
+          copy: "盛年不重来，一日难再晨。 —— ",
+          auth: '🏷️ <a href="https://newzone.top/" target="_blank">LearnData</a><br/><br/><span id="sitetime"></span>',
+          //pre: '<hr/>',
+          style: "text-align: left;",
+          //class: 'className',
         },
       };
     </script>
@@ -197,7 +158,7 @@
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
     -->
 
-    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://oss.newzone.top/jquery/3.7.1/dist/jquery.min.js"></script>
     <script src="https://oss.newzone.top/instantpage.min.js"></script>
     <!-- 添加网站运行时间统计 -->
     <script language="javascript">
@@ -223,7 +184,7 @@
       minutes - 0-59 之间的整数，做为 date 对象的分钟数
       seconds - 0-59 之间的整数，做为 date 对象的秒数
       microseconds - 0-999 之间的整数，做为 date 对象的毫秒数 */
-        var t1 = Date.UTC(2022, 7, 23, 22, 22, 22); //北京时间 2022-07-23 22:22:22 //LearnData 首个 commit 时间，该为你自己值得纪念的日子吧
+        var t1 = Date.UTC(2022, 7, 23, 22, 22, 22); //北京时间 2022-07-23 22:22:22 //LearnData 首个 commit 时间，改为你自己值得纪念的日子吧
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
         var diff = t2 - t1;
         var diffYears = Math.floor(diff / years);
