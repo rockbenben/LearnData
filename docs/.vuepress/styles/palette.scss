@@ -13,30 +13,47 @@ $vp-c-bg: (
   light: #fff,
   dark: #252232,
 );
-
 $vp-c-bg-alt: (
   light: #f6f6f7,
-  dark: #1f1e2a,
+  dark: #1d1a28,
 );
-
 $vp-c-bg-elv: (
   light: #fff,
-  dark: #2a2740,
+  dark: #2d2a3a,
 );
 
 // text
 $vp-c-text: (
   light: rgb(60 60 67),
-  dark: rgb(235 235 245 / 70%),
+  dark: rgb(235 235 245 / 90%),
 );
 
 // border
 $vp-c-border: (
   light: #c2c2c4,
-  dark: #302d28,
+  dark: #3d3a48,
+);
+$vp-c-divider: (
+  light: #e2e2e3,
+  dark: #322f3d,
 );
 
-$vp-c-gutter: (
-  light: #e2e2e3,
-  dark: #191722,
+// shadow
+$vp-c-shadow: (
+  light: rgb(0 0 0 / 15%),
+  dark: rgb(0 0 0 / 35%),
+);
+
+// control
+$vp-c-control: (
+  light: rgb(142 150 170 / 10%),
+  dark: rgb(140 130 160 / 12%),
+);
+$vp-c-control-hover: (
+  light: rgb(142 150 170 / 16%),
+  dark: rgb(140 130 160 / 18%),
+);
+$vp-c-control-disabled: (
+  light: #eaeaea,
+  dark: #3a3742,
 );
