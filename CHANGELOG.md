@@ -2,7 +2,27 @@
 
 为了更方便地维护和升级后续版本，我将定期发布 Learndata 新版本，并在此记录所有重大变更及破坏性更新。
 
-## 1.3.8 (2025-03-04)  
+## 1.3.9 (2025-10-12)
+
+### ⚠️ 破坏性更新
+
+- `docs/.vuepress/styles/config.scss` 中的 `theme-colors` 配置项更名为 `theme-color`。([43a6afc](https://github.com/rockbenben/LearnData/commit/43a6afc85c6a325419a80700c93230ae2b3e1696))
+- 博客页面 `docs/blog.md` 中的 `layout` 配置由 `BlogHome` 改为 `Blog`。([a26c290](https://github.com/rockbenben/LearnData/commit/a26c29049064c244563bce1a98e895ec383b7662))
+
+### ✂️ 默认组件调整
+
+- 移除 `docs/.vuepress/theme.ts` 中默认启用的内部组件 `vidstack`，避免升级后在部分环境中构建失败。([ebf4319](https://github.com/rockbenben/LearnData/commit/ebf43196ec0bf8fc7a2d7254e9ad30d42fe9f366))
+- 修改 `docs/.vuepress/styles/palette.scss`，优化深色模式下的调色板。([eda325c](https://github.com/rockbenben/LearnData/commit/eda325c012a9d38f2c45dbc5dd29e261cc598c4a))
+
+### ♻️ 配置优化
+
+- 清理 `docs/.vuepress/sidebar.ts` 中错误的 `link: ""` 配置，并优化侧边栏路径结构，提高可读性和维护性。([6dce681](https://github.com/rockbenben/LearnData/commit/6dce681aa255f12d32fd498e34ada8aa6a1bca98))
+
+### 📦 依赖更新
+
+- 升级部分依赖，并重构了 `package.json` 文件结构。([5b0ea87](https://github.com/rockbenben/LearnData/commit/5b0ea87c692f0a44ebeeb99d199f6561d60b904e))
+
+## 1.3.8 (2025-03-04)
 
 - 在 `docs/.vuepress/theme.ts` 中添加设置版权及禁用复制的说明 ([b5be1c9](https://github.com/rockbenben/LearnData/commit/b5be1c9e1ee0dde8917fd0aecb79cf27d2bccdf1))
 - 更新 GitHub Action 配置 `.github/workflows/main.yml`，将 pnpm 版本从 9 调整为 10 ([0c48b3e](https://github.com/rockbenben/LearnData/commit/0c48b3eb8333dd83b6f5732ffe2f2a067bd36152))
