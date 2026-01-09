@@ -21,7 +21,7 @@ export default defineUserConfig({
 
   // 修改页面模板，https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/packages/theme/templates/index.build.html
   // 配置参考：https://vuepress.github.io/zh/reference/theme-api.html#templatebuild
-  templateBuild: "./docs/.vuepress/templateBuild.html",
+  templateBuild: "./src/.vuepress/templateBuild.html",
 
   // 禁止文件夹生成静态文件，参考 [VuePress 文档]（https://v2.vuepress.vuejs.org/zh/guide/page.html#routing）
   pagePatterns: ["**/*.md", "!_temp", "!reading", "!.vuepress", "!node_modules"],

@@ -46,7 +46,7 @@ export default hopeTheme(
     // 是否在导航栏内显示仓库链接，默认为 `true`
     repoDisplay: true,
     // 文档存放路径
-    docsDir: "docs",
+    docsDir: "src",
 
     // navbar
     navbar: navbar,
