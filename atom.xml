@@ -4,7 +4,7 @@
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2025-12-25T10:36:11.354Z</updated>
+  <updated>2026-01-09T11:18:42.203Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -14,7 +14,7 @@
     <title type="text">博客文章样例 2</title>
     <id>https://newzone.top/posts/2024-03-02-blog_example2.html</id>
     <link href="https://newzone.top/posts/2024-03-02-blog_example2.html"/>
-    <updated>2024-10-12T10:33:40.000Z</updated>
+    <updated>2026-01-09T09:50:34.000Z</updated>
     <summary type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
@@ -26,7 +26,7 @@
     <title type="text">博客文章样例</title>
     <id>https://newzone.top/posts/2024-03-01-blog_example.html</id>
     <link href="https://newzone.top/posts/2024-03-01-blog_example.html"/>
-    <updated>2024-03-01T23:27:17.000Z</updated>
+    <updated>2026-01-09T09:50:34.000Z</updated>
     <summary type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
