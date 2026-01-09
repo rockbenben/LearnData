@@ -1,6 +1,7 @@
 ---
 article: false
 title: LearnData 开源笔记
+description: 还在为笔记四处分散而烦恼？LearnData 是一款帮你整合知识的开源工具。我们提供效率方法、心理学探索，教你搭建属于自己的知识管理系统。
 icon: fa6-solid:book-open-reader
 ---
 
@@ -60,12 +61,12 @@ icon: fa6-solid:book-open-reader
 
 ### 文档结构
 
-LearnData 网站的配置和文本都存放在 `docs` 文件夹中。文章和页面的配置可参考主目录下的 [samplepage.md](https://github.com/rockbenben/LearnData/blob/main/samplepage.md?plain=1)。其中，`order` 参数表示侧边栏的顺序，数字越小越靠前，支持非整数和负数。我个人的偏好是将非干货或随想短文的 order 设置在 -0.01 到 -0.99，将干货类长文的 order 设置在 -1 到负无穷。每次新增文章都会在上一篇的基础上递减 order 值。这种设置使我能随时记录低于 1000 字的短文，同时不会影响那些寻求干货文章的用户体验，因为干货文章的排序始终保持在最上方。
+LearnData 网站的配置和文本都存放在 `src` 文件夹中。文章和页面的配置可参考主目录下的 [samplepage.md](https://github.com/rockbenben/LearnData/blob/main/samplepage.md?plain=1)。其中，`order` 参数表示侧边栏的顺序，数字越小越靠前，支持非整数和负数。我个人的偏好是将非干货或随想短文的 order 设置在 -0.01 到 -0.99，将干货类长文的 order 设置在 -1 到负无穷。每次新增文章都会在上一篇的基础上递减 order 值。这种设置使我能随时记录低于 1000 字的短文，同时不会影响那些寻求干货文章的用户体验，因为干货文章的排序始终保持在最上方。
 
-docs 目录结构如下：
+src 目录结构如下：
 
 ```bash
-docs
+src
 |── .vuepress               # 网站配置
 │   ├── config.ts           # 网站环境依赖和网站属性
 │   ├── sidebar.ts          # 侧边栏
@@ -81,43 +82,43 @@ docs
 └── intro.md                # 博主个人介绍
 ```
 
-`docs/.vuepress` 路径下是网站的配置文件，我已添加了详细的注释。你可以参考注释和 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)来调整配置。请在 `docs/.vuepress/sidebar.ts` 文件中修改文件夹路径，后台会自动抓取路径下的 md 文件来生成侧边栏。`docs/.vuepress/theme.ts` 有[评论插件](https://newzone.top/web/Comments.html)的相关配置。
+`src/.vuepress` 路径下是网站的配置文件，我已添加了详细的注释。你可以参考注释和 [vuepress-theme-hope 配置案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)来调整配置。请在 `src/.vuepress/sidebar.ts` 文件中修改文件夹路径，后台会自动抓取路径下的 md 文件来生成侧边栏。`src/.vuepress/theme.ts` 有[评论插件](https://newzone.top/web/Comments.html)的相关配置。
 
 注意：
 
-- LearnData 默认采用 algolia 进行全文检索。如果你没用 algolia，可在 `docs/.vuepress/theme.ts` 文件的 plugins 部分删除 docsearch 区块，并激活 searchPro。这样，网站将转用本地全文索引来进行搜索。
-- `docs/_temp` 文件夹默认不同步到 GitHub 上。你可以手动在本地建立 `_temp` 文件夹，用来存放草稿。
+- LearnData 默认采用 algolia 进行全文检索。如果你没用 algolia，可在 `src/.vuepress/theme.ts` 文件的 plugins 部分删除 docsearch 区块，并激活 searchPro。这样，网站将转用本地全文索引来进行搜索。
+- `src/_temp` 文件夹默认不同步到 GitHub 上。你可以手动在本地建立 `_temp` 文件夹，用来存放草稿。
 - 自 VuePress2 的 beta.54 版本开始，文件夹名前缀为 `_` 在生成链接时将被省略，例如文章路径为 `/_posts/`，但网页链接路径会是 `/posts/`。
 
 ### 看板娘
 
-LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)，支持随机对话、切换人物服饰和玩打飞机游戏，能提升网站美观度和趣味性。如果不需要看板娘，可删除 `docs\.vuepress\public` 下的 live2d-widget 文件夹。
+LearnData 集成了看板娘 [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)，支持随机对话、切换人物服饰和玩打飞机游戏，能提升网站美观度和趣味性。如果不需要看板娘，可删除 `src\.vuepress\public` 下的 live2d-widget 文件夹。
 
 如果网站部署在子页面（例如 `https://xxx.github.io/yyy`），则需要将子页面路径 yyy 加入到以下两个文件：
 
-- 将 `docs/.vuepress/public/live2d-widget/autoload.js` 文件第三行的 `const live2d_path = "/live2d-widget/"` 修改为 `const live2d_path = "/yyy/live2d-widget/"`。
-- 将 `docs/.vuepress/templateBuild.html` 文件中看板娘区块代码 `<script src="/live2d-widget/autoload.js">` 修改为 `<script src="/yyy/live2d-widget/autoload.js">`。
+- 将 `src/.vuepress/public/live2d-widget/autoload.js` 文件第三行的 `const live2d_path = "/live2d-widget/"` 修改为 `const live2d_path = "/yyy/live2d-widget/"`。
+- 将 `src/.vuepress/templateBuild.html` 文件中看板娘区块代码 `<script src="/live2d-widget/autoload.js">` 修改为 `<script src="/yyy/live2d-widget/autoload.js">`。
 
-如需调整看板娘模型，请参照 `docs/.vuepress/public/live2d-widget` 目录下的 README 和修改说明。若在服务器上自建 [live2d api](https://github.com/fghrsh/live2d_api)，请注意添加跨域配置，以避免仅显示文本而没有看板娘图片的情况。或者，可以使用我提供的看板娘 CDN，修改 `docs/.vuepress/public/live2d-widget/autoload.js` 中 initWidget 的 cdnPath，将 `cdnPath: live2d_path + "live2d_api/"` 更改为 `cdnPath: "https://live2d-api.aishort.top/"`。
+如需调整看板娘模型，请参照 `src/.vuepress/public/live2d-widget` 目录下的 README 和修改说明。若在服务器上自建 [live2d api](https://github.com/fghrsh/live2d_api)，请注意添加跨域配置，以避免仅显示文本而没有看板娘图片的情况。或者，可以使用我提供的看板娘 CDN，修改 `src/.vuepress/public/live2d-widget/autoload.js` 中 initWidget 的 cdnPath，将 `cdnPath: live2d_path + "live2d_api/"` 更改为 `cdnPath: "https://live2d-api.aishort.top/"`。
 
 ### 读书笔记
 
 由于读书笔记中可能包含大量原文引用，这与 LearnData 精简化知识点的初衷不符。我们选择使用 docsify 来构建读书笔记，这样读书笔记将与 LearnData 页面互不干扰，形成两个独立的搜索系统。
 
-- **读书目录**：读书笔记存放在 `docs/reading` 目录下。该路径下的文件不会被转换为 HTML 文件，而是会自动复制到静态网站下，完成 docsify 页面构建和独立的读书笔记搜索索引。
-- 由于使用 docsify 架构，不能在 LearnData 网站内使用相对链接。请在 `docs/.vuepress/sidebar.ts` 中，将 `{ text: "读书笔记", icon: "read", link: "https://newzone.top/reading/" }` 中的 `newzone.top` 替换为你自己的博客域名，以确保链接正确。
-- **移除阅读统计**：如果你没有部署 Waline，或不需要统计阅读量和评论功能，可以移除 `docs/reading/index.html` 中的 Waline 配置代码块：
+- **读书目录**：读书笔记存放在 `src/reading` 目录下。该路径下的文件不会被转换为 HTML 文件，而是会自动复制到静态网站下，完成 docsify 页面构建和独立的读书笔记搜索索引。
+- 由于使用 docsify 架构，不能在 LearnData 网站内使用相对链接。请在 `src/.vuepress/sidebar.ts` 中，将 `{ text: "读书笔记", icon: "read", link: "https://newzone.top/reading/" }` 中的 `newzone.top` 替换为你自己的博客域名，以确保链接正确。
+- **移除阅读统计**：如果你没有部署 Waline，或不需要统计阅读量和评论功能，可以移除 `src/reading/index.html` 中的 Waline 配置代码块：
 
-   ```javascript
-   waline: {
-      serverURL: "https://waline.newzone.top",
-      ...
-   }
-   ```
+  ```javascript
+  waline: {
+     serverURL: "https://waline.newzone.top",
+     ...
+  }
+  ```
 
 ### 本地图片引用
 
-为了避免在生成静态页面时出现 `Rollup failed to resolve import` 错误，本地图片必须保存在 `docs/.vuepress/public` 路径下。如果图片名称为 `1.png`，保存在 `docs/.vuepress/public/imgs` 路径下，则可以使用以下链接来引用该图片：`/imgs/1.png` 或使用 Markdown 图片链接：`![](/imgs/1.png)`。本方法也适用于将附件部署到网站上。
+为了避免在生成静态页面时出现 `Rollup failed to resolve import` 错误，本地图片必须保存在 `src/.vuepress/public` 路径下。如果图片名称为 `1.png`，保存在 `src/.vuepress/public/imgs` 路径下，则可以使用以下链接来引用该图片：`/imgs/1.png` 或使用 Markdown 图片链接：`![](/imgs/1.png)`。本方法也适用于将附件部署到网站上。
 
 ## 🖥️ 网站部署
 
@@ -169,12 +170,12 @@ Vercel 部署步骤如下：
 
 解决步骤如下：
 
-1. **找到配置文件**：在你的项目中，打开 `docs/.vuepress/config.ts`。
+1. **找到配置文件**：在你的项目中，打开 `src/.vuepress/config.ts`。
 2. **修改 `base` 设置**：将 `base` 配置项的值更改为你的子路径 `/LearnData/`。
 
    ```typescript
    export default defineUserConfig({
-     base: '/LearnData/',
+     base: "/LearnData/",
      // 其他配置...
    });
    ```
@@ -184,17 +185,33 @@ Vercel 部署步骤如下：
 
 通过正确配置 `base` 路径，你的网站将能够加载所有必要的资源文件，从而正确显示样式和功能。如果你的网站是部署在根路径（如 `https://xxx.github.io/`），那么 `base` 应保留默认值 `/`。
 
-### 同步服务器报错
+### 同步服务器常见错误
 
-- `Error: Input required and not supplied: server` 表示服务器配置错误，请按照上方的网站部署步骤检查配置。如果你不需要将**网页部署同步到服务器**，可以删除 `.github/workflows/main.yml` 中 Sync files 区块的代码。
+在使用 GitHub Actions 自动部署网页至服务器时，可能会遇到以下错误提示：
 
-- `FTPError: 530 Login authentication failed` 指 FTP 密码错误或账号不存在，可使用 FileZilla 来测试 FTP 的有效性。
+- `Error: Input required and not supplied: server`
+  表示服务器参数未正确配置。请根据部署文档检查 `.github/workflows/main.yml` 文件中的相关配置项。如果你不需要将网页部署同步到服务器，可以直接删除该文件中 `Sync files` 区块的相关代码。
 
-- `Error: Timeout (control socket)` 指同步服务器出现超时报错。如果出现该错误，可以进入 Actions 页面，点击右侧按钮「Re-run all jobs」，重新进行部署。如果错误连续出现，可以尝试关闭服务器防火墙，检查 GitHub 服务器 IP 是否屏蔽了。
+- `FTPError: 530 Login authentication failed`
+  表示 FTP 登录认证失败，可能是账号或密码错误，或该账户不存在。建议使用 FileZilla 等 FTP 客户端测试账号有效性，以确认登录信息是否正确。
+
+- `Error: Timeout (control socket)`
+  表示同步过程中服务器连接超时。你可以前往 GitHub 的 **Actions** 页面，点击右侧的「**Re-run all jobs**」按钮，重新运行部署流程。若多次重试仍失败，建议检查以下事项：
+  - 服务器是否启用了防火墙；
+  - GitHub 所使用的 IP 是否被你的服务器屏蔽。
+
+- `Error: Can't open data connection in passive mode: connect ETIMEDOUT ***:39005`
+  表示 FTP 服务器在被动模式下无法建立数据连接，通常由防火墙限制或服务器配置错误引起。常见原因包括：
+  1. 防火墙未开放被动端口范围：服务器防火墙未开放 FTP 被动模式所需的端口（如 39000–40000）；
+  2. 返回了错误的 IP 地址：FTP 服务器将内网 IP 返回给客户端，导致连接失败。可在配置文件（如 `pure-ftpd.conf`）中取消注释 `ForcePassiveIP`，并将其设置为服务器的**公网 IP**；
+  3. 连接空闲超时：FTP 会话在空闲超过 `MaxIdleTime` 默认值（15 分钟）后被服务器断开。可适当调高该参数；
+  4. 连接数限制：GitHub Actions 短时间内发起多个连接请求，可能触发服务器的保护机制，从而拒绝新的连接。
+
+  第 4 种情况在 CI/CD 自动化部署中较为常见。你可以在 FTP 配置文件中调整 `MaxClientsPerIP` 和 `PerUserMaxConnections` 参数，将单个 IP 和单一用户的最大连接数提高（例如设为 50）。修改后，请重启 FTP 服务以使配置生效。
 
 ### Get counter failed with 403
 
-`Get counter failed with 403` 错误仅在本地运行 `pnpm docs:dev` 时使用**非 localhost 域名**会发生，静态构建过程中不会出现。这是由评论插件 Waline 引起的。要解决这个问题，只需在 `docs/.vuepress/theme.ts` 文件中的 plugins 部分删除 Waline 配置。
+`Get counter failed with 403` 错误仅在本地运行 `pnpm docs:dev` 时使用**非 localhost 域名**会发生，静态构建过程中不会出现。这是由评论插件 Waline 引起的。要解决这个问题，只需在 `src/.vuepress/theme.ts` 文件中的 plugins 部分删除 Waline 配置。
 
 ![](https://img.newzone.top/2024-02-23-21-07-05.png?imageMogr2/format/webp)
 
