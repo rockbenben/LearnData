@@ -1,4 +1,4 @@
-import { webpackBundler } from "@vuepress/bundler-webpack";
+import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 
@@ -33,8 +33,5 @@ export default defineUserConfig({
       id: "G-RWKZTY2P9R",
     }),
   ],
-  bundler: webpackBundler({
-    postcss: {},
-    vue: {},
-  }),
+  bundler: viteBundler(),
 });

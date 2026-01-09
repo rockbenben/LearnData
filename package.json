@@ -4,9 +4,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "docs:dev": "vuepress-webpack dev docs",
-    "docs:build": "vuepress-webpack build docs",
-    "docs:clean-dev": "vuepress-webpack dev docs --clean-cache",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:update-package": "pnpm dlx vp-update",
     "lint": "prettier --check .",
     "lint:fix": "prettier --check --write .",
@@ -14,23 +14,22 @@
     "lint:markdown-fix": "markdownlint docs --fix"
   },
   "devDependencies": {
-    "@vuepress/bundler-webpack": "2.0.0-rc.26",
-    "@vuepress/plugin-docsearch": "2.0.0-rc.118",
-    "@vuepress/plugin-feed": "2.0.0-rc.118",
+    "@mathjax/src": "^4.1.0",
+    "@vuepress/bundler-vite": "2.0.0-rc.26",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.121",
+    "@vuepress/plugin-feed": "2.0.0-rc.121",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.118",
-    "@vuepress/plugin-slimsearch": "2.0.0-rc.118",
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.121",
     "@waline/client": "^3.8.0",
     "cpx2": "^8.0.0",
     "dashjs": "^4.7.4",
     "hls.js": "^1.6.15",
     "markdownlint-cli": "^0.45.0",
-    "mathjax-full": "^3.2.2",
-    "prettier": "^3.6.2",
-    "sass-embedded": "^1.93.3",
-    "sass-loader": "^16.0.6",
-    "vue": "^3.5.24",
+    "prettier": "^3.7.4",
+    "sass-embedded": "^1.97.2",
+    "vue": "^3.5.26",
     "vuepress": "2.0.0-rc.26",
-    "vuepress-theme-hope": "2.0.0-rc.98"
+    "vuepress-theme-hope": "2.0.0-rc.102"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
