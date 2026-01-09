@@ -9,7 +9,7 @@
 **/.vuepress/dist/**
 
 # 自定义草稿箱
-docs/_temp/
+src/_temp/
 
 # GoodSync
 _gsdata_/

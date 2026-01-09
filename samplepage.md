@@ -1,6 +1,6 @@
 ---
 # 文章标题
-title: 页面配置样例
+title: 页面配置样例：Frontmatter 模板规范
 # 页面图标，默认为 [Fontawesome 图标](https://fontawesome.com/search?m=free&o=r)
 # 假设希望设定图标为 <i class="fa-solid fa-hashtag"></i>，则是 icon: fa-solid fa-hashtag
 icon: fa-solid fa-hashtag
@@ -41,3 +41,62 @@ copyright: 无版权
 ---
 
 页面内容，支持 Markdown 和 HTML 语言。
+
+## 基础模板
+
+```yaml
+---
+title: 文章标题
+description: （非必须）文章简要描述，用于SEO优化和摘要显示
+shortTitle: 短标题
+date: YYYY-MM-DD
+category:
+  - 分类1
+tag:
+  - 标签1
+  - 标签2
+order: -1
+icon: fa6-solid:图标名称
+isOriginal: true # 原创文章标志
+---
+```
+
+## 页面模板
+
+```yaml
+---
+title: 页面标题
+description: 页面简要描述，用于SEO优化和摘要显示
+article: false
+icon: fa6-solid:图标名称
+order: -1
+---
+```
+
+## 字段说明
+
+### 必需字段
+
+- `title`：页面内容的主标题
+
+### 条件必需字段
+
+- `isOriginal`：位于 `src/_posts` 路径下的文章必须添加 `isOriginal: true`
+- `shortTitle`：当 `title` 字符长度超过50时，必须提供 `shortTitle`
+
+### 推荐字段
+
+- `description`：页面内容的简要描述，用于搜索引擎优化和摘要显示
+- `date`：文章发布日期
+- `category`：文章分类
+- `tag`：文章标签
+- `order`：侧边栏排序（数字越小越靠前）
+- `icon`：页面图标
+
+### 可选字段
+
+- `author`：作者信息
+- `sticky`：文章置顶
+- `star`：文章收藏
+- `footer`：自定义页脚
+- `copyright`：版权信息
