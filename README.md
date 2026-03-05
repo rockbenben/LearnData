@@ -72,7 +72,7 @@ src/
 ## 📚 相关资源
 
 - **完整文档**：[newzone.top](https://newzone.top/)
-- **高级技巧**：[LearnData 进阶应用](https://newzone.top/posts/2024-01-28-learndata-advanced.html)
+- **进阶技巧**：[知识管理与搜索](https://newzone.top/posts/2024-01-28-learndata-advanced.html) · [自动化脚本](https://newzone.top/posts/2026-03-05-learndata-scripts-llm-seo.html)
 - **问题反馈**：[GitHub Issues](https://github.com/rockbenben/LearnData/issues)
 - **交流社区**：[Discord](https://discord.gg/PZTQfJ4GjX) · [Telegram](https://t.me/aishort_top) · [QQ 群](https://qm.qq.com/q/qvephMO8q4)
 

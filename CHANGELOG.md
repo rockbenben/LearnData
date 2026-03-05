@@ -2,6 +2,56 @@
 
 为了更方便地维护和升级后续版本，我将定期发布 Learndata 新版本，并在此记录所有重大变更及破坏性更新。
 
+## 1.4.0 (2026-03-05)
+
+### 🚀 重大架构升级
+
+- **构建系统迁移**：从 webpack 切换到 Vite ([6d51d79](https://github.com/rockbenben/LearnData/commit/6d51d798b))
+  - 开发服务器启动速度提升 10 倍以上（基于 ESM 按需编译）
+  - 模块热替换（HMR）即时响应文件变化
+  - 使用 content hash，仅当内容实际变化时才更新文件名
+  - 基于 Rollup 的生产构建，输出更优化的打包结果
+
+- **目录结构优化**：`docs` 目录重命名为 `src` ([c3a9480](https://github.com/rockbenben/LearnData/commit/c3a948044), [e420e28](https://github.com/rockbenben/LearnData/commit/e420e2886))
+  - 解决 Vercel 等平台使用默认构建命令时的路径冲突问题
+  - 符合现代项目结构约定
+
+### ✨ 新增功能
+
+- **自动化脚本** ([dd54235d](https://github.com/rockbenben/LearnData/commit/dd54235d4), [42c2a7e](https://github.com/rockbenben/LearnData/commit/42c2a7e21))
+  - `scripts/seo-audit.js`：扫描 Markdown 文件的 frontmatter SEO 问题
+  - `scripts/llms-txt.js`：生成 LLM 友好的站点索引（llms.txt）
+  - `scripts/reading-sidebar.js`：自动生成 docsify 读书笔记侧边栏
+  - 新增 npm scripts：`seo:audit`、`reading:sidebar`
+  - 构建后自动生成 llms.txt
+
+- **读书笔记升级** ([c12dd01](https://github.com/rockbenben/LearnData/commit/c12dd012a))
+  - 迁移 Waline 评论系统 v2 → v3
+  - 优化站点运行时间统计（ES6 模块化代码）
+  - 改进页面阅读量统计集成
+  - 增强 SEO meta description
+  - 禁用默认 docsify 搜索（避免与 slimsearch 冲突）
+
+### 📦 依赖与 CI 更新
+
+依赖版本和 GitHub Actions 均已随代码更新，`git pull` 后重新安装即可，无需手动修改。主要变更：构建工具从 `@vuepress/bundler-webpack` 切换到 `@vuepress/bundler-vite`，移除 `mathjax-full`/`sass-loader`/`vidstack`，新增 `@mathjax/src`/`gray-matter`。
+
+### ⚠️ 迁移说明（从 v1.3.9 升级）
+
+所有配置变更（目录重命名、Webpack→Vite、依赖替换等）均已包含在代码中，拉取最新版本即可自动完成迁移：
+
+```bash
+git pull origin main
+rm -rf node_modules pnpm-lock.yaml
+pnpm install
+pnpm docs:build
+```
+
+本版本将 `docs` 目录重命名为 `src`，`git pull` 会自动处理该重命名，你已有的文章和配置会随之移动到 `src` 下。如遇合并冲突，注意以下两点：
+
+- **自定义文章**：确认你的文章已从 `docs/` 迁移到 `src/` 目录下，路由路径不变。
+- **站点配置**（URL、站点名、头像等）：合并冲突时保留你的自定义值即可，但注意 `config.ts` 中的 bundler 需改用 `viteBundler()`，`templateBuild` 路径需从 `./docs/` 改为 `./src/`。
+
 ## 1.3.9 (2025-10-12)
 
 ### ⚠️ 破坏性更新

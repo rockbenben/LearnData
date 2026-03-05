@@ -43,7 +43,7 @@ icon: fa6-solid:book-open-reader
 
    ![](https://img.newzone.top/2023-03-14-04-02-16.png?imageMogr2/format/webp)
 
-3. 然后，请进入菜单栏顶部的「Actions」页签，选择最新的 workflow。在页面右上方点击「Re-run jobs」>「Re-run all jobs」，这样做可以触发 GitHub 自动重新生成并部署网页。如果设置无误，GitHub 会自动创建一个名为 gh-page 的分支，并在其中部署你的页面。
+3. 然后，请进入菜单栏顶部的「Actions」页签，选择最新的 workflow。在页面右上方点击「Re-run jobs」>「Re-run all jobs」，这样做可以触发 GitHub 自动重新生成并部署网页。如果设置无误，GitHub 会自动创建一个名为 gh-pages 的分支，并在其中部署你的页面。
 
    ![](https://img.newzone.top/2023-03-14-04-04-52.gif?imageMogr2/format/webp)
 
@@ -51,7 +51,7 @@ icon: fa6-solid:book-open-reader
 
    ![](https://img.newzone.top/20180505202201.png?imageMogr2/format/webp)
 
-5. 在「Settings」>「Pages」>「Build and deployment」>「Branch」中，将 gh-page 分支设置为 GitHub Pages 的源。大部分情况下，网站运行目录保持默认的 `/(root)` 即可。完成设置后，不要忘记点击「Save」保存。如果在此步骤中未找到 gh-pages 分支，请回到第三步重新触发一次 workflow，或尝试修改仓库中的任意文件以手动启动 GitHub Action。
+5. 在「Settings」>「Pages」>「Build and deployment」>「Branch」中，将 gh-pages 分支设置为 GitHub Pages 的源。大部分情况下，网站运行目录保持默认的 `/(root)` 即可。完成设置后，不要忘记点击「Save」保存。如果在此步骤中未找到 gh-pages 分支，请回到第三步重新触发一次 workflow，或尝试修改仓库中的任意文件以手动启动 GitHub Action。
 
    ![](https://img.newzone.top/2022-08-10-19-39-15.png?imageMogr2/format/webp)
 
@@ -217,7 +217,7 @@ Vercel 部署步骤如下：
 
 ### ERR_MODULE
 
-如果出现 `Error [ERR_MODULE_NOT_FOUND]: Cannot find module` 的报错，可能是第三方插件或 pacakge.json 环境依赖未正确配置。此报错出现的几率极低，如果遇到，可以使用最新版本的 `package.json` 和 `pnpm-lock.yaml` 来覆盖本地设置，或者删除主目录下的 `.npmrc` 文件。
+如果出现 `Error [ERR_MODULE_NOT_FOUND]: Cannot find module` 的报错，可能是第三方插件或 package.json 环境依赖未正确配置。此报错出现的几率极低，如果遇到，可以使用最新版本的 `package.json` 和 `pnpm-lock.yaml` 来覆盖本地设置，或者删除主目录下的 `.npmrc` 文件。
 
 ### 本地运行 LearnData
 
@@ -227,4 +227,4 @@ Vercel 部署步骤如下：
 
 本地服务运行后，修改文件时页面会同步更新预览。若需停止本地服务器，可在终端中按下 `Ctrl + C`。
 
-如果你想深入了解 LearnData 的高级技巧，请浏览 [LearnData 博客：高效知识管理和进阶应用技巧](https://newzone.top/posts/2024-01-28-learndata-advanced.html)。
+如果你想深入了解 LearnData 的进阶用法，请浏览 [知识管理与搜索](https://newzone.top/posts/2024-01-28-learndata-advanced.html)和[自动化脚本](https://newzone.top/posts/2026-03-05-learndata-scripts-llm-seo.html)。
