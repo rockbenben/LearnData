@@ -1,0 +1,77 @@
+# LearnData 开源笔记
+
+> 开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。
+
+## Pages
+
+- [LearnData 开源笔记](https://newzone.top/) - 还在为笔记四处分散而烦恼？LearnData 是一款帮你整合知识的开源工具。我们提供效率方法、心理学探索，教你搭建属于自己的知识管理系统。
+- [博客文章样例](https://newzone.top/_posts/2024-03-01-blog_example.html) - 博客文章内容，支持 Markdown 和 HTML 语言。
+- [博客文章样例 2](https://newzone.top/_posts/2024-03-02-blog_example2.html) - 博客文章内容，支持 Markdown 和 HTML 语言。
+- [必备应用](https://newzone.top/apps/Applist.html) - Windows 自用软件，以开源软件为主。
+- [Chrome 扩展](https://newzone.top/apps/Chrome.html) - 常用 Chrome 扩展工具，链接多为 Chrome Web Store 项目页面。
+- [平面设计](https://newzone.top/apps/design.html) - 在电子白板功能普及之前，我使用 Figma 对海报、图片素材进行简单剪辑，制作流程图。但是，电子白板的美观和自由度远远超过 Figma，我现在的流程图和示意图都是通过 Excalidraw 和 Canvas 完成的。
+- [加密页面](https://newzone.top/apps/encrypt03.html) - 加密样例页面
+- [开源工具](https://newzone.top/apps/toolbox.html) - 开源工具不仅适用于个人电脑，还可用于项目的前端和后端。此页面将不设使用范围，记录所遇到的使用开源工具。
+- [专题示例](https://newzone.top/apps/topic/) - 如果想形成专题文章，并想使用独立侧边栏，则参考本目录使用专题文章。
+- [专题文章1](https://newzone.top/apps/topic/topic01.html) - 不建议过度囤积婴儿用品，尤其是尿不湿和奶粉。虽然有时会有吸引人的优惠，但我们必须记住，新生儿的成长速度惊人。今天合适的尿不湿尺寸，明天可能就小了。我还记得，老婆的朋友曾大量储备尿不湿，结果没用完。最后，我们成了这些尿不湿的受益者。此外，尽管配方奶是母乳不足的一个备选，但它的营养价值还是不及母乳。因此，也不建议过量购买。
+- [专题文章2](https://newzone.top/apps/topic/topic02anytitle.html) - 原本想着带娃就是阿姨带着我待着。但真正开始后，为了让娃不近视，每天都需要带娃外出。
+- [LearnData开源笔记博客](https://newzone.top/blog.html) - 欢迎访问LearnData博客，一个专注自我提升的知识分享平台。探索开源工具、效率方法与心理学，与我一同学习、实践、成长。盛年不重来，让我们即刻开始！
+- [Coding](https://newzone.top/code/) - 代码编程的学习路径：
+- [AutoHotkey](https://newzone.top/code/AutoHotkey.html) - AutoHotkey 是 Windows 平台下开源的热键脚本语言。AHK 学习门槛不高，初期可以通过脚本录制来完成，我通过 AHK 热键启动、定时判断、改键盘等多种自动化操作，推荐学习制作你的专属自动化脚本。
+- [Electron](https://newzone.top/code/Electron.html) - Electron 是使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序框架。Electron 兼容 Mac、Windows 和 Linux，可以构建出三个平台的应用程序。
+- [HTML](https://newzone.top/code/HTML.html) - HTTPS 网页中，js、css、gif 等文件都必须要使用 https，否则会加载报错，图片可以不使用 https。
+- [JavaScript](https://newzone.top/code/Javascript.html) - JavaScript 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言，最新标准是 ECMAScript 6.0。虽然它是作为开发 Web 页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，并长年居于最受欢迎编程语言排行榜榜首。
+- [Markdown](https://newzone.top/code/Markdown.html) - Markdown 是一种轻量级标记语言，易读易写，并对于图片、图表、数学式都有支持，目前许多网站与应用都支持了 Markdown。
+- [Python](https://newzone.top/code/Python.html) - Python 很久没用了，暂时只做记录作用。
+- [正则表达式](https://newzone.top/code/Regex.html) - 正则表达式，又称规则表达式，是使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串，通常被用来检索、替换那些符合某个模式（规则）的文本。
+- [Vue](https://newzone.top/code/Vue.html) - mounted 是生命周期函数，自动执行。
+- [每日仪式](https://newzone.top/DailyRoutine.html) - 每日仪式是个人生活习惯的核心。它看起来可能会显得固化、死板、功利，有人反馈「透露着一股形式主义气息」，但是，这正是我想要的：**遵循一个固定、程序化的流程，有规律地养成习惯**，实现自我提升。
+- [Cloudflare](https://newzone.top/deploy/Cloudflare.html) - 官方文档：Cloudflare Docs
+- [云计算服务](https://newzone.top/deploy/CloudServices.html) - 国内服务器带宽限制较高，高带宽按量付费，随着访客数量的增加，费用也会急剧上升。而固定流量宽带，网站打开速度明显变慢。为减少服务器的带宽压力，可将静态文件、图片放在 CDN 上托管，而非服务器上。
+- [域名 DNS 托管](https://newzone.top/deploy/DNS.html) - 国内访问为主的话，域名建议备案后托管在国内厂商。之前试过 Cloudflare，光域名解析就用了 500 ms，换回阿里云后速度稳定许多。
+- [GitHub](https://newzone.top/deploy/GitHub.html) - GitHub Actions 是一个持续集成和持续交付 (CI/CD) 平台，可用于自动执行构建、测试和部署管道。您可以创建工作流程来构建和测试存储库的每个拉取请求，或将合并的拉取请求部署到生产环境。将 GitHub Actions 命令保存为 `main.yml`，放于 `.github\workflows` 目录下，repo 发生指定调节的改变时，Actions 会自动运行。^[了解 G...
+- [数据库管理](https://newzone.top/deploy/MySQL.html) - 我的数据库是通过 MySQL 和 phpMyAdmin 进行管理的。本页面将记录遇到的日常问题及其解决办法。
+- [静态部署](https://newzone.top/deploy/Static.html) - 如果在国内静态资源库找不到所需的静态包，建议使用 `npm i` 命令将其下载到本地，然后部署到阿里云/七牛云的国内服务器上，以避免因 UNPKG 和 jsDelivr 等静态节点被屏蔽而导致网页样式显示出错。
+- [服务器 VPS](https://newzone.top/deploy/VPS.html) - 部署应用前，为服务器配置好包管理工具，以便节省部署时间。主流的前端包管理工具有 npm、yarn、pnpm、以及国内的镜像 cnpm、tyarn 等，这些包管理器都是基于 nodejs。
+- [加密](https://newzone.top/encrypt/) - 加密内容，支持 Markdown 和 HTML 语言。
+- [加密 1](https://newzone.top/encrypt/encrypt01.html) - 加密内容，支持 Markdown 和 HTML 语言。
+- [加密 2](https://newzone.top/encrypt/encrypt02.html) - 加密内容，支持 Markdown 和 HTML 语言。
+- [网购攻略](https://newzone.top/family/Coupon.html) - 电商平台为了促进购买，有各种购物优惠，但领取优惠环节比较复杂，让人很容易忽略。为了避免这种情况，我把各平台的优惠攻略记录下来，方便查询。
+- [健康饮食](https://newzone.top/family/Diet.html) - 16:8 断时法：每天 8 小时进食，8 点钟早餐，3 点后禁食。
+- [生活窍门](https://newzone.top/family/Life.html) - 电推子理发：先用 1.5 号限位器铲平两边和后面，然后用 9 号限位器从后向前修整头发（包括刘海），最后用 6 号限位器修理过渡区域。
+- [健身计划](https://newzone.top/Fitness.html) - 早餐必吃，午餐吃饱，晚餐少吃且不吃主食。
+- [个人介绍](https://newzone.top/intro.html) - 互联网广告人，
+- [The 5 AM Club](https://newzone.top/reading/#/0_效率与习惯/The_5_AM_Club) - 早上 5 点 - 8 点，专注做 Personal Project，比如读书、考证、写作和你特别想做的事情。
+- [吃掉那只青蛙](https://newzone.top/reading/#/0_效率与习惯/吃掉那只青蛙) - 《吃掉那只青蛙》的核心是每天先完成重要的工作、吃掉丑陋的青蛙。
+- [福格行为模型](https://newzone.top/reading/#/0_效率与习惯/福格行为模型) - 《福格行为模型》是习惯养成的行为设计学。明确你的愿望或成果，然后尽可能多的罗列行为，最后找到适合你的黄金行为。习惯从微小的行动开始，比如：开煤气灶 - 烧开水 - 煮粥 - 早餐。
+- [这就是 OKR](https://newzone.top/reading/#/0_效率与习惯/这就是_OKR) - 《这就是 OKR》介绍了硅谷创业团队在使用 OKR 时遇到的问题、阻碍以及取得的成果，让人更容易理解 OKR 的作用。个人觉得，OKR 的优点在于聚焦优先事务，提高团队透明度，让整个团队朝着一个方向努力。
+- [了不起的我](https://newzone.top/reading/#/1_思维与成长/了不起的我) - 《了不起的我》罗列了我们生活中常见的心理学案例，你可以逐个地去寻找符合自己的案例，去比对，去思索是不是自己有哪些需要改善的。
+- [人，做得到任何事](https://newzone.top/reading/#/1_思维与成长/人_做得到任何事) - 《人，做得到任何事：阿德勒心理学讲义》探讨了人生的各个方面，特别是从心理学角度深入分析了童年经历对认知发展的影响。全书晦涩难懂，适合作为专业工具书使用。书中包含了许多引人深思的观点。
+- [原则](https://newzone.top/reading/#/1_思维与成长/原则) - 《原则》对我的影响最大，结合批评与自我批评，找到了提升的方向。但一定要制订计划，并严格按照计划来走，否则只会是一本无聊的理论书。总结内容查看 普通人的生活原则－批评与自我批评。
+- [成长的边界](https://newzone.top/reading/#/1_思维与成长/成长的边界) - 《成长的边界》是探索更多的可能性，从外部视角审视自己。
+- [拖延心理学](https://newzone.top/reading/#/1_思维与成长/拖延心理学) - 《拖延心理学》翻译生涩，快速阅读认知自己的深层拖延心理。
+- [拥抱可能](https://newzone.top/reading/#/1_思维与成长/拥抱可能) - 《拥抱可能》是由九十岁的著名心理医生 Edith Eva Eger 所写的回忆录。Eger 是一名来自匈牙利的犹太人，也是奥斯维辛集中营的幸存者。
+- [终身成长](https://newzone.top/reading/#/1_思维与成长/终身成长) - 《终身成长》书名与内容不太符合，它更多地是通过各种案例描述**成长型思维和固定型思维**。
+- [人性的弱点](https://newzone.top/reading/#/2_沟通与影响/人性的弱点) - 《人性的弱点》的副标题是如何赢取友谊与影响他人。
+- [如何正确求助](https://newzone.top/reading/#/2_沟通与影响/如何正确求助) - 《如何正确求助》有些实用的理论，但中文版翻译得晦涩难懂，需要细品。
+- [影响力](https://newzone.top/reading/#/2_沟通与影响/影响力) - 《影响力》让其他人按你的想法行为。
+- [掌控力](https://newzone.top/reading/#/2_沟通与影响/掌控力) - 《掌控力》的大部分内容都是 CIA 的审讯记录，阅读起来相当费劲。书中的内容不仅与普通人的生活相距甚远，而且里面充斥的西方观点与东方的道德观也存在巨大差异。
+- [阅人无数](https://newzone.top/reading/#/2_沟通与影响/阅人无数) - 《阅人无数》是关于如何与他人建立有效沟通的书。
+- [一本小小的红色写作书](https://newzone.top/reading/#/3_创意与写作/一本小小的红色写作书) - 《一本小小的红色写作书》是基础写作，只适合中小学学生阅读，都为基础写作技巧，大多无参考作用。关键内容都在目录中。
+- [你的顾客需要一个好故事](https://newzone.top/reading/#/3_创意与写作/你的顾客需要一个好故事) - 《你的顾客需要一个好故事》教你把主人公的位置留给顾客，而把你的品牌放到向导的位置上。作者提出的故事品牌框架（SB7），能让你清晰有效地阐明品牌信息。
+- [创意，是一笔灵魂交易](https://newzone.top/reading/#/3_创意与写作/创意_是一笔灵魂交易) - 《创意，是一笔灵魂交易》没读全文，直接使用提出的两种关键实践方法，“晨间笔记”和“艺术家之约”： 这是书中被比作无线电的接收器和发射台。
+- [吴军阅读与写作讲义](https://newzone.top/reading/#/3_创意与写作/吴军阅读与写作讲义) - 《吴军阅读与写作讲义》的前半部分涵盖了很多实用技巧，帮助我澄清了对听、说、读、写的认识。而后半部分则是一些阅读范例，类似于语文书中的阅读理解，我准备将其当作工具书，等待无聊时慢慢阅读。
+- [故事：材质、结构、风格和银幕剧作的原理](https://newzone.top/reading/#/3_创意与写作/故事_材质_结构_风格和银幕剧作的原理) - 《故事：材质、结构、风格和银幕剧作的原理》
+- [中国居民膳食指南](https://newzone.top/reading/#/4_健康与生活/中国居民膳食指南) - 《中国居民膳食指南（2022）》是由中国营养学会对中国人提供的膳食指导。网上很多它的要点截图，为了完整阅读，我直接买了书。
+- [何为良好生活](https://newzone.top/reading/#/4_健康与生活/何为良好生活) - 《何为良好生活》与主题无关，更像是伦理哲学入门书，介绍些简单的哲学理论与现实的联系。简单读读就好。
+- [天生就会跑](https://newzone.top/reading/#/4_健康与生活/天生就会跑) - 《天生就会跑》记录了作者探索耐力跑的过程。虽然理论知识并不深奥，但能够激发你对跑步的热爱。
+- [商业至简](https://newzone.top/reading/#/5_商业与社会/商业至简) - 《商业至简》涵盖了个人时间管理、品牌营销、团队建设、谈判等方面的商业知识。这本书更像是一本读书笔记，提取了 60 个知识点。它可以作为一本工具书，在需要时可以拿出来使用。例如，在制作报价单时使用。
+- [增长黑客](https://newzone.top/reading/#/5_商业与社会/增长黑客) - 《增长黑客》的实用价值不是很高，因为书中介绍的增长手段大多数都是早在 2010 年左右就已经开始使用的通用方法。虽然可以作为参考，但更多的是用来反思当前产品是否存在不足。
+- [巴拉巴西成功定律](https://newzone.top/reading/#/5_商业与社会/巴拉巴西成功定律) - 《巴拉巴西成功定律》并不是成功鸡汤，而是通过一些现象让你了解成功的部分规律。
+- [炒作机器](https://newzone.top/reading/#/5_商业与社会/炒作机器) - 《炒作机器》更像是一本关于社交网络传播知识的科普书，向你介绍一些有关传播学的信息。
+- [置身事内](https://newzone.top/reading/#/5_商业与社会/置身事内) - 《置身事内》基本是概念介绍，对于问题浅尝辄止，想通盘理解政府的税制变革和运作模式可以略读。不能明白评分为什么那么高。
+- [苏世民：我的经验与教训](https://newzone.top/reading/#/5_商业与社会/苏世民_我的经验与教训) - 《苏世民：我的经验与教训》阅读体验不错，其中故事化的情节让本书更有趣，比如：「第一份工作是为了获取比同班同学更高的工资 (一万)，强行跟对方招聘人员，说我要 10500 美元」，「工作初期的工作是审核对方公司报告，作者判断公司 A 不行，可是公司没有接受。过了几年后，公司 A 倒闭，证券公司被告。原告将作者形容成一个天才，而自己公司就把作者形容成白痴，最后原告赢了」。
+- [读书笔记](https://newzone.top/reading/#/README) - 曾经我尝试使用 Notion 来管理书单，用 Calibre、Logseq 来对电子书做读书笔记。我渐渐发现自己几乎从不回头再看这些电子书的笔记。因此，我决定放弃电子书这种方式，而将我的注意力更多地集中在实体书籍上的摘要总结上。
+- [评论插件](https://newzone.top/web/Comments.html) - LearnData 使用的是 Waline 评论插件，部署简单，有后端管理。评论插件推荐次序为 Waline > Valine > giscus > Gitalk > Gitter。
+- [docsify](https://newzone.top/web/docsify.html) - docsify 是一个神奇的文档网站生成器，可以快速帮你将 .md 文档生成为网站。docsify 入门简单且无需服务器，非常适合个人笔记的简单整理分享。
+- [VuePress](https://newzone.top/web/VuePress.html) - VuePress 是一个以 Markdown 为中心的静态网站生成器。你可以使用 Markdown 来书写内容（如文档、博客等），然后 VuePress 会帮助你生成一个静态网站来展示它们。如果你已经有了 docsify/Hexo 等 Markdown 架构网站，简单就能切换到 VuePress。

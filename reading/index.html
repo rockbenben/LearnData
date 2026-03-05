@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <title>LearnData - 读书笔记</title>
-    <meta name="description" content="读书笔记" />
-    <meta name="keywords" content="读书笔记,阅读笔记" />
+    <meta name="description" content="将书籍转化为你的工具书！专注实体书摘要总结，涵盖效率习惯、思维成长、沟通技巧等领域，运用费曼技巧和3-2-1训练法，助你真正吸收并运用所学知识。" />
     <link rel="stylesheet" href="https://oss.newzone.top/docsify/main/4.13.1/themes/vue.css" />
     <link rel="stylesheet" href="https://oss.newzone.top/docsify/docsify-toc/dist/toc.css" />
     <!-- <link rel="stylesheet" href="https://oss.newzone.top/docsify/docsify-gifcontrol/dist/docsify-gifcontrol.css"> -->
+    <link rel="stylesheet" href="https://oss.newzone.top/@waline/3.8.0/client/dist/waline.css" />
     <style>
       .anchor {
         font-weight: bold;
@@ -47,13 +47,6 @@
           display: none;
         }
       }
-
-      /* 宽度小于 1300px 则隐藏 waline 评论框，避免异常 */
-      @media screen and (min-width: 1300px) {
-        #waline {
-          display: none;
-        }
-      }
     </style>
   </head>
 
@@ -87,7 +80,7 @@
         // formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}',
 
         // 全文搜索插件会根据当前页面上的超链接获取文档内容，在 localStorage 内建立文档索引。
-        search: "auto", // 默认值
+        // search: "auto", // 默认值
         // 搜索完整配置参数
         search: {
           maxAge: 86400000, // 缓存过期时间，单位毫秒，默认一天
@@ -101,11 +94,10 @@
           hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
         },
 
-        // 定义路由别名，可以更自由的定义路由规则。支持正则。
+        // 定义路由别名，确保子目录使用根目录的侧边栏
         alias: {
-          "/foo/(.*)": "/bar/$1", // supports regexp
-          "/zh-cn/changelog": "/changelog",
-          "/.*/_sidebar.md": "/_sidebar.md", // See #301
+          "/.*/_sidebar.md": "/_sidebar.md",
+          "/.*/_navbar.md": "/_navbar.md",
         },
 
         toc: {
@@ -126,8 +118,7 @@
         count: {
           language: "chinese", // default:english|chinese
         },
-        // 如有 Waline 后端，可添加阅读量统计：https://waline.js.org/guide/get-started.html
-
+		// 如有 Waline 后端，可添加阅读量统计：https://waline.js.org/guide/get-started/
         // 添加页脚
         footer: {
           copy: "盛年不重来，一日难再晨。 —— ",
@@ -158,49 +149,119 @@
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
     -->
 
-    <script src="https://oss.newzone.top/jquery/3.7.1/dist/jquery.min.js"></script>
-    <script src="https://oss.newzone.top/instantpage.min.js"></script>
-    <!-- 添加网站运行时间统计 -->
-    <script language="javascript">
-      function siteTime() {
-        window.setTimeout("siteTime()", 1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours = minutes * 60;
-        var days = hours * 24;
-        var years = days * 365;
-        var today = new Date();
-        var todayYear = today.getFullYear();
-        var todayMonth = today.getMonth() + 1;
-        var todayDate = today.getDate();
-        var todayHour = today.getHours();
-        var todayMinute = today.getMinutes();
-        var todaySecond = today.getSeconds();
-        /* Date.UTC() -- 返回 date 对象距世界标准时间 (UTC)1970 年 1 月 1 日午夜之间的毫秒数 (时间戳)
-      year - 作为 date 对象的年份，为 4 位年份值
-      month - 0-11 之间的整数，做为 date 对象的月份
-      day - 1-31 之间的整数，做为 date 对象的天数
-      hours - 0(午夜 24 点)-23 之间的整数，做为 date 对象的小时数
-      minutes - 0-59 之间的整数，做为 date 对象的分钟数
-      seconds - 0-59 之间的整数，做为 date 对象的秒数
-      microseconds - 0-999 之间的整数，做为 date 对象的毫秒数 */
-        var t1 = Date.UTC(2022, 7, 23, 22, 22, 22); //北京时间 2022-07-23 22:22:22 //LearnData 首个 commit 时间，改为你自己值得纪念的日子吧
-        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-        var diff = t2 - t1;
-        var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor(diff / days - diffYears * 365);
-        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-        if (diffYears > 0) {
-          document.getElementById("sitetime").innerHTML = " 已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒 ";
-        } else {
-          document.getElementById("sitetime").innerHTML = " 已运行 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒 ";
+    <!-- 网站运行时间统计 -->
+    <script>
+      (function () {
+        const startTime = Date.UTC(2022, 7, 23, 22, 22, 22); // 北京时间 2022-07-23 22:22:22 //LearnData 首个 commit 时间，改为你自己值得纪念的日子吧
+        const MS = { s: 1000, m: 60000, h: 3600000, d: 86400000, y: 31536000000 };
+
+        function updateSiteTime() {
+          const now = new Date();
+          const diff = Date.UTC(now.getFullYear(), now.getMonth() + 1, now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds()) - startTime;
+          const y = Math.floor(diff / MS.y);
+          const d = Math.floor((diff % MS.y) / MS.d);
+          const h = Math.floor((diff % MS.d) / MS.h);
+          const m = Math.floor((diff % MS.h) / MS.m);
+          const s = Math.floor((diff % MS.m) / MS.s);
+          const el = document.getElementById("sitetime");
+          if (el) el.textContent = y > 0 ? `已运行 ${y} 年 ${d} 天 ${h} 小时 ${m} 分 ${s} 秒` : `已运行 ${d} 天 ${h} 小时 ${m} 分 ${s} 秒`;
         }
-      }
-      siteTime();
+
+        updateSiteTime();
+        setInterval(updateSiteTime, 1000);
+      })();
     </script>
     <script src="https://oss.newzone.top/docsify/docsify-count/dist/countable.min.js"></script>
-    <script src="https://oss.newzone.top/docsify/docsify-waline/docsify-waline.min.js"></script>
+
+    <!-- Waline v3 评论系统 -->
+    <script type="module">
+      import { init, pageviewCount } from "https://oss.newzone.top/@waline/3.8.0/client/dist/waline.js";
+
+      const walineConfig = window.$docsify?.waline || {};
+      if (!walineConfig.serverURL) {
+        console.warn("[Waline] serverURL is required");
+      } else {
+        let walineInstance = null;
+        const lang = window.$docsify?.count?.language || "chinese";
+        const suffix = lang === "chinese" ? "次阅读" : " views";
+
+        function createContainer() {
+          let container = document.getElementById("waline");
+          if (!container) {
+            container = document.createElement("div");
+            container.id = "waline";
+            container.style.cssText = "max-width: var(--content-max-width, 1200px); margin: 2rem auto; padding: 0 15px;";
+          }
+          return container;
+        }
+
+        function initWaline() {
+          const article = document.querySelector("article.markdown-section");
+          if (!article) return;
+
+          const container = createContainer();
+          if (!article.contains(container)) {
+            article.appendChild(container);
+          }
+
+          const path = (window.location.pathname + window.location.hash).replace(/\?.*$/, "");
+
+          const headerSpan = document.querySelector("#main div > span");
+          if (headerSpan) {
+            let counter = headerSpan.querySelector(".waline-pageview-count");
+            if (!counter) {
+              headerSpan.innerHTML += `&nbsp;|&nbsp;<span class="waline-pageview-count" data-path="${path}"></span>&nbsp;${suffix}`;
+            } else {
+              counter.setAttribute("data-path", path);
+              counter.textContent = "";
+            }
+          }
+
+          if (walineInstance?.destroy) walineInstance.destroy();
+
+          walineInstance = init({
+            el: "#waline",
+            serverURL: walineConfig.serverURL,
+            path: path,
+            pageview: true,
+            reaction: walineConfig.reaction || false,
+            locale: walineConfig.locales?.["/"] || {},
+          });
+
+          pageviewCount({
+            serverURL: walineConfig.serverURL,
+            path: path,
+            selector: ".waline-pageview-count",
+            update: true,
+          });
+        }
+
+        // 页面初始加载尝试初始化
+        setTimeout(initWaline, 500);
+        setTimeout(initWaline, 1500); // 重试一次以防万一
+
+        // 监听 docsify 路由变化
+        let lastPath = "";
+        const observer = new MutationObserver(() => {
+          const currentPath = window.location.pathname + window.location.hash;
+          if (currentPath !== lastPath) {
+            lastPath = currentPath;
+            setTimeout(initWaline, 100);
+          }
+        });
+
+        // 无论 DOMContentLoaded 是否已触发，都开始监听
+        const target = document.querySelector("#main");
+        if (target) {
+          observer.observe(target, { childList: true, subtree: true });
+        } else {
+          window.addEventListener("DOMContentLoaded", () => {
+            const t = document.querySelector("#main");
+            if (t) observer.observe(t, { childList: true, subtree: true });
+            setTimeout(initWaline, 500);
+          });
+        }
+      }
+    </script>
   </body>
 </html>
