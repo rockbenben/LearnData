@@ -5,31 +5,34 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vuepress dev src",
-    "docs:build": "vuepress build src",
     "docs:clean-dev": "vuepress dev src --clean-cache",
+    "docs:build": "vuepress build src && node scripts/llms-txt.js",
     "docs:update-package": "pnpm dlx vp-update",
     "lint": "prettier --check .",
     "lint:fix": "prettier --check --write .",
     "lint:markdown": "markdownlint src",
-    "lint:markdown-fix": "markdownlint src --fix"
+    "lint:markdown-fix": "markdownlint src --fix",
+    "seo:audit": "node scripts/seo-audit.js",
+    "reading:sidebar": "node scripts/reading-sidebar.js"
   },
   "devDependencies": {
-    "@mathjax/src": "^4.1.0",
+    "@mathjax/src": "^4.1.1",
     "@vuepress/bundler-vite": "2.0.0-rc.26",
-    "@vuepress/plugin-docsearch": "2.0.0-rc.121",
-    "@vuepress/plugin-feed": "2.0.0-rc.121",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.118",
-    "@vuepress/plugin-slimsearch": "2.0.0-rc.121",
-    "@waline/client": "^3.8.0",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.124",
+    "@vuepress/plugin-feed": "2.0.0-rc.124",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.124",
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.124",
+    "@waline/client": "^3.13.0",
     "cpx2": "^8.0.0",
+    "gray-matter": "^4.0.3",
     "dashjs": "^4.7.4",
     "hls.js": "^1.6.15",
-    "markdownlint-cli": "^0.45.0",
-    "prettier": "^3.7.4",
-    "sass-embedded": "^1.97.2",
-    "vue": "^3.5.26",
+    "markdownlint-cli": "^0.47.0",
+    "prettier": "^3.8.1",
+    "sass-embedded": "^1.97.3",
+    "vue": "^3.5.29",
     "vuepress": "2.0.0-rc.26",
-    "vuepress-theme-hope": "2.0.0-rc.102"
+    "vuepress-theme-hope": "2.0.0-rc.103"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
