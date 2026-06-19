@@ -12,7 +12,15 @@
 src/_temp/
 
 # Audit report
-audit-report.json
+seo-audit-report.json
+geo-audit-report.json
+
+# SEO/GEO research data (PAA / Related Searches)
+scripts/seo-research/
 
 # GoodSync
 _gsdata_/
+
+# 本地 AI 工具产物
+.gstack/
+.claude/
