@@ -20,7 +20,7 @@ export default defineComponent({
           rel: "noopener noreferrer",
           "aria-label": "discord",
           innerHTML: discordIcon,
-        })
+        }),
       );
   },
 });

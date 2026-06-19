@@ -1,8 +1,21 @@
 // 响应式布局断点，网站主题色和代码块主题设置
 // https://theme-hope.vuejs.press/zh/config/style.html
 
-$theme-color: #3eaf7c,#2196f3, #f26d6d, #fb9b5f;
+// 极简东方 · 朱砂主色（单一品牌主色，不再让用户切换 4 色）
+$theme-color: #a72b2a;
 
-// https://theme-hope.vuejs.press/zh/guide/markdown/code/fence.html#%E9%AB%98%E4%BA%AE%E5%99%A8
-//$code-bg-color：代码块的背景颜色
-//$code-color：代码块的字体颜色
+// 代码块容器底色 + 字色
+// 注意：内层 <pre> 的实际语法着色由 shiki vitesse 主题决定（见 theme.ts）
+// 这里只控制 .vp-code 外层容器（行号区、复制按钮、tab 切换等）的协调
+// 凹陷感：代码块底色比主 bg 略深一档，视觉上"凹刻"在纸面
+// light: 比主 bg #faf6ef 略深一档
+// dark:  比主 bg #1c1814 略深一档，与 vitesse-dark 内层 <pre> 的 #121212 渐变过渡自然
+$code-bg-color: (
+  light: #f3eee5,
+  dark: #15110d,
+);
+
+$code-color: (
+  light: #1c1917,
+  dark: #f0e8d8,
+);

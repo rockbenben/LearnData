@@ -1,8 +1,16 @@
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
-import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+// 谷歌分析：启用时取消本行注释，并填回下方 plugins 里你自己的 GA4 ID
+// import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+
+// Shim navigator for SSR
+if (typeof navigator === "undefined") {
+  // @ts-ignore
+  global.navigator = { userAgent: "node", platform: "node" };
+}
 
 import theme from "./theme.js";
+import { faqSchemaPlugin } from "./plugins/faq-schema.js";
 
 export default defineUserConfig({
   // 网站路径默认为主域名。如果网站部署在子路径下，比如 xxx.com/yyy，那么 base 应该被设置为 "/yyy/"
@@ -27,11 +35,12 @@ export default defineUserConfig({
   pagePatterns: ["**/*.md", "!_temp", "!reading", "!.vuepress", "!node_modules"],
 
   plugins: [
-    // 谷歌分析
-    googleAnalyticsPlugin({
-      // 设置你的 Analytics ID
-      id: "G-RWKZTY2P9R",
-    }),
+    // 谷歌分析：填回你自己的 GA4 ID 后，取消本段与顶部 import 的注释即可启用
+    // googleAnalyticsPlugin({
+    //   id: "G-XXXXXXXXXX",
+    // }),
+    // FAQ 结构化数据（frontmatter faq -> FAQPage JSON-LD）
+    faqSchemaPlugin(),
   ],
   bundler: viteBundler(),
 });

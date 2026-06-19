@@ -11,7 +11,8 @@ export default hopeTheme(
       url: "https://newzone.top",
     },
 
-    favicon: "/favicon.ico",
+    // 现代浏览器优先用朱砂色 SVG，老浏览器自动 fallback 到 /favicon.ico
+    favicon: "/logo.svg",
     logo: "/logo.svg",
 
     // 网站文章的版权声明
@@ -27,7 +28,7 @@ export default hopeTheme(
     // footer: `CC BY-NC-ND 4.0 Licensed`,
 
     // 是否全局启用路径导航
-    breadcrumb: false,
+    breadcrumb: true,
 
     // 页面元数据：贡献者，最后修改时间，编辑链接
     contributors: false,
@@ -89,6 +90,11 @@ export default hopeTheme(
     // print: false,
 
     markdown: {
+      // shiki 代码高亮主题：vitesse 暖色系，与朱砂 + 宣纸/暖墨黑配色协调
+      highlighter: {
+        type: "shiki",
+        themes: { light: "vitesse-light", dark: "vitesse-dark" },
+      },
       align: true, // 启用自定义对齐
       attrs: true, // 使用特殊标记为 Markdown 元素添加属性
       mark: true, // 使用 == == 进行标记，注意两边需要有空格
