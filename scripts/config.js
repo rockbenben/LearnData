@@ -59,17 +59,17 @@ export default {
   // Auto-detected from .vuepress/theme.ts and .vuepress/config.ts
   site,
 
-  // generate-llms-txt.js
+  // llms-txt.js
   llms: {
     outputFile: path.join(docsDir, ".vuepress/dist/llms.txt"),
     excludedDirs: ["node_modules", ".vuepress", "_temp"],
   },
 
-  // audit-frontmatter.js
-  audit: {
+  // seo-audit.js
+  seoAudit: {
     excludedDirs: ["node_modules", ".vuepress", "_temp", "reading"],
-    outputFile: path.join(__dirname, "../audit-report.json"),
-    seoRules: {
+    outputFile: path.join(__dirname, "../seo-audit-report.json"),
+    rules: {
       description: {
         minLength: 120,
         maxLength: 160,
@@ -84,17 +84,33 @@ export default {
     },
   },
 
-  // generate-reading-sidebar.js
+  // geo-audit.js
+  geoAudit: {
+    excludedDirs: ["node_modules", ".vuepress", "_temp", "reading"],
+    outputFile: path.join(__dirname, "../geo-audit-report.json"),
+    rules: {
+      minItems: 2,
+      maxItems: 5,
+      answerMinLength: 20,
+      answerMaxLength: 300,
+    },
+  },
+
+  // reading-sidebar.js
   reading: {
     dir: path.join(docsDir, "reading"),
     sidebarFile: "_sidebar.md",
-    ignoreFiles: ["README.md", "_sidebar.md", "_navbar.md", "index.html", ".nojekyll"],
-    homeEntry: "- [读书方法](README.md)",
+    // 类目子目录里若意外出现 README.md 或 _sidebar.md（如某类目自带简介），不进 sidebar
+    // index.html / .nojekyll 等非 .md 由 endsWith(".md") 自动过滤，无需在此列出
+    ignoreFiles: ["README.md", "_sidebar.md"],
+    // 留空 = sidebar 不显示首页链接（顶栏 brand + sidebar 站名已能点回 README.md）
+    homeEntry: "",
     // Category directories must match this pattern (e.g. "0_效率与习惯")
     categoryPattern: /^\d+_/,
     // How to transform directory name for display (e.g. "0_效率与习惯" -> "0.效率与习惯")
     categoryNameReplace: [/^(\d+)_/, "$1."],
-    // Pinned names (shown first in their category, matched without .md)
+    // 置顶项（同类目内排在最前），数组顺序即显示顺序；与文件名做 includes 子串匹配，
+    // 例如 "原则" 会同时命中 "原则.md" 和未来可能的 "原则与方法.md"
     pinnedFiles: ["原则"],
   },
 };

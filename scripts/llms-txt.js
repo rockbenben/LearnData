@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { getAllMarkdownFiles } from "./lib/markdown-utils.js";
+import { getAllMarkdownFiles, getCharLength } from "./lib/markdown-utils.js";
 import config from "./config.js";
 
 const { baseUrl: BASE_URL, title: SITE_TITLE, description: SITE_DESC } = config.site;
@@ -91,8 +91,17 @@ function main() {
           if (!trimmed || trimmed.startsWith("#") || trimmed.startsWith(">") || trimmed.startsWith("![") || trimmed.startsWith("```") || trimmed.startsWith("<")) continue;
 
           description = cleanDescription(trimmed);
-          if (description.length > 200) {
-            description = description.substring(0, 197) + "...";
+          // 按显示宽度（中文=2）截断到约 200，与项目统一的 getCharLength 口径保持一致
+          if (getCharLength(description) > 200) {
+            let width = 0;
+            let out = "";
+            for (const ch of description) {
+              const cw = ch.codePointAt(0) > 127 ? 2 : 1;
+              if (width + cw > 197) break;
+              width += cw;
+              out += ch;
+            }
+            description = out + "...";
           }
           break;
         }

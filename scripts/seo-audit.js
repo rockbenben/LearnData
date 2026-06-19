@@ -9,7 +9,7 @@ import config from "./config.js";
  */
 
 const { docsDir } = config;
-const { excludedDirs, outputFile, seoRules } = config.audit;
+const { excludedDirs, outputFile, rules } = config.seoAudit;
 
 // 存储审计结果
 const auditResults = {
@@ -64,7 +64,7 @@ function auditFile(filePath) {
   } else {
     const titleText = String(frontmatter.title);
     const titleLength = getCharLength(titleText);
-    if (titleLength > seoRules.title.maxLength) {
+    if (titleLength > rules.title.maxLength) {
       result.issues.push({
         severity: "info",
         field: "title",
@@ -97,26 +97,26 @@ function auditFile(filePath) {
     const descText = Array.isArray(frontmatter.description) ? frontmatter.description.join(" ") : String(frontmatter.description);
     const descLength = getCharLength(descText);
 
-    if (descLength < seoRules.description.minLength) {
+    if (descLength < rules.description.minLength) {
       result.issues.push({
         severity: "warning",
         field: "description",
-        message: `description 太短 (${descLength} 字符)，建议 ${seoRules.description.minLength}-${seoRules.description.maxLength} 字符`,
+        message: `description 太短 (${descLength} 字符)，建议 ${rules.description.minLength}-${rules.description.maxLength} 字符`,
       });
       result.score -= 15;
       auditResults.summary.shortDescription++;
-    } else if (descLength > seoRules.description.maxLength) {
+    } else if (descLength > rules.description.maxLength) {
       result.issues.push({
         severity: "warning",
         field: "description",
-        message: `description 太长 (${descLength} 字符)，建议 ${seoRules.description.minLength}-${seoRules.description.maxLength} 字符`,
+        message: `description 太长 (${descLength} 字符)，建议 ${rules.description.minLength}-${rules.description.maxLength} 字符`,
       });
       result.score -= 10;
       auditResults.summary.longDescription++;
     }
 
     // 检查模板化表述
-    const hasTemplate = seoRules.description.avoidPhrases.some((phrase) => descText.includes(phrase));
+    const hasTemplate = rules.description.avoidPhrases.some((phrase) => descText.includes(phrase));
     if (hasTemplate) {
       result.issues.push({
         severity: "warning",
@@ -146,27 +146,27 @@ function generateSuggestions(result) {
     suggestions.push({
       field: "description",
       current: null,
-      suggested: `为「${result.frontmatter.title || "此文章"}」撰写一个${seoRules.description.minLength}-${seoRules.description.maxLength}字符的吸引人的描述`,
+      suggested: `为「${result.frontmatter.title || "此文章"}」撰写一个${rules.description.minLength}-${rules.description.maxLength}字符的吸引人的描述`,
     });
   } else if (result.issues.some((i) => i.field === "description")) {
     const desc = Array.isArray(result.frontmatter.description) ? result.frontmatter.description.join(" ") : String(result.frontmatter.description);
     const descLength = getCharLength(desc);
 
-    if (descLength < seoRules.description.minLength) {
+    if (descLength < rules.description.minLength) {
       suggestions.push({
         field: "description",
         current: desc,
-        suggested: `扩充内容，添加核心亮点和关键词，达到${seoRules.description.minLength}-${seoRules.description.maxLength}字符`,
+        suggested: `扩充内容，添加核心亮点和关键词，达到${rules.description.minLength}-${rules.description.maxLength}字符`,
       });
-    } else if (descLength > seoRules.description.maxLength) {
+    } else if (descLength > rules.description.maxLength) {
       suggestions.push({
         field: "description",
         current: desc,
-        suggested: `精简表述，保留核心内容，控制在${seoRules.description.maxLength}字符以内`,
+        suggested: `精简表述，保留核心内容，控制在${rules.description.maxLength}字符以内`,
       });
     }
 
-    if (seoRules.description.avoidPhrases.some((p) => desc.includes(p))) {
+    if (rules.description.avoidPhrases.some((p) => desc.includes(p))) {
       suggestions.push({
         field: "description",
         current: desc,
@@ -175,7 +175,7 @@ function generateSuggestions(result) {
     }
   }
 
-  if (result.frontmatter.title && getCharLength(String(result.frontmatter.title)) > seoRules.shortTitle.requiredWhenTitleLong && !result.frontmatter.shortTitle) {
+  if (result.frontmatter.title && getCharLength(String(result.frontmatter.title)) > rules.shortTitle.requiredWhenTitleLong && !result.frontmatter.shortTitle) {
     suggestions.push({
       field: "shortTitle",
       current: null,

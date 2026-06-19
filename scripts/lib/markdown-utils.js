@@ -11,7 +11,14 @@ export function getAllMarkdownFiles(dir, excludedDirs = []) {
   const scan = (currentDir) => {
     for (const entry of fs.readdirSync(currentDir)) {
       const fullPath = path.join(currentDir, entry);
-      if (fs.statSync(fullPath).isDirectory()) {
+      // 跳过无法 stat 的条目（断裂软链 / 遍历期间被删除），避免整次扫描中断
+      let stat;
+      try {
+        stat = fs.statSync(fullPath);
+      } catch {
+        continue;
+      }
+      if (stat.isDirectory()) {
         if (!excludedDirs.includes(entry)) scan(fullPath);
       } else if (entry.endsWith(".md")) {
         fileList.push(fullPath);
