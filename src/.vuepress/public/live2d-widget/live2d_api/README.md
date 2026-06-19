@@ -1,6 +1,6 @@
 # Live2D API
 
-Live2D 看板娘插件 (https://www.fghrsh.net/post/123.html) 上使用的后端 API
+Live2D 看板娘插件 (<https://www.fghrsh.net/post/123.html>) 上使用的后端 API
 
 ### 特性
 
@@ -12,12 +12,13 @@ Live2D 看板娘插件 (https://www.fghrsh.net/post/123.html) 上使用的后端
 ## 使用
 
 ### 环境要求
+
 - PHP 版本 >= 5.2
 - 依赖 PHP 扩展：json
 
 ### 目录结构
 
-```shell
+```bash
 │  model_list.json              // 模型列表
 │
 ├─model                         // 模型路径
@@ -39,10 +40,10 @@ Live2D 看板娘插件 (https://www.fghrsh.net/post/123.html) 上使用的后端
 ### 添加模型
 
 - 单模型 单皮肤 切换
-    - 单次加载只输出一个皮肤
-    - 皮肤放在 `textures` 文件夹，自动识别
+  - 单次加载只输出一个皮肤
+  - 皮肤放在 `textures` 文件夹，自动识别
 
-```shell
+```bash
 │  index.json
 │  model.moc
 │  textures.cache       // 皮肤列表缓存，自动生成
@@ -59,10 +60,11 @@ Live2D 看板娘插件 (https://www.fghrsh.net/post/123.html) 上使用的后端
 ```
 
 - 单模型 多组皮肤 递归穷举
-    - 多组皮肤 组合模型、穷举组合
-    - 皮肤文件夹按 `texture_XX` 命名
-    - 添加 `textures_order.json` 列出组合
-```shell
+  - 多组皮肤 组合模型、穷举组合
+  - 皮肤文件夹按 `texture_XX` 命名
+  - 添加 `textures_order.json` 列出组合
+
+```bash
 │  index.json
 │  model.moc
 │  textures.cache
@@ -115,9 +117,9 @@ textures.cache
 ```
 
 - 同分组 多个模型 或 多个路径 切换
-    - 修改 `model_list.json` 添加多个模型
+  - 修改 `model_list.json` 添加多个模型
 
-```shell
+```bash
 │
 ├─model
 │  ├─Group1
@@ -142,6 +144,7 @@ textures.cache
 ```
 
 model_list.json
+
 ```json
 {
     "models": [
@@ -160,6 +163,7 @@ model_list.json
 ```
 
 ### 接口用法
+
 - `/add/` - 检测 新增皮肤 并更新 缓存列表
 - `/get/?id=1-23` 获取 分组 1 的 第 23 号 皮肤
 - `/rand/?id=1` 根据 上一分组 随机切换
