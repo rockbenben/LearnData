@@ -1,15 +1,20 @@
 ---
 article: false
 title: Cloudflare
+description: 释放Cloudflare的强大功能！本指南教你加速网站访问，并提供页面优化的实用技巧，如设置缓存和使用Zaraz。更有进阶的Workers反向代理教程，助你全面掌控网站部署与性能。
 icon: fa6-brands:cloudflare
 order: 5
 ---
 
 官方文档：[Cloudflare Docs](https://developers.cloudflare.com/)
 
-Cloudflare 云端代理后，能帮加速国内访问国外网站的速度。比如，notion 的个人博客用 Cloudflare 代理，原本速度很慢，使用 Cloudflare 后加速明显。
+Cloudflare 云端代理后，能帮加速国内访问国外网站的速度。比如，notion 的个人博客用 Cloudflare 代理，原本速度很慢，使用 Cloudflare 后加速明显。但 Cloudflare 免费计划不支持单独子域名托管，需要完整域名托管。
 
-但 Cloudflare 免费计划不支持单独子域名托管，需要完整域名托管。
+## 页面优化
+
+- Cache Rules：指定应缓存哪些资源以及缓存多长时间。
+- Zaraz：将第三方工具和服务卸载到云，提高网站的速度和安全性。比如 Google Analytics 4 或第三方代码。注意，如果部署在非代理状态的 Pages 上，Zaraz 可能无法运行，因此我改用 Google Tag Manager。
+- Pages: Pages 已经部署到 CDN 节点，不要开启代理模式，容易降低速度。但如果你想 Cache Rules 缓存策略生效，就必须开启代理状态。
 
 ## 反向代理
 

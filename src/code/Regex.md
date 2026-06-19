@@ -1,11 +1,12 @@
 ---
 article: false
 title: 正则表达式
+description: 正则表达式快速入门指南。汇总字符匹配、前后查找等核心语法与高频替换技巧。附带元字符速查表与分组说明，通过实战案例助你轻松掌握正则。
 icon: fa6-solid:repeat
 order: 6
 ---
 
-正则表达式，又称规则表达式，是使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串，通常被用来检索、替换那些符合某个模式（规则）的文本。
+正则表达式，又称规则表达式，是使用单个字符串来描述、匹配一系列符合某个句法规则的字符串，通常被用来检索、替换那些符合某个模式（规则）的文本。
 
 正则入门：[正则 30 分钟入门](https://deerchao.cn/tutorials/regex/regex.htm)，[LEARN REGEX 中文版](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
 
@@ -72,8 +73,8 @@ a(?<=a).+(?=b)b
 
 ```javascript
 var str = "dogdogdog";
-var str2 = str.replace(/dog/g,"cat");   #全局替换
-var str2 = str.split("dog").join("cat"); #分割替换
+var str2 = str.replace(/dog/g, "cat"); //全局替换
+var str2 = str.split("dog").join("cat"); //分割替换
 ```
 
 ## 表达式修饰符
@@ -84,7 +85,7 @@ var str2 = str.split("dog").join("cat"); #分割替换
 | ------------- | ----------------------------------------------- |
 | .             | 匹配除换行符以外的任意字符                      |
 | \*            | 匹配 0 个或多个.(有多少匹配多少，贪婪模式)      |
-| ?             | 匹配 0 个或 1 个 (至少匹配一个)                 |
+| ?             | 匹配 0 个或 1 个（可有可无）                    |
 | $             | 以什么结尾的，如`\\d+0$` (以 0 结尾)            |
 | ^             | 以什么开头的，如`^http`匹配以 http 开头的字符串 |
 | \w            | 匹配字母或数字或下划线或汉字                    |
@@ -96,7 +97,7 @@ var str2 = str.split("dog").join("cat"); #分割替换
 | \r            | 回车符                                          |
 | \n            | 换行符 (一般情况下使用\r\n 匹配回车换行)        |
 | \t            | 制表符，Tab                                     |
-| \u4e00-\u9fa5 | 非中文                                          |
+| \u4e00-\u9fa5 | 匹配中文（常用汉字）                            |
 
 常用分组语法
 

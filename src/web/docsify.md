@@ -1,6 +1,7 @@
 ---
 article: false
 title: docsify
+description: docsify建站避坑指南：汇总插件配置、本地Serve命令及GitHub Pages部署等常见问题解决方案。助你轻松驾驭这款神奇的静态网站生成器。
 icon: simple-icons:docsify
 order: 2
 ---
@@ -41,7 +42,7 @@ order: 2
 
 若要在电脑上查看 docsify 页面，可执行 serve 架构命令，在本地主机上运行服务。默认本地端口为 3000，可以指定端口。
 
-```shell
+```bash
 docsify serve <path> [--open false] [--port 3000]
 ```
 
@@ -49,7 +50,7 @@ docsify serve <path> [--open false] [--port 3000]
 
 ### 生成侧边栏
 
-```shell
+```bash
 docsify generate <path> [--sidebar _sidebar.md]
 ```
 

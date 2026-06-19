@@ -1,6 +1,7 @@
 ---
 article: false
 title: JavaScript
+description: 全面的JavaScript实用笔记。从ES6核心语法、Map/Set数据结构到DOM操作与字符串处理，涵盖前端开发必备知识。无论新手入门还是查漏补缺，这份实战指南都能帮你巩固JS基础。
 icon: fa6-brands:js
 order: 2
 ---
@@ -20,10 +21,10 @@ JavaScript 是一种具有函数优先的轻量级，解释型或即时编译型
 `=>` 是指箭头函数，是一种函数的简写方式，语法为 `(参数)=>{函数体};`。
 
 ```JavaScript
-x => 2x
+x => 2 * x
 //等于下方函数
 function (x) {
- return 2x;
+ return 2 * x;
 }
 ```
 
@@ -85,7 +86,7 @@ function f1(){
     }
 }
 
-//js 函数为同步处理，只有 if else、setTimeour、for each 等函数才能按序运行
+//js 函数为同步处理，只有 if else、setTimeout、for each 等函数才能按序运行
 
 //setInterval 不要包含多个函数，否则 clearInterval 容易出错
 
@@ -94,7 +95,7 @@ text.value = text.value.replace(" ", "----");
 //全局替换，如果使用/\s/g，则换行符也会被替换
 text.value = text.value.replace(/ /g, "----");
 
-//载入完成后，自动或取焦点。textSour 为元素 id，需配合 jquery
+//载入完成后，自动获取焦点。textSour 为元素 id，需配合 jquery
 window.onload = function(){
  textSour.focus();
 };
@@ -102,7 +103,7 @@ window.onload = function(){
 $("#clearEmoji").click(function () {
 }
 
-//去除每行首尾空格，支持特殊字符，首尾的空格、制表符、特殊字符的组合都倍清除
+//去除每行首尾空格，支持特殊字符，首尾的空格、制表符、特殊字符的组合都被清除
 strResult += split_result[i].replace(/(^[\t\s]*)|([\t\s]*$)/g, "") + '\n';
 ```
 
@@ -155,7 +156,7 @@ function myFunction()
 
 ### 变量类型
 
-当您声明新变量时，可以使用关键词 "new" 来声明其类型：
+当你声明新变量时，可以使用关键词 "new" 来声明其类型：
 
 ```JavaScript
 var carname = new String();
@@ -262,7 +263,7 @@ $.ajax({
 
 ### 选择框状态
 
-调用 attr 给选择框 radio、checkbox 添加 checked 属性和移调，并不能真实改变不能单选和选中框的真实状态，可用下方代码改变。^[[radio、checkbox 选中状态研究](https://www.cnblogs.com/jimloveq/p/10602060.html)]
+调用 attr 给选择框 radio、checkbox 添加 checked 属性和移除，并不能真实改变不能单选和选中框的真实状态，可用下方代码改变。^[[radio、checkbox 选中状态研究](https://www.cnblogs.com/jimloveq/p/10602060.html)]
 
 ```JavaScript
 //取消导航项的 checked，同类名称都会取消 checked 状态
@@ -294,7 +295,9 @@ clipboard2.on("error", function (e) {
 
 ### 引入 html 页面
 
-利用 link 标签的 rel=import 引入 html 页面
+> ⚠️ HTML Imports（`<link rel="import">`）已于 2019 年（Chrome 73）移除，且 Firefox / Safari 从未支持。现代做法请改用 ES Modules、`fetch` + `<template>` 或 `<iframe>`。
+
+旧写法（已废弃）利用 link 标签的 rel=import 引入 html 页面：
 
 ```html
 <link rel="import" href="header.html" />
@@ -302,7 +305,7 @@ clipboard2.on("error", function (e) {
 
 ### 视频全屏弹窗
 
-品牌首页经常需要在动加载视频，可将下方代码放入首页源码的 body 区。
+品牌首页经常需要自动加载视频，可将下方代码放入首页源码的 body 区。
 
 ```html
 <link
@@ -310,11 +313,11 @@ clipboard2.on("error", function (e) {
   type="text/css"
   href="https://cdn.staticfile.org/layer/3.5.1/theme/default/layer.min.css"
 />
-<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.staticfile.net/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/layer/3.5.1/layer.min.js"></script>
 <script type="text/javascript">
   window.onload = function () {
-    //页面一打开就执行，放入 reay 是为了 Layer 所需配件（css、扩展模块）加载完毕
+    //页面一打开就执行，放入 ready 是为了 Layer 所需配件（css、扩展模块）加载完毕
     layer.ready(function () {
       //iframe 层 - 多媒体
       layer.open({

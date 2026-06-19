@@ -1,6 +1,7 @@
 ---
 article: false
 title: Markdown
+description: 想提升Markdown技能？本篇技巧指南教你玩转图片尺寸调整、脚注引用，并解决代码块自动换行、整段删除线等常见排版难题，让你的文档更专业、更美观。
 icon: fa6-brands:markdown
 order: 5
 ---

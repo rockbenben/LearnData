@@ -1,8 +1,8 @@
 ---
 article: false
 title: Chrome 扩展
+description: 想提升Chrome使用效率？这份超强扩展清单，帮你一站式解决标签页管理、网页监控、图片视频下载等需求。精选多款实用插件，全面优化你的浏览体验与工作流。
 icon: fa6-brands:chrome
-order: 3
 ---
 
 常用 Chrome 扩展工具，链接多为 Chrome Web Store 项目页面。
@@ -25,7 +25,7 @@ order: 3
 
 - [GoTo Tab](https://chrome.google.com/webstore/detail/goto-tab/hjfkaobgkmaeomgdhmhhipdbjdhhjkoi)：关键词搜索，快速定位标签页。
 
-- [Tab Wrangler](https://chrome.google.com/webstore/detail/tab-wrangler/egnjhciaieeiiohknchakcodbpgjnchh)：自动关闭不活动的标签页，并允许您轻松还原找回它们。
+- [Tab Wrangler](https://chrome.google.com/webstore/detail/tab-wrangler/egnjhciaieeiiohknchakcodbpgjnchh)：自动关闭不活动的标签页，并允许你轻松还原找回它们。
 
 - [iTab](https://chrome.google.com/webstore/detail/itab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/mhloojimgilafopcmlcikiidgbbnelip)：自定义你的新标签页。
 
@@ -42,8 +42,6 @@ order: 3
 ## 图片视频
 
 - [ImageAssistant](https://chrome.google.com/webstore/detail/imageassistant-batch-imag/dbjbempljhcmhlfpfacalomonjpalpko)：用于嗅探、分析网页图片并提供批量下载。
-
-- [Fatkun 图片批量下载](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf)：找出当前页面的所有图片，提供按分辨率、链接等筛选图片。
 
 - [FireShot](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg)：捕捉网页截图。
 
@@ -65,7 +63,7 @@ order: 3
 
 - [Web Scraper](https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn)：从网页中提取数据的爬虫。
 
-- 网页自动化：[UI.Vision PRA](https://newzone.top/posts/2022-04-21-uivision_rpa.html), [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
+- 网页自动化：[UI.Vision RPA](https://newzone.top/posts/2022-04-21-uivision_rpa.html), [iMacros](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp), [Automa](https://www.appinn.com/automa/)。
 
 ## 网页优化
 
@@ -89,9 +87,13 @@ order: 3
 
 ## 实用工具
 
+- [Elmo](https://chromewebstore.google.com/detail/elmo-your-ai-web-copilot/ipnlcfhfdicbfbchfoihipknbaeenenm)：10 秒给出中文的总结、摘要和亮点，支持网页文章和 YouTube 视频。
+
 - [Tango](https://chrome.google.com/webstore/detail/tango/lggdbpblkekjjbobadliahffoaobaknh/)：将页面操作转化为逐步指导的流程指南。每一步都自动植入截图，并可以通过链接、HTML、Markdown 来分享。
 
 - [SingleFile](https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle/)：将完整网页保存到单个文件中，可对文件名、HTML 内容、样式、图片、字体等进行调整。
+
+- [Powerful Pixiv downloader](https://chromewebstore.google.com/detail/powerful-pixiv-downloader/dkndmhgdcmjdmkdonmbgjpijejdcilfh)：批量保存 Pixiv 上的图片和小说。
 
 - [Vimium C](https://github.com/gdh1995/vimium-c/blob/master/README-zh.md)：全键盘操作浏览器，建议启用 `chrome://flags/#extensions-on-chrome-urls`。
 
@@ -100,6 +102,8 @@ order: 3
 - [Copy as Markdown](https://chrome.google.com/webstore/detail/copy-as-markdown/nlaionblcaejecbkcillglodmmfhjhfi/)：将网页文字转为 Markdown 格式文本。
 
 - [Get Favicon](https://chrome.google.com/webstore/detail/get-favicon/gpipahagclehninhhjkhbkliinfofnhe)：快速获取当前网站的图标。
+
+- [bypass-paywalls-chrome-clean](https://gitflic.ru/project/magnolia1234/bypass-paywalls-chrome-clean#installation)：去除某些新闻网站的付费墙。
 
 - [Similar Sites](https://chrome.google.com/webstore/detail/similar-sites-discover-re/necpbmbhhdiplmfhmjicabdeighkndkn)：发现与当前浏览的网站相似的其他网站。
 

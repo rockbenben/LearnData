@@ -1,15 +1,16 @@
 ---
 article: false
 title: Electron
+description: 想用Web技术开发桌面应用？Electron是你的首选。详解环境部署与builder打包流程，提供解决打包报错、跨系统构建等问题的实战指南，助你上手跨平台开发。
 icon: fa6-solid:atom
 order: 7
 ---
 
 [Electron](https://www.electronjs.org/) 是使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序框架。Electron 兼容 Mac、Windows 和 Linux，可以构建出三个平台的应用程序。
 
-按 [环境部署教程](../deploy/VPS.html#环境部署)，部署 yarn，然后部署 electron 环境。
+按 [环境部署教程](https://newzone.top/deploy/vps/#环境部署)，部署 yarn，然后部署 electron 环境。
 
-```shell
+```bash
 # 部署 electron，electron-builder
 # Electron 不能全局安装，否则 electron-builder 找不到
 yarn add electron@latest -D && yarn add electron-builder -D
@@ -54,14 +55,14 @@ yarn dist
 
 ### 跨系统打包
 
-electron 不允许跨系统打包，所以 Mac 打包需要在 iOS 环境，Linux 打包需在 Linux 环境。
+electron 不允许跨系统打包，所以 Mac 打包需要在 macOS 环境，Linux 打包需在 Linux 环境。
 
 Win11 可允许内建子系统，管理员身份运行 Powershell，输入 bash 即可进入 Linux 子系统。也可以直接打开在 Microsoft store 中下载的 Ubuntu 进入子系统，初次进入 Linux 子系统需要设置 Linux 的用户名及密码。
 
 更多命令参考：
 
 ```bash
-#安排装更新软件源，安装 node 和 npm 环境
+#更新软件源，安装 node 和 npm 环境
 sudo apt-get update
 sudo apt-get install nodejs
 sudo apt-get install npm

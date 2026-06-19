@@ -1,6 +1,7 @@
 ---
 article: false
 title: VuePress
+description: VuePress v2建站攻略：从基础环境搭建到theme-hope主题深度定制。涵盖搜索插件、Webpack打包优化及性能调优技巧，助你构建专业静态文档网站。
 icon: fa6-brands:vuejs
 order: 1
 ---
@@ -9,14 +10,14 @@ order: 1
 
 不过，VuePress 网站需要依赖包环境，生成的静态文件在本地运行会缺少组件，需要服务器或其他云服务上运行。如果本地部署中出现未知 bug，推荐使用 [StackBlitz](https://stackblitz.com/) 在线 IDE 工具测试，打开 `https://stackblitz.com/github/用户名/仓库名` 即可将对应 GitHub 仓库导入 StackBlitz。开发时，建议用 dev 命令测试，这样可以查看打包前的动态代码，发现组件间的内部链接。
 
-LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/guide/)，图标来自 [fontawesome](https://theme-hope.vuejs.press/zh/guide/interface/icon.html#%E8%AE%BE%E7%BD%AE%E5%9B%BE%E6%A0%87)，页面修改查看 [样式配置](https://theme-hope.vuejs.press/zh/config/style.html)，其他主题和插件参考 [Awesome VuePress V2](https://github.com/vuepress/awesome-vuepress/blob/main/v2.md) 和 [看板娘](https://www.npmjs.com/package/vuepress-plugin-helper-live2d)。
+LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/guide/)，图标来自 [iconify](https://icon-sets.iconify.design/)，页面修改查看 [样式配置](https://theme-hope.vuejs.press/zh/config/style.html)，其他主题和插件参考 [Awesome VuePress V2](https://github.com/vuepress/awesome-vuepress/blob/main/v2.md) 和 [看板娘](https://www.npmjs.com/package/vuepress-plugin-helper-live2d)。
 
 ## 初始配置
 
-1. 环境配置：安装 pnpm，也支持 npm 和 yarn，可参考[环境部署教程](../deploy/VPS.html#环境部署)。
-2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope docs`。vuepress-theme-hope 主题的样例文件会存储在该路径下。有时因版本问题，样例运行会报错，此时须用固定版本号来安装依赖环境，终端中输入 `pnpm add vuepress@2.0.0-beta.64 @vuepress/client@2.0.0-beta.64 vuepress-theme-hope@2.0.0-beta.230 && pnpm docs:dev`。
+1. 环境配置：安装 pnpm，也支持 npm 和 yarn，可参考[环境部署教程](https://newzone.top/deploy/vps/#环境部署)。
+2. 新建文件夹，然后在该路径下运行命令 `pnpm create vuepress-theme-hope my-docs`。vuepress-theme-hope 主题的样例文件会存储在 `my-docs` 文件夹下。有时因版本问题，样例运行会报错，此时须用固定版本号来安装依赖环境。
 3. 执行命令 `pnpm docs:dev` 启动样例网站。
-4. `docs\.vuepress` 路径下的 config.ts，navbar.ts，sidebar.ts，theme.ts 可以修改页面属性，设置方法参考 [官方案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
+4. `src\.vuepress` 路径下的 config.ts，navbar.ts，sidebar.ts，theme.ts 可以修改页面属性，设置方法参考 [官方案例](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/docs/theme/src/.vuepress)。
    - config.ts：配置网站环境依赖和网站属性。
    - sidebar.ts：侧边栏，集合所有文档的目录。
    - navbar.ts：导航栏，放最常用的文档链接。
@@ -25,21 +26,27 @@ LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/g
 
 如果遇到错误 `[ERR_MODULE_NOT_FOUND]: Cannot find package`，则将 package.json 放在 demo project 中生成 lock 文件，比对 lock 文件是否为正确生成依赖树，将正确的 lock 文件复制到项目下。
 
-每个插件和主题版本只支持一个 VuePress 版本，因此要稳定的话，需用固定版本号的环境依赖才可以，比如主题 `vuepress-theme-hope@2.0.0-beta.230` 仅支持 `vuepress@2.0.0-beta.64`。如果你需要升级主题和 VuePress 版本，请执行以下命令 `pnpm dlx vp-update`。
+每个插件和主题版本只支持一个 VuePress 版本，因此要稳定的话，需用固定版本号的环境依赖才可以，比如主题 `vuepress-theme-hope@2.0.0-rc.50` 仅支持 `vuepress@2.0.0-rc.14`。如果你需要升级主题和 VuePress 版本，请执行以下命令 `pnpm dlx vp-update`。
 
 ## 搜索插件
 
-本地搜索插件：[search](https://v2.vuepress.vuejs.org/zh/reference/plugin/search.html) 根据你的页面，在本地生成搜索索引，然后在用户访问站点时加载搜索索引文件。默认情况下，该插件会将页面标题和小标题作为搜索索引。
+### 本地搜索
 
-在线搜索插件：[algolia DocSearch](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html) 使用在线爬虫抓取全站，并提供网站搜索索引，抓取周期为一周。开源文档可以申请官方爬虫支持，商业化内容需要自己设置爬虫。
+[@vuepress/plugin-search](https://ecosystem.vuejs.press/zh/plugins/search/search.html) 和 [@vuepress/plugin-slimsearch](https://ecosystem.vuejs.press/zh/plugins/search/slimsearch.html) 插件都会根据页面内容自动生成本地搜索索引，这些索引在访问者浏览网站时加载。默认情况下，该插件会将页面标题和小标题作为搜索索引。
 
-在 [algolia 爬虫管理页](https://crawler.algolia.com/admin/crawlers/bd9cfb06-0346-4a64-9a1a-8a513f0b7fce/overview) 修改爬虫抓取规则，然后手动触发爬虫进行全站搜索。之后，[algolia 搜索数据库](https://www.algolia.com/apps/M4EXXEZIEG/dashboard) 可以查看搜索次数与数据。
+### 在线搜索插件
+
+对于包含大量页面的网站，推荐使用 [Algolia DocSearch](https://ecosystem.vuejs.press/zh/plugins/search/docsearch.html) 插件。它通过一个在线爬虫周期性（每周一次）抓取整个网站，创建一个全面的搜索索引。开源项目可以免费申请 Algolia 的官方爬虫服务，而商业项目则需要配置私有爬虫。
+
+爬虫的配置可以在 [Algolia 爬虫管理页面](https://crawler.algolia.com/admin/crawlers/bd9cfb06-0346-4a64-9a1a-8a513f0b7fce/overview) 进行调整。修改抓取规则后，需要手动启动爬虫以更新站点索引。[Algolia 搜索数据库](https://www.algolia.com/apps/M4EXXEZIEG/dashboard) 可以监控搜索操作和数据统计。
 
 ## Webpack 打包
 
-从 VuePress 2.0.0-rc.2 版本起，你可以自由选择 Vite 或 Webpack 作为打包工具。使用 Vite 进行打包时，系统会引入时间戳和 hash 值对文件进行重命名。这一机制虽然保证了文件的唯一性，但同时也带来了一个问题：即使没有更新内容，网站的大部分文件在每次生成时也会发生改变。例如，在我的 VuePress 默认配置的笔记网站中，每次服务器部署都需耗费 5 至 15 分钟的宝贵时间。新版的 LearnData 已经默认采用了 Webpack 作为打包工具，因此无需手动切换。
+从 VuePress 2.0.0-rc.2 版本起，你可以自由选择 Vite 或 Webpack 作为打包工具。早期使用 Vite 进行打包时，即使没有更新内容，网站的大部分文件在每次生成时也会发生改变（hash 变动），导致部署耗时。为此，LearnData 曾切换至 Webpack，下方为旧版 Webpack 的配置记录。
 
-早期的 VuePress 只支持 Vite 打包。因此，我记录了手动添加 webpack 的方法，作为备用。
+::: note
+最新的 Vite 在内容不变时，文件 hash 已不会产生变化。鉴于此优化，本项目已重新改回 **Vite** 打包。
+:::
 
 如果不想每次架构都重命名文件，可以复制「[nohashname](https://github.com/rockbenben/LearnData/tree/nohashname)」branch。我把 nohashname 分支的打包工具换成了 [Webpack](https://v2.vuepress.vuejs.org/zh/guide/bundler.html)，并用 chainWebpack 设置文件命名规则，避免文件非必要重命名。
 
@@ -52,7 +59,7 @@ LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/g
    pnpm add vuepress@next vuepress-theme-hope && pnpm remove vuepress && pnpm add vuepress-webpack@next sass-loader && pnpm i && pnpm up
 
    #运行在本地服务器
-   yarn docs:dev
+   pnpm docs:dev
    ```
 
    组合命令也能**解决报错**，升级相关依赖包。相关命令的分步解释见下方。
@@ -88,7 +95,7 @@ LearnData 的主题为 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/g
    });
    ```
 
-   在查找 chainWebpack 配置前，我依照 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 的指引添加了 `filenameHashing: false`，但是 VuePress 并未停止 hashname。事实上，我理解错了。根据 @Mister-Hope 的说明，「这里的 filenameHasing 是 vue-cli 自己加的一个属性。拿到这里当例子很奇怪。就好比你按照 iOS 使用手册去设置 Android 结果无效，本不应该有效。另外本身为了防止应用程序出错，你也从不应该移除 hash。」
+   在查找 chainWebpack 配置前，我依照 [vue.config.js](https://cli.vuejs.org/config/#vue-config-js) 的指引添加了 `filenameHashing: false`，但是 VuePress 并未停止 hashname。事实上，我理解错了。根据 @Mister-Hope 的说明，「这里的 filenameHashing 是 vue-cli 自己加的一个属性。拿到这里当例子很奇怪。就好比你按照 iOS 使用手册去设置 Android 结果无效，本不应该有效。另外本身为了防止应用程序出错，你也从不应该移除 hash。」
 
 ## 关闭 prefetch
 
@@ -96,7 +103,7 @@ preload 是一种声明式的资源获取请求方式，用于提前加载一些
 
 VuePress [Build 配置项](https://vuepress.github.io/zh/reference/config.html#build-%E9%85%8D%E7%BD%AE%E9%A1%B9)默认开启了 preload 和 prefetch。但是，开启了 prefetch，所有其它页面所需的文件都会被预拉取。页面较多或服务器宽带后付费的话，建议关闭 prefetch。
 
-`docs\.vuepress` 路径下的 config.ts 配置中插入 `shouldPrefetch: false,`，即可关闭 prefetch。
+`src\.vuepress` 路径下的 config.ts 配置中插入 `shouldPrefetch: false,`，即可关闭 prefetch。
 
 ## 页面模板
 
@@ -137,10 +144,10 @@ head: [
 
 ## 时间参数
 
-[vuepress-plugin-seo2](https://plugin-seo2.vuejs.press/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。`theme.ts` 中无法设置 ogp。你需要打开 config.ts，使用 vuepress-plugin-seo2 的 ogp 参数重新设置 meta，并删除你不想要的参数。根据 @Mister-Hope 的说明:「API 的设计很容易理解，就是给你个自动生成的对象然后等你返回。所以你只需要在原对象上把属性删掉，返回这个对象就是了。」
+[@vuepress/plugin-seo](https://plugin-seo2.vuejs.press/zh/guide.html) 在网页中插入 `og:updated_time` 和 `article:modified_time`，这两个参数都引用自 `page.git.updatedTime`。`theme.ts` 中无法设置 ogp。你需要打开 config.ts，使用 @vuepress/plugin-seo 的 ogp 参数重新设置 meta，并删除你不想要的参数。根据 @Mister-Hope 的说明:「API 的设计很容易理解，就是给你个自动生成的对象然后等你返回。所以你只需要在原对象上把属性删掉，返回这个对象就是了。」
 
 ```ts
-import { seoPlugin } from "vuepress-plugin-seo2";
+import { seoPlugin } from "@vuepress/plugin-seo";
 export default defineUserConfig({
   ...
   plugins: [
