@@ -7,39 +7,39 @@
 - [LearnData 开源笔记](https://newzone.top/) - 演示站：你正在浏览 LearnData 模板的默认样态。Use this template 创建仓库后部署得到的就是这套站点框架，按需替换内容即可上线属于自己的知识库。
 - [博客文章样例](https://newzone.top/_posts/2024-03-01-blog_example.html) - 博客文章内容，支持 Markdown 和 HTML 语言。
 - [博客文章样例 2](https://newzone.top/_posts/2024-03-02-blog_example2.html) - 博客文章内容，支持 Markdown 和 HTML 语言。
-- [必备应用](https://newzone.top/apps/Applist.html) - Windows 自用软件，以开源软件为主。
-- [Chrome 扩展](https://newzone.top/apps/Chrome.html) - 常用 Chrome 扩展工具，链接多为 Chrome Web Store 项目页面。
-- [平面设计](https://newzone.top/apps/design.html) - 在电子白板功能普及之前，我使用 Figma 对海报、图片素材进行简单剪辑，制作流程图。但是，电子白板的美观和自由度远远超过 Figma，我现在的流程图和示意图都是通过 Excalidraw 和 Canvas 完成的。
+- [必备应用](https://newzone.top/apps/Applist.html) - 正在寻找好用的Windows软件？这份必备应用清单为你精心筛选了从知识管理到设计开发的各类工具。无论你是效率达人还是开发者，都能在这里找到优化工作流的最佳选择。
+- [Chrome 扩展](https://newzone.top/apps/Chrome.html) - 想提升Chrome使用效率？这份超强扩展清单，帮你一站式解决标签页管理、网页监控、图片视频下载等需求。精选多款实用插件，全面优化你的浏览体验与工作流。
+- [平面设计](https://newzone.top/apps/design.html) - 想提升设计效率？本文为你精选多款设计利器：从Excalidraw等电子白板，到Eagle图片管理，再到海量免费可商用字体。一站式解决你的设计灵感与工具需求。
 - [加密页面](https://newzone.top/apps/encrypt03.html) - 加密样例页面
-- [开源工具](https://newzone.top/apps/toolbox.html) - 开源工具不仅适用于个人电脑，还可用于项目的前端和后端。此页面将不设使用范围，记录所遇到的使用开源工具。
+- [开源工具](https://newzone.top/apps/toolbox.html) - 探索强大的开源工具宝库！本清单精选了Whisper语音识别、CodeFormer图像修复、AutoCut视频剪辑等效率神器。无论你是否是开发者，都能在这里找到提升生产力的解决方案。
 - [专题示例](https://newzone.top/apps/topic/) - 如果想形成专题文章，并想使用独立侧边栏，则参考本目录使用专题文章。
-- [专题文章1](https://newzone.top/apps/topic/topic01.html) - 不建议过度囤积婴儿用品，尤其是尿不湿和奶粉。虽然有时会有吸引人的优惠，但我们必须记住，新生儿的成长速度惊人。今天合适的尿不湿尺寸，明天可能就小了。我还记得，老婆的朋友曾大量储备尿不湿，结果没用完。最后，我们成了这些尿不湿的受益者。此外，尽管配方奶是母乳不足的一个备选，但它的营养价值还是不及母乳。因此，也不建议过量购买。
+- [专题文章1](https://newzone.top/apps/topic/topic01.html) - 不建议过度囤积婴儿用品，尤其是尿不湿和奶粉。虽然有时会有吸引人的优惠，但我们必须记住，新生儿的成长速度惊人。今天合适的尿不湿尺寸，明天可能就小了。我还记得，老婆的朋友曾大量储备尿不湿，结果没用完。...
 - [专题文章2](https://newzone.top/apps/topic/topic02anytitle.html) - 原本想着带娃就是阿姨带着我待着。但真正开始后，为了让娃不近视，每天都需要带娃外出。
 - [LearnData开源笔记博客](https://newzone.top/blog.html) - 欢迎访问LearnData博客，一个专注自我提升的知识分享平台。探索开源工具、效率方法与心理学，与我一同学习、实践、成长。盛年不重来，让我们即刻开始！
-- [Coding](https://newzone.top/code/) - 代码编程的学习路径：
-- [AutoHotkey](https://newzone.top/code/AutoHotkey.html) - AutoHotkey 是 Windows 平台下开源的热键脚本语言。AHK 学习门槛不高，初期可以通过脚本录制来完成，我通过 AHK 热键启动、定时判断、改键盘等多种自动化操作，推荐学习制作你的专属自动化脚本。
-- [Electron](https://newzone.top/code/Electron.html) - Electron 是使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序框架。Electron 兼容 Mac、Windows 和 Linux，可以构建出三个平台的应用程序。
-- [HTML](https://newzone.top/code/HTML.html) - HTTPS 网页中，js、css、gif 等文件都必须要使用 https，否则会加载报错，图片可以不使用 https。
-- [JavaScript](https://newzone.top/code/Javascript.html) - JavaScript 是一种具有函数优先的轻量级，解释型或即时编译型的编程语言，最新标准是 ECMAScript 6.0。虽然它是作为开发 Web 页面的脚本语言而出名，但是它也被用到了很多非浏览器环境中，并长年居于最受欢迎编程语言排行榜榜首。
-- [Markdown](https://newzone.top/code/Markdown.html) - Markdown 是一种轻量级标记语言，易读易写，并对于图片、图表、数学式都有支持，目前许多网站与应用都支持了 Markdown。
-- [Python](https://newzone.top/code/Python.html) - Python 很久没用了，暂时只做记录作用。
-- [正则表达式](https://newzone.top/code/Regex.html) - 正则表达式，又称规则表达式，是使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串，通常被用来检索、替换那些符合某个模式（规则）的文本。
+- [Coding](https://newzone.top/code/) - 想入门编程或提升技能？这份指南为你规划全栈学习路径：从Vue/React前端到Node.js后端，再到AutoHotkey自动化脚本。精选实用IDE与在线编辑器推荐，助你构建完整技术栈。
+- [AutoHotkey](https://newzone.top/code/AutoHotkey.html) - 想让Windows操作更高效？本文从基础语法到热键设置，详解AutoHotkey核心应用。提供丰富实战脚本样例，助你轻松实现程序速启、弹窗控制等自动化操作，大幅提升工作效率。
+- [Electron](https://newzone.top/code/Electron.html) - 想用Web技术开发桌面应用？Electron是你的首选。详解环境部署与builder打包流程，提供解决打包报错、跨系统构建等问题的实战指南，助你上手跨平台开发。
+- [HTML](https://newzone.top/code/HTML.html) - 前端开发者的HTML实用宝典。涵盖相对路径、字符实体等基础知识，精选实用JS插件与CSS布局技巧。从Bootstrap响应式布局到代码压缩工具，助你全面提升网页与移动端开发效率。
+- [JavaScript](https://newzone.top/code/Javascript.html) - 全面的JavaScript实用笔记。从ES6核心语法、Map/Set数据结构到DOM操作与字符串处理，涵盖前端开发必备知识。无论新手入门还是查漏补缺，这份实战指南都能帮你巩固JS基础。
+- [Markdown](https://newzone.top/code/Markdown.html) - 想提升Markdown技能？本篇技巧指南教你玩转图片尺寸调整、脚注引用，并解决代码块自动换行、整段删除线等常见排版难题，让你的文档更专业、更美观。
+- [Python](https://newzone.top/code/Python.html) - Python3实用学习备忘录。涵盖基础语法、常用模块、数据结构、字符串操作，及Lambda函数等进阶用法。无论初学入门还是快速查阅，助你高效掌握核心知识。
+- [正则表达式](https://newzone.top/code/Regex.html) - 正则表达式快速入门指南。汇总字符匹配、前后查找等核心语法与高频替换技巧。附带元字符速查表与分组说明，通过实战案例助你轻松掌握正则。
 - [Vue](https://newzone.top/code/Vue.html) - mounted 是生命周期函数，自动执行。
-- [每日仪式](https://newzone.top/DailyRoutine.html) - 每日仪式是个人生活习惯的核心。它看起来可能会显得固化、死板、功利，有人反馈「透露着一股形式主义气息」，但是，这正是我想要的：**遵循一个固定、程序化的流程，有规律地养成习惯**，实现自我提升。
-- [Cloudflare](https://newzone.top/deploy/Cloudflare.html) - 官方文档：Cloudflare Docs
-- [云计算服务](https://newzone.top/deploy/CloudServices.html) - 国内服务器带宽限制较高，高带宽按量付费，随着访客数量的增加，费用也会急剧上升。而固定流量宽带，网站打开速度明显变慢。为减少服务器的带宽压力，可将静态文件、图片放在 CDN 上托管，而非服务器上。
-- [域名 DNS 托管](https://newzone.top/deploy/DNS.html) - 国内访问为主的话，域名建议备案后托管在国内厂商。之前试过 Cloudflare，光域名解析就用了 500 ms，换回阿里云后速度稳定许多。
-- [GitHub](https://newzone.top/deploy/GitHub.html) - GitHub Actions 是一个持续集成和持续交付 (CI/CD) 平台，可用于自动执行构建、测试和部署管道。您可以创建工作流程来构建和测试存储库的每个拉取请求，或将合并的拉取请求部署到生产环境。将 GitHub Actions 命令保存为 `main.yml`，放于 `.github\workflows` 目录下，repo 发生指定调节的改变时，Actions 会自动运行。^[了解 G...
+- [每日仪式](https://newzone.top/DailyRoutine.html) - 想养成改变生活的良好习惯？探索这套每日仪式：从5AM Club的晨间方案，到GTD时间管理，再到自我监控。学习如何通过固定流程，实现高效的自我提升。
+- [Cloudflare](https://newzone.top/deploy/Cloudflare.html) - 释放Cloudflare的强大功能！本指南教你加速网站访问，并提供页面优化的实用技巧，如设置缓存和使用Zaraz。更有进阶的Workers反向代理教程，助你全面掌控网站部署与性能。
+- [云计算服务](https://newzone.top/deploy/CloudServices.html) - 如何优化网站性能与部署？本篇云计算服务指南，探讨CDN在静态文件托管、图床和全站加速中的应用。同时分享Vercel、Cloudflare Tunnel等第三方服务的部署经验与避坑技巧。
+- [域名 DNS 托管](https://newzone.top/deploy/DNS.html) - 如何优化域名DNS解析？分享阿里云与Cloudflare托管实践，对比国内访问速度与备案流程。探讨NS记录设置与DNS迁移技巧，助你为网站选择稳定高效的解析方案。
+- [GitHub](https://newzone.top/deploy/GitHub.html) - 想全面掌握GitHub高级玩法？本指南深入讲解Actions自动化工作流，从Secrets管理到Dependabot。更有Git Commit规范、分支管理及常见问题解决方案，助你成为GitHub高手。
 - [数据库管理](https://newzone.top/deploy/MySQL.html) - 我的数据库是通过 MySQL 和 phpMyAdmin 进行管理的。本页面将记录遇到的日常问题及其解决办法。
-- [静态部署](https://newzone.top/deploy/Static.html) - 如果在国内静态资源库找不到所需的静态包，建议使用 `npm i` 命令将其下载到本地，然后部署到阿里云/七牛云的国内服务器上，以避免因 UNPKG 和 jsDelivr 等静态节点被屏蔽而导致网页样式显示出错。
+- [静态部署](https://newzone.top/deploy/Static.html) - 静态网站部署全解析。对比主流静态资源库与Vercel等平台，提供GitHub Actions自动同步FTP、OSS实战教程，助你选择并实施高效部署策略。
 - [服务器 VPS](https://newzone.top/deploy/VPS.html) - 部署应用前，为服务器配置好包管理工具，以便节省部署时间。主流的前端包管理工具有 npm、yarn、pnpm、以及国内的镜像 cnpm、tyarn 等，这些包管理器都是基于 nodejs。
 - [加密](https://newzone.top/encrypt/) - 加密内容，支持 Markdown 和 HTML 语言。
 - [加密 1](https://newzone.top/encrypt/encrypt01.html) - 加密内容，支持 Markdown 和 HTML 语言。
 - [加密 2](https://newzone.top/encrypt/encrypt02.html) - 加密内容，支持 Markdown 和 HTML 语言。
-- [网购攻略](https://newzone.top/family/Coupon.html) - 电商平台为了促进购买，有各种购物优惠，但领取优惠环节比较复杂，让人很容易忽略。为了避免这种情况，我把各平台的优惠攻略记录下来，方便查询。
-- [健康饮食](https://newzone.top/family/Diet.html) - 16:8 断时法：每天 8 小时进食，8 点钟早餐，3 点后禁食。
-- [生活窍门](https://newzone.top/family/Life.html) - 电推子理发：先用 1.5 号限位器铲平两边和后面，然后用 9 号限位器从后向前修整头发（包括刘海），最后用 6 号限位器修理过渡区域。
-- [健身计划](https://newzone.top/Fitness.html) - 早餐必吃，午餐吃饱，晚餐少吃且不吃主食。
+- [网购攻略](https://newzone.top/family/Coupon.html) - 网购如何省钱？这份超全攻略带你玩转淘宝、拼多多、京东、1688等主流电商平台。从大额优惠券、购物返利到挖掘品牌代工厂，助你成为真正的省钱达人，避开消费陷阱。
+- [健康饮食](https://newzone.top/family/Diet.html) - 科学饮食全攻略！从调整进食顺序、培养良好习惯，到分享零食饮料选择和冷泡燕麦做法。更有源自《程序员延寿指南》的健康理论和21天减肥食谱，助你吃出健康好身材。
+- [个人记录](https://newzone.top/family/Life.html) - 实用生活经验分享。涵盖个人护理（理发、穿搭）、家居妙用（铷磁铁、固定器），及玻璃自爆处理、网线更换等琐事。一系列经过实践检验的小窍门，助你轻松应对日常。
+- [健身计划](https://newzone.top/Fitness.html) - 想找个适合自己的健身计划？本文提供从饮食到室内健身的全方位指南。探索K歌减肥、比目鱼肌俯卧撑等新奇方法，了解靶心率与间歇性断食理论，科学健身，高效塑形！
 - [个人介绍](https://newzone.top/intro.html) - 互联网广告人，
 - [The 5 AM Club](https://newzone.top/reading/#/0_效率与习惯/The_5_AM_Club) - 早上 5 点 - 8 点，专注做 Personal Project，比如读书、考证、写作和你特别想做的事情。
 - [吃掉那只青蛙](https://newzone.top/reading/#/0_效率与习惯/吃掉那只青蛙) - 《吃掉那只青蛙》的核心是每天先完成重要的工作、吃掉丑陋的青蛙。
@@ -70,8 +70,8 @@
 - [巴拉巴西成功定律](https://newzone.top/reading/#/5_商业与社会/巴拉巴西成功定律) - 《巴拉巴西成功定律》并不是成功鸡汤，而是通过一些现象让你了解成功的部分规律。
 - [炒作机器](https://newzone.top/reading/#/5_商业与社会/炒作机器) - 《炒作机器》更像是一本关于社交网络传播知识的科普书，向你介绍一些有关传播学的信息。
 - [置身事内](https://newzone.top/reading/#/5_商业与社会/置身事内) - 《置身事内》基本是概念介绍，对于问题浅尝辄止，想通盘理解政府的税制变革和运作模式可以略读。不能明白评分为什么那么高。
-- [苏世民：我的经验与教训](https://newzone.top/reading/#/5_商业与社会/苏世民_我的经验与教训) - 《苏世民：我的经验与教训》阅读体验不错，其中故事化的情节让本书更有趣，比如：「第一份工作是为了获取比同班同学更高的工资 (一万)，强行跟对方招聘人员，说我要 10500 美元」，「工作初期的工作是审核对方公司报告，作者判断公司 A 不行，可是公司没有接受。过了几年后，公司 A 倒闭，证券公司被告。原告将作者形容成一个天才，而自己公司就把作者形容成白痴，最后原告赢了」。
-- [读书笔记](https://newzone.top/reading/#/README) - 曾经我尝试使用 Notion 来管理书单，用 Calibre、Logseq 来对电子书做读书笔记。我渐渐发现自己几乎从不回头再看这些电子书的笔记。因此，我决定放弃电子书这种方式，而将我的注意力更多地集中在实体书籍上的摘要总结上。
-- [评论插件](https://newzone.top/web/Comments.html) - LearnData 使用的是 Waline 评论插件，部署简单，有后端管理。评论插件推荐次序为 Waline > Valine > giscus > Gitalk > Gitter。
-- [docsify](https://newzone.top/web/docsify.html) - docsify 是一个神奇的文档网站生成器，可以快速帮你将 .md 文档生成为网站。docsify 入门简单且无需服务器，非常适合个人笔记的简单整理分享。
-- [VuePress](https://newzone.top/web/VuePress.html) - VuePress 是一个以 Markdown 为中心的静态网站生成器。你可以使用 Markdown 来书写内容（如文档、博客等），然后 VuePress 会帮助你生成一个静态网站来展示它们。如果你已经有了 docsify/Hexo 等 Markdown 架构网站，简单就能切换到 VuePress。
+- [苏世民：我的经验与教训](https://newzone.top/reading/#/5_商业与社会/苏世民_我的经验与教训) - 《苏世民：我的经验与教训》阅读体验不错，其中故事化的情节让本书更有趣，比如：「第一份工作是为了获取比同班同学更高的工资 (一万)，强行跟对方招聘人员，说我要 10500 美元」，「工作初期的工作是审核对方公...
+- [读书笔记](https://newzone.top/reading/#/README) - 曾经我尝试使用 Notion 来管理书单，用 Calibre、Logseq 来对电子书做读书笔记。我渐渐发现自己几乎从不回头再看这些电子书的笔记。因此，我决定放弃电子书这种方式，而将我的注意力更多地集中在实体书籍上的摘要...
+- [评论插件](https://newzone.top/web/Comments.html) - 网站评论插件深度指南：对比Waline、Giscus与Gitalk。详解Waline从Vercel部署到Linux配置及数据库迁移全流程，搭建安全高效评论系统。
+- [docsify](https://newzone.top/web/docsify.html) - docsify建站避坑指南：汇总插件配置、本地Serve命令及GitHub Pages部署等常见问题解决方案。助你轻松驾驭这款神奇的静态网站生成器。
+- [VuePress](https://newzone.top/web/VuePress.html) - VuePress v2建站攻略：从基础环境搭建到theme-hope主题深度定制。涵盖搜索插件、Webpack打包优化及性能调优技巧，助你构建专业静态文档网站。

@@ -3,101 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LearnData - 读书笔记</title>
     <meta name="description" content="将书籍转化为你的工具书！专注实体书摘要总结，涵盖效率习惯、思维成长、沟通技巧等领域，运用费曼技巧和3-2-1训练法，助你真正吸收并运用所学知识。" />
-    <link rel="stylesheet" href="https://oss.newzone.top/docsify/main/4.13.1/themes/vue.css" />
-    <link rel="stylesheet" href="https://oss.newzone.top/docsify/docsify-toc/dist/toc.css" />
-    <!-- <link rel="stylesheet" href="https://oss.newzone.top/docsify/docsify-gifcontrol/dist/docsify-gifcontrol.css"> -->
+    <!-- 与主站一致：朱砂印章 favicon + 移动端浏览器外壳着色（宣纸/暖墨黑） -->
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#faf6ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c1814" media="(prefers-color-scheme: dark)" />
+    <link rel="preconnect" href="https://fonts.googleapis.cn" />
+    <link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+    <link href="https://fonts.googleapis.cn/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- vue.css 和 docsify-toc.css 已移除：reading 用自写主题接管所有样式 -->
     <link rel="stylesheet" href="https://oss.newzone.top/@waline/3.8.0/client/dist/waline.css" />
-    <style>
-      .anchor {
-        font-weight: bold;
-        text-shadow:
-          0 1px 3px rgba(0, 0, 0, 0.4),
-          0 0 30px rgba(0, 0, 0, 0.075);
-      }
-
-      .app-name {
-        width: 150px;
-      }
-
-      section.cover h1 {
-        margin: 1.5rem 0 1.5rem;
-      }
-
-      section.cover p {
-        text-shadow:
-          0 1px 3px rgba(0, 0, 0, 0.4),
-          0 0 30px rgba(0, 0, 0, 0.075);
-      }
-
-      .app-sub-sidebar li:before {
-        content: "○";
-      }
-
-      /* toc 距离顶端的距离 */
-      .page_toc {
-        top: 12rem;
-      }
-
-      /* 宽度大于 1300px 才会显示 TOC */
-      @media screen and (max-width: 1300px) {
-        .nav {
-          display: none;
-        }
-      }
-    </style>
+    <script>
+      // Dark mode 初始化必须 inline 在 head 早期执行避免 FOUC——其他逻辑全在 reading-app.js
+      (function () {
+        var saved = localStorage.getItem("reading-theme");
+        var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (systemDark ? "dark" : "light"));
+      })();
+    </script>
+    <script defer src="reading-app.js"></script>
+    <link rel="stylesheet" href="reading-theme.css" />
   </head>
 
-  <body class="body--ready">
-    <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
+  <body>
+    <!-- 自写顶栏（替代 docsify nav.app-nav） -->
+    <header class="topbar">
+      <a class="brand" href="https://newzone.top/">
+        <span class="brand-seal">读</span>
+        <span class="brand-text">LearnData</span>
+      </a>
+      <nav class="nav-mid">
+        <a href="https://tools.newzone.top/zh">Tools By AI</a>
+        <a href="https://www.aishort.top/">ChatGPT SC</a>
+        <a href="https://talk.newzone.top">AI 圆桌</a>
+        <a href="https://prompt.newzone.top/app/zh">IMGPrompt</a>
+        <a href="https://chat.newzone.top/?lang=zh">ChatBox</a>
+        <a href="https://nav.newzone.top/">工具收藏</a>
+      </nav>
+      <div class="nav-right">
+        <button class="icon-btn theme-toggle" onclick="toggleReadingTheme()" aria-label="切换到夜间" title="切换到夜间">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- 窄屏浮动触发按钮：左下 sidebar / 右上原 TOC 锚点位置 toc。
+         - data-custom-toggle 标记自家按钮，配合 CSS 把 docsify 注入的同名按钮藏掉
+         - onclick 用命名函数（toggleSidebar/toggleTocDrawer）做事件流拦截，避免 docsify 同元素 listener 把状态抹掉
+         - aria-expanded 由 syncAria() 同步状态
+         - 无 TOC 的页面（如 README）通过 :has() 不显示 toc-toggle -->
+    <button class="sidebar-toggle" data-custom-toggle
+            onclick="toggleSidebar(event)"
+            aria-label="切换目录" aria-controls="sidebar" aria-expanded="false" title="目录">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <button class="toc-toggle"
+            onclick="toggleTocDrawer(event)"
+            aria-label="切换本章目录" aria-controls="page-toc" aria-expanded="false" title="本章目录">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="8" y1="6" x2="21" y2="6"/>
+        <line x1="8" y1="12" x2="21" y2="12"/>
+        <line x1="8" y1="18" x2="21" y2="18"/>
+        <circle cx="3.5" cy="6" r="0.5" fill="currentColor"/>
+        <circle cx="3.5" cy="12" r="0.5" fill="currentColor"/>
+        <circle cx="3.5" cy="18" r="0.5" fill="currentColor"/>
+      </svg>
+    </button>
+
+    <div id="app" class="initial-load">
+      <div class="loading-mark">
+        <span class="loading-seal">读</span>
+        <span class="loading-text">展卷品读…</span>
+      </div>
+    </div>
+
+    <!-- 回到顶部 -->
+    <button class="back-to-top" onclick="scrollToTop(event)" aria-label="回到顶部" title="回到顶部">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
     <script>
       window.$docsify = {
-        name: "<p>🌈 读书笔记</p>", // 文档标题，会显示在侧边栏顶部
-        nameLink: "https://newzone.top/", // 点击文档标题后跳转的链接地址。
-        // repo: 'https://github.com/rockbenben/LearnData',
-        // logo: '/_media/icon.svg', // 在侧边栏中出现的网站图标，你可以使用 CSS 来更改大小
-        // homepage: 'README.md', // 设置首页文件加载路径。适合不想将 README.md 作为入口文件渲染，或者是文档存放在其他位置的情况使用。
-        // coverpage: true, // 启用封面页。开启后是加载 _coverpage.md 文件，也可以自定义文件名。
-        // onlyCover: true, // 只在访问主页时加载封面。
-        notFoundPage: "README.md", // 404 时返回主页，也可以自定义加载的文件名。
-        auto2top: true, // 切换页面后是否自动跳转到页面顶部
-        // routerMode: 'history', // 设置路由模式，浏览器链接里不会出现 #
-        // relativePath: true, //默认为绝对路径，为 true 则链接会使用相对路径。
+        // 仅文字（朱砂印章在顶栏品牌处已有"读"，此处不重复）
+        name: '<span class="site-titles"><span class="site-title">读书笔记</span><span class="site-subtitle">books · digest · apply</span></span>',
+        nameLink: "#/",
+        notFoundPage: "README.md",
+        auto2top: true,
 
-        loadNavbar: true, // 加载自定义导航栏。设置为 true 后会加载 _navbar.md 文件，也可以自定义加载的文件名。
-        mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏。
-        topMargin: 40, // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。当你使用固定页头布局时这个选项很有用，可以让你的锚点对齐标题栏。
+        // _navbar.md 不再加载（顶栏由 hardcoded header.topbar 接管）
+        loadNavbar: false,
+        topMargin: 80, // 让锚点跳转避开 fixed topbar (56px) + 一点缓冲
 
-        loadSidebar: true, // 加载自定义侧边栏。设置为 true 后会加载 _sidebar.md 文件，也可以自定义加载的文件名。
-        // autoHeader: true, // 同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题
+        loadSidebar: true,
+        maxLevel: 4,
+        subMaxLevel: 2,
 
-        maxLevel: 4, //默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
-        subMaxLevel: 2, //自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
-
-        // 我们可以通过 {docsify-updated} 变量显示文档更新日期。并且通过 formatUpdated 配置日期格式。参考 https://github.com/lukeed/tinydate#patterns
-        // formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}',
-
-        // 全文搜索插件会根据当前页面上的超链接获取文档内容，在 localStorage 内建立文档索引。
-        // search: "auto", // 默认值
-        // 搜索完整配置参数
         search: {
-          maxAge: 86400000, // 缓存过期时间，单位毫秒，默认一天
+          maxAge: 86400000,
           paths: "auto",
           placeholder: "🔍 搜索",
           noData: "😒 找不到结果，请缩短搜索词",
-
-          // 搜索标题的最大层级，1 - 6
           depth: 2,
-
-          hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+          hideOtherSidebarContent: false,
         },
 
-        // 定义路由别名，确保子目录使用根目录的侧边栏
         alias: {
           "/.*/_sidebar.md": "/_sidebar.md",
-          "/.*/_navbar.md": "/_navbar.md",
         },
 
         toc: {
@@ -106,27 +122,107 @@
           title: "",
         },
         pagination: {
-          previousText: "PREVIOUS",
-          nextText: "NEXT",
+          previousText: "上一篇",
+          nextText: "下一篇",
           crossChapter: true,
         },
-        //gifcontrol: {
-        //mode: 'click'
-        //},
 
-        // docsify-waline 计算数字和评论支持
         count: {
-          language: "chinese", // default:english|chinese
+          language: "chinese",
         },
-		// 如有 Waline 后端，可添加阅读量统计：https://waline.js.org/guide/get-started/
-        // 添加页脚
-        footer: {
-          copy: "盛年不重来，一日难再晨。 —— ",
-          auth: '🏷️ <a href="https://newzone.top/" target="_blank">LearnData</a><br/><br/><span id="sitetime"></span>',
-          //pre: '<hr/>',
-          style: "text-align: left;",
-          //class: 'className',
-        },
+        // Waline 评论（可选）：部署自己的 Waline 后端后，填入 serverURL 即可启用
+        // 文档：https://waline.js.org/guide/get-started/
+        // waline: {
+        //   serverURL: "https://your-waline-server.example.com",
+        //   pageview: true,
+        // },
+        // footer 不再走 docsify-footer-enh 插件 —— 该插件输出的 <footer> 默认无 class、
+        // 且通过 afterEach 把 HTML 拼到 markdown content 内（变 article 子元素），与本主题
+        // 基于 grid order 的 section 子元素布局不兼容。改为下面 ensureFooter() 直接 DOM 注入。
+
+        // beforeEach: 路由切换前清 section 里旧 TOC（防止 A→B 时 A 的 TOC 残留）
+        // doneEach + setTimeout 重试: 找 docsify-toc 新注入的（不在 section 直接子的）TOC 移到 section
+        // pagination 只在 article 内才移（否则 docsify-pagination 自己管位置）
+        plugins: [
+          function (hook) {
+            function moveTocToSection() {
+              var section = document.querySelector("section.content");
+              if (!section) return;
+              // 找所有不在 section 直接子的 TOC（docsify-toc 可能注入到 article 内或 main 内别处）
+              var all = Array.prototype.slice.call(document.querySelectorAll("nav.page_toc, .page_toc"));
+              var outside = all.filter(function (el) { return el.parentElement !== section; });
+              if (outside.length === 0) return;
+              // 清 section 里所有旧 TOC + 移最新的过来
+              section.querySelectorAll(":scope > nav.page_toc, :scope > .page_toc").forEach(function (el) {
+                el.remove();
+              });
+              var latest = outside[outside.length - 1];
+              outside.forEach(function (el) {
+                if (el !== latest && el.parentElement) el.remove();
+              });
+              section.appendChild(latest);
+            }
+            function movePaginationToSection() {
+              var section = document.querySelector("section.content");
+              var article = document.querySelector("article.markdown-section");
+              if (!section || !article) return;
+              var inArticle = article.querySelector(".docsify-pagination-container");
+              if (inArticle) {
+                section.querySelectorAll(":scope > .docsify-pagination-container").forEach(function (el) {
+                  el.remove();
+                });
+                inArticle.style.gridColumn = "1";
+                inArticle.style.order = "1";
+                section.appendChild(inArticle);
+              }
+            }
+            // ensureFooter: 注入 <footer class="reading-footer"> 到 section.content 第 1 列末尾，
+            // 与 article、waline 同列，共享 max-width: 820px + margin auto 的对齐线。
+            // 内容固定（不随路由变化），所以 idempotent —— 已存在就 noop。
+            function ensureFooter() {
+              var section = document.querySelector("section.content");
+              if (!section) return;
+              if (section.querySelector(":scope > .reading-footer")) return;
+              var footer = document.createElement("footer");
+              footer.className = "reading-footer";
+              footer.innerHTML =
+                '<span class="footer-quote">盛年不重来，一日难再晨。</span>' +
+                '<span class="footer-meta">' +
+                  '<a href="https://newzone.top/" target="_blank" rel="noopener">LearnData</a>' +
+                  '&nbsp;·&nbsp;<span id="sitetime"></span>' +
+                '</span>';
+              section.appendChild(footer);
+            }
+            // 给 sidebar 与 TOC 落地 aria-controls 指向的 id（docsify 不会自动加）
+            function ensureAriaTargets() {
+              var sb = document.querySelector("aside.sidebar");
+              if (sb && !sb.id) sb.id = "sidebar";
+              var toc = document.querySelector('section.content > nav.page_toc, section.content > .page_toc, section.content > nav[class*="page_toc"]');
+              if (toc && !toc.id) toc.id = "page-toc";
+            }
+            function moveAll() {
+              moveTocToSection();
+              movePaginationToSection();
+              ensureFooter();
+              ensureAriaTargets();
+            }
+            hook.beforeEach(function (content, next) {
+              // 路由切换前清掉 section 里旧 TOC（如果新页面没 TOC，section 保持空；有则后面 move 过来）
+              var section = document.querySelector("section.content");
+              if (section) {
+                section.querySelectorAll(":scope > nav.page_toc, :scope > .page_toc").forEach(function (el) {
+                  el.remove();
+                });
+              }
+              next(content);
+            });
+            hook.doneEach(function () {
+              setTimeout(moveAll, 0);
+              setTimeout(moveAll, 100);
+              setTimeout(moveAll, 300);
+            });
+          },
+        ],
       };
     </script>
 
@@ -135,42 +231,8 @@
     <script src="https://oss.newzone.top/docsify/main/4.13.1/plugins/zoom-image.min.js"></script>
     <script src="https://oss.newzone.top/docsify/docsify-pagination/dist/docsify-pagination.min.js"></script>
     <script src="https://oss.newzone.top/docsify/docsify-toc/dist/toc.js"></script>
-    <script src="https://oss.newzone.top/docsify/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
-    <!-- 
-    <script src="https://oss.newzone.top/docsify/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script>
-    -->
 
-    <!-- 使用 Gitter 实现一个 IM 即时通讯聊天室功能 
-    <script>
-      ((window.gitter = {}).chat = {}).options = {
-        room: 'usthe/sureness'
-      };
-    </script>
-    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-    -->
-
-    <!-- 网站运行时间统计 -->
-    <script>
-      (function () {
-        const startTime = Date.UTC(2022, 7, 23, 22, 22, 22); // 北京时间 2022-07-23 22:22:22 //LearnData 首个 commit 时间，改为你自己值得纪念的日子吧
-        const MS = { s: 1000, m: 60000, h: 3600000, d: 86400000, y: 31536000000 };
-
-        function updateSiteTime() {
-          const now = new Date();
-          const diff = Date.UTC(now.getFullYear(), now.getMonth() + 1, now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds()) - startTime;
-          const y = Math.floor(diff / MS.y);
-          const d = Math.floor((diff % MS.y) / MS.d);
-          const h = Math.floor((diff % MS.d) / MS.h);
-          const m = Math.floor((diff % MS.h) / MS.m);
-          const s = Math.floor((diff % MS.m) / MS.s);
-          const el = document.getElementById("sitetime");
-          if (el) el.textContent = y > 0 ? `已运行 ${y} 年 ${d} 天 ${h} 小时 ${m} 分 ${s} 秒` : `已运行 ${d} 天 ${h} 小时 ${m} 分 ${s} 秒`;
-        }
-
-        updateSiteTime();
-        setInterval(updateSiteTime, 1000);
-      })();
-    </script>
+    <!-- 网站运行时间统计的 setInterval 已并入 reading-app.js -->
     <script src="https://oss.newzone.top/docsify/docsify-count/dist/countable.min.js"></script>
 
     <!-- Waline v3 评论系统 -->
@@ -190,7 +252,6 @@
           if (!container) {
             container = document.createElement("div");
             container.id = "waline";
-            container.style.cssText = "max-width: var(--content-max-width, 1200px); margin: 2rem auto; padding: 0 15px;";
           }
           return container;
         }
@@ -198,10 +259,16 @@
         function initWaline() {
           const article = document.querySelector("article.markdown-section");
           if (!article) return;
+          // 把 Waline 评论区放在 section.content 直接子（与 article 同级），
+          // 这样它能占满 grid 第 1 列宽度，而不是被 article 的 max-width: 700 限制
+          const section = document.querySelector("section.content");
+          const target = section || article;
 
           const container = createContainer();
-          if (!article.contains(container)) {
-            article.appendChild(container);
+          if (!target.contains(container)) {
+            // 移除可能存在的 inline style（让 CSS 接管宽度）
+            container.removeAttribute("style");
+            target.appendChild(container);
           }
 
           const path = (window.location.pathname + window.location.hash).replace(/\?.*$/, "");
@@ -226,6 +293,7 @@
             pageview: true,
             reaction: walineConfig.reaction || false,
             locale: walineConfig.locales?.["/"] || {},
+            dark: 'html[data-theme="dark"]',
           });
 
           pageviewCount({
@@ -236,11 +304,9 @@
           });
         }
 
-        // 页面初始加载尝试初始化
         setTimeout(initWaline, 500);
-        setTimeout(initWaline, 1500); // 重试一次以防万一
+        setTimeout(initWaline, 1500);
 
-        // 监听 docsify 路由变化
         let lastPath = "";
         const observer = new MutationObserver(() => {
           const currentPath = window.location.pathname + window.location.hash;
@@ -250,7 +316,6 @@
           }
         });
 
-        // 无论 DOMContentLoaded 是否已触发，都开始监听
         const target = document.querySelector("#main");
         if (target) {
           observer.observe(target, { childList: true, subtree: true });

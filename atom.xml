@@ -3,8 +3,8 @@
   <id>https://newzone.top/</id>
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
-  <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2026-05-07T02:27:28.653Z</updated>
+  <icon>https://newzone.top/logo.svg</icon>
+  <updated>2026-06-19T13:20:25.058Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
