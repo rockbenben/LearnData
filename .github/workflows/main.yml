@@ -16,7 +16,7 @@ jobs:
       FTP_HOST: ${{ secrets.ftp_host }}
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           # 获取所有标记和分支的所有历史记录（updatetime 必须，否则每次都会变化）
           fetch-depth: 0
