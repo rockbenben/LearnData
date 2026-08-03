@@ -16,24 +16,20 @@ jobs:
       FTP_HOST: ${{ secrets.ftp_host }}
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           # 获取所有标记和分支的所有历史记录（updatetime 必须，否则每次都会变化）
           fetch-depth: 0
           # 如果文档包含 Git 子模块，请取消注释下一行
           # submodules: true
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6
+      # pnpm/setup 同时装 pnpm 和 Node，并自动执行 pnpm install
+      - name: Install pnpm & Node.js
+        uses: pnpm/setup@v1
         with:
           version: 11
-          run_install: true
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: 24
-          cache: pnpm
+          runtime: node@24
+          cache: true
 
       # 复制读书笔记到静态页面路径，并构建页面
       - name: Build Docs
