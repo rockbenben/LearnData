@@ -6,6 +6,35 @@
 代码来源：https://theme-hope.vuejs.press/zh/config/style.html
 */
 
+/*
+字体令牌：主题自身的组件（博客卡片标题、blog hero、博主信息、时间轴、
+feature 卡片）走 --vp-font / --vp-font-heading，不继承 body。
+不在这里赋值的话它们会全部回落到主题默认的 Inter，中文再跌到系统黑体，
+于是「思源宋体 + 思源黑体」只在正文生效。index.scss 里的 --font-* 是同一套值。
+*/
+$vp-font: '"Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif';
+$vp-font-heading: '"Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "Cambria", serif';
+$vp-font-mono: '"JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace';
+
+/*
+强调色（正文链接、导航选中、页脚链接、按钮）。
+主题从 $theme-color 自动推导暗色版，推出来是 #d14948——实测暗色模式下
+正文链接 3.31:1、导航选中项 3.38:1、页脚许可证链接 4.0:1，都不到 4.5。
+朱砂本身够深，直接提亮到正文可读的档位；亮色版保持朱砂本色。
+*/
+$vp-c-accent: (
+  light: #a72b2a,
+  dark: #de8177,
+);
+$vp-c-accent-hover: (
+  light: #8f2422,
+  dark: #ea968c,
+);
+$vp-c-accent-bg: (
+  light: #a72b2a,
+  dark: #c9564f,
+);
+
 // background
 $vp-c-bg: (
   light: #faf6ef,

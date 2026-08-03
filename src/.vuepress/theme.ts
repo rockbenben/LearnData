@@ -30,13 +30,37 @@ export default hopeTheme(
     // 是否全局启用路径导航
     breadcrumb: true,
 
+    // 覆盖主题自带 zh 文案里的两处问题（vuepress-theme-hope 的 routerLocales）：
+    // 1. skipToContent 是「跳至主要內容」，「內」是繁体字。这条只有读屏软件会念到，
+    //    但它是全站每一页的第一个可聚焦元素。
+    // 2. 404 的四条提示（「这里什么也没有」「这 是 四 零 四 !」…）只表达情绪，
+    //    不说明发生了什么、下一步能做什么；按钮「带我回家」也不如直说去哪。
+    // routerLocales 不在 LayoutLocaleOptions 的类型里（只在 LayoutLocaleData 上），
+    // 但 getThemeData 会把 locales["/"] 整体并进 locale data，运行时生效。
+    locales: {
+      "/": {
+        routerLocales: {
+          skipToContent: "跳到主要内容",
+          notFoundTitle: "页面不存在",
+          notFoundMsg: ["这个地址下没有内容，可能已经改名或移走了。", "链接失效了。可以用上方搜索找标题，或从下面两个入口继续。"],
+          back: "返回上一页",
+          home: "回到首页",
+        },
+      },
+    } as never,
+
     // 页面元数据：贡献者，最后修改时间，编辑链接
     contributors: false,
     lastUpdated: true,
     editLink: false,
 
     // 深色模式配置
-    darkmode: "switch",
+    // 用 toggle（默认浅色 + 一键切深色），不用 switch 的三态 auto：
+    // 抽样 120 张站内图片，亮度中位数 0.828、p75 0.918——大量是近白底的截图。
+    // 对照页面底色（宣纸 0.925 / 墨底 0.010），深色模式下有 62% 的图片
+    // 比背景亮 0.6 以上，整篇文章变成一串灯箱；浅色模式下这个数字是 0。
+    // 这是内容属性，配色改不动。而且「极简东方」的主背景本就是宣纸，浅色即设计主张。
+    darkmode: "toggle",
     // 全屏按钮
     fullscreen: true,
 
@@ -90,10 +114,18 @@ export default hopeTheme(
     // print: false,
 
     markdown: {
-      // shiki 代码高亮主题：vitesse 暖色系，与朱砂 + 宣纸/暖墨黑配色协调
+      // shiki 代码高亮主题
       highlighter: {
         type: "shiki",
-        themes: { light: "vitesse-light", dark: "vitesse-dark" },
+        // 代码块底色仍是 styles/config.scss 里的暖宣纸，这里只定 token 配色。
+        // 换掉 vitesse 是因为实测对比度：vitesse-light 的注释只有 2.02:1、
+        // 标点 2.47:1，而本站代码块里大量是中文注释；vitesse-dark 标点也只有 3.27:1。
+        // 逐个量过 shiki 全部内置主题后，github 的高对比版是唯一各项 token 都过 4.5 的
+        // （浅色最低 4.36，深色最低 8.86）。
+        themes: {
+          light: "github-light-high-contrast",
+          dark: "github-dark-high-contrast",
+        },
       },
       align: true, // 启用自定义对齐
       attrs: true, // 使用特殊标记为 Markdown 元素添加属性

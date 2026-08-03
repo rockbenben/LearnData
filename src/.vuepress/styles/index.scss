@@ -1,3 +1,5 @@
+@use "sass:list";
+
 // 极简东方字体系统：思源宋体（标题）+ 思源黑体（正文）+ JetBrains Mono（代码）
 // 字体通过 templateBuild.html 的 fonts.googleapis.cn（Google 中国镜像）加载
 
@@ -9,10 +11,46 @@
   // 字重：暗模式下标题减一档，缓解浅色文字在深色底上的视觉压力
   // strong 保持 700 不变，确保行内强调功能不被削弱（一般做法）
   --heading-weight: 600;
+
+  // 围栏代码块由 @vuepress/highlighter-helper 的 --code-font-family 控制，
+  // 默认是 consolas/monaco，优先级高于下面的 `code, pre` 规则。
+  // 不覆盖的话行内代码是 JetBrains Mono、代码块是 Consolas，同页两种等宽字体。
+  --code-font-family: var(--font-mono);
+
+  // 中性灰：主题默认 #8e96aa（冷蓝灰）会给行内代码、标签底、分类列表
+  // 全部压上一层冷色，跟宣纸暖底打架。换成暖石灰。
+  --vp-c-grey-text: #6b6255;
+  --vp-c-grey-hover: #e6dfd2;
+  --vp-c-grey-bg: #eee8dd;
+  --vp-c-grey-soft: #8a7d6a24;
+
+}
+
+/*
+提示框标题（::: tip / ::: info）浅色下实测 info 只有 3.34:1、tip 4.43:1。
+
+两个坑：
+1. 要改 --vp-c-*-text 这一层。md-enhance 的 `:root` 里写的是
+   `--tip-c-text: var(--vp-c-green-text)`，且它加载在本文件之后，
+   直接覆盖 --tip-c-text 会被它盖掉。
+2. 必须限定在浅色。主题的深色值写在 `[data-theme="dark"]`（0,1,0），
+   和裸 `:root` 同权重，而本文件在后面——直接写 `:root` 会连深色一起改掉，
+   实测把深色的 tip 从 7.35 打到 2.09。用 :not() 提一级权重并排除深色。
+
+其余变体（note/warning/caution/important/danger 4.78–16.2）保持原样。
+*/
+:root:not([data-theme="dark"]) {
+  --vp-c-green-text: #146a45;
+  --vp-c-blue-text: #1c6d88;
 }
 
 [data-theme="dark"] {
   --heading-weight: 500;
+
+  --vp-c-grey-text: #9c9184;
+  --vp-c-grey-hover: #443d35;
+  --vp-c-grey-bg: #37312a;
+  --vp-c-grey-soft: #8a7d6a2e;
 }
 
 body {
@@ -40,10 +78,342 @@ code, pre, kbd, .vp-code {
   font-family: var(--font-mono);
 }
 
-// 引言用宋体，增加文学感
+// 引言用宋体，增加文学感。
+// 不加 italic：中文没有真正的斜体字形，浏览器只能把宋体整体倾斜成伪斜体，
+// 笔画粗细和重心全乱。宋体本身已经足够把引言和正文区分开。
 blockquote {
   font-family: var(--font-serif);
-  font-style: italic;
+}
+
+/*
+分类 / 标签色片：统一接管。
+
+主题把 $colors 喂给 4 个组件，每个用一套自己的明暗公式：
+  .page-tag-item      亮 底+90/字+20   暗 底-75/字-10
+  .page-category-item 亮 底+90/字+20   暗 底-75/字-10
+  .vp-category        亮 底+90/字-10   暗 底-75/字+20
+  .vp-tag             亮 底+35/字继承   暗 底-30/字继承
+这些公式都假定基色是亮色。config.scss 换成传统颜料后没有一套还成立——
+实测暗色模式下色片一度只有 1.33:1（深底压深字），标签云的 .vp-tag
+更是只改底不改字，把中调色块配上近黑文字。
+
+与其继续拧基色去同时迁就 4 套公式，这里直接给定最终值：
+颜料只走文字，底色统一成一层安静的暖面。色相仍能区分标签，但不再有
+9 种深浅不一的色底，标签云也不会变成一面糖果墙——正好合「极简东方」的克制。
+*/
+$chip-inks: (
+  // 传统颜料      浅色（宣纸底）  深色（墨底）
+  "0": (#892120, #e69790),  // 朱砂
+  "1": (#6b3a25, #d0a184),  // 赭石
+  "2": (#5c460f, #cbb46a),  // 藤黄
+  "3": (#2c3f23, #a8c095),  // 苔绿
+  "4": (#1f4a40, #8ac4b4),  // 石绿
+  "5": (#34576b, #96bcd2),  // 黛蓝
+  "6": (#3f4a7a, #a9b1e0),  // 靛青
+  "7": (#6b4a6b, #c4a3c4),  // 紫檀
+  "8": (#91415c, #dfa0b3),  // 胭脂
+);
+
+:root {
+  --chip-surface: #{rgba(#8a7d6a, 0.16)};
+  --chip-surface-hover: #{rgba(#8a7d6a, 0.28)};
+}
+
+[data-theme="dark"] {
+  --chip-surface: #{rgba(#d8c9b0, 0.12)};
+  --chip-surface-hover: #{rgba(#d8c9b0, 0.2)};
+}
+
+@each $i, $pair in $chip-inks {
+  .page-tag-item.color#{$i},
+  .page-category-item.color#{$i},
+  .vp-category.color#{$i},
+  .vp-tag.color#{$i} {
+    --chip-ink: #{list.nth($pair, 1)};
+  }
+
+  [data-theme="dark"] {
+    .page-tag-item.color#{$i},
+    .page-category-item.color#{$i},
+    .vp-category.color#{$i},
+    .vp-tag.color#{$i} {
+      --chip-ink: #{list.nth($pair, 2)};
+    }
+  }
+}
+
+/*
+下面用 !important 是有意的，不是偷懒：
+主题为每个 colorN 单独生成规则，且各组件的选择器权重不一致——
+亮色是 `.vp-category.color1`(0,2,0)，暗色是 `[data-theme] .vp-category.color1`(0,3,0)；
+分类/标签页的样式还是路由分块，加载顺序在本文件之后。
+靠权重叠加要写成 `.vp-category[class*=color][class*=color][class*=color]` 才稳，
+可读性反而更差。这里只覆盖 background / color 两个属性，范围是明确的。
+注意 .vp-tag-item / .vp-category-item 只是外层 <li>，上色的是里面的 <a>。
+*/
+
+// 实心底的三个：文章分类色片、分类列表、标签云
+.page-category-item[class*="color"],
+.vp-category[class*="color"],
+.vp-tag[class*="color"] {
+  background: var(--chip-surface) !important;
+  color: var(--chip-ink) !important;
+
+  &:hover {
+    background: var(--chip-surface-hover) !important;
+  }
+}
+
+// 文章信息栏的标签：主题用两道 linear-gradient 切出左右缺角，覆盖时要照样重画
+.page-tag-item[class*="color"] {
+  // 主题给标签的是 10px，同一行里的分类色片是 12px、字数/阅读时长是 12.25px——
+  // 标签既比邻居小两档，10px 的中文在 375px 屏上也已经到辨识下限。拉齐到 12px。
+  font-size: 12px !important;
+
+  background:
+    linear-gradient(135deg, transparent 0.75em, var(--chip-surface) 0) top,
+    linear-gradient(45deg, transparent 0.75em, var(--chip-surface) 0) bottom !important;
+  color: var(--chip-ink) !important;
+
+  &:hover {
+    background:
+      linear-gradient(135deg, transparent 0.75em, var(--chip-surface-hover) 0) top,
+      linear-gradient(45deg, transparent 0.75em, var(--chip-surface-hover) 0) bottom !important;
+  }
+}
+
+// 选中态：全站唯一保留实心颜料的色片，用它承担「当前筛选」的强调
+.vp-category[class*="color"].active {
+  background: var(--chip-ink) !important;
+  color: var(--vp-c-bg) !important;
+
+  &:hover {
+    background: var(--chip-ink) !important;
+  }
+}
+
+/*
+分类计数徽章：主题写的是 background: $color（原始颜料）+ color: var(--vp-c-white)，
+但 --vp-c-white 在暗色模式下被主题换成了 #000，于是暗色下变成深赭底配黑字，
+实测 2.26:1。改成「颜料作底 + 页面底色作字」，深浅两套都成立。
+*/
+.vp-category[class*="color"] .vp-category-count {
+  background: var(--chip-ink) !important;
+  color: var(--vp-c-bg) !important;
+}
+
+// 选中态整块已是实心颜料，徽章反过来用页面底色打底
+.vp-category[class*="color"].active .vp-category-count {
+  background: var(--vp-c-bg) !important;
+  color: var(--chip-ink) !important;
+}
+
+/*
+Waline 评论区：组件把元信息的字色写死成 #999，深浅两套主题下实测都只有
+2.6–3.1:1（时间、排序、订阅、Powered by、以及 UA/地区那排小标签）。
+一部分走 --waline-info-color 变量，另一部分是硬编码，所以两边都得给。
+*/
+.waline-wrapper {
+  --waline-color: var(--vp-c-text);
+  --waline-info-color: var(--vp-c-text-mute);
+  --waline-border-color: var(--vp-c-border);
+  --waline-info-bg-color: var(--chip-surface);
+  // 博主徽标默认是 #3498db 冷蓝，实测 2.93:1，且和全站单一朱砂冲突
+  --waline-badge-color: var(--vp-c-accent);
+
+  // 不走变量的那几处
+  .wl-power,
+  .wl-power a,
+  .wl-sort li,
+  .wl-rss span {
+    color: var(--vp-c-text-mute);
+  }
+
+  // 评论里的裸长链接：Waline 只给 .wl-content 写了 overflow-wrap: break-word，
+  // 对 <a> 不生效，长 URL 整条撑出卡片。375px 视口下首页实测 scrollWidth 565px，
+  // 全站横向滚动。只放开链接的断行位置，正文词句不受影响。
+  .wl-content a {
+    overflow-wrap: anywhere;
+  }
+
+  // 「提交」按钮：Waline 把字色写死成白色，而主题色在暗色模式下被我们提亮到
+  // #de8177（为了正文链接可读），白字压上去只剩 2.8:1。
+  // 改用页面底色作字——亮色下是宣纸白压朱砂，暗色下是墨黑压浅朱砂，两边都成立。
+  .wl-btn.primary {
+    color: var(--vp-c-bg);
+  }
+}
+
+/*
+Live2D 提示气泡（只在生产构建里注入，dev 下看不到）。
+自带样式是 rgba(236,217,188,.5) 半透明米底配写死的深色字：
+暗色模式下气泡把深背景透上来，黑字压黑底，实测 3.25:1。
+给它一套跟随主题的实心底。
+*/
+body #waifu-tips {
+  border: 1px solid var(--vp-c-border);
+  background: var(--vp-c-bg-elv);
+  color: var(--vp-c-text);
+
+  // 气泡里用 <span> 高亮标签／分类名，组件写死成 #0099cc 冷蓝（实测 3.27:1）。
+  // 覆盖写在这里而不是改 waifu.css，这样组件升版本时不会丢。
+  span {
+    color: var(--vp-c-accent);
+  }
+}
+
+/*
+Algolia DocSearch。
+
+装的是 @docsearch/css@4，而 @vuepress/plugin-docsearch 的 vars.css 映射的还是
+v3 的变量名。v4 新加的这两个没人给值，回落到自带的浅色硬编码：
+  --docsearch-search-button-background  #fff       → 宣纸导航栏上一块纯白
+  --docsearch-subtle-color              #d6d6e7    → 冷蓝灰描边，兼搜索栏下的分隔线
+后者在深色模式下同样是这条冷灰线。补上映射即可，其余 v3 名字插件已经接好。
+*/
+:root {
+  --docsearch-search-button-background: var(--vp-c-grey-soft);
+  --docsearch-subtle-color: var(--vp-c-border);
+}
+
+/*
+移动端搜索按钮。
+
+插件的 docsearch.css 里写着
+  @media (max-width: 768px) { .DocSearch-Button { border-radius: 50% } }
+它假定按钮是正方形。但 DocSearch v4 的按钮是 `padding: 0 8px` + 1.25em 图标，
+375px 下实测 54×38 —— 50% 画在长方形上就是个椭圆。720–768 这一档更糟：
+主题要到 719px 才隐藏「搜索文档」占位文字，那之前按钮里还带着文字，椭圆更长。
+
+≤719px（占位文字已隐藏、只剩放大镜）直接对齐旁边几个导航图标：去掉底色和描边，
+按正方形给 44×44 的触控目标，此时 50% 才是正圆。
+*/
+@media (max-width: 768px) {
+  .vp-navbar .DocSearch-Button {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 719px) {
+  .vp-navbar .DocSearch-Button {
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+  }
+}
+
+/*
+移动端搜索弹层。
+
+≤768px 时 DocSearch 的弹层是整屏的（height: 100dvh），但底色走的是
+--docsearch-modal-background → --vp-c-bg-elv，亮色下是 #ffffff。
+整屏铺开时「浮起的白卡片」这个隐喻不成立，看上去就是一张白纸盖住了页面。
+整屏状态改用页面底色。
+
+另外没有输入时 DocSearch 不渲染 .DocSearch-Dropdown，页脚会紧贴在搜索栏下面，
+下方留 700px 空白。Modal 本身是 flex column，把页脚推到底即可。
+*/
+@media (max-width: 768px) {
+  .DocSearch-Modal {
+    background: var(--vp-c-bg);
+  }
+
+  .DocSearch-Footer {
+    margin-top: auto;
+  }
+}
+
+/*
+博客列表卡片的摘要。
+
+摘要是从正文截出来的，会把段落、小标题、引用的整套块级结构一起带进卡片：
+小标题用 1.2em 宋体渲染，比 1.25rem 的卡片标题还像标题（实测 19.2px vs 20px，同字族），
+多个段落各带上下外边距，把卡片撑到 220–407px 不等，其中 65–75% 的高度都是摘要。
+十张卡片叠起来 3512px，列表完全没法扫读，宋体标题也被埋掉了。
+
+这里把摘要摊平成一段连续的次级文字并收敛到三行：
+摘要高度统一到 74–77px，无封面卡片收敛到 173px，列表总高降约 40%，
+标题重新成为卡片里唯一的显示型元素。
+（带封面的卡片仍有 ~440px 的 16:9 封面，高度另算——封面是刻意保留的，没有裁切。）
+*/
+.vp-article-excerpt {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  color: var(--vp-c-text-mute);
+  font-size: 15px;
+  line-height: 1.7;
+
+  // 摊平内部块级结构（标题 / 段落 / 引用都并进同一段文字流）
+  > * {
+    display: inline;
+    margin: 0 !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+  }
+
+  blockquote {
+    padding: 0 !important;
+    border: 0 !important;
+  }
+}
+
+/*
+正文行长上限。
+
+主题给内容容器的上限是 980px（content-box），实测 1920 下正文段落 964px，
+16px 中文正好 60 字/行，1280 下 49 字/行。中文没有词间空格，行末回扫找下一行
+行首缺少落点，行长超过 40 字后串行明显。
+
+只收窄「文字块」，图片 / 代码块 / 表格仍占满 964px：本站正文里大量是 1920 宽的
+截图和代码，把它们一起压到 640px 是拿真正需要宽度的内容去换行长。
+表格和 figure 内部的段落例外，跟随容器。
+*/
+#markdown-content :is(p, ul, ol, dl, blockquote) {
+  max-width: 40em;
+}
+
+#markdown-content :is(table, figure, .vp-code) :is(p, ul, ol, dl, blockquote) {
+  max-width: none;
+}
+
+/*
+移动端导航栏的触控目标。
+
+375px 实测：右侧展开键 28×26、Discord / GitHub 图标各 32×33，且两个图标
+边界相接（x=201-233 / 233-265），中间没有间隔。导航栏高 52px，纵向有余量；
+品牌区到图标之间还空着 88px，横向也够。统一提到 44×44（WCAG 2.5.5 建议值）。
+
+断点跟主题一致用 959px：`.vp-toggle-navbar-button` / `.vp-toggle-sidebar-button`
+在主题里是 `max-width: $tablet` 才显示的，写 719px 会漏掉 720–959 这段平板宽度。
+*/
+@media (max-width: 959px) {
+  .vp-navbar {
+    // 汉堡键的三条横线是 ::before / ::after / .icon 画的，而且是 content-box。
+    // 给它 display: flex 会把三条线叠成一条（实测左上角变成单根横线），
+    // 加 ::after 命中区又会占用画线的伪元素。只能靠 padding 撑：16px 图标 + 14×2。
+    .vp-toggle-sidebar-button {
+      padding: 0.875rem;
+    }
+
+    // 本来就是 flex 居中，直接给最小尺寸
+    .vp-toggle-navbar-button {
+      min-width: 44px;
+      min-height: 44px;
+    }
+
+    // inline-block + padding: 6px 包着 20px 图标，加到 12px 即 44
+    .vp-action-link {
+      padding: 12px;
+    }
+  }
 }
 
 // toc.scss, navbar.scss, sidebar.scss
