@@ -366,22 +366,43 @@ v3 的变量名。v4 新加的这两个没人给值，回落到自带的浅色�
 }
 
 /*
-正文行长上限。
+正文列宽随窗口增长。
 
-主题给内容容器的上限是 980px（content-box），实测 1920 下正文段落 964px，
-16px 中文正好 60 字/行，1280 下 49 字/行。中文没有词间空格，行末回扫找下一行
-行首缺少落点，行长超过 40 字后串行明显。
+主题只给了两档：$content-width 780px，$wide-content-width 980px，后者还只在
+`@media (min-width: 1920px)` 里才顶上（theme 的 _layout.scss）。于是 1440–1919
+这一整段窗口宽度里正文恒定 764px，1920 才跳到 964px——1920 实测右边目录之外
+还空着 152px 没人用。
 
-只收窄「文字块」，图片 / 代码块 / 表格仍占满 964px：本站正文里大量是 1920 宽的
-截图和代码，把它们一起压到 640px 是拿真正需要宽度的内容去换行长。
-表格和 figure 内部的段落例外，跟随容器。
+上限卡在目录身上：目录在 ≥1440（主题的 $pc 断点）是绝对定位在正文右沿 +1rem，
+连边距共占 294px。1440 下实测目录右沿离窗口只剩 12px，那一档一点余量都没有，
+所以 676 这个常数按「目录右沿留 20px」反推，往上每宽 1px 正文就多拿 1px。
+
+max(780px) 是下限：不加的话 1440 那一档会算出 764px，比主题原值还窄 16px。
+封顶 1200px：16px 中文约 75 字/行，再宽行末回扫就开始串行了。
 */
-#markdown-content :is(p, ul, ol, dl, blockquote) {
-  max-width: 40em;
+@media (min-width: 1440px) {
+  :root {
+    --content-width: min(1200px, max(780px, calc(100vw - 676px)));
+  }
 }
 
-#markdown-content :is(table, figure, .vp-code) :is(p, ul, ol, dl, blockquote) {
-  max-width: none;
+/*
+带图片的段落取消两端对齐。
+
+主题给正文段落上了 text-align: justify（选择器
+`[vp-content]:not(.custom) #markdown-content > p`，权重 1,2,1）。
+
+Markdown 里「一句说明 + 紧跟一张截图」中间不空行时，图片会留在同一个 <p> 里，
+且是 display: inline。图片挤不下换到下一行，于是它上面那行不再是段落的最后一行，
+被当成需要撑满的中间行拉伸——中文没有词间空格，空隙只能摊到字与字之间，
+1920 下实测「获取 Account ID：在 Cloudflare 侧边栏进入…」整行字距肉眼可见地散开。
+本站正文大量是这个写法，openclaw 这篇 39 个段落里有 4 段中招。
+
+只关掉带图段落的两端对齐，纯文字段落保持原样。
+前缀照抄主题的选择器形状，否则权重压不过 1,2,1。
+*/
+[vp-content]:not(.custom) #markdown-content p:has(img) {
+  text-align: start;
 }
 
 /*
