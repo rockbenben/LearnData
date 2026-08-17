@@ -25,7 +25,7 @@ jobs:
 
       # pnpm/setup 同时装 pnpm 和 Node，并自动执行 pnpm install
       - name: Install pnpm & Node.js
-        uses: pnpm/setup@v1
+        uses: pnpm/setup@v2
         with:
           version: 11
           runtime: node@24
