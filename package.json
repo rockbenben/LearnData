@@ -3,6 +3,7 @@
   "version": "1.5.0",
   "license": "MIT",
   "type": "module",
+  "packageManager": "pnpm@12.3.4",
   "scripts": {
     "docs:dev": "vuepress dev src",
     "docs:clean-dev": "vuepress dev src --clean-cache",

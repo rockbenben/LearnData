@@ -110,7 +110,7 @@ LearnData 基于 VuePress + vuepress-theme-hope 构建，将笔记与文章聚�
 
 如需在本地预览或修改：
 
-1. 安装 Node 与 **pnpm 11**（参考 [VPS 环境部署](https://newzone.top/deploy/vps/#环境部署)）。仓库根的 `pnpm-workspace.yaml` 已用 `allowBuilds` 批准 `esbuild` / `@parcel/watcher` 的构建脚本，pnpm 11 必需（否则 `pnpm i` 会报 `ERR_PNPM_IGNORED_BUILDS`）
+1. 安装 Node 与 **pnpm 12**（参考 [VPS 环境部署](https://newzone.top/deploy/vps/#环境部署)）。仓库根的 `pnpm-workspace.yaml` 已用 `allowBuilds` 批准 `esbuild` / `@parcel/watcher` 的构建脚本，pnpm 12 必需（否则 `pnpm i` 会报 `ERR_PNPM_IGNORED_BUILDS`）；`package.json` 的 `packageManager` 字段也已钉住同一版本
 2. 在项目目录下运行 `pnpm i` 安装依赖
 3. 运行 `pnpm docs:dev`，访问 `http://localhost:8080/`
 
