@@ -25,7 +25,13 @@ function generateUrl(filePath) {
   }
 
   // Handle VuePress pages
-  let urlPath = relativePath.replace(/\\/g, "/");
+  // VuePress 会去掉路径段开头的下划线：src/_posts/x.md 的路由是 /posts/x.html。
+  // 不跟着去下划线，产出的就是 404 链接（经 CDN 规则还会变成 .html.html）。
+  let urlPath = relativePath
+    .replace(/\\/g, "/")
+    .split("/")
+    .map((seg) => seg.replace(/^_+/, ""))
+    .join("/");
 
   if (urlPath.endsWith("README.md") || urlPath.endsWith("index.md")) {
     urlPath = urlPath.replace(/(^|\/)(README|index)\.md$/, "$1");
