@@ -357,7 +357,22 @@ v3 的变量名。v4 新加的这两个没人给值，回落到自带的浅色�
     color: inherit !important;
     font-size: inherit !important;
     font-weight: inherit !important;
+    // font-family 也要继承：只重置 size/weight/color 时，被摊平的小标题仍然带着
+    // 主题的宋体，在一段黑体摘要里露出一截（实测「变成了一年一篇。 消失的“合意困难”」
+    // 里的「消失的」是宋体）。
+    font-family: inherit !important;
   }
+
+  // 小标题不进摘要。摊平成一行之后，标题会和前后句子黏成一句读不通的话
+  // （「…变成了一年一篇。 消失的“合意困难” AI 帮我们完成了…」），
+  // 而摘要本来就不该承担目录职责——标题在正文里、在右侧 TOC 里都有。
+  h1, h2, h3, h4, h5, h6 {
+    display: none;
+  }
+
+  // 块与块之间不再额外加间隔：摊平成 inline 之后，元素之间原本就留着 HTML 的
+  // 空白，实测渲染出来是一个空格。再补一个全角空格会变成肉眼可见的断口
+  // （「…变成了一年一篇。  AI 帮我们…」），反而更糟。
 
   blockquote {
     padding: 0 !important;
@@ -434,6 +449,137 @@ Markdown 里「一句说明 + 紧跟一张截图」中间不空行时，图片�
     .vp-action-link {
       padding: 12px;
     }
+  }
+}
+
+/*
+看板娘（Live2D）：默认缩到右下角，hover 才展开、才出气泡。
+生产构建实测：1440 文章页上气泡与右侧目录重叠 236×264，目录后 5 条被完全盖住；
+768 平板上气泡压在正文段落上（276×305）；深浅两套都成立。它是装饰件，
+不该占用信息区，所以让它让位而不是让目录让位。
+≤1439 直接不渲染：那一档连正文列宽都紧张，装饰件没有立足处。
+*/
+body #waifu {
+  transform-origin: 100% 100%;
+  transform: scale(0.3);
+  opacity: 0.45;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+body #waifu:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+
+body #waifu-tips {
+  // 组件的 JS 在显示气泡时写的是内联 opacity，普通规则压不过，必须 !important。
+  // 收起态下气泡跟着 #waifu 缩到 30%（实测字高 4px 左右），既看不见也不该占位。
+  opacity: 0 !important;
+  // 气泡不该拦住下面的点击（它展开时正好盖住目录链接）
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  // 「LearnData」这类长词以前会从中间劈开（Le / arnData）
+  overflow-wrap: anywhere;
+}
+
+body #waifu:hover #waifu-tips {
+  opacity: 1 !important;
+}
+
+@media (max-width: 1439px) {
+  body #waifu {
+    display: none;
+  }
+}
+
+/*
+回到顶部：390 实测 38×38，低于 44 的触控目标下限。
+≥1440 还要往上让开看板娘——它收起后仍占右下角约 90px 高的一条，
+实测两者重叠 48×27，按钮正好压在展开热区上。
+*/
+.vp-back-to-top-button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+@media (min-width: 1440px) {
+  .vp-back-to-top-button {
+    bottom: 8.5rem;
+  }
+}
+
+/*
+剩下三处窄触控目标（390 实测）：抽屉里的分组标题 316×24、
+评论的「登录 / 提交」56×32、作者卡统计项窄到 26px。
+正文里的行内链接（315×32 那一组，出现 33 次）不动——
+它们是段落内的 inline 链接，撑到 44 会毁掉行距，WCAG 2.5.8 也豁免 inline。
+*/
+.vp-nav-screen-menu-title {
+  min-height: 44px;
+}
+
+.waline-wrapper .wl-btn {
+  min-height: 44px;
+}
+
+.vp-blog-hero-info a.route-link {
+  min-width: 44px;
+}
+
+/*
+移动端抽屉里的「外观」「全屏」标签：12px + rgba(28,25,23,.56)，
+浅色下实测 3.95:1，是全站浅色唯一低于 4 的正文级标签。
+*/
+.vp-color-mode-title,
+.full-screen-title {
+  font-size: 13px;
+  color: var(--vp-c-text);
+}
+
+/*
+字体令牌漏网的三处。主题的 --vp-font 只管它自己的组件，
+以下三处各有来源，实测计算样式分别落在 system-ui / Arial / monospace：
+- DocSearch 按钮：导航栏里唯一一处不是思源黑体的中文（「搜索文档」比旁边瘦一档）
+- 导航/侧栏折叠键
+- Waline 评论输入框（中文按等宽排，字距发松）
+*/
+.DocSearch-Button,
+.DocSearch-Button * {
+  font-family: var(--font-sans) !important;
+}
+
+.vp-toggle-navbar-button,
+.vp-toggle-sidebar-button {
+  font-family: var(--font-sans);
+}
+
+.waline-wrapper .wl-editor,
+.waline-wrapper textarea {
+  font-family: var(--font-sans);
+}
+
+/*
+侧栏与订阅链接的触控目标。
+390 实测：分组标题 240×31、条目 240×31，相邻间距只有 8px——既不到 44，
+也满足不了「靠间距豁免」（需要 ≥24 的间距）。导航栏那批在上面的 959 断点里
+已经处理过，这里补侧栏；断点与主题一致用 959px。
+评论区的昵称/点赞（28–49×14）先不动：把它们撑到 44 会把评论列表排散，
+属于要单独权衡的改动。
+*/
+@media (max-width: 959px) {
+  .vp-sidebar a.route-link,
+  .vp-sidebar button.vp-sidebar-header {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .waline-wrapper .wl-rss a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
   }
 }
 
