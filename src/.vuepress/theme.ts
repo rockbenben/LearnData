@@ -18,10 +18,11 @@ export default hopeTheme(
     // 网站文章的版权声明
     license: "CC BY-NC-ND 4.0",
 
-    // copyright 默认为 Copyright © <作者>
+    // 分隔符用「·」，与站内其它中文并列处一致；原来用 ASCII 连字符加一个孤立竖线，
+    // 读起来像日志行。两行之间用 <br /> 分开，中英各占一行。
     copyright: `
-  版权声明：自由转载 - 非商用 - 非衍生 - 保持署名<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">（创意共享 4.0 许可证）</a>|
-  Copyright © 2023-present LearnData</a>
+  版权声明：自由转载 · 非商用 · 非衍生 · 保持署名<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">（创意共享 4.0 许可证）</a><br />
+  Copyright © 2023-present LearnData
   `,
     displayFooter: true,
     // 页脚，支持使用 HTMLString 以显示备案信息等
@@ -30,11 +31,15 @@ export default hopeTheme(
     // 是否全局启用路径导航
     breadcrumb: true,
 
-    // 覆盖主题自带 zh 文案里的两处问题（vuepress-theme-hope 的 routerLocales）：
+    // 覆盖主题自带 zh 文案里的三处问题（vuepress-theme-hope 的 routerLocales / paginationLocales）：
     // 1. skipToContent 是「跳至主要內容」，「內」是繁体字。这条只有读屏软件会念到，
     //    但它是全站每一页的第一个可聚焦元素。
     // 2. 404 的四条提示（「这里什么也没有」「这 是 四 零 四 !」…）只表达情绪，
     //    不说明发生了什么、下一步能做什么；按钮「带我回家」也不如直说去哪。
+    // 3. 分页输错页码时的提示是「请输入 1 到 $page 之前的页码！」。主题按
+    //    String.raw`\$page`（带反斜杠）做替换，而 locale 串里是 `$page`，永远替换不上，
+    //    于是模板变量原样端给用户；「之前」也应是「之间」。替换既然坏掉，
+    //    这里直接改成不需要插值的句子。
     // routerLocales 不在 LayoutLocaleOptions 的类型里（只在 LayoutLocaleData 上），
     // 但 getThemeData 会把 locales["/"] 整体并进 locale data，运行时生效。
     locales: {
@@ -42,9 +47,14 @@ export default hopeTheme(
         routerLocales: {
           skipToContent: "跳到主要内容",
           notFoundTitle: "页面不存在",
-          notFoundMsg: ["这个地址下没有内容，可能已经改名或移走了。", "链接失效了。可以用上方搜索找标题，或从下面两个入口继续。"],
+          // 主题从这个数组里随机取一条，所以拆成两句的写法永远只会显示其中一句。
+          // 合并成一条：说明发生了什么 + 下一步能做什么。
+          notFoundMsg: ["这个地址下没有内容，可能已经改名或移走了。可以用上方搜索找标题，或从下面两个入口继续。"],
           back: "返回上一页",
           home: "回到首页",
+        },
+        paginationLocales: {
+          errorText: "没有这一页，请从上面的页码里选。",
         },
       },
     } as never,
@@ -207,10 +217,13 @@ export default hopeTheme(
         components: ["Badge", "BiliBili"],
       },
 
-      // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
+      // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会设置，启用下方本地搜索
       /* 
       docsearch: {
-        indexName: "<INDEX_NAME>",
+        // indices 是 DocSearch 的必填项。只给 indexName 时，点击搜索按钮会在
+        // 初始化阶段抛 "Cannot read properties of undefined (reading 'map')"，
+        // 而插件的点击回调是一次性的，抛错之后按钮就永久没有反应了。
+        indices: ["<INDEX_NAME>"],
         appId: "<APP_ID>",
         apiKey: "<API_KEY>",
       },
