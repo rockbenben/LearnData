@@ -5,8 +5,6 @@
 ## Pages
 
 - [LearnData 开源笔记](https://newzone.top/) - 演示站：你正在浏览 LearnData 模板的默认样态。Use this template 创建仓库后部署得到的就是这套站点框架，按需替换内容即可上线属于自己的知识库。
-- [博客文章样例](https://newzone.top/_posts/2024-03-01-blog_example.html) - 博客文章内容，支持 Markdown 和 HTML 语言。
-- [博客文章样例 2](https://newzone.top/_posts/2024-03-02-blog_example2.html) - 博客文章内容，支持 Markdown 和 HTML 语言。
 - [必备应用](https://newzone.top/apps/Applist.html) - 正在寻找好用的Windows软件？这份必备应用清单为你精心筛选了从知识管理到设计开发的各类工具。无论你是效率达人还是开发者，都能在这里找到优化工作流的最佳选择。
 - [Chrome 扩展](https://newzone.top/apps/Chrome.html) - 想提升Chrome使用效率？这份超强扩展清单，帮你一站式解决标签页管理、网页监控、图片视频下载等需求。精选多款实用插件，全面优化你的浏览体验与工作流。
 - [平面设计](https://newzone.top/apps/design.html) - 想提升设计效率？本文为你精选多款设计利器：从Excalidraw等电子白板，到Eagle图片管理，再到海量免费可商用字体。一站式解决你的设计灵感与工具需求。
@@ -41,6 +39,8 @@
 - [个人记录](https://newzone.top/family/Life.html) - 实用生活经验分享。涵盖个人护理（理发、穿搭）、家居妙用（铷磁铁、固定器），及玻璃自爆处理、网线更换等琐事。一系列经过实践检验的小窍门，助你轻松应对日常。
 - [健身计划](https://newzone.top/Fitness.html) - 想找个适合自己的健身计划？本文提供从饮食到室内健身的全方位指南。探索K歌减肥、比目鱼肌俯卧撑等新奇方法，了解靶心率与间歇性断食理论，科学健身，高效塑形！
 - [个人介绍](https://newzone.top/intro.html) - 互联网广告人，
+- [博客文章样例](https://newzone.top/posts/2024-03-01-blog_example.html) - 博客文章内容，支持 Markdown 和 HTML 语言。
+- [博客文章样例 2](https://newzone.top/posts/2024-03-02-blog_example2.html) - 博客文章内容，支持 Markdown 和 HTML 语言。
 - [The 5 AM Club](https://newzone.top/reading/#/0_效率与习惯/The_5_AM_Club) - 早上 5 点 - 8 点，专注做 Personal Project，比如读书、考证、写作和你特别想做的事情。
 - [吃掉那只青蛙](https://newzone.top/reading/#/0_效率与习惯/吃掉那只青蛙) - 《吃掉那只青蛙》的核心是每天先完成重要的工作、吃掉丑陋的青蛙。
 - [福格行为模型](https://newzone.top/reading/#/0_效率与习惯/福格行为模型) - 《福格行为模型》是习惯养成的行为设计学。明确你的愿望或成果，然后尽可能多的罗列行为，最后找到适合你的黄金行为。习惯从微小的行动开始，比如：开煤气灶 - 烧开水 - 煮粥 - 早餐。
